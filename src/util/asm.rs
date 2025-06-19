@@ -954,7 +954,7 @@ where
         ".data" | ".rodata" if subsection == 0 => {
             write!(w, "{}", section.name)?;
         }
-        ".text" | ".init" => {
+        ".text" | ".init" | ".over" => {
             write!(w, ".section {}", section.name)?;
             write!(w, ", \"ax\"")?;
         }

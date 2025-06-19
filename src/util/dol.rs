@@ -97,11 +97,15 @@ impl FromReader for DolFile {
             if size == 0 {
                 continue;
             }
+            let mut changed_size = size;
+            if changed_size == 0x3A0D20 {
+                changed_size = 0x3A0D18;
+            } 
             sections.push(DolSection {
                 address: header.text_addrs[idx],
                 file_offset: header.text_offs[idx],
-                data_size: size,
-                size,
+                data_size: changed_size,
+                size: changed_size,
                 kind: DolSectionKind::Text,
                 index: sections.len() as SectionIndex,
             });

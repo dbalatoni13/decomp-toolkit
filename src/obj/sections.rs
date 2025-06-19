@@ -236,7 +236,7 @@ impl ObjSection {
 
 pub fn section_kind_for_section(section_name: &str) -> Result<ObjSectionKind> {
     Ok(match section_name {
-        ".init" | ".text" | ".dbgtext" | ".vmtext" => ObjSectionKind::Code,
+        ".init" | ".text" | ".over" | ".dbgtext" | ".vmtext" => ObjSectionKind::Code,
         ".ctors" | ".dtors" | ".rodata" | ".sdata2" | "extab" | "extabindex" | ".BINARY" => {
             ObjSectionKind::ReadOnlyData
         }
