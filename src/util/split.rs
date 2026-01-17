@@ -527,9 +527,7 @@ fn validate_splits(obj: &ObjInfo) -> Result<()> {
 
         if let Some((_, symbol)) = obj
             .symbols
-            .for_section_range(section_index, ..addr)
-            .filter(|&(_, s)| s.size_known && s.size > 0 && !s.flags.is_stripped())
-            .next_back()
+            .for_section_range(section_index, ..addr).rfind(|&(_, s)| s.size_known && s.size > 0 && !s.flags.is_stripped())
         {
             ensure!(
                 addr >= symbol.address as u32 + symbol.size as u32,
@@ -546,9 +544,7 @@ fn validate_splits(obj: &ObjInfo) -> Result<()> {
 
         if let Some((_, symbol)) = obj
             .symbols
-            .for_section_range(section_index, ..split.end)
-            .filter(|&(_, s)| s.size_known && s.size > 0 && !s.flags.is_stripped())
-            .next_back()
+            .for_section_range(section_index, ..split.end).rfind(|&(_, s)| s.size_known && s.size > 0 && !s.flags.is_stripped())
         {
             ensure!(
                 split.end >= symbol.address as u32 + symbol.size as u32,
@@ -770,9 +766,7 @@ fn trim_split_alignment(obj: &mut ObjInfo) -> Result<()> {
         let mut split_end = split.end;
         if let Some((_, symbol)) = obj
             .symbols
-            .for_section_range(section_index, addr..split.end)
-            .filter(|&(_, s)| s.size_known && s.size > 0 && !s.flags.is_stripped())
-            .next_back()
+            .for_section_range(section_index, addr..split.end).rfind(|&(_, s)| s.size_known && s.size > 0 && !s.flags.is_stripped())
         {
             split_end = symbol.address as u32 + symbol.size as u32;
         }
@@ -843,7 +837,7 @@ fn split_pdata(obj: &mut ObjInfo) -> Result<()> {
     // should we remove all pdata splits before doing this? so we avoid duplicates and false "overlaps with split" errors?
 
     // for each code split you find, you must give the appropriate pdata bound for the obj
-    for (section_index, section) in obj.sections.by_kind(ObjSectionKind::Code) {
+    for (_section_index, section) in obj.sections.by_kind(ObjSectionKind::Code) {
         for (start_addr, split) in section.splits.iter() {
             // we need the address of the first pdata entry where its target addr >= start_addr,
             // and the address of the first pdata entry where its target addr >= split.end

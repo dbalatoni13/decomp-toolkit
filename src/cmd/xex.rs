@@ -1,5 +1,4 @@
 use std::{
-    cmp::min,
     collections::BTreeMap,
     fs,
     fs::{DirBuilder, File},
@@ -7,24 +6,20 @@ use std::{
     time::{Instant, UNIX_EPOCH},
 };
 
-use anyhow::{anyhow, bail, ensure, Context, Result};
+use anyhow::{bail, ensure, Context, Result};
 use argp::FromArgs;
 use chrono::FixedOffset;
 use itertools::Itertools;
 use object::{
-    endian::LittleEndian,
-    pe,
-    pe::ImageFileHeader,
     read::{
-        coff::{CoffFile, CoffHeader, ImageSymbol},
+        coff::{CoffHeader, ImageSymbol},
         pe::PeFile32,
     },
     write::{Object, Relocation, SectionId, Symbol, SymbolId, SymbolSection},
     Architecture, BinaryFormat, Endianness, RelocationFlags, SectionKind, SymbolFlags, SymbolKind,
     SymbolScope,
 };
-use rayon::iter::IntoParallelRefIterator;
-use tracing::{debug, info, info_span};
+use tracing::{debug, info};
 use typed_path::{Utf8NativePath, Utf8NativePathBuf};
 use xxhash_rust::xxh3::xxh3_64;
 
@@ -33,9 +28,8 @@ use crate::{
         cfa::AnalyzerState,
         objects::{detect_objects, detect_strings},
         pass::{
-            AnalysisPass, FindSaveRestSleds, FindSaveRestSledsXbox, FindTRKInterruptVectorTable,
+            AnalysisPass, FindSaveRestSledsXbox,
         },
-        signatures::{apply_signatures, apply_signatures_post, update_ctors_dtors},
         tracker::Tracker,
     },
     cmd::dol::{
@@ -43,17 +37,13 @@ use crate::{
         OutputUnit, ProjectConfig,
     },
     obj::{
-        best_match_for_reloc, ObjDataKind, ObjInfo, ObjKind, ObjRelocKind, ObjSectionKind,
-        ObjSymbolFlagSet, ObjSymbolKind, ObjSymbolScope, SectionIndex, SymbolIndex,
+        best_match_for_reloc, ObjInfo, ObjKind, ObjRelocKind, ObjSectionKind, ObjSymbolKind, ObjSymbolScope, SectionIndex, SymbolIndex,
     },
     util::{
         asm::write_asm,
         config::{apply_splits_file, apply_symbols_file, write_splits_file, write_symbols_file},
         dep::DepFile,
-        elf::write_elf,
-        file::{buf_writer, touch, verify_hash, FileReadInfo},
-        lcf::obj_path_for_unit,
-        map::apply_map_file,
+        file::{buf_writer, FileReadInfo},
         map_exe::{apply_map_file_exe, process_map_exe},
         path::native_path,
         split::{split_obj, update_splits},
@@ -161,9 +151,9 @@ struct ExeModuleInfo<'a> {
 
 // look at dol split for this
 fn split(args: SplitArgs) -> Result<()> {
-    let command_start = Instant::now();
+    let _command_start = Instant::now();
     info!("Loading {}", args.config);
-    let mut config: ProjectConfig = {
+    let config: ProjectConfig = {
         let mut config_file = open_file(&args.config, true)?;
         serde_yaml::from_reader(config_file.as_mut())?
     };
@@ -211,7 +201,7 @@ fn split(args: SplitArgs) -> Result<()> {
     // dol split_write_obj
     let output_module = split_write_obj_exe(&mut exe, &config, &args.out_dir, &args.out_dir)?;
     // here, out_config = OutputConfig { the result of split_write_obj }
-    let mut out_config = OutputConfig {
+    let out_config = OutputConfig {
         version: env!("CARGO_PKG_VERSION").to_string(),
         base: output_module,
         modules: vec![],
@@ -241,7 +231,7 @@ fn split(args: SplitArgs) -> Result<()> {
 fn split_write_obj_exe(
     module: &mut ExeModuleInfo,
     config: &ProjectConfig,
-    base_dir: &Utf8NativePath,
+    _base_dir: &Utf8NativePath,
     out_dir: &Utf8NativePath,
 ) -> Result<OutputModule> {
     debug!("Performing relocation analysis");
@@ -440,11 +430,11 @@ fn split_write_obj_exe(
             // write the file
             let file = File::create(&full_path)?;
             let mut writer = BufWriter::new(file);
-            match write_asm(&mut writer, &asm_obj)
+            match write_asm(&mut writer, asm_obj)
                 .with_context(|| format!("Failed to write {full_path}"))
             {
                 Ok(_) => {}
-                Err(e) => {
+                Err(_e) => {
                     println!("Failed to write {full_path}!");
                     // continue;
                 }
@@ -582,7 +572,7 @@ fn disasm(args: DisasmArgs) -> Result<()> {
     // Gamepad Release
     apply_splits_file(&args.out, &mut obj)?;
     update_splits(&mut obj, None, false)?;
-    let split_objs = split_obj(&mut obj, None)?;
+    let split_objs = split_obj(&obj, None)?;
 
     for coff_obj in &split_objs {
         // skip autogenned splits for now
@@ -651,7 +641,7 @@ fn disasm(args: DisasmArgs) -> Result<()> {
                 },
                 weak: false, // sym.flags.scope() == ObjSymbolScope::Weak,
                 section: match sym.section {
-                    Some(idx) => SymbolSection::Section(sect_map.get(&idx).unwrap().clone()),
+                    Some(idx) => SymbolSection::Section(*sect_map.get(&idx).unwrap()),
                     None => SymbolSection::Undefined,
                 },
                 flags: SymbolFlags::None,
@@ -666,9 +656,9 @@ fn disasm(args: DisasmArgs) -> Result<()> {
                     Some(id) => id,
                     None => bail!("Could not find symbol ID for index {}", reloc.target_symbol),
                 };
-                cur_coff.add_relocation(sect_map.get(&sect_idx).unwrap().clone(), Relocation {
+                cur_coff.add_relocation(*sect_map.get(&sect_idx).unwrap(), Relocation {
                     offset: addr as u64,
-                    symbol: sym_id.clone(),
+                    symbol: *sym_id,
                     addend: 0,
                     flags: RelocationFlags::Coff { typ: reloc.to_coff() },
                 })?;
@@ -959,7 +949,7 @@ fn info(args: InfoArgs) -> Result<()> {
         if bff.compression == XexCompression::Compressed { "Compressed" } else { "Uncompressed" }
     );
     println!("  {}", if bff.encryption == XexEncryption::No { "Unencrypted" } else { "Encrypted" });
-    println!("");
+    println!();
 
     println!("Basefile Info:");
     println!("  Original PE Name: {}", xex.opt_header_data.original_name);
@@ -972,7 +962,7 @@ fn info(args: InfoArgs) -> Result<()> {
     let est = FixedOffset::west_opt(5 * 3600).unwrap();
     let dt_est = datetime.with_timezone(&est);
     println!("{}", dt_est.format("%a %b %d %H:%M:%S %Y"));
-    println!("");
+    println!();
 
     println!("Static Libraries:");
     let mut idx = 1;
@@ -980,7 +970,7 @@ fn info(args: InfoArgs) -> Result<()> {
         println!("  {}. {}: v{}.{}.{}.{}", idx, lib.name, lib.major, lib.minor, lib.build, lib.qfe);
         idx += 1;
     }
-    println!("");
+    println!();
 
     // TODO: import libraries
     list_exe_sections(&PeFile32::parse(&*xex.exe_bytes).expect("Failed to parse object file"));

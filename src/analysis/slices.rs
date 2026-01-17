@@ -4,7 +4,6 @@ use std::{
 };
 
 use anyhow::{bail, ensure, Context, Result};
-use object::Section;
 // use ppc750cl::{Ins, Opcode};
 use powerpc::{Ins, Opcode};
 
@@ -14,7 +13,7 @@ use crate::{
         disassemble,
         executor::{ExecCbData, ExecCbResult, Executor},
         uniq_jump_table_entries,
-        vm::{section_address_for, BranchTarget, GprValue, JumpTableType, StepResult, VM},
+        vm::{section_address_for, BranchTarget, JumpTableType, StepResult, VM},
         RelocationTarget,
     },
     obj::{ObjInfo, ObjKind, ObjSection, ObjSymbolKind},
@@ -287,7 +286,7 @@ impl FunctionSlices {
                 );
                 // if we know the function end from pdata, just end the block here and continue processing
                 return match function_end {
-                    Some(end) => {
+                    Some(_end) => {
                         self.blocks.insert(block_start, function_end);
                         Ok(ExecCbResult::EndBlock)
                     }

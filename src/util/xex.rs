@@ -1,8 +1,6 @@
 use std::{
     borrow::Cow,
-    cmp::min,
     collections::{btree_map::Entry, BTreeMap},
-    ffi::CString,
     fs,
     num::NonZeroU64,
 };
@@ -15,18 +13,16 @@ use object::{
     endian::LittleEndian as LE,
     read::pe::{ImageNtHeaders, ImageOptionalHeader, PeFile32},
     write::{SectionId, SymbolId},
-    Architecture, BinaryFormat, Endianness, File, Import, Object, ObjectComdat, ObjectKind,
-    ObjectSection, ObjectSegment, ObjectSymbol, Relocation, RelocationFlags, RelocationTarget,
-    SectionKind, Symbol, SymbolFlags, SymbolKind, SymbolScope, SymbolSection,
+    Architecture, BinaryFormat, Endianness, Object, ObjectComdat,
+    ObjectSection, ObjectSegment, ObjectSymbol, RelocationFlags,
+    SectionKind, SymbolFlags, SymbolKind, SymbolScope,
 };
 use typed_path::{Utf8NativePathBuf, Utf8UnixPath};
 
 use crate::{
     analysis::{cfa::SectionAddress, read_u32},
     obj::{
-        ObjArchitecture, ObjInfo, ObjKind, ObjReloc, ObjRelocKind, ObjSection, ObjSectionKind,
-        ObjSplit, ObjSymbol, ObjSymbolFlagSet, ObjSymbolFlags, ObjSymbolKind, ObjSymbolScope,
-        ObjUnit, SectionIndex as ObjSectionIndex, SectionIndex, SymbolIndex as ObjSymbolIndex,
+        ObjArchitecture, ObjInfo, ObjKind, ObjRelocKind, ObjSection, ObjSectionKind, ObjSymbol, ObjSymbolFlagSet, ObjSymbolFlags, ObjSymbolKind, ObjSymbolScope, SectionIndex as ObjSectionIndex, SectionIndex,
         SymbolIndex,
     },
     util::{crypto::decrypt_aes128_cbc_no_padding, xex_imports::replace_ordinal},
@@ -34,11 +30,11 @@ use crate::{
 
 // quick and ez ways to read data from a block of bytes
 pub fn read_halfword(data: &Vec<u8>, index: usize) -> u16 {
-    return u16::from_be_bytes([data[index], data[index + 1]]);
+    u16::from_be_bytes([data[index], data[index + 1]])
 }
 
 pub fn read_word(data: &Vec<u8>, index: usize) -> u32 {
-    return u32::from_be_bytes([data[index], data[index + 1], data[index + 2], data[index + 3]]);
+    u32::from_be_bytes([data[index], data[index + 1], data[index + 2], data[index + 3]])
 }
 
 // ----------------------------------------------------------------------
@@ -81,8 +77,8 @@ pub struct BaseFileFormat {
 
 impl BaseFileFormat {
     fn parse(data: &Vec<u8>) -> Result<Self> {
-        let encryption = XexEncryption::try_from(read_halfword(&data, 0))?;
-        let compression = XexCompression::try_from(read_halfword(&data, 2))?;
+        let encryption = XexEncryption::try_from(read_halfword(data, 0))?;
+        let compression = XexCompression::try_from(read_halfword(data, 2))?;
         let mut basics: Vec<BasicCompression> = vec![];
         let mut normal = None;
         match compression {
@@ -91,20 +87,20 @@ impl BaseFileFormat {
                 let count = (data.len() - 4) / 8;
                 for i in 0..count {
                     basics.push(BasicCompression {
-                        data_size: read_word(&data, 4 + i * 8),
-                        zero_size: read_word(&data, 8 + i * 8),
+                        data_size: read_word(data, 4 + i * 8),
+                        zero_size: read_word(data, 8 + i * 8),
                     });
                 }
             }
             XexCompression::Compressed | XexCompression::DeltaCompressed => {
                 normal = Some(NormalCompression {
-                    window_size: read_word(&data, 4),
-                    block_size: read_word(&data, 8),
+                    window_size: read_word(data, 4),
+                    block_size: read_word(data, 8),
                     block_hash: data[12..32].try_into()?,
                 });
             }
         }
-        return Ok(Self { encryption, compression, basics, normal });
+        Ok(Self { encryption, compression, basics, normal })
     }
 }
 
@@ -130,8 +126,8 @@ pub struct ImportLibrary {
 
 impl ImportLibraries {
     fn parse(data: &Vec<u8>) -> Result<Self> {
-        let string_size = read_word(&data, 0);
-        let lib_count = read_word(&data, 4);
+        let string_size = read_word(data, 0);
+        let lib_count = read_word(data, 4);
 
         // populate the string table
         let mut string_table: Vec<String> = vec![];
@@ -158,8 +154,8 @@ impl ImportLibraries {
         let mut libraries: Vec<ImportLibrary> = vec![];
         for _ in 0..lib_count {
             pos += 0x24;
-            let name_idx = read_halfword(&data, pos) as usize;
-            let count = read_halfword(&data, pos + 2) as usize;
+            let name_idx = read_halfword(data, pos) as usize;
+            let count = read_halfword(data, pos + 2) as usize;
             pos += 4;
             let lib_name = &string_table[name_idx];
             let mut records: Vec<u32> = vec![];
@@ -173,7 +169,7 @@ impl ImportLibraries {
                 functions: Vec::new(),
             });
         }
-        return Ok(Self { libraries });
+        Ok(Self { libraries })
     }
 }
 
@@ -197,15 +193,15 @@ impl ResourceInfos {
             data.len() % 16 == 0,
             "Resource info has unexpected length! (expected a multiple of 16)"
         );
-        let num_resources = data.len() / 16;
+        let _num_resources = data.len() / 16;
         let mut info: Vec<ResourceInfo> = vec![];
-        for (_, chunk) in data.chunks_exact(16).enumerate() {
+        for chunk in data.chunks_exact(16) {
             let title_id = String::from_utf8(chunk[0..8].to_vec())?;
             let rsrc_start = u32::from_be_bytes(chunk[8..12].try_into()?);
             let rsrc_end = rsrc_start + u32::from_be_bytes(chunk[12..16].try_into()?);
             info.push(ResourceInfo { title_id, rsrc_start, rsrc_end });
         }
-        return Ok(Self { info });
+        Ok(Self { info })
     }
 }
 
@@ -224,13 +220,13 @@ pub struct XexHeader {
 
 impl XexHeader {
     fn parse(data: &Vec<u8>) -> Result<Self> {
-        let magic = read_word(&data, 0);
+        let magic = read_word(data, 0);
         ensure!(magic == 0x58455832, "XEX2 magic header not found!");
-        let module_flags = read_word(&data, 4);
-        let pe_offset = read_word(&data, 8);
+        let module_flags = read_word(data, 4);
+        let pe_offset = read_word(data, 8);
         // reserved is at data index 12, but it's unused so who cares
-        let security_info_offset = read_word(&data, 16);
-        return Ok(Self { module_flags, pe_offset, security_info_offset });
+        let security_info_offset = read_word(data, 16);
+        Ok(Self { module_flags, pe_offset, security_info_offset })
     }
 }
 
@@ -267,7 +263,7 @@ pub struct XexOptionalHeaderData {
 impl XexOptionalHeaderData {
     fn parse(data: &Vec<u8>) -> Result<Self> {
         // read in the optional headers
-        let num_optional_headers = read_word(&data, 20);
+        let num_optional_headers = read_word(data, 20);
         let mut opt_headers: Vec<XexOptionalHeader> = vec![];
         for n in 0..num_optional_headers {
             opt_headers.push(XexOptionalHeader::new(data, (24 + n * 8) as usize));
@@ -342,7 +338,7 @@ impl XexOptionalHeaderData {
         }
         // at the very minimum, we should have a base file format, as that contains encryption/compression information
         ensure!(base_file_format.is_some(), "Base file format not found!");
-        return Ok(Self {
+        Ok(Self {
             original_name,
             entry_point,
             image_base,
@@ -351,7 +347,7 @@ impl XexOptionalHeaderData {
             base_file_format,
             static_libs,
             import_libs,
-        });
+        })
     }
 }
 
@@ -424,7 +420,7 @@ impl XexOptionalHeader {
             let end: usize = (hdr.value + len) as usize;
             hdr.data = data[start..end].to_vec();
         }
-        return hdr;
+        hdr
     }
 }
 
@@ -453,18 +449,18 @@ pub struct XexLoaderInfo {
 impl XexLoaderInfo {
     fn parse(data: &Vec<u8>, security_offset: u32) -> Result<Self> {
         let mut pos = security_offset as usize;
-        let header_size = read_word(&data, pos);
-        let image_size = read_word(&data, pos + 4);
+        let header_size = read_word(data, pos);
+        let image_size = read_word(data, pos + 4);
         pos += 8;
         let rsa_signature = data[pos..pos + 256].try_into()?;
         pos += 256;
-        let unknown = read_word(&data, pos);
-        let image_flags = read_word(&data, pos + 4);
-        let load_address = read_word(&data, pos + 8);
+        let unknown = read_word(data, pos);
+        let image_flags = read_word(data, pos + 4);
+        let load_address = read_word(data, pos + 8);
         pos += 12;
         let section_digest = data[pos..pos + 20].try_into()?;
         pos += 20;
-        let import_table_count = read_word(&data, pos);
+        let import_table_count = read_word(data, pos);
         pos += 4;
         let import_table_digest = data[pos..pos + 20].try_into()?;
         pos += 20;
@@ -472,13 +468,13 @@ impl XexLoaderInfo {
         pos += 16;
         let file_key = data[pos..pos + 16].try_into()?;
         pos += 16;
-        let export_table = read_word(&data, pos);
+        let export_table = read_word(data, pos);
         pos += 4;
         let header_digest = data[pos..pos + 20].try_into()?;
         pos += 20;
-        let game_regions = read_word(&data, pos);
-        let media_flags = read_word(&data, pos + 4);
-        return Ok(Self {
+        let game_regions = read_word(data, pos);
+        let media_flags = read_word(data, pos + 4);
+        Ok(Self {
             header_size,
             image_size,
             rsa_signature,
@@ -494,7 +490,7 @@ impl XexLoaderInfo {
             header_digest,
             game_regions,
             media_flags,
-        });
+        })
     }
 }
 
@@ -529,10 +525,10 @@ impl XexSessionKeys {
         //     print!("{:02X} ", k);
         // }
         // print!("\n");
-        return Ok(Self {
+        Ok(Self {
             session_key_retail: retail_derived_key,
             session_key_devkit: devkit_derived_key,
-        });
+        })
     }
 }
 
@@ -599,14 +595,14 @@ impl XexInfo {
             }
         }
 
-        return Ok(Self {
+        Ok(Self {
             header: xex_header,
             opt_header_data: xex_optional_header_data,
             loader_info: xex_loader_info,
             session_key: confirmed_session_key,
             is_dev_kit,
             exe_bytes,
-        });
+        })
     }
 
     pub fn try_get_exe(
@@ -619,15 +615,14 @@ impl XexInfo {
 
         match bff.encryption {
             XexEncryption::No => {
-                compressed = Cow::Borrowed(&exe_data);
+                compressed = Cow::Borrowed(exe_data);
             }
             XexEncryption::Yes => {
-                compressed = Cow::Owned(decrypt_aes128_cbc_no_padding(&session_key, &exe_data)?);
+                compressed = Cow::Owned(decrypt_aes128_cbc_no_padding(session_key, exe_data)?);
             }
         }
 
-        let mut pe_image: Vec<u8> = vec![];
-        pe_image.resize(img_size as usize, 0);
+        let mut pe_image: Vec<u8> = vec![0; img_size as usize];
         let mut pos_in: usize = 0;
         let mut pos_out: usize = 0;
 
@@ -635,7 +630,7 @@ impl XexInfo {
             XexCompression::Raw => {
                 for bc in &bff.basics {
                     for i in 0..(bc.data_size as usize) {
-                        if pos_in + i as usize >= compressed.len() {
+                        if pos_in + i >= compressed.len() {
                             break;
                         }
                         pe_image[i + pos_out] = compressed[pos_in + i];
@@ -657,7 +652,7 @@ impl XexInfo {
             }
         }
 
-        ensure!(pe_image[0] == 'M' as u8 && pe_image[1] == 'Z' as u8, "This is not a valid exe!");
+        ensure!(pe_image[0] == b'M' && pe_image[1] == b'Z', "This is not a valid exe!");
 
         // adjust the byte offsets, because virtual addresses have been thrown off in the initial exe reconstruction process
         let pe_file =
@@ -689,7 +684,7 @@ impl XexInfo {
                 }
             }
         }
-        return Ok(pe_file_adjusted);
+        Ok(pe_file_adjusted)
     }
 }
 
@@ -697,7 +692,7 @@ pub fn extract_exe(input: &Utf8NativePathBuf) -> Result<(String, Vec<u8>)> {
     println!("xex: {input}");
     let xex = XexInfo::from_file(input)?;
     // after this line, the XexInfo should have all of its relevant metadata parsed
-    return Ok(("NFS.exe".to_string(), xex.exe_bytes));
+    Ok(("NFS.exe".to_string(), xex.exe_bytes))
 }
 
 pub fn process_xex(path: &Utf8NativePathBuf) -> Result<ObjInfo> {
@@ -820,7 +815,7 @@ pub fn process_xex(path: &Utf8NativePathBuf) -> Result<ObjInfo> {
             imp[3] = 0x80;
         }
         fn add_imp(obj: &mut ObjInfo, name: String, addr: SectionAddress) -> Result<SymbolIndex> {
-            return obj.add_symbol(
+            obj.add_symbol(
                 ObjSymbol {
                     name,
                     address: addr.address as u64,
@@ -832,7 +827,7 @@ pub fn process_xex(path: &Utf8NativePathBuf) -> Result<ObjInfo> {
                     ..Default::default()
                 },
                 false,
-            );
+            )
         }
         // to unstrip a thunk,
         // you need the address of the __imp_ (i.e. __imp_XamInputGetCapabilities at 0x827103c4)
@@ -1198,7 +1193,7 @@ pub fn process_xex(path: &Utf8NativePathBuf) -> Result<ObjInfo> {
 }
 
 pub fn write_coff(obj: &ObjInfo) -> Result<Vec<u8>> {
-    let root_name = obj.name.split('.').next().unwrap();
+    let _root_name = obj.name.split('.').next().unwrap();
     // println!("Writing {}.obj", root_name);
 
     // for each obj:
@@ -1254,7 +1249,7 @@ pub fn write_coff(obj: &ObjInfo) -> Result<Vec<u8>> {
             weak: false, // sym.flags.scope() == ObjSymbolScope::Weak,
             section: match sym.section {
                 Some(idx) => {
-                    object::write::SymbolSection::Section(sect_map.get(&idx).unwrap().clone())
+                    object::write::SymbolSection::Section(*sect_map.get(&idx).unwrap())
                 }
                 None => object::write::SymbolSection::Undefined,
             },
@@ -1271,10 +1266,10 @@ pub fn write_coff(obj: &ObjInfo) -> Result<Vec<u8>> {
                 None => bail!("Could not find symbol ID for index {}", reloc.target_symbol),
             };
             cur_coff.add_relocation(
-                sect_map.get(&sect_idx).unwrap().clone(),
+                *sect_map.get(&sect_idx).unwrap(),
                 object::write::Relocation {
                     offset: addr as u64,
-                    symbol: sym_id.clone(),
+                    symbol: *sym_id,
                     addend: 0,
                     flags: RelocationFlags::Coff { typ: reloc.to_coff() },
                 },
@@ -1283,10 +1278,10 @@ pub fn write_coff(obj: &ObjInfo) -> Result<Vec<u8>> {
             match reloc.kind {
                 ObjRelocKind::PpcAddr16Ha | ObjRelocKind::PpcAddr16Lo => {
                     cur_coff.add_relocation(
-                        sect_map.get(&sect_idx).unwrap().clone(),
+                        *sect_map.get(&sect_idx).unwrap(),
                         object::write::Relocation {
                             offset: addr as u64,
-                            symbol: sym_id.clone(),
+                            symbol: *sym_id,
                             addend: 0,
                             flags: RelocationFlags::Coff { typ: object::pe::IMAGE_REL_PPC_PAIR },
                         },
@@ -1320,6 +1315,6 @@ pub fn list_exe_sections(exe: &PeFile32) {
             "  Has uninitialized data? {}",
             sec.characteristics.get(endian::LittleEndian) & 0x80 != 0
         );
-        println!("");
+        println!();
     }
 }

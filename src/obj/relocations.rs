@@ -5,8 +5,8 @@ use std::{
     ops::RangeBounds,
 };
 
-use anyhow::{bail, Result};
-use object::{elf, pe, write::coff};
+use anyhow::Result;
+use object::{elf, pe};
 use serde::{Deserialize, Serialize};
 
 use crate::obj::SymbolIndex;

@@ -568,17 +568,13 @@ impl VM {
                     if self.gpr[ins.field_rs() as usize].value == GprValue::Unknown {
                         // try to find source reg
                         let src = self.gpr[ins.field_rs() as usize].source;
-                        match src.kind {
-                            GprSourceLocation::Register(r) => {
-                                // check the src reg and the current src.version
-                                // it MUST match src reg's current version in order to pull data from it
-                                if self.gpr[r].version == src.version {
-                                    if self.gpr[r].value != GprValue::Unknown {
-                                        self.gpr[ins.field_rs() as usize].value = self.gpr[r].value;
-                                    }
+                        if let GprSourceLocation::Register(r) = src.kind {
+                            // check the src reg and the current src.version
+                            // it MUST match src reg's current version in order to pull data from it
+                            if self.gpr[r].version == src.version
+                                && self.gpr[r].value != GprValue::Unknown {
+                                    self.gpr[ins.field_rs() as usize].value = self.gpr[r].value;
                                 }
-                            }
-                            _ => {}
                         }
                     }
 
