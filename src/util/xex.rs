@@ -1,34 +1,36 @@
+use std::{
+    borrow::Cow,
+    cmp::min,
+    collections::{btree_map::Entry, BTreeMap},
+    ffi::CString,
+    fs,
+    num::NonZeroU64,
+};
+
 use anyhow::{anyhow, bail, ensure, Result};
 use memchr::memmem;
-use object::endian::LittleEndian as LE;
-use object::read::pe::{ImageNtHeaders, ImageOptionalHeader};
+use num_enum::{IntoPrimitive, TryFromPrimitive};
 use object::{
-    endian, read::pe::PeFile32, Architecture, BinaryFormat, Endianness, File, Import, Object,
-    ObjectComdat, ObjectKind, ObjectSection, ObjectSegment, ObjectSymbol, Relocation,
-    RelocationFlags, RelocationTarget, SectionKind, Symbol, SymbolFlags, SymbolKind, SymbolScope,
-    SymbolSection,
+    endian,
+    endian::LittleEndian as LE,
+    read::pe::{ImageNtHeaders, ImageOptionalHeader, PeFile32},
+    write::{SectionId, SymbolId},
+    Architecture, BinaryFormat, Endianness, File, Import, Object, ObjectComdat, ObjectKind,
+    ObjectSection, ObjectSegment, ObjectSymbol, Relocation, RelocationFlags, RelocationTarget,
+    SectionKind, Symbol, SymbolFlags, SymbolKind, SymbolScope, SymbolSection,
 };
-use std::cmp::min;
-use std::collections::btree_map::Entry;
-use std::collections::BTreeMap;
-use std::ffi::CString;
-use std::{borrow::Cow, fs, num::NonZeroU64};
 use typed_path::{Utf8NativePathBuf, Utf8UnixPath};
 
 use crate::{
-    analysis::cfa::SectionAddress,
+    analysis::{cfa::SectionAddress, read_u32},
     obj::{
         ObjArchitecture, ObjInfo, ObjKind, ObjReloc, ObjRelocKind, ObjSection, ObjSectionKind,
-        ObjSplit, ObjSymbol, ObjSymbolFlagSet, ObjSymbolFlags, ObjSymbolKind, ObjUnit,
-        SectionIndex as ObjSectionIndex, SymbolIndex as ObjSymbolIndex,
+        ObjSplit, ObjSymbol, ObjSymbolFlagSet, ObjSymbolFlags, ObjSymbolKind, ObjSymbolScope,
+        ObjUnit, SectionIndex as ObjSectionIndex, SectionIndex, SymbolIndex as ObjSymbolIndex,
+        SymbolIndex,
     },
     util::{crypto::decrypt_aes128_cbc_no_padding, xex_imports::replace_ordinal},
 };
-
-use crate::analysis::read_u32;
-use crate::obj::{ObjSymbolScope, SectionIndex, SymbolIndex};
-use num_enum::{IntoPrimitive, TryFromPrimitive};
-use object::write::{SectionId, SymbolId};
 
 // quick and ez ways to read data from a block of bytes
 pub fn read_halfword(data: &Vec<u8>, index: usize) -> u16 {
@@ -1208,16 +1210,13 @@ pub fn write_coff(obj: &ObjInfo) -> Result<Vec<u8>> {
     // insert the sections
     for (idx, sect) in obj.sections.iter() {
         // println!("Section: {}", sect.name);
-        let sect_id = cur_coff.add_section(
-            Vec::new(),
-            sect.name.clone().into_bytes(),
-            match sect.kind {
+        let sect_id =
+            cur_coff.add_section(Vec::new(), sect.name.clone().into_bytes(), match sect.kind {
                 ObjSectionKind::Code => SectionKind::Text,
                 ObjSectionKind::Data => SectionKind::Data,
                 ObjSectionKind::ReadOnlyData => SectionKind::ReadOnlyData,
                 ObjSectionKind::Bss => SectionKind::UninitializedData,
-            },
-        );
+            });
         if sect.kind != ObjSectionKind::Bss {
             cur_coff.append_section_data(sect_id, &sect.data, sect.align);
         }
