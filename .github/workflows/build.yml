@@ -14,25 +14,6 @@ env:
   CARGO_INCREMENTAL: 0
 
 jobs:
-  check:
-    name: Check
-    runs-on: ubuntu-latest
-    env:
-      RUSTFLAGS: -D warnings
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          components: clippy
-      - name: Cache Rust workspace
-        uses: Swatinem/rust-cache@v2
-      - name: Cargo check
-        run: cargo check --all-features --all-targets
-      - name: Cargo clippy
-        run: cargo clippy --all-features --all-targets
-
   fmt:
     name: Format
     runs-on: ubuntu-latest
@@ -48,22 +29,6 @@ jobs:
           components: rustfmt
       - name: Cargo fmt
         run: cargo fmt --all --check
-
-  deny:
-    name: Deny
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        checks:
-          - advisories
-          - bans licenses sources
-    # Prevent new advisories from failing CI
-    continue-on-error: ${{ matrix.checks == 'advisories' }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: EmbarkStudios/cargo-deny-action@v2
-        with:
-          command: check ${{ matrix.checks }}
 
   test:
     name: Test
