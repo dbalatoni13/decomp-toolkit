@@ -1,16 +1,14 @@
 use std::{
     cell::RefCell,
     collections::btree_map,
-    io::{Cursor, Read, Write, stdout},
+    io::{Read, Write, stdout},
     ops::Bound::{Excluded, Unbounded},
     str::from_utf8,
 };
 
 use anyhow::{Context, Result, anyhow, bail};
 use argp::FromArgs;
-use object::{
-    Object, ObjectSection, ObjectSymbol, RelocationFlags, RelocationTarget, Section, elf,
-};
+use object::{Object, Section};
 use syntect::{
     highlighting::{Color, HighlightIterator, HighlightState, Highlighter, Theme, ThemeSet},
     parsing::{ParseState, ScopeStack, SyntaxReference, SyntaxSet},
@@ -22,7 +20,7 @@ use crate::{
         dwarf::{
             AttributeKind, MemberFunctionMap, TagKind, TypedefMap, parse_producer,
             preprocess_cu_tag, print::tag_type_string, process_compile_unit, process_cu_tag,
-            process_overlay_branch, read_debug_section, should_skip_tag,
+            process_overlay_branch, read_dwarf, read_dwarf_elf, should_skip_tag,
         },
         file::buf_writer,
         path::native_path,
@@ -108,217 +106,200 @@ fn dump(args: DumpArgs) -> Result<()> {
                 let name = name.rsplit_once('/').map(|(_, b)| b).unwrap_or(&name);
                 let file_path = out_path.join(format!("{name}.txt"));
                 let mut file = buf_writer(&file_path)?;
-                dump_debug_section(&args, &mut file, &obj_file, debug_section)?;
+                dump_debug_section(&mut file, &obj_file, debug_section, args.include_erased)?;
                 file.flush()?;
             } else if args.no_color {
                 println!("\n// File {name}:");
-                dump_debug_section(&args, &mut stdout(), &obj_file, debug_section)?;
+                dump_debug_section(&mut stdout(), &obj_file, debug_section, args.include_erased)?;
             } else {
                 let mut writer = HighlightWriter::new(syntax_set.clone(), syntax.clone(), theme);
                 writeln!(writer, "\n// File {name}:")?;
-                dump_debug_section(&args, &mut writer, &obj_file, debug_section)?;
+                dump_debug_section(&mut writer, &obj_file, debug_section, args.include_erased)?;
             }
         }
     } else {
-        let obj_file = object::read::File::parse(buf)?;
-        let debug_section = obj_file
-            .section_by_name(".debug")
-            .ok_or_else(|| anyhow!("Failed to locate .debug section"))?;
-        if let Some(out_path) = &args.out {
-            let mut file = buf_writer(out_path)?;
-            dump_debug_section(&args, &mut file, &obj_file, debug_section)?;
-            file.flush()?;
-        } else if args.no_color {
-            dump_debug_section(&args, &mut stdout(), &obj_file, debug_section)?;
-        } else {
-            let mut writer = HighlightWriter::new(syntax_set, syntax, theme);
-            dump_debug_section(&args, &mut writer, &obj_file, debug_section)?;
+        match object::read::File::parse(buf) {
+            Ok(obj_file) => {
+                let debug_section = obj_file
+                    .section_by_name(".debug")
+                    .or_else(|| obj_file.section_by_name(".debug_info"))
+                    .ok_or_else(|| anyhow!("Failed to locate DWARF debug section"))?;
+                if let Some(out_path) = &args.out {
+                    let mut file = buf_writer(out_path)?;
+                    dump_debug_section(&mut file, &obj_file, debug_section, args.include_erased)?;
+                    file.flush()?;
+                } else if args.no_color {
+                    dump_debug_section(&mut stdout(), &obj_file, debug_section, args.include_erased)?;
+                } else {
+                    let mut writer = HighlightWriter::new(syntax_set, syntax, theme);
+                    dump_debug_section(&mut writer, &obj_file, debug_section, args.include_erased)?;
+                }
+            }
+            Err(err) if buf.starts_with(b"\x7FELF") => {
+                let mut info = read_dwarf_elf(buf)
+                    .with_context(|| format!("Failed to parse ELF via fallback after: {err}"))?;
+                if let Some(out_path) = &args.out {
+                    let mut file = buf_writer(out_path)?;
+                    dump_info(&mut file, &mut info)?;
+                    file.flush()?;
+                } else if args.no_color {
+                    dump_info(&mut stdout(), &mut info)?;
+                } else {
+                    let mut writer = HighlightWriter::new(syntax_set, syntax, theme);
+                    dump_info(&mut writer, &mut info)?;
+                }
+            }
+            Err(err) => return Err(err.into()),
         }
     }
     Ok(())
 }
 
 fn dump_debug_section<W>(
-    args: &DumpArgs,
     w: &mut W,
     obj_file: &object::File<'_>,
-    debug_section: Section,
+    _debug_section: Section,
+    include_erased: bool,
 ) -> Result<()>
 where
     W: Write + ?Sized,
 {
-    let mut data = debug_section.uncompressed_data()?.into_owned();
+    let mut info = read_dwarf(obj_file, include_erased)?;
+    dump_info(w, &mut info)
+}
 
-    // Apply relocations to data
-    for (addr, reloc) in debug_section.relocations() {
-        match reloc.flags() {
-            RelocationFlags::Elf { r_type: elf::R_PPC_ADDR32 | elf::R_PPC_UADDR32 } => {
-                let target = match reloc.target() {
-                    RelocationTarget::Symbol(symbol_idx) => {
-                        let symbol = obj_file.symbol_by_index(symbol_idx)?;
-                        (symbol.address() as i64 + reloc.addend()) as u32
-                    }
-                    _ => bail!("Invalid .debug relocation target"),
-                };
-                data[addr as usize..addr as usize + 4].copy_from_slice(&target.to_be_bytes());
-            }
-            RelocationFlags::Elf { r_type: elf::R_PPC_NONE } => {}
-            _ => bail!("Unhandled .debug relocation type {:?}", reloc.kind()),
-        }
-    }
-
-    let mut reader = Cursor::new(&*data);
-    let mut info =
-        read_debug_section(&mut reader, obj_file.endianness().into(), args.include_erased)?;
+fn dump_info<W>(w: &mut W, info: &mut crate::util::dwarf::DwarfInfo) -> Result<()>
+where
+    W: Write + ?Sized,
+{
 
     for (&addr, tag) in &info.tags {
         log::debug!("{}: {:?}", addr, tag);
     }
 
     let mut units = Vec::<String>::new();
-    if let Some((_, mut tag)) = info.tags.first_key_value() {
-        loop {
-            match tag.kind {
-                TagKind::Padding => {
-                    // TODO
-                }
-                TagKind::MwOverlayBranch => {
-                    let branch = process_overlay_branch(tag)?;
-                    writeln!(w, "\n/*\n    Overlay: {}", branch.name)?;
-                    writeln!(w, "    Overlay ID: {}", branch.id)?;
-                    writeln!(
-                        w,
-                        "    Code range: {:#010X} -> {:#010X}",
-                        branch.start_address, branch.end_address
-                    )?;
+    for tag in info.tags.values() {
+        match tag.kind {
+            TagKind::Padding => {
+                // TODO
+            }
+            TagKind::MwOverlayBranch => {
+                let branch = process_overlay_branch(tag)?;
+                writeln!(w, "\n/*\n    Overlay: {}", branch.name)?;
+                writeln!(w, "    Overlay ID: {}", branch.id)?;
+                writeln!(
+                    w,
+                    "    Code range: {:#010X} -> {:#010X}",
+                    branch.start_address, branch.end_address
+                )?;
 
-                    if let Some(unit_addr) = branch.compile_unit {
-                        let tag = info
-                            .tags
-                            .get(&unit_addr)
-                            .ok_or_else(|| anyhow!("Failed to get CompileUnit"))?;
-                        let unit = process_compile_unit(tag)?;
-                        writeln!(w, "    Compile unit: {}", unit.name)?;
-                    }
-
-                    writeln!(w, "*/")?;
-                }
-                TagKind::CompileUnit => {
+                if let Some(unit_addr) = branch.compile_unit {
+                    let tag = info
+                        .tags
+                        .get(&unit_addr)
+                        .ok_or_else(|| anyhow!("Failed to get CompileUnit"))?;
                     let unit = process_compile_unit(tag)?;
-                    if units.contains(&unit.name) {
-                        // log::warn!("Duplicate unit '{}'", unit.name);
-                    } else {
-                        units.push(unit.name.clone());
-                    }
-                    writeln!(w, "\n/*\n    Compile unit: {}", unit.name)?;
-                    if let Some(producer) = unit.producer {
-                        writeln!(w, "    Producer: {producer}")?;
-                        info.producer = parse_producer(&producer);
-                    }
-                    if let Some(comp_dir) = unit.comp_dir {
-                        writeln!(w, "    Compile directory: {comp_dir}")?;
-                    }
-                    if let Some(language) = unit.language {
-                        writeln!(w, "    Language: {language}")?;
-                    }
-                    if let (Some(start), Some(end)) = (unit.start_address, unit.end_address) {
-                        writeln!(w, "    Code range: {start:#010X} -> {end:#010X}")?;
-                    }
-                    if let Some(gcc_srcfile_name_offset) = unit.gcc_srcfile_name_offset {
-                        writeln!(
-                            w,
-                            "    GCC Source File Name Offset: {gcc_srcfile_name_offset:#010X}"
-                        )?;
-                    }
-                    if let Some(gcc_srcinfo_offset) = unit.gcc_srcinfo_offset {
-                        writeln!(w, "    GCC Source Info Offset: {gcc_srcinfo_offset:#010X}")?;
-                    }
-                    writeln!(w, "*/")?;
+                    writeln!(w, "    Compile unit: {}", unit.name)?;
+                }
 
-                    let mut children = tag.children(&info.tags);
+                writeln!(w, "*/")?;
+            }
+            TagKind::CompileUnit => {
+                let unit = process_compile_unit(tag)?;
+                if units.contains(&unit.name) {
+                    continue;
+                }
+                units.push(unit.name.clone());
+                writeln!(w, "\n/*\n    Compile unit: {}", unit.name)?;
+                if let Some(producer) = unit.producer {
+                    writeln!(w, "    Producer: {producer}")?;
+                    info.producer = parse_producer(&producer);
+                }
+                if let Some(comp_dir) = unit.comp_dir {
+                    writeln!(w, "    Compile directory: {comp_dir}")?;
+                }
+                if let Some(language) = unit.language {
+                    writeln!(w, "    Language: {language}")?;
+                }
+                if let (Some(start), Some(end)) = (unit.start_address, unit.end_address) {
+                    writeln!(w, "    Code range: {start:#010X} -> {end:#010X}")?;
+                }
+                if let Some(gcc_srcfile_name_offset) = unit.gcc_srcfile_name_offset {
+                    writeln!(w, "    GCC Source File Name Offset: {gcc_srcfile_name_offset:#010X}")?;
+                }
+                if let Some(gcc_srcinfo_offset) = unit.gcc_srcinfo_offset {
+                    writeln!(w, "    GCC Source Info Offset: {gcc_srcinfo_offset:#010X}")?;
+                }
+                writeln!(w, "*/")?;
 
-                    // merge in erased tags
-                    let range = match tag.next_sibling(&info.tags) {
-                        Some(next) => (Excluded(tag.key), Excluded(next.key)),
-                        None => (Excluded(tag.key), Unbounded),
-                    };
-                    for (_, child) in info.tags.range(range) {
-                        if child.is_erased_root {
-                            children.push(child);
-                        }
-                    }
-                    children.sort_by_key(|x| x.key);
+                let mut children = tag.children(&info.tags);
 
-                    let mut typedefs = TypedefMap::new();
-                    info.member_functions = RefCell::new(MemberFunctionMap::new());
-                    // pre-parse step
-                    for &child in &children {
-                        preprocess_cu_tag(&info, child);
+                let range = match tag.next_sibling(&info.tags) {
+                    Some(next) => (Excluded(tag.key), Excluded(next.key)),
+                    None => (Excluded(tag.key), Unbounded),
+                };
+                for (_, child) in info.tags.range(range) {
+                    if child.is_erased_root {
+                        children.push(child);
                     }
-                    for &child in &children {
-                        let tag_type = match process_cu_tag(&info, child) {
-                            Ok(tag_type) => tag_type,
-                            Err(e) => {
-                                log::error!(
-                                    "Failed to process tag {:X} (unit {}): {}",
-                                    child.key,
-                                    unit.name,
-                                    e
-                                );
-                                writeln!(
-                                    w,
-                                    "// ERROR: Failed to process tag {:X} ({:?})",
-                                    child.key, child.kind
-                                )?;
-                                continue;
-                            }
-                        };
-                        if should_skip_tag(&tag_type, child.is_erased) {
+                }
+                children.sort_by_key(|x| x.key);
+                writeln!(w, "// DEBUG children {}", children.len())?;
+
+                let mut typedefs = TypedefMap::new();
+                info.member_functions = RefCell::new(MemberFunctionMap::new());
+                for &child in &children {
+                    preprocess_cu_tag(&info, child);
+                }
+                for &child in &children {
+                    let tag_type = match process_cu_tag(&info, child) {
+                        Ok(tag_type) => tag_type,
+                        Err(e) => {
+                            log::error!(
+                                "Failed to process tag {:X} (unit {}): {}",
+                                child.key,
+                                unit.name,
+                                e
+                            );
+                            writeln!(w, "// ERROR: Failed to process tag {:X} ({:?})", child.key, child.kind)?;
                             continue;
                         }
-                        match tag_type_string(&info, &typedefs, &tag_type, child.is_erased) {
-                            Ok(s) => writeln!(w, "{s}")?,
-                            Err(e) => {
-                                log::error!(
-                                    "Failed to emit tag {:X} (unit {}): {}",
-                                    child.key,
-                                    unit.name,
-                                    e
-                                );
-                                writeln!(
-                                    w,
-                                    "// ERROR: Failed to emit tag {:X} ({:?})",
-                                    child.key, child.kind
-                                )?;
-                                continue;
-                            }
+                    };
+                    if should_skip_tag(&tag_type, child.is_erased) {
+                        continue;
+                    }
+                    match tag_type_string(&info, &typedefs, &tag_type, child.is_erased) {
+                        Ok(s) => writeln!(w, "{s}")?,
+                        Err(e) => {
+                            log::error!(
+                                "Failed to emit tag {:X} (unit {}): {}",
+                                child.key,
+                                unit.name,
+                                e
+                            );
+                            writeln!(w, "// ERROR: Failed to emit tag {:X} ({:?})", child.key, child.kind)?;
+                            continue;
                         }
+                    }
 
-                        if let TagKind::Typedef = child.kind {
-                            // TODO fundamental typedefs?
-                            if let Some(ud_type_ref) =
-                                child.reference_attribute(AttributeKind::UserDefType)
-                            {
-                                match typedefs.entry(ud_type_ref) {
-                                    btree_map::Entry::Vacant(e) => {
-                                        e.insert(vec![child.key]);
-                                    }
-                                    btree_map::Entry::Occupied(e) => {
-                                        e.into_mut().push(child.key);
-                                    }
+                    if let TagKind::Typedef = child.kind {
+                        if let Some(ud_type_ref) = child
+                            .reference_attribute(AttributeKind::UserDefType)
+                            .or_else(|| child.reference_attribute(AttributeKind::DwAtType))
+                        {
+                            match typedefs.entry(ud_type_ref) {
+                                btree_map::Entry::Vacant(e) => {
+                                    e.insert(vec![child.key]);
+                                }
+                                btree_map::Entry::Occupied(e) => {
+                                    e.into_mut().push(child.key);
                                 }
                             }
                         }
                     }
                 }
-                kind => bail!("Unhandled root tag type {:?}", kind),
             }
-
-            if let Some(next) = tag.next_sibling(&info.tags) {
-                tag = next;
-            } else {
-                break;
-            }
+            _ => {}
         }
     }
     // log::info!("Link order:");

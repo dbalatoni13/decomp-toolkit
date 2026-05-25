@@ -6,12 +6,16 @@ use gnuv2_demangle::{DemangleConfig, demangle as gnu_demangle};
 use indent::indent_all_by;
 
 use crate::util::dwarf::{
-    ArrayType, AttributeKind, DwarfInfo, EnumerationType, FundType, MemberSubroutineDefType,
-    Modifier, Producer, PtrToMemberType, StructureKind, StructureMember, StructureType,
-    SubroutineBlock, SubroutineNode, SubroutineType, TagKind, TagType, Type, TypeKind, TypeString,
-    TypedefMap, TypedefTag, UnionType, UserDefinedType, VariableTag, Visibility, get_udt_by_key,
-    process_variable_tag, ud_type,
+    ArrayType, AttributeKind, DeclCoord, DwarfInfo, EnumerationType, FundType,
+    MemberSubroutineDefType, Modifier, Producer, PtrToMemberType, StructureKind, StructureMember,
+    StructureType, SubroutineBlock, SubroutineNode, SubroutineType, TagKind, TagType, Type,
+    TypeKind, TypeString, TypedefMap, TypedefTag, UnionType, UserDefinedType, VariableTag,
+    Visibility, get_udt_by_key, process_variable_tag, ud_type,
 };
+
+fn decl_comment(decl: &Option<DeclCoord>) -> Option<String> {
+    decl.as_ref().map(|decl| format!("// Decl: {}:{}", decl.file, decl.line))
+}
 
 pub fn apply_modifiers(mut str: TypeString, modifiers: &[Modifier]) -> Result<TypeString> {
     let mut has_pointer = false;
@@ -336,6 +340,9 @@ fn member_subroutine_def_string(
     t: &MemberSubroutineDefType,
 ) -> Result<String> {
     let mut out = String::new();
+    if let Some(comment) = decl_comment(&t.decl) {
+        writeln!(out, "{comment}")?;
+    }
 
     let mut base_name_opt = None;
     let mut direct_base_name_opt = None;
@@ -501,6 +508,9 @@ pub fn subroutine_def_string(
         out.push_str("// Erased\n");
     } else if let (Some(start), Some(end)) = (t.start_address, t.end_address) {
         writeln!(out, "// Range: {start:#X} -> {end:#X}")?;
+    }
+    if let Some(comment) = decl_comment(&t.decl) {
+        writeln!(out, "{comment}")?;
     }
 
     let mut base_name_opt = None;
@@ -697,6 +707,13 @@ pub fn subroutine_def_string(
             if let Some(location) = &variable.location {
                 write!(var_out, " // {location}")?;
             }
+            if let Some(comment) = decl_comment(&variable.decl) {
+                if variable.location.is_some() {
+                    write!(var_out, ", {}", comment.trim_start_matches("// "))?;
+                } else {
+                    write!(var_out, " {comment}")?;
+                }
+            }
             writeln!(var_out)?;
         }
         write!(out, "{}", indent_all_by(4, var_out))?;
@@ -757,6 +774,9 @@ fn subroutine_block_string(
     if let (Some(start), Some(end)) = (block.start_address, block.end_address) {
         writeln!(out, "    // Range: {start:#X} -> {end:#X}")?;
     }
+    if let Some(comment) = decl_comment(&block.decl) {
+        writeln!(out, "    {comment}")?;
+    }
     let mut var_out = String::new();
     for variable in &block.variables {
         let ts = type_string(info, typedefs, &variable.kind, true)?;
@@ -769,6 +789,13 @@ fn subroutine_block_string(
         )?;
         if let Some(location) = &variable.location {
             write!(var_out, " // {location}")?;
+        }
+        if let Some(comment) = decl_comment(&variable.decl) {
+            if variable.location.is_some() {
+                write!(var_out, ", {}", comment.trim_start_matches("// "))?;
+            } else {
+                write!(var_out, " {comment}")?;
+            }
         }
         writeln!(var_out)?;
     }
@@ -926,6 +953,9 @@ pub fn structure_def_string(
     if let Some(byte_size) = t.byte_size {
         writeln!(out, "// total size: {byte_size:#X}")?;
     }
+    if let Some(comment) = decl_comment(&t.decl) {
+        writeln!(out, "{comment}")?;
+    }
     match t.kind {
         StructureKind::Struct => out.push_str("struct"),
         StructureKind::Class => out.push_str("class"),
@@ -1070,7 +1100,11 @@ pub fn structure_def_string(
             write!(var_out, " : {}", bit.bit_size)?;
         }
         let size = if let Some(size) = member.byte_size { size } else { member.kind.size(info)? };
-        writeln!(var_out, "; // offset {:#X}, size {:#X}", member.offset, size)?;
+        write!(var_out, "; // offset {:#X}, size {:#X}", member.offset, size)?;
+        if let Some(comment) = decl_comment(&member.decl) {
+            write!(var_out, ", {}", comment.trim_start_matches("// "))?;
+        }
+        writeln!(var_out)?;
         out.push_str(&indent_all_by(indent, var_out));
     }
     while in_group > 0 {
@@ -1088,7 +1122,11 @@ pub fn structure_def_string(
 }
 
 pub fn enum_def_string(t: &EnumerationType) -> Result<String> {
-    let mut out = match t.name.as_ref() {
+    let mut out = String::new();
+    if let Some(comment) = decl_comment(&t.decl) {
+        writeln!(out, "{comment}")?;
+    }
+    out.push_str(&match t.name.as_ref() {
         Some(name) => {
             if name.starts_with('@') {
                 format!("enum /* {name} */ {{\n")
@@ -1097,16 +1135,25 @@ pub fn enum_def_string(t: &EnumerationType) -> Result<String> {
             }
         }
         None => "enum {\n".to_string(),
-    };
+    });
     for member in t.members.iter() {
-        writeln!(out, "    {} = {},", member.name, member.value)?;
+        write!(out, "    {} = {}", member.name, member.value)?;
+        write!(out, ",")?;
+        if let Some(comment) = decl_comment(&member.decl) {
+            write!(out, " {comment}")?;
+        }
+        writeln!(out)?;
     }
     write!(out, "}}")?;
     Ok(out)
 }
 
 pub fn union_def_string(info: &DwarfInfo, typedefs: &TypedefMap, t: &UnionType) -> Result<String> {
-    let mut out = match t.name.as_ref() {
+    let mut out = String::new();
+    if let Some(comment) = decl_comment(&t.decl) {
+        writeln!(out, "{comment}")?;
+    }
+    out.push_str(&match t.name.as_ref() {
         Some(name) => {
             if name.starts_with('@') {
                 format!("union /* {name} */ {{\n")
@@ -1115,7 +1162,7 @@ pub fn union_def_string(info: &DwarfInfo, typedefs: &TypedefMap, t: &UnionType) 
             }
         }
         None => "union {\n".to_string(),
-    };
+    });
     let mut var_out = String::new();
     for member in t.members.iter() {
         let ts = type_string(info, typedefs, &member.kind, true)?;
@@ -1126,6 +1173,9 @@ pub fn union_def_string(info: &DwarfInfo, typedefs: &TypedefMap, t: &UnionType) 
         }
         let size = if let Some(size) = member.byte_size { size } else { member.kind.size(info)? };
         write!(var_out, " // offset {:#X}, size {:#X}", member.offset, size)?;
+        if let Some(comment) = decl_comment(&member.decl) {
+            write!(var_out, ", {}", comment.trim_start_matches("// "))?;
+        }
         writeln!(var_out)?;
     }
     write!(out, "{}", indent_all_by(4, var_out))?;
@@ -1156,7 +1206,12 @@ pub fn tag_type_string(
 
 fn typedef_string(info: &DwarfInfo, typedefs: &TypedefMap, typedef: &TypedefTag) -> Result<String> {
     let ts = type_string(info, typedefs, &typedef.kind, true)?;
-    Ok(format!("typedef {} {}{};", ts.prefix, typedef.name, ts.suffix))
+    let mut out = format!("typedef {} {}{};", ts.prefix, typedef.name, ts.suffix);
+    if let Some(comment) = decl_comment(&typedef.decl) {
+        out.push(' ');
+        out.push_str(&comment);
+    }
+    Ok(out)
 }
 
 fn variable_string(
@@ -1178,6 +1233,12 @@ fn variable_string(
         if let Some(addr) = variable.address {
             out.push_str(&format!(", address: {addr:#X}"));
         }
+        if let Some(comment) = decl_comment(&variable.decl) {
+            out.push_str(&format!(", {}", comment.trim_start_matches("// ")));
+        }
+    } else if let Some(comment) = decl_comment(&variable.decl) {
+        out.push(' ');
+        out.push_str(&comment);
     }
     Ok(out)
 }
