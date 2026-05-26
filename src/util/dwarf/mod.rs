@@ -867,7 +867,7 @@ pub struct StructureBase {
 #[derive(Debug, Clone)]
 pub struct EnumerationMember {
     pub name: String,
-    pub value: i32,
+    pub value: i64,
     pub decl: Option<DeclCoord>,
 }
 
@@ -1684,10 +1684,10 @@ fn process_enumerator_tag(tag: &Tag) -> Result<EnumerationMember> {
             (AttributeKind::Sibling, _) => {}
             (AttributeKind::Name, AttributeValue::String(s)) => name = Some(s.clone()),
             (AttributeKind::DwConstValue, AttributeValue::Udata(v)) => {
-                value = Some(i32::try_from(*v).context("Enumerator value exceeds i32 range")?)
+                value = Some(i64::try_from(*v).context("Enumerator value exceeds i64 range")?)
             }
             (AttributeKind::DwConstValue, AttributeValue::Sdata(v)) => {
-                value = Some(i32::try_from(*v).context("Enumerator value exceeds i32 range")?)
+                value = Some(*v)
             }
             _ => bail!("Unhandled enumerator attribute {:?}", attr),
         }
@@ -1719,9 +1719,9 @@ fn process_enumeration_tag(info: &DwarfInfo, tag: &Tag) -> Result<EnumerationTyp
                 let mut cursor = Cursor::new(data);
                 while cursor.position() < data.len() as u64 {
                     let value = match byte_size {
-                        Some(1) => Some(i8::from_reader(&mut cursor, info.e)? as i32),
-                        Some(2) => Some(i16::from_reader(&mut cursor, info.e)? as i32),
-                        Some(4) => Some(i32::from_reader(&mut cursor, info.e)?),
+                        Some(1) => Some(i8::from_reader(&mut cursor, info.e)? as i64),
+                        Some(2) => Some(i16::from_reader(&mut cursor, info.e)? as i64),
+                        Some(4) => Some(i32::from_reader(&mut cursor, info.e)? as i64),
                         _ => None,
                     };
                     let name = read_string(&mut cursor)?;
@@ -2352,6 +2352,10 @@ fn process_subroutine_block_tag(info: &DwarfInfo, tag: &Tag) -> Result<Option<Su
     let mut typedefs = Vec::new();
     for child in tag.children(&info.tags) {
         match child.kind {
+            TagKind::FormalParameter => {
+                // GCC occasionally nests parameter DIEs inside lexical blocks.
+                // They do not affect the rendered block body, so ignore them.
+            }
             TagKind::LocalVariable => variables.push(process_local_variable_tag(info, child)?),
             TagKind::GlobalVariable => {
                 // TODO GlobalVariable refs?
