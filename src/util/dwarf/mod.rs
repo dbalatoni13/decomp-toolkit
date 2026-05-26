@@ -1180,6 +1180,12 @@ pub fn process_offset(block: &[u8], e: Endian) -> Result<u32> {
     if block.len() == 6 && block[0] == LocationOp::Const as u8 && block[5] == LocationOp::Add as u8
     {
         Ok(u32::from_bytes(*array_ref!(block, 1, 4), e))
+    } else if block.len() == 5 && block[0] == LocationOp::Const as u8 {
+        Ok(u32::from_bytes(*array_ref!(block, 1, 4), e))
+    } else if let Some((&0x10, rest)) = block.split_first() {
+        let (value, consumed) = read_uleb128(rest)?;
+        ensure!(consumed == rest.len(), "Unhandled trailing bytes in DW_OP_constu");
+        u32::try_from(value).context("DW_OP_constu offset exceeds u32 range")
     } else if let Some((&0x23, rest)) = block.split_first() {
         let (value, consumed) = read_uleb128(rest)?;
         ensure!(consumed == rest.len(), "Unhandled trailing bytes in DW_OP_plus_uconst");
@@ -2521,6 +2527,8 @@ fn process_local_variable_tag(info: &DwarfInfo, tag: &Tag) -> Result<SubroutineV
                 // TODO?
                 // info!("MwDwarf2Location: {:?} in {:?}", block, tag);
             }
+            (AttributeKind::DwConstValue, _) => {}
+            (AttributeKind::Private | AttributeKind::Protected | AttributeKind::Public, _) => {}
             (AttributeKind::Specification, &AttributeValue::Reference(key)) => {
                 let spec_tag = info
                     .tags
