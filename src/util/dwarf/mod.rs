@@ -1182,6 +1182,14 @@ pub fn process_offset(block: &[u8], e: Endian) -> Result<u32> {
         Ok(u32::from_bytes(*array_ref!(block, 1, 4), e))
     } else if block.len() == 5 && block[0] == LocationOp::Const as u8 {
         Ok(u32::from_bytes(*array_ref!(block, 1, 4), e))
+    } else if matches!(
+        block,
+        [0x12, 0x06, lit, 0x1c, 0x06, 0x22] if (0x30..=0x4f).contains(lit)
+    ) {
+        // GCC uses dynamic vbase-table lookups for virtual inheritance offsets.
+        // We only need a stable printable placeholder; the virtual-base flag already
+        // preserves the important semantics for rendering.
+        Ok(0)
     } else if let Some((&0x10, rest)) = block.split_first() {
         let (value, consumed) = read_uleb128(rest)?;
         ensure!(consumed == rest.len(), "Unhandled trailing bytes in DW_OP_constu");
@@ -1191,7 +1199,7 @@ pub fn process_offset(block: &[u8], e: Endian) -> Result<u32> {
         ensure!(consumed == rest.len(), "Unhandled trailing bytes in DW_OP_plus_uconst");
         u32::try_from(value).context("DW_OP_plus_uconst offset exceeds u32 range")
     } else {
-        Err(anyhow!("Unhandled location data, expected offset"))
+        Err(anyhow!("Unhandled location data, expected offset: {block:02X?}"))
     }
 }
 
