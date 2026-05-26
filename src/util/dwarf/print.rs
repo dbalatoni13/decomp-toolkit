@@ -17,6 +17,24 @@ fn decl_comment(decl: &Option<DeclCoord>) -> Option<String> {
     decl.as_ref().map(|decl| format!("// Decl: {}:{}", decl.file, decl.line))
 }
 
+fn typedef_name(
+    typedefs: &TypedefMap,
+    t: &Type,
+    exclude_name: Option<&str>,
+) -> Option<String> {
+    typedefs
+        .get(t)
+        .and_then(|names| names.iter().find(|name| Some(name.as_str()) != exclude_name).cloned())
+}
+
+fn extend_typedefs(typedefs: &TypedefMap, new_typedefs: &[TypedefTag]) -> TypedefMap {
+    let mut scoped = typedefs.clone();
+    for typedef in new_typedefs {
+        scoped.entry(typedef.kind.clone()).or_default().push(typedef.name.clone());
+    }
+    scoped
+}
+
 fn tag_name_or_udt_name(info: &DwarfInfo, key: u32) -> Result<String> {
     if let Some(name) = info.tags.get(&key).and_then(|tag| tag.string_attribute(AttributeKind::Name))
     {
@@ -78,51 +96,67 @@ pub fn type_string(
     t: &Type,
     include_anonymous_def: bool,
 ) -> Result<TypeString> {
+    type_string_impl(info, typedefs, t, include_anonymous_def, None)
+}
+
+fn type_string_without_typedefs(
+    info: &DwarfInfo,
+    t: &Type,
+    include_anonymous_def: bool,
+) -> Result<TypeString> {
+    let str = match t.kind {
+        TypeKind::Fundamental(ft) => {
+            TypeString { prefix: ft.name()?.to_string(), ..Default::default() }
+        }
+        TypeKind::UserDefined(key) => ud_type_string(
+            info,
+            &TypedefMap::new(),
+            &get_udt_by_key(info, key)?,
+            true,
+            include_anonymous_def,
+        )?,
+    };
+    apply_modifiers(str, &t.modifiers)
+}
+
+fn type_string_impl(
+    info: &DwarfInfo,
+    typedefs: &TypedefMap,
+    t: &Type,
+    include_anonymous_def: bool,
+    exclude_name: Option<&str>,
+) -> Result<TypeString> {
+    if let Some(name) = typedef_name(typedefs, t, exclude_name) {
+        return Ok(TypeString { prefix: name, ..Default::default() });
+    }
+
     let str = match t.kind {
         TypeKind::Fundamental(ft) => {
             TypeString { prefix: ft.name()?.to_string(), ..Default::default() }
         }
         TypeKind::UserDefined(key) => {
-            if let Some(&td_key) = typedefs.get(&key).and_then(|v| v.first()) {
-                let tag = info
-                    .tags
-                    .get(&td_key)
-                    .ok_or_else(|| anyhow!("Failed to locate typedef {}", key))?;
-                let td_name = tag
-                    .string_attribute(AttributeKind::Name)
-                    .ok_or_else(|| anyhow!("typedef without name"))?;
-                TypeString { prefix: td_name.clone(), ..Default::default() }
-            } else {
-                ud_type_string(
-                    info,
-                    typedefs,
-                    &get_udt_by_key(info, key)?,
-                    true,
-                    include_anonymous_def,
-                )?
-            }
+            ud_type_string(
+                info,
+                typedefs,
+                &get_udt_by_key(info, key)?,
+                true,
+                include_anonymous_def,
+            )?
         }
     };
     apply_modifiers(str, &t.modifiers)
 }
 
 fn type_name(info: &DwarfInfo, typedefs: &TypedefMap, t: &Type) -> Result<String> {
+    if let Some(name) = typedef_name(typedefs, t, None) {
+        return Ok(name);
+    }
+
     Ok(match t.kind {
         TypeKind::Fundamental(ft) => ft.name()?.to_string(),
-        TypeKind::UserDefined(key) => {
-            if let Some(&td_key) = typedefs.get(&key).and_then(|v| v.first()) {
-                info.tags
-                    .get(&td_key)
-                    .ok_or_else(|| anyhow!("Failed to locate typedef {}", key))?
-                    .string_attribute(AttributeKind::Name)
-                    .ok_or_else(|| anyhow!("typedef without name"))?
-                    .clone()
-            } else {
-                get_udt_by_key(info, key)?
-                    .name()
-                    .ok_or_else(|| anyhow!("User defined type without name"))?
-            }
-        }
+        TypeKind::UserDefined(key) => get_udt_by_key(info, key)?
+            .name()
+            .ok_or_else(|| anyhow!("User defined type without name"))?,
     })
 }
 
@@ -510,6 +544,7 @@ pub fn subroutine_def_string(
     t: &SubroutineType,
     is_erased: bool,
 ) -> Result<String> {
+    let scoped_typedefs = extend_typedefs(typedefs, &t.typedefs);
     let mut out = String::new();
     if is_erased {
         out.push_str("// Erased\n");
@@ -674,7 +709,7 @@ pub fn subroutine_def_string(
             writeln!(
                 out,
                 "{};",
-                &indent_all_by(4, &ud_type_def(info, typedefs, inner_type, false)?)
+                &indent_all_by(4, &ud_type_def(info, &scoped_typedefs, inner_type, false)?)
             )?;
         }
     }
@@ -682,7 +717,11 @@ pub fn subroutine_def_string(
     if !t.typedefs.is_empty() {
         writeln!(out, "\n    // Typedefs")?;
         for typedef in &t.typedefs {
-            writeln!(out, "{}", &indent_all_by(4, &typedef_string(info, typedefs, typedef)?))?;
+            writeln!(
+                out,
+                "{}",
+                &indent_all_by(4, &typedef_string(info, &scoped_typedefs, typedef)?)
+            )?;
         }
     }
 
@@ -690,7 +729,7 @@ pub fn subroutine_def_string(
         writeln!(out, "\n    // Local variables")?;
         let mut var_out = String::new();
         for variable in &t.variables {
-            let ts = type_string(info, typedefs, &variable.kind, true)?;
+            let ts = type_string(info, &scoped_typedefs, &variable.kind, true)?;
             write!(
                 var_out,
                 "{} {}{};",
@@ -725,7 +764,11 @@ pub fn subroutine_def_string(
                 continue;
             }
             let variable = process_variable_tag(info, tag)?;
-            writeln!(out, "    // -> {}", variable_string(info, typedefs, &variable, false)?)?;
+            writeln!(
+                out,
+                "    // -> {}",
+                variable_string(info, &scoped_typedefs, &variable, false)?
+            )?;
         }
     }
 
@@ -739,9 +782,12 @@ pub fn subroutine_def_string(
     if !t.blocks_and_inlines.is_empty() {
         for node in &t.blocks_and_inlines {
             let node_str = match node {
-                SubroutineNode::Block(block) => subroutine_block_string(info, typedefs, block)?,
+                SubroutineNode::Block(block) => {
+                    subroutine_block_string(info, &scoped_typedefs, block)?
+                }
+                ,
                 SubroutineNode::Inline(inline) => {
-                    subroutine_def_string(info, typedefs, inline, is_erased)?
+                    subroutine_def_string(info, &scoped_typedefs, inline, is_erased)?
                 }
             };
             writeln!(out)?;
@@ -758,6 +804,7 @@ fn subroutine_block_string(
     typedefs: &TypedefMap,
     block: &SubroutineBlock,
 ) -> Result<String> {
+    let scoped_typedefs = extend_typedefs(typedefs, &block.typedefs);
     let mut out = String::new();
     if let Some(name) = &block.name {
         write!(out, "{name}: ")?;
@@ -773,7 +820,7 @@ fn subroutine_block_string(
     }
     let mut var_out = String::new();
     for variable in &block.variables {
-        let ts = type_string(info, typedefs, &variable.kind, true)?;
+        let ts = type_string(info, &scoped_typedefs, &variable.kind, true)?;
         write!(
             var_out,
             "{} {}{};",
@@ -802,7 +849,7 @@ fn subroutine_block_string(
             writeln!(
                 out,
                 "{};",
-                &indent_all_by(4, &ud_type_def(info, typedefs, inner_type, false)?)
+                &indent_all_by(4, &ud_type_def(info, &scoped_typedefs, inner_type, false)?)
             )?;
         }
     }
@@ -810,17 +857,24 @@ fn subroutine_block_string(
     if !block.typedefs.is_empty() {
         writeln!(out, "\n    // Typedefs")?;
         for typedef in &block.typedefs {
-            writeln!(out, "{}", &indent_all_by(4, &typedef_string(info, typedefs, typedef)?))?;
+            writeln!(
+                out,
+                "{}",
+                &indent_all_by(4, &typedef_string(info, &scoped_typedefs, typedef)?)
+            )?;
         }
     }
 
     if !block.blocks_and_inlines.is_empty() {
         for node in &block.blocks_and_inlines {
             let node_str = match node {
-                SubroutineNode::Block(block) => subroutine_block_string(info, typedefs, block)?,
+                SubroutineNode::Block(block) => {
+                    subroutine_block_string(info, &scoped_typedefs, block)?
+                }
+                ,
                 SubroutineNode::Inline(inline) => {
                     writeln!(out)?;
-                    subroutine_def_string(info, typedefs, inline, false)?
+                    subroutine_def_string(info, &scoped_typedefs, inline, false)?
                 }
             };
             out.push_str(&indent_all_by(4, node_str));
@@ -943,6 +997,7 @@ pub fn structure_def_string(
     typedefs: &TypedefMap,
     t: &StructureType,
 ) -> Result<String> {
+    let scoped_typedefs = extend_typedefs(typedefs, &t.typedefs);
     let mut out = String::new();
     if let Some(byte_size) = t.byte_size {
         writeln!(out, "// total size: {byte_size:#X}")?;
@@ -991,7 +1046,7 @@ pub fn structure_def_string(
             writeln!(
                 out,
                 "{};",
-                &indent_all_by(4, &ud_type_def(info, typedefs, inner_type, false)?)
+                &indent_all_by(4, &ud_type_def(info, &scoped_typedefs, inner_type, false)?)
             )?;
         }
     }
@@ -999,7 +1054,11 @@ pub fn structure_def_string(
     if !t.typedefs.is_empty() {
         writeln!(out, "\n    // Typedefs")?;
         for typedef in &t.typedefs {
-            writeln!(out, "{}", &indent_all_by(4, &typedef_string(info, typedefs, typedef)?))?;
+            writeln!(
+                out,
+                "{}",
+                &indent_all_by(4, &typedef_string(info, &scoped_typedefs, typedef)?)
+            )?;
         }
     }
 
@@ -1011,7 +1070,10 @@ pub fn structure_def_string(
             writeln!(
                 out,
                 "{}",
-                indent_all_by(4, member_subroutine_def_string(info, typedefs, member_function)?)
+                indent_all_by(
+                    4,
+                    member_subroutine_def_string(info, &scoped_typedefs, member_function)?
+                )
             )?;
 
             if i + 1 < len {
@@ -1023,7 +1085,10 @@ pub fn structure_def_string(
     if !t.static_members.is_empty() {
         writeln!(out, "\n    // Static members")?;
         for static_member in &t.static_members {
-            let line = format!("static {}", variable_string(info, typedefs, static_member, true)?);
+            let line = format!(
+                "static {}",
+                variable_string(info, &scoped_typedefs, static_member, true)?
+            );
             writeln!(out, "{}", indent_all_by(4, &line))?;
         }
     }
@@ -1084,7 +1149,7 @@ pub fn structure_def_string(
             }
         }
         let mut var_out = String::new();
-        let ts = type_string(info, typedefs, &member.kind, true)?;
+        let ts = type_string(info, &scoped_typedefs, &member.kind, true)?;
         if let Some(name) = &member.name {
             write!(var_out, "{} {}{}", ts.prefix, name, ts.suffix)?;
         } else {
@@ -1208,8 +1273,8 @@ pub fn tag_type_string(
     }
 }
 
-fn typedef_string(info: &DwarfInfo, typedefs: &TypedefMap, typedef: &TypedefTag) -> Result<String> {
-    let ts = type_string(info, typedefs, &typedef.kind, true)?;
+fn typedef_string(info: &DwarfInfo, _typedefs: &TypedefMap, typedef: &TypedefTag) -> Result<String> {
+    let ts = type_string_without_typedefs(info, &typedef.kind, true)?;
     let mut out = format!("typedef {} {}{};", ts.prefix, typedef.name, ts.suffix);
     if let Some(comment) = decl_comment(&typedef.decl) {
         out.push(' ');

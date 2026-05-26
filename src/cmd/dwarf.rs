@@ -18,9 +18,9 @@ use typed_path::Utf8NativePathBuf;
 use crate::{
     util::{
         dwarf::{
-            AttributeKind, MemberFunctionMap, TagKind, TypedefMap, parse_producer,
-            preprocess_cu_tag, print::tag_type_string, process_compile_unit, process_cu_tag,
-            process_overlay_branch, read_dwarf, read_dwarf_elf, should_skip_tag,
+            MemberFunctionMap, Tag, TagKind, TypedefMap, parse_producer, preprocess_cu_tag,
+            print::tag_type_string, process_compile_unit, process_cu_tag, process_overlay_branch,
+            process_typedef_tag, read_dwarf, read_dwarf_elf, should_skip_tag,
             should_skip_typedef_tag,
         },
         file::buf_writer,
@@ -60,6 +60,25 @@ pub struct DumpArgs {
     /// Attempt to reconstruct tags that have been removed by the linker, e.g.
     /// tags from unused functions or functions that have been inlined away.
     include_erased: bool,
+}
+
+fn collect_scope_typedefs(info: &crate::util::dwarf::DwarfInfo, typedefs: &mut TypedefMap, tags: &[&Tag]) {
+    for tag in tags {
+        if tag.kind != TagKind::Typedef || should_skip_typedef_tag(info, tag) {
+            continue;
+        }
+        let Ok(typedef) = process_typedef_tag(info, tag) else {
+            continue;
+        };
+        match typedefs.entry(typedef.kind) {
+            btree_map::Entry::Vacant(entry) => {
+                entry.insert(vec![typedef.name]);
+            }
+            btree_map::Entry::Occupied(entry) => {
+                entry.into_mut().push(typedef.name);
+            }
+        }
+    }
 }
 
 pub fn run(args: Args) -> Result<()> {
@@ -247,6 +266,7 @@ where
                 children.sort_by_key(|x| x.key);
 
                 let mut typedefs = TypedefMap::new();
+                collect_scope_typedefs(&info, &mut typedefs, &children);
                 info.member_functions = RefCell::new(MemberFunctionMap::new());
                 for &child in &children {
                     if matches!(
@@ -312,21 +332,6 @@ where
                         }
                     }
 
-                    if let TagKind::Typedef = child.kind {
-                        if let Some(ud_type_ref) = child
-                            .reference_attribute(AttributeKind::UserDefType)
-                            .or_else(|| child.reference_attribute(AttributeKind::DwAtType))
-                        {
-                            match typedefs.entry(ud_type_ref) {
-                                btree_map::Entry::Vacant(e) => {
-                                    e.insert(vec![child.key]);
-                                }
-                                btree_map::Entry::Occupied(e) => {
-                                    e.into_mut().push(child.key);
-                                }
-                            }
-                        }
-                    }
                 }
             }
             _ => {}

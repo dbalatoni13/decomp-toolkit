@@ -66,7 +66,7 @@ pub enum TagKind {
     DwEnumerator = 0x9006,
 }
 
-#[derive(Debug, Eq, PartialEq, Copy, Clone, IntoPrimitive, TryFromPrimitive)]
+#[derive(Debug, Eq, PartialEq, Ord, PartialOrd, Copy, Clone, IntoPrimitive, TryFromPrimitive)]
 #[repr(u16)]
 pub enum FundType {
     WideChar = 0x0000, // Likely an MW bug
@@ -172,7 +172,7 @@ impl FundType {
     }
 }
 
-#[derive(Debug, Eq, PartialEq, Copy, Clone, IntoPrimitive, TryFromPrimitive)]
+#[derive(Debug, Eq, PartialEq, Ord, PartialOrd, Copy, Clone, IntoPrimitive, TryFromPrimitive)]
 #[repr(u8)]
 pub enum Modifier {
     MwPointerTo = 0x00, // Used in erased tags
@@ -391,7 +391,7 @@ pub struct Tag {
 }
 
 pub type TagMap = BTreeMap<u32, Tag>;
-pub type TypedefMap = BTreeMap<u32, Vec<u32>>;
+pub type TypedefMap = BTreeMap<Type, Vec<String>>;
 pub type MemberFunctionMap = BTreeMap<u32, BTreeSet<u32>>;
 
 #[derive(Debug, Clone)]
@@ -1130,13 +1130,13 @@ impl UserDefinedType {
     }
 }
 
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Eq, PartialEq, Ord, PartialOrd, Copy, Clone)]
 pub enum TypeKind {
     Fundamental(FundType),
     UserDefined(u32),
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Eq, PartialEq, Ord, PartialOrd, Clone)]
 pub struct Type {
     pub kind: TypeKind,
     pub modifiers: Vec<Modifier>,
@@ -2333,6 +2333,17 @@ fn process_subroutine_label_tag(info: &DwarfInfo, tag: &Tag) -> Result<Subroutin
             (AttributeKind::Sibling, _) => {}
             (AttributeKind::Name, AttributeValue::String(s)) => name = Some(s.clone()),
             (AttributeKind::LowPc, &AttributeValue::Address(addr)) => address = Some(addr),
+            (AttributeKind::Specification, &AttributeValue::Reference(key)) => {
+                let spec_tag = info
+                    .tags
+                    .get(&key)
+                    .ok_or_else(|| anyhow!("Failed to locate specification tag {}", key))?;
+                let spec = process_subroutine_label_tag(info, spec_tag)?;
+                name = name.or(Some(spec.name));
+                if address.is_none() && spec.address != 0 {
+                    address = Some(spec.address);
+                }
+            }
             _ => bail!("Unhandled Label attribute {:?}", attr),
         }
     }
@@ -2383,6 +2394,12 @@ fn process_subroutine_block_tag(info: &DwarfInfo, tag: &Tag) -> Result<Option<Su
                 }
             }
             TagKind::InlinedSubroutine => {
+                blocks_and_inlines
+                    .push(SubroutineNode::Inline(process_subroutine_tag(info, child)?));
+            }
+            TagKind::GlobalSubroutine | TagKind::Subroutine => {
+                // GCC/MW occasionally attach nested subprogram DIEs directly to lexical blocks.
+                // Render them like inline children instead of aborting the whole block.
                 blocks_and_inlines
                     .push(SubroutineNode::Inline(process_subroutine_tag(info, child)?));
             }
@@ -2860,7 +2877,7 @@ pub fn should_skip_tag(tag_type: &TagType, is_erased: bool) -> bool {
     }
 }
 
-fn process_typedef_tag(info: &DwarfInfo, tag: &Tag) -> Result<TypedefTag> {
+pub fn process_typedef_tag(info: &DwarfInfo, tag: &Tag) -> Result<TypedefTag> {
     ensure!(tag.kind == TagKind::Typedef, "{:?} is not a typedef tag", tag.kind);
 
     let mut name = None;

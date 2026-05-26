@@ -221,7 +221,22 @@ impl<'a, 'input> UnitBuilder<'a, 'input> {
         }
 
         let key = self.key_for_entry(entry)?;
-        let kind = map_tag_kind(tag)?;
+        let mut kind = map_tag_kind(tag)?;
+        if kind == TagKind::GlobalVariable {
+            if let Some(parent_key) = parent {
+                if let Some(parent_tag) = self.info.tags.get(&parent_key) {
+                    if matches!(
+                        parent_tag.kind,
+                        TagKind::GlobalSubroutine
+                            | TagKind::Subroutine
+                            | TagKind::InlinedSubroutine
+                            | TagKind::LexicalBlock
+                    ) {
+                        kind = TagKind::LocalVariable;
+                    }
+                }
+            }
+        }
         let attrs = self.translate_attrs(entry)?;
         let decl = self.translate_decl(entry)?;
         self.info.tags.insert(
