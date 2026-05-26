@@ -2037,6 +2037,8 @@ fn process_member_subroutine_def_tag(
             | TagKind::LocalVariable
             | TagKind::GlobalVariable
             | TagKind::Label
+            | TagKind::GlobalSubroutine
+            | TagKind::Subroutine
             | TagKind::LexicalBlock
             | TagKind::InlinedSubroutine
             | TagKind::StructureType
@@ -2366,6 +2368,7 @@ fn process_subroutine_block_tag(info: &DwarfInfo, tag: &Tag) -> Result<Option<Su
                 // GCC occasionally nests parameter DIEs inside lexical blocks.
                 // They do not affect the rendered block body, so ignore them.
             }
+            TagKind::Label => {}
             TagKind::LocalVariable => variables.push(process_local_variable_tag(info, child)?),
             TagKind::GlobalVariable => {
                 // TODO GlobalVariable refs?
