@@ -62,21 +62,32 @@ pub struct DumpArgs {
     include_erased: bool,
 }
 
-fn collect_scope_typedefs(info: &crate::util::dwarf::DwarfInfo, typedefs: &mut TypedefMap, tags: &[&Tag]) {
+fn collect_scope_typedefs(
+    info: &crate::util::dwarf::DwarfInfo,
+    typedefs: &mut TypedefMap,
+    tags: &[&Tag],
+) {
     for tag in tags {
-        if tag.kind != TagKind::Typedef || should_skip_typedef_tag(info, tag) {
-            continue;
+        if tag.kind == TagKind::Typedef && !should_skip_typedef_tag(info, tag) {
+            let Ok(typedef) = process_typedef_tag(info, tag) else {
+                continue;
+            };
+            match typedefs.entry(typedef.kind) {
+                btree_map::Entry::Vacant(entry) => {
+                    entry.insert(vec![typedef.name]);
+                }
+                btree_map::Entry::Occupied(entry) => {
+                    let names = entry.into_mut();
+                    if !names.iter().any(|name| name == &typedef.name) {
+                        names.push(typedef.name);
+                    }
+                }
+            }
         }
-        let Ok(typedef) = process_typedef_tag(info, tag) else {
-            continue;
-        };
-        match typedefs.entry(typedef.kind) {
-            btree_map::Entry::Vacant(entry) => {
-                entry.insert(vec![typedef.name]);
-            }
-            btree_map::Entry::Occupied(entry) => {
-                entry.into_mut().push(typedef.name);
-            }
+
+        let children = tag.children(&info.tags);
+        if !children.is_empty() {
+            collect_scope_typedefs(info, typedefs, &children);
         }
     }
 }
