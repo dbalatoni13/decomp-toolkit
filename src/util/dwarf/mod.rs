@@ -1453,7 +1453,7 @@ fn process_structure_tag(info: &DwarfInfo, tag: &Tag) -> Result<StructureType> {
             TagKind::Inheritance => bases.push(process_inheritance_tag(info, child)?),
             TagKind::Member => members.push(process_structure_member_tag(info, child)?),
             TagKind::Typedef => {
-                if should_skip_typedef_tag(child) {
+                if should_skip_typedef_tag(info, child) {
                     continue;
                 }
                 match info.producer {
@@ -1802,6 +1802,8 @@ fn process_union_tag(info: &DwarfInfo, tag: &Tag) -> Result<UnionType> {
             | TagKind::EnumerationType
             | TagKind::UnionType
             | TagKind::ClassType
+            | TagKind::GlobalSubroutine
+            | TagKind::Subroutine
             | TagKind::SubroutineType
             | TagKind::PtrToMemberType
             | TagKind::Typedef => {
@@ -2263,7 +2265,7 @@ fn process_subroutine_tag(info: &DwarfInfo, tag: &Tag) -> Result<SubroutineType>
                 inner_types.push(UserDefinedType::Union(process_union_tag(info, child)?))
             }
             TagKind::Typedef => {
-                if should_skip_typedef_tag(child) {
+                if should_skip_typedef_tag(info, child) {
                     continue;
                 }
                 typedefs.push(process_typedef_tag(info, child)?)
@@ -2334,7 +2336,7 @@ fn process_subroutine_label_tag(info: &DwarfInfo, tag: &Tag) -> Result<Subroutin
     }
 
     let name = name.ok_or_else(|| anyhow!("Label without name: {:?}", tag))?;
-    let address = address.ok_or_else(|| anyhow!("Label without address: {:?}", tag))?;
+    let address = address.unwrap_or(0);
     Ok(SubroutineLabel { name, address })
 }
 
@@ -2388,7 +2390,7 @@ fn process_subroutine_block_tag(info: &DwarfInfo, tag: &Tag) -> Result<Option<Su
                 inner_types.push(UserDefinedType::Union(process_union_tag(info, child)?))
             }
             TagKind::Typedef => {
-                if should_skip_typedef_tag(child) {
+                if should_skip_typedef_tag(info, child) {
                     continue;
                 }
                 typedefs.push(process_typedef_tag(info, child)?);
@@ -2798,10 +2800,24 @@ pub fn preprocess_cu_tag(info: &DwarfInfo, tag: &Tag) {
     }
 }
 
-pub fn should_skip_typedef_tag(tag: &Tag) -> bool {
-    tag.kind == TagKind::Typedef
-        && tag.type_attribute().is_none()
-        && tag.reference_attribute(AttributeKind::Specification).is_none()
+pub fn should_skip_typedef_tag(info: &DwarfInfo, tag: &Tag) -> bool {
+    if tag.kind != TagKind::Typedef {
+        return false;
+    }
+
+    let mut current = tag;
+    loop {
+        if current.type_attribute().is_some() {
+            return false;
+        }
+        let Some(spec_key) = current.reference_attribute(AttributeKind::Specification) else {
+            return true;
+        };
+        let Some(spec_tag) = info.tags.get(&spec_key) else {
+            return true;
+        };
+        current = spec_tag;
+    }
 }
 
 pub fn process_cu_tag(info: &DwarfInfo, tag: &Tag) -> Result<TagType> {

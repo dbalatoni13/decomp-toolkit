@@ -261,7 +261,7 @@ where
                     ) {
                         continue;
                     }
-                    if should_skip_typedef_tag(child) {
+                    if should_skip_typedef_tag(&info, child) {
                         continue;
                     }
                     preprocess_cu_tag(&info, child);
@@ -279,7 +279,7 @@ where
                     ) {
                         continue;
                     }
-                    if should_skip_typedef_tag(child) {
+                    if should_skip_typedef_tag(&info, child) {
                         continue;
                     }
                     let tag_type = match process_cu_tag(&info, child) {
