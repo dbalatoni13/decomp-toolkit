@@ -21,6 +21,7 @@ use crate::{
             AttributeKind, MemberFunctionMap, TagKind, TypedefMap, parse_producer,
             preprocess_cu_tag, print::tag_type_string, process_compile_unit, process_cu_tag,
             process_overlay_branch, read_dwarf, read_dwarf_elf, should_skip_tag,
+            should_skip_typedef_tag,
         },
         file::buf_writer,
         path::native_path,
@@ -260,6 +261,9 @@ where
                     ) {
                         continue;
                     }
+                    if should_skip_typedef_tag(child) {
+                        continue;
+                    }
                     preprocess_cu_tag(&info, child);
                 }
                 for &child in &children {
@@ -273,6 +277,9 @@ where
                             | TagKind::DwSubrangeType
                             | TagKind::DwEnumerator
                     ) {
+                        continue;
+                    }
+                    if should_skip_typedef_tag(child) {
                         continue;
                     }
                     let tag_type = match process_cu_tag(&info, child) {

@@ -1453,6 +1453,9 @@ fn process_structure_tag(info: &DwarfInfo, tag: &Tag) -> Result<StructureType> {
             TagKind::Inheritance => bases.push(process_inheritance_tag(info, child)?),
             TagKind::Member => members.push(process_structure_member_tag(info, child)?),
             TagKind::Typedef => {
+                if should_skip_typedef_tag(child) {
+                    continue;
+                }
                 match info.producer {
                     Producer::MWCC => {
                         // TODO handle visibility
@@ -2259,7 +2262,12 @@ fn process_subroutine_tag(info: &DwarfInfo, tag: &Tag) -> Result<SubroutineType>
             TagKind::UnionType => {
                 inner_types.push(UserDefinedType::Union(process_union_tag(info, child)?))
             }
-            TagKind::Typedef => typedefs.push(process_typedef_tag(info, child)?),
+            TagKind::Typedef => {
+                if should_skip_typedef_tag(child) {
+                    continue;
+                }
+                typedefs.push(process_typedef_tag(info, child)?)
+            }
             TagKind::ArrayType | TagKind::SubroutineType | TagKind::PtrToMemberType => {
                 // Variable type, ignore
             }
@@ -2380,6 +2388,9 @@ fn process_subroutine_block_tag(info: &DwarfInfo, tag: &Tag) -> Result<Option<Su
                 inner_types.push(UserDefinedType::Union(process_union_tag(info, child)?))
             }
             TagKind::Typedef => {
+                if should_skip_typedef_tag(child) {
+                    continue;
+                }
                 typedefs.push(process_typedef_tag(info, child)?);
             }
             TagKind::ArrayType | TagKind::SubroutineType | TagKind::PtrToMemberType => {
@@ -2785,6 +2796,12 @@ pub fn preprocess_cu_tag(info: &DwarfInfo, tag: &Tag) {
         }
         _ => {}
     }
+}
+
+pub fn should_skip_typedef_tag(tag: &Tag) -> bool {
+    tag.kind == TagKind::Typedef
+        && tag.type_attribute().is_none()
+        && tag.reference_attribute(AttributeKind::Specification).is_none()
 }
 
 pub fn process_cu_tag(info: &DwarfInfo, tag: &Tag) -> Result<TagType> {
