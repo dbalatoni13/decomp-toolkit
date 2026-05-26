@@ -244,14 +244,37 @@ where
                     }
                 }
                 children.sort_by_key(|x| x.key);
-                writeln!(w, "// DEBUG children {}", children.len())?;
 
                 let mut typedefs = TypedefMap::new();
                 info.member_functions = RefCell::new(MemberFunctionMap::new());
                 for &child in &children {
+                    if matches!(
+                        child.kind,
+                        TagKind::DwBaseType
+                            | TagKind::DwConstType
+                            | TagKind::DwVolatileType
+                            | TagKind::DwPointerType
+                            | TagKind::DwReferenceType
+                            | TagKind::DwSubrangeType
+                            | TagKind::DwEnumerator
+                    ) {
+                        continue;
+                    }
                     preprocess_cu_tag(&info, child);
                 }
                 for &child in &children {
+                    if matches!(
+                        child.kind,
+                        TagKind::DwBaseType
+                            | TagKind::DwConstType
+                            | TagKind::DwVolatileType
+                            | TagKind::DwPointerType
+                            | TagKind::DwReferenceType
+                            | TagKind::DwSubrangeType
+                            | TagKind::DwEnumerator
+                    ) {
+                        continue;
+                    }
                     let tag_type = match process_cu_tag(&info, child) {
                         Ok(tag_type) => tag_type,
                         Err(e) => {

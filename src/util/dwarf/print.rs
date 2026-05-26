@@ -17,6 +17,16 @@ fn decl_comment(decl: &Option<DeclCoord>) -> Option<String> {
     decl.as_ref().map(|decl| format!("// Decl: {}:{}", decl.file, decl.line))
 }
 
+fn tag_name_or_udt_name(info: &DwarfInfo, key: u32) -> Result<String> {
+    if let Some(name) = info.tags.get(&key).and_then(|tag| tag.string_attribute(AttributeKind::Name))
+    {
+        return Ok(name.clone());
+    }
+    get_udt_by_key(info, key)?
+        .name()
+        .ok_or_else(|| anyhow!("tag {} has no usable type name", key))
+}
+
 pub fn apply_modifiers(mut str: TypeString, modifiers: &[Modifier]) -> Result<TypeString> {
     let mut has_pointer = false;
     for &modifier in modifiers.iter().rev() {
@@ -122,12 +132,28 @@ fn array_type_string(
     t: &ArrayType,
     include_anonymous_def: bool,
 ) -> Result<TypeString> {
+    if let Some(name) = &t.name {
+        return Ok(TypeString { prefix: name.clone(), ..Default::default() });
+    }
     let mut out = type_string(info, typedefs, t.element_type.as_ref(), include_anonymous_def)?;
     for dim in &t.dimensions {
         ensure!(
             matches!(
                 dim.index_type.kind,
-                TypeKind::Fundamental(FundType::Long | FundType::Integer)
+                TypeKind::Fundamental(
+                    FundType::Short
+                        | FundType::SignedShort
+                        | FundType::UnsignedShort
+                        | FundType::Integer
+                        | FundType::SignedInteger
+                        | FundType::UnsignedInteger
+                        | FundType::Long
+                        | FundType::SignedLong
+                        | FundType::UnsignedLong
+                        | FundType::LongLong
+                        | FundType::SignedLongLong
+                        | FundType::UnsignedLongLong
+                )
             ),
             "Unsupported array index type '{}'",
             type_string(info, typedefs, &dim.index_type, true)?
@@ -322,13 +348,7 @@ pub fn subroutine_type_string(
     }
     out.suffix = format!("({}){}", parameters, out.suffix);
     if let Some(member_of) = t.member_of {
-        let tag = info
-            .tags
-            .get(&member_of)
-            .ok_or_else(|| anyhow!("Failed to locate member_of tag {}", member_of))?;
-        let base_name = tag
-            .string_attribute(AttributeKind::Name)
-            .ok_or_else(|| anyhow!("member_of tag {} has no name attribute", member_of))?;
+        let base_name = tag_name_or_udt_name(info, member_of)?;
         out.member = format!("{base_name}::");
     }
     Ok(out)
@@ -344,17 +364,11 @@ fn member_subroutine_def_string(
         writeln!(out, "{comment}")?;
     }
 
-    let mut base_name_opt = None;
-    let mut direct_base_name_opt = None;
+    let mut base_name_opt: Option<String> = None;
+    let mut direct_base_name_opt: Option<String> = None;
 
     if let Some(member_of) = t.member_of {
-        let tag = info
-            .tags
-            .get(&member_of)
-            .ok_or_else(|| anyhow!("Failed to locate member_of tag {}", member_of))?;
-        let base_name = tag
-            .string_attribute(AttributeKind::Name)
-            .ok_or_else(|| anyhow!("member_of tag {} has no name attribute", member_of))?;
+        let base_name = tag_name_or_udt_name(info, member_of)?;
 
         if t.override_ {
             writeln!(out, "// Overrides: {}", base_name)?;
@@ -363,18 +377,11 @@ fn member_subroutine_def_string(
     }
 
     if let Some(direct_member_of) = t.direct_member_of {
-        let tag = info
-            .tags
-            .get(&direct_member_of)
-            .ok_or_else(|| anyhow!("Failed to locate direct_member_of tag {}", direct_member_of))?;
-        let direct_base_name = tag.string_attribute(AttributeKind::Name).ok_or_else(|| {
-            anyhow!("direct_member_of tag {} has no name attribute", direct_member_of)
-        })?;
-
+        let direct_base_name = tag_name_or_udt_name(info, direct_member_of)?;
         direct_base_name_opt = Some(direct_base_name);
         if base_name_opt.is_none() {
             // Fall back to the parsed out direct_base_name on PS2 MW because it doesn't emit a base class
-            base_name_opt = direct_base_name_opt;
+            base_name_opt = direct_base_name_opt.clone();
         }
     }
 
@@ -398,7 +405,7 @@ fn member_subroutine_def_string(
 
     if t.override_ {
         if let Producer::GCC = info.producer {
-            if let Some(direct_base_name) = direct_base_name_opt {
+            if let Some(direct_base_name) = direct_base_name_opt.as_deref() {
                 if let Some(name) = t.name.as_ref() {
                     // in GCC the ctor and dtor are called the same, so we need to check the return value
                     // this is only for the dtor, the ctor can be left as is
@@ -413,7 +420,7 @@ fn member_subroutine_def_string(
                 }
             }
         }
-    } else if let Some(base_name) = base_name_opt {
+    } else if let Some(base_name) = base_name_opt.as_deref() {
         // Handle constructors and destructors
         if let Some(name) = t.name.as_ref() {
             if name == "__dt" {
@@ -513,17 +520,11 @@ pub fn subroutine_def_string(
         writeln!(out, "{comment}")?;
     }
 
-    let mut base_name_opt = None;
-    let mut direct_base_name_opt = None;
+    let mut base_name_opt: Option<String> = None;
+    let mut direct_base_name_opt: Option<String> = None;
 
     if let Some(member_of) = t.member_of {
-        let tag = info
-            .tags
-            .get(&member_of)
-            .ok_or_else(|| anyhow!("Failed to locate member_of tag {}", member_of))?;
-        let base_name = tag
-            .string_attribute(AttributeKind::Name)
-            .ok_or_else(|| anyhow!("member_of tag {} has no name attribute", member_of))?;
+        let base_name = tag_name_or_udt_name(info, member_of)?;
 
         if t.override_ {
             writeln!(out, "// Overrides: {}", base_name)?;
@@ -532,18 +533,11 @@ pub fn subroutine_def_string(
     }
 
     if let Some(direct_member_of) = t.direct_member_of {
-        let tag = info
-            .tags
-            .get(&direct_member_of)
-            .ok_or_else(|| anyhow!("Failed to locate direct_member_of tag {}", direct_member_of))?;
-        let direct_base_name = tag.string_attribute(AttributeKind::Name).ok_or_else(|| {
-            anyhow!("direct_member_of tag {} has no name attribute", direct_member_of)
-        })?;
-
+        let direct_base_name = tag_name_or_udt_name(info, direct_member_of)?;
         direct_base_name_opt = Some(direct_base_name);
         if base_name_opt.is_none() {
             // Fall back to the parsed out direct_base_name on PS2 MW because it doesn't emit a base class
-            base_name_opt = direct_base_name_opt;
+            base_name_opt = direct_base_name_opt.clone();
         }
     }
 
@@ -574,7 +568,7 @@ pub fn subroutine_def_string(
 
     if t.override_ {
         if let Producer::GCC = info.producer {
-            if let Some(direct_base_name) = direct_base_name_opt {
+            if let Some(direct_base_name) = direct_base_name_opt.as_deref() {
                 // we need to emit the real parent on GCC
                 write!(full_written_name, "{direct_base_name}::")?;
 
@@ -592,7 +586,7 @@ pub fn subroutine_def_string(
                 }
             }
         }
-    } else if let Some(base_name) = base_name_opt {
+    } else if let Some(base_name) = base_name_opt.as_deref() {
         write!(full_written_name, "{base_name}::")?;
 
         // Handle constructors and destructors
@@ -1126,16 +1120,21 @@ pub fn enum_def_string(t: &EnumerationType) -> Result<String> {
     if let Some(comment) = decl_comment(&t.decl) {
         writeln!(out, "{comment}")?;
     }
-    out.push_str(&match t.name.as_ref() {
+    let header = match t.name.as_ref() {
         Some(name) => {
             if name.starts_with('@') {
-                format!("enum /* {name} */ {{\n")
+                format!("enum /* {name} */")
             } else {
-                format!("enum {name} {{\n")
+                format!("enum {name}")
             }
         }
-        None => "enum {\n".to_string(),
-    });
+        None => "enum".to_string(),
+    };
+    if t.byte_size.is_none() {
+        out.push_str(&header);
+        return Ok(out);
+    }
+    out.push_str(&format!("{header} {{\n"));
     for member in t.members.iter() {
         write!(out, "    {} = {}", member.name, member.value)?;
         write!(out, ",")?;
@@ -1153,16 +1152,21 @@ pub fn union_def_string(info: &DwarfInfo, typedefs: &TypedefMap, t: &UnionType) 
     if let Some(comment) = decl_comment(&t.decl) {
         writeln!(out, "{comment}")?;
     }
-    out.push_str(&match t.name.as_ref() {
+    let header = match t.name.as_ref() {
         Some(name) => {
             if name.starts_with('@') {
-                format!("union /* {name} */ {{\n")
+                format!("union /* {name} */")
             } else {
-                format!("union {name} {{\n")
+                format!("union {name}")
             }
         }
-        None => "union {\n".to_string(),
-    });
+        None => "union".to_string(),
+    };
+    if t.byte_size.is_none() {
+        out.push_str(&header);
+        return Ok(out);
+    }
+    out.push_str(&format!("{header} {{\n"));
     let mut var_out = String::new();
     for member in t.members.iter() {
         let ts = type_string(info, typedefs, &member.kind, true)?;

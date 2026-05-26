@@ -234,10 +234,14 @@ impl<'a, 'input> UnitBuilder<'a, 'input> {
                 data_endian: self.info.e,
                 attributes: attrs,
                 decl,
+                child_keys: Vec::new(),
             },
         );
         if let Some(parent) = parent {
             self.children.entry(parent).or_default().push(key);
+            if let Some(parent_tag) = self.info.tags.get_mut(&parent) {
+                parent_tag.child_keys.push(key);
+            }
         } else {
             self.roots.push(key);
         }
