@@ -2272,7 +2272,11 @@ fn process_subroutine_tag(info: &DwarfInfo, tag: &Tag) -> Result<SubroutineType>
                 }
                 typedefs.push(process_typedef_tag(info, child)?)
             }
-            TagKind::ArrayType | TagKind::SubroutineType | TagKind::PtrToMemberType => {
+            TagKind::ArrayType
+            | TagKind::SubroutineType
+            | TagKind::PtrToMemberType
+            | TagKind::GlobalSubroutine
+            | TagKind::Subroutine => {
                 // Variable type, ignore
             }
             kind => bail!("Unhandled SubroutineType child {:?}", kind),
@@ -2663,8 +2667,13 @@ fn resolve_dwarf2_type(info: &DwarfInfo, key: u32) -> Result<Type> {
             Ok(Type { kind: TypeKind::UserDefined(key), modifiers: vec![] })
         }
         TagKind::Typedef => {
-            let type_attr = tag.type_attribute().ok_or_else(|| anyhow!("Typedef without type"))?;
-            process_type(info, type_attr)
+            if let Some(type_attr) = tag.type_attribute() {
+                process_type(info, type_attr)
+            } else if let Some(spec_key) = tag.reference_attribute(AttributeKind::Specification) {
+                resolve_dwarf2_type(info, spec_key)
+            } else {
+                Ok(Type { kind: TypeKind::Fundamental(FundType::Void), modifiers: vec![] })
+            }
         }
         kind => Err(anyhow!("Unhandled DWARF 2 type tag {:?}", kind)),
     }
@@ -2892,7 +2901,10 @@ fn process_typedef_tag(info: &DwarfInfo, tag: &Tag) -> Result<TypedefTag> {
     }
 
     let name = name.ok_or_else(|| anyhow!("Typedef without Name: {:?}", tag))?;
-    let kind = kind.ok_or_else(|| anyhow!("Typedef without Type: {:?}", tag))?;
+    let kind = kind.unwrap_or(Type {
+        kind: TypeKind::Fundamental(FundType::Void),
+        modifiers: vec![],
+    });
     Ok(TypedefTag { name, kind, decl: tag.decl.clone() })
 }
 
