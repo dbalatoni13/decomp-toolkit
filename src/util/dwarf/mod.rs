@@ -1133,6 +1133,7 @@ impl UserDefinedType {
 #[derive(Debug, Eq, PartialEq, Ord, PartialOrd, Copy, Clone)]
 pub enum TypeKind {
     Fundamental(FundType),
+    Typedef(u32),
     UserDefined(u32),
 }
 
@@ -1151,6 +1152,7 @@ impl Type {
         }
         match self.kind {
             TypeKind::Fundamental(ft) => ft.size(),
+            TypeKind::Typedef(key) => resolve_typedef_target_type(info, key)?.size(info),
             TypeKind::UserDefined(key) => get_udt_by_key(info, key)?.size(info),
         }
     }
@@ -1862,7 +1864,7 @@ fn preprocess_subroutine_tag(info: &DwarfInfo, tag: &Tag) -> Result<()> {
         if child.kind == TagKind::FormalParameter {
             let param = process_subroutine_parameter_tag(info, child)?;
             if param.name.as_deref() == Some("this") {
-                if let TypeKind::UserDefined(key) = param.kind.kind {
+                if let Some(key) = underlying_user_defined_key(info, &param.kind)? {
                     append_to = Some(key);
                     break;
                 }
@@ -2032,7 +2034,7 @@ fn process_member_subroutine_def_tag(
                         volatile_ = true;
                     }
                     // This is needed because direct_base differs from member_of in virtual function overrides
-                    if let TypeKind::UserDefined(key) = param.kind.kind {
+                    if let Some(key) = underlying_user_defined_key(info, &param.kind)? {
                         direct_base_key = Some(key);
                     }
                     this_pointer_found = true;
@@ -2244,7 +2246,7 @@ fn process_subroutine_tag(info: &DwarfInfo, tag: &Tag) -> Result<SubroutineType>
                         volatile_ = true;
                     }
                     // This is needed because direct_base differs from member_of in virtual function overrides
-                    if let TypeKind::UserDefined(key) = param.kind.kind {
+                    if let Some(key) = underlying_user_defined_key(info, &param.kind)? {
                         direct_base_key = Some(key);
                     }
                     this_pointer_found = true;
@@ -2649,15 +2651,22 @@ pub fn process_type(info: &DwarfInfo, attr: &Attribute) -> Result<Type> {
             Ok(Type { kind: TypeKind::Fundamental(fund_type), modifiers })
         }
         (AttributeKind::UserDefType, &AttributeValue::Reference(key)) => {
-            Ok(Type { kind: TypeKind::UserDefined(key), modifiers: vec![] })
+            Ok(Type { kind: type_kind_from_ref(info, key), modifiers: vec![] })
         }
         (AttributeKind::ModUDType, AttributeValue::Block(ops)) => {
             let ud_ref = u32::from_bytes(ops[ops.len() - 4..].try_into()?, info.e);
             let modifiers = process_modifiers(&ops[..ops.len() - 4])?;
-            Ok(Type { kind: TypeKind::UserDefined(ud_ref), modifiers })
+            Ok(Type { kind: type_kind_from_ref(info, ud_ref), modifiers })
         }
         (AttributeKind::DwAtType, &AttributeValue::Reference(key)) => resolve_dwarf2_type(info, key),
         _ => Err(anyhow!("Invalid type attribute {:?}", attr)),
+    }
+}
+
+fn type_kind_from_ref(info: &DwarfInfo, key: u32) -> TypeKind {
+    match info.tags.get(&key).map(|tag| tag.kind) {
+        Some(TagKind::Typedef) => TypeKind::Typedef(key),
+        _ => TypeKind::UserDefined(key),
     }
 }
 
@@ -2699,17 +2708,37 @@ fn resolve_dwarf2_type(info: &DwarfInfo, key: u32) -> Result<Type> {
         | TagKind::PtrToMemberType => {
             Ok(Type { kind: TypeKind::UserDefined(key), modifiers: vec![] })
         }
-        TagKind::Typedef => {
-            if let Some(type_attr) = tag.type_attribute() {
-                process_type(info, type_attr)
-            } else if let Some(spec_key) = tag.reference_attribute(AttributeKind::Specification) {
-                resolve_dwarf2_type(info, spec_key)
-            } else {
-                Ok(Type { kind: TypeKind::Fundamental(FundType::Void), modifiers: vec![] })
-            }
-        }
+        TagKind::Typedef => Ok(Type { kind: TypeKind::Typedef(key), modifiers: vec![] }),
         kind => Err(anyhow!("Unhandled DWARF 2 type tag {:?}", kind)),
     }
+}
+
+pub fn resolve_typedef_target_type(info: &DwarfInfo, key: u32) -> Result<Type> {
+    let mut current = info.tags.get(&key).ok_or_else(|| anyhow!("Failed to locate typedef tag {key}"))?;
+    loop {
+        ensure!(current.kind == TagKind::Typedef, "tag {} is not a typedef", current.key);
+        if let Some(type_attr) = current.type_attribute() {
+            return process_type(info, type_attr);
+        }
+        let Some(spec_key) = current.reference_attribute(AttributeKind::Specification) else {
+            return Ok(Type { kind: TypeKind::Fundamental(FundType::Void), modifiers: vec![] });
+        };
+        current = info
+            .tags
+            .get(&spec_key)
+            .ok_or_else(|| anyhow!("Failed to locate specification tag {}", spec_key))?;
+    }
+}
+
+fn underlying_user_defined_key(info: &DwarfInfo, t: &Type) -> Result<Option<u32>> {
+    Ok(match t.kind {
+        TypeKind::UserDefined(key) => Some(key),
+        TypeKind::Typedef(key) => {
+            let target = resolve_typedef_target_type(info, key)?;
+            underlying_user_defined_key(info, &target)?
+        }
+        TypeKind::Fundamental(_) => None,
+    })
 }
 
 fn resolve_optional_dwarf2_type(info: &DwarfInfo, tag: &Tag) -> Result<Type> {

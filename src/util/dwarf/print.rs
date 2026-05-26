@@ -22,9 +22,8 @@ fn typedef_name(
     t: &Type,
     exclude_name: Option<&str>,
 ) -> Option<String> {
-    typedefs
-        .get(t)
-        .and_then(|names| names.iter().find(|name| Some(name.as_str()) != exclude_name).cloned())
+    let _ = (typedefs, t, exclude_name);
+    None
 }
 
 fn extend_typedefs(typedefs: &TypedefMap, new_typedefs: &[TypedefTag]) -> TypedefMap {
@@ -108,6 +107,10 @@ fn type_string_without_typedefs(
         TypeKind::Fundamental(ft) => {
             TypeString { prefix: ft.name()?.to_string(), ..Default::default() }
         }
+        TypeKind::Typedef(key) => {
+            let target = crate::util::dwarf::resolve_typedef_target_type(info, key)?;
+            return type_string_without_typedefs(info, &target, include_anonymous_def);
+        }
         TypeKind::UserDefined(key) => ud_type_string(
             info,
             &TypedefMap::new(),
@@ -134,6 +137,16 @@ fn type_string_impl(
         TypeKind::Fundamental(ft) => {
             TypeString { prefix: ft.name()?.to_string(), ..Default::default() }
         }
+        TypeKind::Typedef(key) => {
+            let tag = info
+                .tags
+                .get(&key)
+                .ok_or_else(|| anyhow!("Failed to locate typedef {}", key))?;
+            let name = tag
+                .string_attribute(AttributeKind::Name)
+                .ok_or_else(|| anyhow!("typedef without name"))?;
+            TypeString { prefix: name.clone(), ..Default::default() }
+        }
         TypeKind::UserDefined(key) => {
             ud_type_string(
                 info,
@@ -154,6 +167,13 @@ fn type_name(info: &DwarfInfo, typedefs: &TypedefMap, t: &Type) -> Result<String
 
     Ok(match t.kind {
         TypeKind::Fundamental(ft) => ft.name()?.to_string(),
+        TypeKind::Typedef(key) => info
+            .tags
+            .get(&key)
+            .ok_or_else(|| anyhow!("Failed to locate typedef {}", key))?
+            .string_attribute(AttributeKind::Name)
+            .ok_or_else(|| anyhow!("typedef without name"))?
+            .clone(),
         TypeKind::UserDefined(key) => get_udt_by_key(info, key)?
             .name()
             .ok_or_else(|| anyhow!("User defined type without name"))?,
