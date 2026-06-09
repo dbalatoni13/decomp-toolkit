@@ -399,6 +399,7 @@ pub struct DwarfInfo {
     pub e: Endian,
     pub tags: TagMap,
     pub producer: Producer,
+    pub is_dwarf2: bool,
     pub member_functions: RefCell<MemberFunctionMap>,
 }
 
@@ -534,6 +535,7 @@ where R: BufRead + Seek + ?Sized {
         e,
         tags: BTreeMap::new(),
         producer: Producer::OTHER,
+        is_dwarf2: false,
         member_functions: RefCell::new(MemberFunctionMap::new()),
     };
     loop {
@@ -1642,6 +1644,7 @@ fn process_array_subscript_data(data: &[u8], e: Endian) -> Result<(Type, Vec<Arr
                     e,
                     tags: BTreeMap::new(),
                     producer: Producer::OTHER,
+                    is_dwarf2: false,
                     member_functions: RefCell::new(MemberFunctionMap::new()),
                 };
                 element_type = Some(process_type(&temp_info, &type_attr)?);
@@ -1778,7 +1781,7 @@ fn process_enumeration_tag(info: &DwarfInfo, tag: &Tag) -> Result<EnumerationTyp
         }
     }
 
-    if info.producer == Producer::GCC {
+    if info.producer == Producer::GCC && !info.is_dwarf2 {
         // for some reason enum members are reversed in GCC
         members.reverse();
     }
@@ -2679,22 +2682,22 @@ fn resolve_dwarf2_type(info: &DwarfInfo, key: u32) -> Result<Type> {
         }),
         TagKind::DwConstType => {
             let mut ty = resolve_optional_dwarf2_type(info, tag)?;
-            ty.modifiers.push(Modifier::Const);
+            ty.modifiers.insert(0, Modifier::Const);
             Ok(ty)
         }
         TagKind::DwVolatileType => {
             let mut ty = resolve_optional_dwarf2_type(info, tag)?;
-            ty.modifiers.push(Modifier::Volatile);
+            ty.modifiers.insert(0, Modifier::Volatile);
             Ok(ty)
         }
         TagKind::DwPointerType => {
             let mut ty = resolve_optional_dwarf2_type(info, tag)?;
-            ty.modifiers.push(Modifier::PointerTo);
+            ty.modifiers.insert(0, Modifier::PointerTo);
             Ok(ty)
         }
         TagKind::DwReferenceType => {
             let mut ty = resolve_optional_dwarf2_type(info, tag)?;
-            ty.modifiers.push(Modifier::ReferenceTo);
+            ty.modifiers.insert(0, Modifier::ReferenceTo);
             Ok(ty)
         }
         TagKind::ArrayType

@@ -38,6 +38,7 @@ pub fn read_dwarf2_info(obj_file: &object::File<'_>) -> Result<DwarfInfo> {
         e,
         tags: BTreeMap::new(),
         producer: Producer::OTHER,
+        is_dwarf2: true,
         member_functions: Default::default(),
     };
 
@@ -74,6 +75,7 @@ pub fn read_dwarf2_elf(elf: &[u8]) -> Result<DwarfInfo> {
         e: view.endian,
         tags: BTreeMap::new(),
         producer: Producer::OTHER,
+        is_dwarf2: true,
         member_functions: Default::default(),
     };
 
