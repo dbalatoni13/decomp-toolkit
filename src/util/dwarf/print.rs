@@ -1339,7 +1339,7 @@ fn maybe_demangle_name(info: &DwarfInfo, name: &str) -> String {
         Producer::GCC => gnu_demangle(name, &DemangleConfig::new()).ok(),
         Producer::OTHER => None,
     };
-    name_opt.unwrap_or_else(|| name.to_string())
+    normalize_qualified_name(&name_opt.unwrap_or_else(|| name.to_string()))
 }
 
 fn maybe_demangle_function_name(info: &DwarfInfo, name: &str) -> String {
@@ -1358,5 +1358,17 @@ fn maybe_demangle_function_name(info: &DwarfInfo, name: &str) -> String {
         }
         Producer::OTHER => None,
     };
-    name_opt.unwrap_or_else(|| name.to_string())
+    normalize_qualified_name(&name_opt.unwrap_or_else(|| name.to_string()))
+}
+
+fn normalize_qualified_name(name: &str) -> String {
+    if !name.contains("::::") && !name.starts_with("::") {
+        return name.to_string();
+    }
+    let mut normalized = name.to_string();
+    while normalized.contains("::::") {
+        normalized = normalized.replace("::::", "::");
+    }
+    let normalized = normalized.trim_start_matches("::");
+    if normalized.is_empty() { name.to_string() } else { normalized.to_string() }
 }
