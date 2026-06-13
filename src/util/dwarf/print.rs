@@ -656,7 +656,13 @@ pub fn subroutine_def_string(
             }
         }
     } else if let Some(base_name) = base_name_opt.as_deref() {
-        write!(full_written_name, "{base_name}::")?;
+        if !t
+            .name
+            .as_deref()
+            .is_some_and(|name| is_qualified_function_name(info, name))
+        {
+            write!(full_written_name, "{base_name}::")?;
+        }
 
         // Handle constructors and destructors
         if let Some(name) = t.name.as_ref() {
@@ -1462,7 +1468,53 @@ fn maybe_demangle_function_name(info: &DwarfInfo, name: &str) -> String {
         }
         Producer::OTHER => None,
     };
-    normalize_qualified_name(&name_opt.unwrap_or_else(|| name.to_string()))
+    strip_function_signature(&normalize_qualified_name(
+        &name_opt.unwrap_or_else(|| name.to_string()),
+    ))
+}
+
+fn is_qualified_function_name(info: &DwarfInfo, name: &str) -> bool {
+    maybe_demangle_function_name(info, name).contains("::")
+}
+
+fn strip_function_signature(name: &str) -> String {
+    let mut end = name.trim_end().len();
+    loop {
+        let mut stripped = false;
+        for suffix in [" const", " volatile", " &&", " &"] {
+            if name[..end].ends_with(suffix) {
+                end -= suffix.len();
+                stripped = true;
+                break;
+            }
+        }
+        if !stripped {
+            break;
+        }
+    }
+
+    if !name[..end].ends_with(')') {
+        return name.to_string();
+    }
+
+    let mut depth = 0usize;
+    for (idx, ch) in name[..end].char_indices().rev() {
+        match ch {
+            ')' => depth += 1,
+            '(' => {
+                depth -= 1;
+                if depth == 0 {
+                    if name[..idx].trim_end().ends_with("operator") {
+                        return name.to_string();
+                    }
+                    return name[..idx].trim_end().to_string();
+                }
+            }
+            _ => {}
+        }
+    }
+
+    name.to_string()
 }
 
 fn normalize_qualified_name(name: &str) -> String {

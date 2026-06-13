@@ -317,139 +317,147 @@ impl<'a, 'input> UnitBuilder<'a, 'input> {
         while let Some(attr) = attrs.next()? {
             let name = attr.name();
             let value = attr.value();
-            match name {
-                gimli::DW_AT_name => out.push(Attribute {
-                    kind: AttributeKind::Name,
-                    value: AttributeValue::String(self.translate_name(value)?),
-                }),
-                gimli::DW_AT_producer => out.push(Attribute {
-                    kind: AttributeKind::Producer,
-                    value: AttributeValue::String(self.attr_string(value)?),
-                }),
-                gimli::DW_AT_comp_dir => out.push(Attribute {
-                    kind: AttributeKind::CompDir,
-                    value: AttributeValue::String(self.attr_string(value)?),
-                }),
-                gimli::DW_AT_language => out.push(Attribute {
-                    kind: AttributeKind::Language,
-                    value: AttributeValue::Data4(as_u32(value)?),
-                }),
-                gimli::DW_AT_stmt_list => out.push(Attribute {
-                    kind: AttributeKind::StmtList,
-                    value: AttributeValue::Data4(as_u32(value)?),
-                }),
-                gimli::DW_AT_low_pc => out.push(Attribute {
-                    kind: AttributeKind::LowPc,
-                    value: AttributeValue::Address(as_u32(value)?),
-                }),
-                gimli::DW_AT_high_pc => out.push(Attribute {
-                    kind: AttributeKind::HighPc,
-                    value: AttributeValue::Address(as_u32(value)?),
-                }),
-                gimli::DW_AT_byte_size => out.push(Attribute {
-                    kind: AttributeKind::ByteSize,
-                    value: AttributeValue::Data4(as_u32(value)?),
-                }),
-                gimli::DW_AT_bit_size => out.push(Attribute {
-                    kind: AttributeKind::BitSize,
-                    value: AttributeValue::Data4(as_u32(value)?),
-                }),
-                gimli::DW_AT_bit_offset => out.push(Attribute {
-                    kind: AttributeKind::BitOffset,
-                    value: AttributeValue::Data2(u16::try_from(as_u64(value)?)?),
-                }),
-                gimli::DW_AT_type => out.push(Attribute {
-                    kind: AttributeKind::DwAtType,
-                    value: AttributeValue::Reference(self.debug_info_ref(value)?),
-                }),
-                gimli::DW_AT_specification | gimli::DW_AT_abstract_origin => out.push(Attribute {
-                    kind: AttributeKind::Specification,
-                    value: AttributeValue::Reference(self.debug_info_ref(value)?),
-                }),
-                gimli::DW_AT_containing_type => out.push(Attribute {
-                    kind: AttributeKind::ContainingType,
-                    value: AttributeValue::Reference(self.debug_info_ref(value)?),
-                }),
-                gimli::DW_AT_MIPS_linkage_name | gimli::DW_AT_linkage_name => out.push(Attribute {
-                    kind: AttributeKind::MwMangled,
-                    value: AttributeValue::String(self.attr_string(value)?),
-                }),
-                gimli::DW_AT_prototyped => out.push(Attribute {
-                    kind: AttributeKind::Prototyped,
-                    value: AttributeValue::Flag(as_flag(value)?),
-                }),
-                gimli::DW_AT_inline => {
-                    if as_u64(value)? != 0 {
+            (|| -> Result<()> {
+                match name {
+                    gimli::DW_AT_name => out.push(Attribute {
+                        kind: AttributeKind::Name,
+                        value: AttributeValue::String(self.translate_name(value)?),
+                    }),
+                    gimli::DW_AT_producer => out.push(Attribute {
+                        kind: AttributeKind::Producer,
+                        value: AttributeValue::String(self.attr_string(value)?),
+                    }),
+                    gimli::DW_AT_comp_dir => out.push(Attribute {
+                        kind: AttributeKind::CompDir,
+                        value: AttributeValue::String(self.attr_string(value)?),
+                    }),
+                    gimli::DW_AT_language => out.push(Attribute {
+                        kind: AttributeKind::Language,
+                        value: AttributeValue::Data4(as_u32(value)?),
+                    }),
+                    gimli::DW_AT_stmt_list => out.push(Attribute {
+                        kind: AttributeKind::StmtList,
+                        value: AttributeValue::Data4(as_u32(value)?),
+                    }),
+                    gimli::DW_AT_low_pc => out.push(Attribute {
+                        kind: AttributeKind::LowPc,
+                        value: AttributeValue::Address(as_address_u32(value)?),
+                    }),
+                    gimli::DW_AT_high_pc => out.push(Attribute {
+                        kind: AttributeKind::HighPc,
+                        value: AttributeValue::Address(as_address_u32(value)?),
+                    }),
+                    gimli::DW_AT_byte_size => out.push(Attribute {
+                        kind: AttributeKind::ByteSize,
+                        value: AttributeValue::Data4(as_u32(value)?),
+                    }),
+                    gimli::DW_AT_bit_size => out.push(Attribute {
+                        kind: AttributeKind::BitSize,
+                        value: AttributeValue::Data4(as_u32(value)?),
+                    }),
+                    gimli::DW_AT_bit_offset => out.push(Attribute {
+                        kind: AttributeKind::BitOffset,
+                        value: AttributeValue::Data2(u16::try_from(as_u64(value)?)?),
+                    }),
+                    gimli::DW_AT_type => out.push(Attribute {
+                        kind: AttributeKind::DwAtType,
+                        value: AttributeValue::Reference(self.debug_info_ref(value)?),
+                    }),
+                    gimli::DW_AT_specification | gimli::DW_AT_abstract_origin => {
                         out.push(Attribute {
-                            kind: AttributeKind::Inline,
-                            value: AttributeValue::Flag(true),
+                            kind: AttributeKind::Specification,
+                            value: AttributeValue::Reference(self.debug_info_ref(value)?),
+                        })
+                    }
+                    gimli::DW_AT_containing_type => out.push(Attribute {
+                        kind: AttributeKind::ContainingType,
+                        value: AttributeValue::Reference(self.debug_info_ref(value)?),
+                    }),
+                    gimli::DW_AT_MIPS_linkage_name | gimli::DW_AT_linkage_name => {
+                        out.push(Attribute {
+                            kind: AttributeKind::MwMangled,
+                            value: AttributeValue::String(self.attr_string(value)?),
+                        })
+                    }
+                    gimli::DW_AT_prototyped => out.push(Attribute {
+                        kind: AttributeKind::Prototyped,
+                        value: AttributeValue::Flag(as_flag(value)?),
+                    }),
+                    gimli::DW_AT_inline => {
+                        if as_u64(value)? != 0 {
+                            out.push(Attribute {
+                                kind: AttributeKind::Inline,
+                                value: AttributeValue::Flag(true),
+                            });
+                        }
+                    }
+                    gimli::DW_AT_virtuality => {
+                        if as_u64(value)? != 0 {
+                            out.push(Attribute {
+                                kind: AttributeKind::Virtual,
+                                value: AttributeValue::Flag(true),
+                            });
+                        }
+                    }
+                    gimli::DW_AT_accessibility => {
+                        let kind = match as_u64(value)? {
+                            1 => AttributeKind::Public,
+                            2 => AttributeKind::Protected,
+                            3 => AttributeKind::Private,
+                            other => bail!("Unhandled DW_AT_accessibility value {other}"),
+                        };
+                        out.push(Attribute { kind, value: AttributeValue::Flag(true) });
+                    }
+                    gimli::DW_AT_location => {
+                        if let Some(location) = self.translate_location(value)? {
+                            out.push(Attribute { kind: AttributeKind::Location, value: location });
+                        }
+                    }
+                    gimli::DW_AT_data_member_location => {
+                        out.push(Attribute {
+                            kind: AttributeKind::Location,
+                            value: self.translate_data_member_location(value)?,
                         });
                     }
-                }
-                gimli::DW_AT_virtuality => {
-                    if as_u64(value)? != 0 {
-                        out.push(Attribute {
-                            kind: AttributeKind::Virtual,
-                            value: AttributeValue::Flag(true),
-                        });
+                    gimli::DW_AT_upper_bound => out.push(Attribute {
+                        kind: AttributeKind::DwUpperBound,
+                        value: translate_scalar(value)?,
+                    }),
+                    gimli::DW_AT_lower_bound => out.push(Attribute {
+                        kind: AttributeKind::DwLowerBound,
+                        value: translate_scalar(value)?,
+                    }),
+                    gimli::DW_AT_count => out.push(Attribute {
+                        kind: AttributeKind::DwCount,
+                        value: translate_scalar(value)?,
+                    }),
+                    gimli::DW_AT_const_value => out.push(Attribute {
+                        kind: AttributeKind::DwConstValue,
+                        value: translate_scalar(value)?,
+                    }),
+                    gimli::DW_AT_encoding => out.push(Attribute {
+                        kind: AttributeKind::DwEncoding,
+                        value: AttributeValue::Udata(as_u64(value)?),
+                    }),
+                    gimli::DW_AT_artificial => {
+                        if entry.tag() == gimli::DW_TAG_formal_parameter {
+                            out.push(Attribute {
+                                kind: AttributeKind::Artificial,
+                                value: AttributeValue::Flag(as_flag(value)?),
+                            });
+                        }
                     }
+                    gimli::DW_AT_external
+                    | gimli::DW_AT_declaration
+                    | gimli::DW_AT_call_file
+                    | gimli::DW_AT_call_line
+                    | gimli::DW_AT_sibling
+                    | gimli::DW_AT_frame_base => {}
+                    _ => {}
                 }
-                gimli::DW_AT_accessibility => {
-                    let kind = match as_u64(value)? {
-                        1 => AttributeKind::Public,
-                        2 => AttributeKind::Protected,
-                        3 => AttributeKind::Private,
-                        other => bail!("Unhandled DW_AT_accessibility value {other}"),
-                    };
-                    out.push(Attribute { kind, value: AttributeValue::Flag(true) });
-                }
-                gimli::DW_AT_location => {
-                    if let Some(location) = self.translate_location(value)? {
-                        out.push(Attribute { kind: AttributeKind::Location, value: location });
-                    }
-                }
-                gimli::DW_AT_data_member_location => {
-                    out.push(Attribute {
-                        kind: AttributeKind::Location,
-                        value: self.translate_data_member_location(value)?,
-                    });
-                }
-                gimli::DW_AT_upper_bound => out.push(Attribute {
-                    kind: AttributeKind::DwUpperBound,
-                    value: translate_scalar(value)?,
-                }),
-                gimli::DW_AT_lower_bound => out.push(Attribute {
-                    kind: AttributeKind::DwLowerBound,
-                    value: translate_scalar(value)?,
-                }),
-                gimli::DW_AT_count => out.push(Attribute {
-                    kind: AttributeKind::DwCount,
-                    value: translate_scalar(value)?,
-                }),
-                gimli::DW_AT_const_value => out.push(Attribute {
-                    kind: AttributeKind::DwConstValue,
-                    value: translate_scalar(value)?,
-                }),
-                gimli::DW_AT_encoding => out.push(Attribute {
-                    kind: AttributeKind::DwEncoding,
-                    value: AttributeValue::Udata(as_u64(value)?),
-                }),
-                gimli::DW_AT_artificial => {
-                    if entry.tag() == gimli::DW_TAG_formal_parameter {
-                        out.push(Attribute {
-                            kind: AttributeKind::Artificial,
-                            value: AttributeValue::Flag(as_flag(value)?),
-                        });
-                    }
-                }
-                gimli::DW_AT_external
-                | gimli::DW_AT_declaration
-                | gimli::DW_AT_call_file
-                | gimli::DW_AT_call_line
-                | gimli::DW_AT_sibling
-                | gimli::DW_AT_frame_base => {}
-                _ => {}
-            }
+                Ok(())
+            })()
+            .with_context(|| format!("translating {name:?} on {:?}", entry.tag()))?;
         }
         Ok(out)
     }
@@ -692,6 +700,7 @@ fn map_tag_kind(tag: gimli::DwTag) -> Result<TagKind> {
         gimli::DW_TAG_lexical_block => TagKind::LexicalBlock,
         gimli::DW_TAG_member => TagKind::Member,
         gimli::DW_TAG_pointer_type => TagKind::DwPointerType,
+        gimli::DW_TAG_ptr_to_member_type => TagKind::PtrToMemberType,
         gimli::DW_TAG_reference_type => TagKind::DwReferenceType,
         gimli::DW_TAG_structure_type => TagKind::StructureType,
         gimli::DW_TAG_subprogram => TagKind::GlobalSubroutine,
@@ -762,6 +771,15 @@ fn as_u64<R: Reader>(value: gimli::AttributeValue<R>) -> Result<u64> {
 
 fn as_u32<R: Reader>(value: gimli::AttributeValue<R>) -> Result<u32> {
     u32::try_from(as_u64(value)?).context("Attribute value exceeds u32 range")
+}
+
+fn as_address_u32<R: Reader>(value: gimli::AttributeValue<R>) -> Result<u32> {
+    Ok(match value {
+        gimli::AttributeValue::DebugInfoRef(offset) => {
+            u32::try_from(offset.0.into_u64()).context("Address value exceeds u32 range")?
+        }
+        other => as_u32(other)?,
+    })
 }
 
 fn as_flag<R: Reader>(value: gimli::AttributeValue<R>) -> Result<bool> {
