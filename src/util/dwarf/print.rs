@@ -572,6 +572,10 @@ fn member_subroutine_def_string(
             full_written_name.push_str(&maybe_demangle_function_name(info, name));
         }
     }
+    if info.producer == Producer::GCC && is_destructor_function_name(&full_written_name) {
+        is_gcc_destructor = true;
+        omit_return_type = true;
+    }
     let rt = type_string(info, typedefs, &t.return_type, true)?;
     if !omit_return_type {
         out.push_str(&rt.prefix);
@@ -734,6 +738,10 @@ pub fn subroutine_def_string(
         if let Some(name) = t.name.as_ref() {
             full_written_name.push_str(&maybe_demangle_function_name(info, name));
         }
+    }
+    if info.producer == Producer::GCC && is_destructor_function_name(&full_written_name) {
+        is_gcc_destructor = true;
+        omit_return_type = true;
     }
     let self_type_hint = qualified_function_owner(&full_written_name);
     let rt = type_string_with_self_type_hint(
@@ -1520,9 +1528,8 @@ fn maybe_demangle_function_name(info: &DwarfInfo, name: &str) -> String {
         }
         Producer::OTHER => None,
     };
-    strip_function_signature(&normalize_qualified_name(
-        &name_opt.unwrap_or_else(|| name.to_string()),
-    ))
+    let name = normalize_qualified_name(&name_opt.unwrap_or_else(|| name.to_string()));
+    if info.producer == Producer::MWCC { strip_function_signature(&name) } else { name }
 }
 
 fn is_qualified_function_name(info: &DwarfInfo, name: &str) -> bool {
@@ -1532,6 +1539,10 @@ fn is_qualified_function_name(info: &DwarfInfo, name: &str) -> bool {
 fn qualified_function_owner(name: &str) -> Option<String> {
     let (owner, function) = name.rsplit_once("::")?;
     if owner.is_empty() || function.is_empty() { None } else { Some(owner.to_string()) }
+}
+
+fn is_destructor_function_name(name: &str) -> bool {
+    name.rsplit("::").next().is_some_and(|function| function.starts_with('~'))
 }
 
 fn strip_function_signature(name: &str) -> String {
