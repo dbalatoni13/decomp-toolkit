@@ -350,6 +350,7 @@ pub enum AttributeKind {
     DwCount = 0x9030,
     DwConstValue = 0x9040,
     DwEncoding = 0x9050,
+    Artificial = 0x9060,
 }
 
 #[derive(Debug, Clone)]
@@ -898,6 +899,7 @@ pub struct SubroutineParameter {
     pub name: Option<String>,
     pub kind: Type,
     pub location: Option<String>,
+    pub artificial: bool,
     pub decl: Option<DeclCoord>,
 }
 
@@ -1455,7 +1457,11 @@ fn process_structure_tag(info: &DwarfInfo, tag: &Tag) -> Result<StructureType> {
                 Some(t) => t,
                 None => return Err(anyhow!("Failed to locate function tag {}", function)),
             };
-            member_functions.push(process_member_subroutine_def_tag(info, function_tag)?);
+            merge_member_function(
+                &mut member_functions,
+                process_member_subroutine_def_tag(info, function_tag)?,
+                false,
+            );
         }
     }
 
@@ -1495,7 +1501,11 @@ fn process_structure_tag(info: &DwarfInfo, tag: &Tag) -> Result<StructureType> {
                 }
             }
             TagKind::Subroutine | TagKind::GlobalSubroutine => {
-                member_functions.push(process_member_subroutine_def_tag(info, child)?);
+                merge_member_function(
+                    &mut member_functions,
+                    process_member_subroutine_def_tag(info, child)?,
+                    true,
+                );
             }
             TagKind::GlobalVariable => {
                 // TODO handle visibility
@@ -1542,6 +1552,102 @@ fn process_structure_tag(info: &DwarfInfo, tag: &Tag) -> Result<StructureType> {
         inner_types,
         typedefs,
     })
+}
+
+fn merge_member_function(
+    member_functions: &mut Vec<MemberSubroutineDefType>,
+    incoming: MemberSubroutineDefType,
+    prefer_incoming_decl: bool,
+) {
+    let Some(existing) =
+        member_functions.iter_mut().find(|existing| member_functions_match(existing, &incoming))
+    else {
+        member_functions.push(incoming);
+        return;
+    };
+
+    existing.name = existing.name.take().or(incoming.name);
+    existing.mangled_name = existing.mangled_name.take().or(incoming.mangled_name);
+    existing.parameters = merge_member_function_parameters(&existing.parameters, incoming.parameters);
+    existing.var_args = existing.var_args || incoming.var_args;
+    existing.prototyped = existing.prototyped || incoming.prototyped;
+    existing.member_of = existing.member_of.or(incoming.member_of);
+    existing.direct_member_of = existing.direct_member_of.or(incoming.direct_member_of);
+    existing.inline = existing.inline || incoming.inline;
+    existing.virtual_ = existing.virtual_ || incoming.virtual_;
+    existing.local = existing.local && incoming.local;
+    existing.start_address = existing.start_address.or(incoming.start_address);
+    existing.end_address = existing.end_address.or(incoming.end_address);
+    existing.const_ = existing.const_ || incoming.const_;
+    existing.static_member = existing.static_member && incoming.static_member;
+    existing.override_ = existing.override_ || incoming.override_;
+    existing.volatile_ = existing.volatile_ || incoming.volatile_;
+    if prefer_incoming_decl {
+        existing.decl = incoming.decl.or_else(|| existing.decl.take());
+    } else {
+        existing.decl = existing.decl.take().or(incoming.decl);
+    }
+}
+
+fn member_functions_match(
+    existing: &MemberSubroutineDefType,
+    incoming: &MemberSubroutineDefType,
+) -> bool {
+    if let (Some(existing), Some(incoming)) = (&existing.mangled_name, &incoming.mangled_name) {
+        return existing == incoming;
+    }
+    existing.name == incoming.name
+        && visible_parameter_count(&existing.parameters) == visible_parameter_count(&incoming.parameters)
+}
+
+fn visible_parameter_count(parameters: &[SubroutineParameter]) -> usize {
+    parameters
+        .iter()
+        .skip(usize::from(parameters.first().is_some_and(is_implicit_this_parameter)))
+        .count()
+}
+
+fn merge_member_function_parameters(
+    existing: &[SubroutineParameter],
+    incoming: Vec<SubroutineParameter>,
+) -> Vec<SubroutineParameter> {
+    let mut merged = existing.to_vec();
+    let mut index = 0;
+    for parameter in incoming {
+        merge_subroutine_parameter_prefer_existing(&mut merged, &mut index, parameter);
+    }
+    merged
+}
+
+fn merge_subroutine_parameter_prefer_existing(
+    parameters: &mut Vec<SubroutineParameter>,
+    index: &mut usize,
+    parameter: SubroutineParameter,
+) {
+    if *index < parameters.len() {
+        let existing_is_this = is_implicit_this_parameter(&parameters[*index]);
+        let parameter_is_this = is_implicit_this_parameter(&parameter);
+        if existing_is_this && !parameter_is_this {
+            *index += 1;
+            merge_subroutine_parameter_prefer_existing(parameters, index, parameter);
+            return;
+        }
+        if parameter_is_this && !existing_is_this {
+            parameters.insert(*index, parameter);
+            *index += 1;
+            return;
+        }
+
+        let existing = &mut parameters[*index];
+        existing.name = existing.name.take().or(parameter.name);
+        existing.kind = parameter.kind;
+        existing.location = existing.location.take().or(parameter.location);
+        existing.artificial = existing.artificial || parameter.artificial;
+        existing.decl = existing.decl.take().or(parameter.decl);
+    } else {
+        parameters.push(parameter);
+    }
+    *index += 1;
 }
 
 fn process_array_tag(info: &DwarfInfo, tag: &Tag) -> Result<ArrayType> {
@@ -1862,7 +1968,7 @@ fn preprocess_subroutine_tag(info: &DwarfInfo, tag: &Tag) -> Result<()> {
     for child in tag.children(&info.tags) {
         if child.kind == TagKind::FormalParameter {
             let param = process_subroutine_parameter_tag(info, child)?;
-            if param.name.as_deref() == Some("this") {
+            if is_implicit_this_parameter(&param) {
                 if let Some(key) = underlying_user_defined_key(info, &param.kind)? {
                     append_to = Some(key);
                     break;
@@ -2017,11 +2123,12 @@ fn process_member_subroutine_def_tag(
         }
     }
 
+    let mut parameter_index = 0;
     for child in tag.children(&info.tags) {
         match child.kind {
             TagKind::FormalParameter => {
                 let param = process_subroutine_parameter_tag(info, child)?;
-                if !this_pointer_found && param.name.as_deref() == Some("this") {
+                if !this_pointer_found && is_implicit_this_parameter(&param) {
                     let modifiers = &param.kind.modifiers;
                     if modifiers.len() >= 3
                         && modifiers[0] == Modifier::Const
@@ -2038,15 +2145,7 @@ fn process_member_subroutine_def_tag(
                     }
                     this_pointer_found = true;
                 }
-                // Avoid applying ones that were already in the specification
-                if !parameters.iter().any(|p| {
-                    matches!(
-                        (p.name.as_ref(), param.name.as_ref()),
-                        (Some(a), Some(b)) if a == b
-                    )
-                }) {
-                    parameters.push(param);
-                }
+                merge_subroutine_parameter(&mut parameters, &mut parameter_index, param);
             }
             TagKind::UnspecifiedParameters
             | TagKind::LocalVariable
@@ -2229,11 +2328,12 @@ fn process_subroutine_tag(info: &DwarfInfo, tag: &Tag) -> Result<SubroutineType>
     let mut blocks_and_inlines = Vec::new();
     let mut inner_types = Vec::new();
     let mut typedefs = Vec::new();
+    let mut parameter_index = 0;
     for child in tag.children(&info.tags) {
         match child.kind {
             TagKind::FormalParameter => {
                 let param = process_subroutine_parameter_tag(info, child)?;
-                if !this_pointer_found && param.name.as_deref() == Some("this") {
+                if !this_pointer_found && is_implicit_this_parameter(&param) {
                     let modifiers = &param.kind.modifiers;
                     if modifiers.len() >= 3
                         && modifiers[0] == Modifier::Const
@@ -2250,15 +2350,7 @@ fn process_subroutine_tag(info: &DwarfInfo, tag: &Tag) -> Result<SubroutineType>
                     }
                     this_pointer_found = true;
                 }
-                // Avoid applying ones that were already in the specification
-                if !parameters.iter().any(|p| {
-                    matches!(
-                        (p.name.as_ref(), param.name.as_ref()),
-                        (Some(a), Some(b)) if a == b
-                    )
-                }) {
-                    parameters.push(param);
-                }
+                merge_subroutine_parameter(&mut parameters, &mut parameter_index, param);
             }
             TagKind::UnspecifiedParameters => var_args = true,
             TagKind::LocalVariable => variables.push(process_local_variable_tag(info, child)?),
@@ -2459,6 +2551,7 @@ fn process_subroutine_parameter_tag(info: &DwarfInfo, tag: &Tag) -> Result<Subro
     let mut name = None;
     let mut kind = None;
     let mut location = None;
+    let mut artificial = false;
     for attr in &tag.attributes {
         match (attr.kind, &attr.value) {
             (AttributeKind::Sibling, _) => {}
@@ -2484,6 +2577,7 @@ fn process_subroutine_parameter_tag(info: &DwarfInfo, tag: &Tag) -> Result<Subro
                 // TODO?
                 // info!("ConstValueBlock: {:?} in {:?}", block, tag);
             }
+            (AttributeKind::Artificial, AttributeValue::Flag(value)) => artificial = *value,
             (AttributeKind::Specification, &AttributeValue::Reference(key)) => {
                 let spec_tag = info
                     .tags
@@ -2494,6 +2588,7 @@ fn process_subroutine_parameter_tag(info: &DwarfInfo, tag: &Tag) -> Result<Subro
                 name = name.or(spec.name);
                 kind = kind.or(Some(spec.kind));
                 location = location.or(spec.location);
+                artificial = artificial || spec.artificial;
             }
             _ => bail!("Unhandled SubroutineParameter attribute {:?}", attr),
         }
@@ -2504,7 +2599,42 @@ fn process_subroutine_parameter_tag(info: &DwarfInfo, tag: &Tag) -> Result<Subro
     }
 
     let kind = kind.ok_or_else(|| anyhow!("SubroutineParameter without type: {:?}", tag))?;
-    Ok(SubroutineParameter { name, kind, location, decl: tag.decl.clone() })
+    Ok(SubroutineParameter { name, kind, location, artificial, decl: tag.decl.clone() })
+}
+
+pub fn is_implicit_this_parameter(parameter: &SubroutineParameter) -> bool {
+    parameter.artificial || parameter.name.as_deref() == Some("this")
+}
+
+fn merge_subroutine_parameter(
+    parameters: &mut Vec<SubroutineParameter>,
+    index: &mut usize,
+    parameter: SubroutineParameter,
+) {
+    if *index < parameters.len() {
+        let existing_is_this = is_implicit_this_parameter(&parameters[*index]);
+        let parameter_is_this = is_implicit_this_parameter(&parameter);
+        if existing_is_this && !parameter_is_this {
+            *index += 1;
+            merge_subroutine_parameter(parameters, index, parameter);
+            return;
+        }
+        if parameter_is_this && !existing_is_this {
+            parameters.insert(*index, parameter);
+            *index += 1;
+            return;
+        }
+
+        let existing = &mut parameters[*index];
+        existing.name = parameter.name.or_else(|| existing.name.take());
+        existing.kind = parameter.kind;
+        existing.location = parameter.location.or_else(|| existing.location.take());
+        existing.artificial = existing.artificial || parameter.artificial;
+        existing.decl = parameter.decl.or_else(|| existing.decl.take());
+    } else {
+        parameters.push(parameter);
+    }
+    *index += 1;
 }
 
 fn process_local_variable_tag(info: &DwarfInfo, tag: &Tag) -> Result<SubroutineVariable> {

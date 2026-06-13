@@ -434,9 +434,16 @@ impl<'a, 'input> UnitBuilder<'a, 'input> {
                     kind: AttributeKind::DwEncoding,
                     value: AttributeValue::Udata(as_u64(value)?),
                 }),
+                gimli::DW_AT_artificial => {
+                    if entry.tag() == gimli::DW_TAG_formal_parameter {
+                        out.push(Attribute {
+                            kind: AttributeKind::Artificial,
+                            value: AttributeValue::Flag(as_flag(value)?),
+                        });
+                    }
+                }
                 gimli::DW_AT_external
                 | gimli::DW_AT_declaration
-                | gimli::DW_AT_artificial
                 | gimli::DW_AT_call_file
                 | gimli::DW_AT_call_line
                 | gimli::DW_AT_sibling

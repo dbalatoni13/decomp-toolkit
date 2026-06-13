@@ -8,9 +8,10 @@ use indent::indent_all_by;
 use crate::util::dwarf::{
     ArrayType, AttributeKind, ConstantValue, DeclCoord, DwarfInfo, EnumerationType, FundType,
     MemberSubroutineDefType, Modifier, Producer, PtrToMemberType, StructureKind, StructureMember,
-    StructureType, SubroutineBlock, SubroutineNode, SubroutineType, TagKind, TagType, Type,
-    TypeKind, TypeString, TypedefMap, TypedefTag, UnionType, UserDefinedType, VariableTag,
-    Visibility, get_udt_by_key, process_variable_tag, resolve_typedef_target_type, ud_type,
+    StructureType, SubroutineBlock, SubroutineNode, SubroutineParameter, SubroutineType, TagKind,
+    TagType, Type, TypeKind, TypeString, TypedefMap, TypedefTag, UnionType, UserDefinedType,
+    VariableTag, Visibility, get_udt_by_key, is_implicit_this_parameter, process_variable_tag,
+    resolve_typedef_target_type, ud_type,
 };
 
 fn decl_comment(decl: &Option<DeclCoord>) -> Option<String> {
@@ -359,38 +360,72 @@ pub fn ud_type_def(
     }
 }
 
+fn implicit_this_start_index(parameters: &[SubroutineParameter]) -> usize {
+    parameters
+        .first()
+        .filter(|parameter| is_implicit_this_parameter(parameter))
+        .map(|_| 1)
+        .unwrap_or_default()
+}
+
+fn parameter_list_string(
+    info: &DwarfInfo,
+    typedefs: &TypedefMap,
+    parameters: &[SubroutineParameter],
+    var_args: bool,
+    prototyped: bool,
+    start_index: usize,
+    include_locations: bool,
+) -> Result<String> {
+    let mut out = String::new();
+    let mut wrote_parameter = false;
+
+    for parameter in parameters.iter().skip(start_index) {
+        if wrote_parameter {
+            write!(out, ", ")?;
+        }
+        let ts = type_string(info, typedefs, &parameter.kind, true)?;
+        if let Some(name) = &parameter.name {
+            write!(out, "{} {}{}", ts.prefix, name, ts.suffix)?;
+        } else {
+            write!(out, "{}{}", ts.prefix, ts.suffix)?;
+        }
+        if include_locations {
+            if let Some(location) = &parameter.location {
+                write!(out, " /* {location} */")?;
+            }
+        }
+        wrote_parameter = true;
+    }
+
+    if var_args {
+        if wrote_parameter {
+            write!(out, ", ")?;
+        }
+        out.push_str("...");
+    } else if !wrote_parameter && prototyped {
+        out.push_str("void");
+    }
+
+    Ok(out)
+}
+
 pub fn subroutine_type_string(
     info: &DwarfInfo,
     typedefs: &TypedefMap,
     t: &SubroutineType,
 ) -> Result<TypeString> {
     let mut out = type_string(info, typedefs, &t.return_type, true)?;
-    let mut parameters = String::new();
-    if t.parameters.is_empty() {
-        if t.var_args {
-            parameters = "...".to_string();
-        } else if t.prototyped {
-            parameters = "void".to_string();
-        }
-    } else {
-        for (idx, parameter) in t.parameters.iter().enumerate() {
-            if idx > 0 {
-                write!(parameters, ", ")?;
-            }
-            let ts = type_string(info, typedefs, &parameter.kind, true)?;
-            if let Some(name) = &parameter.name {
-                write!(parameters, "{} {}{}", ts.prefix, name, ts.suffix)?;
-            } else {
-                write!(parameters, "{}{}", ts.prefix, ts.suffix)?;
-            }
-            if let Some(location) = &parameter.location {
-                write!(parameters, " /* {location} */")?;
-            }
-        }
-        if t.var_args {
-            write!(parameters, ", ...")?;
-        }
-    }
+    let start_index = implicit_this_start_index(&t.parameters);
+    let parameters = parameter_list_string(
+        info,
+        typedefs,
+        &t.parameters,
+        t.var_args,
+        t.prototyped,
+        start_index,
+        true,
+    )?;
     out.suffix = format!("({}){}", parameters, out.suffix);
     if let Some(member_of) = t.member_of {
         let base_name = tag_name_or_udt_name(info, member_of)?;
@@ -431,6 +466,7 @@ fn member_subroutine_def_string(
     }
 
     let is_non_static_member = t.direct_member_of.is_some() && !t.static_member;
+    let has_implicit_this = implicit_this_start_index(&t.parameters) > 0;
 
     if t.local || t.static_member {
         out.push_str("static ");
@@ -501,34 +537,20 @@ fn member_subroutine_def_string(
 
     out.push_str(&full_written_name);
 
-    let mut parameters = String::new();
-    if t.parameters.is_empty() {
-        if t.var_args {
-            parameters = "...".to_string();
-        } else if t.prototyped {
-            parameters = "void".to_string();
-        }
-    } else {
-        let mut start_index = if is_non_static_member { 1 } else { 0 };
-        // omit __in_chrg parameter
-        if is_gcc_destructor {
-            start_index += 1;
-        }
-        for (idx, parameter) in t.parameters.iter().enumerate().skip(start_index) {
-            if idx > start_index {
-                write!(parameters, ", ")?;
-            }
-            let ts = type_string(info, typedefs, &parameter.kind, true)?;
-            if let Some(name) = &parameter.name {
-                write!(parameters, "{} {}{}", ts.prefix, name, ts.suffix)?;
-            } else {
-                write!(parameters, "{}{}", ts.prefix, ts.suffix)?;
-            }
-        }
-        if t.var_args {
-            write!(parameters, ", ...")?;
-        }
+    let mut start_index = if is_non_static_member || has_implicit_this { 1 } else { 0 };
+    // omit __in_chrg parameter
+    if is_gcc_destructor {
+        start_index += 1;
     }
+    let parameters = parameter_list_string(
+        info,
+        typedefs,
+        &t.parameters,
+        t.var_args,
+        t.prototyped,
+        start_index,
+        false,
+    )?;
     write!(out, "({}){}", parameters, rt.suffix)?;
     if t.const_ {
         write!(out, " const")?;
@@ -588,7 +610,8 @@ pub fn subroutine_def_string(
     }
 
     let is_non_static_member = t.direct_member_of.is_some() && !t.static_member;
-    if is_non_static_member {
+    let has_implicit_this = implicit_this_start_index(&t.parameters) > 0;
+    if is_non_static_member || has_implicit_this {
         if let Some(param) = t.parameters.first() {
             if let Some(location) = &param.location {
                 writeln!(out, "// this: {}", location)?;
@@ -670,37 +693,20 @@ pub fn subroutine_def_string(
 
     out.push_str(&full_written_name);
 
-    let mut parameters = String::new();
-    if t.parameters.is_empty() {
-        if t.var_args {
-            parameters = "...".to_string();
-        } else if t.prototyped {
-            parameters = "void".to_string();
-        }
-    } else {
-        let mut start_index = if is_non_static_member { 1 } else { 0 };
-        // omit __in_chrg parameter
-        if is_gcc_destructor {
-            start_index += 1;
-        }
-        for (idx, parameter) in t.parameters.iter().enumerate().skip(start_index) {
-            if idx > start_index {
-                write!(parameters, ", ")?;
-            }
-            let ts = type_string(info, typedefs, &parameter.kind, true)?;
-            if let Some(name) = &parameter.name {
-                write!(parameters, "{} {}{}", ts.prefix, name, ts.suffix)?;
-            } else {
-                write!(parameters, "{}{}", ts.prefix, ts.suffix)?;
-            }
-            if let Some(location) = &parameter.location {
-                write!(parameters, " /* {location} */")?;
-            }
-        }
-        if t.var_args {
-            write!(parameters, ", ...")?;
-        }
+    let mut start_index = if is_non_static_member || has_implicit_this { 1 } else { 0 };
+    // omit __in_chrg parameter
+    if is_gcc_destructor {
+        start_index += 1;
     }
+    let parameters = parameter_list_string(
+        info,
+        typedefs,
+        &t.parameters,
+        t.var_args,
+        t.prototyped,
+        start_index,
+        true,
+    )?;
     write!(out, "({}){} ", parameters, rt.suffix)?;
     if t.const_ {
         write!(out, "const ")?;
