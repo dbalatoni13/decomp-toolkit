@@ -1408,6 +1408,8 @@ fn constant_value_string(info: &DwarfInfo, kind: &Type, value: ConstantValue) ->
         Some(FundType::Boolean) => {
             if constant_value_as_u64(value) == 0 { "false".to_string() } else { "true".to_string() }
         }
+        Some(FundType::Float) => float_constant_string(value),
+        Some(FundType::DblPrecFloat) => double_constant_string(value),
         Some(ft) if is_signed_integral_type(ft) => {
             let size = ft.size()?;
             signed_constant_string(value, size)
@@ -1455,6 +1457,14 @@ fn unsigned_constant_string(value: ConstantValue) -> String {
         ConstantValue::Unsigned(value) => value.to_string(),
         ConstantValue::Signed(value) => value.to_string(),
     }
+}
+
+fn float_constant_string(value: ConstantValue) -> String {
+    format!("{:?}f", f32::from_bits(constant_value_as_u64(value) as u32))
+}
+
+fn double_constant_string(value: ConstantValue) -> String {
+    format!("{:?}", f64::from_bits(constant_value_as_u64(value)))
 }
 
 fn constant_value_as_u64(value: ConstantValue) -> u64 {
