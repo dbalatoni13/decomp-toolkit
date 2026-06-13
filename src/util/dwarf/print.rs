@@ -94,6 +94,47 @@ pub fn type_string(
     type_string_impl(info, typedefs, t, include_anonymous_def, None)
 }
 
+fn type_string_with_self_type_hint(
+    info: &DwarfInfo,
+    typedefs: &TypedefMap,
+    t: &Type,
+    include_anonymous_def: bool,
+    self_type_hint: Option<&str>,
+) -> Result<TypeString> {
+    let str = type_string(info, typedefs, t, include_anonymous_def)?;
+    Ok(match self_type_hint {
+        Some(hint) => qualify_self_type_string(str, hint),
+        None => str,
+    })
+}
+
+fn qualify_self_type_string(mut str: TypeString, self_type_hint: &str) -> TypeString {
+    if !self_type_hint.contains("::") {
+        return str;
+    }
+    let Some(unqualified) = self_type_hint.rsplit("::").next() else {
+        return str;
+    };
+    if unqualified.is_empty() {
+        return str;
+    }
+
+    for keyword in ["class ", "struct ", "union ", "enum ", ""] {
+        let old = format!("{keyword}{unqualified}");
+        if str.prefix == old {
+            str.prefix = format!("{keyword}{self_type_hint}");
+            return str;
+        }
+        let old_with_space = format!("{old} ");
+        if str.prefix.starts_with(&old_with_space) {
+            str.prefix = format!("{keyword}{self_type_hint} {}", &str.prefix[old_with_space.len()..]);
+            return str;
+        }
+    }
+
+    str
+}
+
 fn type_string_without_typedefs(
     info: &DwarfInfo,
     t: &Type,
@@ -376,6 +417,7 @@ fn parameter_list_string(
     prototyped: bool,
     start_index: usize,
     include_locations: bool,
+    self_type_hint: Option<&str>,
 ) -> Result<String> {
     let mut out = String::new();
     let mut wrote_parameter = false;
@@ -384,7 +426,7 @@ fn parameter_list_string(
         if wrote_parameter {
             write!(out, ", ")?;
         }
-        let ts = type_string(info, typedefs, &parameter.kind, true)?;
+        let ts = type_string_with_self_type_hint(info, typedefs, &parameter.kind, true, self_type_hint)?;
         if let Some(name) = &parameter.name {
             write!(out, "{} {}{}", ts.prefix, name, ts.suffix)?;
         } else {
@@ -425,6 +467,7 @@ pub fn subroutine_type_string(
         t.prototyped,
         start_index,
         true,
+        None,
     )?;
     out.suffix = format!("({}){}", parameters, out.suffix);
     if let Some(member_of) = t.member_of {
@@ -550,6 +593,7 @@ fn member_subroutine_def_string(
         t.prototyped,
         start_index,
         false,
+        None,
     )?;
     write!(out, "({}){}", parameters, rt.suffix)?;
     if t.const_ {
@@ -691,7 +735,14 @@ pub fn subroutine_def_string(
             full_written_name.push_str(&maybe_demangle_function_name(info, name));
         }
     }
-    let rt = type_string(info, typedefs, &t.return_type, true)?;
+    let self_type_hint = qualified_function_owner(&full_written_name);
+    let rt = type_string_with_self_type_hint(
+        info,
+        typedefs,
+        &t.return_type,
+        true,
+        self_type_hint.as_deref(),
+    )?;
     if !omit_return_type {
         out.push_str(&rt.prefix);
         out.push(' ');
@@ -712,6 +763,7 @@ pub fn subroutine_def_string(
         t.prototyped,
         start_index,
         true,
+        self_type_hint.as_deref(),
     )?;
     write!(out, "({}){} ", parameters, rt.suffix)?;
     if t.const_ {
@@ -1475,6 +1527,11 @@ fn maybe_demangle_function_name(info: &DwarfInfo, name: &str) -> String {
 
 fn is_qualified_function_name(info: &DwarfInfo, name: &str) -> bool {
     maybe_demangle_function_name(info, name).contains("::")
+}
+
+fn qualified_function_owner(name: &str) -> Option<String> {
+    let (owner, function) = name.rsplit_once("::")?;
+    if owner.is_empty() || function.is_empty() { None } else { Some(owner.to_string()) }
 }
 
 fn strip_function_signature(name: &str) -> String {
