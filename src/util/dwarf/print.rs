@@ -6,11 +6,11 @@ use gnuv2_demangle::{DemangleConfig, demangle as gnu_demangle};
 use indent::indent_all_by;
 
 use crate::util::dwarf::{
-    ArrayType, AttributeKind, DeclCoord, DwarfInfo, EnumerationType, FundType,
+    ArrayType, AttributeKind, ConstantValue, DeclCoord, DwarfInfo, EnumerationType, FundType,
     MemberSubroutineDefType, Modifier, Producer, PtrToMemberType, StructureKind, StructureMember,
     StructureType, SubroutineBlock, SubroutineNode, SubroutineType, TagKind, TagType, Type,
     TypeKind, TypeString, TypedefMap, TypedefTag, UnionType, UserDefinedType, VariableTag,
-    Visibility, get_udt_by_key, process_variable_tag, ud_type,
+    Visibility, get_udt_by_key, process_variable_tag, resolve_typedef_target_type, ud_type,
 };
 
 fn decl_comment(decl: &Option<DeclCoord>) -> Option<String> {
@@ -740,13 +740,17 @@ pub fn subroutine_def_string(
         writeln!(out, "\n    // Local variables")?;
         let mut var_out = String::new();
         for variable in &t.variables {
-            let ts = type_string(info, &scoped_typedefs, &variable.kind, true)?;
             write!(
                 var_out,
-                "{} {}{};",
-                ts.prefix,
-                variable.name.as_deref().unwrap_or_default(),
-                ts.suffix
+                "{}",
+                variable_declaration_string(
+                    info,
+                    &scoped_typedefs,
+                    &variable.kind,
+                    variable.name.as_deref().unwrap_or_default(),
+                    variable.const_value,
+                    true,
+                )?
             )?;
             if let Some(location) = &variable.location {
                 write!(var_out, " // {location}")?;
@@ -830,13 +834,17 @@ fn subroutine_block_string(
     }
     let mut var_out = String::new();
     for variable in &block.variables {
-        let ts = type_string(info, &scoped_typedefs, &variable.kind, true)?;
         write!(
             var_out,
-            "{} {}{};",
-            ts.prefix,
-            variable.name.as_deref().unwrap_or_default(),
-            ts.suffix
+            "{}",
+            variable_declaration_string(
+                info,
+                &scoped_typedefs,
+                &variable.kind,
+                variable.name.as_deref().unwrap_or_default(),
+                variable.const_value,
+                true,
+            )?
         )?;
         if let Some(location) = &variable.location {
             write!(var_out, " // {location}")?;
@@ -1294,19 +1302,118 @@ fn typedef_string(
     Ok(out)
 }
 
+fn variable_declaration_string(
+    info: &DwarfInfo,
+    typedefs: &TypedefMap,
+    kind: &Type,
+    name: &str,
+    const_value: Option<ConstantValue>,
+    include_anonymous_def: bool,
+) -> Result<String> {
+    let ts = type_string(info, typedefs, kind, include_anonymous_def)?;
+    let mut out = format!("{} {}{}", ts.prefix, name, ts.suffix);
+    if let Some(value) = const_value {
+        write!(out, " = {}", constant_value_string(info, kind, value)?)?;
+    }
+    out.push(';');
+    Ok(out)
+}
+
+fn constant_value_string(info: &DwarfInfo, kind: &Type, value: ConstantValue) -> Result<String> {
+    if kind.modifiers.iter().any(|modifier| {
+        matches!(modifier, Modifier::PointerTo | Modifier::MwPointerTo | Modifier::ReferenceTo)
+    }) {
+        return Ok(unsigned_constant_string(value));
+    }
+
+    let fund_type = underlying_fund_type(info, kind)?;
+    Ok(match fund_type {
+        Some(FundType::Boolean) => {
+            if constant_value_as_u64(value) == 0 { "false".to_string() } else { "true".to_string() }
+        }
+        Some(ft) if is_signed_integral_type(ft) => {
+            let size = ft.size()?;
+            signed_constant_string(value, size)
+        }
+        _ => unsigned_constant_string(value),
+    })
+}
+
+fn underlying_fund_type(info: &DwarfInfo, kind: &Type) -> Result<Option<FundType>> {
+    Ok(match kind.kind {
+        TypeKind::Fundamental(ft) => Some(ft),
+        TypeKind::Typedef(key) => {
+            let target = resolve_typedef_target_type(info, key)?;
+            underlying_fund_type(info, &target)?
+        }
+        TypeKind::UserDefined(_) => None,
+    })
+}
+
+fn is_signed_integral_type(ft: FundType) -> bool {
+    matches!(
+        ft,
+        FundType::Char
+            | FundType::Short
+            | FundType::SignedShort
+            | FundType::Integer
+            | FundType::SignedInteger
+            | FundType::Long
+            | FundType::SignedLong
+            | FundType::LongLong
+            | FundType::SignedLongLong
+            | FundType::Int128
+    )
+}
+
+fn signed_constant_string(value: ConstantValue, byte_size: u32) -> String {
+    match value {
+        ConstantValue::Signed(value) => value.to_string(),
+        ConstantValue::Unsigned(value) => sign_extend(value, byte_size).to_string(),
+    }
+}
+
+fn unsigned_constant_string(value: ConstantValue) -> String {
+    match value {
+        ConstantValue::Unsigned(value) => value.to_string(),
+        ConstantValue::Signed(value) => value.to_string(),
+    }
+}
+
+fn constant_value_as_u64(value: ConstantValue) -> u64 {
+    match value {
+        ConstantValue::Unsigned(value) => value,
+        ConstantValue::Signed(value) => value as u64,
+    }
+}
+
+fn sign_extend(value: u64, byte_size: u32) -> i64 {
+    let bits = byte_size.saturating_mul(8);
+    if bits == 0 {
+        return value as i64;
+    }
+    if bits >= 64 {
+        return value as i64;
+    }
+    let shift = 64 - bits;
+    ((value << shift) as i64) >> shift
+}
+
 fn variable_string(
     info: &DwarfInfo,
     typedefs: &TypedefMap,
     variable: &VariableTag,
     include_extra: bool,
 ) -> Result<String> {
-    let ts = type_string(info, typedefs, &variable.kind, include_extra)?;
     let mut out = if variable.local { "static ".to_string() } else { String::new() };
-    out.push_str(&ts.prefix);
-    out.push(' ');
-    out.push_str(&maybe_demangle_name(info, variable.name.as_deref().unwrap_or("[unknown]")));
-    out.push_str(&ts.suffix);
-    out.push(';');
+    out.push_str(&variable_declaration_string(
+        info,
+        typedefs,
+        &variable.kind,
+        &maybe_demangle_name(info, variable.name.as_deref().unwrap_or("[unknown]")),
+        variable.const_value,
+        include_extra,
+    )?);
     if include_extra {
         let size = variable.kind.size(info)?;
         out.push_str(&format!(" // size: {size:#X}"));

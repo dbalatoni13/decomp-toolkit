@@ -366,6 +366,12 @@ pub enum AttributeValue {
     String(String),
 }
 
+#[derive(Debug, Clone, Copy)]
+pub enum ConstantValue {
+    Unsigned(u64),
+    Signed(i64),
+}
+
 #[derive(Debug, Clone)]
 pub struct DeclCoord {
     pub file: String,
@@ -901,6 +907,7 @@ pub struct SubroutineVariable {
     pub mangled_name: Option<String>,
     pub kind: Type,
     pub location: Option<String>,
+    pub const_value: Option<ConstantValue>,
     pub decl: Option<DeclCoord>,
 }
 
@@ -1000,6 +1007,7 @@ pub struct VariableTag {
     pub mangled_name: Option<String>,
     pub kind: Type,
     pub address: Option<u32>,
+    pub const_value: Option<ConstantValue>,
     pub local: bool,
     pub decl: Option<DeclCoord>,
 }
@@ -2506,6 +2514,7 @@ fn process_local_variable_tag(info: &DwarfInfo, tag: &Tag) -> Result<SubroutineV
     let mut name = None;
     let mut kind = None;
     let mut location = None;
+    let mut const_value = None;
     for attr in &tag.attributes {
         match (attr.kind, &attr.value) {
             (AttributeKind::Sibling, _) => {}
@@ -2528,7 +2537,9 @@ fn process_local_variable_tag(info: &DwarfInfo, tag: &Tag) -> Result<SubroutineV
                 // TODO?
                 // info!("MwDwarf2Location: {:?} in {:?}", block, tag);
             }
-            (AttributeKind::DwConstValue, _) => {}
+            (AttributeKind::DwConstValue, value) => {
+                const_value = Some(process_constant_value(value)?);
+            }
             (AttributeKind::Private | AttributeKind::Protected | AttributeKind::Public, _) => {}
             (AttributeKind::Specification, &AttributeValue::Reference(key)) => {
                 let spec_tag = info
@@ -2540,6 +2551,7 @@ fn process_local_variable_tag(info: &DwarfInfo, tag: &Tag) -> Result<SubroutineV
                 name = name.or(spec.name);
                 kind = kind.or(Some(spec.kind));
                 location = location.or(spec.location);
+                const_value = const_value.or(spec.const_value);
             }
             _ => {
                 bail!("Unhandled LocalVariable attribute {:?}", attr);
@@ -2552,7 +2564,25 @@ fn process_local_variable_tag(info: &DwarfInfo, tag: &Tag) -> Result<SubroutineV
     }
 
     let kind = kind.ok_or_else(|| anyhow!("LocalVariable without type: {:?}", tag))?;
-    Ok(SubroutineVariable { name, mangled_name, kind, location, decl: tag.decl.clone() })
+    Ok(SubroutineVariable {
+        name,
+        mangled_name,
+        kind,
+        location,
+        const_value,
+        decl: tag.decl.clone(),
+    })
+}
+
+fn process_constant_value(value: &AttributeValue) -> Result<ConstantValue> {
+    match value {
+        AttributeValue::Udata(value) => Ok(ConstantValue::Unsigned(*value)),
+        AttributeValue::Sdata(value) => Ok(ConstantValue::Signed(*value)),
+        AttributeValue::Data2(value) => Ok(ConstantValue::Unsigned(u64::from(*value))),
+        AttributeValue::Data4(value) => Ok(ConstantValue::Unsigned(u64::from(*value))),
+        AttributeValue::Data8(value) => Ok(ConstantValue::Unsigned(*value)),
+        _ => bail!("Unhandled const value attribute {:?}", value),
+    }
 }
 
 fn process_ptr_to_member_tag(info: &DwarfInfo, tag: &Tag) -> Result<PtrToMemberType> {
@@ -2975,6 +3005,7 @@ pub fn process_variable_tag(info: &DwarfInfo, tag: &Tag) -> Result<VariableTag> 
     let mut mangled_name = None;
     let mut kind = None;
     let mut address = None;
+    let mut const_value = None;
     for attr in &tag.attributes {
         match (attr.kind, &attr.value) {
             (AttributeKind::Sibling, _) => {}
@@ -2991,7 +3022,9 @@ pub fn process_variable_tag(info: &DwarfInfo, tag: &Tag) -> Result<VariableTag> 
             (AttributeKind::Location, AttributeValue::Block(block)) => {
                 address = Some(process_address(block, info.e)?)
             }
-            (AttributeKind::DwConstValue, _) => {}
+            (AttributeKind::DwConstValue, value) => {
+                const_value = Some(process_constant_value(value)?);
+            }
             (AttributeKind::Private | AttributeKind::Protected | AttributeKind::Public, _) => {}
             (AttributeKind::Specification, &AttributeValue::Reference(key)) => {
                 let spec_tag = info
@@ -3003,6 +3036,7 @@ pub fn process_variable_tag(info: &DwarfInfo, tag: &Tag) -> Result<VariableTag> 
                 mangled_name = mangled_name.or(spec.mangled_name);
                 kind = kind.or(Some(spec.kind));
                 address = address.or(spec.address);
+                const_value = const_value.or(spec.const_value);
             }
             (AttributeKind::Member, &AttributeValue::Reference(_key)) => {
                 // Pointer to parent structure, ignore
@@ -3019,5 +3053,13 @@ pub fn process_variable_tag(info: &DwarfInfo, tag: &Tag) -> Result<VariableTag> 
 
     let kind = kind.ok_or_else(|| anyhow!("Variable without Type: {:?}", tag))?;
     let local = tag.kind == TagKind::LocalVariable;
-    Ok(VariableTag { name, mangled_name, kind, address, local, decl: tag.decl.clone() })
+    Ok(VariableTag {
+        name,
+        mangled_name,
+        kind,
+        address,
+        const_value,
+        local,
+        decl: tag.decl.clone(),
+    })
 }
