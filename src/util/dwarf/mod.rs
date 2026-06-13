@@ -1,5 +1,5 @@
-pub mod print;
 pub mod dwarf2;
+pub mod print;
 
 use std::{
     cell::RefCell,
@@ -584,9 +584,7 @@ pub fn read_dwarf(obj_file: &object::File<'_>, include_erased: bool) -> Result<D
     }
 }
 
-pub fn read_dwarf_elf(data: &[u8]) -> Result<DwarfInfo> {
-    dwarf2::read_dwarf2_elf(data)
-}
+pub fn read_dwarf_elf(data: &[u8]) -> Result<DwarfInfo> { dwarf2::read_dwarf2_elf(data) }
 
 pub fn parse_producer(producer: &str) -> Producer {
     match producer {
@@ -1411,15 +1409,7 @@ fn process_structure_member_tag(info: &DwarfInfo, tag: &Tag) -> Result<Structure
         _ => bail!("Mismatched bit attributes in Member: {tag:?}"),
     };
     let visibility = visibility.unwrap_or(Visibility::Public);
-    Ok(StructureMember {
-        name,
-        kind,
-        offset,
-        bit,
-        visibility,
-        byte_size,
-        decl: tag.decl.clone(),
-    })
+    Ok(StructureMember { name, kind, offset, bit, visibility, byte_size, decl: tag.decl.clone() })
 }
 
 fn process_structure_tag(info: &DwarfInfo, tag: &Tag) -> Result<StructureType> {
@@ -1669,7 +1659,9 @@ fn process_subrange_tag(info: &DwarfInfo, tag: &Tag) -> Result<ArrayDimension> {
             (AttributeKind::Sibling, _) => {}
             (AttributeKind::DwAtType, _) => index_type = Some(process_type(info, attr)?),
             (AttributeKind::DwLowerBound, AttributeValue::Udata(value)) => low_bound = *value,
-            (AttributeKind::DwUpperBound, AttributeValue::Udata(value)) => upper_bound = Some(*value),
+            (AttributeKind::DwUpperBound, AttributeValue::Udata(value)) => {
+                upper_bound = Some(*value)
+            }
             (AttributeKind::DwCount, AttributeValue::Udata(value)) => count = Some(*value),
             _ => bail!("Unhandled subrange attribute {:?}", attr),
         }
@@ -1688,10 +1680,8 @@ fn process_subrange_tag(info: &DwarfInfo, tag: &Tag) -> Result<ArrayDimension> {
     };
 
     Ok(ArrayDimension {
-        index_type: index_type.unwrap_or(Type {
-            kind: TypeKind::Fundamental(FundType::Integer),
-            modifiers: vec![],
-        }),
+        index_type: index_type
+            .unwrap_or(Type { kind: TypeKind::Fundamental(FundType::Integer), modifiers: vec![] }),
         size,
     })
 }
@@ -1708,9 +1698,7 @@ fn process_enumerator_tag(tag: &Tag) -> Result<EnumerationMember> {
             (AttributeKind::DwConstValue, AttributeValue::Udata(v)) => {
                 value = Some(i64::try_from(*v).context("Enumerator value exceeds i64 range")?)
             }
-            (AttributeKind::DwConstValue, AttributeValue::Sdata(v)) => {
-                value = Some(*v)
-            }
+            (AttributeKind::DwConstValue, AttributeValue::Sdata(v)) => value = Some(*v),
             _ => bail!("Unhandled enumerator attribute {:?}", attr),
         }
     }
@@ -2661,7 +2649,9 @@ pub fn process_type(info: &DwarfInfo, attr: &Attribute) -> Result<Type> {
             let modifiers = process_modifiers(&ops[..ops.len() - 4])?;
             Ok(Type { kind: type_kind_from_ref(info, ud_ref), modifiers })
         }
-        (AttributeKind::DwAtType, &AttributeValue::Reference(key)) => resolve_dwarf2_type(info, key),
+        (AttributeKind::DwAtType, &AttributeValue::Reference(key)) => {
+            resolve_dwarf2_type(info, key)
+        }
         _ => Err(anyhow!("Invalid type attribute {:?}", attr)),
     }
 }
@@ -2717,7 +2707,8 @@ fn resolve_dwarf2_type(info: &DwarfInfo, key: u32) -> Result<Type> {
 }
 
 pub fn resolve_typedef_target_type(info: &DwarfInfo, key: u32) -> Result<Type> {
-    let mut current = info.tags.get(&key).ok_or_else(|| anyhow!("Failed to locate typedef tag {key}"))?;
+    let mut current =
+        info.tags.get(&key).ok_or_else(|| anyhow!("Failed to locate typedef tag {key}"))?;
     loop {
         ensure!(current.kind == TagKind::Typedef, "tag {} is not a typedef", current.key);
         if let Some(type_attr) = current.type_attribute() {
@@ -2966,10 +2957,8 @@ pub fn process_typedef_tag(info: &DwarfInfo, tag: &Tag) -> Result<TypedefTag> {
     }
 
     let name = name.ok_or_else(|| anyhow!("Typedef without Name: {:?}", tag))?;
-    let kind = kind.unwrap_or(Type {
-        kind: TypeKind::Fundamental(FundType::Void),
-        modifiers: vec![],
-    });
+    let kind =
+        kind.unwrap_or(Type { kind: TypeKind::Fundamental(FundType::Void), modifiers: vec![] });
     Ok(TypedefTag { name, kind, decl: tag.decl.clone() })
 }
 

@@ -46,12 +46,14 @@ pub fn read_dwarf2_info(obj_file: &object::File<'_>) -> Result<DwarfInfo> {
     while let Some(header) = units.next()? {
         let unit = dwarf.unit(header)?;
         let decl_files = build_decl_files(&unit)?;
+        let line_decls = build_line_decl_map(&unit)?;
         let mut builder = UnitBuilder {
             dwarf: &dwarf,
             unit: &unit,
             info: &mut info,
             namespace_stack: Vec::new(),
             decl_files,
+            line_decls,
             children: BTreeMap::new(),
             roots: Vec::new(),
         };
@@ -83,12 +85,14 @@ pub fn read_dwarf2_elf(elf: &[u8]) -> Result<DwarfInfo> {
     while let Some(header) = units.next()? {
         let unit = dwarf.unit(header)?;
         let decl_files = build_decl_files(&unit)?;
+        let line_decls = build_line_decl_map(&unit)?;
         let mut builder = UnitBuilder {
             dwarf: &dwarf,
             unit: &unit,
             info: &mut info,
             namespace_stack: Vec::new(),
             decl_files,
+            line_decls,
             children: BTreeMap::new(),
             roots: Vec::new(),
         };
@@ -190,6 +194,7 @@ struct UnitBuilder<'a, 'input> {
     info: &'a mut DwarfInfo,
     namespace_stack: Vec<String>,
     decl_files: Vec<String>,
+    line_decls: BTreeMap<u32, DeclCoord>,
     children: BTreeMap<u32, Vec<u32>>,
     roots: Vec<u32>,
 }
@@ -241,19 +246,16 @@ impl<'a, 'input> UnitBuilder<'a, 'input> {
         }
         let attrs = self.translate_attrs(entry)?;
         let decl = self.translate_decl(entry)?;
-        self.info.tags.insert(
+        self.info.tags.insert(key, Tag {
             key,
-            Tag {
-                key,
-                kind,
-                is_erased: false,
-                is_erased_root: false,
-                data_endian: self.info.e,
-                attributes: attrs,
-                decl,
-                child_keys: Vec::new(),
-            },
-        );
+            kind,
+            is_erased: false,
+            is_erased_root: false,
+            data_endian: self.info.e,
+            attributes: attrs,
+            decl,
+            child_keys: Vec::new(),
+        });
         if let Some(parent) = parent {
             self.children.entry(parent).or_default().push(key);
             if let Some(parent_tag) = self.info.tags.get_mut(&parent) {
@@ -297,12 +299,7 @@ impl<'a, 'input> UnitBuilder<'a, 'input> {
 
     fn key_for_entry(
         &self,
-        entry: &gimli::DebuggingInformationEntry<
-            '_,
-            '_,
-            EndianSlice<'input, RunTimeEndian>,
-            usize,
-        >,
+        entry: &gimli::DebuggingInformationEntry<'_, '_, EndianSlice<'input, RunTimeEndian>, usize>,
     ) -> Result<u32> {
         let offset = entry
             .offset()
@@ -313,12 +310,7 @@ impl<'a, 'input> UnitBuilder<'a, 'input> {
 
     fn translate_attrs(
         &self,
-        entry: &gimli::DebuggingInformationEntry<
-            '_,
-            '_,
-            EndianSlice<'input, RunTimeEndian>,
-            usize,
-        >,
+        entry: &gimli::DebuggingInformationEntry<'_, '_, EndianSlice<'input, RunTimeEndian>, usize>,
     ) -> Result<Vec<Attribute>> {
         let mut out = Vec::new();
         let mut attrs = entry.attrs();
@@ -378,12 +370,10 @@ impl<'a, 'input> UnitBuilder<'a, 'input> {
                     kind: AttributeKind::ContainingType,
                     value: AttributeValue::Reference(self.debug_info_ref(value)?),
                 }),
-                gimli::DW_AT_MIPS_linkage_name | gimli::DW_AT_linkage_name => {
-                    out.push(Attribute {
-                        kind: AttributeKind::MwMangled,
-                        value: AttributeValue::String(self.attr_string(value)?),
-                    })
-                }
+                gimli::DW_AT_MIPS_linkage_name | gimli::DW_AT_linkage_name => out.push(Attribute {
+                    kind: AttributeKind::MwMangled,
+                    value: AttributeValue::String(self.attr_string(value)?),
+                }),
                 gimli::DW_AT_prototyped => out.push(Attribute {
                     kind: AttributeKind::Prototyped,
                     value: AttributeValue::Flag(as_flag(value)?),
@@ -459,12 +449,7 @@ impl<'a, 'input> UnitBuilder<'a, 'input> {
 
     fn translate_decl(
         &self,
-        entry: &gimli::DebuggingInformationEntry<
-            '_,
-            '_,
-            EndianSlice<'input, RunTimeEndian>,
-            usize,
-        >,
+        entry: &gimli::DebuggingInformationEntry<'_, '_, EndianSlice<'input, RunTimeEndian>, usize>,
     ) -> Result<Option<DeclCoord>> {
         let file = match entry.attr_value(gimli::DW_AT_decl_file)? {
             Some(value) => {
@@ -477,20 +462,24 @@ impl<'a, 'input> UnitBuilder<'a, 'input> {
             Some(value) => Some(u32::try_from(as_u64(value)?)?),
             None => None,
         };
-        Ok(match (file, line) {
-            (Some(file), Some(line)) => Some(DeclCoord { file, line }),
-            _ => None,
-        })
+        if let (Some(file), Some(line)) = (file, line) {
+            return Ok(Some(DeclCoord { file, line }));
+        }
+
+        if entry.tag() != gimli::DW_TAG_subprogram {
+            return Ok(None);
+        }
+
+        let Some(low_pc) = entry.attr_value(gimli::DW_AT_low_pc)? else {
+            return Ok(None);
+        };
+        let low_pc = as_u32(low_pc)?;
+        Ok(self.line_decls.get(&low_pc).cloned())
     }
 
     fn entry_name(
         &self,
-        entry: &gimli::DebuggingInformationEntry<
-            '_,
-            '_,
-            EndianSlice<'input, RunTimeEndian>,
-            usize,
-        >,
+        entry: &gimli::DebuggingInformationEntry<'_, '_, EndianSlice<'input, RunTimeEndian>, usize>,
     ) -> Result<Option<String>> {
         match entry.attr_value(gimli::DW_AT_name)? {
             Some(value) => Ok(Some(self.attr_string(value)?)),
@@ -597,6 +586,78 @@ fn build_decl_files(unit: &Unit<EndianSlice<'_, RunTimeEndian>>) -> Result<Vec<S
     Ok(files)
 }
 
+fn build_line_decl_map(
+    unit: &Unit<EndianSlice<'_, RunTimeEndian>>,
+) -> Result<BTreeMap<u32, DeclCoord>> {
+    let Some(program) = unit.line_program.clone() else {
+        return Ok(BTreeMap::new());
+    };
+    let mut out = BTreeMap::new();
+    let mut rows = program.rows();
+    while let Some((header, row)) = rows.next_row()? {
+        if row.end_sequence() {
+            continue;
+        }
+        let Ok(address) = u32::try_from(row.address()) else {
+            continue;
+        };
+        let Some(line) = row.line().and_then(|line| u32::try_from(line.get()).ok()) else {
+            continue;
+        };
+        let Some(file) = row.file(header) else {
+            continue;
+        };
+        let file = line_file_path(header, file)?;
+        let decl = DeclCoord { file, line };
+        match out.get(&address) {
+            Some(existing) if line_decl_preference(existing, &decl).is_gt() => {}
+            _ => {
+                out.insert(address, decl);
+            }
+        }
+    }
+    Ok(out)
+}
+
+fn line_file_path<R: Reader>(
+    header: &gimli::LineProgramHeader<R>,
+    file: &gimli::FileEntry<R>,
+) -> Result<String> {
+    let path = attr_value_string(file.path_name())?;
+    let full = if is_absolute_path(&path) {
+        normalize_path(path)
+    } else if let Some(dir) = file.directory(header) {
+        let dir = attr_value_string(dir)?;
+        if dir.is_empty() { normalize_path(path) } else { normalize_path(format!("{dir}/{path}")) }
+    } else {
+        normalize_path(path)
+    };
+    Ok(full)
+}
+
+fn line_decl_preference(existing: &DeclCoord, candidate: &DeclCoord) -> std::cmp::Ordering {
+    line_decl_score(existing).cmp(&line_decl_score(candidate))
+}
+
+fn line_decl_score(decl: &DeclCoord) -> u8 {
+    let file = decl.file.to_ascii_lowercase();
+    if file.ends_with(".c")
+        || file.ends_with(".cc")
+        || file.ends_with(".cpp")
+        || file.ends_with(".cxx")
+    {
+        2
+    } else if file.ends_with(".h")
+        || file.ends_with(".hh")
+        || file.ends_with(".hpp")
+        || file.ends_with(".hxx")
+    {
+        0
+    } else {
+        1
+    }
+}
+
 fn attr_value_string<R: Reader>(value: gimli::AttributeValue<R>) -> Result<String> {
     match value {
         gimli::AttributeValue::String(reader) => Ok(reader.to_string_lossy()?.into_owned()),
@@ -656,8 +717,14 @@ fn translate_scalar<R: Reader>(value: gimli::AttributeValue<R>) -> Result<Attrib
             let bytes = reader.to_slice()?;
             match bytes.len() {
                 1 => AttributeValue::Udata(u64::from(bytes[0])),
-                2 => AttributeValue::Udata(u64::from(u16::from_bytes(bytes[..2].try_into()?, Endian::Big))),
-                4 => AttributeValue::Udata(u64::from(u32::from_bytes(bytes[..4].try_into()?, Endian::Big))),
+                2 => AttributeValue::Udata(u64::from(u16::from_bytes(
+                    bytes[..2].try_into()?,
+                    Endian::Big,
+                ))),
+                4 => AttributeValue::Udata(u64::from(u32::from_bytes(
+                    bytes[..4].try_into()?,
+                    Endian::Big,
+                ))),
                 8 => AttributeValue::Udata(u64::from_bytes(bytes[..8].try_into()?, Endian::Big)),
                 _ => bail!("Unhandled block scalar length {}", bytes.len()),
             }

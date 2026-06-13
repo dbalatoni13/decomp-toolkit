@@ -17,11 +17,7 @@ fn decl_comment(decl: &Option<DeclCoord>) -> Option<String> {
     decl.as_ref().map(|decl| format!("// Decl: {}:{}", decl.file, decl.line))
 }
 
-fn typedef_name(
-    typedefs: &TypedefMap,
-    t: &Type,
-    exclude_name: Option<&str>,
-) -> Option<String> {
+fn typedef_name(typedefs: &TypedefMap, t: &Type, exclude_name: Option<&str>) -> Option<String> {
     let _ = (typedefs, t, exclude_name);
     None
 }
@@ -35,13 +31,12 @@ fn extend_typedefs(typedefs: &TypedefMap, new_typedefs: &[TypedefTag]) -> Typede
 }
 
 fn tag_name_or_udt_name(info: &DwarfInfo, key: u32) -> Result<String> {
-    if let Some(name) = info.tags.get(&key).and_then(|tag| tag.string_attribute(AttributeKind::Name))
+    if let Some(name) =
+        info.tags.get(&key).and_then(|tag| tag.string_attribute(AttributeKind::Name))
     {
         return Ok(name.clone());
     }
-    get_udt_by_key(info, key)?
-        .name()
-        .ok_or_else(|| anyhow!("tag {} has no usable type name", key))
+    get_udt_by_key(info, key)?.name().ok_or_else(|| anyhow!("tag {} has no usable type name", key))
 }
 
 pub fn apply_modifiers(mut str: TypeString, modifiers: &[Modifier]) -> Result<TypeString> {
@@ -138,24 +133,20 @@ fn type_string_impl(
             TypeString { prefix: ft.name()?.to_string(), ..Default::default() }
         }
         TypeKind::Typedef(key) => {
-            let tag = info
-                .tags
-                .get(&key)
-                .ok_or_else(|| anyhow!("Failed to locate typedef {}", key))?;
+            let tag =
+                info.tags.get(&key).ok_or_else(|| anyhow!("Failed to locate typedef {}", key))?;
             let name = tag
                 .string_attribute(AttributeKind::Name)
                 .ok_or_else(|| anyhow!("typedef without name"))?;
             TypeString { prefix: name.clone(), ..Default::default() }
         }
-        TypeKind::UserDefined(key) => {
-            ud_type_string(
-                info,
-                typedefs,
-                &get_udt_by_key(info, key)?,
-                true,
-                include_anonymous_def,
-            )?
-        }
+        TypeKind::UserDefined(key) => ud_type_string(
+            info,
+            typedefs,
+            &get_udt_by_key(info, key)?,
+            true,
+            include_anonymous_def,
+        )?,
     };
     apply_modifiers(str, &t.modifiers)
 }
@@ -805,7 +796,6 @@ pub fn subroutine_def_string(
                 SubroutineNode::Block(block) => {
                     subroutine_block_string(info, &scoped_typedefs, block)?
                 }
-                ,
                 SubroutineNode::Inline(inline) => {
                     subroutine_def_string(info, &scoped_typedefs, inline, is_erased)?
                 }
@@ -891,7 +881,6 @@ fn subroutine_block_string(
                 SubroutineNode::Block(block) => {
                     subroutine_block_string(info, &scoped_typedefs, block)?
                 }
-                ,
                 SubroutineNode::Inline(inline) => {
                     writeln!(out)?;
                     subroutine_def_string(info, &scoped_typedefs, inline, false)?
@@ -1105,10 +1094,8 @@ pub fn structure_def_string(
     if !t.static_members.is_empty() {
         writeln!(out, "\n    // Static members")?;
         for static_member in &t.static_members {
-            let line = format!(
-                "static {}",
-                variable_string(info, &scoped_typedefs, static_member, true)?
-            );
+            let line =
+                format!("static {}", variable_string(info, &scoped_typedefs, static_member, true)?);
             writeln!(out, "{}", indent_all_by(4, &line))?;
         }
     }
@@ -1293,7 +1280,11 @@ pub fn tag_type_string(
     }
 }
 
-fn typedef_string(info: &DwarfInfo, _typedefs: &TypedefMap, typedef: &TypedefTag) -> Result<String> {
+fn typedef_string(
+    info: &DwarfInfo,
+    _typedefs: &TypedefMap,
+    typedef: &TypedefTag,
+) -> Result<String> {
     let ts = type_string_without_typedefs(info, &typedef.kind, true)?;
     let mut out = format!("typedef {} {}{};", ts.prefix, typedef.name, ts.suffix);
     if let Some(comment) = decl_comment(&typedef.decl) {
