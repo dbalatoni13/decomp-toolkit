@@ -1154,17 +1154,22 @@ pub fn structure_def_string(
     if !t.member_functions.is_empty() {
         writeln!(out, "\n    // Functions")?;
 
-        let len = t.member_functions.len();
-        for (i, member_function) in t.member_functions.iter().enumerate() {
-            writeln!(
-                out,
-                "{}",
-                indent_all_by(
-                    4,
-                    member_subroutine_def_string(info, &scoped_typedefs, member_function)?
-                )
-            )?;
+        let mut rendered_functions: Vec<String> = Vec::new();
+        for member_function in &t.member_functions {
+            let rendered = member_subroutine_def_string(info, &scoped_typedefs, member_function)?;
+            if let Some(key) = destructor_declaration_key(&rendered) {
+                if rendered_functions.iter().any(|existing| {
+                    destructor_declaration_key(existing).as_deref() == Some(key.as_str())
+                }) {
+                    continue;
+                }
+            }
+            rendered_functions.push(rendered);
+        }
 
+        let len = rendered_functions.len();
+        for (i, rendered) in rendered_functions.iter().enumerate() {
+            writeln!(out, "{}", indent_all_by(4, rendered))?;
             if i + 1 < len {
                 writeln!(out)?;
             }
@@ -1543,6 +1548,21 @@ fn qualified_function_owner(name: &str) -> Option<String> {
 
 fn is_destructor_function_name(name: &str) -> bool {
     name.rsplit("::").next().is_some_and(|function| function.starts_with('~'))
+}
+
+fn destructor_declaration_key(rendered: &str) -> Option<String> {
+    let declaration = rendered
+        .lines()
+        .find(|line| !line.trim_start().starts_with("//"))?
+        .trim();
+    let declaration = declaration.strip_prefix("inline ").unwrap_or(declaration);
+    let declaration = declaration.strip_suffix(" override {}").unwrap_or(declaration);
+    let declaration = declaration.strip_suffix(" override;").unwrap_or(declaration);
+    let declaration = declaration.strip_suffix(" {}").unwrap_or(declaration);
+    if !declaration.starts_with('~') {
+        return None;
+    }
+    Some(declaration.strip_suffix(';').unwrap_or(declaration).to_string())
 }
 
 fn strip_function_signature(name: &str) -> String {

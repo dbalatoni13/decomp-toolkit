@@ -1458,7 +1458,6 @@ fn process_structure_tag(info: &DwarfInfo, tag: &Tag) -> Result<StructureType> {
                 None => return Err(anyhow!("Failed to locate function tag {}", function)),
             };
             merge_member_function(
-                info,
                 &mut member_functions,
                 process_member_subroutine_def_tag(info, function_tag)?,
                 false,
@@ -1503,7 +1502,6 @@ fn process_structure_tag(info: &DwarfInfo, tag: &Tag) -> Result<StructureType> {
             }
             TagKind::Subroutine | TagKind::GlobalSubroutine => {
                 merge_member_function(
-                    info,
                     &mut member_functions,
                     process_member_subroutine_def_tag(info, child)?,
                     true,
@@ -1557,13 +1555,12 @@ fn process_structure_tag(info: &DwarfInfo, tag: &Tag) -> Result<StructureType> {
 }
 
 fn merge_member_function(
-    info: &DwarfInfo,
     member_functions: &mut Vec<MemberSubroutineDefType>,
     incoming: MemberSubroutineDefType,
     prefer_incoming_decl: bool,
 ) {
     let Some(existing) =
-        member_functions.iter_mut().find(|existing| member_functions_match(info, existing, &incoming))
+        member_functions.iter_mut().find(|existing| member_functions_match(existing, &incoming))
     else {
         member_functions.push(incoming);
         return;
@@ -1593,13 +1590,9 @@ fn merge_member_function(
 }
 
 fn member_functions_match(
-    info: &DwarfInfo,
     existing: &MemberSubroutineDefType,
     incoming: &MemberSubroutineDefType,
 ) -> bool {
-    if destructor_member_functions_match(info, existing, incoming) {
-        return true;
-    }
     if let (Some(existing), Some(incoming)) = (&existing.mangled_name, &incoming.mangled_name) {
         return existing == incoming;
     }
@@ -1607,48 +1600,10 @@ fn member_functions_match(
         && visible_parameter_count(&existing.parameters) == visible_parameter_count(&incoming.parameters)
 }
 
-fn destructor_member_functions_match(
-    info: &DwarfInfo,
-    existing: &MemberSubroutineDefType,
-    incoming: &MemberSubroutineDefType,
-) -> bool {
-    is_gcc_destructor_member_function(info, existing)
-        && is_gcc_destructor_member_function(info, incoming)
-        && existing.name == incoming.name
-        && existing.member_of == incoming.member_of
-        && existing.direct_member_of == incoming.direct_member_of
-        && visible_destructor_parameter_count(&existing.parameters)
-            == visible_destructor_parameter_count(&incoming.parameters)
-}
-
-fn is_gcc_destructor_member_function(info: &DwarfInfo, function: &MemberSubroutineDefType) -> bool {
-    matches!(function.return_type.kind, TypeKind::Fundamental(FundType::Void))
-        && function.name.as_deref() == member_function_owner_name(info, function).as_deref()
-}
-
-fn member_function_owner_name(
-    info: &DwarfInfo,
-    function: &MemberSubroutineDefType,
-) -> Option<String> {
-    let key = function.direct_member_of.or(function.member_of)?;
-    info.tags
-        .get(&key)
-        .and_then(|tag| tag.string_attribute(AttributeKind::Name))
-        .cloned()
-}
-
 fn visible_parameter_count(parameters: &[SubroutineParameter]) -> usize {
     parameters
         .iter()
         .skip(usize::from(parameters.first().is_some_and(is_implicit_this_parameter)))
-        .count()
-}
-
-fn visible_destructor_parameter_count(parameters: &[SubroutineParameter]) -> usize {
-    parameters
-        .iter()
-        .skip(usize::from(parameters.first().is_some_and(is_implicit_this_parameter)))
-        .filter(|parameter| parameter.name.as_deref() != Some("__in_chrg"))
         .count()
 }
 

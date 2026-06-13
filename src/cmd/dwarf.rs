@@ -121,13 +121,16 @@ fn dump(args: DumpArgs) -> Result<()> {
             let mut data = vec![0u8; e.header().size() as usize];
             e.read_exact(&mut data)?;
             let obj_file = object::read::File::parse(&*data)?;
-            let debug_section = match obj_file.section_by_name(".debug") {
+            let debug_section = match obj_file
+                .section_by_name(".debug")
+                .or_else(|| obj_file.section_by_name(".debug_info"))
+            {
                 Some(section) => {
                     log::info!("Processing '{}'", name);
                     section
                 }
                 None => {
-                    log::warn!("Object '{}' missing .debug section", name);
+                    log::warn!("Object '{}' missing DWARF debug section", name);
                     continue;
                 }
             };
