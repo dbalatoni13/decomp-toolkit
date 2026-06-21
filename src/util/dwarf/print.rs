@@ -531,10 +531,10 @@ fn member_subroutine_def_string(
         if let Producer::GCC = info.producer {
             if let Some(direct_base_name) = direct_base_name_opt.as_deref() {
                 if let Some(name) = t.name.as_ref() {
-                    // in GCC the ctor and dtor are called the same, so we need to check the return value
-                    // this is only for the dtor, the ctor can be left as is
                     if name == direct_base_name {
-                        if let TypeKind::Fundamental(FundType::Void) = t.return_type.kind {
+                        if t.return_type_specified
+                            && matches!(t.return_type.kind, TypeKind::Fundamental(FundType::Void))
+                        {
                             write!(full_written_name, "~{direct_base_name}")?;
                             is_gcc_destructor = true;
                             name_written = true;
@@ -556,7 +556,10 @@ fn member_subroutine_def_string(
                 name_written = true;
                 omit_return_type = true;
             } else if name == base_name {
-                if let TypeKind::Fundamental(FundType::Void) = t.return_type.kind {
+                if info.producer == Producer::GCC && !t.return_type_specified {
+                    write!(full_written_name, "{base_name}")?;
+                    name_written = true;
+                } else if let TypeKind::Fundamental(FundType::Void) = t.return_type.kind {
                     write!(full_written_name, "~{base_name}")?;
                     if let Producer::GCC = info.producer {
                         is_gcc_destructor = true;
@@ -690,10 +693,10 @@ pub fn subroutine_def_string(
                 write!(full_written_name, "{direct_base_name}::")?;
 
                 if let Some(name) = t.name.as_ref() {
-                    // in GCC the ctor and dtor are called the same, so we need to check the return value
-                    // this is only for the dtor, the ctor can be left as is
                     if name == direct_base_name {
-                        if let TypeKind::Fundamental(FundType::Void) = t.return_type.kind {
+                        if t.return_type_specified
+                            && matches!(t.return_type.kind, TypeKind::Fundamental(FundType::Void))
+                        {
                             write!(full_written_name, "~{direct_base_name}")?;
                             is_gcc_destructor = true;
                             name_written = true;
@@ -723,7 +726,10 @@ pub fn subroutine_def_string(
                 name_written = true;
                 omit_return_type = true;
             } else if name == base_name {
-                if let TypeKind::Fundamental(FundType::Void) = t.return_type.kind {
+                if info.producer == Producer::GCC && !t.return_type_specified {
+                    write!(full_written_name, "{base_name}")?;
+                    name_written = true;
+                } else if let TypeKind::Fundamental(FundType::Void) = t.return_type.kind {
                     write!(full_written_name, "~{base_name}")?;
                     if let Producer::GCC = info.producer {
                         is_gcc_destructor = true;

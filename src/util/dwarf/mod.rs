@@ -942,6 +942,7 @@ pub struct MemberSubroutineDefType {
     pub name: Option<String>,
     pub mangled_name: Option<String>,
     pub return_type: Type,
+    pub return_type_specified: bool,
     pub parameters: Vec<SubroutineParameter>,
     pub var_args: bool,
     pub prototyped: bool,
@@ -964,6 +965,7 @@ pub struct SubroutineType {
     pub name: Option<String>,
     pub mangled_name: Option<String>,
     pub return_type: Type,
+    pub return_type_specified: bool,
     pub parameters: Vec<SubroutineParameter>,
     pub var_args: bool,
     pub prototyped: bool,
@@ -2023,6 +2025,7 @@ fn process_member_subroutine_def_tag(
     let mut name = None;
     let mut mangled_name = None;
     let mut return_type = None;
+    let mut return_type_specified = false;
     let mut prototyped = false;
     let mut parameters = Vec::new();
     let mut var_args = false;
@@ -2048,7 +2051,10 @@ fn process_member_subroutine_def_tag(
                 | AttributeKind::ModUDType
                 | AttributeKind::DwAtType,
                 _,
-            ) => return_type = Some(process_type(info, attr)?),
+            ) => {
+                return_type = Some(process_type(info, attr)?);
+                return_type_specified = true;
+            }
             (AttributeKind::Prototyped, _) => prototyped = true,
             (AttributeKind::LowPc, &AttributeValue::Address(addr)) => {
                 start_address = Some(addr);
@@ -2109,7 +2115,10 @@ fn process_member_subroutine_def_tag(
                 let spec = process_subroutine_tag(info, spec_tag)?;
                 name = name.or(spec.name);
                 mangled_name = mangled_name.or(spec.mangled_name);
-                return_type = return_type.or(Some(spec.return_type));
+                if return_type.is_none() {
+                    return_type_specified = spec.return_type_specified;
+                    return_type = Some(spec.return_type);
+                }
                 prototyped = prototyped || spec.prototyped;
                 parameters.extend(spec.parameters);
                 var_args = var_args || spec.var_args;
@@ -2181,6 +2190,7 @@ fn process_member_subroutine_def_tag(
         name,
         mangled_name,
         return_type,
+        return_type_specified,
         parameters,
         var_args,
         prototyped,
@@ -2216,6 +2226,7 @@ fn process_subroutine_tag(info: &DwarfInfo, tag: &Tag) -> Result<SubroutineType>
     let mut name = None;
     let mut mangled_name = None;
     let mut return_type = None;
+    let mut return_type_specified = false;
     let mut prototyped = false;
     let mut parameters = Vec::new();
     let mut var_args = false;
@@ -2242,7 +2253,10 @@ fn process_subroutine_tag(info: &DwarfInfo, tag: &Tag) -> Result<SubroutineType>
                 | AttributeKind::ModUDType
                 | AttributeKind::DwAtType,
                 _,
-            ) => return_type = Some(process_type(info, attr)?),
+            ) => {
+                return_type = Some(process_type(info, attr)?);
+                return_type_specified = true;
+            }
             (AttributeKind::Prototyped, _) => prototyped = true,
             (AttributeKind::LowPc, &AttributeValue::Address(addr)) => {
                 start_address = Some(addr);
@@ -2308,7 +2322,10 @@ fn process_subroutine_tag(info: &DwarfInfo, tag: &Tag) -> Result<SubroutineType>
                 let spec = process_subroutine_tag(info, spec_tag)?;
                 name = name.or(spec.name);
                 mangled_name = mangled_name.or(spec.mangled_name);
-                return_type = return_type.or(Some(spec.return_type));
+                if return_type.is_none() {
+                    return_type_specified = spec.return_type_specified;
+                    return_type = Some(spec.return_type);
+                }
                 prototyped = prototyped || spec.prototyped;
                 parameters.extend(spec.parameters);
                 var_args = var_args || spec.var_args;
@@ -2405,6 +2422,7 @@ fn process_subroutine_tag(info: &DwarfInfo, tag: &Tag) -> Result<SubroutineType>
         name,
         mangled_name,
         return_type,
+        return_type_specified,
         parameters,
         var_args,
         prototyped,
