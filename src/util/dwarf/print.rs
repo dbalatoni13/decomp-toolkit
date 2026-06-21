@@ -42,6 +42,7 @@ fn tag_name_or_udt_name(info: &DwarfInfo, key: u32) -> Result<String> {
 
 pub fn apply_modifiers(mut str: TypeString, modifiers: &[Modifier]) -> Result<TypeString> {
     let mut has_pointer = false;
+    let mut last_indirection_is_reference = false;
     for &modifier in modifiers.iter().rev() {
         match modifier {
             Modifier::MwPointerTo | Modifier::PointerTo => {
@@ -56,6 +57,7 @@ pub fn apply_modifiers(mut str: TypeString, modifiers: &[Modifier]) -> Result<Ty
                     str.prefix.push_str(" *");
                 }
                 has_pointer = true;
+                last_indirection_is_reference = false;
             }
             Modifier::ReferenceTo => {
                 if !has_pointer && !str.suffix.is_empty() {
@@ -65,18 +67,19 @@ pub fn apply_modifiers(mut str: TypeString, modifiers: &[Modifier]) -> Result<Ty
                     str.prefix.push_str(" &");
                 }
                 has_pointer = true;
+                last_indirection_is_reference = true;
             }
             Modifier::Const => {
-                if has_pointer {
+                if has_pointer && !last_indirection_is_reference {
                     str.prefix.push_str(" const");
-                } else {
+                } else if !has_pointer {
                     str.prefix.insert_str(0, "const ");
                 }
             }
             Modifier::Volatile => {
-                if has_pointer {
+                if has_pointer && !last_indirection_is_reference {
                     str.prefix.push_str(" volatile");
-                } else {
+                } else if !has_pointer {
                     str.prefix.insert_str(0, "volatile ");
                 }
             }
