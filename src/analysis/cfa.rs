@@ -267,11 +267,9 @@ impl AnalyzerState {
                 slices: None,
             });
         }
-        // Also check the beginning of every code section
-        for (section_index, section) in obj.sections.by_kind(ObjSectionKind::Code) {
-            self.functions
-                .entry(SectionAddress::new(section_index, section.address as u32))
-                .or_default();
+        // Also check the beginning of every logical code range.
+        for (section_index, range) in obj.sections.by_kind_ranges(ObjSectionKind::Code) {
+            self.functions.entry(SectionAddress::new(section_index, range.start)).or_default();
         }
 
         // Process known functions first
@@ -395,7 +393,8 @@ impl AnalyzerState {
     fn try_add_function(&mut self, obj: &ObjInfo, address: SectionAddress) {
         // Only create functions for code sections
         // Some games use branches to data sections to prevent dead stripping (Mario Party)
-        if !matches!(obj.sections.get(address.section), Some(section) if section.kind == ObjSectionKind::Code)
+        if obj.sections.get(address.section).is_none()
+            || obj.sections.kind_at(address) != ObjSectionKind::Code
             // Avoid creating functions in skipped ranges
             || self.in_skipped_range(address)
         {
@@ -475,9 +474,10 @@ impl AnalyzerState {
 
     fn detect_new_functions(&mut self, obj: &ObjInfo) -> Result<bool> {
         let mut new_functions = vec![];
-        for (section_index, section) in obj.sections.by_kind(ObjSectionKind::Code) {
-            let section_start = SectionAddress::new(section_index, section.address as u32);
-            let section_end = section_start + section.size as u32;
+        for (section_index, range) in obj.sections.by_kind_ranges(ObjSectionKind::Code) {
+            let section = &obj.sections[section_index];
+            let section_start = SectionAddress::new(section_index, range.start);
+            let section_end = SectionAddress::new(section_index, range.end);
             let mut iter = self.functions.range(section_start..section_end).peekable();
             loop {
                 match (iter.next(), iter.peek()) {

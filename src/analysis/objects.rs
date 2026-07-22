@@ -1,18 +1,21 @@
 use anyhow::Result;
 
 use crate::{
+    analysis::cfa::SectionAddress,
     obj::{ObjDataKind, ObjInfo, ObjSectionKind, ObjSymbolKind, SymbolIndex},
     util::{config::is_auto_symbol, split::is_linker_generated_label},
 };
 
 pub fn detect_objects(obj: &mut ObjInfo) -> Result<()> {
-    for (section_index, section) in
-        obj.sections.iter_mut().filter(|(_, s)| s.kind != ObjSectionKind::Code)
-    {
-        let section_end = (section.address + section.size) as u32;
-
+    for (section_index, section) in obj.sections.iter() {
         let mut replace_symbols = vec![];
         for (idx, symbol) in obj.symbols.for_section(section_index) {
+            let address = SectionAddress::new(section_index, symbol.address as u32);
+            if obj.sections.kind_at(address) == ObjSectionKind::Code {
+                continue;
+            }
+            let (_, logical_range) = obj.sections.kind_range_at(address);
+            let section_end = logical_range.end;
             let mut symbol = symbol.clone();
             if is_linker_generated_label(&symbol.name) || symbol.name.starts_with("..") {
                 continue;
@@ -29,7 +32,8 @@ pub fn detect_objects(obj: &mut ObjInfo) -> Result<()> {
                     .symbols
                     .for_section_range(section_index, symbol.address as u32 + 1..)
                     .next()
-                    .map_or(section_end, |(_, symbol)| symbol.address as u32);
+                    .map_or(section_end, |(_, symbol)| symbol.address as u32)
+                    .min(section_end);
                 let new_size = next_addr - symbol.address as u32;
                 log::debug!("Guessed {} size {:#X}", symbol.name, new_size);
                 symbol.size = match (new_size, expected_size) {
@@ -65,11 +69,7 @@ pub fn detect_objects(obj: &mut ObjInfo) -> Result<()> {
 
 pub fn detect_strings(obj: &mut ObjInfo) -> Result<()> {
     let mut symbols_set = Vec::<(SymbolIndex, ObjDataKind, usize)>::new();
-    for (section_index, section) in obj
-        .sections
-        .iter()
-        .filter(|(_, s)| matches!(s.kind, ObjSectionKind::Data | ObjSectionKind::ReadOnlyData))
-    {
+    for (section_index, section) in obj.sections.iter() {
         enum StringResult {
             None,
             String { length: usize, terminated: bool },
@@ -122,6 +122,12 @@ pub fn detect_strings(obj: &mut ObjInfo) -> Result<()> {
         for (symbol_idx, symbol) in obj
             .symbols
             .for_section(section_index)
+            .filter(|(_, symbol)| {
+                matches!(
+                    obj.sections.kind_at(SectionAddress::new(section_index, symbol.address as u32)),
+                    ObjSectionKind::Data | ObjSectionKind::ReadOnlyData
+                )
+            })
             .filter(|(_, sym)| sym.data_kind == ObjDataKind::Unknown)
         {
             if symbol.name.starts_with("@stringBase") {

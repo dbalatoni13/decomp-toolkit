@@ -75,12 +75,16 @@ const SLEDS: [([u8; 8], &str, &str, u32, u32, u32); 6] = [
 // Runtime.PPCEABI.H.a runtime.c
 impl AnalysisPass for FindSaveRestSleds {
     fn execute(state: &mut AnalyzerState, obj: &ObjInfo) -> Result<()> {
-        for (section_index, section) in obj.sections.by_kind(ObjSectionKind::Code) {
+        for (section_index, range) in obj.sections.by_kind_ranges(ObjSectionKind::Code) {
+            let section = &obj.sections[section_index];
+            let start_offset = (range.start as u64 - section.address) as usize;
+            let end_offset = (range.end as u64 - section.address) as usize;
+            let range_data = &section.data[start_offset..end_offset];
             for (needle, func, label, reg_start, reg_end, step_size) in SLEDS {
-                let Some(pos) = memmem::find(&section.data, &needle) else {
+                let Some(pos) = memmem::find(range_data, &needle) else {
                     continue;
                 };
-                let start = SectionAddress::new(section_index, section.address as u32 + pos as u32);
+                let start = SectionAddress::new(section_index, range.start + pos as u32);
                 log::debug!("Found {} @ {:#010X}", func, start);
                 let sled_size = (reg_end - reg_start) * step_size + 4 /* blr */;
                 state.functions.insert(start, FunctionInfo {
@@ -150,14 +154,15 @@ impl AnalysisPass for FindRelCtorsDtors {
                         && reloc.address == current_address
                         && reloc.kind == ObjRelocKind::Absolute
                 }) {
-                    let Some((target_section_index, target_section)) =
+                    let Some((target_section_index, _target_section)) =
                         obj.sections.iter().find(|(_, section)| {
                             section.elf_index == reloc.target_section as SectionIndex
                         })
                     else {
                         return false;
                     };
-                    if target_section.kind != ObjSectionKind::Code
+                    if obj.sections.kind_at(SectionAddress::new(target_section_index, reloc.addend))
+                        != ObjSectionKind::Code
                         || !state
                             .functions
                             .contains_key(&SectionAddress::new(target_section_index, reloc.addend))

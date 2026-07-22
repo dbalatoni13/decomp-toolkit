@@ -877,9 +877,10 @@ fn add_padding_symbols(obj: &mut ObjInfo) -> Result<()> {
             continue;
         }
 
+        let logical_kind = obj.sections.kind_at(SectionAddress::new(section_index, addr));
         if obj
             .symbols
-            .kind_at_section_address(section_index, addr, match section.kind {
+            .kind_at_section_address(section_index, addr, match logical_kind {
                 ObjSectionKind::Code => ObjSymbolKind::Function,
                 ObjSectionKind::Data => ObjSymbolKind::Object,
                 ObjSectionKind::ReadOnlyData => ObjSymbolKind::Object,
@@ -922,7 +923,7 @@ fn add_padding_symbols(obj: &mut ObjInfo) -> Result<()> {
                 flags: ObjSymbolFlagSet(
                     ObjSymbolFlags::Local | ObjSymbolFlags::Exported | ObjSymbolFlags::NoWrite,
                 ),
-                kind: match section.kind {
+                kind: match logical_kind {
                     ObjSectionKind::Code => ObjSymbolKind::Function,
                     ObjSectionKind::Data | ObjSectionKind::ReadOnlyData | ObjSectionKind::Bss => {
                         ObjSymbolKind::Object
@@ -972,7 +973,8 @@ fn add_padding_symbols(obj: &mut ObjInfo) -> Result<()> {
 
             // Check if symbol is missing data between the end of the symbol and the next symbol
             let symbol_end = (symbol.address + symbol.size) as u32;
-            if !matches!(section.kind, ObjSectionKind::Code | ObjSectionKind::Bss)
+            let gap_kind = obj.sections.kind_at(SectionAddress::new(section_index, symbol_end));
+            if !matches!(gap_kind, ObjSectionKind::Code | ObjSectionKind::Bss)
                 && next_address > symbol_end
             {
                 let data = section.data_range(symbol_end, next_address)?;
@@ -1027,7 +1029,10 @@ fn add_padding_symbols(obj: &mut ObjInfo) -> Result<()> {
                                 | ObjSymbolFlags::Exported
                                 | ObjSymbolFlags::NoWrite,
                         ),
-                        kind: match section.kind {
+                        kind: match obj
+                            .sections
+                            .kind_at(SectionAddress::new(section_index, aligned_end))
+                        {
                             ObjSectionKind::Code => ObjSymbolKind::Function,
                             ObjSectionKind::Data
                             | ObjSectionKind::ReadOnlyData
@@ -1361,6 +1366,18 @@ pub fn split_obj(
             );
 
             let split_end = SectionAddress::new(section_index, split.end);
+            let (split_kind, split_kind_range) = obj.sections.kind_range_at(current_address);
+            ensure!(
+                split_end.address <= split_kind_range.end,
+                "Split {} {} {:#010X}..{:#010X} crosses logical {:?} range {:#010X}..{:#010X}",
+                split.unit,
+                section.name,
+                current_address,
+                split_end,
+                split_kind,
+                split_kind_range.start,
+                split_kind_range.end,
+            );
             let next_addr = split_iter.peek().map(|&(addr, _)| addr).unwrap_or(section_end);
             if next_addr > split_end
                 && section.data_range(split_end.address, next_addr.address)?.iter().any(|&b| b != 0)
@@ -1500,7 +1517,7 @@ pub fn split_obj(
             }
 
             if !split.common {
-                let data = match section.kind {
+                let data = match split_kind {
                     ObjSectionKind::Bss => vec![],
                     _ => section.data[(current_address.address as u64 - section.address) as usize
                         ..(split_end.address as u64 - section.address) as usize]
@@ -1508,7 +1525,7 @@ pub fn split_obj(
                 };
                 split_obj.sections.push(ObjSection {
                     name: split.rename.as_ref().unwrap_or(&section.name).clone(),
-                    kind: section.kind,
+                    kind: split_kind,
                     address: 0,
                     size: split_end.address as u64 - current_address.address as u64,
                     data,

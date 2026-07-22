@@ -20,13 +20,8 @@ impl VisitedAddresses {
     pub fn new(obj: &ObjInfo) -> Self {
         let mut inner = Vec::with_capacity(obj.sections.len() as usize);
         for (_, section) in obj.sections.iter() {
-            if section.kind == ObjSectionKind::Code {
-                let size = (section.size / 4) as usize;
-                inner.push(FixedBitSet::with_capacity(size));
-            } else {
-                // Empty
-                inner.push(FixedBitSet::new())
-            }
+            let size = section.size.div_ceil(4) as usize;
+            inner.push(FixedBitSet::with_capacity(size));
         }
         Self { inner }
     }
@@ -92,7 +87,7 @@ impl Executor {
                 section.address,
                 section.address + section.size
             );
-            if section.kind != ObjSectionKind::Code {
+            if obj.sections.kind_at(state.address) != ObjSectionKind::Code {
                 log::warn!("Attempted to visit non-code address {:#010X}", state.address);
                 continue;
             }
@@ -105,6 +100,12 @@ impl Executor {
 
             let mut block_start = state.address;
             loop {
+                if !section.contains(state.address.address)
+                    || obj.sections.kind_at(state.address) != ObjSectionKind::Code
+                {
+                    // A physical section may contain a logical data range after a code range.
+                    break;
+                }
                 self.visited.insert(section_address, state.address);
 
                 let ins = match disassemble(section, state.address.address) {

@@ -1,6 +1,6 @@
 use std::{
     cmp::min,
-    collections::Bound,
+    collections::{BTreeMap, Bound},
     ops::{Index, IndexMut, Range, RangeBounds},
 };
 
@@ -37,16 +37,25 @@ pub struct ObjSection {
     pub splits: ObjSplits,
 }
 
+#[derive(Debug, Clone, Copy)]
+struct ObjSectionKindRange {
+    end: u32,
+    kind: ObjSectionKind,
+}
+
 #[derive(Debug, Clone)]
 pub struct ObjSections {
     obj_kind: ObjKind,
     sections: Vec<ObjSection>,
+    kind_ranges: BTreeMap<SectionAddress, ObjSectionKindRange>,
 }
 
 pub type SectionIndex = u32;
 
 impl ObjSections {
-    pub fn new(obj_kind: ObjKind, sections: Vec<ObjSection>) -> Self { Self { obj_kind, sections } }
+    pub fn new(obj_kind: ObjKind, sections: Vec<ObjSection>) -> Self {
+        Self { obj_kind, sections, kind_ranges: BTreeMap::new() }
+    }
 
     pub fn iter(&self) -> impl DoubleEndedIterator<Item = (SectionIndex, &ObjSection)> {
         self.sections.iter().enumerate().map(|(i, s)| (i as SectionIndex, s))
@@ -59,6 +68,134 @@ impl ObjSections {
     pub fn len(&self) -> SectionIndex { self.sections.len() as SectionIndex }
 
     pub fn is_empty(&self) -> bool { self.sections.is_empty() }
+
+    /// Adds a logical kind override without changing the physical section name or kind.
+    pub fn add_kind_range(
+        &mut self,
+        section_index: SectionIndex,
+        range: Range<u32>,
+        kind: ObjSectionKind,
+    ) -> Result<()> {
+        let section = self
+            .get(section_index)
+            .ok_or_else(|| anyhow!("Invalid section index {}", section_index))?;
+        ensure!(
+            range.start < range.end,
+            "Invalid empty section range {:#010X}..{:#010X}",
+            range.start,
+            range.end,
+        );
+        ensure!(
+            section.contains_range(range.clone()),
+            "Range {:#010X}..{:#010X} is outside section {} ({:#010X}..{:#010X})",
+            range.start,
+            range.end,
+            section.name,
+            section.address,
+            section.address + section.size,
+        );
+        ensure!(
+            section.kind != ObjSectionKind::Bss || kind == ObjSectionKind::Bss,
+            "Cannot interpret unbacked BSS section {} as {:?}",
+            section.name,
+            kind,
+        );
+        if kind == ObjSectionKind::Code {
+            ensure!(
+                range.start & 3 == 0 && range.end & 3 == 0,
+                "Code range {:#010X}..{:#010X} must be 4-byte aligned",
+                range.start,
+                range.end,
+            );
+        }
+        ensure!(
+            !self.kind_ranges.iter().any(|(start, existing)| {
+                start.section == section_index
+                    && start.address < range.end
+                    && range.start < existing.end
+            }),
+            "Section kind range overlaps an existing range in {}: {:#010X}..{:#010X}",
+            section.name,
+            range.start,
+            range.end,
+        );
+        self.kind_ranges.insert(
+            SectionAddress::new(section_index, range.start),
+            ObjSectionKindRange { end: range.end, kind },
+        );
+        Ok(())
+    }
+
+    /// Returns the logical kind for an address. Falls back to the physical section kind.
+    pub fn kind_at(&self, address: SectionAddress) -> ObjSectionKind {
+        if let Some((start, range)) = self.kind_ranges.range(..=address).next_back()
+            && start.section == address.section
+            && address.address < range.end
+        {
+            return range.kind;
+        }
+        self[address.section].kind
+    }
+
+    /// Returns the full contiguous logical-kind span containing an address.
+    pub fn kind_range_at(&self, address: SectionAddress) -> (ObjSectionKind, Range<u32>) {
+        let section = &self[address.section];
+        let mut start = section.address as u32;
+        let mut end = (section.address + section.size) as u32;
+        let kind = self.kind_at(address);
+        for (range_start, range) in &self.kind_ranges {
+            if range_start.section != address.section {
+                continue;
+            }
+            if range_start.address <= address.address && address.address < range.end {
+                return (range.kind, range_start.address..range.end);
+            }
+            if range.end <= address.address {
+                start = start.max(range.end);
+            } else if range_start.address > address.address {
+                end = end.min(range_start.address);
+                break;
+            }
+        }
+        (kind, start..end)
+    }
+
+    /// Returns all contiguous logical-kind spans for one physical section.
+    pub fn kind_ranges_for_section(
+        &self,
+        section_index: SectionIndex,
+    ) -> Vec<(Range<u32>, ObjSectionKind)> {
+        let section = &self[section_index];
+        let mut boundaries = vec![section.address as u32, (section.address + section.size) as u32];
+        for (start, range) in &self.kind_ranges {
+            if start.section == section_index {
+                boundaries.push(start.address);
+                boundaries.push(range.end);
+            }
+        }
+        boundaries.sort_unstable();
+        boundaries.dedup();
+        boundaries
+            .windows(2)
+            .map(|w| {
+                let range = w[0]..w[1];
+                let kind = self.kind_at(SectionAddress::new(section_index, range.start));
+                (range, kind)
+            })
+            .collect()
+    }
+
+    /// Returns all logical spans of a given kind, preserving section/address order.
+    pub fn by_kind_ranges(&self, kind: ObjSectionKind) -> Vec<(SectionIndex, Range<u32>)> {
+        self.iter()
+            .flat_map(|(index, _)| {
+                self.kind_ranges_for_section(index)
+                    .into_iter()
+                    .filter(move |(_, range_kind)| *range_kind == kind)
+                    .map(move |(range, _)| (index, range))
+            })
+            .collect()
+    }
 
     pub fn next_section_index(&self) -> SectionIndex { self.sections.len() as SectionIndex }
 
@@ -227,6 +364,10 @@ impl ObjSection {
     }
 
     pub fn rename(&mut self, name: String) -> Result<()> {
+        if self.name == name {
+            self.section_known = true;
+            return Ok(());
+        }
         self.kind = section_kind_for_section(&name)?;
         self.name = name;
         self.section_known = true;

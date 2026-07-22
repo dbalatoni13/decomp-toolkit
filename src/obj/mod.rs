@@ -313,25 +313,21 @@ impl ObjInfo {
     /// Calculate the total size of all code sections.
     pub fn code_size(&self) -> u32 {
         self.sections
-            .iter()
-            .filter(|(_, section)| section.kind == ObjSectionKind::Code)
-            .map(|(_, section)| section.size as u32)
+            .by_kind_ranges(ObjSectionKind::Code)
+            .into_iter()
+            .map(|(_, range)| range.end - range.start)
             .sum()
     }
 
     /// Calculate the total size of all data sections, including common BSS symbols.
     pub fn data_size(&self) -> u32 {
-        self.sections
+        let section_size: u32 = self.sections.iter().map(|(_, section)| section.size as u32).sum();
+        let common_size: u32 = self
+            .symbols
             .iter()
-            .filter(|(_, section)| section.kind != ObjSectionKind::Code)
-            .map(|(_, section)| section.size as u32)
-            .chain(
-                // Include common symbols
-                self.symbols
-                    .iter()
-                    .filter(|&(_, symbol)| symbol.flags.is_common())
-                    .map(|(_, s)| s.size as u32),
-            )
-            .sum()
+            .filter(|&(_, symbol)| symbol.flags.is_common())
+            .map(|(_, s)| s.size as u32)
+            .sum();
+        section_size - self.code_size() + common_size
     }
 }

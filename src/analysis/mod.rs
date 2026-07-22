@@ -112,7 +112,7 @@ pub fn read_address(obj: &ObjInfo, section: &ObjSection, address: u32) -> Result
 }
 
 fn is_valid_jump_table_addr(obj: &ObjInfo, addr: SectionAddress) -> bool {
-    !matches!(obj.sections[addr.section].kind, ObjSectionKind::Code | ObjSectionKind::Bss)
+    !matches!(obj.sections.kind_at(addr), ObjSectionKind::Code | ObjSectionKind::Bss)
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

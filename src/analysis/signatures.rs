@@ -418,18 +418,20 @@ pub fn apply_signatures_post(obj: &mut ObjInfo) -> Result<()> {
     for &(_name, sig_str) in POST_SIGNATURES {
         let signatures = parse_signatures(sig_str)?;
         let mut found_signature = None;
-        'outer: for (section_index, section) in obj.sections.by_kind(ObjSectionKind::Code) {
-            for (symbol_index, symbol) in obj
-                .symbols
-                .for_section(section_index)
-                .filter(|(_, sym)| sym.kind == ObjSymbolKind::Function)
+        'outer: for (symbol_index, symbol) in obj.symbols.by_kind(ObjSymbolKind::Function) {
+            let Some(section_index) = symbol.section else {
+                continue;
+            };
+            if obj.sections.kind_at(SectionAddress::new(section_index, symbol.address as u32))
+                != ObjSectionKind::Code
             {
-                if let Some(signature) =
-                    check_signatures(section, symbol.address as u32, &signatures)?
-                {
-                    found_signature = Some((symbol_index, signature));
-                    break 'outer;
-                }
+                continue;
+            }
+            let section = &obj.sections[section_index];
+            if let Some(signature) = check_signatures(section, symbol.address as u32, &signatures)?
+            {
+                found_signature = Some((symbol_index, signature));
+                break 'outer;
             }
         }
         if let Some((symbol_index, signature)) = found_signature {

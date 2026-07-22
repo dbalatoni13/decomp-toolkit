@@ -5,11 +5,12 @@ use std::{
     fs::DirBuilder,
     io::{Cursor, Seek, Write},
     mem::take,
+    ops::Range,
     str::FromStr,
     time::Instant,
 };
 
-use anyhow::{Context, Result, anyhow, bail};
+use anyhow::{Context, Result, anyhow, bail, ensure};
 use argp::FromArgs;
 use cwdemangle::demangle;
 use itertools::Itertools;
@@ -300,6 +301,41 @@ pub struct ModuleConfig {
     pub clean_extab: Option<bool>,
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub skip_cfa_ranges: Vec<SkipCfaRangeConfig>,
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub custom_section_ranges: Vec<CustomSectionRangesConfig>,
+}
+
+#[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
+pub struct CustomSectionRangeConfig {
+    pub start: u32,
+    pub end: u32,
+}
+
+/// Logical interpretation ranges for one physical section.
+/// The physical section name and kind are not changed.
+#[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
+pub struct CustomSectionRangesConfig {
+    pub section: String,
+    #[serde(default)]
+    pub code: Vec<CustomSectionRangeConfig>,
+    #[serde(default)]
+    pub rodata: Vec<CustomSectionRangeConfig>,
+    #[serde(default)]
+    pub data: Vec<CustomSectionRangeConfig>,
+    #[serde(default)]
+    pub bss: Vec<CustomSectionRangeConfig>,
+}
+
+impl CustomSectionRangesConfig {
+    fn ranges(&self) -> Vec<(ObjSectionKind, Range<u32>)> {
+        self.code
+            .iter()
+            .map(|r| (ObjSectionKind::Code, r.start..r.end))
+            .chain(self.rodata.iter().map(|r| (ObjSectionKind::ReadOnlyData, r.start..r.end)))
+            .chain(self.data.iter().map(|r| (ObjSectionKind::Data, r.start..r.end)))
+            .chain(self.bss.iter().map(|r| (ObjSectionKind::Bss, r.start..r.end)))
+            .collect()
+    }
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
@@ -502,7 +538,10 @@ fn apply_selfile(obj: &mut ObjInfo, buf: &[u8]) -> Result<()> {
             (
                 Some(dol_section_index),
                 dol_section.address as u32 + symbol.address as u32,
-                Some(dol_section.kind),
+                Some(obj.sections.kind_at(SectionAddress::new(
+                    dol_section_index,
+                    dol_section.address as u32 + symbol.address as u32,
+                ))),
             )
         };
 
@@ -911,6 +950,9 @@ fn load_analyze_dol(config: &ProjectConfig, object_base: &ObjectBase) -> Result<
         dep.push(map_path);
     }
 
+    apply_custom_section_ranges(&mut obj, &config.base.custom_section_ranges)
+        .context("Applying logical section ranges")?;
+
     let splits_cache = if let Some(splits_path) = &config.base.splits {
         let splits_path = splits_path.with_encoding();
         let cache = apply_splits_file(&splits_path, &mut obj)?;
@@ -1204,6 +1246,10 @@ fn load_analyze_rel(
         verify_hash(data, hash_str)?;
     }
     let (header, mut module_obj) = process_rel(&mut Cursor::new(data), module_config.name())?;
+
+    if !module_config.custom_section_ranges.is_empty() {
+        bail!("custom_section_ranges is currently supported only for executable DOL/ALF objects");
+    }
 
     if let Some(comment_version) = config.mw_comment_version {
         module_obj.mw_comment = Some(MWComment::new(comment_version)?);
@@ -1756,6 +1802,8 @@ fn diff(args: DiffArgs) -> Result<()> {
     let object_base = find_object_base(&config)?;
 
     let (mut obj, _object_path) = load_dol_module(&config.base, &object_base)?;
+    apply_custom_section_ranges(&mut obj, &config.base.custom_section_ranges)
+        .context("Applying logical section ranges")?;
 
     if let Some(symbols_path) = &config.base.symbols {
         apply_symbols_file(&symbols_path.with_encoding(), &mut obj)?;
@@ -1972,6 +2020,8 @@ fn apply(args: ApplyArgs) -> Result<()> {
     let object_base = find_object_base(&config)?;
 
     let (mut obj, _object_path) = load_dol_module(&config.base, &object_base)?;
+    apply_custom_section_ranges(&mut obj, &config.base.custom_section_ranges)
+        .context("Applying logical section ranges")?;
 
     let Some(symbols_path) = &config.base.symbols else {
         bail!("No symbols file specified in config");
@@ -2171,6 +2221,105 @@ fn config(args: ConfigArgs) -> Result<()> {
     let mut out = buf_writer(&args.out_file)?;
     serde_yaml::to_writer(&mut out, &config)?;
     out.flush()?;
+    Ok(())
+}
+
+/// Applies logical range kinds while keeping the physical section intact.
+fn apply_custom_section_ranges(
+    obj: &mut ObjInfo,
+    configs: &[CustomSectionRangesConfig],
+) -> Result<()> {
+    if configs.is_empty() {
+        return Ok(());
+    }
+    ensure!(
+        obj.kind == ObjKind::Executable,
+        "custom_section_ranges is only supported for executable objects"
+    );
+
+    for config in configs {
+        let ranges = config.ranges();
+        ensure!(
+            !ranges.is_empty(),
+            "custom_section_ranges entry for '{}' contains no ranges",
+            config.section
+        );
+
+        let section_index = if let Some((index, _)) = obj.sections.by_name(&config.section)? {
+            index
+        } else {
+            // DOL section names are often unknown before map/split information is applied.
+            // Infer the physical section from the configured address range, but preserve its kind.
+            let first = &ranges[0].1;
+            let (index, _) = obj.sections.at_address(first.start)?;
+            for (_, range) in &ranges {
+                let (range_index, section) = obj.sections.at_address(range.start)?;
+                ensure!(
+                    range_index == index && section.contains_range(range.clone()),
+                    "Range {:#010X}..{:#010X} does not belong to physical section '{}'",
+                    range.start,
+                    range.end,
+                    config.section,
+                );
+            }
+            let section = &mut obj.sections[index];
+            log::debug!("Naming physical section {} as {}", section.name, config.section);
+            section.name.clone_from(&config.section);
+            section.section_known = true;
+            index
+        };
+
+        for (kind, range) in ranges {
+            let section = &obj.sections[section_index];
+            ensure!(
+                section.contains_range(range.clone()),
+                "Range {:#010X}..{:#010X} is outside section '{}' ({:#010X}..{:#010X})",
+                range.start,
+                range.end,
+                config.section,
+                section.address,
+                section.address + section.size,
+            );
+            if kind == ObjSectionKind::Bss && section.kind != ObjSectionKind::Bss {
+                let data = section.data_range(range.start, range.end)?;
+                ensure!(
+                    data.iter().all(|&b| b == 0),
+                    "BSS range {:#010X}..{:#010X} in '{}' contains non-zero file data",
+                    range.start,
+                    range.end,
+                    config.section,
+                );
+            }
+            obj.sections.add_kind_range(section_index, range, kind)?;
+        }
+
+        // A map cannot infer symbol kinds from a custom physical section name. Correct map-loaded
+        // symbols now that the logical ranges are known. symbols.txt, loaded later, may override.
+        let replacements = obj
+            .symbols
+            .for_section(section_index)
+            .filter_map(|(index, symbol)| {
+                if symbol.kind == ObjSymbolKind::Section || symbol.size == 0 {
+                    return None;
+                }
+                let kind =
+                    obj.sections.kind_at(SectionAddress::new(section_index, symbol.address as u32));
+                let symbol_kind = if kind == ObjSectionKind::Code {
+                    ObjSymbolKind::Function
+                } else {
+                    ObjSymbolKind::Object
+                };
+                (symbol.kind != symbol_kind).then(|| {
+                    let mut replacement = symbol.clone();
+                    replacement.kind = symbol_kind;
+                    (index, replacement)
+                })
+            })
+            .collect_vec();
+        for (index, symbol) in replacements {
+            obj.symbols.replace(index, symbol)?;
+        }
+    }
     Ok(())
 }
 
@@ -2413,5 +2562,31 @@ mod test {
         assert!(!symbol_name_fuzzy_eq("symbol@1234", "symbol@5678"));
         assert!(!symbol_name_fuzzy_eq("symbol", "symbol_80123456_"));
         assert!(!symbol_name_fuzzy_eq("symbol_80123456_", "symbol"));
+    }
+
+    #[test]
+    fn test_custom_section_ranges_config() {
+        let config: ProjectConfig = serde_yaml::from_str(
+            r#"
+object: main.dol
+custom_section_ranges:
+  - section: .over
+    code:
+      - start: 0x80010000
+        end: 0x80011000
+    rodata:
+      - start: 0x80011000
+        end: 0x80011800
+    data:
+      - start: 0x80011800
+        end: 0x80012000
+"#,
+        )
+        .unwrap();
+        let ranges = &config.base.custom_section_ranges[0];
+        assert_eq!(ranges.section, ".over");
+        assert_eq!(ranges.code[0].start, 0x80010000);
+        assert_eq!(ranges.rodata[0].end, 0x80011800);
+        assert_eq!(ranges.data[0].end, 0x80012000);
     }
 }

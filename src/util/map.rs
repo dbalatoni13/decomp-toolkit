@@ -791,7 +791,12 @@ pub fn apply_map(mut result: MapInfo, obj: &mut ObjInfo) -> Result<()> {
                     info.size
                 );
             }
-            section.rename(info.name.clone())?;
+            if section.rename(info.name.clone()).is_err() {
+                // Custom physical section. Keep the loader-provided physical kind; logical
+                // interpretation may be supplied by config.yml custom_section_ranges.
+                section.name.clone_from(&info.name);
+                section.section_known = true;
+            }
         } else {
             log::warn!("Section {} @ {:#010X} not found in map", section.name, section.address);
             if obj.kind == ObjKind::Relocatable {
