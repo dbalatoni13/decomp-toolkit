@@ -301,7 +301,7 @@ pub struct ModuleConfig {
     pub clean_extab: Option<bool>,
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub skip_cfa_ranges: Vec<SkipCfaRangeConfig>,
-    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    #[serde(default, alias = "section_ranges", skip_serializing_if = "Vec::is_empty")]
     pub custom_section_ranges: Vec<CustomSectionRangesConfig>,
 }
 
@@ -316,7 +316,7 @@ pub struct CustomSectionRangeConfig {
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
 pub struct CustomSectionRangesConfig {
     pub section: String,
-    #[serde(default)]
+    #[serde(default, alias = "text")]
     pub code: Vec<CustomSectionRangeConfig>,
     #[serde(default)]
     pub rodata: Vec<CustomSectionRangeConfig>,

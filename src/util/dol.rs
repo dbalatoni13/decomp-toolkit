@@ -42,7 +42,8 @@ pub trait DolLike {
     fn section_by_address(&self, addr: u32) -> Option<&DolSection> {
         self.sections()
             .iter()
-            .find(|section| addr >= section.address && addr < section.address + section.size)
+            .filter(|section| addr >= section.address && addr < section.address + section.size)
+            .max_by_key(|section| section.address)
     }
 
     fn virtual_data_at<'a>(&self, buf: &'a [u8], addr: u32, size: u32) -> Result<&'a [u8]> {
@@ -100,15 +101,11 @@ impl FromReader for DolFile {
             if size == 0 {
                 continue;
             }
-            let mut changed_size = size;
-            if changed_size == 0x3A0D20 {
-                changed_size = 0x3A0D18;
-            }
             sections.push(DolSection {
                 address: header.text_addrs[idx],
                 file_offset: header.text_offs[idx],
-                data_size: changed_size,
-                size: changed_size,
+                data_size: size,
+                size,
                 kind: DolSectionKind::Text,
                 index: sections.len() as SectionIndex,
             });
@@ -126,6 +123,7 @@ impl FromReader for DolFile {
                 index: sections.len() as SectionIndex,
             });
         }
+        normalize_overlapping_dol_sections(&mut sections);
         sections.push(DolSection {
             address: header.bss_addr,
             file_offset: 0,
@@ -135,6 +133,33 @@ impl FromReader for DolFile {
             index: sections.len() as SectionIndex,
         });
         Ok(Self { header, sections })
+    }
+}
+
+/// DOL section sizes are sometimes rounded up even when the next section starts inside that
+/// padded range. ObjInfo requires unambiguous virtual address ranges, so trim the earlier
+/// file-backed section at the next section's start while leaving the original header untouched.
+fn normalize_overlapping_dol_sections(sections: &mut [DolSection]) {
+    for index in 0..sections.len() {
+        let section_start = sections[index].address;
+        let section_end = section_start.saturating_add(sections[index].size);
+        let next_start = sections
+            .iter()
+            .filter(|other| other.address > section_start && other.address < section_end)
+            .map(|other| other.address)
+            .min();
+        if let Some(next_start) = next_start {
+            let new_size = next_start - section_start;
+            log::warn!(
+                "DOL section {} range {:#010X}..{:#010X} overlaps the next section; trimming to {:#010X}",
+                sections[index].index,
+                section_start,
+                section_end,
+                next_start,
+            );
+            sections[index].size = new_size;
+            sections[index].data_size = sections[index].data_size.min(new_size);
+        }
     }
 }
 
@@ -798,6 +823,39 @@ fn rename_section(
     section.kind = kind;
     section.section_known = true;
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn normalizes_overlapping_file_backed_sections() {
+        let mut sections = vec![
+            DolSection {
+                address: 0x8000_0000,
+                file_offset: 0x100,
+                data_size: 0x120,
+                size: 0x120,
+                kind: DolSectionKind::Text,
+                index: 0,
+            },
+            DolSection {
+                address: 0x8000_0118,
+                file_offset: 0x220,
+                data_size: 0x40,
+                size: 0x40,
+                kind: DolSectionKind::Text,
+                index: 1,
+            },
+        ];
+
+        normalize_overlapping_dol_sections(&mut sections);
+
+        assert_eq!(sections[0].size, 0x118);
+        assert_eq!(sections[0].data_size, 0x118);
+        assert_eq!(sections[1].size, 0x40);
+    }
 }
 
 fn locate_text(obj: &mut ObjInfo) -> Result<()> {
