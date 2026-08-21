@@ -825,7 +825,7 @@ pub struct SubroutineVariable {
 #[derive(Debug, Clone)]
 pub struct SubroutineLabel {
     pub name: String,
-    pub address: u32,
+    pub address: Option<u32>,
 }
 
 #[derive(Debug, Clone)]
@@ -2015,6 +2015,15 @@ fn process_subroutine_label_tag(info: &DwarfInfo, tag: &Tag) -> Result<Subroutin
             (AttributeKind::Sibling, _) => {}
             (AttributeKind::Name, AttributeValue::String(s)) => name = Some(s.clone()),
             (AttributeKind::LowPc, &AttributeValue::Address(addr)) => address = Some(addr),
+            (AttributeKind::Specification, &AttributeValue::Reference(key)) => {
+                let spec_tag = info
+                    .tags
+                    .get(&key)
+                    .ok_or_else(|| anyhow!("Failed to locate specification tag {}", key))?;
+                let spec = process_subroutine_label_tag(info, spec_tag)?;
+                name = name.or(Some(spec.name));
+                address = address.or(spec.address);
+            }
             _ => bail!("Unhandled Label attribute {:?}", attr),
         }
     }
@@ -2024,7 +2033,6 @@ fn process_subroutine_label_tag(info: &DwarfInfo, tag: &Tag) -> Result<Subroutin
     }
 
     let name = name.ok_or_else(|| anyhow!("Label without name: {:?}", tag))?;
-    let address = address.ok_or_else(|| anyhow!("Label without address: {:?}", tag))?;
     Ok(SubroutineLabel { name, address })
 }
 

@@ -721,7 +721,11 @@ pub fn subroutine_def_string(
     if !t.labels.is_empty() {
         writeln!(out, "\n    // Labels")?;
         for label in &t.labels {
-            writeln!(out, "    {}: // {:#X}", label.name, label.address)?;
+            if let Some(address) = label.address {
+                writeln!(out, "    {}: // {address:#X}", label.name)?;
+            } else {
+                writeln!(out, "    {}:", label.name)?;
+            }
         }
     }
 
