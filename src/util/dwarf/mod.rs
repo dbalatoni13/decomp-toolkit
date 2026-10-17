@@ -1031,6 +1031,10 @@ pub enum Language {
     Fortran90 = 0x8,
     Pascal83 = 0x9,
     Modula2 = 0xa,
+    C99 = 0xc,
+    CPlusPlus11 = 0x1a,
+    C11 = 0x1d,
+    CPlusPlus14 = 0x21,
     // MWCC asm extension, emitted by PS2 MWCC asm_r5900_elf.dll
     MwAsm = 0x8000,
 }
@@ -1048,8 +1052,24 @@ impl Display for Language {
             Language::Fortran90 => write!(f, "Fortran90"),
             Language::Pascal83 => write!(f, "Pascal83"),
             Language::Modula2 => write!(f, "Modula2"),
+            Language::C99 => write!(f, "C99"),
+            Language::CPlusPlus11 => write!(f, "C++11"),
+            Language::C11 => write!(f, "C11"),
+            Language::CPlusPlus14 => write!(f, "C++14"),
             Language::MwAsm => write!(f, "MwAsm"),
         }
+    }
+}
+
+#[cfg(test)]
+mod dwarf_language_tests {
+    use super::Language;
+    use num_enum::TryFromPrimitive;
+
+    #[test]
+    fn recognizes_gcc_dwarf2_language_and_handles_unknown_extensions() {
+        assert_eq!(Language::try_from_primitive(0x0c).ok(), Some(Language::C99));
+        assert!(Language::try_from_primitive(0xffff).ok().is_none());
     }
 }
 
@@ -2800,7 +2820,10 @@ pub fn process_compile_unit(tag: &Tag) -> Result<CompileUnit> {
             (AttributeKind::Producer, AttributeValue::String(s)) => producer = Some(s.clone()),
             (AttributeKind::CompDir, AttributeValue::String(s)) => comp_dir = Some(s.clone()),
             (AttributeKind::Language, &AttributeValue::Data4(value)) => {
-                language = Some(Language::try_from_primitive(value)?)
+                // A newer compiler can encode language identifiers outside the
+                // original DWARF 2 set. Unknown languages must not block the
+                // rest of a compilation unit from being dumped.
+                language = Language::try_from_primitive(value).ok();
             }
             (AttributeKind::LowPc, &AttributeValue::Address(addr)) => start_address = Some(addr),
             (AttributeKind::HighPc, &AttributeValue::Address(addr)) => end_address = Some(addr),

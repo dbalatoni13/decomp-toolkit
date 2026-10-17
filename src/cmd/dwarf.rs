@@ -30,7 +30,7 @@ use crate::{
 };
 
 #[derive(FromArgs, PartialEq, Debug)]
-/// Commands for processing DWARF 1.1 information.
+/// Commands for processing DWARF 1.1 and DWARF 2 information.
 #[argp(subcommand, name = "dwarf")]
 pub struct Args {
     #[argp(subcommand)]
@@ -44,7 +44,7 @@ enum SubCommand {
 }
 
 #[derive(FromArgs, PartialEq, Eq, Debug)]
-/// Dumps DWARF 1.1 info from an object or archive.
+/// Dumps DWARF 1.1/2 from ELFs and DWARF 1.1 from archives.
 #[argp(subcommand, name = "dump")]
 pub struct DumpArgs {
     #[argp(positional, from_str_fn(native_path))]

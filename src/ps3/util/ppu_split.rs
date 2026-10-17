@@ -80,6 +80,69 @@ pub struct ElfProjectConfig {
     pub hash: Option<String>,
 }
 
+/// Fill a missing SHA-1 without rewriting the user's other YAML fields or
+/// comments. Existing non-null hashes are intentionally not refreshed: `verify`
+/// must still detect an input ELF that differs from the project's baseline.
+fn populate_missing_config_hash(
+    config_path: &Utf8NativePath,
+    original_path: &Utf8NativePath,
+    config: &mut ElfProjectConfig,
+) -> Result<()> {
+    if config.hash.is_some() {
+        return Ok(());
+    }
+    let mut input = fs::File::open(original_path)?;
+    let sha1 = crate::cmd::shasum::file_sha1_string(&mut input)?;
+    let contents = fs::read_to_string(config_path)?;
+    let yaml: serde_yaml::Value = serde_yaml::from_str(&contents)?;
+    let has_hash = yaml
+        .as_mapping()
+        .is_some_and(|mapping| mapping.contains_key("hash"));
+
+    let updated = if has_hash {
+        // The hash is present but null (e.g. `hash:` or `hash: null`).
+        // Modify just that line, preserving every other field and comment.
+        let mut found = false;
+        let mut result = String::with_capacity(contents.len() + sha1.len());
+        for line in contents.split_inclusive('\n') {
+            let body = line.trim_end_matches('\n').trim_end_matches('\r');
+            let (key, value) = body.split_once(':').unwrap_or(("", ""));
+            if !found && key.trim() == "hash" && !key.starts_with([' ', '\t']) {
+                let (value, comment) = value.split_once('#').unwrap_or((value, ""));
+                ensure!(
+                    matches!(value.trim(), "" | "null" | "Null" | "NULL" | "~"),
+                    "Cannot update non-null hash in {config_path}"
+                );
+                result.push_str(&format!("hash: {sha1}"));
+                if !comment.is_empty() {
+                    result.push_str(" #");
+                    result.push_str(comment);
+                }
+                if line.ends_with("\r\n") {
+                    result.push_str("\r\n");
+                } else if line.ends_with('\n') {
+                    result.push('\n');
+                }
+                found = true;
+            } else {
+                result.push_str(line);
+            }
+        }
+        ensure!(found, "Cannot safely update null hash field in {config_path}");
+        result
+    } else {
+        let mut result = contents;
+        if !result.ends_with('\n') && !result.is_empty() {
+            result.push('\n');
+        }
+        result.push_str(&format!("hash: {sha1}\n"));
+        result
+    };
+    fs::write(config_path, updated)?;
+    config.hash = Some(sha1);
+    Ok(())
+}
+
 pub fn read_elf(path: &Utf8NativePath) -> Result<Vec<u8>> {
     let mut bytes = fs::read(path).with_context(|| format!("Reading {path}"))?;
     if bytes.len() >= 64
@@ -1234,18 +1297,16 @@ pub fn config_with_signatures(
     let mut config: ElfProjectConfig = if fs::metadata(&config_path).is_ok_and(|m| m.is_file()) {
         serde_yaml::from_slice(&fs::read(&config_path)?)?
     } else {
-        ElfProjectConfig {
+        let generated = ElfProjectConfig {
             object: project_relative(input, out)?,
             symbols: "symbols.txt".to_string(),
             splits: "splits.txt".to_string(),
             hash: None,
-        }
+        };
+        fs::write(&config_path, serde_yaml::to_string(&generated)?)?;
+        generated
     };
-    if config.hash.is_none() {
-        let mut source = fs::File::open(input)?;
-        config.hash = Some(crate::cmd::shasum::file_sha1_string(&mut source)?);
-        fs::write(config_path, serde_yaml::to_string(&config)?)?;
-    }
+    populate_missing_config_hash(&config_path, input, &mut config)?;
     Ok(())
 }
 
@@ -1929,8 +1990,9 @@ fn symbol_aware_link_reference(
 }
 
 pub fn split(config_path: &Utf8NativePath, out: &Utf8NativePath) -> Result<()> {
-    let config: ElfProjectConfig = serde_yaml::from_slice(&fs::read(config_path)?)?;
+    let mut config: ElfProjectConfig = serde_yaml::from_slice(&fs::read(config_path)?)?;
     let object_path = project_path(config_path, &config.object);
+    populate_missing_config_hash(config_path, &object_path, &mut config)?;
     let bytes = read_elf(&object_path)?;
     let file = File::parse(bytes.as_slice())?;
     let mut obj = load_file(&object_path, &file)?;
@@ -2451,6 +2513,55 @@ pub use super::ppu_verify::verify;
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn missing_config_hash_is_filled_without_rewriting_other_yaml() {
+        let root = std::env::temp_dir().join(format!(
+            "kevin-hash-test-{}-{}",
+            std::process::id(),
+            std::time::SystemTime::now()
+                .duration_since(std::time::UNIX_EPOCH)
+                .unwrap()
+                .as_nanos()
+        ));
+        fs::create_dir_all(&root).unwrap();
+        let elf_path = root.join("original.elf");
+        fs::write(&elf_path, b"abc").unwrap();
+        let config_path = root.join("config.yml");
+        let elf = Utf8NativePath::new(elf_path.to_str().unwrap());
+        let config_file = Utf8NativePath::new(config_path.to_str().unwrap());
+        let sha1 = "a9993e364706816aba3e25717850c26c9cd0d89d";
+
+        let missing = "# Important project comment\nobject: original.elf\nsymbols: symbols.txt\nsplits: splits.txt\ncustom: preserved\n";
+        fs::write(&config_path, missing).unwrap();
+        let mut config: ElfProjectConfig = serde_yaml::from_str(missing).unwrap();
+        populate_missing_config_hash(config_file, elf, &mut config).unwrap();
+        assert_eq!(config.hash.as_deref(), Some(sha1));
+        assert_eq!(fs::read_to_string(&config_path).unwrap(), format!("{missing}hash: {sha1}\n"));
+
+        // Explicit null is also missing, but its inline comment survives.
+        let null = "object: original.elf\nsymbols: symbols.txt\nsplits: splits.txt\nhash: null # keep me\ncustom: preserved\n";
+        fs::write(&config_path, null).unwrap();
+        let mut config: ElfProjectConfig = serde_yaml::from_str(null).unwrap();
+        populate_missing_config_hash(config_file, elf, &mut config).unwrap();
+        assert_eq!(fs::read_to_string(&config_path).unwrap(), format!(
+            "object: original.elf\nsymbols: symbols.txt\nsplits: splits.txt\nhash: {sha1} # keep me\ncustom: preserved\n"
+        ));
+
+        // A known baseline is never silently changed, even when incorrect.
+        let existing = "object: original.elf\nsymbols: symbols.txt\nsplits: splits.txt\nhash: deadbeef\n";
+        fs::write(&config_path, existing).unwrap();
+        let mut config: ElfProjectConfig = serde_yaml::from_str(existing).unwrap();
+        populate_missing_config_hash(config_file, elf, &mut config).unwrap();
+        assert_eq!(fs::read_to_string(&config_path).unwrap(), existing);
+
+        fs::remove_file(&elf_path).unwrap();
+        fs::write(&config_path, missing).unwrap();
+        let mut config: ElfProjectConfig = serde_yaml::from_str(missing).unwrap();
+        assert!(populate_missing_config_hash(config_file, elf, &mut config).is_err());
+        assert_eq!(fs::read_to_string(&config_path).unwrap(), missing);
+        fs::remove_dir_all(root).unwrap();
+    }
 
     #[test]
     fn multi_toc_linker_capability_is_consistent_with_config_refresh() {

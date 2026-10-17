@@ -289,7 +289,7 @@ $ kevin dol config main.dol rels/*.rel -o config.yml
 
 ### dwarf dump
 
-Dumps DWARF 1.1 information from an ELF file. (Does **not** support DWARF 2+)
+Dumps DWARF 1.1 and DWARF 2 information from an ELF file.
 
 ```shell
 $ kevin dwarf dump input.elf
@@ -331,9 +331,12 @@ $ kevin elf info input.elf
 ### elf split
 
 Splits a PS3 PPU ELF into relocatable objects and editable configuration files.
+When splitting from `config.yml`, Kevin also fills in a missing original ELF SHA-1 hash.
 
 ```shell
 $ kevin elf split input.elf out/
+# or use an existing configuration
+$ kevin elf split config.yml out/
 ```
 
 ### elf verify
