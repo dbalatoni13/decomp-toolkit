@@ -1,0 +1,46 @@
+- symbol: 0
+  hash: ff9104a8ab84195cd1e6c7a1ef752e189162c847
+  signature: gWIAAP//AAB8CAKm//////gh/3H/////+AEAoP////+BIgAA//8AADgLABT/////+6EAeP////98fRt4/////5ADAAj/////kWMAAP////+VIwAI/////3hjACD/////e70AIP////9IAAAB/AAAA2AAAAD/////f6PreP////9IAAAB/AAAA2AAAAD/////6AEAoP/////roQB4/////3wIA6b/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSiD0Ev
+    size: 92
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0012'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt8ios_baseD2Ev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 18
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 52
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 64
+    kind: rel24
+    symbol: 4
+    addend: 0

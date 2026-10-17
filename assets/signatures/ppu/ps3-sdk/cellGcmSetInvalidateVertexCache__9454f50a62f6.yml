@@ -1,0 +1,30 @@
+- symbol: 0
+  hash: 33e606f9b50bc6310efa959191aaf604b00cb516
+  signature: +CH/gf////98CAKm//////vhAHj/////OIAACP/////4AQCQ/////3x/G3j/////gYMACP////+AAwAE/////zksACD/////f4kAQP////9BnQB8/////zkMAAj/////PAAABP////95CAAg/////zzgAAT/////OWgACP////85QAAA/////3lrACD/////YOcXFP////85KwAI/////3mFACD/////eSkAIP////9gABcQ/////5FFAAT/////eQQAIP////+QBQAA/////3lmACD/////kOgAAP////84CQAI/////3koACD/////kUQABP////+QHwAI/////5DrAAD/////kUYABP////+Q6QAA/////5FIAAT/////6AEAkP/////r4QB4/////zghAID/////fAgDpv////9OgAAg/////4EjAAz/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////L6MAAP////9Anv/M/////4GfAAj/////S///YP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetInvalidateVertexCache
+    size: 208
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: b56db036ce735cb4a45b9dd09da01d3986a2e668
+  signature: +CH/gf////+BgwAE/////4FjAAj/////OWsAIP////98C2BA/////0DhAEz/////gYMADP////98CAKm//////gBAJD/////+GEAeP////84gAAI//////hBACj/////gAwAAP////+ATAAE/////3wJA6b/////ToAEIf////8sAwAA/////+hhAHj/////6EEAKP/////oAQCQ/////3wIA6b/////QYIADP////84IQCA/////06AACD/////gUMACP////88wAAE/////z1gAAT/////OQoACP////95SgAg/////zjoAAj/////eQgAIP////85JwAI/////3jnACD/////eSUAIP////84AAAA/////2FrFxT/////YMYXEP////85KQAI/////5DKAAD/////kAoABP////+RIwAI/////5AIAAT/////kWgAAP////+QBwAE/////5FnAAD/////kAUABP////+RZQAA/////zghAID/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetInvalidateVertexCache
+    size: 196
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: 20a27fe1c33ebe5ba5d3d01cc39a7ab5b1740e8f
+  signature: +CH/gf////98CAKm//////vhAHj/////fH8beP/////4AQCQ/////ziAAAj/////gZ8ACP////+BPwAE/////zgMACD/////f4BIQP////9BnQBw/////3mFACD/////OYwACP////89QAAE/////3mGACD/////OYwACP////89YAAE/////3mHACD/////OYwACP////84AAAA/////3mIACD/////YWsXFP////9hShcQ/////zksAAj/////kUUAAP////+QBQAE/////5E/AAj/////kAYABP////+RZgAA/////5AHAAT/////kWcAAP////+QCAAE/////5FoAAD/////6AEAkP/////r4QB4/////zghAID/////fAgDpv////9OgAAg/////4E/AAz/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////L4MAAP////9Anv/M/////4GfAAj/////S///bP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetInvalidateVertexCache
+    size: 196
+    flags: 1
+    section: .text
+  relocations: []

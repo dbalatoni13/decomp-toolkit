@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: d8fd136029bce9a885a4b00488b6b5198b4ec0df
+  signature: L4QAAP////98CAKm//////gh/3H/////+4EAcP/////7oQB4//////vBAID/////++EAiP/////4AQCg/////3x+G3j/////fL0reP////98fBt4/////0GeADj/////gAMAGP////8vBQAA/////yuAAAf/////QJ0AKP////84YwAE/////4AeAAT/////eKUAIP////94YwAg/////3gfACD/////QJoAVP////9/4/t4/////0gAAAH8AAADYAAAAP////9XqQg8/////3uLACD/////fSkHtP////84AAAH/////31rShT/////kB4AGP////84AAAA/////5O+ABT/////sAsABP/////oAQCg/////+uBAHD/////66EAeP////98CAOm/////+vBAID/////6+EAiP////84IQCQ/////06AACD/////f+T7eP////9IAAAB/AAAA2AAAAD/////S///pP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSbIwSt11char_traitsIwESaIwEE5_TidyEbj
+    size: 184
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .wmemcpy
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 92
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 172
+    kind: rel24
+    symbol: 2
+    addend: 0

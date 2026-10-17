@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: b6ab39aa257c9b998b419682e784b4665eab3291
+  signature: gAMAAP////8vgBtc/////0GeABz/////LwAbW/////8sgBtd/////0CdACT/////L4AbXv////9BhgAg/////0yeACD/////gSMAFP////99I0oU/////3kpACD/////kIkABP////9OgAAg/////0yaACD/////gSMAFP////99I0oU/////3kpACD/////kIkAEP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmCgSetAttribOutputMask
+    size: 80
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: ffcbf65abc3bc66287e1529c83703fda7a11b6d5
+  signature: gAMAAP////8vgBtc/////0GeABz/////LwAbW/////8sgBtd/////0CdACT/////L4AbXv////9BhgAg/////0yeACD/////gSMAFP////99KRoU/////3kpACD/////kIkABP////9OgAAg/////0yaACD/////gSMAFP////99KRoU/////3kpACD/////kIkAEP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmCgSetAttribOutputMask
+    size: 80
+    flags: 1
+    section: .text
+  relocations: []

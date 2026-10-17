@@ -1,0 +1,100 @@
+- symbol: 0
+  hash: f3220cadf5e42159af2da27b4a6ab6610684bbfa
+  signature: +CH/gf////98CAKm//////vhAHj/////g+IAAP//AAD4AQCQ//////vBAHD/////gB8AAP////98AAe0/////y+gAAD/////QZ4AWP////8vgAAA/////0GcAED/////g8IAAP//AACAfgAA/////3xjB7T/////SAAAAfwAAANgAAAA/////ywjAAD/////fH8beP////9BggBQ/////+gBAJD/////f+P7eP/////rwQBw/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////SAAAAfwAAAOAHwAA/////y+AAAD/////QJ7/uP////+D4gAA//8AAOgBAJD/////f+P7eP/////rwQBw/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////OGAACP////9IAAAB/AAAA2AAAAD/////LCMAAP////98fxt4/////0HCACz/////gH4AAP////9/5Pt4/////3xjB7T/////SAAAAfwAAANgAAAA/////ywjAAD/////QIIAEP////+QfwAE/////5B/AAD/////S///eP////9IAAAB/AAAA2AAAAD/////L6T///////9BngAM/////0gAAAH8AAADYAAAAP////94YwAg/////0gAAAH8AAADYAAAAP////8=
+  symbols:
+  - kind: Function
+    name: .__cxa_get_globals
+    size: 256
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0032'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Tlsget
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Z21get_globals_init_oncev
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@007E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .malloc
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Tlsset
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZSt9terminatev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unwind_Resume
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cxa_call_unexpected
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 50
+    kind: l
+    symbol: 2
+    addend: -10216440
+  - offset: 60
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 108
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 126
+    kind: l
+    symbol: 5
+    addend: -10216440
+  - offset: 160
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 192
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 220
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 236
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 248
+    kind: rel24
+    symbol: 10
+    addend: 0

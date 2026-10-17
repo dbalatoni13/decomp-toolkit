@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 77d3288c679a270b59753f563dec9f42f796a3c5
+  signature: gAMABP////89YIAh/////y+AAAb/////YWsA//////9B3gAM/////31jB7T/////ToAAIP////+AAwAU/////4EjABj/////fAMCFP////94AwAg/////4FDAAD/////VUAgNv////9/gEgA/////0D+/9z/////gQMABP////98CkIU/////yuAAgD/////QZ3/zP////+BIwAM/////zlgAAD/////gAMACP////+xBAAA/////7FEAAL/////mAQABv////+xJAAE/////0v//6z/////
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetCgbVertexProgramConfiguration
+    size: 108
+    flags: 1
+    section: .text
+  relocations: []

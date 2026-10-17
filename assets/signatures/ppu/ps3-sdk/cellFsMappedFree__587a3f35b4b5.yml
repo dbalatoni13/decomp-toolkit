@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: aebf3131279da1c634d1deb7451d3ce28a024284
+  signature: +CH/gf////98CAKm/////ywkAAD/////++EAeP/////4AQCQ/////zwAgAH/////fJ8jeP////9gAAAN/////0GCABz/////SAAAAfwAAANgAAAA/////3/k+3j/////OWADTv////9EAAAC/////3xgB7T/////fAMDeP/////oAQCQ/////+vhAHj/////OCEAgP////98CAOm/////06AACD/////AAAAAP////8ACQAB/////4ABAAD/////
+  symbols:
+  - kind: Function
+    name: .cellFsMappedFree
+    size: 96
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._get_fsfd
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 36
+    kind: rel24
+    symbol: 1
+    addend: 0

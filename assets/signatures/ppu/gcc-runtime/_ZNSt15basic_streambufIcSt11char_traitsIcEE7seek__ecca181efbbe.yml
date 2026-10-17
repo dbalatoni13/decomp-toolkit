@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: 4394b621147f4ee95922d600660b96a758adfdde
+  signature: gSIAAP//AAB4awAg/////4FCAAD//wAA+KEAQP/////4wQBI/////4CCAAD//wAAfWNbeP////+ACQAA/////5ALAAD/////gSoAAP/////44QBQ/////5ErAAT/////gQoABP////+RCwAI/////6AKAAj/////sAsADP////+hKgAK/////7ErAA7/////gAQAAP////+QCwAQ/////6EkAAT/////sSsAFP////+gBAAG/////7ALABb/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt15basic_streambufIcSt11char_traitsIcEE7seekposESt4fposISt9_MbstatetENSt5_IosbIiE9_OpenmodeE
+    size: 100
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@000A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 10
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 22
+    kind: l
+    symbol: 3
+    addend: -28621288

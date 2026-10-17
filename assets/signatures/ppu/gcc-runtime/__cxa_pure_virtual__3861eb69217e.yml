@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: f10ee2e12e782279af5b5412cc50db117af0e1a5
+  signature: +CH/kf////98CAKm//////gBAID/////SAAAAfwAAANgAAAA/////w==
+  symbols:
+  - kind: Function
+    name: .__cxa_pure_virtual
+    size: 20
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZSt9terminatev
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 12
+    kind: rel24
+    symbol: 1
+    addend: 0

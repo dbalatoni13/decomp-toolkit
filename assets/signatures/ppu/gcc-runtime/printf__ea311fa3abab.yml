@@ -1,0 +1,110 @@
+- symbol: 0
+  hash: 0b2c11b5c75bdb835c39aa31d430e4ce8c440e83
+  signature: +CH/Yf////98CAKm//////uBAID/////g4IAAP//AAD7oQCI//////gBALD/////fH0beP////84AQDY/////3+D43j/////kAEAcP/////44QDw//////kBAPj/////+SEBAP/////5QQEI//////iBANj/////+KEA4P/////4wQDo/////0gAAAH8AAADYAAAAP////+AwQBw/////3ulACD/////gGIAAP//AAB/hON4/////0gAAAH8AAADYAAAAP////98fRt4/////3+D43j/////SAAAAfwAAANgAAAA/////+gBALD/////64EAgP////9/owe0/////3wIA6b/////66EAiP////84IQCg/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .printf
+    size: 144
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Lockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0056'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 68
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 86
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 92
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 108
+    kind: rel24
+    symbol: 5
+    addend: 0
+- symbol: 0
+  hash: 250ed4a0f1af3105ee25baf33975162f9b681a69
+  signature: +CH+sf////98CAKm//////uBATD/////g4IAAP//AAD7oQE4/////3x9G3j/////+AEBYP////9/g+N4/////zgBAYj/////+OEBoP/////5AQGo/////5ABASD/////+SEBsP/////5QQG4//////iBAYj/////+KEBkP/////4wQGY/////0gAAAH8AAADYAAAAP////+AYgAA//8AAH+l63j/////f4TjeP////+AwQEg/////0gAAAH8AAADYAAAAP////98fRt4/////3+D43j/////SAAAAfwAAANgAAAA/////+gBAWD/////f6PreP/////rgQEw/////+uhATj/////fAgDpv////84IQFQ/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .printf
+    size: 144
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Lockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@004E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 68
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 78
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 92
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 108
+    kind: rel24
+    symbol: 5
+    addend: 0

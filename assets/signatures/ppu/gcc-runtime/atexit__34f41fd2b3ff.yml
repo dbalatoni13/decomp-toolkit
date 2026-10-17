@@ -1,0 +1,68 @@
+- symbol: 0
+  hash: a8a671755af6039ff2204ee63b0b6fa7f64f3b18
+  signature: +CH/gf////98CAKm//////vBAHD/////fH4beP/////74QB4/////zhgAAH/////O+D////////4AQCQ/////0gAAAH8AAADYAAAAP////+BQgAA//8AAIEiAAD//wAAgWoAAP////+ACQAA/////3+LAED/////QN0AWP////+BagAA/////zvgAAD/////gSIAAP//AAA5a////////3lrACD/////gAkAAP////9VaRA6/////5FqAAD/////fSkCFP////95KQAg/////5PJAAD/////OGAAAf////9IAAAB/AAAA2AAAAD/////6AEAkP////9/4/t4/////+vBAHD/////6+EAeP////98CAOm/////zghAID/////ToAAIP////9IAAAB/AAAAy+jAAD/////QZ7/0P////+BQgAA//8AAEv//5z/////
+  symbols:
+  - kind: Function
+    name: .atexit
+    size: 168
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@004A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Atrealloc
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 42
+    kind: l
+    symbol: 2
+    addend: -10216440
+  - offset: 46
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 74
+    kind: l
+    symbol: 4
+    addend: -10216440
+  - offset: 112
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 148
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 162
+    kind: l
+    symbol: 2
+    addend: -10216440

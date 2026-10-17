@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: b95a1ffe43baf9a9f8da71c65b1ee5b9d70d7501
+  signature: +CH/cf////98CAKm//////uhAHj/////++EAiP/////4AQCg/////3x9G3j/////SAAAAfwAAANgAAAA/////zhjAAH/////eGMAIP////9IAAAB/AAAA2AAAAD/////f6TreP////8vgwAA/////3x/G3j/////eGMAIP////9BngAM/////0gAAAH8AAADYAAAAP/////oAQCg/////3vjACD/////66EAeP/////r4QCI/////3wIA6b/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .strdup
+    size: 104
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .strlen
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .malloc
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .strcpy
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 40
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 68
+    kind: rel24
+    symbol: 3
+    addend: 0

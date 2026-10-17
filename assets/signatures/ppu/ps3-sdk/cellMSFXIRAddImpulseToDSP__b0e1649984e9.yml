@@ -1,0 +1,74 @@
+- symbol: 0
+  hash: 7ffd06274fcadeaf7d297aa4d77bb4521a6aabbc
+  signature: +CH/Yf////98CAKm//////uBAID/////VJwQOv/////4AQCw/////1SAIDb/////+6EAiP////87owDk/////3wcAFD/////+0EAcP/////7YQB4/////3y6K3j/////f70CFP////+ApQAA/////3x7G3j/////e70AIP////84gAAA/////4B9AAT/////SAAAAfwAAAPoQQAo/////zk8AKD/////OXwAQP////+AGgAA/////zlcACD/////gH0AAP////99KQe0/////4EdAAT/////fWsHtP////+AmgAI/////31KB7T/////fTtKFP////99e1oU/////31bUhT/////kAkABP////87nABg/////5ELAAT/////kGoABP////94YwAg/////4C6AAD/////f5wHtP////9IAAAB/AAAA+hBACj/////f3viFP////+AGgAE/////zhgAAD/////kBsABP////9IAAAB/AAAA2AAAAD/////6AEAsP////84YAAA/////+tBAHD/////62EAeP////98CAOm/////+uBAID/////66EAiP////84IQCg/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXIRAddImpulseToDSP
+    size: 228
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0048'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@00A0'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 72
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 160
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 184
+    kind: rel24
+    symbol: 3
+    addend: 0
+- symbol: 0
+  hash: 18bcba611b47e0456e288d69e94ca66054811da6
+  signature: +CH/Yf////98CAKm//////uBAID/////VJwQOv/////4AQCw/////1SAIDb/////+6EAiP////87owDk/////3wcAFD/////+0EAcP/////7YQB4/////3y6K3j/////f70CFP////+ApQAA/////3x7G3j/////e70AIP////84gAAA/////4B9AAT/////SAAAAfwAAANgAAAA/////zk8AKD/////OXwAQP////+AGgAA/////zlcACD/////gH0AAP////99KQe0/////4EdAAT/////fWsHtP////+AmgAI/////31KB7T/////fTtKFP////99e1oU/////31bUhT/////kAkABP////87nABg/////5ELAAT/////kGoABP////94YwAg/////4C6AAD/////f5wHtP////9IAAAB/AAAA2AAAAD/////f3viFP////+AGgAE/////zhgAAD/////kBsABP////9IAAAB/AAAA2AAAAD/////6AEAsP////84YAAA/////+tBAHD/////62EAeP////98CAOm/////+uBAID/////66EAiP////84IQCg/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXIRAddImpulseToDSP
+    size: 228
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memset
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memcpy
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 72
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 160
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 184
+    kind: rel24
+    symbol: 3
+    addend: 0

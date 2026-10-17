@@ -1,0 +1,48 @@
+- symbol: 0
+  hash: 48e63b4ba580635afb3f3247bf7ee753a37821d2
+  signature: +CH/gf////98CAKm//////vBAHD/////fH4beP/////4AQCQ/////4DDAAj/////gAMABP////85JgCE//////vhAHj/////fJ8jeP////9/iQBA/////ziAACH/////QZ0BNP////88AACA/////4F/AAD/////eMkAIP////+BXwAE/////2AAFID/////kAkAAP////+BHwAI/////5FpAAT/////gB8ADP////+RSQAI/////4F/ABD/////kQkADP////+BXwAU/////5AJABD/////gR8AGP////+RaQAU/////4AfABz/////kUkAGP////+BfwAg/////5EJABz/////gV8AJP////+QCQAg/////4EfACj/////kWkAJP////+AHwAs/////5FJACj/////gX8AMP////+RCQAs/////4FfADT/////kAkAMP////+BHwA4/////5FpADT/////gB8APP////+RSQA4/////4F/AED/////kQkAPP////+BXwBE/////5AJAED/////gR8ASP////+RaQBE/////4AfAEz/////kUkASP////+BfwBQ/////5EJAEz/////gV8AVP////+QCQBQ/////4EfAFj/////kWkAVP////+AHwBc/////5FJAFj/////gX8AYP////+RCQBc/////4FfAGT/////kAkAYP////+BHwBo/////5FpAGT/////gB8AbP////+RSQBo/////4F/AHD/////kQkAbP////+A/wB0/////5AJAHD/////gV8AeP////+RaQB0/////zlmAIT/////gB8AfP////+RfgAI/////5DpAHj/////kUkAfP////+QCQCA/////+gBAJD/////68EAcP/////r4QB4/////3wIA6b/////OCEAgP////9OgAAg/////4EjAAz/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////L6MAAP////9Anv/I/////4DeAAj/////S//+qP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetPolygonStipplePattern
+    size: 400
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: b1f359957539a52753d339f6f0e851e21ca9c241
+  signature: +CH/gf////98CAKm//////vBAHD/////fJ4jeP/////4AQCQ/////ziAACH/////gWMACP////+AAwAE/////zkrAIT/////++EAeP////98fxt4/////3+JAED/////QJ0ALP////+BIwAM/////4AJAAD/////+EEAKP////98CQOm/////4BJAAT/////ToAEIf/////oQQAo/////y+jAAD/////QJ4APP////+BfwAI/////zwAAID/////OGsABP////95aQAg/////2AAFID/////eGMAIP////9/xPN4/////5AJAAD/////OKAAgP////9IAAAB/AAAA+hBACj/////gT8ACP////85KQCE/////5E/AAj/////6AEAkP/////rwQBw/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellGcmSetPolygonStipplePattern
+    size: 168
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: _.prx.link.border.mark.sys_net.inet_addr
+    size: 0
+    flags: 2
+    section: .text
+  relocations:
+  - offset: 124
+    kind: rel24
+    symbol: 1
+    addend: 0
+- symbol: 0
+  hash: 2a1e0834a7af6a2b5b0853b8c9495e85aa5d8404
+  signature: +CH/gf////98CAKm//////vBAHD/////fJ4jeP/////4AQCQ/////ziAACH/////gWMACP////+AAwAE/////zkrAIT/////++EAeP////98fxt4/////3+JAED/////QJ0ALP////+BIwAM/////4AJAAD/////+EEAKP////98CQOm/////4BJAAT/////ToAEIf/////oQQAo/////y+jAAD/////QJ4APP////+BfwAI/////zwAAID/////OGsABP////95aQAg/////2AAFID/////eGMAIP////9/xPN4/////5AJAAD/////OKAAgP////9IAAAB/AAAA2AAAAD/////gT8ACP////85KQCE/////5E/AAj/////6AEAkP/////rwQBw/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellGcmSetPolygonStipplePattern
+    size: 168
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memcpy
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 124
+    kind: rel24
+    symbol: 1
+    addend: 0

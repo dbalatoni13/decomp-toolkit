@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: 03596d0a1158e2f08fa287c68c0d91395c87f448
+  signature: fGcbeP////+IBwAA/////zhgAAD/////fAoHdP////8vqgAA/////0GeAHD/////iAQAAP////986Dt4/////3wGB3T/////LKYAAP////9BhgA8/////3+KMAD/////QZ4AKP////98iyN4/////zgLAAH/////eAsAIP////+JKwAA/////30pB3T/////L6kAAP////9/CkgA/////0GeABT/////QJr/5P////98B0BQ/////3gDACD/////ToAAIP////84CAAB/////3gIACD/////iSgAAP////99Kgd0/////y+qAAD/////QJ7/sP////98B0BQ/////3wDB7T/////eGMAIP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .strcspn
+    size: 140
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: 72203174ff0cfedbcec1741a355d38a3f794dfc5
+  signature: iAMAAP////98aBt4/////3yKI3j/////fAsHdP////85IAAA/////y+LAAD/////QZ4AUP////+IBAAA/////3wEB3T/////L4QAAP////9BngAs/////3+EWAD/////QZ4ANP////99SVN4/////0gAAAj/////QZoAKP////+MCQAB/////3wAB3T/////L4AAAP////9/AFgA/////0Ce/+z/////jAMAAf////98Cwd0/////y+LAAD/////QJ7/xP////99KBhQ/////3kjACD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .strcspn
+    size: 112
+    flags: 1
+    section: .text
+  relocations: []

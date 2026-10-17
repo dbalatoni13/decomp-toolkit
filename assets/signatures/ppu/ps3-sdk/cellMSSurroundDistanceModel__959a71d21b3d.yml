@@ -1,0 +1,41 @@
+- symbol: 0
+  hash: ef7f26d8042914c36091133a60ba857c071dc6e7
+  signature: gSIAAP//AAB8CAKm//////gh/4H/////+AEAkP/////74QB4/////zvg////////gAkAAP////8vgAAA/////0GeAET/////SAAAAfwAAANgAAAA/////3x/G3j/////PGAAev////8vn////////2BjEgL/////QZ4ACP////84YAAA/////0gAAAH8AAADYAAAAP/////oAQCQ/////3/j+3j/////6+EAeP////84IQCA/////3wIA6b/////ToAAIP////88YAB6/////2BjEg3/////SAAAAfwAAANgAAAA/////0v//9j/////
+  symbols:
+  - kind: Function
+    name: .cellMSSurroundDistanceModel
+    size: 120
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__alDistanceModel
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 36
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 68
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 108
+    kind: rel24
+    symbol: 3
+    addend: 0

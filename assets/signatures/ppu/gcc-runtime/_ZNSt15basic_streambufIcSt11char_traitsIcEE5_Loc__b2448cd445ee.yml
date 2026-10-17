@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 7669c9066e6fbd4c09f32be58bbf1c06888613c0
+  signature: OGMABP////98CAKm//////gh/5H/////eGMAIP/////4AQCA/////0gAAAH8AAADYAAAAP/////oAQCA/////zghAHD/////fAgDpv////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt15basic_streambufIcSt11char_traitsIcEE5_LockEv
+    size: 44
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt6_Mutex5_LockEv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0

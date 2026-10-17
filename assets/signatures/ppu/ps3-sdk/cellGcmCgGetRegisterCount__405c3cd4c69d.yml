@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: 4237ac0b1e0360c36a2a063077e4e41dcd36e730
+  signature: gAMAAP////8vgBtc/////0GeAET/////LwAbW/////8sgBtd/////0CdABz/////L4AbXv////9BhgAY/////0GeACz/////OGAAAP////94YwAg/////06AACD/////QJr/9P////+BIwAU/////30jShT/////eSkAIP////+AaQAI/////3hjACD/////ToAAIP////+BIwAU/////30jShT/////eSkAIP////+IaQAS/////3hjACD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetRegisterCount
+    size: 100
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: e3066a1d7b1b410592472d720ac24cf301552df7
+  signature: gAMAAP////8vgBtc/////0GeADz/////LwAbW/////8sgBtd/////0CdABj/////L4AbXv////9BhgAU/////0GeACT/////OGAAAP////9OgAAg/////0Ca//j/////gSMAFP////99KRoU/////3kpACD/////gGkACP////9OgAAg/////4EjABT/////fSkaFP////95KQAg/////4hpABL/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetRegisterCount
+    size: 88
+    flags: 1
+    section: .text
+  relocations: []

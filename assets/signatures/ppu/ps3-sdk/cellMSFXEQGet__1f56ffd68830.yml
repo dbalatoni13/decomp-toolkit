@@ -1,0 +1,23 @@
+- symbol: 0
+  hash: 207672f2146519f71bfd031c0be246d44119a781
+  signature: +CH/gf////98CAKm/////ywjAAD/////+8EAcP////98fht4//////vhAHj/////PGAAev/////4AQCQ/////3ifACD/////YGMSAv////9BwgBI/////yufAAf/////OGAAAP////9BnQA0/////0gAAAH8AAADYAAAAP////9X6RA6/////+gBAJD/////fSnyFP/////r4QB4/////+vBAHD/////fAgDpv////95KQAg/////zghAID/////gGkAAP////9OgAAg/////zxgAHr/////YGMSAv////9IAAAB/AAAA2AAAAD/////6AEAkP////84YAAA/////+vBAHD/////6+EAeP////98CAOm/////zghAID/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSFXEQGet
+    size: 148
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 56
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 112
+    kind: rel24
+    symbol: 1
+    addend: 0

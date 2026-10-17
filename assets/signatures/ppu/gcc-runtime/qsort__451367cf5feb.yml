@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: cb11b27feb0069f3b5792ff07eb4a17059b0302b
+  signature: fMczeP////98pit4/////3yFI3j/////SAAAAPwAAAM=
+  symbols:
+  - kind: Function
+    name: .qsort
+    size: 16
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .intro_sort
+    size: 0
+    flags: 2
+    section: .text
+  relocations:
+  - offset: 12
+    kind: rel24
+    symbol: 1
+    addend: 0

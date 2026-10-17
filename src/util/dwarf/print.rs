@@ -6,12 +6,43 @@ use gnuv2_demangle::{DemangleConfig, demangle as gnu_demangle};
 use indent::indent_all_by;
 
 use crate::util::dwarf::{
-    ArrayType, AttributeKind, DwarfInfo, EnumerationType, FundType, MemberSubroutineDefType,
-    Modifier, Producer, PtrToMemberType, StructureKind, StructureMember, StructureType,
-    SubroutineBlock, SubroutineNode, SubroutineType, TagKind, TagType, Type, TypeKind, TypeString,
-    TypedefMap, TypedefTag, UnionType, UserDefinedType, VariableTag, Visibility, get_udt_by_key,
-    process_variable_tag, ud_type,
+    ArrayType, AttributeKind, DeclCoord, DwarfInfo, EnumerationType, FundType,
+    MemberSubroutineDefType, Modifier, Producer, PtrToMemberType, StructureKind, StructureMember,
+    StructureType, SubroutineBlock, SubroutineNode, SubroutineType, TagKind, TagType, Type,
+    TypeKind, TypeString, TypedefMap, TypedefTag, UnionType, UserDefinedType, VariableTag,
+    Visibility, get_udt_by_key, process_variable_tag, ud_type,
 };
+
+fn decl_comment(decl: &Option<DeclCoord>) -> Option<String> {
+    decl.as_ref().map(|decl| format!("// Decl: {}:{}", decl.file, decl.line))
+}
+
+fn typedef_name(
+    typedefs: &TypedefMap,
+    t: &Type,
+    exclude_name: Option<&str>,
+) -> Option<String> {
+    let _ = (typedefs, t, exclude_name);
+    None
+}
+
+fn extend_typedefs(typedefs: &TypedefMap, new_typedefs: &[TypedefTag]) -> TypedefMap {
+    let mut scoped = typedefs.clone();
+    for typedef in new_typedefs {
+        scoped.entry(typedef.kind.clone()).or_default().push(typedef.name.clone());
+    }
+    scoped
+}
+
+fn tag_name_or_udt_name(info: &DwarfInfo, key: u32) -> Result<String> {
+    if let Some(name) = info.tags.get(&key).and_then(|tag| tag.string_attribute(AttributeKind::Name))
+    {
+        return Ok(name.clone());
+    }
+    get_udt_by_key(info, key)?
+        .name()
+        .ok_or_else(|| anyhow!("tag {} has no usable type name", key))
+}
 
 pub fn apply_modifiers(mut str: TypeString, modifiers: &[Modifier]) -> Result<TypeString> {
     let mut has_pointer = false;
@@ -64,51 +95,88 @@ pub fn type_string(
     t: &Type,
     include_anonymous_def: bool,
 ) -> Result<TypeString> {
+    type_string_impl(info, typedefs, t, include_anonymous_def, None)
+}
+
+fn type_string_without_typedefs(
+    info: &DwarfInfo,
+    t: &Type,
+    include_anonymous_def: bool,
+) -> Result<TypeString> {
     let str = match t.kind {
         TypeKind::Fundamental(ft) => {
             TypeString { prefix: ft.name()?.to_string(), ..Default::default() }
         }
+        TypeKind::Typedef(key) => {
+            let target = crate::util::dwarf::resolve_typedef_target_type(info, key)?;
+            return type_string_without_typedefs(info, &target, include_anonymous_def);
+        }
+        TypeKind::UserDefined(key) => ud_type_string(
+            info,
+            &TypedefMap::new(),
+            &get_udt_by_key(info, key)?,
+            true,
+            include_anonymous_def,
+        )?,
+    };
+    apply_modifiers(str, &t.modifiers)
+}
+
+fn type_string_impl(
+    info: &DwarfInfo,
+    typedefs: &TypedefMap,
+    t: &Type,
+    include_anonymous_def: bool,
+    exclude_name: Option<&str>,
+) -> Result<TypeString> {
+    if let Some(name) = typedef_name(typedefs, t, exclude_name) {
+        return Ok(TypeString { prefix: name, ..Default::default() });
+    }
+
+    let str = match t.kind {
+        TypeKind::Fundamental(ft) => {
+            TypeString { prefix: ft.name()?.to_string(), ..Default::default() }
+        }
+        TypeKind::Typedef(key) => {
+            let tag = info
+                .tags
+                .get(&key)
+                .ok_or_else(|| anyhow!("Failed to locate typedef {}", key))?;
+            let name = tag
+                .string_attribute(AttributeKind::Name)
+                .ok_or_else(|| anyhow!("typedef without name"))?;
+            TypeString { prefix: name.clone(), ..Default::default() }
+        }
         TypeKind::UserDefined(key) => {
-            if let Some(&td_key) = typedefs.get(&key).and_then(|v| v.first()) {
-                let tag = info
-                    .tags
-                    .get(&td_key)
-                    .ok_or_else(|| anyhow!("Failed to locate typedef {}", key))?;
-                let td_name = tag
-                    .string_attribute(AttributeKind::Name)
-                    .ok_or_else(|| anyhow!("typedef without name"))?;
-                TypeString { prefix: td_name.clone(), ..Default::default() }
-            } else {
-                ud_type_string(
-                    info,
-                    typedefs,
-                    &get_udt_by_key(info, key)?,
-                    true,
-                    include_anonymous_def,
-                )?
-            }
+            ud_type_string(
+                info,
+                typedefs,
+                &get_udt_by_key(info, key)?,
+                true,
+                include_anonymous_def,
+            )?
         }
     };
     apply_modifiers(str, &t.modifiers)
 }
 
 fn type_name(info: &DwarfInfo, typedefs: &TypedefMap, t: &Type) -> Result<String> {
+    if let Some(name) = typedef_name(typedefs, t, None) {
+        return Ok(name);
+    }
+
     Ok(match t.kind {
         TypeKind::Fundamental(ft) => ft.name()?.to_string(),
-        TypeKind::UserDefined(key) => {
-            if let Some(&td_key) = typedefs.get(&key).and_then(|v| v.first()) {
-                info.tags
-                    .get(&td_key)
-                    .ok_or_else(|| anyhow!("Failed to locate typedef {}", key))?
-                    .string_attribute(AttributeKind::Name)
-                    .ok_or_else(|| anyhow!("typedef without name"))?
-                    .clone()
-            } else {
-                get_udt_by_key(info, key)?
-                    .name()
-                    .ok_or_else(|| anyhow!("User defined type without name"))?
-            }
-        }
+        TypeKind::Typedef(key) => info
+            .tags
+            .get(&key)
+            .ok_or_else(|| anyhow!("Failed to locate typedef {}", key))?
+            .string_attribute(AttributeKind::Name)
+            .ok_or_else(|| anyhow!("typedef without name"))?
+            .clone(),
+        TypeKind::UserDefined(key) => get_udt_by_key(info, key)?
+            .name()
+            .ok_or_else(|| anyhow!("User defined type without name"))?,
     })
 }
 
@@ -118,25 +186,35 @@ fn array_type_string(
     t: &ArrayType,
     include_anonymous_def: bool,
 ) -> Result<TypeString> {
+    if let Some(name) = &t.name {
+        return Ok(TypeString { prefix: name.clone(), ..Default::default() });
+    }
     let mut out = type_string(info, typedefs, t.element_type.as_ref(), include_anonymous_def)?;
     for dim in &t.dimensions {
         ensure!(
             matches!(
                 dim.index_type.kind,
-                TypeKind::Fundamental(FundType::Long | FundType::Integer)
+                TypeKind::Fundamental(
+                    FundType::Short
+                        | FundType::SignedShort
+                        | FundType::UnsignedShort
+                        | FundType::Integer
+                        | FundType::SignedInteger
+                        | FundType::UnsignedInteger
+                        | FundType::Long
+                        | FundType::SignedLong
+                        | FundType::UnsignedLong
+                        | FundType::LongLong
+                        | FundType::SignedLongLong
+                        | FundType::UnsignedLongLong
+                )
             ),
             "Unsupported array index type '{}'",
             type_string(info, typedefs, &dim.index_type, true)?
         );
         match dim.size {
             None => out.suffix.insert_str(0, "[]"),
-            Some(size) => {
-                if info.producer == Producer::MWCC {
-                    out.suffix = format!("[{}]{}", size, out.suffix);
-                } else {
-                    out.suffix = format!("{}[{}]", out.suffix, size);
-                }
-            }
+            Some(size) => out.suffix = format!("[{}]{}", size, out.suffix),
         };
     }
     Ok(out)
@@ -324,13 +402,7 @@ pub fn subroutine_type_string(
     }
     out.suffix = format!("({}){}", parameters, out.suffix);
     if let Some(member_of) = t.member_of {
-        let tag = info
-            .tags
-            .get(&member_of)
-            .ok_or_else(|| anyhow!("Failed to locate member_of tag {}", member_of))?;
-        let base_name = tag
-            .string_attribute(AttributeKind::Name)
-            .ok_or_else(|| anyhow!("member_of tag {} has no name attribute", member_of))?;
+        let base_name = tag_name_or_udt_name(info, member_of)?;
         out.member = format!("{base_name}::");
     }
     Ok(out)
@@ -342,18 +414,15 @@ fn member_subroutine_def_string(
     t: &MemberSubroutineDefType,
 ) -> Result<String> {
     let mut out = String::new();
+    if let Some(comment) = decl_comment(&t.decl) {
+        writeln!(out, "{comment}")?;
+    }
 
-    let mut base_name_opt = None;
-    let mut direct_base_name_opt = None;
+    let mut base_name_opt: Option<String> = None;
+    let mut direct_base_name_opt: Option<String> = None;
 
     if let Some(member_of) = t.member_of {
-        let tag = info
-            .tags
-            .get(&member_of)
-            .ok_or_else(|| anyhow!("Failed to locate member_of tag {}", member_of))?;
-        let base_name = tag
-            .string_attribute(AttributeKind::Name)
-            .ok_or_else(|| anyhow!("member_of tag {} has no name attribute", member_of))?;
+        let base_name = tag_name_or_udt_name(info, member_of)?;
 
         if t.override_ {
             writeln!(out, "// Overrides: {}", base_name)?;
@@ -362,18 +431,11 @@ fn member_subroutine_def_string(
     }
 
     if let Some(direct_member_of) = t.direct_member_of {
-        let tag = info
-            .tags
-            .get(&direct_member_of)
-            .ok_or_else(|| anyhow!("Failed to locate direct_member_of tag {}", direct_member_of))?;
-        let direct_base_name = tag.string_attribute(AttributeKind::Name).ok_or_else(|| {
-            anyhow!("direct_member_of tag {} has no name attribute", direct_member_of)
-        })?;
-
+        let direct_base_name = tag_name_or_udt_name(info, direct_member_of)?;
         direct_base_name_opt = Some(direct_base_name);
         if base_name_opt.is_none() {
             // Fall back to the parsed out direct_base_name on PS2 MW because it doesn't emit a base class
-            base_name_opt = direct_base_name_opt;
+            base_name_opt = direct_base_name_opt.clone();
         }
     }
 
@@ -397,7 +459,7 @@ fn member_subroutine_def_string(
 
     if t.override_ {
         if let Producer::GCC = info.producer {
-            if let Some(direct_base_name) = direct_base_name_opt {
+            if let Some(direct_base_name) = direct_base_name_opt.as_deref() {
                 if let Some(name) = t.name.as_ref() {
                     // in GCC the ctor and dtor are called the same, so we need to check the return value
                     // this is only for the dtor, the ctor can be left as is
@@ -412,7 +474,7 @@ fn member_subroutine_def_string(
                 }
             }
         }
-    } else if let Some(base_name) = base_name_opt {
+    } else if let Some(base_name) = base_name_opt.as_deref() {
         // Handle constructors and destructors
         if let Some(name) = t.name.as_ref() {
             if name == "__dt" {
@@ -502,24 +564,22 @@ pub fn subroutine_def_string(
     t: &SubroutineType,
     is_erased: bool,
 ) -> Result<String> {
+    let scoped_typedefs = extend_typedefs(typedefs, &t.typedefs);
     let mut out = String::new();
     if is_erased {
         out.push_str("// Erased\n");
     } else if let (Some(start), Some(end)) = (t.start_address, t.end_address) {
         writeln!(out, "// Range: {start:#X} -> {end:#X}")?;
     }
+    if let Some(comment) = decl_comment(&t.decl) {
+        writeln!(out, "{comment}")?;
+    }
 
-    let mut base_name_opt = None;
-    let mut direct_base_name_opt = None;
+    let mut base_name_opt: Option<String> = None;
+    let mut direct_base_name_opt: Option<String> = None;
 
     if let Some(member_of) = t.member_of {
-        let tag = info
-            .tags
-            .get(&member_of)
-            .ok_or_else(|| anyhow!("Failed to locate member_of tag {}", member_of))?;
-        let base_name = tag
-            .string_attribute(AttributeKind::Name)
-            .ok_or_else(|| anyhow!("member_of tag {} has no name attribute", member_of))?;
+        let base_name = tag_name_or_udt_name(info, member_of)?;
 
         if t.override_ {
             writeln!(out, "// Overrides: {}", base_name)?;
@@ -528,18 +588,11 @@ pub fn subroutine_def_string(
     }
 
     if let Some(direct_member_of) = t.direct_member_of {
-        let tag = info
-            .tags
-            .get(&direct_member_of)
-            .ok_or_else(|| anyhow!("Failed to locate direct_member_of tag {}", direct_member_of))?;
-        let direct_base_name = tag.string_attribute(AttributeKind::Name).ok_or_else(|| {
-            anyhow!("direct_member_of tag {} has no name attribute", direct_member_of)
-        })?;
-
+        let direct_base_name = tag_name_or_udt_name(info, direct_member_of)?;
         direct_base_name_opt = Some(direct_base_name);
         if base_name_opt.is_none() {
             // Fall back to the parsed out direct_base_name on PS2 MW because it doesn't emit a base class
-            base_name_opt = direct_base_name_opt;
+            base_name_opt = direct_base_name_opt.clone();
         }
     }
 
@@ -570,7 +623,7 @@ pub fn subroutine_def_string(
 
     if t.override_ {
         if let Producer::GCC = info.producer {
-            if let Some(direct_base_name) = direct_base_name_opt {
+            if let Some(direct_base_name) = direct_base_name_opt.as_deref() {
                 // we need to emit the real parent on GCC
                 write!(full_written_name, "{direct_base_name}::")?;
 
@@ -588,7 +641,7 @@ pub fn subroutine_def_string(
                 }
             }
         }
-    } else if let Some(base_name) = base_name_opt {
+    } else if let Some(base_name) = base_name_opt.as_deref() {
         write!(full_written_name, "{base_name}::")?;
 
         // Handle constructors and destructors
@@ -676,7 +729,7 @@ pub fn subroutine_def_string(
             writeln!(
                 out,
                 "{};",
-                indent_all_by(4, &ud_type_def(info, typedefs, inner_type, false)?)
+                &indent_all_by(4, &ud_type_def(info, &scoped_typedefs, inner_type, false)?)
             )?;
         }
     }
@@ -684,7 +737,11 @@ pub fn subroutine_def_string(
     if !t.typedefs.is_empty() {
         writeln!(out, "\n    // Typedefs")?;
         for typedef in &t.typedefs {
-            writeln!(out, "{}", indent_all_by(4, &typedef_string(info, typedefs, typedef)?))?;
+            writeln!(
+                out,
+                "{}",
+                &indent_all_by(4, &typedef_string(info, &scoped_typedefs, typedef)?)
+            )?;
         }
     }
 
@@ -692,7 +749,7 @@ pub fn subroutine_def_string(
         writeln!(out, "\n    // Local variables")?;
         let mut var_out = String::new();
         for variable in &t.variables {
-            let ts = type_string(info, typedefs, &variable.kind, true)?;
+            let ts = type_string(info, &scoped_typedefs, &variable.kind, true)?;
             write!(
                 var_out,
                 "{} {}{};",
@@ -702,6 +759,13 @@ pub fn subroutine_def_string(
             )?;
             if let Some(location) = &variable.location {
                 write!(var_out, " // {location}")?;
+            }
+            if let Some(comment) = decl_comment(&variable.decl) {
+                if variable.location.is_some() {
+                    write!(var_out, ", {}", comment.trim_start_matches("// "))?;
+                } else {
+                    write!(var_out, " {comment}")?;
+                }
             }
             writeln!(var_out)?;
         }
@@ -720,7 +784,11 @@ pub fn subroutine_def_string(
                 continue;
             }
             let variable = process_variable_tag(info, tag)?;
-            writeln!(out, "    // -> {}", variable_string(info, typedefs, &variable, false)?)?;
+            writeln!(
+                out,
+                "    // -> {}",
+                variable_string(info, &scoped_typedefs, &variable, false)?
+            )?;
         }
     }
 
@@ -734,9 +802,12 @@ pub fn subroutine_def_string(
     if !t.blocks_and_inlines.is_empty() {
         for node in &t.blocks_and_inlines {
             let node_str = match node {
-                SubroutineNode::Block(block) => subroutine_block_string(info, typedefs, block)?,
+                SubroutineNode::Block(block) => {
+                    subroutine_block_string(info, &scoped_typedefs, block)?
+                }
+                ,
                 SubroutineNode::Inline(inline) => {
-                    subroutine_def_string(info, typedefs, inline, is_erased)?
+                    subroutine_def_string(info, &scoped_typedefs, inline, is_erased)?
                 }
             };
             writeln!(out)?;
@@ -753,6 +824,7 @@ fn subroutine_block_string(
     typedefs: &TypedefMap,
     block: &SubroutineBlock,
 ) -> Result<String> {
+    let scoped_typedefs = extend_typedefs(typedefs, &block.typedefs);
     let mut out = String::new();
     if let Some(name) = &block.name {
         write!(out, "{name}: ")?;
@@ -763,9 +835,12 @@ fn subroutine_block_string(
     if let (Some(start), Some(end)) = (block.start_address, block.end_address) {
         writeln!(out, "    // Range: {start:#X} -> {end:#X}")?;
     }
+    if let Some(comment) = decl_comment(&block.decl) {
+        writeln!(out, "    {comment}")?;
+    }
     let mut var_out = String::new();
     for variable in &block.variables {
-        let ts = type_string(info, typedefs, &variable.kind, true)?;
+        let ts = type_string(info, &scoped_typedefs, &variable.kind, true)?;
         write!(
             var_out,
             "{} {}{};",
@@ -775,6 +850,13 @@ fn subroutine_block_string(
         )?;
         if let Some(location) = &variable.location {
             write!(var_out, " // {location}")?;
+        }
+        if let Some(comment) = decl_comment(&variable.decl) {
+            if variable.location.is_some() {
+                write!(var_out, ", {}", comment.trim_start_matches("// "))?;
+            } else {
+                write!(var_out, " {comment}")?;
+            }
         }
         writeln!(var_out)?;
     }
@@ -787,7 +869,7 @@ fn subroutine_block_string(
             writeln!(
                 out,
                 "{};",
-                indent_all_by(4, &ud_type_def(info, typedefs, inner_type, false)?)
+                &indent_all_by(4, &ud_type_def(info, &scoped_typedefs, inner_type, false)?)
             )?;
         }
     }
@@ -795,17 +877,24 @@ fn subroutine_block_string(
     if !block.typedefs.is_empty() {
         writeln!(out, "\n    // Typedefs")?;
         for typedef in &block.typedefs {
-            writeln!(out, "{}", indent_all_by(4, &typedef_string(info, typedefs, typedef)?))?;
+            writeln!(
+                out,
+                "{}",
+                &indent_all_by(4, &typedef_string(info, &scoped_typedefs, typedef)?)
+            )?;
         }
     }
 
     if !block.blocks_and_inlines.is_empty() {
         for node in &block.blocks_and_inlines {
             let node_str = match node {
-                SubroutineNode::Block(block) => subroutine_block_string(info, typedefs, block)?,
+                SubroutineNode::Block(block) => {
+                    subroutine_block_string(info, &scoped_typedefs, block)?
+                }
+                ,
                 SubroutineNode::Inline(inline) => {
                     writeln!(out)?;
-                    subroutine_def_string(info, typedefs, inline, false)?
+                    subroutine_def_string(info, &scoped_typedefs, inline, false)?
                 }
             };
             out.push_str(&indent_all_by(4, node_str));
@@ -928,9 +1017,13 @@ pub fn structure_def_string(
     typedefs: &TypedefMap,
     t: &StructureType,
 ) -> Result<String> {
+    let scoped_typedefs = extend_typedefs(typedefs, &t.typedefs);
     let mut out = String::new();
     if let Some(byte_size) = t.byte_size {
         writeln!(out, "// total size: {byte_size:#X}")?;
+    }
+    if let Some(comment) = decl_comment(&t.decl) {
+        writeln!(out, "{comment}")?;
     }
     match t.kind {
         StructureKind::Struct => out.push_str("struct"),
@@ -973,7 +1066,7 @@ pub fn structure_def_string(
             writeln!(
                 out,
                 "{};",
-                indent_all_by(4, &ud_type_def(info, typedefs, inner_type, false)?)
+                &indent_all_by(4, &ud_type_def(info, &scoped_typedefs, inner_type, false)?)
             )?;
         }
     }
@@ -981,7 +1074,11 @@ pub fn structure_def_string(
     if !t.typedefs.is_empty() {
         writeln!(out, "\n    // Typedefs")?;
         for typedef in &t.typedefs {
-            writeln!(out, "{}", indent_all_by(4, &typedef_string(info, typedefs, typedef)?))?;
+            writeln!(
+                out,
+                "{}",
+                &indent_all_by(4, &typedef_string(info, &scoped_typedefs, typedef)?)
+            )?;
         }
     }
 
@@ -993,7 +1090,10 @@ pub fn structure_def_string(
             writeln!(
                 out,
                 "{}",
-                indent_all_by(4, member_subroutine_def_string(info, typedefs, member_function)?)
+                indent_all_by(
+                    4,
+                    member_subroutine_def_string(info, &scoped_typedefs, member_function)?
+                )
             )?;
 
             if i + 1 < len {
@@ -1005,7 +1105,10 @@ pub fn structure_def_string(
     if !t.static_members.is_empty() {
         writeln!(out, "\n    // Static members")?;
         for static_member in &t.static_members {
-            let line = format!("static {}", variable_string(info, typedefs, static_member, true)?);
+            let line = format!(
+                "static {}",
+                variable_string(info, &scoped_typedefs, static_member, true)?
+            );
             writeln!(out, "{}", indent_all_by(4, &line))?;
         }
     }
@@ -1066,7 +1169,7 @@ pub fn structure_def_string(
             }
         }
         let mut var_out = String::new();
-        let ts = type_string(info, typedefs, &member.kind, true)?;
+        let ts = type_string(info, &scoped_typedefs, &member.kind, true)?;
         if let Some(name) = &member.name {
             write!(var_out, "{} {}{}", ts.prefix, name, ts.suffix)?;
         } else {
@@ -1076,7 +1179,11 @@ pub fn structure_def_string(
             write!(var_out, " : {}", bit.bit_size)?;
         }
         let size = if let Some(size) = member.byte_size { size } else { member.kind.size(info)? };
-        writeln!(var_out, "; // offset {:#X}, size {:#X}", member.offset, size)?;
+        write!(var_out, "; // offset {:#X}, size {:#X}", member.offset, size)?;
+        if let Some(comment) = decl_comment(&member.decl) {
+            write!(var_out, ", {}", comment.trim_start_matches("// "))?;
+        }
+        writeln!(var_out)?;
         out.push_str(&indent_all_by(indent, var_out));
     }
     while in_group > 0 {
@@ -1094,34 +1201,57 @@ pub fn structure_def_string(
 }
 
 pub fn enum_def_string(t: &EnumerationType) -> Result<String> {
-    let mut out = match t.name.as_ref() {
+    let mut out = String::new();
+    if let Some(comment) = decl_comment(&t.decl) {
+        writeln!(out, "{comment}")?;
+    }
+    let header = match t.name.as_ref() {
         Some(name) => {
             if name.starts_with('@') {
-                format!("enum /* {name} */ {{\n")
+                format!("enum /* {name} */")
             } else {
-                format!("enum {name} {{\n")
+                format!("enum {name}")
             }
         }
-        None => "enum {\n".to_string(),
+        None => "enum".to_string(),
     };
+    if t.byte_size.is_none() {
+        out.push_str(&header);
+        return Ok(out);
+    }
+    out.push_str(&format!("{header} {{\n"));
     for member in t.members.iter() {
-        writeln!(out, "    {} = {},", member.name, member.value)?;
+        write!(out, "    {} = {}", member.name, member.value)?;
+        write!(out, ",")?;
+        if let Some(comment) = decl_comment(&member.decl) {
+            write!(out, " {comment}")?;
+        }
+        writeln!(out)?;
     }
     write!(out, "}}")?;
     Ok(out)
 }
 
 pub fn union_def_string(info: &DwarfInfo, typedefs: &TypedefMap, t: &UnionType) -> Result<String> {
-    let mut out = match t.name.as_ref() {
+    let mut out = String::new();
+    if let Some(comment) = decl_comment(&t.decl) {
+        writeln!(out, "{comment}")?;
+    }
+    let header = match t.name.as_ref() {
         Some(name) => {
             if name.starts_with('@') {
-                format!("union /* {name} */ {{\n")
+                format!("union /* {name} */")
             } else {
-                format!("union {name} {{\n")
+                format!("union {name}")
             }
         }
-        None => "union {\n".to_string(),
+        None => "union".to_string(),
     };
+    if t.byte_size.is_none() {
+        out.push_str(&header);
+        return Ok(out);
+    }
+    out.push_str(&format!("{header} {{\n"));
     let mut var_out = String::new();
     for member in t.members.iter() {
         let ts = type_string(info, typedefs, &member.kind, true)?;
@@ -1132,6 +1262,9 @@ pub fn union_def_string(info: &DwarfInfo, typedefs: &TypedefMap, t: &UnionType) 
         }
         let size = if let Some(size) = member.byte_size { size } else { member.kind.size(info)? };
         write!(var_out, " // offset {:#X}, size {:#X}", member.offset, size)?;
+        if let Some(comment) = decl_comment(&member.decl) {
+            write!(var_out, ", {}", comment.trim_start_matches("// "))?;
+        }
         writeln!(var_out)?;
     }
     write!(out, "{}", indent_all_by(4, var_out))?;
@@ -1160,9 +1293,14 @@ pub fn tag_type_string(
     }
 }
 
-fn typedef_string(info: &DwarfInfo, typedefs: &TypedefMap, typedef: &TypedefTag) -> Result<String> {
-    let ts = type_string(info, typedefs, &typedef.kind, true)?;
-    Ok(format!("typedef {} {}{};", ts.prefix, typedef.name, ts.suffix))
+fn typedef_string(info: &DwarfInfo, _typedefs: &TypedefMap, typedef: &TypedefTag) -> Result<String> {
+    let ts = type_string_without_typedefs(info, &typedef.kind, true)?;
+    let mut out = format!("typedef {} {}{};", ts.prefix, typedef.name, ts.suffix);
+    if let Some(comment) = decl_comment(&typedef.decl) {
+        out.push(' ');
+        out.push_str(&comment);
+    }
+    Ok(out)
 }
 
 fn variable_string(
@@ -1184,6 +1322,12 @@ fn variable_string(
         if let Some(addr) = variable.address {
             out.push_str(&format!(", address: {addr:#X}"));
         }
+        if let Some(comment) = decl_comment(&variable.decl) {
+            out.push_str(&format!(", {}", comment.trim_start_matches("// ")));
+        }
+    } else if let Some(comment) = decl_comment(&variable.decl) {
+        out.push(' ');
+        out.push_str(&comment);
     }
     Ok(out)
 }

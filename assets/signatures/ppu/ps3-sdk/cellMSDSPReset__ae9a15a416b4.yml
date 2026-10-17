@@ -1,0 +1,298 @@
+- symbol: 0
+  hash: 5542ec8ab7a11bec47773c731f5a70991aa4bfd3
+  signature: gWIAAP//AAB8CAKm//////gh/1H/////+6EAmP/////4AQDA/////4gLAAD/////L4AAAf////9BngAY/////4CCAAD//wAAgGIAAP//AABIAAAB/AAAA+hBACj/////SAAAAP////+BYgAA//8AAIALAAD/////L4AAAP////9AngB0/////4OiAAD//wAAOIAAAP////85YAC+/////2CE/f7/////gH0AAP////9EAAAC/////4FiAAD//wAAgAsAAP////8vgAAA/////0CeAHT/////g6IAAP//AAA4gQBw/////zigAAD/////OWAAgv////+AfQAA/////0QAAAL/////+IEAcP/////4oQB4//////jBAID/////+OEAiP////84YAAA/////0gAAAH8AAADYAAAAP/////oAQDA/////+uhAJj/////OCEAsP////98CAOm/////06AACD/////gSIAAP//AAA4AAAA/////4FiAAD//wAAYAD9/v////+AYgAA//8AAJALAAD/////gIkAAP////9IAAAB/AAAA+hBACj/////S///hP////+AggAA//8AADigAAH/////gGIAAP//AABIAAAB/AAAA+hBACj/////S///pP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSDSPReset
+    size: 244
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0022'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0028'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@0036'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00B6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00BE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00C6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._cellSpursSendSignal
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@00DE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00E6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellSpursEventFlagWait
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 34
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 38
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 40
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 54
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 70
+    kind: l
+    symbol: 6
+    addend: -14104088
+  - offset: 94
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 110
+    kind: l
+    symbol: 7
+    addend: -14104088
+  - offset: 152
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 182
+    kind: l
+    symbol: 9
+    addend: -14104088
+  - offset: 190
+    kind: l
+    symbol: 10
+    addend: -14104088
+  - offset: 198
+    kind: l
+    symbol: 11
+    addend: -14104088
+  - offset: 208
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 222
+    kind: l
+    symbol: 13
+    addend: -14104088
+  - offset: 230
+    kind: l
+    symbol: 14
+    addend: -14104088
+  - offset: 232
+    kind: rel24
+    symbol: 15
+    addend: 0
+- symbol: 0
+  hash: 2d69afe29a625530ce37b66e373109cf2668cf72
+  signature: gWIAAP//AAB8CAKm//////gh/1H/////+6EAmP/////4AQDA/////4gLAAD/////L4AAAf////9BngAY/////4CCAAD//wAAgGIAAP//AABIAAAB/AAAA2AAAAD/////SAAAAP////+BYgAA//8AAIALAAD/////L4AAAP////9AngB0/////4OiAAD//wAAOIAAAP////85YAC+/////2CE/f7/////gH0AAP////9EAAAC/////4FiAAD//wAAgAsAAP////8vgAAA/////0CeAHT/////g6IAAP//AAA4gQBw/////zigAAD/////OWAAgv////+AfQAA/////0QAAAL/////+IEAcP/////4oQB4//////jBAID/////+OEAiP////84YAAA/////0gAAAH8AAADYAAAAP/////oAQDA/////+uhAJj/////OCEAsP////98CAOm/////06AACD/////gSIAAP//AAA4AAAA/////4FiAAD//wAAYAD9/v////+AYgAA//8AAJALAAD/////gIkAAP////9IAAAB/AAAA+hBACj/////S///hP////+AggAA//8AADigAAH/////gGIAAP//AABIAAAB/AAAA+hBACj/////S///pP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSDSPReset
+    size: 244
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0022'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0036'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00B6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00BE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00C6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._cellSpursSendSignal
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@00DE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00E6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellSpursEventFlagWait
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 34
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 38
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 40
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 54
+    kind: l
+    symbol: 5
+    addend: -6468872
+  - offset: 70
+    kind: l
+    symbol: 6
+    addend: -6468872
+  - offset: 94
+    kind: l
+    symbol: 5
+    addend: -6468872
+  - offset: 110
+    kind: l
+    symbol: 7
+    addend: -6468872
+  - offset: 152
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 182
+    kind: l
+    symbol: 9
+    addend: -6468872
+  - offset: 190
+    kind: l
+    symbol: 10
+    addend: -6468872
+  - offset: 198
+    kind: l
+    symbol: 11
+    addend: -6468872
+  - offset: 208
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 222
+    kind: l
+    symbol: 13
+    addend: -6468872
+  - offset: 230
+    kind: l
+    symbol: 14
+    addend: -6468872
+  - offset: 232
+    kind: rel24
+    symbol: 15
+    addend: 0

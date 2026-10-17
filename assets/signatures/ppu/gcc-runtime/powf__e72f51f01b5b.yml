@@ -1,0 +1,817 @@
+- symbol: 0
+  hash: 3cf11dfb782e37b3e0a780fd72b093df617cd2f7
+  signature: fYAAJv/////4If8x/////ziBAQD/////+8EAsP////84YQBw/////9vhAMj/////O8EAeP/////74QC4///////gEJD/////0CEBAP/////QQQB4/////9vBAMD/////+4EAoP/////7oQCo/////5GBANj/////fAgCpv/////4AQDg/////0gAAAH8AAADYAAAAP////98fxt4/////ziAAAD/////f8PzeP////9IAAAB/AAAA2AAAAD/////LiMAAP////9AkgAQ/////8ACAAD//wAA/58AAP////9BngDY/////y+fAAD/////QZwBjP////8vnwAC/////0GeAGz/////L4MAAv////9BngAw/////y+fAAH/////QZ4CpP////8vgwAB/////0GeAsz/////0+EAkP////+AAQCQ/////1QAhCD/////L4AAAP////9AngEM/////0GSAND/////w+IAAP//AADoAQDg//////wg+JD/////gYEA2P/////rgQCg/////3wIA6b/////66EAqP////99kIEg/////+vBALD/////6+EAuP/////LwQDA/////8vhAMj/////OCEA0P////9OgAAg/////+gBAOD/////gYEA2P/////D4QEA/////3wIA6b//////CD4kP/////rgQCg/////+uhAKj/////fZCBIP/////rwQCw/////+vhALj/////y8EAwP/////L4QDI/////zghAND/////ToAAIP/////BoQEA/////8ACAAD//wAA/40AAP////9BngAY/////y+DAAH/////QJ4A2P/////AAgAA//8AAP+NAAD/////QJ4CJP/////oAQDg/////4GBANj/////w+IAAP//AAB8CAOm//////wg+JD/////64EAoP/////roQCo/////32QgSD/////68EAsP/////r4QC4/////8vBAMD/////y+EAyP////84IQDQ/////06AACD/////f8PzeP////84gP///////0gAAAH8AAADYAAAAP////8vgwAA/////0Cc/yD/////oAEBAP////94CYvC/////ywpAAD/////QYL/EP////+BIgAA//8AAMAJAAD//////+AAUP////9L//8E/////zxgBAD/////SAAAAfwAAANgAAAA/////0GSAkz/////gSIAAP//AADD6QAA/////+gBAOD//////CD4kP////+BgQDY/////+uBAKD/////fAgDpv/////roQCo/////32QgSD/////68EAsP/////r4QC4/////8vBAMD/////y+EAyP////84IQDQ/////06AACD/////oSEAcP////8viQAB/////0Ge/xj/////LwMAAP////9Bmf5w/////8GhAQD/////0aEAkP////+AAQCQ/////1QAhCD/////L4AAAP////9BngAI/////0GYBFT/////wYIAAP//AAA7oAAA//////+NYAD/////QJ0DtP/////AAgAA//8AAP+NAAD/////QJwAGP/////trWgq/////zgJ////////fAkDeP////+wAQBw/////9GhAQD/////wAIAAP//AAD/nwAA/////9GBAHT/////T9zzgv////9AngI0/////30gBzT/////L4AAAP////9BnAJM/////y+gAAD/////QJ4CXP////87wAAA/////zvgAAD/////O4EAdP/////BYgAA//8AAMGhAQD//////ABYkP//////jVgA/////0GeAaz/////e8AFYP////9/ya52/////y+gAAD/////OSkAAf////9BngAU/////yupAAL/////QZwADP////9/3gJ4/////2PeCAD/////+8EAmP/////JgQCY//////2AZpz//////ABgGP/////BggAA//8AAOwfACj//////4BgAP/////QAQB4/////0CeAtT//////CBokP////9/yf5w//////wAWJD/////fSDyeP////98CQBQ/////3wLBzT/////VWkH/v////99YA5w/////y+JAAD/////fAsHNP////8vKwAA/////0GeAAj/////7AAAcv////9BmgEc/////+whAHL/////S///3P////+gAQEA/////3gJi8L/////LCkAAP////9AggBU/////9PhAJD/////gAEAkP////9UAIQg/////y+AAAD/////QJ79YP////+BIgAA//8AAMPpAAD/////S//+cP////+hIQBw/////9PhAJD/////gAEAkP////9UAIQg/////y+AAAD/////QJ4AWP////99IAc0/////y+AAAD/////QJ39MP////+BIgAA//8AAMPpAAD/////S//+QP/////T4QCQ/////4ABAJD/////VACEIP////8vgAAA/////0GeAED/////QJL9DP////9/w/N4/////ziA////////SAAAAfwAAANgAAAA/////y+DAAD/////QJz89P////+BIgAA//8AAMPpAAD/////S//87P////99IAc0/////y+AAAD/////QJ398P/////D4gAA//8AAEv//Nj/////QJL95P////9/w/N4/////ziA////////SAAAAfwAAANgAAAA/////y+DAAD/////QJz9zP////+BIgAA//8AAMAJAAD//////+AAUP////9L//ys/////3/D83j/////OID///////9IAAAB/AAAA2AAAAD/////L4MAAP////9AnP2k/////6ABAQD/////eAmLwv////8sKQAA/////0CC/8z/////gSIAAP//AADD6QAA/////0v//ZD//////59gAP/////QIQB4/////0CcAAj/////7AsAJP/////8IACQ/////3+D43j/////f+X7eP////9IAAAB/AAAA2AAAAD/////L4MAAP////9BnAAo/////8PCAAD//wAA/5/wAP////9BnAE4/////zxgEAD/////SAAAAfwAAANgAAAA/////4EiAAD//wAAwAkAAP/////QAQB0/////y+9AAD/////QZ4ARP/////AAQB0///////gAFD/////S//8FP/////AAgAA//8AAP+fAAD/////T93zgv////9AngBA/////30gBzT/////L4AAAP////9BnAAk/////y+gAAD/////QZ79xP////87wAAA/////zvgAOX/////O4EAdP////9L//3A/////8PhAHT/////S//72P////87wAAA/////zvg/xv/////O4EAdP////9L//2o/////30gBzT/////eAsFYP////98Ca52/////y+rAAD/////OSkAAf////9BngAU/////yupAAL/////QZwADP////98AFp4/////2AACAD/////+AEAmP////87gQB0/////8gBAJj//////AAGnP//////wAAY/////+wfB7L//////aAAkP/////QAQB0//////wAaB7/////2AEAgP////+AAQCE/////3weB7T/////L74AAP////9AngDQ/////8GhAHT/////L57/G//////AAgAA//8AADvg/xv/////7a0AMv/////RoQB0/////0CdABj/////L54A5f////9/wPN4/////0CdAAj/////OAAA5f////98Hwc0//////wA+JD//////AAAHv/////YAQCA/////4ABAIT/////fB4HNP////8vnv+B/////0GcAAz/////L54Af/////9Anfz0/////zvAAAD/////S//87P////88YAgA/////0gAAAH8AAADYAAAAP/////TwQB0/////0v//tT//////CBokP////84gAAA/////0gAAAH8AAADYAAAAP/////BoQB0/////8ABAHj/////7CFoOv/////BYgAA//8AAMGCAAD//wAAwaEBAP/////QIQB0/////0v//QT//////aBoUP////9/w/N4/////ziA////////0aEBAP////9IAAAB/AAAA2AAAAD/////fH0beP////+hIQBw/////8GCAAD//wAAwaEBAP////9L//wo/////ziAABD/////0+EAdP////9/g+N4/////0gAAAH8AAADYAAAAP////97wAVg/////3/Jrnb/////waEAdP////8voAAA/////+2eA3L/////OSkAAf////9BngAU/////yupAAL/////QZwADP////9/3gJ4/////2PeCAD/////+8EAmP/////tv2go/////8lhAJj//////WBenP/////8AFgY/////+wMACj/////7b4Dev/////RoQB0/////0v//tT/////PGAgAP////9IAAAB/AAAA2AAAAD/////gSIAAP//AADD6QAA/////0v/+iD/////
+  symbols:
+  - kind: Function
+    name: .powf
+    size: 1692
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDunscale
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDint
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@012A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@013E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0152'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01AA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Feraise
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@01CA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0246'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0266'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._FExp
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@04AA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@055E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._FLog
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0692'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 68
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 88
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 106
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 182
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 298
+    kind: l
+    symbol: 4
+    addend: -10216440
+  - offset: 318
+    kind: l
+    symbol: 5
+    addend: -10216440
+  - offset: 338
+    kind: l
+    symbol: 6
+    addend: -10216440
+  - offset: 392
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 426
+    kind: l
+    symbol: 7
+    addend: -10216440
+  - offset: 444
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 458
+    kind: l
+    symbol: 9
+    addend: -10216440
+  - offset: 566
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 582
+    kind: l
+    symbol: 10
+    addend: -10216440
+  - offset: 614
+    kind: l
+    symbol: 11
+    addend: -10216440
+  - offset: 666
+    kind: l
+    symbol: 6
+    addend: -10216440
+  - offset: 738
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 858
+    kind: l
+    symbol: 9
+    addend: -10216440
+  - offset: 906
+    kind: l
+    symbol: 9
+    addend: -10216440
+  - offset: 948
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 966
+    kind: l
+    symbol: 7
+    addend: -10216440
+  - offset: 990
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 1008
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 1026
+    kind: l
+    symbol: 9
+    addend: -10216440
+  - offset: 1048
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 1082
+    kind: l
+    symbol: 9
+    addend: -10216440
+  - offset: 1120
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 1138
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 1152
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 1162
+    kind: l
+    symbol: 9
+    addend: -10216440
+  - offset: 1194
+    kind: l
+    symbol: 13
+    addend: -10216440
+  - offset: 1374
+    kind: l
+    symbol: 14
+    addend: -10216440
+  - offset: 1460
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 1484
+    kind: rel24
+    symbol: 15
+    addend: 0
+  - offset: 1506
+    kind: l
+    symbol: 6
+    addend: -10216440
+  - offset: 1510
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 1540
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 1558
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 1580
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 1672
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 1682
+    kind: l
+    symbol: 16
+    addend: -10216440
+- symbol: 0
+  hash: 6ba363e91442e2d0796ad51135f69e595d2046a9
+  signature: +CH/Mf////98CAKm/////ziBAQD/////2+EAyP////84YQBw///////gEJD/////+6EAqP////87oQB4/////9AhAQD/////+8EAsP/////74QC4//////gBAOD/////0EEAeP/////bwQDA//////uBAKD/////SAAAAfwAAANgAAAA/////3x+G3j/////OIAAAP////9/o+t4/////0gAAAH8AAADYAAAAP////98fwc0/////y+fAAD/////QJ4AEP/////AAgAA//8AAP+fAAD/////QZ4A0P////9/wwc0/////y+DAAD/////QZwBcP////8vgwAC/////0GeAGj/////L58AAv////9BngA0/////y+DAAH/////QZ4CcP////8vnwAB/////0GeApT/////0+EAkP////+AAQCQ/////1QAhCD/////L4AAAP////9AngD0/////y+fAAD/////QZ4AuP/////D4gAA//8AAOgBAOD//////CD4kP/////rgQCg/////+uhAKj/////fAgDpv/////rwQCw/////+vhALj/////y8EAwP/////L4QDI/////zghAND/////ToAAIP/////oAQDg/////8PhAQD//////CD4kP/////rgQCg/////+uhAKj/////fAgDpv/////rwQCw/////+vhALj/////y8EAwP/////L4QDI/////zghAND/////ToAAIP/////BoQEA/////8ACAAD//wAA/40AAP////9BngAY/////y+fAAH/////QJ4AyP/////AAgAA//8AAP+NAAD/////QJ4B+P/////oAQDg/////8PiAAD//wAA/CD4kP/////rgQCg/////+uhAKj/////fAgDpv/////rwQCw/////+vhALj/////y8EAwP/////L4QDI/////zghAND/////ToAAIP////9/o+t4/////ziA////////SAAAAfwAAANgAAAA/////3xjBzT/////L4MAAP////9AnP80/////6ABAQD/////eAmLwv////8sKQAA/////0CCAfz/////w+IAAP//AABL//8g/////zxgBAD/////SAAAAfwAAANgAAAA/////y+fAAD/////QZ4CjP////+BIgAA//8AAOgBAOD/////64EAoP/////roQCo/////3wIA6b/////68EAsP/////D6QAA//////wg+JD/////6+EAuP/////LwQDA/////8vhAMj/////OCEA0P////9OgAAg/////6EhAHD/////L4kAAf////9Bnv8o/////y+fAAD/////QZ3+jP/////BgQEA/////9GBAJD/////gAEAkP////9UAIQg/////y+AAAD/////QZ4ADP////8vnwAA/////0CeAzT/////wAIAAP//AAA7gAAA//////+MAAD/////QJ0DdP/////AAgAA//8AAP+MAAD/////QJwAGP/////sDGAq/////zgJ////////fAkDeP////+wAQBw/////9ABAQD/////wAIAAP//AAA4AAAA//////+fAAD/////kAEAdP////9P3POC/////0CeAgz/////fSAHNP////8sAAAA/////0GAAiD/////QYICRP////84AAAA/////zvA/xv/////O6EAdP/////DwgAA//8AAMGBAQD//////aDwkP//////jPAA/////0GeAWz/////fB8HNP/////BogAA//8AAH/gB7T/////+AEAmP/////JYQCY//////1gXpz//////ABYGP/////sHwAo//////+AaAD/////0AEAeP////9AngKo//////wgYJD/////f+D+cP/////9oPCQ/////3wL+nj/////fWBYUP////99aQc0/////1VgB/7/////VSv4fv////8vgAAA/////31pBzT/////LwkAAP////9BngAI/////+2tAHL/////QZoA9P/////sIQBy/////0v//9z/////oAEBAP////94CYvC/////ywpAAD/////QIIATP/////T4QCQ/////4ABAJD/////w+IAAP//AABUAIQg/////y+AAAD/////QZ7+kP////9L//2U/////6EhAHD/////0+EAkP////+AAQCQ/////1QAhCD/////L4AAAP////9AngBg/////30gBzT/////w+IAAP//AAAvgAAA/////0Gd/mT/////S//9aP/////T4QCQ/////4ABAJD/////VACEIP////8vgAAA/////0GeAEz/////L58AAP////9Anv1I/////3+j63j/////OID///////9IAAAB/AAAA2AAAAD/////fGMHNP////8vgwAA/////0Cc/Sz/////gSIAAP//AADACQAA///////gAFD/////S//9IP////99IAc0/////8PiAAD//wAAL4AAAP////9Bnf0Q/////0v//gT/////L58AAP////9Anv38/////3+j63j/////OID///////9IAAAB/AAAA2AAAAD/////fGMHNP////8vgwAA/////0Cc/eD/////gSIAAP//AADACQAA///////gAFD/////S//82P/////AAgAA//8AAP+fAAD/////0CEAeP////9AnAAI/////+2+aCT//////CBokP////9/o+t4/////3/FBzT/////SAAAAfwAAANgAAAA/////3xjBzT/////L4MAAP////9BngCM/////y+DAAH/////QZ4BbP////9/gAc0/////y+AAAD/////QZ4AcP/////AAQB0///////gAFD/////S//8hP////9/o+t4/////ziA////////SAAAAfwAAANgAAAA/////3xjBzT/////L4MAAP////9AnP1g/////6ABAQD/////eAmLwv////8sKQAA/////0GC/VD/////S///cP/////AAgAA//8AAP+fAAD/////T93zgv////9AngBM/////30gBzT/////LAAAAP////9BgP3w/////0GCACz/////OAAAAP////87wADl/////zuhAHT/////S//96P/////D4QB0/////0v//Bz/////PGAIAP////9IAAAB/AAAA2AAAAD/////S///dP////84AAAA/////zvAAAD/////O6EAdP////9L//3A/////30gBzT/////OSEAgP/////4AQCY/////8gBAJj//////AAGnP//////wAAY/////+2/B7L//////ABokP/////8AAAe/////3wAT67/////g+EAgP////8vnwAA/////0CeAND/////wAIAAP//AAA7oQB0/////+wNADL/////0AEAdP////8vnwDl/////3/g+3j/////QJ0ACP////84AADl/////3weA3j//////AD4kP////85IQCA//////wAAB7/////fABPrv////+gAQCC/////3wJBzT/////L4n/gf////9BnAAM/////y+JAH//////QJ39QP////84AAAA/////0v//Tj/////PGAgAP////9IAAAB/AAAA2AAAAD/////gSIAAP//AADD6QAA/////0v/+1z//////CBgkP////84gAAA/////0gAAAH8AAADYAAAAP/////BoQB0/////8ABAHj/////7CFoOv/////BgQEA/////9AhAHT/////S//9OP////88YBAA/////0gAAAH8AAADYAAAAP////9L//6M//////wAYFD/////f6PreP////84gP///////9ABAQD/////SAAAAfwAAANgAAAA/////6EhAHD/////fHwbeP/////BgQEA/////0v//Gz/////O6EAdP/////T4QB0/////ziAABD/////f6PreP////87wP8b/////0gAAAH8AAADYAAAAP////9/4Ae0/////8GhAHT/////+AEAmP/////sH2go/////8lhAJj/////L5//G//////9YF6c//////2AWBj/////wWIAAP//AADtvmN4/////+weaDr/////7AAC8v/////QAQB0/////0Cd/wj/////S//+8P////8=
+  symbols:
+  - kind: Function
+    name: .powf
+    size: 1564
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDunscale
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDint
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0066'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@011E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0132'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0142'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Feraise
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@01B6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@022E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@024E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0392'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._FExp
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@046E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@04FA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@055A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._FLog
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 60
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 80
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 102
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 186
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 286
+    kind: l
+    symbol: 4
+    addend: -28621288
+  - offset: 306
+    kind: l
+    symbol: 5
+    addend: -28621288
+  - offset: 322
+    kind: l
+    symbol: 6
+    addend: -28621288
+  - offset: 372
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 410
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 420
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 438
+    kind: l
+    symbol: 8
+    addend: -28621288
+  - offset: 542
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 558
+    kind: l
+    symbol: 9
+    addend: -28621288
+  - offset: 590
+    kind: l
+    symbol: 10
+    addend: -28621288
+  - offset: 642
+    kind: l
+    symbol: 6
+    addend: -28621288
+  - offset: 666
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 794
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 842
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 892
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 914
+    kind: l
+    symbol: 11
+    addend: -28621288
+  - offset: 934
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 964
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 986
+    kind: l
+    symbol: 8
+    addend: -28621288
+  - offset: 1002
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 1032
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 1092
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 1134
+    kind: l
+    symbol: 13
+    addend: -28621288
+  - offset: 1192
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 1274
+    kind: l
+    symbol: 14
+    addend: -28621288
+  - offset: 1360
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 1370
+    kind: l
+    symbol: 15
+    addend: -28621288
+  - offset: 1388
+    kind: rel24
+    symbol: 16
+    addend: 0
+  - offset: 1424
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 1452
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 1496
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 1538
+    kind: l
+    symbol: 14
+    addend: -28621288
+- symbol: 0
+  hash: 6eae07ea86d180f671c4ab194bf282cab942d42f
+  signature: fYAAJv/////4If8x/////ziBAQD/////+8EAsP////84YQBw/////9vhAMj/////O8EAeP/////74QC4///////gEJD/////0CEBAP/////QQQB4/////9vBAMD/////+4EAoP/////7oQCo/////5GBANj/////fAgCpv/////4AQDg/////0gAAAH8AAADYAAAAP////98fxt4/////ziAAAD/////f8PzeP////9IAAAB/AAAA+hBACj/////LiMAAP////9AkgAQ/////8ACAAD//wAA/58AAP////9BngDY/////y+fAAD/////QZwBhP////8vnwAC/////0GeAGz/////L4MAAv////9BngAw/////y+fAAH/////QZ4CnP////8vgwAB/////0GeAsT/////0+EAkP////+AAQCQ/////1QAhCD/////L4AAAP////9AngEE/////0GSAND/////w+IAAP//AADoAQDg//////wg+JD/////gYEA2P/////rgQCg/////3wIA6b/////66EAqP////99kIEg/////+vBALD/////6+EAuP/////LwQDA/////8vhAMj/////OCEA0P////9OgAAg/////+gBAOD/////gYEA2P/////D4QEA/////3wIA6b//////CD4kP/////rgQCg/////+uhAKj/////fZCBIP/////rwQCw/////+vhALj/////y8EAwP/////L4QDI/////zghAND/////ToAAIP/////BoQEA/////8ACAAD//wAA/40AAP////9BngAY/////y+DAAH/////QJ4A0P/////AAgAA//8AAP+NAAD/////QJ4CHP/////oAQDg/////4GBANj/////w+IAAP//AAB8CAOm//////wg+JD/////64EAoP/////roQCo/////32QgSD/////68EAsP/////r4QC4/////8vBAMD/////y+EAyP////84IQDQ/////06AACD/////f8PzeP////84gP///////0gAAAH8AAAD6EEAKP////8vgwAA/////0Cc/yD/////oAEBAP////94CYvC/////ywpAAD/////QIICGP/////D4gAA//8AAEv//wz/////PGAEAP////9IAAAB/AAAA+hBACj/////QZICUP////+BIgAA//8AAMPpAAD/////6AEA4P/////8IPiQ/////4GBANj/////64EAoP////98CAOm/////+uhAKj/////fZCBIP/////rwQCw/////+vhALj/////y8EAwP/////L4QDI/////zghAND/////ToAAIP////+hIQBw/////y+JAAH/////QZ7/IP////8vAwAA/////0GZ/nj/////wYEBAP/////RgQCQ/////4ABAJD/////VACEIP////8vgAAA/////0GeAAj/////QZgESP/////AQgAA//8AADugAAD//////4wQAP////9AnQOo/////8ACAAD//wAA/4wAAP////9AnAAY/////+2MYCr/////OAn///////98CQN4/////7ABAHD/////0YEBAP/////AAgAA//8AAP+fAAD/////0EEAdP////9P3POC/////0CeAhz/////fSAHNP////8vgAAA/////0GcAjT/////L6AAAP////9AngMQ/////zvAAAD/////O+AAAP////87gQB0/////8FiAAD//wAAwYEBAP/////8AFiQ//////+MWAD/////QZ4BsP////97wAVg/////3/Jrnb/////L6AAAP////85KQAB/////0GeABT/////K6kAAv////9BnAAM/////3/eAnj/////Y94IAP/////7wQCY/////8mhAJj//////aBunP/////AQgAA//8AAPwAaBj/////7B8AKP//////gBAA/////9ABAHj/////QJ4CuP/////8IGCQ/////3/J/nD//////ABYkP////99IPJ4/////3wJAFD/////fAsHNP////9VaQf+/////31gDnD/////L4kAAP////98Cwc0/////y8rAAD/////QZ4ACP/////sAABy/////0GaASD/////7CEAcv////9L///c/////6ABAQD/////eAmLwv////8sKQAA/////0CCAFT/////0+EAkP////+AAQCQ/////1QAhCD/////L4AAAP////9Anv1o/////4EiAAD//wAAw+kAAP////9L//5w/////6EhAHD/////0+EAkP////+AAQCQ/////1QAhCD/////L4AAAP////9AngBc/////30gBzT/////L4AAAP////9Anf04/////4EiAAD//wAAw+kAAP////9L//5A/////9PhAJD/////gAEAkP////9UAIQg/////y+AAAD/////QZ4ARP////9Akv0U/////3/D83j/////OID///////9IAAAB/AAAA+hBACj/////L4MAAP////9AnPz8/////4EiAAD//wAAwAkAAP//////4ABQ/////0v//PD/////fSAHNP////8vgAAA/////0Cd/ez/////w+IAAP//AABL//zc/////0CS/eD/////f8PzeP////84gP///////0gAAAH8AAAD6EEAKP////8vgwAA/////0Cc/cj/////gSIAAP//AADACQAA///////gAFD/////S//8sP////9/w/N4/////ziA////////SAAAAfwAAAPoQQAo/////y+DAAD/////QJz9oP////+gAQEA/////3gJi8L/////LCkAAP////9Agv/M/////4EiAAD//wAAw+kAAP////9L//2M//////+fEAD/////0CEAeP////9AnAAI/////+wLACT//////CAAkP////9/g+N4/////3/l+3j/////SAAAAfwAAANgAAAA/////y+DAAD/////QZ4AXP////8vgwAB/////0GeAWD/////L70AAP////9BngBE/////8ABAHT//////+AAUP////9L//w0/////8ACAAD//wAA/58AAP////9P3fOC/////0CeAED/////fSAHNP////8vgAAA/////0GcAPD/////L6AAAP////9Bnv3c/////zvAAAD/////O+AA5f////87gQB0/////0v//dj/////w+EAdP////9L//v4/////zxgCAD/////SAAAAfwAAAPoQQAo/////0v//6T/////fSAHNP////94CwVg/////3wJrnb/////L6sAAP////85KQAB/////0GeABT/////K6kAAv////9BnAAM/////3wAWnj/////YAAIAP/////4AQCY/////zuBAHT/////yAEAmP/////8AAac///////AABj/////7B8Hsv/////9oACQ/////9ABAHT//////ABoHv/////YAQCA/////4ABAIT/////fB4HtP////8vvgAA/////0CeANz/////waEAdP////8vnv8b/////8ACAAD//wAAO+D/G//////trQAy/////9GhAHT/////QJ0AGP////8vngDl/////3/A83j/////QJ0ACP////84AADl/////3wfBzT//////AD4kP/////8AAAe/////9gBAID/////gAEAhP////98Hgc0/////y+e/4H/////QZwADP////8vngB//////0Cd/Qz/////O8AAAP////9L//0E/////zvAAAD/////O+D/G/////87gQB0/////0v//PT//////CBgkP////84gAAA/////0gAAAH8AAAD6EEAKP/////BoQB0/////8ABAHj/////7CFoOv/////BYgAA//8AAMBCAAD//wAAwYEBAP/////QIQB0/////0v//SD/////PGAQAP////9IAAAB/AAAA+hBACj/////S//+mP/////9gGBQ/////3/D83j/////OID////////RgQEA/////0gAAAH8AAAD6EEAKP////98fRt4/////6EhAHD/////wEIAAP//AADBgQEA/////0v//DT/////OIAAEP/////T4QB0/////3+D43j/////SAAAAfwAAAPoQQAo/////3vABWD/////f8mudv/////BoQB0/////y+gAAD/////7Z4Dcv////85KQAB/////0GeABT/////K6kAAv////9BnAAM/////3/eAnj/////Y94IAP/////7wQCY/////+2/aCj/////yWEAmP/////9YF6c//////wAWBj/////7AwAKP/////tvgN6/////9GhAHT/////S//+yP////88YCAA/////0gAAAH8AAAD6EEAKP////+BIgAA//8AAMPpAAD/////S//6NP////8=
+  symbols:
+  - kind: Function
+    name: .powf
+    size: 1672
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDunscale
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0058'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@012A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@013E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0152'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01B4'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@01C2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@023E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@025E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@03BE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._FExp
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@048A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@053E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@05A8'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@067E'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 68
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 88
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 106
+    kind: l
+    symbol: 3
+    addend: -14169624
+  - offset: 182
+    kind: l
+    symbol: 3
+    addend: -14169624
+  - offset: 298
+    kind: l
+    symbol: 4
+    addend: -14169624
+  - offset: 318
+    kind: l
+    symbol: 5
+    addend: -14169624
+  - offset: 338
+    kind: l
+    symbol: 6
+    addend: -14169624
+  - offset: 392
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 426
+    kind: l
+    symbol: 3
+    addend: -14169624
+  - offset: 436
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 450
+    kind: l
+    symbol: 8
+    addend: -14169624
+  - offset: 558
+    kind: l
+    symbol: 3
+    addend: -14169624
+  - offset: 574
+    kind: l
+    symbol: 9
+    addend: -14169624
+  - offset: 606
+    kind: l
+    symbol: 10
+    addend: -14169624
+  - offset: 658
+    kind: l
+    symbol: 6
+    addend: -14169624
+  - offset: 726
+    kind: l
+    symbol: 3
+    addend: -14169624
+  - offset: 850
+    kind: l
+    symbol: 8
+    addend: -14169624
+  - offset: 898
+    kind: l
+    symbol: 8
+    addend: -14169624
+  - offset: 940
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 958
+    kind: l
+    symbol: 11
+    addend: -14169624
+  - offset: 986
+    kind: l
+    symbol: 3
+    addend: -14169624
+  - offset: 1004
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 1022
+    kind: l
+    symbol: 8
+    addend: -14169624
+  - offset: 1044
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 1078
+    kind: l
+    symbol: 8
+    addend: -14169624
+  - offset: 1116
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 1162
+    kind: l
+    symbol: 13
+    addend: -14169624
+  - offset: 1224
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 1342
+    kind: l
+    symbol: 14
+    addend: -14169624
+  - offset: 1448
+    kind: rel24
+    symbol: 15
+    addend: 0
+  - offset: 1470
+    kind: l
+    symbol: 6
+    addend: -14169624
+  - offset: 1474
+    kind: l
+    symbol: 3
+    addend: -14169624
+  - offset: 1492
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 1520
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 1538
+    kind: l
+    symbol: 3
+    addend: -14169624
+  - offset: 1560
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 1652
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 1662
+    kind: l
+    symbol: 16
+    addend: -14169624
+- symbol: 0
+  hash: d06db562cb978517d66d3cef4cd61170e8af8ab9
+  signature: +CH/Mf////98CAKm/////ziBAQD/////2+EAyP////84YQBw///////gEJD/////+6EAqP////87oQB4/////9AhAQD/////+8EAsP/////74QC4//////gBAOD/////0EEAeP/////bwQDA//////uBAKD/////SAAAAfwAAANgAAAA/////3x+G3j/////OIAAAP////9/o+t4/////0gAAAH8AAADYAAAAP////98fwc0/////y+fAAD/////QJ4AEP/////AAogg//////+fAAD/////QZ4A0P////9/wwc0/////y+DAAD/////QZwBcP////8vgwAC/////0GeAGj/////L58AAv////9BngA0/////y+DAAH/////QZ4CcP////8vnwAB/////0GeApT/////0+EAkP////+AAQCQ/////1QAhCD/////L4AAAP////9AngD0/////y+fAAD/////QZ4AuP/////D4ogg/////+gBAOD//////CD4kP/////rgQCg/////+uhAKj/////fAgDpv/////rwQCw/////+vhALj/////y8EAwP/////L4QDI/////zghAND/////ToAAIP/////oAQDg/////8PhAQD//////CD4kP/////rgQCg/////+uhAKj/////fAgDpv/////rwQCw/////+vhALj/////y8EAwP/////L4QDI/////zghAND/////ToAAIP/////BoQEA/////8ACh/j//////40AAP////9BngAY/////y+fAAH/////QJ4AyP/////AAof8//////+NAAD/////QJ4B+P/////oAQDg/////8PiiBz//////CD4kP/////rgQCg/////+uhAKj/////fAgDpv/////rwQCw/////+vhALj/////y8EAwP/////L4QDI/////zghAND/////ToAAIP////9/o+t4/////ziA////////SAAAAfwAAANgAAAA/////3xjBzT/////L4MAAP////9AnP80/////6ABAQD/////eAmLwv////8sKQAA/////0CCAfz/////w+KIIP////9L//8g/////zxgBAD/////SAAAAfwAAANgAAAA/////y+fAAD/////QZ4CjP////+BIogA/////+gBAOD/////64EAoP/////roQCo/////3wIA6b/////68EAsP/////D6QAA//////wg+JD/////6+EAuP/////LwQDA/////8vhAMj/////OCEA0P////9OgAAg/////6EhAHD/////L4kAAf////9Bnv8o/////y+fAAD/////QZ3+jP/////BgQEA/////9GBAJD/////gAEAkP////9UAIQg/////y+AAAD/////QZ4ADP////8vnwAA/////0CeAzT/////wAKIIP////87gAAA//////+MAAD/////QJ0DdP/////AAogM//////+MAAD/////QJwAGP/////sDGAq/////zgJ////////fAkDeP////+wAQBw/////9ABAQD/////wAKIEP////84AAAA//////+fAAD/////kAEAdP////9P3POC/////0CeAgz/////fSAHNP////8sAAAA/////0GAAiD/////QYICRP////84AAAA/////zvA/xv/////O6EAdP/////Dwogc/////8GBAQD//////aDwkP//////jPAA/////0GeAWz/////fB8HNP/////Boogg/////3/gB7T/////+AEAmP/////JYQCY//////1gXpz//////ABYGP/////sHwAo//////+AaAD/////0AEAeP////9AngKo//////wgYJD/////f+D+cP/////9oPCQ/////3wL+nj/////fWBYUP////99aQc0/////1VgB/7/////VSv4fv////8vgAAA/////31pBzT/////LwkAAP////9BngAI/////+2tAHL/////QZoA9P/////sIQBy/////0v//9z/////oAEBAP////94CYvC/////ywpAAD/////QIIATP/////T4QCQ/////4ABAJD/////w+KIIP////9UAIQg/////y+AAAD/////QZ7+kP////9L//2U/////6EhAHD/////0+EAkP////+AAQCQ/////1QAhCD/////L4AAAP////9AngBg/////30gBzT/////w+KIIP////8vgAAA/////0Gd/mT/////S//9aP/////T4QCQ/////4ABAJD/////VACEIP////8vgAAA/////0GeAEz/////L58AAP////9Anv1I/////3+j63j/////OID///////9IAAAB/AAAA2AAAAD/////fGMHNP////8vgwAA/////0Cc/Sz/////gSKIBP/////ACQAA///////gAFD/////S//9IP////99IAc0/////8PiiCD/////L4AAAP////9Bnf0Q/////0v//gT/////L58AAP////9Anv38/////3+j63j/////OID///////9IAAAB/AAAA2AAAAD/////fGMHNP////8vgwAA/////0Cc/eD/////gSKIAP/////ACQAA///////gAFD/////S//82P/////AAogg//////+fAAD/////0CEAeP////9AnAAI/////+2+aCT//////CBokP////9/o+t4/////3/FBzT/////SAAAAfwAAANgAAAA/////3xjBzT/////L4MAAP////9BngCM/////y+DAAH/////QZ4BbP////9/gAc0/////y+AAAD/////QZ4AcP/////AAQB0///////gAFD/////S//8hP////9/o+t4/////ziA////////SAAAAfwAAANgAAAA/////3xjBzT/////L4MAAP////9AnP1g/////6ABAQD/////eAmLwv////8sKQAA/////0GC/VD/////S///cP/////AAogU//////+fAAD/////T93zgv////9AngBM/////30gBzT/////LAAAAP////9BgP3w/////0GCACz/////OAAAAP////87wADl/////zuhAHT/////S//96P/////D4QB0/////0v//Bz/////PGAIAP////9IAAAB/AAAA2AAAAD/////S///dP////84AAAA/////zvAAAD/////O6EAdP////9L//3A/////30gBzT/////OSEAgP/////4AQCY/////8gBAJj//////AAGnP//////wAAY/////+2/B7L//////ABokP/////8AAAe/////3wAT67/////g+EAgP////8vnwAA/////0CeAND/////wAKIGP////87oQB0/////+wNADL/////0AEAdP////8vnwDl/////3/g+3j/////QJ0ACP////84AADl/////3weA3j//////AD4kP////85IQCA//////wAAB7/////fABPrv////+gAQCC/////3wJBzT/////L4n/gf////9BnAAM/////y+JAH//////QJ39QP////84AAAA/////0v//Tj/////PGAgAP////9IAAAB/AAAA2AAAAD/////gSKICP/////D6QAA/////0v/+1z//////CBgkP////84gAAA/////0gAAAH8AAADYAAAAP/////BoQB0/////8ABAHj/////7CFoOv/////BgQEA/////9AhAHT/////S//9OP////88YBAA/////0gAAAH8AAADYAAAAP////9L//6M//////wAYFD/////f6PreP////84gP///////9ABAQD/////SAAAAfwAAANgAAAA/////6EhAHD/////fHwbeP/////BgQEA/////0v//Gz/////O6EAdP/////T4QB0/////ziAABD/////f6PreP////87wP8b/////0gAAAH8AAADYAAAAP////9/4Ae0/////8GhAHT/////+AEAmP/////sH2go/////8lhAJj/////L5//G//////9YF6c//////2AWBj/////wWKIGP/////tvmN4/////+weaDr/////7AAC8v/////QAQB0/////0Cd/wj/////S//+8P////8=
+  symbols:
+  - kind: Function
+    name: .powf
+    size: 1564
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDunscale
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDint
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Feraise
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FExp
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FLog
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 60
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 80
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 372
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 420
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 892
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 964
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 1032
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 1092
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 1192
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 1360
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 1388
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 1424
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 1452
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 1496
+    kind: rel24
+    symbol: 2
+    addend: 0

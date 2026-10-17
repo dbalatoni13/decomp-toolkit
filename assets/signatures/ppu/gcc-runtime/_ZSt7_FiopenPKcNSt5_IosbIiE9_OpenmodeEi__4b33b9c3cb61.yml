@@ -1,0 +1,85 @@
+- symbol: 0
+  hash: c48d03c450c3103623ef6fd2f2f53f465901a867
+  signature: gUIAAP//AAB8CAKm//////gh/3H/////+6EAeP/////7wQCA//////vhAIj/////+AEAoP////+ICgAA/////y+AAAD/////QJ4BAP////+BYgAA//8AADgAABL/////OSAACv////+QCwAI/////zgAACH/////kSsADP////+QCwAQ/////zkgACL/////OAAAMv////+RKwAU/////5ALABj/////OSAAKv////84AAAD/////5ErABz/////kAsAIP////85IAAT/////zgAAAv/////kSsAJP////+QCwAo/////zkgACP/////OAAAM/////+RKwAs/////5ALADD/////OSAAK/////84AAAB/////5ErADT/////mAoAAP////9UgAZy/////3ydI3j/////L4AAAP////9BngAI/////2CEAAH/////VIAHOP////8vgAAA/////0GeAAj/////YIQAAv////+BKwAA/////y+JAAD/////QZ4AQP////84AP87/////zvgAAD/////fIAAOP////9/iQAA/////0GeAFj/////OWsABP////9IAAAI/////0GaAEz/////eWkAIP////87/wAB/////zlrAAT/////gSkAAP////8viQAA/////38JAAD/////QJ7/5P////874AAA/////+gBAKD/////f+P7eP/////roQB4/////+vBAID/////fAgDpv/////r4QCI/////zghAJD/////ToAAIP////+BYgAA//8AAEv//2z/////V6AGMP////8vgAAA/////0GeAKz/////VSAH/v////94fgAg/////y+AAAD/////QJ4AaP////9X4BA6/////4EiAAD//wAAf8PzeP////98AAe0/////3yJAC7/////SAAAAfwAAANgAAAA/////y+DAAD/////QZ4AcP////9XoAd6/////3h/ACD/////L4AAAP////9Bnv+M/////ziAAAD/////f+P7eP////84oAAC/////0gAAAH8AAADYAAAAP////8vgwAA/////0Ge/3D/////f+P7eP////874AAA/////0gAAAH8AAADYAAAAP////9L//9c/////4CCAAD//wAAf8PzeP////9IAAAB/AAAA2AAAAD/////L4MAAP////9Bnv+I/////3hjACD/////O+AAAP////9IAAAB/AAAA2AAAAD/////S///MP////94fwAg/////0v//yj/////eH4AIP////9L//9k/////w==
+  symbols:
+  - kind: Function
+    name: ._ZSt7_FiopenPKcNSt5_IosbIiE9_OpenmodeEi
+    size: 488
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@014E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .fopen
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .fseek
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .fclose
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@01AE'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 42
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 294
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 334
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 348
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 392
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 416
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 430
+    kind: l
+    symbol: 7
+    addend: -28621288
+  - offset: 436
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 460
+    kind: rel24
+    symbol: 6
+    addend: 0

@@ -1,0 +1,46 @@
+- symbol: 0
+  hash: fb889c6cb693babbd2a73a1712f32cd9a42c50c6
+  signature: +CH/kf////98CAKm/////3xrG3j/////gOIAAP//AAD4AQCA/////4ACAAD//wAAOQMAGP////85QAAA/////5ADAAD/////OAAAAf////+YgwAU/////5ALAAT/////OAAAD/////+AggAA//8AAHkDACD/////kOsAAP////+RSwAM/////5FLABD/////kUsACP////+QCAAY/////5lIAAT/////kUgAFP////9IAAAB/AAAA2AAAAD/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt6locale7_LocimpC1Eb
+    size: 112
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0036'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSs6assignEPKc
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 22
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 54
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 88
+    kind: rel24
+    symbol: 4
+    addend: 0

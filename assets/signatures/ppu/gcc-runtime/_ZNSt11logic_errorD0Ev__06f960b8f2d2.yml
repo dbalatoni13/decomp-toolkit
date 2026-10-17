@@ -1,0 +1,127 @@
+- symbol: 0
+  hash: 4b1a689793049473e58247fbdc1e909573091e4b
+  signature: OSMABP////98CAKm//////gh/4H/////++EAeP////95PwAg//////gBAJD/////gAIAAP//AAD7wQBw/////3x+G3j/////kAMAAP////+AHwAY/////yuAAA//////QZ0ASP////85IAAA/////zgAAA//////f8PzeP////+ZPwAE/////5AfABj/////kT8AFP////9IAAAB/AAAA+hBACj/////f8PzeP////9IAAAB/AAAA2AAAAD/////6AEAkP/////rwQBw/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////gH8ABP////9IAAAB/AAAA2AAAAD/////S///sP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt11logic_errorD0Ev
+    size: 136
+    flags: 4
+    section: .text
+  - kind: Unknown
+    name: '@001A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@004C'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 26
+    kind: l
+    symbol: 1
+    addend: -10154688
+  - offset: 76
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 88
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 124
+    kind: rel24
+    symbol: 3
+    addend: 0
+- symbol: 0
+  hash: 84d09473733a9df0aafac7a0caaa1f4e91bb46bb
+  signature: +CH/gf////98CAKm//////vhAHj/////PSABrP////874wAE/////zkpxyj/////+8EAcP/////4AQCQ/////5EjAAD/////gB8AGP////94fgAg/////yuAAA//////QZ0AQP////85IAAA/////zgAAA//////f8PzeP////+QHwAY/////5k/AAT/////kT8AFP////9IAAAB/AAAA3/D83j/////SAAAAfwAAAPoAQCQ/////+vBAHD/////6+EAeP////98CAOm/////zghAID/////ToAAIP////+AfwAE/////0gAAAH8AAADOSAAAP////84AAAP/////3/D83j/////kB8AGP////+ZPwAE/////5E/ABT/////SAAAAfwAAAN/w/N4/////0gAAAH8AAAD6AEAkP/////rwQBw/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt11logic_errorD0Ev
+    size: 180
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt9exceptionD2Ev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 76
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 84
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 116
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 144
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 152
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: c76524c9d3377c33626365fdb0778506de33fc09
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP////84YwAE//////gBAKD/////gAIAAP//AAB4YwAg/////5AdAAD/////SAAAAfwAAANgAAAA/////3+j63j/////SAAAAfwAAAPoQQAo/////3+j63j/////SAAAAfwAAANgAAAA/////+gBAKD/////66EAeP////84IQCQ/////3wIA6b/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt11logic_errorD0Ev
+    size: 88
+    flags: 4
+    section: .text
+  - kind: Unknown
+    name: '@001A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSsD1Ev
+    size: 0
+    flags: 4
+    section: .text
+  - kind: Unknown
+    name: '@0030'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 4
+    section: .text
+  relocations:
+  - offset: 26
+    kind: l
+    symbol: 1
+    addend: -13994736
+  - offset: 36
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 48
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 60
+    kind: rel24
+    symbol: 4
+    addend: 0

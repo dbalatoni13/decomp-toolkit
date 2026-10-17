@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 17993531e8a21e2374201e40089f80aeb9259a96
+  signature: +CH/Yf////98CAKm//////vhAJj/////fH8beP////84YQBw//////uhAIj/////+8EAkP////98nSN4/////3hjB8b/////+AEAsP////94Ywbm/////0gAAAH8AAADYAAAAP////+DwQB0/////3wA+Cj/////LAD///////9AwgAQ/////3/A+S3/////QML/8P////9IAAD0/////3gLACD/////f4vwAP////9BngCY/////y+L//7/////PGCAAf////9gYwAC/////0GeAGz/////fID4qP////85ZAAB/////31g+a3/////QML/9P////98APgo/////ywA////////QMIADP////9/wPkt/////0DC//D/////eAsAIP////8vi////////0GeAJj/////f6TreP////+AfwAQ/////zlgAGH/////RAAAAv////98Ywe0/////30g+Kj/////OAn///////98APmt/////0DC//T/////L6MAAP////9AngAQ/////5PfAAD/////fCAErP////9MAAEs/////+gBALD/////66EAiP/////rwQCQ/////3wIA6b/////6+EAmP////84IQCg/////06AACD/////gB8ACP////84gAAQ/////zxggAH/////fAAgOP////9gYwAI/////y+AAAD/////QZ7/zP////+AnwAM/////zxggAH/////L4T///////9gYwAR/////0Ge/7j/////OAQAAf////+QHwAM/////0gAABj/////S///MP////99IPio/////zgJ////////fAD5rf////9Awv/0/////0wAASz/////6AEAsP////84YAAA/////+uhAIj/////68EAkP////98CAOm/////+vhAJj/////OCEAoP////9OgAAg/////wAAAAD/////AAkAAf////+AAwAA/////w==
+  symbols:
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 368
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_ppu_thread_get_id
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 44
+    kind: rel24
+    symbol: 1
+    addend: 0

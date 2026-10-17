@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 098c1eaba582285c8cc6b76cff7b54343329128c
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4/////3xgG3j/////fIsjeP////+QHwBw/////5F/AHj/////gB8AcP////94AAAg/////3wDA3j/////gB8AeP////94AAAg/////3wEA3j/////OWAAcv////9EAAAC/////3xgG3j/////fAAHtP////98AwN4/////+lhAAD/////6AsAEP////98CAOm/////+vr//j/////fWFbeP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .sys_semaphore_get_value
+    size: 104
+    flags: 2
+    section: .text
+  relocations: []

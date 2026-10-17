@@ -1,0 +1,32 @@
+- symbol: 0
+  hash: 608da207227f145aeeea96aacbfdb8ef16e5f46a
+  signature: LCMAAP////98CAKm/////3xpG3j/////PGAAev/////4If+R//////gBAID/////YGMSAv////9BwgBA/////8ACAAD//wAAOGAAAP//////gQAA/////4EpAAD/////QZwAJP/////QKREI/////0gAAAH8AAADYAAAAP////84YAAA/////+gBAID/////OCEAcP////98CAOm/////06AACD//////CAAkP////9L///c/////0gAAAH8AAADYAAAAP////84YP///////0v//9z/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXVocoderSetModulatorVolume
+    size: 108
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0022'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 34
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 56
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 92
+    kind: rel24
+    symbol: 2
+    addend: 0

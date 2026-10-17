@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: ba023180621cf6a3b251e826c3d75780ad09e1b4
+  signature: L4QACP////8vBAAK/////zkgBAD/////QZ4AJP////9ogAAQ/////zkgAgD/////fAv+cP////99ZAJ4/////3yLIFD/////QZoADP////84BP///////1QJZSj/////gAMAEP////9UAKD+/////1QAYD7/////fSADeP////+QAwAQ/////06AACD/////
+  symbols:
+  - kind: Function
+    name: ._ZSt5sbfunRSt8ios_basei
+    size: 72
+    flags: 2
+    section: .text
+  relocations: []

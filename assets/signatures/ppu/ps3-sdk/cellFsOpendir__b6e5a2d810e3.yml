@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: decbb1d3b18670701ecea092443b536576f53930
+  signature: +CH/gf////98CAKm//////vBAHD/////OWADJf/////74QB4/////3yeI3j/////+AEAkP////9EAAAC/////3x/B7T/////OIAAAf////8vvwAA/////0GeACD/////f+P7eP/////oAQCQ/////+vBAHD/////6+EAeP////98CAOm/////zghAID/////ToAAIP////+AfgAA/////3xjB7T/////SAAAAfwAAANgAAAA/////zlgAyf/////L4MAAP////9BnAAM/////5B+AAD/////S///xP////+AfgAA/////3xjB7T/////RAAAAv////88YIAB/////2BjACz/////S///sP////8AAAAA/////wAJAAH/////gAIAAP//AAA=
+  symbols:
+  - kind: Function
+    name: .cellFsOpendir
+    size: 148
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._get_fd
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0092'
+    size: 0
+    flags: 2
+    section: .bss
+  relocations:
+  - offset: 84
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 146
+    kind: l
+    symbol: 2
+    addend: -7170272

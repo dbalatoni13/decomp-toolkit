@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: a3c65ccae36539f17d60022a81fc28d9d6526f54
+  signature: +CH/cf////98CAKm//////vhAIj/////fH8beP////84YAAE//////uhAHj/////+8EAgP/////4AQCg/////0gAAAH8AAADYAAAAP////8vgwAA/////3x+G3j/////f/37eP////94YwAg/////0GeAAz/////SAAAAfwAAANgAAAA/////zgAAAD/////OSACAf////85YAAG/////5AfACD/////kB8ADP////+QHwAY/////5AfABz/////6AEAoP////97owAg/////5PfACT/////kT8AEP////98CAOm/////5F/ABT/////66EAeP////84gAAA/////+vBAID/////OKAAAP/////r4QCI/////zghAJD/////SAAAAPwAAAM=
+  symbols:
+  - kind: Function
+    name: ._ZNSt8ios_base5_InitEv
+    size: 148
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Znwj
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt6localeC1Ev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt8ios_base5clearENSt5_IosbIiE8_IostateEb
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 60
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 144
+    kind: rel24
+    symbol: 3
+    addend: 0

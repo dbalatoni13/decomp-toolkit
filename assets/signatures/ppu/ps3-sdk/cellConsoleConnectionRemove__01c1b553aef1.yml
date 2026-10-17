@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 37724267cd8732cd5684eff3f19abd83cf26ed38
+  signature: +CH/gf////98CAKm//////vhAHj/////+AEAkP////98fxt4/////0gAAAH8AAADL4MAAP////8rHwAP/////zhg////////QZ4AOP////9X4BA6/////0GZAEj/////fAAHtP////+BIoiU/////3/gShT/////gB8ABP////8vgAAA/////3gDACD/////QZ4ALP////9IAAAB/AAAAzgAAAD/////OGAAAP////+QHwAE/////+gBAJD/////eGMAIP/////r4QB4/////zghAID/////fAgDpv////9OgAAg/////+gBAJD/////OGD//v/////r4QB4/////zghAID/////eGMAIP////98CAOm/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellConsoleConnectionRemove
+    size: 144
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleInitialized
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleFree
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 76
+    kind: rel24
+    symbol: 2
+    addend: 0

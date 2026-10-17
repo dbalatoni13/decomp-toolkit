@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 766447a1e1a5036a3744ccac6d5b9dbfb624dfe2
+  signature: +CH+Yf////98CAKm//////uhAYj/////O6EAcP/////7wQGQ/////3u9ACD/////++EBmP////98vit4/////3yfI3j/////OKABBP////98ZBt4/////3+j63j/////+AEBsP////9IAAAB/AAAA2AAAAD/////e+QAIP////8vg////////3/FB7T/////f6PreP////84AAAA/////0GeAAz/////SAAAAfwAAAN8YBt4/////3gDACD/////6AEBsP/////roQGI/////+vBAZD/////fAgDpv/////r4QGY/////zghAaD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZSt7_FiopenPKwNSt5_IosbIiE9_OpenmodeEi
+    size: 124
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .wcstombs
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZSt7_FiopenPKcNSt5_IosbIiE9_OpenmodeEi
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 52
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 84
+    kind: rel24
+    symbol: 2
+    addend: 0

@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: f405bd35173dc23b22020e22f86642a0bf30672e
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4/////3xrG3j/////+L8AgP////98wDN4/////5F/AHD/////kJ8AeP////+QHwCI/////4AfAHD/////eAAAIP////98AwN4/////4AfAHj/////eAAAIP////98BAN4/////+i/AID/////gB8AiP////98AAe0/////3wGA3j/////OWAAgP////9EAAAC/////3xgG3j/////fAAHtP////98AwN4/////+lhAAD/////6AsAEP////98CAOm/////+vr//j/////fWFbeP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .sys_event_queue_create
+    size: 128
+    flags: 2
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: d065b3246687b6ea4c9a4cb6e268d5a5a7a87c66
+  signature: OWAAgP////98CAKm//////gBABD/////RAAAAv/////oAQAQ/////3xjB7T/////fAgDpv////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .sys_event_queue_create
+    size: 32
+    flags: 2
+    section: .text
+  relocations: []

@@ -1,0 +1,82 @@
+- symbol: 0
+  hash: e512ce9d692a9ea433b4497b01f708003b4261c7
+  signature: +CH/cf////98CAKm/////zkmAAH/////+4EAcP/////4AQCg/////zgG////////fSkOcP/////7oQB4/////yuAAAf/////+8EAgP/////74QCI/////3zeM3j/////fH0beP////98iyN4/////3y8K3j/////fSAHtP////9B3QCo/////y+jAAD/////QZ4AoP////8vpAAA/////0GeAJj/////L6UAAP////9BngCQ/////1QFSCz/////kX0AAP////9UADgw/////5DdACT/////fIMjeP////98oChQ/////ziAAAD/////VKUAMP////9IAAAB/AAAA+hBACj/////L54AAP////9AnQAw/////zvgAAD/////f+X7eP////9/o+t4/////3+E43j/////SAAAAfwAAAM4HwAB/////ywjAAD/////fB8HtP////9/nvgA/////0CCAEz/////QJ7/3P////84YAAA/////0gAAAH8AAADYAAAAP/////oAQCg/////zhgAAD/////64EAcP/////roQB4/////3wIA6b/////68EAgP/////r4QCI/////zghAJD/////ToAAIP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////zhg////////6AEAoP/////rgQBw/////+uhAHj/////fAgDpv/////rwQCA/////+vhAIj/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSFXParaEQInit
+    size: 284
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@007C'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .cellMSFXParaEQSet
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 124
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 156
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 188
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 240
+    kind: rel24
+    symbol: 3
+    addend: 0
+- symbol: 0
+  hash: 8c9a879405b09ee0972e41c1b7e61d73fb04d421
+  signature: +CH/cf////98CAKm/////zkmAAH/////+4EAcP/////4AQCg/////zgG////////fSkOcP/////7oQB4/////yuAAAf/////+8EAgP/////74QCI/////3zeM3j/////fH0beP////98iyN4/////3y8K3j/////fSAHtP////9B3QCo/////y+jAAD/////QZ4AoP////8vpAAA/////0GeAJj/////L6UAAP////9BngCQ/////1QFSCz/////kX0AAP////9UADgw/////5DdACT/////fIMjeP////98oChQ/////ziAAAD/////VKUAMP////9IAAAB/AAAA2AAAAD/////L54AAP////9AnQAw/////zvgAAD/////f+X7eP////9/o+t4/////3+E43j/////SAAAAfwAAAM4HwAB/////ywjAAD/////fB8HtP////9/nvgA/////0CCAEz/////QJ7/3P////84YAAA/////0gAAAH8AAADYAAAAP/////oAQCg/////zhgAAD/////64EAcP/////roQB4/////3wIA6b/////68EAgP/////r4QCI/////zghAJD/////ToAAIP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////zhg////////6AEAoP/////rgQBw/////+uhAHj/////fAgDpv/////rwQCA/////+vhAIj/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSFXParaEQInit
+    size: 284
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memset
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSFXParaEQSet
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 124
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 156
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 188
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 240
+    kind: rel24
+    symbol: 3
+    addend: 0

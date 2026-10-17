@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 1f6a83003b6c92b21c1b559f0dcff9f9233ad34b
+  signature: gWMACP////88AAAE/////z1AAAT/////OSsACP////95awAg/////3koACD/////YAAAZP////9UhCA2/////2FKAGz/////OSkACP////+QiwAE/////5ALAAD/////kSMACP////+QqAAE/////5FIAAD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetWriteCommandLabelUnsafe
+    size: 64
+    flags: 1
+    section: .text
+  relocations: []

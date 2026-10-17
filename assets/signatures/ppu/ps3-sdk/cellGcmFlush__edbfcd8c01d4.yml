@@ -1,0 +1,84 @@
+- symbol: 0
+  hash: 134e034b15194e7655f3cb3efaac191f98519407
+  signature: +CH/Yf////98CAKm//////uBAID/////+6EAiP////98fRt4//////gBALD/////SAAAAfwAAAPoQQAo/////3x8G3j/////fAAErP////+AfQAI/////ziBAHD/////SAAAAfwAAAPoQQAo/////4ABAHD/////66EAiP////+QHAAA/////+gBALD/////64EAgP////84IQCg/////3wIA6b/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmFlush
+    size: 88
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmGetControlRegister
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellGcmAddressToOffset
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 48
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: 9f2902186594b738ed071fc76a57be05f4fe4cd6
+  signature: +CH/Yf////98CAKm//////uBAID/////+6EAiP/////4AQCw/////3x9G3j/////SAAAAfwAAANgAAAA/////3x8G3j/////fAAErP////+AfQAI/////ziBAHD/////SAAAAfwAAANgAAAA/////4ABAHD/////66EAiP////+QHAAA/////+gBALD/////64EAgP////84IQCg/////3wIA6b/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmFlush
+    size: 88
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmGetControlRegister
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellGcmAddressToOffset
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 48
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: d46b468c47ab6edc00f2842beec66d3f3709c9b6
+  signature: +CH/Yf////98CAKm//////uBAID/////+6EAiP/////4AQCw/////3x9G3j/////SAAAAfwAAAPoQQAo/////3x8G3j/////fAAErP////+AfQAI/////ziBAHD/////SAAAAfwAAAPoQQAo/////4ABAHD/////66EAiP////+QHAAA/////+gBALD/////64EAgP////84IQCg/////3wIA6b/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmFlush
+    size: 88
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmGetControlRegister
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellGcmAddressToOffset
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 48
+    kind: rel24
+    symbol: 2
+    addend: 0

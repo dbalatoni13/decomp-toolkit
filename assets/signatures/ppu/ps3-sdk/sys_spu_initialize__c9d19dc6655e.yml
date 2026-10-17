@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 0fa07d4fd2c9af1c689597003c46f5d72bd0b869
+  signature: OWAAqf////98CAKm//////gBABD/////RAAAAv/////oAQAQ/////3xjB7T/////fAgDpv////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .sys_spu_initialize
+    size: 32
+    flags: 1
+    section: .text
+  relocations: []

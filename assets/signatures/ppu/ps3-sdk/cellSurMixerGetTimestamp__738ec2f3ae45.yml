@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: 963a33d1177b33bd1b768a6ade995cc7c17a681f
+  signature: gSIAAP//AAB8CAKm//////gh/5H/////+AEAgP////89YIAx/////3yFI3j/////YWsAAv////+ICQAA/////3xkG3j/////L4AAAP////9A3gAY/////+gBAID/////fWNbeP////84IQBw/////3wIA6b/////ToAAIP////+BIgAA//8AAIBpAAD/////SAAAAfwAAAPoQQAo/////3xg/nb/////fAkaeP////99KQBQ/////zwAgDH/////fSv+dv////9gAAAK/////31rADj/////S///wP////8=
+  symbols:
+  - kind: Function
+    name: .cellSurMixerGetTimestamp
+    size: 112
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0042'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellAudioGetPortTimestamp
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 66
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 72
+    kind: rel24
+    symbol: 3
+    addend: 0

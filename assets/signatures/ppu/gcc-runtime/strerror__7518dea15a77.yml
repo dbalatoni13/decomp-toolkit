@@ -1,0 +1,38 @@
+- symbol: 0
+  hash: 1e8a2f9209db825d6a431e0cee4bdeb275cc0726
+  signature: OIAAAP////98CAKm//////gh/5H/////+AEAgP////9IAAAB/AAAA2AAAAD/////6AEAgP////94YwAg/////3wIA6b/////OCEAcP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .strerror
+    size: 44
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Strerror
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 16
+    kind: rel24
+    symbol: 1
+    addend: 0
+- symbol: 0
+  hash: 574a748306fdc0c7ffdfd7d0bc55a0bb477fbdb5
+  signature: OIAAAP////98CAKm//////gh/5H/////+AEAgP////9IAAAB/AAAA2AAAAD/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .strerror
+    size: 40
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Strerror
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 16
+    kind: rel24
+    symbol: 1
+    addend: 0

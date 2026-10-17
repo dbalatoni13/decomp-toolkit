@@ -1,0 +1,194 @@
+- symbol: 0
+  hash: d5d44b51f67bb1acbc2d41d1b57d7f3b88545112
+  signature: gSIAAP//AAB8CAKm//////gh/5H/////+AEAgP////98aht4/////zxgAHr/////L4oAAP////+ACQAA/////31wECb/////VWv//v////8vhAAA/////y8AAAD/////fBAQJv////9UAP/+/////2BjEgP/////fIcjeP////99bAN4/////0DaAGj/////L4wAAP////88YAB6/////2BjEgL/////QJ4AWP////+AxwAc/////zhgAAD/////gOcAAP/////oqgAA/////+gKAAj/////gIIAAP//AACBAgAA//8AAIEiAAD//wAAgWIAAP//AACBQgAA//8AAJAIAAD/////kOkAAP////+RiwAA/////5CqAAD/////kMQAAP////9IAAAB/AAAAzhgAAD/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP////9IAAAB/AAAAzhg////////S///6P////8=
+  symbols:
+  - kind: Function
+    name: .cellMSSystemConfigureLibAudio
+    size: 184
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0072'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0076'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@007A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@007E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 110
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 114
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 118
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 122
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 126
+    kind: l
+    symbol: 6
+    addend: -14104088
+  - offset: 148
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 172
+    kind: rel24
+    symbol: 7
+    addend: 0
+- symbol: 0
+  hash: 58d32e8c7ada2364ec67f410977b24d085a876f9
+  signature: gSIAAP//AAB8CAKm//////gh/5H/////+AEAgP////98iCN4/////4gJAAD/////L4AAAf////9BngAY/////4CCAAD//wAAgGIAAP//AABIAAAB/AAAA2AAAAD/////SAAAAP////+BIgAA//8AAIAJAAD/////L4AAAP////9A3gB4/////y+DAAD/////LwQAAP////98AAAm/////1QJ//7/////VADf/v////99LAN4/////y+MAAD/////QJ4AbP////+AhAAc/////4EIAAD/////6MMAAP/////oAwAI/////zhgAAD/////gKIAAP//AACA4gAA//8AAIEiAAD//wAAgWIAAP//AACBQgAA//8AAJAHAAD/////kQkAAP////+RiwAA/////5DKAAD/////kIUAAP////9IAAAB/AAAAzhgAAD/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP////88YAB6/////2BjEgP/////SAAAAfwAAAM4YP///////0v//+D/////PGAAev////9gYxIC/////0gAAAH8AAADOGD///////9L///M/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSSystemConfigureLibAudio
+    size: 224
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0022'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0036'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@007A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@007E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0082'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0086'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@008A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 34
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 38
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 40
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 54
+    kind: l
+    symbol: 5
+    addend: -6468872
+  - offset: 122
+    kind: l
+    symbol: 6
+    addend: -6468872
+  - offset: 126
+    kind: l
+    symbol: 7
+    addend: -6468872
+  - offset: 130
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 134
+    kind: l
+    symbol: 9
+    addend: -6468872
+  - offset: 138
+    kind: l
+    symbol: 10
+    addend: -6468872
+  - offset: 160
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 192
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 212
+    kind: rel24
+    symbol: 11
+    addend: 0

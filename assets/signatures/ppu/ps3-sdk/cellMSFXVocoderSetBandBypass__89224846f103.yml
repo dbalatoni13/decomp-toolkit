@@ -1,0 +1,23 @@
+- symbol: 0
+  hash: 0e53b67142db34cd8bd8ec9db416a3d369f1c152
+  signature: +CH/kf////98CAKm/////yuEAD//////+AEAgP////+BYwAA/////zxgAHr/////YGMSAv////9B3QBw/////yuFAAH/////PGAAev////8vBQAB/////2BjEgL/////QZ0AXP////85IAAB/////zgA//7/////fSkgMP////9cACA+/////30pB7T/////fAQHtP////9BmgAw/////+gLEQD/////fAAgOP/////4CxEA/////zhgAAD/////SAAAAfwAAANgAAAA/////zhgAAD/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP/////oCxEA/////3wAS3j/////+AsRAP////9L///U/////0gAAAH8AAADYAAAAP////84YP///////0v//9T/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXVocoderSetBandBypass
+    size: 156
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 96
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 140
+    kind: rel24
+    symbol: 1
+    addend: 0

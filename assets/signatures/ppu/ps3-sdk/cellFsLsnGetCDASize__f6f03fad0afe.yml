@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 3076263f86d3ed8ddcd6b3952ee5c5fdc00d677a
+  signature: +CH/cf////98CAKm//////uhAHj/////fJ0jeP/////4AQCg/////0gAAAH8AAADYAAAAP////9/pOt4/////zlgAzn/////RAAAAv/////oAQCg/////3xjB7T/////66EAeP////84IQCQ/////3wIA6b/////ToAAIP////8AAAAA/////wAJAAH/////gAMAAP////8=
+  symbols:
+  - kind: Function
+    name: .cellFsLsnGetCDASize
+    size: 76
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._get_fsfd
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0

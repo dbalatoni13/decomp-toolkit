@@ -1,0 +1,23 @@
+- symbol: 0
+  hash: 80e22a381ac2464683f26f37b70505d0e210a9b4
+  signature: LCMAAP////98CAKm/////3xpG3j/////PGAAev/////4If+R//////gBAID/////YGMSAv////8vhAAA/////0HCAFT/////QZwAUP////+BaQAA/////1SJEDr/////PGAAev////85KQAw/////2BjEgL/////fSkHtP////+ACwAA/////31rShT/////f4AgAP////9AnQAo/////zhgAAD/////0CsABP////9IAAAB/AAAA2AAAAD/////6AEAgP////84YAAA/////3wIA6b/////OCEAcP////9OgAAg/////0gAAAH8AAADYAAAAP/////oAQCA/////zhg////////fAgDpv////84IQBw/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXAuxReturnSetThruMix
+    size: 144
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 88
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 116
+    kind: rel24
+    symbol: 1
+    addend: 0

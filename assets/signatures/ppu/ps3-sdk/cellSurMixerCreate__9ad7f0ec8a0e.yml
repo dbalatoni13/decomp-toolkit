@@ -1,0 +1,430 @@
+- symbol: 0
+  hash: 7bed559134e0ab0d484f988ae7437c44dfec8071
+  signature: LCMAAP////98CAKm//////gh/2H/////+8EAkP////98fht4//////thAHj/////+4EAgP/////7oQCI//////vhAJj/////+AEAsP////9AggA0/////z/ggDH/////Y/8AA//////oAQCw/////3/j+3j/////62EAeP/////rgQCA/////3wIA6b/////66EAiP/////rwQCQ/////+vhAJj/////OCEAoP////9OgAAg/////4ADAAD/////fAAHtP////8vgP7U/////0Gc/8T/////L4ALuP////9Bnf+8/////4FiAAD//wAAP+CAMf////+BIgAA//8AADgAAAD/////Y/8ABv////+QCQAA/////4FrAAD/////L4sAAP////9A/v+g/////4EiAAD//wAAkWkAAP////9IAAAB/AAAA3x9G3j/////f8PzeP////87vRCA/////0gAAAH8AAADfHwbeP////9/w/N4/////3+94hT/////SAAAAfwAAAM9IAAB/////3+9GhT/////PIAAAf////87vQIA/////1eg4T7/////fADqFP////94CwAg/////3+LSED/////QJ0AFP////88BAAB/////3gEACD/////f4sgQP////9Bnf/0/////z/ggDH/////gGIAAP//AAA4wAAA/////zygABH/////SAAAAfwAAAPoQQAo/////ziAABD/////g4IAAP//AAA4oBCA/////5B8AAD/////SAAAAfwAAAPoQQAo/////3/E83j/////g2IAAP//AAB8fRt4/////4C8AAD/////kHsAAP////9IAAAB/AAAAy+9AAD/////k7sAAP////9j/wAF/////0Ge/uj/////g+IAAP//AACAHwAA/////y+AAAD/////QZ4AFP////9IAAAB/AAAA4AfAAD/////fB8HtP////9L//7I/////4OiAAD//wAAO4AAAv////+BIgAA//8AADtgACD/////gIIAAP//AAB/o+t4/////5gJAAj/////k4kAAP////+TaQAE/////0gAAAH8AAAD6EEAKP////8sIwAA/////3x/G3j/////QYIADP////9IAAAB/AAAA0v//oj/////gSIAAP//AACAggAA//8AAIBiAAD//wAAm+kACP////+TiQAA/////5NpAAT/////SAAAAfwAAAPoQQAo/////ywjAAD/////fH8beP////9AggA8/////4DeAAD/////OOAAAP////+BIgAA//8AADigAAD/////fMYHtP////+AYgAA//8AAGDngAD/////gIIAAP//AAA5AAAA/////0gAAAH8AAAD6EEAKP////8sIwAA/////3x/G3j/////QYIAGP////9IAAAB/AAAA3+j63j/////SAAAAfwAAAPoQQAo/////0v//hD/////gSIAAP//AACBYgAA//8AAIFCAAD//wAAgIIAAP//AACAYgAA//8AAJvpAAj/////k+sAAP////+T6gAA/////5OJAAD/////k2kABP////9IAAAB/AAAA+hBACj/////LCMAAP////98fxt4/////0CCADz/////gSIAAP//AAA4AAAI/////8ACAAD//wAAgIIAAP//AACAYgAA//8AAPvpABD/////0AkAGP/////4CQAI//////gJAAD/////SAAAAfwAAAPoQQAo/////ywjAAD/////fH8beP////9BggAY/////4EiAAD//wAAOAAAAf////+YCQAA/////0gAAAH8AAADS//9iP////+DwgAA//8AAICCAAD//wAAgH4AAP////9IAAAB/AAAA+hBACj/////LCMAAP////98fxt4/////0CCAHj/////gSIAAP//AAA4wAAA/////4FiAAD//wAAOKAAAP////+A4gAA//8AAIFCAAD//wAAgIIAAP//AACBCQAA/////4AJABz/////OSABAP////+AYgAA//8AAH0pA6b/////kAsAAP////+RCgAA/////5EHAAD/////fSQyFP////99YzIU/////3kpACD/////eWsAIP////84BgAI//////ipAAD/////+KsAAP////94BgAg/////0IA/+D/////gSIAAP//AAA4AAAB/////zvgAAD/////mAkAAP////9L//z0/////4B+AAD/////SAAAAfwAAAPoQQAo/////zgAAAH/////gSIAAP//AACYCQAA/////0gAAAH8AAADS//81P////8=
+  symbols:
+  - kind: Function
+    name: .cellSurMixerCreate
+    size: 868
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0076'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@007E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@009A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZN17SceSurMixerEntity21getMiscObjectByteSizeEPK18CellSurMixerConfig
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZN17SceSurMixerEntity33getSignalProcessingObjectByteSizeEPK18CellSurMixerConfig
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZN17SceSurMixerEntity21getWaveBufferByteSizeEPK18CellSurMixerConfig
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00FE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._sys_heap_create_heap
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@0116'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._sys_heap_memalign
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: ._ZN17SceSurMixerEntityC1EPK18CellSurMixerConfigPv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Z15partial_delete1v
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@0172'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@017A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_create
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@01B2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01BA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01E6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01F2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01FA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_ppu_thread_create
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .sys_lwmutex_destroy
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@022A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@022E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0232'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@023A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0266'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@026E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0272'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellAudioPortOpen
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@029E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellSurMixerDelete
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@02B6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellAudioGetPortConfig
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@02DA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@02E2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@02E6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@02EA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@02FA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellAudioPortClose
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 118
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 126
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 154
+    kind: l
+    symbol: 3
+    addend: -15311144
+  - offset: 160
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 176
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 192
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 254
+    kind: l
+    symbol: 7
+    addend: -15311144
+  - offset: 264
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 278
+    kind: l
+    symbol: 9
+    addend: -15311144
+  - offset: 288
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 302
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 316
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 338
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 352
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 370
+    kind: l
+    symbol: 13
+    addend: -15311144
+  - offset: 378
+    kind: l
+    symbol: 14
+    addend: -15311144
+  - offset: 386
+    kind: l
+    symbol: 14
+    addend: -15311144
+  - offset: 404
+    kind: rel24
+    symbol: 15
+    addend: 0
+  - offset: 424
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 434
+    kind: l
+    symbol: 16
+    addend: -15311144
+  - offset: 438
+    kind: l
+    symbol: 16
+    addend: -15311144
+  - offset: 442
+    kind: l
+    symbol: 17
+    addend: -15311144
+  - offset: 456
+    kind: rel24
+    symbol: 15
+    addend: 0
+  - offset: 486
+    kind: l
+    symbol: 18
+    addend: -15311144
+  - offset: 498
+    kind: l
+    symbol: 19
+    addend: -15311144
+  - offset: 506
+    kind: l
+    symbol: 20
+    addend: -15311144
+  - offset: 512
+    kind: rel24
+    symbol: 21
+    addend: 0
+  - offset: 532
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 540
+    kind: rel24
+    symbol: 22
+    addend: 0
+  - offset: 554
+    kind: l
+    symbol: 23
+    addend: -15311144
+  - offset: 558
+    kind: l
+    symbol: 24
+    addend: -15311144
+  - offset: 562
+    kind: l
+    symbol: 25
+    addend: -15311144
+  - offset: 566
+    kind: l
+    symbol: 23
+    addend: -15311144
+  - offset: 570
+    kind: l
+    symbol: 26
+    addend: -15311144
+  - offset: 592
+    kind: rel24
+    symbol: 15
+    addend: 0
+  - offset: 614
+    kind: l
+    symbol: 27
+    addend: -15311144
+  - offset: 622
+    kind: l
+    symbol: 28
+    addend: -15311144
+  - offset: 626
+    kind: l
+    symbol: 29
+    addend: -15311144
+  - offset: 630
+    kind: l
+    symbol: 27
+    addend: -15311144
+  - offset: 648
+    kind: rel24
+    symbol: 30
+    addend: 0
+  - offset: 670
+    kind: l
+    symbol: 31
+    addend: -15311144
+  - offset: 680
+    kind: rel24
+    symbol: 32
+    addend: 0
+  - offset: 690
+    kind: l
+    symbol: 29
+    addend: -15311144
+  - offset: 694
+    kind: l
+    symbol: 33
+    addend: -15311144
+  - offset: 700
+    kind: rel24
+    symbol: 34
+    addend: 0
+  - offset: 722
+    kind: l
+    symbol: 33
+    addend: -15311144
+  - offset: 730
+    kind: l
+    symbol: 35
+    addend: -15311144
+  - offset: 738
+    kind: l
+    symbol: 36
+    addend: -15311144
+  - offset: 742
+    kind: l
+    symbol: 37
+    addend: -15311144
+  - offset: 746
+    kind: l
+    symbol: 38
+    addend: -15311144
+  - offset: 762
+    kind: l
+    symbol: 39
+    addend: -15311144
+  - offset: 818
+    kind: l
+    symbol: 31
+    addend: -15311144
+  - offset: 840
+    kind: rel24
+    symbol: 40
+    addend: 0
+  - offset: 854
+    kind: l
+    symbol: 31
+    addend: -15311144
+  - offset: 860
+    kind: rel24
+    symbol: 32
+    addend: 0

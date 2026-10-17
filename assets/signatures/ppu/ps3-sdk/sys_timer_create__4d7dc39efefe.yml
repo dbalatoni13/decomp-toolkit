@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 3ff430104287fbeb9bd437f087709bcf5a132a00
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4/////3xgG3j/////kB8AcP////+AHwBw/////3gAACD/////fAMDeP////85YABG/////0QAAAL/////fGAbeP////98AAe0/////3wDA3j/////6WEAAP/////oCwAQ/////3wIA6b/////6+v/+P////99YVt4/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .sys_timer_create
+    size: 84
+    flags: 2
+    section: .text
+  relocations: []

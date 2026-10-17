@@ -1,0 +1,55 @@
+- symbol: 0
+  hash: 4ba08c4be6a337c62731d0b17b6dd5e3321bf29b
+  signature: +CH/cf////98CAKm//////uhAHj/////+AEAoP////9IAAAB/AAAA2AAAAD/////g6MAAP////+BIwAE/////y+9AAD/////OSkAAf////+RIwAE/////0GeADz/////6SIAAP//AAPoHQAw/////3+gSAD/////QZ4ANP////84AAAA/////5ADAAD/////O70AMP////97vQAg/////3+j63j/////SAAAAfwAAANgAAAA/////3+j63j/////SAAAAfwAAANgAAAA/////0gAAAH8AAADYAAAAP////+AHQAU/////3wAAND/////kB0AFP////9L///M/////w==
+  symbols:
+  - kind: Function
+    name: .__cxa_rethrow
+    size: 128
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cxa_get_globals
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0032'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Unwind_Resume_or_Rethrow
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cxa_begin_catch
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZSt9terminatev
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 16
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 50
+    kind: lo_ds
+    symbol: 2
+    addend: -10216440
+  - offset: 84
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 5
+    addend: 0

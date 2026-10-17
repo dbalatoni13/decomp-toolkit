@@ -1,0 +1,456 @@
+- symbol: 0
+  hash: f739692e58476ab4d98332319b700e06f45fd9eb
+  signature: gWIAAP//AAB8CAKm//////gh/0H/////+2EAmP////85IAAA//////uBAKD/////fPs7eP/////7oQCo/////3zcM3j/////+8EAsP////98vSt4//////vhALj/////fJ4jeP/////7QQCQ/////3x/G3j/////+AEA0P////+ICwAA//////khAID/////L4AAAf/////5IQCI//////khAHj/////QZ4AGP////+AggAA//8AAIBiAAD//wAASAAAAfwAAAPoQQAo/////0gAAAD/////L4f///////87QP///////0HcAPD/////gSIAAP//AACACQAA/////3+AOAD/////QJ0A4P////8vowAA/////0HeANj/////L6QAAP////9B3gDQ/////y+lAAD/////Qd4AyP////84oQBw/////ziAAAD/////OMAAAP////844AAA/////0gAAAH8AAAD6EEAKP////8sIwAA/////3xlG3j/////QIIA4P////+AYQBw/////ziAAAD/////OKAAAv////84wQCI/////3xjB7T/////SAAAAfwAAAPoQQAo/////4BhAHD/////OIAAAP////84oAAA/////zjBAHj/////fGMHtP////9IAAAB/AAAA+hBACj/////gGEAcP////9/xPN4/////+ihAIj/////fGMHtP////84wQCA/////0gAAAH8AAAD6EEAKP////8sIwAA/////3xkG3j/////QIIArP////+AYQBw/////3xjB7T/////SAAAAfwAAAPoQQAo/////+gBAID/////L6AAAP////9BngB0/////zhgAAD/////SAAAAfwAAANgAAAA/////3/D83j/////f6TreP////9/heN4/////39m23j/////SAAAAfwAAANIAAAY/////zxgAHr/////YGMSAv////9IAAAB/AAAA2AAAAD/////OGD////////oAQDQ/////+tBAJD/////62EAmP////98CAOm/////+uBAKD/////66EAqP/////rwQCw/////+vhALj/////OCEAwP////9OgAAg/////4BiAAD//wAAf+T7eP////9IAAAB/AAAA+hBACj/////PGAAev////+TXQAI/////2BjEgj/////SAAAAfwAAANgAAAA/////zhg////////S///sP////+AYgAA//8AAEgAAAH8AAAD6EEAKP////+AYQBw/////3xjB7T/////SAAAAfwAAAPoQQAo/////zxgAHr/////YGMSCP////9IAAAB/AAAA2AAAAD/////OGD///////9L//98/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSDSPLoadDSPFromFile
+    size: 512
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0060'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@007A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellFsOpen
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellFsLseek
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellFsRead
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellFsClose
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSDSPLoadDSPFromMemory
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@01A2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01CE'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 90
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 94
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 96
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 122
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 176
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 216
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 244
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 272
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 300
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 324
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 348
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 364
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 418
+    kind: l
+    symbol: 12
+    addend: -14104088
+  - offset: 424
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 444
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 462
+    kind: l
+    symbol: 13
+    addend: -14104088
+  - offset: 464
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 480
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 496
+    kind: rel24
+    symbol: 10
+    addend: 0
+- symbol: 0
+  hash: 670ed6bb0e9858dfa5ea55a9c259884134cab942
+  signature: gWIAAP//AAB8CAKm//////gh/0H/////+2EAmP////85IAAA//////uBAKD/////fPs7eP/////7oQCo/////3zcM3j/////+8EAsP////98vSt4//////vhALj/////fJ4jeP/////4AQDQ/////3x/G3j/////iAsAAP/////5IQCA/////y+AAAH/////+SEAiP/////5IQB4/////0GeABj/////gIIAAP//AACAYgAA//8AAEgAAAH8AAADYAAAAP////9IAAAA/////y+jAAD/////Qd4A+P////8vpAAA/////0HeAPD/////L6UAAP////9B3gDo/////zihAHD/////OIAAAP////84wAAA/////zjgAAD/////SAAAAfwAAAPoQQAo/////ywjAAD/////fGUbeP////9AggDc/////4BhAHD/////OIAAAP////84oAAC/////zjBAIj/////fGMHtP////9IAAAB/AAAA+hBACj/////gGEAcP////84gAAA/////zigAAD/////OMEAeP////98Ywe0/////0gAAAH8AAAD6EEAKP////+AYQBw/////3/E83j/////6KEAiP////98Ywe0/////zjBAID/////SAAAAfwAAAPoQQAo/////ywjAAD/////fGQbeP////9AggCs/////4BhAHD/////fGMHtP////9IAAAB/AAAA+hBACj/////6AEAgP////8voAAA/////0GeAHD/////OGAAAP////9IAAAB/AAAA2AAAAD/////f8PzeP////9/pOt4/////3+F43j/////f2bbeP////9IAAAB/AAAA+gBAND/////62EAmP/////rgQCg/////3wIA6b/////66EAqP/////rwQCw/////+vhALj/////OCEAwP////9OgAAg/////zxgAHr/////YGMSAv////9IAAAB/AAAA2AAAAD/////OGD///////9L///I/////4BiAAD//wAAf+T7eP////9IAAAB/AAAA2AAAAD/////PGAAev////84AP///////2BjEgj/////kB0ACP////9IAAAB/AAAA2AAAAD/////OGD///////9L//+Y/////4BiAAD//wAASAAAAfwAAANgAAAA/////4BhAHD/////fGMHtP////9IAAAB/AAAA+hBACj/////PGAAev////9gYxII/////0gAAAH8AAADYAAAAP////84YP///////0v//2T/////
+  symbols:
+  - kind: Function
+    name: .cellMSDSPLoadDSPFromFile
+    size: 480
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0056'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellFsOpen
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellFsLseek
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellFsRead
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellFsClose
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSDSPLoadDSPFromMemory
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@017E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01AE'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 86
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 90
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 92
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 144
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 184
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 212
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 240
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 268
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 292
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 316
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 364
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 382
+    kind: l
+    symbol: 11
+    addend: -6468872
+  - offset: 388
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 412
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 430
+    kind: l
+    symbol: 12
+    addend: -6468872
+  - offset: 432
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 448
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 464
+    kind: rel24
+    symbol: 9
+    addend: 0
+- symbol: 0
+  hash: 817715d3898800b3e55e6c1354c4fa5c5bfec7c6
+  signature: gWIAAP//AAB8CAKm//////gh/0H/////+2EAmP////85IAAA//////uBAKD/////fPs7eP/////7oQCo/////3zcM3j/////+8EAsP////98vSt4//////vhALj/////fJ4jeP/////7QQCQ/////3x/G3j/////+AEA0P////+ICwAA//////khAID/////L4AAAf/////5IQCI//////khAHj/////QZ4AGP////+AggAA//8AAIBiAAD//wAASAAAAfwAAANgAAAA/////0gAAAD/////L4f///////87QP///////0HcAPD/////gSIAAP//AACACQAA/////3+AOAD/////QJ0A4P////8vowAA/////0HeANj/////L6QAAP////9B3gDQ/////y+lAAD/////Qd4AyP////84oQBw/////ziAAAD/////OMAAAP////844AAA/////0gAAAH8AAAD6EEAKP////8sIwAA/////3xlG3j/////QIIA4P////+AYQBw/////ziAAAD/////OKAAAv////84wQCI/////3xjB7T/////SAAAAfwAAAPoQQAo/////4BhAHD/////OIAAAP////84oAAA/////zjBAHj/////fGMHtP////9IAAAB/AAAA+hBACj/////gGEAcP////9/xPN4/////+ihAIj/////fGMHtP////84wQCA/////0gAAAH8AAAD6EEAKP////8sIwAA/////3xkG3j/////QIIArP////+AYQBw/////3xjB7T/////SAAAAfwAAAPoQQAo/////+gBAID/////L6AAAP////9BngB0/////zhgAAD/////SAAAAfwAAANgAAAA/////3/D83j/////f6TreP////9/heN4/////39m23j/////SAAAAfwAAANIAAAY/////zxgAHr/////YGMSAv////9IAAAB/AAAA2AAAAD/////OGD////////oAQDQ/////+tBAJD/////62EAmP////98CAOm/////+uBAKD/////66EAqP/////rwQCw/////+vhALj/////OCEAwP////9OgAAg/////4BiAAD//wAAf+T7eP////9IAAAB/AAAA2AAAAD/////PGAAev////+TXQAI/////2BjEgj/////SAAAAfwAAANgAAAA/////zhg////////S///sP////+AYgAA//8AAEgAAAH8AAADYAAAAP////+AYQBw/////3xjB7T/////SAAAAfwAAAPoQQAo/////zxgAHr/////YGMSCP////9IAAAB/AAAA2AAAAD/////OGD///////9L//98/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSDSPLoadDSPFromFile
+    size: 512
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@007A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellFsOpen
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellFsLseek
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellFsRead
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellFsClose
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSDSPLoadDSPFromMemory
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@01A2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01CE'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 90
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 94
+    kind: l
+    symbol: 3
+    addend: -15311144
+  - offset: 96
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 122
+    kind: l
+    symbol: 5
+    addend: -15311144
+  - offset: 176
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 216
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 244
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 272
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 300
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 324
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 348
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 364
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 418
+    kind: l
+    symbol: 12
+    addend: -15311144
+  - offset: 424
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 444
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 462
+    kind: l
+    symbol: 13
+    addend: -15311144
+  - offset: 464
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 480
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 496
+    kind: rel24
+    symbol: 10
+    addend: 0

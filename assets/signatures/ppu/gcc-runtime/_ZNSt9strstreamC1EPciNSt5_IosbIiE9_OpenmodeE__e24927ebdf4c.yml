@@ -1,0 +1,109 @@
+- symbol: 0
+  hash: a75f52e93adc83a429aa3c5978db07c948df018e
+  signature: +CH/Mf////98CAKm//////uhALj/////g6IAAP//AAD7gQCw//////vhAMj/////fHwbeP////98fxt4/////4E9AAj/////eGMAIP/////4AQDg/////zlp//T/////gAIAAP//AAD6gQBw/////3lrACD/////gP0AEP/////7IQCY//////tBAKD/////+2EAqP/////7wQDA//////qhAHj/////+sEAgP/////64QCI//////sBAJD/////kBwAgP////+RIwAA/////4ErAAD/////OAAAAP////+BHQAM/////zlH//T/////fTxKFP////+DfQAU/////3lKACD/////eSkAIP////873AAQ/////3yaI3j/////fLQreP////97xAAg/////5EJAAD/////kAMABP////9/g+N4/////zigAAD/////fNkzeP////+U4wAI/////4FqAAD/////fWNaFP////95awAg/////5NrAAD/////gSMAAP////85Kf/0/////3kpACD/////gAkAAP////98YwIU/////3hjACD/////SAAAAfwAAANgAAAA/////4E9AAT/////gUIAAP//AAA5af/0/////4D9ABz/////kTwAAP////95awAg/////4AdABj/////L5oAAP////84ygAU/////zkKACj/////gSsAAP////99PEoU/////3kpACD/////kAkAAP////+Q/AAI/////5FcAAD/////kNwACP////+RHACA/////0GeABD/////VyAHOP////8vgAAA/////0CeAQj/////f1jTeP////97VwAg/////zh/ABT/////gAIAAP//AAB71QAg/////3hjACD/////kB4AAP////9IAAAB/AAAA2AAAAD/////OGAABP////9IAAAB/AAAA2AAAAD/////L4MAAP////98dht4/////0GeABD/////eGMAIP////9IAAAB/AAAA2AAAAD/////O78AKP////+DIgAA//8AADufACz/////O38AOP////87XwA8/////zlfABj/////OR8AHP////84AAAA/////zl/AFj/////OT8AUP////+S3gA4/////5AIAAD/////kBwAAP////+QGgAA/////5AKAAD/////kB0AAP////+QGwAA/////5M+AAD/////6AEA4P////9+o6t4/////5O+ACD/////k54AJP////98CAOm/////5N+ADD/////k14ANP////9+hAe0/////+qhAHj/////fuW7eP/////qgQBw/////3sGACD/////6sEAgP////+RPgBQ/////5F+AFT/////kV4AEP////+RHgAU/////+rhAIj/////OOAAAP/////rAQCQ/////+shAJj/////60EAoP/////rYQCo/////+uBALD/////66EAuP/////rwQDA/////+vhAMj/////OCEA0P////9IAAAA/AAAA3tXACD/////fuO7eP////9IAAAB/AAAA2AAAAD/////fxoaFP////9L//7w/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt9strstreamC1EPciNSt5_IosbIiE9_OpenmodeE
+    size: 596
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0032'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt9basic_iosIcSt11char_traitsIcEE4initEPSt15basic_streambufIcS1_Eb
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00E6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0146'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt6_MutexC1Ev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Znwj
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt6localeC1Ev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0186'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt12strstreambuf5_InitEiPcS0_i
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .strlen
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 50
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 216
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 230
+    kind: l
+    symbol: 4
+    addend: -28621288
+  - offset: 326
+    kind: l
+    symbol: 5
+    addend: -28621288
+  - offset: 340
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 352
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 376
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 390
+    kind: l
+    symbol: 9
+    addend: -28621288
+  - offset: 568
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 580
+    kind: rel24
+    symbol: 11
+    addend: 0

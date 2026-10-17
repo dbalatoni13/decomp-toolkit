@@ -1,0 +1,49 @@
+- symbol: 0
+  hash: 3a173dad0a4d4b737b9fddfd5cccb6e9c0d92b6f
+  signature: +CH/gf////98CAKm//////vBAHD/////+AEAkP/////74QB4/////3x+G3j/////gAIAAP//AAB8fxt4/////4BjAAj/////L4MAAP////94YwAg/////5AfAAD/////QZ4ADP////9IAAAB/AAAA2AAAAD/////gH8AEP////8vgwAA/////3hjACD/////QZ4ADP////9IAAAB/AAAA2AAAAD/////gH8AFP////8vgwAA/////3hjACD/////QZ4ADP////9IAAAB/AAAA2AAAAD/////gH8AGP////8vgwAA/////3hjACD/////QZ4ADP////9IAAAB/AAAA2AAAAD/////gSIAAP//AACRPgAA/////+gBAJD/////68EAcP/////r4QB4/////3wIA6b/////OCEAgP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt7_MpunctIwED1Ev
+    size: 164
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@001A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZdaPv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0086'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 26
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 52
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 76
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 100
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 124
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 134
+    kind: l
+    symbol: 3
+    addend: -28621288

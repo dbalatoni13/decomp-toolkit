@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: f878d534d0f1dede87e4332a9761524ed8977fa5
+  signature: +CH/cf////98CAKm//////uBAHD/////fJwjeP/////4AQCg/////ziAAAT/////gYMACP////+AAwAE/////zksABD/////+6EAeP/////7wQCA/////3zdM3j/////f4kAQP/////74QCI/////3y+K3j/////fH8beP////9BnQBk/////zkMAAj/////V8oIPP////95CAAg/////zzgAAT/////fUrjeP////89YAAE/////3mJACD/////fUrreP////9g5x7k/////5OJAAT/////YWse6P////84CAAI/////5DpAAD/////kWgAAP////+QHwAI/////5FIAAT/////6AEAoP/////rgQBw/////+uhAHj/////fAgDpv/////rwQCA/////+vhAIj/////OCEAkP////9OgAAg/////4EjAAz/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////L6MAAP////9Anv/A/////4GfAAj/////S///eP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetPointSpriteControl
+    size: 208
+    flags: 1
+    section: .text
+  relocations: []

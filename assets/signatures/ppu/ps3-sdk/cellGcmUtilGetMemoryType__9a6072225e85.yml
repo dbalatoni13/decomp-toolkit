@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 5e8c5ac2311aefa7776cad57b3f0846c3ef4f437
+  signature: gSIAAP//AACACQAA/////3+AGED/////fHAQJv////9UY/f+/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellGcmUtilGetMemoryType
+    size: 24
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -10154688

@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 05a2a3b8ce624ffe36266512ecfc19cb2e6c0c6e
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4/////3xgG3j/////fIsjeP////+QHwBw/////5F/AHj/////kL8AgP////+Q3wCI/////4AfAHD/////eAAAIP////98AwN4/////4AfAHj/////eAAAIP////98BAN4/////4AfAID/////fAAHtP////98BQN4/////4AfAIj/////fAAHtP////98BgN4/////zlgAFr/////RAAAAv////98YBt4/////3wAB7T/////fAMDeP/////pYQAA/////+gLABD/////fAgDpv/////r6//4/////31hW3j/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .sys_semaphore_create
+    size: 136
+    flags: 2
+    section: .text
+  relocations: []

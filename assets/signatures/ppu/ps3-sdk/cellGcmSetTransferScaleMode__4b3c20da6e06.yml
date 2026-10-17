@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: e90c348dbcf878851e775f36dd58dbdb61830408
+  signature: L4QAAf////98CAKm//////gh/3H/////+4EAcP////98vCt4//////vBAID/////fH4beP/////7oQB4//////vhAIj/////+AEAoP////9BngEs/////yuEAAH/////QJwAVP////874AAA/////2f//u3/////f/37eP////+BPgAI/////4AeAAT/////OSkAGP////9/iQBA/////0GdANT/////L5wAAP////9BngBU/////y+cAAH/////QZ4BCP/////oAQCg/////+uBAHD/////66EAeP////98CAOm/////+vBAID/////6+EAiP////84IQCQ/////06AACD/////L4QAAv////9BngEY/////y+EAAP/////O+AAAP////87oAAA/////0Ce/6j/////O+AAAf////9n//7t/////3/9+3j/////S///mP////+BfgAI/////zygAAT/////PMAABP////85SwAI/////zzgMTP/////eUoAIP////89AAAE/////zkqAAj/////YKXBhP////95KQAg/////2DGwZj/////YOdxw/////9hCGGI/////zgJAAj/////64EAcP////95awAg/////5AeAAj/////6AEAoP////+T6wAE/////5CrAAD/////fAgDpv////+QygAA/////5DqAAT/////68EAgP////+TqQAE/////+vhAIj/////66EAeP////84IQCQ/////5EJAAD/////ToAAIP////+BPgAM/////3/D83j/////OIAABv////+ACQAA//////hBACj/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////8vowAA/////0Ge/wj/////S///FP////874AAB/////zugAAD/////Z//+7f////9nvf7t/////0v//tz/////gX4ACP////88oAAE/////zzAAAT/////OUsACP////884DEz/////3lKACD/////PQAABP////85KgAI/////2ClwYT/////eSkAIP////9gxsGY/////2DnenP/////YQiBhP////9L//9E/////zvgAAD/////O6AAAf////9n//7t/////2e9/u3/////S//+kP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetTransferScaleMode
+    size: 436
+    flags: 1
+    section: .text
+  relocations: []

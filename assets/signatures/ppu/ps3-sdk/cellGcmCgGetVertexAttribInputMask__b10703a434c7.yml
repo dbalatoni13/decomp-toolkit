@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 37a99b4cd4f8d79d5e0ab99c3264890c2cccc0ff
+  signature: gAMAAP////85IAAA/////y+AG1v/////LwAbXf////9BngAQ/////0GaAAz/////fSMHtP////9OgAAg/////4EjABT/////fSNKFP////95KQAg/////6EpAA7/////fSMHtP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetVertexAttribInputMask
+    size: 56
+    flags: 1
+    section: .text
+  relocations: []

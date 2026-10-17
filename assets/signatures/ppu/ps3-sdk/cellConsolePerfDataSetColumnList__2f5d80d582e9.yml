@@ -1,0 +1,98 @@
+- symbol: 0
+  hash: 0f5e49ba0e7c51a1cd8dc2ac7e11a16a8ed49913
+  signature: +CH/Mf////98CAKm//////rBAID/////+wEAkP/////7QQCg//////vBAMD/////++EAyP////983jN4//////qhAHj/////+uEAiP/////7IQCY//////thAKj/////+4EAsP/////7oQC4//////gBAOD/////fHobeP////98liN4/////3y/K3j/////SAAAAfwAAANgAAAA/////y+DAAD/////f9jzeP////84YP///////0GeAKz/////SAAAAfwAAAMvnwAA/////zhg//7/////QZ4AnP////9X4Cg0/////1fpGDj/////f93zeP////9+6QBQ/////ztgAAD/////OBcAD/////9UHAA2/////3upACD/////O3sAAf////87vQAE/////4BpAAD/////SAAAAfwAAANgAAAA/////3+f2AD/////OGMAAf////9/nBoU/////0Ce/9z/////e1kAIP////9/I8t4/////0gAAAH8AAADYAAAAP////85PAAP/////zgDABD/////VSkANv////84YAAQ/////30pAhT/////VSkANv////85KQAg/////3k+ACD/////f8TzeP////9IAAAB/AAAA2AAAAD/////L4MAAP////9AngBU/////4BijBT/////SAAAAfwAAANgAAAA/////zhg//3/////6AEA4P////94YwAg/////+qhAHj/////6sEAgP////98CAOm/////+rhAIj/////6wEAkP/////rIQCY/////+tBAKD/////62EAqP/////rgQCw/////+uhALj/////68EAwP/////r4QDI/////zghAND/////ToAAIP////98dRt4/////3h7ACD/////O5UAL/////9/xfN4/////ziAAAD/////f2PbeP////9XnAA2/////0gAAAH8AAADYAAAAP////9/I8t4/////5ObAAD/////SAAAAfwAAANgAAAA/////38ky3j/////f7waFP////9XgwA2/////zu9ABD/////SAAAAfwAAANgAAAA/////zgAAAD/////V70ANv////9/GsN4/////309uhT/////OwAAAP////85KQAP/////3++63j/////OyAAAP////9VPAA2/////5LbAAj/////mBsAHP////+TuwAQ/////5P7AAz/////kBsAGP////+QGwAE/////5AbABT/////e0kAIP////97nQAg/////zsYAAH/////f6PreP////87WgAE/////4CJAAD/////SAAAAfwAAANgAAAA/////3vJACD/////f6PreP////873gAY/////5OJAAD/////kykABP/////7KQAI//////spABD/////SAAAAfwAAANgAAAA/////3+fwAD/////fGPiFP////87gwAB/////0Ce/7D/////6AEA4P////96owAg/////+rBAID/////6qEAeP////98CAOm/////+rhAIj/////6wEAkP/////rIQCY/////+tBAKD/////62EAqP/////rgQCw/////+uhALj/////68EAwP/////r4QDI/////zghAND/////SAAAAPwAAAM=
+  symbols:
+  - kind: Function
+    name: .cellConsolePerfDataSetColumnList
+    size: 616
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleInitialized
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._cellConsolePerfDataRegisterCommands
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .strlen
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleMemalign
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .puts
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memset
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .strcpy
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._cellConsolePerfDataAddDataSet
+    size: 0
+    flags: 2
+    section: .text
+  relocations:
+  - offset: 72
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 156
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 188
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 232
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 252
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 356
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 372
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 396
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 492
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 528
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 612
+    kind: rel24
+    symbol: 8
+    addend: 0

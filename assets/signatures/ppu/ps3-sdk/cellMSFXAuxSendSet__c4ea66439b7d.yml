@@ -1,0 +1,32 @@
+- symbol: 0
+  hash: 03d2076e36ed26ffddfb5f426937d46971474bc2
+  signature: LCMAAP////98CAKm//////gh/5H/////+AEAgP////9BwgAc/////y+FAAD/////QdwAFP////+AAwAE/////3wJB7T/////f4VIAP////9BnAAo/////zxgAHr/////YGMSAv////9IAAAB/AAAA2AAAAD/////6AEAgP////84YP///////3wIA6b/////OCEAcP////9OgAAg/////y+EAAD/////QZz/2P////+AAwAA/////3+AIAD/////QZz/zP////8vpgAA/////3wJIdb/////fAAqFP////98BAe0/////0GeAFz/////L4cAAP////9B3P+w/////4AGAAD/////f4A4AP////9BnP+k/////1SAIDb/////gSMACP////9UixA6/////3wLAFD/////fSkCFP////95KQAg/////9ApAAj/////kMkAAP////+Q6QAE/////zhgAAD/////SAAAAfwAAANgAAAA/////+gBAID/////OGAAAP////98CAOm/////zghAHD/////ToAAIP////9UgCA2/////4EjAAj/////VIsQOv/////AAgAA//8AAHwLAFD/////fSkCFP////95KQAg/////9AJAAj/////kMkABP////+QyQAA/////0v//7j/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXAuxSendSet
+    size: 252
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00DE'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 52
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 180
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 222
+    kind: l
+    symbol: 2
+    addend: -14104088

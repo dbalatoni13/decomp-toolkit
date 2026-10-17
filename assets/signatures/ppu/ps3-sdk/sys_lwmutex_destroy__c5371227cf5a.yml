@@ -1,0 +1,46 @@
+- symbol: 0
+  hash: 839e79af887f71e168e7186979dcfdc7528ee13d
+  signature: +CH/cf////98CAKm//////vBAID/////fH4beP////84YQBw//////gBAKD/////++EAiP////94YwfG/////3hjBub/////SAAAAfwAAANgAAAA/////4E+AAD/////6AEAcP////89QIAB/////3/D83j/////f4kAAP////9hSgAK/////0GeABj/////SAAAAfwAAAM5YABg/////ywjAAD/////fGobeP////9BggAg/////+gBAKD/////fUNTeP/////rwQCA/////+vhAIj/////fAgDpv////84IQCQ/////06AACD/////gH4AEP////9EAAAC/////3x/B7T/////f8PzeP////8vvwAA/////0CeADD/////OAD//v////+QHgAA/////3wgBKz/////OUAAAP/////oAQCg/////+vBAID/////fUNTeP/////r4QCI/////3wIA6b/////OCEAkP////9OgAAg/////0gAAAH8AAADf+r7eP////9L//+Y/////wAAAAD/////AAkAAf////+AAgAA//8AAA==
+  symbols:
+  - kind: Function
+    name: .sys_lwmutex_destroy
+    size: 212
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_ppu_thread_get_id
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_lwmutex_trylock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00D2'
+    size: 0
+    flags: 2
+    section: .bss
+  relocations:
+  - offset: 36
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 72
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 188
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 210
+    kind: l
+    symbol: 4
+    addend: -7170272

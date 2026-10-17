@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: f73a7ebdd29809a7b081a6aad9877af2ee875377
+  signature: +CH/gf////98CAKm//////vhAHj/////+AEAkP////98Pwt4/////3xgG3j/////+J8AuP////+QHwCw/////4AfALD/////eAAAIP////98AwN4/////+ifALj/////OKAAAP////9IAAAB/AAAA3xgG3j/////fAMDeP/////pYQAA/////+gLABD/////fAgDpv/////r6//4/////31hW3j/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .sys_timer_start_oneshot
+    size: 88
+    flags: 2
+    section: .text
+  - kind: Function
+    name: ._sys_timer_start
+    size: 0
+    flags: 2
+    section: .text
+  relocations:
+  - offset: 52
+    kind: rel24
+    symbol: 1
+    addend: 0

@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: 89b5e877729b655ca40e11ad1fbc69ee4ee5d2ab
+  signature: +CH+4f////98CAKm//////uhAQj/////+AEBMP////+DowBE//////uBAQD/////L50AAP/////7wQEQ//////vhARj/////fLwreP////9BnAGQ/////4PjACz/////OSAAAP////9X4Ac4/////5EhAHD/////L4AAAP/////pBAAg/////zgAAHT/////sAEAdv////9AngHI/////zvAAAD/////VQB//v////+AYwAo/////1ULh/7/////VAA4MP////9VCXf+/////1VrMDL/////VQdv/v////99awN4/////1UpKDT/////VOAgNv////9VBk/+/////31rS3j/////VQpn/v////9UyRg4/////31rA3j/////VQwv/v////9VBVf+/////1VKGDj/////fWtLeP////9VgBA6/////1SpEDr/////VQc3/v////9VBj/+/////31K83j/////fWtLeP////99SgN4/////1TJCDz/////VOAIPP////99a0t4/////31KA3j/////eQlH4v////95AF/i/////y+DABH/////fABTeP////99KVt4/////7ABAHj/////sSEAev////9BngFI/////y+DACH/////OMEAcP////9BngE8/////1fgB/7/////OSAAgP////8vgAAA/////0CeAOj/////V+AH/v////+xIQB8/////y+AAAD/////OOAAgP////9AngDA/////2AAAAD/////oWQABP////9/gP5w/////6EkAAL/////OQACAP////98CuJ4/////31rBzT/////fSkHNP////99SgBQ/////30pRnD/////fWtGcP////84AAAA/////zkpAID/////OWsAgP////9VSg/+/////3+jB7T/////fMQzeP////+w4QB+/////7EhAID/////sWEAgv////+wAQCa/////7EBAKL/////sUEAdP////+wAQCE/////7ABAIb/////sAEAiP////+wAQCK/////7ABAIz/////sAEAjv////+wAQCQ/////7ABAJL/////sAEAlP////+wAQCW/////7ABAJj/////sQEAnP////+xAQCe/////7EBAKD/////SAAAAfwAAANgAAAA/////+gBATD/////64EBAP/////roQEI/////3wIA6b/////68EBEP/////r4QEY/////zghASD/////ToAAIP////+hJAAI/////30pBzT/////fSlGcP////846QCA/////0v//zj/////oSQABv////9X4Af+/////zjgAID/////fSkHNP////8vgAAA/////30pRnD/////OSkAgP////+xIQB8/////0Ge/xT/////S///yP////+IBAAU/////yuAAAf/////QZ3+NP////9UAA38/////4EiAAD//wAAf8kCLv////9L//4o/////zgAABD/////gUIAAP//AAA4wQBw/////3wJA6b/////eUsAIP////85SgAE/////6ALAAD/////fABAOP////8voAAA/////0GeACD/////iSsAAv////+JawAD/////1UpDfz/////fSZKFP////+gCQAE/////3wAW3j/////sAkABP////9CAP/M/////1fgB/7/////OSAAgP////8vgAAA/////0Ge/oT/////S///ZP////8=
+  symbols:
+  - kind: Function
+    name: .cellPadFeed
+    size: 652
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellPadLddDataInsert
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@0226'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0236'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 432
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 550
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 566
+    kind: l
+    symbol: 3
+    addend: -28621288

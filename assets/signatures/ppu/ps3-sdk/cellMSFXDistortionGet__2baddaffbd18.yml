@@ -1,0 +1,23 @@
+- symbol: 0
+  hash: ef2de82145ca69db02aa4126657b10db07189bca
+  signature: LCMAAP////98CAKm/////3xpG3j/////PGAAev/////4If+R//////gBAID/////YGMSAv////8vpAAA/////0HCAGD/////PGAAev////9B3gBU/////8AJABT/////OGAAAP/////BqQAA/////8GJAAT/////wWkACP/////BSQAM/////8EpABD/////0AQAFP/////RpAAA/////9GEAAT/////0WQACP/////RRAAM/////9EkABD/////SAAAAfwAAANgAAAA/////zhgAAD/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP////9gYxIC/////0gAAAH8AAADYAAAAP////84YP///////0v//+D/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXDistortionGet
+    size: 144
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 96
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 128
+    kind: rel24
+    symbol: 1
+    addend: 0

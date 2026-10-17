@@ -1,0 +1,46 @@
+- symbol: 0
+  hash: 17c583ac8fa4ff0b1d35a904730341e98515bf24
+  signature: +CH/cf////98CAKm//////vhAIj/////PGCAEv////+D4gAA//8AAPgBAKD/////YGMRBP/////7oQB4/////4gfAAD/////L4AAAf////9BngAc/////+gBAKD/////66EAeP/////r4QCI/////3wIA6b/////OCEAkP////9OgAAg/////4OiAAD//wAAgH0AAP////9IAAAB/AAAA2AAAAD/////SAAAAfwAAANgAAAA/////zgAAAD/////OGAAAP////+YHwAA/////5AdAAD/////6AEAoP/////roQB4/////+vhAIj/////fAgDpv////84IQCQ/////06AACD/////AAAAAP////8ACQAB/////4ADAAD/////
+  symbols:
+  - kind: Function
+    name: .cellPadEnd
+    size: 144
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0012'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZN5iosys5input3lib11libpad_stub8finalizeEv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZN5iosys5input3lib11libpad_stub15delete_instanceEv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 18
+    kind: l
+    symbol: 1
+    addend: -7170272
+  - offset: 70
+    kind: l
+    symbol: 2
+    addend: -7170272
+  - offset: 76
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 84
+    kind: rel24
+    symbol: 4
+    addend: 0

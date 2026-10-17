@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: d28c2ea73d4ad346f50e1635505a1897bc075d89
+  signature: gUIAAP//AACAAgAA//8AAJADAAD/////kUMAAP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt7codecvtIwcSt9_MbstatetED1Ev
+    size: 20
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0006'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 6
+    kind: l
+    symbol: 2
+    addend: -28621288

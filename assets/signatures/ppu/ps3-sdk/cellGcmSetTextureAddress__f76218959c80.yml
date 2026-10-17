@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: c01a4af8d8728b9c6db5cbbcdd4afa8ba488d601
+  signature: +CH/Uf////98CAKm//////thAIj/////fNszeP/////4AQDA/////4DDAAj/////gAMABP////85ZgAI//////sBAHD/////+yEAeP////98mCN4/////3+LAED/////+0EAgP/////7gQCQ/////ziAAAL/////+6EAmP////98uit4//////vBAKD/////fP07eP/////74QCo/////30eQ3j/////fH8beP////99OUt4/////31cU3j/////QZ0AfP////9XYEAu/////1fLYCb/////fADTeP////9XqoAe/////3wAW3j/////VwkoNP////98AFN4/////1eLoBb/////VyrgBv////98AFt4/////zkpGgj/////fABTeP////9lKQAE/////3jKACD/////OWYACP////+QCgAE/////5F/AAj/////kSoAAP/////oAQDA/////+sBAHD/////6yEAeP////98CAOm/////+tBAID/////62EAiP/////rgQCQ/////+uhAJj/////68EAoP/////r4QCo/////zghALD/////ToAAIP////+BIwAM/////4AJAAD/////+EEAKP////98CQOm/////4BJAAT/////ToAEIf/////oQQAo/////y+jAAD/////QJ7/sP////+A3wAI/////0v//2D/////
+  symbols:
+  - kind: Function
+    name: .cellGcmSetTextureAddress
+    size: 264
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: 8a33366679b7443279a92151fce39a25c8546cd7
+  signature: +CH/Uf////98CAKm//////thAIj/////+AEAwP////982zN4/////4DDAAj/////gAMABP////85ZgAI//////sBAHD/////f4sAQP/////7IQB4//////tBAID/////+4EAkP/////7oQCY//////vBAKD/////++EAqP////98mCN4/////3x/G3j/////OIAAAv////98vCt4/////3z+O3j/////fR1DeP////99Okt4/////31ZU3j/////QZ0AgP////9Xa0Qu/////1eABj7/////V8qCHv////98AFt4/////1epYyb/////fABTeP////9XCyz0/////30pA3j/////V0rgBv////94yAAg/////30pU3j/////OWsaCP////9XIKEW/////2VrAAT/////fABLeP////85RgAI/////5AIAAT/////kV8ACP////+RaAAA/////+gBAMD/////6wEAcP/////rIQB4/////3wIA6b/////60EAgP/////rYQCI/////+uBAJD/////66EAmP/////rwQCg/////+vhAKj/////OCEAsP////9OgAAg/////4E/AAz/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////L4MAAP////9Anv+w/////4DfAAj/////S///XP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetTextureAddress
+    size: 268
+    flags: 1
+    section: .text
+  relocations: []

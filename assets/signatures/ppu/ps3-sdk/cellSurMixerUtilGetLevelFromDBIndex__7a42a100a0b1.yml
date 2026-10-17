@@ -1,0 +1,45 @@
+- symbol: 0
+  hash: bab1ae3819b0afc7e8c01ff57f4c7e868b74f341
+  signature: LCMAAP////84Af/w/////y+DAAD/////eAYAIP////9BggBU/////3wDAND/////eGnm4v////98AAe0/////3koFmj/////eAnm4v////94Bxao/////3kpFmj/////eGAWqP////9BnAA4/////4FCAAD//wAAgWIAAP//AAB9KkAu/////3wLAC7/////fABLeP////94AAAg/////5AB//D/////wAYAAP/////QAf/0/////8Ah//T/////ToAAIP/////AIgAA//8AAE6AACD/////gUIAAP//AACBYgAA//8AAH0qSC7/////fAs4Lv////98AEt4/////2QAgAD/////eAAAIP////+QAf/w/////8AGAAD/////0AH/9P/////AIf/0/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellSurMixerUtilGetLevelFromDBIndex
+    size: 156
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@003A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0066'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 58
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 62
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 102
+    kind: l
+    symbol: 3
+    addend: -15311144
+  - offset: 110
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 114
+    kind: l
+    symbol: 2
+    addend: -15311144

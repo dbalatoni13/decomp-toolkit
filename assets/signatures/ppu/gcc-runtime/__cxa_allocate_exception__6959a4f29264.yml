@@ -1,0 +1,140 @@
+- symbol: 0
+  hash: 549ba69c8d5bc3d7c524410d34fd92117eb69d9a
+  signature: OGMAUP////98CAKm//////gh/4H/////+8EAcP////94fgAg//////vhAHj/////f8PzeP/////4AQCQ/////0gAAAH8AAADYAAAAP////8sIwAA/////3x/G3j/////QYIAUP////9IAAAB/AAAA2AAAAD/////OIAAAP////98aRt4/////zigAFD/////f+P7eP////+BaQAE/////zlrAAH/////kWkABP////9IAAAB/AAAA2AAAAD/////OH8AUP/////oAQCQ/////3hjACD/////68EAcP/////r4QB4/////3wIA6b/////OCEAgP////9OgAAg/////4CCAAD//wAAgGIAAP//AABIAAAB/AAAA2AAAAD/////gGIAAP//AABIAAAB/AAAA2AAAAD/////gOIAAP//AAArngIA/////zgAACD/////OWAAAP////98CQOm/////4EHAAD/////fQlDeP////9AnQAw/////zvgAAD/////gGIAAP//AABIAAAB/AAAA2AAAAD/////L78AAP////9A/v9k/////0gAAAH8AAADYAAAAP////95KfhC/////zlrAAH/////QkD/2P////9VIAf+/////3lqACD/////L4AAAP////9Anv/o/////1VASCz/////gWIAAP//AAA5IAAB/////3wAWhT/////fSlQMP////94HwAg/////30pQ3j/////kScAAP////9L//+o/////y+k////////QZ4ADP////9IAAAB/AAAA2AAAAD/////eGMAIP////9IAAAB/AAAA2AAAAD/////
+  symbols:
+  - kind: Function
+    name: .__cxa_allocate_exception
+    size: 312
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .malloc
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cxa_get_globals
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memset
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0082'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0086'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Once
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0092'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Mtxlock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@009E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Mtxunlock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZSt9terminatev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00FE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Unwind_Resume
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cxa_call_unexpected
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 52
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 88
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 130
+    kind: l
+    symbol: 4
+    addend: -10216440
+  - offset: 134
+    kind: l
+    symbol: 5
+    addend: -10216440
+  - offset: 136
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 146
+    kind: l
+    symbol: 7
+    addend: -10216440
+  - offset: 148
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 158
+    kind: l
+    symbol: 9
+    addend: -10216440
+  - offset: 194
+    kind: l
+    symbol: 7
+    addend: -10216440
+  - offset: 196
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 212
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 254
+    kind: l
+    symbol: 12
+    addend: -10216440
+  - offset: 292
+    kind: rel24
+    symbol: 13
+    addend: 0
+  - offset: 304
+    kind: rel24
+    symbol: 14
+    addend: 0

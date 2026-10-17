@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: fc4b339347f61a3253a338c89e73320b7a970b22
+  signature: +CH/gf////98CAKm//////vhAHj/////+AEAkP////98fxt4/////0gAAAH8AAADL4MAAP////8rHwAP/////zlAAAD/////QZ4ALP////9X4xA6/////0GZACT/////gWKIlP////98aQe0/////30pWhT/////gAkABP////8vgAAA/////3gJACD/////QZ4ACP////+BSQAc/////+gBAJD/////eUMAIP/////r4QB4/////zghAID/////fAgDpv////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellConsoleGetCompatibility
+    size: 104
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleInitialized
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0

@@ -1,0 +1,51 @@
+- symbol: 0
+  hash: 94469c1774410545f0ca4eea2f55d85386f70d76
+  signature: +CH+8f////98CAKm//////nhAIj/////+gEAkP/////5wQCA//////ohAJj/////+kEAoP/////6YQCo//////qBALD/////+qEAuP/////6wQDA//////rhAMj/////+wEA0P/////7IQDY//////tBAOD/////+2EA6P/////7gQDw//////uhAPj/////+8EBAP/////74QEI//////gBASD/////iAQAHf////98cBt4/////3yPI3j/////L4AAAP////9AngHs/////3yRI3j/////gTEACP/////5IQB4/////4gJAB3/////L4AAAP////9AngG0/////30uS3j/////gq4ACP////+IFQAd/////y+AAAD/////QJ4BfP/////6oQBw/////+khAHD/////g+kACP////979gAg/////4gWAB3/////L4AAAP////9AngE4/////4PWAAj/////f/L7eP////971wAg/////4gXAB3/////L4AAAP////9AngEE/////4P3AAj/////f9PzeP////97+AAg/////4gYAB3/////L4AAAP////9AngDQ/////4M4AAj/////f/T7eP////+IGQAd/////y+AAAD/////QJ4AoP////9/Ost4/////3ocACD/////g/oACP////97/QAg/////4gdAB3/////L4AAAP////9AngBg/////4PdAAj/////f/v7eP////+IHgAd/////y+AAAD/////QJ4AMP////9/3/N4/////4CfAAj/////f4PjeP////9L//7R/////4P/AAD/////f8PzeP////9//vt4/////0gAAAH8AAADiB8AHf////8vgAAA/////0Ge/9z/////g/0AAP////97YwAg/////3v9ACD/////SAAAAfwAAAOIHQAd/////y+AAAD/////QZ7/qP////+D+gAA/////38jy3j/////SAAAAfwAAAN/+vt4/////4gfAB3/////L4AAAP////9AngAM/////3/5+3j/////S///cP////+D+AAA/////3qDACD/////e/gAIP////9IAAAB/AAAA4gYAB3/////L4AAAP////9Bnv84/////4PXAAD/////emMAIP////971wAg/////0gAAAH8AAADiBcAHf////8vgAAA/////0Ge/wT/////g/YAAP////96QwAg/////3v2ACD/////SAAAAfwAAAOIFgAd/////y+AAAD/////QZ7+0P/////pIQBw/////36jq3j/////g+kAAP////9IAAAB/AAAA/vhAHD/////iB8AHf////8vgAAA/////0CeAAz/////f/X7eP////9L//6Q/////4PuAAD/////6GEAeP////9/7vt4/////0gAAAH8AAADiB8AHf////8vgAAA/////0CeAAz/////++EAeP////9L//5Y/////4IxAAD/////eeMAIP////9IAAAB/AAAA3opACD/////fi+LeP////+ICQAd/////y+AAAD/////QZ7+IP/////oAQEg/////+nBAID/////6eEAiP////98CAOm/////+oBAJD/////6iEAmP/////qQQCg/////+phAKj/////6oEAsP/////qoQC4/////+rBAMD/////6uEAyP/////rAQDQ/////+shANj/////60EA4P/////rYQDo/////+uBAPD/////66EA+P/////rwQEA/////+vhAQj/////OCEBEP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt5_TreeISt12_Tmap_traitsIPKcN4Game8Entities5Debug13BehaviourStatESt4lessIS2_ESaISt4pairIKS2_S6_EELb0EEE6_EraseEPNSt9_Tree_nodISD_E5_NodeE
+    size: 680
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 320
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 348
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 372
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 412
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 440
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 468
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 496
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 536
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 568
+    kind: rel24
+    symbol: 1
+    addend: 0

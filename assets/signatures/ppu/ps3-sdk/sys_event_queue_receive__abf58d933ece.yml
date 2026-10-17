@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: 2e6af7e9a8eb64410be4c7bb4a6d6774cd906f14
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4/////3xgG3j/////fIsjeP/////4vwCA/////5AfAHD/////kX8AeP////+AHwBw/////3gAACD/////fAMDeP////+AHwB4/////3gAACD/////fAQDeP/////ovwCA/////zlgAIL/////RAAAAv////98iyN4/////4AfAHj/////eAkAIP/////5aQAA/////3yrK3j/////gB8AeP////94CQAg//////lpAAj/////fMszeP////+AHwB4/////3gJACD/////+WkAEP////986zt4/////4AfAHj/////eAkAIP/////5aQAY/////3xgG3j/////fAAHtP////98AwN4/////+lhAAD/////6AsAEP////98CAOm/////+vr//j/////fWFbeP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .sys_event_queue_receive
+    size: 176
+    flags: 2
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: fe4ee9a7dcd398bda06b49e84ae4e1ec102f059d
+  signature: +6H/6P////98CAKm/////3ydI3j/////+AEAEP////85YACC/////0QAAAL/////+P0AGP////98Ywe0//////idAAD/////+L0ACP/////43QAQ/////+gBABD/////66H/6P////98CAOm/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .sys_event_queue_receive
+    size: 60
+    flags: 2
+    section: .text
+  relocations: []

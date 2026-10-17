@@ -1,0 +1,46 @@
+- symbol: 0
+  hash: fd5367f11229eaa286586c73a8838830c5c761e9
+  signature: LCMAAP////98CAKm//////gh/5H/////+AEAgP////9BwgBA/////y+kAAD/////Qd4AOP////84AAAA/////5CDAAD/////kAMABP////+BJAAI/////4AEAAT/////fSkHtP////98AAe0/////3+ASAD/////Qd0AFP////8vgAAA/////0GcAAz/////L4AB//////9AnQAo/////zxgAHr/////YGMSAv////9IAAAB/AAAA2AAAAD/////6AEAgP////84YP///////3wIA6b/////OCEAcP////9OgAAg/////y+JAf//////QZ3/2P////84YAAA/////0gAAAH8AAADYAAAAP/////oAQCA/////zhgAAD/////fAgDpv////84IQBw/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXCompressorInitApply
+    size: 156
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 88
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 128
+    kind: rel24
+    symbol: 1
+    addend: 0
+- symbol: 0
+  hash: 80ac4b0b45492df4b45d47c1208b147f1339d899
+  signature: LCMAAP////98CAKm/////3xpG3j/////PGAAev/////4If+R//////gBAID/////YGMSAv////8vpAAA/////0HCADz/////PGAAev////9gYxIC/////0HeADD/////OAAAAP////+QiQAA/////zhgAAD/////kAkABP////9IAAAB/AAAA2AAAAD/////OGAAAP/////oAQCA/////zghAHD/////fAgDpv////9OgAAg/////0gAAAH8AAADYAAAAP////84YP///////0v//+T/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXCompressorInitApply
+    size: 108
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 64
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 92
+    kind: rel24
+    symbol: 1
+    addend: 0

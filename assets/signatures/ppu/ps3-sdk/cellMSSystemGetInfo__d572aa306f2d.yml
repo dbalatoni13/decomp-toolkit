@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: 7994047a236fec4ed72da52deb842bb5cf8f6bce
+  signature: LCMAAP////98axt4/////y+kAAD/////OGAAAP////9BggAQ/////4EiAAD//wAAgAkAAP////+QCwAA/////0GeABD/////gSIAAP//AACACQAA/////5AEAAD/////SAAAAPwAAAM=
+  symbols:
+  - kind: Function
+    name: .cellMSSystemGetInfo
+    size: 52
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 22
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 38
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 48
+    kind: rel24
+    symbol: 3
+    addend: 0

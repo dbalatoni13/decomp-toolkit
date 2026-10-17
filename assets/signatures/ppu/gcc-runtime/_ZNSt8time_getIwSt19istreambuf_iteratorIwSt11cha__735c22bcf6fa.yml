@@ -1,0 +1,54 @@
+- symbol: 0
+  hash: d1b8c6b44a968b1effb7b7206ec680a8da0cc53c
+  signature: +CH/Yf////98CAKm//////uhAIj/////fH0beP/////4AQCw//////thAHj/////+4EAgP////9IAAAB/AAAA2AAAAD/////fHsbeP////9IAAAB/AAAA2AAAAD/////O50AFP////84AAAA/////5N9ABT/////kB0ADP////+QHQAI/////3ucACD/////kH0AGP////9IAAAB/AAAA2AAAAD/////f4XjeP////+AYwAE/////ziAAAD/////SAAAAfwAAANgAAAA/////5B9AAj/////SAAAAfwAAANgAAAA/////3+F43j/////gGMAEP////84gAAA/////0gAAAH8AAADYAAAAP////84AAAC/////+thAHj/////kB0AEP/////oAQCw/////5B9AAz/////64EAgP////98CAOm/////+uhAIj/////OCEAoP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE5_InitERKSt8_Locinfo
+    size: 176
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Getpmbstate
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Getpwcstate
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Getptimes
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZSt10_MaklocstrIwEPT_PKcS1_RKSt7_Cvtvec
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 28
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 40
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 76
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 108
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 128
+    kind: rel24
+    symbol: 4
+    addend: 0

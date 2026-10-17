@@ -1,0 +1,41 @@
+- symbol: 0
+  hash: dbd1527a84fd486e63abcb398d7b9b22f5739060
+  signature: LCMAAP////98CAKm//////gh/5H/////+AEAgP////9BwgAk/////y+lAAD/////QZ4AHP/////AAgAA//8AAP+BAAD/////QdwAEP/////AAgAA//8AAP+BAAD/////QJ0AKP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////+gBAID/////OGD///////98CAOm/////zghAHD/////ToAAIP////84AAIA/////zlAAAD/////fAkDpv/////BowAA/////30lUhT/////wAMIAP////84CgAE/////+wAaCj/////eSkAIP////85YwAE/////3gKACD/////eWMAIP/////sAWg6/////9AJAAD/////QgD/1P////84YAAA/////0gAAAH8AAADYAAAAP/////oAQCA/////zhgAAD/////fAgDpv////84IQBw/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellMSEQGet512PointsMorphed
+    size: 180
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@001E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 30
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 42
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 60
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 152
+    kind: rel24
+    symbol: 3
+    addend: 0

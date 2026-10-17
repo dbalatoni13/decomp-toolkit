@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: f5003fec2531d32f08dd116cca466f424f81a925
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4/////3xgG3j/////fIsjeP////+QHwBw/////5F/AHj/////gB8AcP////94AAAg/////3wDA3j/////gB8AeP////94AAAg/////3wEA3j/////OWAAiP////9EAAAC/////3xgG3j/////fAAHtP////98AwN4/////+lhAAD/////6AsAEP////98CAOm/////+vr//j/////fWFbeP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .sys_event_port_connect_local
+    size: 104
+    flags: 2
+    section: .text
+  relocations: []

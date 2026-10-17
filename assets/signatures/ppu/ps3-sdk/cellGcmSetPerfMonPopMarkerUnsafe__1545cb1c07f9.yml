@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 23198747468cc4f88d371ee7a171bdac56c386e5
+  signature: gSMACP////89YEAE/////zwAaHX/////eSoAIP////9hawEA/////2AAAAP/////OSkACP////+QCgAE/////5EjAAj/////kWoAAP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetPerfMonPopMarkerUnsafe
+    size: 44
+    flags: 1
+    section: .text
+  relocations: []

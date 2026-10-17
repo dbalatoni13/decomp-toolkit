@@ -1,0 +1,50 @@
+- symbol: 0
+  hash: b5b644379da74ba8c336a32c64c0583efa66abb8
+  signature: +CH/Qf////98CAKm//////rBAHD/////+wEAgP/////7IQCI//////vBALD/////++EAuP////98fht4/////3yWI3j/////+uEAeP/////7QQCQ//////thAJj/////+4EAoP/////7oQCo//////gBAND/////SAAAAfwAAANgAAAA/////y+DAAD/////f9nzeP////9+2LN4/////zvg////////QZ4A9P////+C4om0/////zvg//3/////PTcAC/////+ACRQE/////yuAAH//////QZ0A3P////8vngAA/////0HeAUD/////iB4AAP////8vgAAA/////0GeATT/////L5YAAP////9BngEs/////zgAAID/////OWmRCP////874AAA/////3wJA6b/////SAAADP////87/wAB/////0NAAVD/////eWkAIP////85awEI/////4gJAAD/////L4AAAP////9Anv/o/////z+XAAv/////V/oYOP////9X+0Au/////zu8kAT/////f9raFP////97JAAg/////3x+6hT/////OKAAgP////94YwAg/////zsgAAD/////SAAAAfwAAANgAAAA/////zk+AH//////fSkHtP////97BgAg/////30p4hT/////mymQBP////+IFgAA/////3wAB3T/////L4AAAP////9AngB4/////zk+AID/////fSkHtP////99KeIU/////5gJkAT/////fXraFP////89VwAL/////zlrAQD/////OAAAAf////99awe0/////31rUhT/////mAuQCP////+BKhQE/////zkpAAH/////kSoUBP/////oAQDQ/////3vjACD/////6sEAcP/////q4QB4/////3wIA6b/////6wEAgP/////rIQCI/////+tBAJD/////62EAmP/////rgQCg/////+uhAKj/////68EAsP/////r4QC4/////zghAMD/////ToAAIP////84fgCA/////4CiidT/////OIAAgP////98Y+oU/////3hjACD/////SAAAAfwAAANgAAAA/////zk+AP//////fSkHtP////99KeIU/////5spkAT/////S///cP////874P/+/////+gBAND/////6sEAcP////974wAg/////+rhAHj/////6wEAgP////98CAOm/////+shAIj/////60EAkP/////rYQCY/////+uBAKD/////66EAqP/////rwQCw/////+vhALj/////OCEAwP////9OgAAg/////4Eiibz/////gGKJzP////85KQAY/////3k+ACD/////f8TzeP////9IAAAB/AAAA2AAAAD/////PTcAC/////+ICRUI/////y+AAAD/////QZ7+oP////9/xPN4/////4BiidD/////SAAAAfwAAANgAAAA/////0v//oz/////
+  symbols:
+  - kind: Function
+    name: .cellConsoleVariableAddGroupWithNamespace
+    size: 564
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleInitialized
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .strncpy
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .snprintf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Assert
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 60
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 228
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 408
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 520
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 552
+    kind: rel24
+    symbol: 4
+    addend: 0

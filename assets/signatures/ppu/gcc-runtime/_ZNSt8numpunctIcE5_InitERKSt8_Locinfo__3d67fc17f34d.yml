@@ -1,0 +1,111 @@
+- symbol: 0
+  hash: 487ad5fa956c17e28f61234dc388336c8eb09e70
+  signature: +CH/Yf////98CAKm//////thAHj/////fHsbeP/////7QQBw//////uBAID/////+6EAiP/////74QCY//////gBALD/////+8EAkP////9IAAAB/AAAA2AAAAD/////OAAAAP////98eht4/////5AbABT/////kBsACP////+QGwAQ/////4OjADD/////SAAAAfwAAANgAAAA/////0gAAAH8AAADYAAAAP////97owAg/////3+863j/////SAAAAfwAAANgAAAA/////zujAAH/////e78AIP////9/4/t4/////0gAAAH8AAADYAAAAP////8vnQAA/////3xrG3j/////QZ4AIP////9/6QOm/////3uJACD/////O5wAAf////+ICQAA/////5gDAAD/////OGMAAf////9CAP/s/////5F7AAj/////SAAAAfwAAANgAAAA/////4PjAED/////SAAAAfwAAANgAAAA/////0gAAAH8AAADYAAAAP////97/gAg/////3/D83j/////SAAAAfwAAANgAAAA/////zujAAH/////e7wAIP////9/g+N4/////0gAAAH8AAADYAAAAP////8vnQAA/////3+JA6b/////fGkbeP////9BngAc/////4geAAD/////O/8AAf////+YCQAA/////3v+ACD/////OSkAAf////9CAP/s/////5B7ABD/////SAAAAfwAAANgAAAA/////4PjAET/////SAAAAfwAAANgAAAA/////0gAAAH8AAADYAAAAP////97/gAg/////3/D83j/////SAAAAfwAAANgAAAA/////zujAAH/////e7wAIP////9/g+N4/////0gAAAH8AAADYAAAAP////8vnQAA/////3+JA6b/////fGkbeP////9BngAc/////4geAAD/////O/8AAf////+YCQAA/////3v+ACD/////OSkAAf////9CAP/s/////5B7ABT/////gToALP////+LqQAA/////0gAAAH8AAADYAAAAP////9IAAAB/AAAA2AAAAD/////m7sADP////+BOgA0/////4upAAD/////SAAAAfwAAANgAAAA/////0gAAAH8AAADYAAAAP////+buwAN/////+gBALD/////60EAcP/////rYQB4/////3wIA6b/////64EAgP/////roQCI/////+vBAJD/////6+EAmP////84IQCg/////06AACD/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt8numpunctIcE5_InitERKSt8_Locinfo
+    size: 480
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .localeconv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Getpmbstate
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Getpwcstate
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .strlen
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Znaj
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 40
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 72
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 80
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 116
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 168
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 180
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 188
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 204
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 224
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 276
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 288
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 296
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 312
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 332
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 392
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 400
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 420
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 428
+    kind: rel24
+    symbol: 3
+    addend: 0

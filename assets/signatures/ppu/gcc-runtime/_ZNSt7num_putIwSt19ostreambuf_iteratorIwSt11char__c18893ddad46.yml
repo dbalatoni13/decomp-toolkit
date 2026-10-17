@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 4ec4c2176c1f30ac73660d7a1265c54d5d84b68b
+  signature: fGkbeP////+BYgAA//8AAPgh/5H/////fAgCpv/////4AQCA/////5FpAAD/////SAAAAfwAAANgAAAA/////+gBAID/////OCEAcP////98CAOm/////06AACD/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED0Ev
+    size: 48
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0006'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 6
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 24
+    kind: rel24
+    symbol: 2
+    addend: 0

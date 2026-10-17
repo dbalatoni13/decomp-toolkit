@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 4d96c0af613369dd8bd537b0ef90072c80d4901e
+  signature: +CH/cf////98CAKm//////uBAHD/////+AEAoP////+A4wAg/////3x8G3j/////+6EAeP/////7wQCA//////vhAIj/////fH4beP////+BZwAA/////3ydI3j/////fH8beP////8viwAA/////0HeADD/////gSMAEP////+ACQAA/////3+AWED/////QJwAIP////8vBP///////0GaAEz/////OWv///////95aQAg/////4gJAAD/////f4AgAP////9BngCI/////4CeAGz/////L4QAAP////9AngDI/////zug////////6AEAoP////9/owe0/////+uBAHD/////66EAeP////98CAOm/////+vBAID/////6+EAiP////84IQCQ/////06AACD/////gUMAUP////84C////////4EDAFT/////kAcAAP/////pKgAA/////zkp////////+SoAAP/////paAAA/////zlr////////+WgAAP////87oAAA/////+gBAKD/////64EAcP////9/owe0/////+vBAID/////66EAeP////98CAOm/////+vhAIj/////OCEAkP////9OgAAg/////4FDAFD/////gQMAVP////+RZwAA/////+kqAAD/////OSn////////5KgAA/////+loAAD/////OWv////////5aAAA/////0Ha/7T/////6AEAoP////9/owe0/////+uBAHD/////66EAeP////98CAOm/////+vBAID/////6+EAiP////84IQCQ/////06AACD/////L53///////9Bnv88/////4AeAFj/////L4AAAP////9AngAc/////3iEACD/////e6MGIP////9IAAAB/AAAA2AAAAD/////L4P///////9Anv8Y/////4E8ACD/////OR8AXP////+ACQAA/////3+AQAD/////QZ7/AP////+bvgBc/////4FcADD/////OB8AXf////+BPAAQ/////4F8ACD/////kQkAAP////+RCwAA/////5AKAAD/////S//+4P////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt13basic_filebufIcSt11char_traitsIcEE9pbackfailEi
+    size: 412
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .ungetc
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 340
+    kind: rel24
+    symbol: 1
+    addend: 0

@@ -1,0 +1,56 @@
+- symbol: 0
+  hash: 2985b754b0957e2a2d9fcf86a32af7630f646070
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP////+AYgAA//8AAHymK3j/////fIUjeP////97pAAg//////gBAKD/////SAAAAfwAAANgAAAA/////y+DAAD/////f70aFP////98Ywe0/////3u9ACD/////QZwADP////84AAAA/////5gdAAD/////6AEAoP/////roQB4/////zghAJD/////fAgDpv////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .vsprintf
+    size: 92
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0012'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Printf
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 18
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 36
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: d50b1b96bcdaae2cc5e1739678c49e9fefdff191
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP////98pit4/////4BiAAD//wAAfIUjeP/////4AQCg/////3+k63j/////SAAAAfwAAANgAAAA/////y+DAAD/////f70aFP////97vQAg/////0GcAAz/////OAAAAP////+YHQAA/////+gBAKD/////66EAeP////84IQCQ/////3wIA6b/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .vsprintf
+    size: 88
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Printf
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 22
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 36
+    kind: rel24
+    symbol: 2
+    addend: 0

@@ -1,0 +1,53 @@
+- symbol: 0
+  hash: 242761c05e81e1efe4a2bb86dbf43b3682bae893
+  signature: gSQAJP////986jt4//////vh//j/////+6H/6P/////7wf/w/////3yfI3j/////gSkAAP////94bAAg/////y+JAAD/////QZ4AEP////+ABABg/////3+ASED/////QZwBPP////9VQAf+/////y+AAAD/////QZ4AxP////+DvwAg/////3u+ACD/////gH4AAP////8vgwAA/////0GeALD/////L4YAAv////9BngGw/////y+GAAH/////QZ4BwP////8vhgAA/////0GeAUz/////gSIAAP//AACAqQAA/////y+FAAD/////QZwAlP////+BPwAQ/////4AEAGD/////gSkAAP////98CQBQ/////3+AKAD/////QZwAfP////+BHwBQ/////30jSFD/////gP8AVP////9VSge8/////30lShT/////L4oAAP////99Kwe0/////+gIAAD/////fSkaFP////98AFoU/////5E+AAD/////+AgAAP/////pRwAA/////31rUhT/////+WcAAP////9BngBE/////4EfACT/////gAgAAP////8vgAAA/////0GeADT/////gV8ANP////97qQAg/////4FqAAD/////gAkAAP////+QCAAA/////5FqAAD/////SAAAGP////9VQAe8/////y+AAAD/////QJ4AbP////+BIgAA//8AAICpAAD/////gWIAAP//AAB9g2N4/////5CsAAD/////gUIAAP//AADrof/o/////+vB//D/////gAsAAP/////r4f/4/////5AMAAT/////gSsABP////+RLAAI/////6ALAAj/////sAwADP////+hKwAK/////7EsAA7/////gAoAAP////+QDAAQ/////6EqAAT/////sSwAFP////+gCgAG/////7AMABb/////ToAAIP////+RJABg/////0v//sT/////gV8AJP////+BagAA/////y+LAAD/////QZ7/jP////8vhgAC/////0GeAED/////L4YAAf////9BngC8/////y+GAAD/////QJ4AqP////+BIgAA//8AAIAJAAD/////f4AoAP////9AngA0/////4CpAAD/////SAAALP////+BIgAA//8AAIAJAAD/////f4UAAP////9Anv60/////0v//qz/////gT8AEP////+ABABg/////4FpAAD/////fAsAUP////98pQIU/////y+FAAD/////QZz/LP////+BPwAQ/////4AEAGD/////gSkAAP////98CQBQ/////3+AKAD/////QZz/FP////98CSoU/////5AKAAD/////S///EP////+BPwAQ/////4AEAGD/////gWkAAP////98CwBQ/////3ylAhT/////S//+WP////9VQAe8/////y+AAAD/////QJ7+RP////+BPwAQ/////4AJAAD/////fAAYUP////98pQIU/////0v//jj/////gSIAAP//AACAqQAA/////0v//5T/////gT8AEP////+ACQAA/////3wAWFD/////fKUCFP////9L//+A/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt12strstreambuf7seekoffElNSt5_IosbIiE8_SeekdirENS1_9_OpenmodeE
+    size: 608
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0116'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0122'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 110
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 270
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 278
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 290
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 414
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 438
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 578
+    kind: l
+    symbol: 1
+    addend: -28621288

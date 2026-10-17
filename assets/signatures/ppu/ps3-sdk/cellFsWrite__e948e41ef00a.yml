@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 6f0d4da3d105a6022aac43c74aa7ac4c23adb90c
+  signature: +CH/Yf////98CAKm//////thAHj/////fNszeP/////7gQCA/////3y8K3j/////+6EAiP////98nSN4//////gBALD/////SAAAAfwAAANgAAAA/////3+k63j/////f4XjeP////9/Ztt4/////zlgAyP/////RAAAAv/////oAQCw/////3xjB7T/////62EAeP/////rgQCA/////3wIA6b/////66EAiP////84IQCg/////06AACD/////AAAAAP////8ACQAB/////4AFAAD/////
+  symbols:
+  - kind: Function
+    name: .cellFsWrite
+    size: 108
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._get_fsfd
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 36
+    kind: rel24
+    symbol: 1
+    addend: 0

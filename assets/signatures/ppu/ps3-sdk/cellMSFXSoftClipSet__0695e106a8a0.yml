@@ -1,0 +1,23 @@
+- symbol: 0
+  hash: 8454b1d3fb00fcbadbcfc98e4fad40b676cc77f6
+  signature: LCMAAP////98CAKm//////gh/5H/////+AEAgP////9BwgCY/////y+kAAD/////QZ4AkP////8vhf///////zgFAAH/////fAAHtP////9BngB0/////yuFAAf/////Qd0AeP////9/gCgA/////0GdACT/////OGAAAP////9IAAAB/AAAA2AAAAD/////6AEAgP////84YAAA/////3wIA6b/////OCEAcP////9OgAAg/////30lAFD/////VKAYOP////85Kf///////3wAGhT/////eSkAIP////94AwAg/////zkpAAH/////fSkDpv////84AwAI/////8AEAAD/////waQABP/////QAwAA/////9GjAAT/////eAMAIP////9CAP/o/////0v//6T/////OAAACP////84oAAA/////0v//5D/////PGAAev////9gYxIC/////0gAAAH8AAADYAAAAP/////oAQCA/////zhg////////fAgDpv////84IQBw/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXSoftClipSet
+    size: 204
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 64
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 176
+    kind: rel24
+    symbol: 1
+    addend: 0

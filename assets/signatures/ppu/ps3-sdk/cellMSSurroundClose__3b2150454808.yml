@@ -1,0 +1,41 @@
+- symbol: 0
+  hash: d6b8f553cddec04ed505129d491c859f540f7acb
+  signature: gWIAAP//AAB8CAKm//////gh/5H/////+AEAgP////85QAAA/////zhgAAD/////gAsAAP////8vgAAB/////0CeACz/////gSIAAP//AACRSwAA/////5FJAAD/////SAAAAfwAAANgAAAA/////zhgAAD/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP////88YAB6/////2BjEgP/////SAAAAfwAAANgAAAA/////zhg////////S///3P////8=
+  symbols:
+  - kind: Function
+    name: .cellMSSurroundClose
+    size: 100
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 38
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 48
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 84
+    kind: rel24
+    symbol: 3
+    addend: 0

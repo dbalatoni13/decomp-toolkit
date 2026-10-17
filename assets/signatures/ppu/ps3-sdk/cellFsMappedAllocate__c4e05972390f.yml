@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 09e84f0ce1093cf8d280c879e159701a99ac253e
+  signature: +CH/gf////98CAKm/////ywlAAD/////+8EAcP/////4AQCQ/////zwAgAH/////++EAeP////98niN4/////3y/K3j/////YAAADf////9BggAk/////0gAAAH8AAADYAAAAP////84ng///////3/l+3j/////eIQE5P////85YANN/////0QAAAL/////fGAHtP////98AwN4/////+gBAJD/////68EAcP/////r4QB4/////3wIA6b/////OCEAgP////9OgAAg/////wAAAAD/////AAkAAf////+AAgAA//8AAA==
+  symbols:
+  - kind: Function
+    name: .cellFsMappedAllocate
+    size: 116
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._get_fsfd
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0072'
+    size: 0
+    flags: 2
+    section: .bss
+  relocations:
+  - offset: 44
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 114
+    kind: l
+    symbol: 2
+    addend: -7170272

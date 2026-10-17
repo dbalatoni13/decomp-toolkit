@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 5ccbeb46843e950e0f2204da384d4f7e527adf35
+  signature: OGP///////98CAKm//////gh/4H/////OIEAcP/////4AQCQ/////3hjACD/////SAAAAfwAAANgAAAA/////y+jAAD/////OGAAAP////9BngAI/////4BhAHj/////6AEAkP////84IQCA/////3wIA6b/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._Unwind_FindEnclosingFunction
+    size: 64
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unwind_Find_FDE
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0

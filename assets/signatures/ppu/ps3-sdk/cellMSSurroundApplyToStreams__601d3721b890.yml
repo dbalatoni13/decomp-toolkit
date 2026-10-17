@@ -1,0 +1,284 @@
+- symbol: 0
+  hash: 3f50711f91fd324e821c8be4d8f851b1104e4eb2
+  signature: +CH/gf////98CAKm//////vhAHj/////OIAAAP////+D4gAA//8AAPgBAJD/////f+P7eP////9IAAAB/AAAA+hBACj/////gSIAAP//AACICQAA/////y+AAAH/////QZ4AGP////+AggAA//8AAIBiAAD//wAASAAAAfwAAAPoQQAo/////0gAAAD/////gSIAAP//AACACQAA/////y+AAAD/////Qd4AWP////+BIgAA//8AAIAJAAD/////L4AAAP////9BngCQ/////4EiAAD//wAAiAkAAP////8vgAAB/////0HeAFz/////SAAAAfwAAAM4YAAA/////0gAAAH8AAADYAAAAP////9/4/t4/////0gAAAH8AAAD6EEAKP////84YAAA/////+gBAJD/////6+EAeP////84IQCA/////3wIA6b/////ToAAIP////88YAB6/////2BjEg3/////SAAAAfwAAANgAAAA/////3/j+3j/////SAAAAfwAAAPoQQAo/////zhg////////S///zP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////3/j+3j/////SAAAAfwAAAPoQQAo/////zhg////////S///qP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////3/j+3j/////SAAAAfwAAAPoQQAo/////zhgAAD/////S///hP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSSurroundApplyToStreams
+    size: 280
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0012'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0036'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@003A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@003C'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@004A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._SurroundUpdateStreams
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 18
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 28
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 38
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 54
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 58
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 60
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 74
+    kind: l
+    symbol: 7
+    addend: -14104088
+  - offset: 90
+    kind: l
+    symbol: 8
+    addend: -14104088
+  - offset: 106
+    kind: l
+    symbol: 9
+    addend: -14104088
+  - offset: 120
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 128
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 140
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 180
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 192
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 216
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 228
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 252
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 264
+    kind: rel24
+    symbol: 12
+    addend: 0
+- symbol: 0
+  hash: 3d5b4ad286282ca50e2df916ab9612497132e554
+  signature: +CH/gf////98CAKm//////vhAHj/////OIAAAP////+D4gAA//8AAPgBAJD/////f+P7eP////9IAAAB/AAAA+hBACj/////gSIAAP//AACICQAA/////y+AAAH/////QZ4AGP////+AggAA//8AAIBiAAD//wAASAAAAfwAAANgAAAA/////0gAAAD/////gSIAAP//AACACQAA/////y+AAAD/////Qd4AWP////+BIgAA//8AAIAJAAD/////L4AAAP////9BngCQ/////4EiAAD//wAAiAkAAP////8vgAAB/////0HeAFz/////SAAAAfwAAAM4YAAA/////0gAAAH8AAADYAAAAP////9/4/t4/////0gAAAH8AAAD6EEAKP////84YAAA/////+gBAJD/////6+EAeP////84IQCA/////3wIA6b/////ToAAIP////88YAB6/////2BjEg3/////SAAAAfwAAANgAAAA/////3/j+3j/////SAAAAfwAAAPoQQAo/////zhg////////S///zP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////3/j+3j/////SAAAAfwAAAPoQQAo/////zhg////////S///qP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////3/j+3j/////SAAAAfwAAAPoQQAo/////zhgAAD/////S///hP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSSurroundApplyToStreams
+    size: 280
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0012'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0036'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@003A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@004A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._SurroundUpdateStreams
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 18
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 28
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 38
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 54
+    kind: l
+    symbol: 4
+    addend: -6468872
+  - offset: 58
+    kind: l
+    symbol: 5
+    addend: -6468872
+  - offset: 60
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 74
+    kind: l
+    symbol: 7
+    addend: -6468872
+  - offset: 90
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 106
+    kind: l
+    symbol: 9
+    addend: -6468872
+  - offset: 120
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 128
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 140
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 180
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 192
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 216
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 228
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 252
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 264
+    kind: rel24
+    symbol: 12
+    addend: 0

@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 0375874438352a6548fd33f3d7c0bbbb29b62f32
+  signature: +CH/kf////98CAKm//////gBAID/////SAAAAfwAAANgAAAA/////zlgAzT/////RAAAAv/////oAQCA/////3xjB7T/////OCEAcP////98CAOm/////06AACD/////AAAAAP////8ACQAB/////4AAAAD/////
+  symbols:
+  - kind: Function
+    name: .cellFsFsync
+    size: 60
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._get_fsfd
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 12
+    kind: rel24
+    symbol: 1
+    addend: 0

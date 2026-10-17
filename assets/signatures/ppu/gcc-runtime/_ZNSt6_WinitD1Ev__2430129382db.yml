@@ -1,0 +1,67 @@
+- symbol: 0
+  hash: 059c500f942fb127f9c4f04055b1673125c48387
+  signature: OGAAAv////98CAKm//////gh/4H/////+8EAcP/////74QB4//////gBAJD/////SAAAAfwAAANgAAAA/////4EiAAD//wAAgWkAAP////85a////////y+LAAD/////kWkAAP////9BngAo/////zhgAAL/////SAAAAfwAAANgAAAA/////+gBAJD/////68EAcP/////r4QB4/////3wIA6b/////OCEAgP////9OgAAg/////zhgAAL/////SAAAAfwAAANgAAAA/////4PiAAD//wAAOX8BjP////+BPwGM/////zkp//T/////eSkAIP////+BKQAA/////31pWhT/////eWsAIP////+ACwAI/////1QLB3z/////L4sAAP////9BngDA/////4E/AcT/////O98BxP////85Kf/0/////3kpACD/////gAkAAP////98APIU/////3gLACD/////gSsACP////9VIAd8/////y+AAAD/////QZ4BBP////+BPwH8/////zvfAfz/////OSn/9P////95KQAg/////4AJAAD/////fADyFP////94CwAg/////4ErAAj/////VSAHfP////8vgAAA/////0Ce/1j/////gWsAKP////99Y1t4/////4ErAAD/////gUkAOP////+BagAA//////hBACj/////fWkDpv////+ASgAE/////06ABCH/////6EEAKP////8vg////////0Ce/yj/////gT8B/P////84oAAA/////zkp//T/////eSkAIP////+BaQAA/////31r8hT/////eWsAIP////99Y1t4/////4CLAAj/////YIQABP////9IAAAB/AAAA2AAAAD/////S//+9P////873wGM/////30p8hT/////eSkAIP////+BaQAo/////31jW3j/////gSsAAP////+BSQA4/////4AKAAD/////+EEAKP////98CQOm/////4BKAAT/////ToAEIf/////oQQAo/////y+D////////QJ7/DP////+BPwGM/////zigAAD/////OSn/9P////95KQAg/////4FpAAD/////fWvyFP////95awAg/////31jW3j/////gIsACP////9ghAAE/////0gAAAH8AAADYAAAAP////9L//7Y/////4FrACj/////fWNbeP////+BKwAA/////4FJADj/////gWoAAP/////4QQAo/////31pA6b/////gEoABP////9OgAQh/////+hBACj/////L4P///////9Anv7U/////4E/AcT/////OKAAAP////85Kf/0/////3kpACD/////gWkAAP////99a/IU/////3lrACD/////fWNbeP////+AiwAI/////2CEAAT/////SAAAAfwAAANgAAAA/////0v//qD/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt6_WinitD1Ev
+    size: 552
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0022'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt8ios_base5clearENSt5_IosbIiE8_IostateEb
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 34
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 60
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 106
+    kind: l
+    symbol: 4
+    addend: -28621288
+  - offset: 328
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 440
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 540
+    kind: rel24
+    symbol: 5
+    addend: 0

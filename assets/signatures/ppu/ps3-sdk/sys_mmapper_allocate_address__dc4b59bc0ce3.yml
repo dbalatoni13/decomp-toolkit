@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: ee6ffab6f175ba2c1defa2928def18e38f105118
+  signature: +CH/kf////98CAKm//////gBAID/////eGMAIP////94pQAg/////3jGACD/////OWABSv////9EAAAC/////3xjB7T/////6AEAgP////98CAOm/////zghAHD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .sys_mmapper_allocate_address
+    size: 52
+    flags: 1
+    section: .text
+  relocations: []

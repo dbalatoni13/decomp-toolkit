@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: bb7ec6686d85cd1f2e8b5d51918cecc6a50576e9
+  signature: +CH/cf////98CAKm//////uhAHj/////+AEAoP////9IAAAB/AAAA2AAAAD/////fH0beP////84YAAA/////zu9ABv/////SAAAAfwAAANgAAAA/////+gBAKD/////f6MHtP/////roQB4/////3wIA6b/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSFXIRDSPImpulseGetNeededMemorySize
+    size: 68
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSDSPCalcMemoryNeededForChunks
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 16
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 36
+    kind: rel24
+    symbol: 2
+    addend: 0

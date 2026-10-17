@@ -1,0 +1,46 @@
+- symbol: 0
+  hash: f9e7d6ea37fa954e89c8cb009b7bff811c7acefc
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP/////4AQCg/////0gAAAH8AAADkH0AAP////9IAAAB/AAAA2AAAAD/////fH0beP////84YAAA/////0gAAAH8AAADYAAAAP////84YAAA/////4E9AAT/////L4n///////85KQAB/////0GeAAj/////kT0ABP////9IAAAB/AAAA2AAAAD/////6AEAoP/////roQB4/////3wIA6b/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt6localeC2Ev
+    size: 104
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt6locale5_InitEv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Getgloballocale
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 28
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 44
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 76
+    kind: rel24
+    symbol: 4
+    addend: 0

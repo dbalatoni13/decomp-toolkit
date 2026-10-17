@@ -1,0 +1,81 @@
+- symbol: 0
+  hash: d688dcb76151e21b9215a19161142232bbd6a329
+  signature: +CH/Yf////98CAKm//////vBAJD/////fH4beP////8sJAAA//////gBALD/////PGAAev/////74QCY/////zge////////+2EAeP/////7gQCA/////3yfI3j/////+6EAiP////9gYxIC/////yuAAf//////QcIAqP////84YAAA/////3vbACD/////QZ0AlP////9IAAAB/AAAA2AAAAD/////HBsTgP////+DogAA//8AAHgAACD/////g4IAAP//AAA4gAAA/////4EiAAD//wAAfAUDeP////+BYgAA//8AAHwA+hT/////f+P7eP////+T6QAA/////5AdAAD/////k8sAAP////+T/AAA/////0gAAAH8AAAD6EEAKP////+AfQAA/////39l23j/////OIAAAP////9IAAAB/AAAA+hBACj/////gBwAAP////+BIgAA//8AADhgAAD/////kAkAfP/////oAQCw/////+thAHj/////64EAgP////98CAOm/////+uhAIj/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////zhg////////S///yP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSATRACInit
+    size: 244
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0062'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0072'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@008C'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@00AE'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 76
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 90
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 98
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 106
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 114
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 140
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 160
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 174
+    kind: l
+    symbol: 7
+    addend: -14104088
+  - offset: 228
+    kind: rel24
+    symbol: 1
+    addend: 0

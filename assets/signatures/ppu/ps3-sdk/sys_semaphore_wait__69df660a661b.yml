@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: d1562767c3b08ea55a57d281bdb7a10c72e2b848
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4/////3xgG3j/////+J8AeP////+QHwBw/////4AfAHD/////eAAAIP////98AwN4/////+ifAHj/////OWAAXP////9EAAAC/////3xgG3j/////fAAHtP////98AwN4/////+lhAAD/////6AsAEP////98CAOm/////+vr//j/////fWFbeP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .sys_semaphore_wait
+    size: 92
+    flags: 2
+    section: .text
+  relocations: []

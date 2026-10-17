@@ -1,0 +1,64 @@
+- symbol: 0
+  hash: c55849e5f998e552f31eb1ed03ab089ca7872f9a
+  signature: LCMAAP////98CAKm/////3xrG3j/////PGAAev/////4If+R//////gBAID/////YGMSAv////8rhAA//////0HCAFD/////PGAAev////9B3QBE/////1SJEDr/////wAIAAP//AAD/gQAA/////zkpEAD/////fSQHtP////9BnAAs/////4ErAAD/////OGAAAP////98KSUu/////0gAAAH8AAADYAAAAP/////oAQCA/////zhgAAD/////fAgDpv////84IQBw/////06AACD/////YGMSAv////9IAAAB/AAAA2AAAAD/////6AEAgP////84YP///////3wIA6b/////OCEAcP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSFXVocoderSetEQBand
+    size: 140
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0032'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 50
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 80
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 112
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: 8f8fb529dda6b62820599fbced156289f653d62f
+  signature: K4QAP/////98CAKm/////8ACAAD//wAAfXAQJv////9Va/f+//////gh/5H//////4EAAP/////4AQCA/////3wQECb/////VADv/v////99awN4/////4FDAAD/////VIkQOv////8viwAA/////zkpEAD/////PGAAev////99KQe0/////2BjEgL/////QJ4AKP////84YAAA/////3wqTS7/////SAAAAfwAAANgAAAA/////zhgAAD/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP////9IAAAB/AAAA2AAAAD/////OGD///////9L///k/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSFXVocoderSetEQBand
+    size: 128
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 10
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 84
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 112
+    kind: rel24
+    symbol: 2
+    addend: 0

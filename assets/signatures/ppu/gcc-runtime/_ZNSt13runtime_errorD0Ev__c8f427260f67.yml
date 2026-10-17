@@ -1,0 +1,41 @@
+- symbol: 0
+  hash: 13708e04305520b41c4906a08709ac39848b6763
+  signature: +CH/gf////98CAKm//////vhAHj/////O+MABP/////4AQCQ/////4ACAAD//wAA+8EAcP////+QAwAA/////4AfABj/////eH4AIP////8rgAAP/////0GdAEj/////OSAAAP////84AAAP/////3/D83j/////kB8AGP////+ZPwAE/////5E/ABT/////SAAAAfwAAANgAAAA/////3/D83j/////SAAAAfwAAANgAAAA/////+gBAJD/////68EAcP/////r4QB4/////3wIA6b/////OCEAgP////9OgAAg/////4B/AAT/////SAAAAfwAAANgAAAA/////0v//7D/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt13runtime_errorD0Ev
+    size: 132
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt9exceptionD2Ev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 22
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 72
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 84
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 120
+    kind: rel24
+    symbol: 3
+    addend: 0

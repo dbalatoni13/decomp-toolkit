@@ -1,0 +1,36 @@
+- symbol: 0
+  hash: ec62ae4bef2a2779ec6606fe98b27d6f09706bc0
+  signature: LCMAAP////98CAKm//////gh/4H/////+8EAcP////98fht4//////vhAHj/////fIMjeP/////4AQCQ/////3y/K3j/////QcIAmP////8vpAAA/////0GeAJD/////L6UAAP////9BngCI/////4EkAAT/////OSn//v////8riQH+/////0HdAHj/////gAQAAP////8rgAAC/////0HdAGz/////gSUABP////85Kf/+/////yuJAf7/////Qd0AXP////+ABQAA/////yuAAAL/////QZ0AUP////9/xPN4/////0gAAAH8AAADL6MAAP////9AngBA/////zieCAD/////f+P7eP////94hAAg/////0gAAAH8AAADL6MAAP////9AngAo/////0gAAAH8AAADYAAAAP/////oAQCQ/////zhgAAD/////68EAcP/////r4QB4/////3wIA6b/////OCEAgP////9OgAAg/////zxgAHr/////YGMSAv////9IAAAB/AAAA2AAAAD/////6AEAkP////84YP///////+vBAHD/////6+EAeP////98CAOm/////zghAID/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSEQInitMorphEQ
+    size: 232
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSEQGet512Points
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 116
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 140
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 152
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 196
+    kind: rel24
+    symbol: 2
+    addend: 0

@@ -1,0 +1,74 @@
+- symbol: 0
+  hash: 38bb4dece08917ffa62072ee199a1ad9a23f10c5
+  signature: +CH/cf////98CAKm//////uBAHD/////fHwbeP/////4AQCg//////uhAHj/////SAAAAfwAAANgAAAA/////3+D43j/////OIAAAP////9IAAAB/AAAA2AAAAD/////fH0beP////9/g+N4/////0gAAAH8AAADYAAAAP/////oAQCg/////3+j63j/////64EAcP/////roQB4/////3wIA6b/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .ftell
+    size: 92
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Lockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Fgpos
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 40
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 56
+    kind: rel24
+    symbol: 3
+    addend: 0
+- symbol: 0
+  hash: a5eebcd74a73e81ef6f50960c5726c16328b1c1f
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP/////4AQCg//////uBAHD/////SAAAAfwAAANgAAAA/////3+j63j/////OIAAAP////9IAAAB/AAAA2AAAAD/////fHwbeP////9/o+t4/////0gAAAH8AAADYAAAAP/////oAQCg/////+uhAHj/////f4MHtP////98CAOm/////+uBAHD/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .ftell
+    size: 92
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Lockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Fgpos
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 40
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 56
+    kind: rel24
+    symbol: 3
+    addend: 0

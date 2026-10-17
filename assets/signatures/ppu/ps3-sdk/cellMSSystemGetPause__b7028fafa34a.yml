@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 35fb337772bf392fd3a26202f5f36404bc412888
+  signature: OGAAAP////98CAKm//////gh/5H/////+AEAgP////9IAAAB/AAAA4EiAAD//wAA6AEAgP////84IQBw/////3wIA6b/////gGkAAP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSSystemGetPause
+    size: 44
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 16
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 22
+    kind: l
+    symbol: 2
+    addend: -14104088

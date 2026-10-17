@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: 7495ae5798564098f03b3ac72a879867c906a0b6
+  signature: gUIAAP//AAA5AAAA/////4AKAAD/////L4AAAP////9NngAg/////4EiAAD//wAAgWIAAP//AACRCgAA/////4AJAAD/////kQkAAP////+QCwAA/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellGcmUtilUnlockLocalMemory
+    size: 48
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@001A'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -10154688
+  - offset: 22
+    kind: l
+    symbol: 2
+    addend: -10154688
+  - offset: 26
+    kind: l
+    symbol: 3
+    addend: -10154688

@@ -1,0 +1,111 @@
+- symbol: 0
+  hash: 835d64f715b33ab1ec57906065290469388d9d79
+  signature: LCMAAP////98CAKm/////z0tAAD/////+CH/gf/////7wQBw/////zkpkAT/////++EAeP////98niN4//////gBAJD/////fH8beP////9BggC4/////3/E83j/////f+P7eP////9IAAAB/AAAA2AAAAD/////f8TzeP////98Y/oU/////z0tAAD/////eH8AIP////+IHwAA/////zkpkAT/////L4AAAP////9/4/t4/////0GeAFz/////SAAAAfwAAANgAAAA/////3xj+hT/////PS0AAP////94YwAg/////4gDAAD/////OSmQBP////8vgAAA/////zljAAH/////QJ4AJP/////oAQCQ/////5BpAAD/////f+P7eP/////rwQBw/////3wIA6b/////6+EAeP////84IQCA/////06AACD/////OAAAAP////+YAwAA/////3ljACD/////S///1P////+AAgAA//8AADvgAAD/////68EAcP////+QCQAA/////3/j+3j/////6AEAkP/////r4QB4/////zghAID/////fAgDpv////9OgAAg/////4PpAAD/////S///SP////8=
+  symbols:
+  - kind: Function
+    name: .strtok
+    size: 232
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .strspn
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .strcspn
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00BA'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 52
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 186
+    kind: l
+    symbol: 3
+    addend: -10216440
+- symbol: 0
+  hash: e408b0acf833fd4a1039414569eb0aba4a6ea511
+  signature: LCMAAP////98CAKm/////z0tAAD/////+CH/cf/////74QCI//////uhAHj/////+AEAoP////85KZAE/////3x/G3j/////QYIAuP////94nQAg/////3vjACD/////f6TreP////9IAAAB/AAAA2AAAAD/////f6TreP////9/vxoU/////z0tAAD/////e78AIP////85KZAE/////3/j+3j/////iB8AAP////8vgAAA/////0GeAFj/////SAAAAfwAAANgAAAA/////3x9GhT/////PS0AAP////94awAg/////zkpkAT/////iAsAAP////8vgAAA/////0CeACT/////6AEAoP////+QaQAA/////+uhAHj/////f+P7eP////98CAOm/////+vhAIj/////OCEAkP////9OgAAg/////zgAAAD/////OGMAAf////+YCwAA/////0v//9T/////gAIAAP//AAA74AAA/////+uhAHj/////kAkAAP/////oAQCg/////3/j+3j/////6+EAiP////84IQCQ/////3wIA6b/////ToAAIP////+D6QAA/////0v//0j/////
+  symbols:
+  - kind: Function
+    name: .strtok
+    size: 228
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .strspn
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .strcspn
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00B6'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 52
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 182
+    kind: l
+    symbol: 3
+    addend: -28621288
+- symbol: 0
+  hash: 2dc4860686e343e1f0ed248b1a773bf340fa9f81
+  signature: LCMAAP////98CAKm/////z0tAAD/////+CH/cf/////74QCI//////uhAHj/////+AEAoP////85KZAI/////3x/G3j/////QYIAuP////94nQAg/////3vjACD/////f6TreP////9IAAAB/AAAA2AAAAD/////f6TreP////9/vxoU/////z0tAAD/////e78AIP////85KZAI/////3/j+3j/////iB8AAP////8vgAAA/////0GeAFj/////SAAAAfwAAANgAAAA/////3x9GhT/////PS0AAP////94awAg/////zkpkAj/////iAsAAP////8vgAAA/////0CeACT/////6AEAoP////+QaQAA/////+uhAHj/////f+P7eP////98CAOm/////+vhAIj/////OCEAkP////9OgAAg/////zgAAAD/////OGMAAf////+YCwAA/////0v//9T/////gAIAAP//AAA74AAA/////+uhAHj/////kAkAAP/////oAQCg/////3/j+3j/////6+EAiP////84IQCQ/////3wIA6b/////ToAAIP////+D6QAA/////0v//0j/////
+  symbols:
+  - kind: Function
+    name: .strtok
+    size: 228
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .strspn
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .strcspn
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00B6'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 52
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 182
+    kind: l
+    symbol: 3
+    addend: -15853480

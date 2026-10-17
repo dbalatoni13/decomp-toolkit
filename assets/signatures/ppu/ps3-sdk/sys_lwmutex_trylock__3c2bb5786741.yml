@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 8a1ea6f99a5bb0eba7e4a7a60904f19c4ed83b75
+  signature: +CH/cf////98CAKm//////vBAID/////fH4beP////84YQBw//////vhAIj/////+AEAoP////94YwfG/////3hjBub/////SAAAAfwAAANgAAAA/////4PhAHT/////fADwKP////8sAP///////0DCAAz/////f+DxLf////9Awv/w/////3gAACD/////L4D///////9BngBE/////3+A+AD/////QZ4AXP////8vgP/+/////zxggAH/////YGMAAv////9BngAU/////y+A//3/////PGCAAf////9gYwAK/////0GeAID/////6AEAoP/////rwQCA/////+vhAIj/////fAgDpv////84IQCQ/////06AACD/////TAABLP////84YAAA/////+gBAKD/////68EAgP/////r4QCI/////3wIA6b/////OCEAkP////9OgAAg/////4AeAAj/////OSAAEP////88YIAB/////3wASDj/////YGMACP////8vgAAA/////0Ge/7D/////gT4ADP////88YIAB/////y+J////////YGMAEf////9Bnv+c/////zgJAAH/////kB4ADP////9MAAEs/////zhgAAD/////S///qP////85YABj/////4B+ABD/////RAAAAv////98Ywe0/////y+jAAD/////QJ7/cP////+T/gAA/////3wgBKz/////TAABLP////9L//9g/////wAAAAD/////AAkAAf////+AAgAA//8AAA==
+  symbols:
+  - kind: Function
+    name: .sys_lwmutex_trylock
+    size: 296
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_ppu_thread_get_id
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0126'
+    size: 0
+    flags: 2
+    section: .bss
+  relocations:
+  - offset: 36
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 294
+    kind: l
+    symbol: 2
+    addend: -7170272

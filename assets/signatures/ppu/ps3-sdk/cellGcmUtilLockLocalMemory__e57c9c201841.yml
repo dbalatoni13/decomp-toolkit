@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 07337ac1f1397626177f3bd8c9b0921616aca9b0
+  signature: +CH/gf////98CAKm//////vhAHj/////g+IAAP//AAD4AQCQ/////4AfAAD/////L4AAAP////9BngAc/////zhgAAD/////6AEAkP/////r4QB4/////zghAID/////fAgDpv////9OgAAg/////0gAAAH8AAADLCMAAP////9Bgv/g/////zgAAAH/////kB8AAP////9L///Y/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmUtilLockLocalMemory
+    size: 80
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellGcmUtilAllocateLocalMemory
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -10154688
+  - offset: 56
+    kind: rel24
+    symbol: 2
+    addend: 0

@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 63d4503aa06c4dbe21619f8fcabf3d6ca8278d21
+  signature: +CH/Uf////98CAKm//////sBAHD/////fRhDeP/////7IQB4/////3z5O3j/////+0EAgP////982jN4//////thAIj/////fLsreP/////7gQCQ/////3ycI3j/////+6EAmP////98fRt4//////gBAMD/////SAAAAfwAAANgAAAA/////3+k63j/////f4XjeP////9/Ztt4/////39H03j/////fyjLeP////9/CcN4/////0gAAAH8AAADYAAAAP/////oAQDA/////+sBAHD/////6yEAeP////98CAOm/////+tBAID/////62EAiP/////rgQCQ/////+uhAJj/////OCEAsP////9OgAAg/////wAAAAD/////AAkAAf////+ACAAA/////w==
+  symbols:
+  - kind: Function
+    name: .sys_config_register_service
+    size: 152
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZN5iosys6config20config_service_agent12get_instanceEv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZN5iosys6config20config_service_agent16register_serviceEyyyPvjPj
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 60
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 92
+    kind: rel24
+    symbol: 2
+    addend: 0

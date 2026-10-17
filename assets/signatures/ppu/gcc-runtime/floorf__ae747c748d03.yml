@@ -1,0 +1,84 @@
+- symbol: 0
+  hash: 19b0859f970d8353b0413f6e4fb311d01749162c
+  signature: +CH/cf////98CAKm/////zhhAHD/////2+EAiP////84gAAA//////gBAKD//////+AIkP/////QIQBw/////0gAAAH8AAADYAAAAP////8vgwAA/////0GcABz/////6AEAoP/////AIQBw/////8vhAIj/////fAgDpv////84IQCQ/////06AACD/////wAIAAP//AAD/nwAA/////0Cc/+D/////6AEAoP/////AAQBw/////8GiAAD//wAAfAgDpv/////sIGgo/////8vhAIj/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .floorf
+    size: 116
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDint
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@004A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005E'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 74
+    kind: l
+    symbol: 2
+    addend: -10216440
+  - offset: 94
+    kind: l
+    symbol: 3
+    addend: -10216440
+- symbol: 0
+  hash: 95b8c66db0353a4420b048223f0ba981f40ef2bd
+  signature: +CH/Yf////98CAKm/////zhhAHD/////2+EAmP////84gAAA///////gCJD/////+AEAsP/////QIQBw/////0gAAAH8AAADYAAAAP////98Ywc0/////y+DAAD/////QZwAHP/////oAQCw/////8AhAHD/////y+EAmP////98CAOm/////zghAKD/////ToAAIP////84AAAA/////5ABAID/////wAEAgP//////nwAA/////0Cc/9j/////6AEAsP/////AAQBw/////8GiAAD//wAAfAgDpv/////sIGgo/////8vhAJj/////OCEAoP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .floorf
+    size: 128
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDint
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 106
+    kind: l
+    symbol: 2
+    addend: -28621288
+- symbol: 0
+  hash: 85bf9b77168ca6d9389f66b67953eae07631bc85
+  signature: +CH/Yf////98CAKm/////zhhAHD/////2+EAmP////84gAAA///////gCJD/////+AEAsP/////QIQBw/////0gAAAH8AAADYAAAAP////98Ywc0/////y+DAAD/////QZwAHP/////oAQCw/////8AhAHD/////y+EAmP////98CAOm/////zghAKD/////ToAAIP////84AAAA/////5ABAID/////wAEAgP//////nwAA/////0Cc/9j/////6AEAsP/////AAQBw/////8Gih5j/////fAgDpv/////sIGgo/////8vhAJj/////OCEAoP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .floorf
+    size: 128
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDint
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0

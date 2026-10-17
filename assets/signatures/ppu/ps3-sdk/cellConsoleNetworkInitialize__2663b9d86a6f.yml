@@ -1,0 +1,76 @@
+- symbol: 0
+  hash: a2e80ebc44b092289541b84a3541e32995ca6f6d
+  signature: OGAAAP////98CAKm//////gh/3H/////+8EAgP/////74QCI//////gBAKD/////SAAAAfwAAAPoQQAo/////y+DAAD/////fGQbeP////9BngBA/////2xggAH/////L4AgAf////9BngA0/////4BiiYz/////fIQHtP////9IAAAB/AAAA2AAAAD/////OGD//P/////oAQCg/////1RjADr/////68EAgP/////r4QCI/////3wIA6b/////OCEAkP////9OgAAg/////4PiiTz/////PAAAAv////84YQB0/////zk/AAj/////kAEAeP////+RIQB0/////zkgAAD/////kSEAfP////9IAAAB/AAAA+hBACj/////L4MAAP////98ZBt4/////0GeADT/////gGKJkP////98hAe0/////0gAAAH8AAADYAAAAP/////oAQCg/////+vBAID/////OGD//P/////r4QCI/////3wIA6b/////OCEAkP////9UYwA6/////06AACD/////SAAAAfwAAAPoQQAo/////y+DAAD/////fGQbeP////9BngAc/////4BiiZT/////fIQHtP////9IAAAB/AAAA2AAAAD/////OGD//P////9L//9Y/////z//AAL/////O8EAcP////9IAAAU/////zxgAAH/////OWAAjf////9gY4ag/////0QAAAL/////e8MAIP////9IAAAB/AAAA+hBACj/////L4MAAP////98ZBt4/////0CeADz/////gAEAcP////8vgAAD/////0GeACj/////gT8ACP////85KQAB/////y+JAAH/////kT8ACP////9Anv+8/////4BiiZz/////SAAAAfwAAANgAAAA/////0v//6z/////OGAAAP////9L//7s/////4BiiZj/////fIQHtP////9IAAAB/AAAA2AAAAD/////OGD//P////9L//7U/////w==
+  symbols:
+  - kind: Function
+    name: .cellConsoleNetworkInitialize
+    size: 380
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellSysmoduleLoadModule
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_net_initialize_network_ex
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellNetCtlInit
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellNetCtlGetState
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .puts
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 64
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 136
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 164
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 204
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 232
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 280
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 336
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 364
+    kind: rel24
+    symbol: 2
+    addend: 0

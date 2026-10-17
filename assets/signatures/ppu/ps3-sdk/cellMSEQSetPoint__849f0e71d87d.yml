@@ -1,0 +1,58 @@
+- symbol: 0
+  hash: f300e9ad7d6b5ce5e98f99f5b232de4368ac0a09
+  signature: LCMAAP////98CAKm//////gh/4H/////++EAeP////98nyN4//////gBAJD/////QcIA2P////+AAwAE/////4EjAAj/////f4AgAP////9B3ACc/////y+EAAD/////QZwAlP////9UgCA2/////8ACAAD//wAA/4EAAP////98AEoU/////3gJACD/////0EkADP/////QKQAI/////0GdAEj/////waIAAP//AADACQAI//////+AaAD/////QZwATP/////ACQAM//////+AaAD/////QZwAUP////9IAAAB/AAAAzhgAAD/////SAAAAfwAAANgAAAA/////+gBAJD/////f+P7eP/////r4QB4/////zghAID/////fAgDpv////9OgAAg/////9AJAAj/////waIAAP//AADACQAI//////+AaAD/////QJz/vP/////ACQAM//////+AaAD/////0akACP////9AnP+4/////9GpAAz/////S///sP////88YAB6/////zvg////////YGMSCv////9IAAAB/AAAA2AAAAD/////6AEAkP////9/4/t4/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////PGAAev////874P///////2BjEgL/////SAAAAfwAAANgAAAA/////0v//3z/////
+  symbols:
+  - kind: Function
+    name: .cellMSEQSetPoint
+    size: 264
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@003A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0056'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._cellMSEQSortPoints
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 58
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 86
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 112
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 120
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 158
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 208
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 252
+    kind: rel24
+    symbol: 4
+    addend: 0

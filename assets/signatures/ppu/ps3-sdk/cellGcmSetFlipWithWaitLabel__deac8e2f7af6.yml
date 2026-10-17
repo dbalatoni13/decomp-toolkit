@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 27686e59586da4af459ad06347119e5d5e97b5a2
+  signature: +CH/cf////98CAKm//////vBAID/////fJ4jeP/////7gQBw/////yueAAf/////+6EAeP/////74QCI//////gBAKD/////fGsbeP////98vSt4/////3zcM3j/////QZ0AiP////+BKwAI/////3h/ACD/////gAsABP////84gAAX/////zkpAFz/////f+P7eP////9/iQBA/////0GdAET/////f+P7eP////97xAYg/////3ulBiD/////e4YAIP////9IAAAB/AAAA2AAAAD/////6AEAoP/////rgQBw/////zhgAAD/////66EAeP/////rwQCA/////3wIA6b/////fGMHtP/////r4QCI/////zghAJD/////ToAAIP////+BKwAM/////4AJAAD/////+EEAKP////98CQOm/////4BJAAT/////ToAEIf/////oQQAo/////y+DAAD/////QZ7/oP////88YIAh/////+gBAKD/////64EAcP////9gYwD//////+uhAHj/////68EAgP////98CAOm/////3xjB7T/////6+EAiP////84IQCQ/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellGcmSetFlipWithWaitLabel
+    size: 228
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._cellGcmSetFlipCommandWithWaitLabel
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 100
+    kind: rel24
+    symbol: 1
+    addend: 0

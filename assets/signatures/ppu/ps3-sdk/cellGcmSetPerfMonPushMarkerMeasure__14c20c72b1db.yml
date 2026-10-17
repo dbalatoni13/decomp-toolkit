@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: b95fc836ea10e3df7ad30985f3de38c1a7901b2d
+  signature: iAQAAP////98iSN4/////zlgAAD/////L4AAAP////9BngAc/////4wEAAH/////L4AAAP////9Anv/4/////30pIFD/////OSkAA/////9VKwA6/////4EjAAj/////fStKFP////85KQAI/////5EjAAj/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetPerfMonPushMarkerMeasure
+    size: 64
+    flags: 1
+    section: .text
+  relocations: []

@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 3fcf7512bb668720406e531bf008fe5ddd27bd14
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4//////h/AHD/////fIAjeP////+QHwB4/////+h/AHD/////gB8AeP////94AAAg/////3wEA3j/////OWAALP////9EAAAC/////3xgG3j/////fAAHtP////98AwN4/////+lhAAD/////6AsAEP////98CAOm/////+vr//j/////fWFbeP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .sys_ppu_thread_join
+    size: 92
+    flags: 2
+    section: .text
+  relocations: []

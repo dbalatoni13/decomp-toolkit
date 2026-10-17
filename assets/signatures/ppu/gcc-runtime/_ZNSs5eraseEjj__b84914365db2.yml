@@ -1,0 +1,69 @@
+- symbol: 0
+  hash: f2982dd4c9a17065a3e6d890c9c297d771082c76
+  signature: +CH/Uf////98CAKm//////uhAJj/////+AEAwP////98nSN4/////4CDABT/////+yEAeP////9/hOhA//////tBAID/////+2EAiP/////7gQCQ//////vBAKD/////++EAqP////98fht4/////3y6K3j/////fHsbeP////98vCt4/////3h5ACD/////QZwA9P////9//SBQ/////3+f4ED/////f+X7eP////9AnQAI/////39f03j/////L58AAP////9BngBg/////4AeABj/////OTsABP////8rgAAP/////3x9ShT/////QZ0AhP////98nxoU/////3y/KFD/////eIQAIP////94YwAg/////3ilACD/////SAAAAfwAAANgAAAA/////4AeABj/////gT4AFP////8rgAAP/////3yfSFD/////OTsABP////9BnQBI/////30pIhT/////OAAAAP////95KQAg/////5CeABT/////mAkAAP/////oAQDA/////38jy3j/////60EAgP/////rIQB4/////3wIA6b/////62EAiP/////rgQCQ/////+uhAJj/////68EAoP/////r4QCo/////zghALD/////ToAAIP////+BPgAE/////0v//7j/////gB4ABP////98vyhQ/////3x9AhT/////eKUAIP////98nxoU/////3hjACD/////eIQAIP////9IAAAB/AAAA2AAAAD/////gB4AGP////+BPgAU/////yuAAA//////fJ9IUP////85OwAE/////0Cd/3z/////S///vP////9/I8t4/////0gAAAH8AAADYAAAAP////+AngAU/////0v//wD/////
+  symbols:
+  - kind: Function
+    name: ._ZNSs5eraseEjj
+    size: 336
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memmove
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNKSt12_String_base5_XranEv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 144
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 280
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 320
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: a718cc34d074928c87a0a712b8dde1e6abd90d21
+  signature: +CH/cf////98CAKm//////uhAHj/////fJ0jeP/////7wQCA/////3y+K3j/////++EAiP////98fxt4//////gBAKD/////gAMAFP////9/gCBA/////0CcAAz/////SAAAAfwAAAPoQQAo/////4AfABT/////fB0AUP////94BQAg/////3+F8ED/////QJwACP////98vit4/////y++AAD/////QZ4AbP////+BPwAY/////zgfAAT/////K4kAD/////94AAAg/////0CdAAj/////gB8ABP////8riQAP/////3wA6hT/////OT8ABP////94AwAg/////3kkACD/////QJ0ACP////+AnwAE/////3yE6hT/////fL4oUP////98hPIU/////3ilACD/////eIQAIP////9IAAAB/AAAA2AAAAD/////gJ8AFP////9/4/t4/////3yeIFD/////eIQAIP////9IAAAB/AAAA2AAAAD/////6AEAoP////9/4/t4/////+uhAHj/////68EAgP////98CAOm/////+vhAIj/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSs5eraseEjj
+    size: 224
+    flags: 4
+    section: .text
+  - kind: Unknown
+    name: '@0030'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: ._ZNSt11char_traitsIcE4moveEPcPKcj
+    size: 0
+    flags: 4
+    section: .text
+  - kind: Function
+    name: ._ZNSs4_EosEj
+    size: 0
+    flags: 4
+    section: .text
+  relocations:
+  - offset: 48
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 160
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 184
+    kind: rel24
+    symbol: 3
+    addend: 0

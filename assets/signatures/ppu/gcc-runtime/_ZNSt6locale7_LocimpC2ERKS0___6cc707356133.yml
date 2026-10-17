@@ -1,0 +1,171 @@
+- symbol: 0
+  hash: 27a4bc169802a1b3cd8ae24a8dcd0efc97d1e644
+  signature: +CH+0f////98CAKm//////tBAQD/////+AEBQP/////7oQEY//////vBASD/////gAIAAP//AAB8fht4/////zujABj/////gWIAAP//AAA7QAAB//////thAQj/////k0MABP/////74QEo//////uBARD/////e70AIP////+QAwAA/////4FEAAz/////OAAAAP////+BBAAQ/////3ybI3j/////iOQAFP////9/o+t4/////ziAAAD/////OKAAAP////+QHgAI/////5F+AAD/////kV4ADP////+RHgAQ/////5j+ABT/////SAAAAfwAAANgAAAA/////zibABj/////OMD///////9/o+t4/////3iEACD/////eMYAIP////84oAAA/////3vfACD/////SAAAAfwAAANgAAAA/////4EiAAD//wAAgAkAAP////9/mwAA/////0GeAOj/////OGAAAP////9IAAAB/AAAA2AAAAD/////gB4ADP////8vgAAA/////0CeADj/////OGAAAP////9IAAAB/AAAA2AAAAD/////6AEBQP/////rQQEA/////+thAQj/////fAgDpv/////rgQEQ/////+uhARj/////68EBIP/////r4QEo/////zghATD/////ToAAIP////9UAxA6/////0gAAAH8AAADYAAAAP////8vgwAA/////5B+AAj/////QZ4A5P////+D/gAM/////y+fAAD/////QZ7/rP////9X6RA6/////zuJ//z/////gTsACP////84YAAA/////4F+AAj/////O/////////99PEoU/////318WhT/////eSkAIP////95awAg/////zuc//z/////g6kAAP////8vnQAA/////5OrAAD/////QZ4AMP////9IAAAB/AAAA2AAAAD/////e6sAIP////84YAAA/////4ErAAT/////L4n///////85KQAB/////0GeAAj/////kSsABP////9IAAAB/AAAA2AAAAD/////L58AAP////9Anv+c/////0v//zj/////O6EAcP////+AggAA//8AAHu9ACD/////f6PreP////9IAAAB/AAAA2AAAAD/////f+X7eP////9/o+t4/////ziAAD//////OMAAAP////9IAAAB/AAAA3+j63j/////SAAAAfwAAANgAAAA/////+gBAUD/////60EBAP/////rYQEI/////3wIA6b/////64EBEP/////roQEY/////+vBASD/////6+EBKP////84IQEw/////06AACD/////g+IAAP//AAA4HwAQ/////3gLACD/////iSsAAP////8viQAA/////0GeABT/////OH8ABP////9IAAAB/AAAA2AAAAD/////S//+/P////+AAgAA//8AAIBiAAD//wAAkB8ABP////+bSwAA/////0gAAAH8AAADYAAAAP////9L///Y/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt6locale7_LocimpC2ERKS0_
+    size: 572
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@001A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSs5_TidyEbj
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSs6assignERKSsjj
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00A6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .malloc
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@019E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt8_LocinfoC1EPKc
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt6locale7_Locimp8_MakelocERKSt8_LocinfoiPS0_PKS_
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt8_LocinfoD1Ev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@01FA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZSt6_ThrowRKSt9exception
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0222'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0226'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .atexit
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 26
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 38
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 120
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 156
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 166
+    kind: l
+    symbol: 5
+    addend: -28621288
+  - offset: 184
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 208
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 260
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 352
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 388
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 414
+    kind: l
+    symbol: 9
+    addend: -28621288
+  - offset: 424
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 448
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 456
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 506
+    kind: l
+    symbol: 13
+    addend: -28621288
+  - offset: 532
+    kind: rel24
+    symbol: 14
+    addend: 0
+  - offset: 546
+    kind: l
+    symbol: 15
+    addend: -28621288
+  - offset: 550
+    kind: l
+    symbol: 16
+    addend: -28621288
+  - offset: 560
+    kind: rel24
+    symbol: 17
+    addend: 0

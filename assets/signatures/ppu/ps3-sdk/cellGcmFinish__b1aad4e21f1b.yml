@@ -1,0 +1,148 @@
+- symbol: 0
+  hash: 06a3fdba0fca9ca6411505d75509d37f5dc59759
+  signature: +CH/cf////98CAKm//////uhAHj/////++EAiP////98fRt4/////3yfI3j/////eIQAIP/////4AQCg//////vBAID/////SAAAAfwAAANgAAAA/////3+j63j/////SAAAAfwAAANIAAAB/AAAA2AAAAD/////gAMACP////98fht4/////3+fAAD/////QZ4AHP////84YAAe/////zlgAI3/////RAAAAv////+DvgAI/////3+f6AD/////QJ7/7P/////oAQCg/////+uhAHj/////68EAgP////98CAOm/////+vhAIj/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmFinish
+    size: 128
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmSetReferenceCommand
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmFlush
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmGetControlRegister
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 36
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 48
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 52
+    kind: rel24
+    symbol: 3
+    addend: 0
+- symbol: 0
+  hash: d1b10aa2bbdab952e8eb64f17fa0ac2f3a0cba9c
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP/////4AQCg//////vBAID/////fJ4jeP/////74QCI/////0gAAAH8AAADf6PreP////9IAAAB/AAAA0gAAAH8AAAD6EEAKP////+AAwAI/////3x/G3j/////f54AQP////9BngAc/////zhgAB7/////OWAAjf////9EAAAC/////4O/AAj/////f57oQP////9Anv/s/////+gBAKD/////66EAeP/////rwQCA/////3wIA6b/////6+EAiP////84IQCQ/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellGcmFinish
+    size: 120
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmSetReferenceCommand
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmFlush
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmGetControlRegister
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 40
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 44
+    kind: rel24
+    symbol: 3
+    addend: 0
+- symbol: 0
+  hash: 6c937753d95859fa5dbafbb5be3f630cda9671b2
+  signature: +CH/cf////98CAKm//////uhAHj/////++EAiP////98fRt4/////3yfI3j/////eIQAIP/////4AQCg//////vBAID/////SAAAAfwAAAN/o+t4/////0gAAAH8AAADSAAAAfwAAANgAAAA/////4ADAAj/////fH4beP////9/nwAA/////0GeABz/////OGAAHv////85YACN/////0QAAAL/////g74ACP////9/n+gA/////0Ce/+z/////6AEAoP/////roQB4/////+vBAID/////fAgDpv/////r4QCI/////zghAJD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmFinish
+    size: 124
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmSetReferenceCommand
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmFlush
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmGetControlRegister
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 36
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 44
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 48
+    kind: rel24
+    symbol: 3
+    addend: 0
+- symbol: 0
+  hash: 3cbc0d84259189e50a470946653bc010a6787cc2
+  signature: +CH/cf////98CAKm//////uhAHj/////++EAiP////98fRt4/////3yfI3j/////eIQAIP/////4AQCg//////vBAID/////SAAAAfwAAANgAAAA/////3+j63j/////SAAAAfwAAANIAAAB/AAAA+hBACj/////gAMACP////98fht4/////3+fAAD/////QZ4AHP////84YAAe/////zlgAI3/////RAAAAv////+DvgAI/////3+f6AD/////QJ7/7P/////oAQCg/////+uhAHj/////68EAgP////98CAOm/////+vhAIj/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmFinish
+    size: 128
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmSetReferenceCommand
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmFlush
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmGetControlRegister
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 36
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 48
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 52
+    kind: rel24
+    symbol: 3
+    addend: 0

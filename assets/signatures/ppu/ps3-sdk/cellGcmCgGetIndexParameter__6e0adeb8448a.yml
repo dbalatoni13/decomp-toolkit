@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: 22c500aac4cc7a06476f992570d0c8a209f29ae5
+  signature: L4MAAP////9UgDAy/////1SEIDb/////fWQAUP////84AAAA/////0GeABD/////gAMAEP////98AwIU/////3wAWhT/////eAMAIP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetIndexParameter
+    size: 44
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: 5f0107e2b0762f909d83958b3f30bf477c2ff20e
+  signature: LCMAAP////9UiTAy/////zgAAAD/////VIQgNv////9BggAY/////4ADABD/////fSRIUP////98ABoU/////3wAShT/////eAAAIP////98AwN4/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetIndexParameter
+    size: 48
+    flags: 1
+    section: .text
+  relocations: []

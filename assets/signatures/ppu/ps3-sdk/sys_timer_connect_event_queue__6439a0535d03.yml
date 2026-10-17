@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 9da7db9e38d1b01f0fb20b0035833942baf815fc
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4/////3xgG3j/////fIsjeP/////4vwCA//////jfAIj/////+P8AkP////+QHwBw/////5F/AHj/////gB8AcP////94AAAg/////3wDA3j/////gB8AeP////94AAAg/////3wEA3j/////6L8AgP/////o3wCI/////+j/AJD/////OWAAS/////9EAAAC/////3xgG3j/////fAAHtP////98AwN4/////+lhAAD/////6AsAEP////98CAOm/////+vr//j/////fWFbeP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .sys_timer_connect_event_queue
+    size: 128
+    flags: 2
+    section: .text
+  relocations: []

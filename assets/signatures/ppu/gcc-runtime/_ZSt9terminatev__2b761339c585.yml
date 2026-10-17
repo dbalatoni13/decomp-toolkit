@@ -1,0 +1,75 @@
+- symbol: 0
+  hash: 1ec4fe987873da42ab92a2708a06a24502b47888
+  signature: gSIAAP//AAB8CAKm//////gh/5H/////+AEAgP////+BKQAA/////y+pAAD/////QZ4AHP////+ACQAA//////hBACj/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////9IAAAB/AAAA2AAAAD/////
+  symbols:
+  - kind: Function
+    name: ._ZSt9terminatev
+    size: 60
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .abort
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 52
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: 5550af2e935a39cbb6423d905c339e0317b54513
+  signature: gSIAAP//AAB8CAKm//////gh/5H/////+AEAgP////+BKQAA/////y+JAAD/////QZ4AIP////95KQAg/////4AJAAD/////+EEAKP////98CQOm/////4BJAAT/////ToAEIf/////oQQAo/////0gAAAH8AAADYAAAAP////8=
+  symbols:
+  - kind: Function
+    name: ._ZSt9terminatev
+    size: 64
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .abort
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 56
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: 8a17d8b69fcaede855204e7b0507e48b9a34e52b
+  signature: gSKtWP////98CAKm//////gh/5H/////+AEAgP////+BKQAA/////y+JAAD/////QZ4AIP////95KQAg/////4AJAAD/////+EEAKP////98CQOm/////4BJAAT/////ToAEIf/////oQQAo/////0gAAAH8AAADYAAAAP////8=
+  symbols:
+  - kind: Function
+    name: ._ZSt9terminatev
+    size: 64
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .abort
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 56
+    kind: rel24
+    symbol: 1
+    addend: 0

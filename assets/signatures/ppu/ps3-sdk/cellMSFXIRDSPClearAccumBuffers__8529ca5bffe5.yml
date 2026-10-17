@@ -1,0 +1,56 @@
+- symbol: 0
+  hash: 969da172583e8df74c3d55df7faef7ea609d3e1a
+  signature: LCMAAP////98CAKm//////gh/3H/////+6EAeP////98fRt4//////vBAID/////OGD////////74QCI//////gBAKD/////QYIAaP////+BfQAA/////zgdAOj/////O8AAAP////8viwAA/////3gfACD/////QJ0AQP////+AfwAA/////ziAAAD/////L6MAAP////9BngAY/////4C/AAT/////eKVIKP////9IAAAB/AAAA+hBACj/////gX0AAP////84HgAB/////zk/AAz/////fB4HtP////95PwAg/////3+L8AD/////QZ3/yP////84YAAA/////0gAAAH8AAADYAAAAP////84YAAA/////+gBAKD/////66EAeP/////rwQCA/////3wIA6b/////6+EAiP////84IQCQ/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXIRDSPClearAccumBuffers
+    size: 168
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0058'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 88
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 128
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: 37ae1994c86ae4d0f3c6328290ef5429f99d9ce1
+  signature: LCMAAP////98CAKm//////gh/3H/////+6EAeP////98fRt4//////vBAID/////OGD////////74QCI//////gBAKD/////QYIAaP////+BfQAA/////zgdAOj/////O8AAAP////8viwAA/////3gfACD/////QJ0AQP////+AfwAA/////ziAAAD/////L6MAAP////9BngAY/////4C/AAT/////eKVIKP////9IAAAB/AAAA2AAAAD/////gX0AAP////84HgAB/////zk/AAz/////fB4HtP////95PwAg/////3+L8AD/////QZ3/yP////84YAAA/////0gAAAH8AAADYAAAAP////84YAAA/////+gBAKD/////66EAeP/////rwQCA/////3wIA6b/////6+EAiP////84IQCQ/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXIRDSPClearAccumBuffers
+    size: 168
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memset
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 88
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 128
+    kind: rel24
+    symbol: 2
+    addend: 0

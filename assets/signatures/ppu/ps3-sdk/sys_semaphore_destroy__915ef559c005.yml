@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: f365d984ab366870adfa8d50ce5b5154fe6b157f
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4/////3xgG3j/////kB8AcP////+AHwBw/////3gAACD/////fAMDeP////85YABb/////0QAAAL/////fGAbeP////98AAe0/////3wDA3j/////6WEAAP/////oCwAQ/////3wIA6b/////6+v/+P////99YVt4/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .sys_semaphore_destroy
+    size: 84
+    flags: 2
+    section: .text
+  relocations: []

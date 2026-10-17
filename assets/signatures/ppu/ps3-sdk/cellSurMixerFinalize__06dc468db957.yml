@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: e8800faf0f1932ff71e0ba6022c60d1b86d57bc6
+  signature: +CH/kf////98CAKm//////gBAID/////SAAAAfwAAAPoAQCA/////zhgAAD/////OCEAcP////98CAOm/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellSurMixerFinalize
+    size: 36
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellSurMixerDelete
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 12
+    kind: rel24
+    symbol: 1
+    addend: 0

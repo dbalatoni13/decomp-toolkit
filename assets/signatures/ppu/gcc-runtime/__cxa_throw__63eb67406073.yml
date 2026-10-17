@@ -1,0 +1,73 @@
+- symbol: 0
+  hash: d6333c2fad0411a1032a442db92611ba23ccf8d9
+  signature: OSP/sP////+BQgAA//8AAIFiAAD//wAAfAgCpv////95KQAg/////4DiAAD//wAA+CH/cf/////7oQB4/////zupADD/////+AEAoP////97vQAg/////4AKAAD/////gQsAAP/////pQgAA//8AA3+j63j/////kIkAAP////+QqQAE/////5AJAAj/////kQkADP/////5SQAw/////5DpADj/////SAAAAfwAAANgAAAA/////3+j63j/////SAAAAfwAAANgAAAA/////0gAAAH8AAADYAAAAP////8=
+  symbols:
+  - kind: Function
+    name: .__cxa_throw
+    size: 112
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0006'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@000A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0036'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Unwind_RaiseException
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cxa_begin_catch
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZSt9terminatev
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 6
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 10
+    kind: l
+    symbol: 2
+    addend: -10216440
+  - offset: 22
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 54
+    kind: lo_ds
+    symbol: 4
+    addend: -10216440
+  - offset: 84
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 7
+    addend: 0

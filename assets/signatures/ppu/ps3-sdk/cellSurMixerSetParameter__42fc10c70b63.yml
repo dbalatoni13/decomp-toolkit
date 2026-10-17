@@ -1,0 +1,41 @@
+- symbol: 0
+  hash: 431af117ffbf8eb4e3c4efae11d9497d810112cf
+  signature: gUIAAP//AAB8CAKm//////gh/4H//////AAIkP/////4AQCQ/////z1ggDH/////++EAeP////98fxt4/////2FrAAL/////gAoAAP////8vgAAA/////0CeABz/////6AEAkP////99Y1t4/////+vhAHj/////OCEAgP////98CAOm/////06AACD/////gSIAAP//AAArAwAf/////4AJAAD/////L4AAAP////9BnP/Y/////yuDACv/////QJkACP////9AnQBQ/////4FKAAD/////f+T7eP/////8IACQ/////31DU3j/////gSoAAP////+BaQA8/////4ALAAD/////+EEAKP////98CQOm/////4BLAAT/////ToAEIf/////oQQAo/////+gBAJD/////fGsbeP/////r4QB4/////3wIA6b/////OCEAgP////99Y1t4/////06AACD/////SAAAAfwAAANgAAAA/////zgf/+D//////AAIkP////+BQgAA//8AAHgfACD/////S///nP////8=
+  symbols:
+  - kind: Function
+    name: .cellSurMixerSetParameter
+    size: 208
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@004A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellSurMixerUtilGetLevelFromDB
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 74
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 180
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 198
+    kind: l
+    symbol: 1
+    addend: -15311144

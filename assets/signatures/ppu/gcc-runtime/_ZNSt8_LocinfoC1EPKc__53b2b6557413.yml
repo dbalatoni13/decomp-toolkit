@@ -1,0 +1,76 @@
+- symbol: 0
+  hash: 1160185900a3597e742382fe6feed56444fdce8b
+  signature: fGkbeP////98CAKm//////gh/2H/////+4EAgP////87gAAA/////zhgAAD/////+AEAsP////+TiQAA//////thAHj/////+6EAiP/////7wQCQ/////309S3j/////fJ4jeP/////74QCY/////0gAAAH8AAADYAAAAP////9IAAAB/AAAA2AAAAD/////eGQAIP////97owAg/////zv9AHT/////O70AWP////84oABU/////zhjAAT/////e7sAIP////9IAAAB/AAAA2AAAAD/////OAAAD/////84gAAA/////zhgAD//////kB0AGP////+bnQAE/////5AfABj/////k50AFP////+bnwAE/////5OfABT/////SAAAAfwAAANgAAAA/////3hkACD/////f2PbeP////9IAAAB/AAAA2AAAAD/////L54AAP////97xAAg/////zhgAD//////QZ4ATP////9IAAAB/AAAA2AAAAD/////L4MAAP////98ZBt4/////0GeADj/////e+MAIP////94hAAg/////0gAAAH8AAADYAAAAP/////oAQCw/////+thAHj/////64EAgP////98CAOm/////+uhAIj/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////+AggAA//8AAHvjACD/////eIQAIP////9IAAAB/AAAA2AAAAD/////6AEAsP/////rYQB4/////+uBAID/////fAgDpv/////roQCI/////+vBAJD/////6+EAmP////84IQCg/////06AACD/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt8_LocinfoC1EPKc
+    size: 312
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Getptimes
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memcpy
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .setlocale
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSs6assignEPKc
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0102'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 56
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 64
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 100
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 144
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 160
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 184
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 212
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 258
+    kind: l
+    symbol: 6
+    addend: -28621288
+  - offset: 268
+    kind: rel24
+    symbol: 5
+    addend: 0

@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: 01a822d710b8c941da2e230f66c4470429dd5b8f
+  signature: L4MAAP////98axt4/////4BkABj/////OQD///////8vAwAA/////0HeACz/////fGsaFP////9BmgAk/////3hrACD/////VKAQOv////98AAe0/////4ErAAD/////fUsCFP////9/iShA/////0CdAAj/////gQoABP////95AwAg/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetEmbeddedConstantOffset
+    size: 72
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: 62e02e6ddb4a3d1e239b7928548573636e63483a
+  signature: LCMAAP////+BZAAY/////zlA////////QcIAOP////8vqwAA/////3wDWhT/////eAMAIP////9BngAo/////4EjAAD/////VKAQOv////9/iShA/////3wAB7T/////fGMCFP////9AnQAQ/////4FDAAT/////fUNTeP////9OgAAg/////3lKACD/////fUNTeP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetEmbeddedConstantOffset
+    size: 80
+    flags: 1
+    section: .text
+  relocations: []

@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: 79f2c2b90ccfbf08ddad70d31b09437bf0b0593e
+  signature: fYAAJv/////4IfKB/////9nBDPD/////PSDoQf/////Z4Qz4/////9oBDQD/////YSkAKP/////aIQ0I/////9pBDRD/////2mENGP/////agQ0g/////9qhDSj/////2sENMP/////a4Q04/////9sBDUD/////2yENSP/////bQQ1Q/////9thDVj/////24ENYP/////boQ1o/////9vBDXD/////2+ENeP/////5wQxg//////nhDGj/////+gEMcP/////6IQx4//////pBDID/////+mEMiP/////6gQyQ//////qhDJj/////+sEMoP/////64Qyo//////sBDLD/////+yEMuP/////7QQzA//////thDMj/////+4EM0P/////pQQAA/////3wIAqb/////+6EM2P/////7wQzg//////vhDOj/////+AENkP////+RgQ2I//////hhDbD/////+IENuP/////pagAQ/////4ALAAD/////f4BIAP////9BngAI//////hKACj/////OAEAcP////98qAKm/////ziBDYD/////eAAAIP////98AwN4//////gBDEj/////SAAAAfwAAAM4AQLY/////3gAACD/////+AEMUP////9IAAAM/////0GaAHT/////SAAAAfwAAAPogQxQ/////+hhDEj/////SAAAAfwAAAPogQ24/////ywjAAD/////+GEMQP////98YBt4/////+hhDEj/////L4AABf////9BggAI/////0CeADz/////+EEAKP/////pIQ2w/////4EpAAD/////fSkDpv/////pIQ2w/////4BJAAT/////ToAEIf/////oQQAo/////+gBDED/////L6MAAP/////ogQxQ/////+hhDEj/////LwAABf////9Bnv+Y/////zgAAAP/////+AEMQP////+BgQ2I/////+gBDZD/////6GEMQP////99kgEg/////+nBDGD/////fAgDpv/////p4Qxo/////32RASD/////6gEMcP////99kIEg/////+ohDHj/////6kEMgP/////qYQyI/////+qBDJD/////6qEMmP/////qwQyg/////+rhDKj/////6wEMsP/////rIQy4/////+tBDMD/////62EMyP/////rgQzQ/////+uhDNj/////68EM4P/////r4Qzo/////8nBDPD/////yeEM+P/////KAQ0A/////8ohDQj/////ykENEP/////KYQ0Y/////8qBDSD/////yqENKP/////KwQ0w/////8rhDTj/////ywENQP/////LIQ1I/////8tBDVD/////y2ENWP/////LgQ1g/////8uhDWj/////y8ENcP/////L4Q14/////zghDYD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._Unwind_Backtrace
+    size: 544
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .uw_init_context_1
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .uw_update_context
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .uw_frame_state_for
+    size: 0
+    flags: 2
+    section: .text
+  relocations:
+  - offset: 228
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 252
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 264
+    kind: rel24
+    symbol: 3
+    addend: 0

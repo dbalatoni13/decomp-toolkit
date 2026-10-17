@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 72512cf2f4d8069a0dc6b474a5c798eb6c5d9e97
+  signature: +CH/Yf////98CAKm/////ziBAHD/////+6EAiP/////74QCY/////zlgAFn/////eIQHxv/////4AQCw/////3iEBub/////RAAAAv////98fwe0/////y+/AAD/////QZ4AIP/////oAQCw/////3/j+3j/////66EAiP/////r4QCY/////3wIA6b/////OCEAoP////9OgAAg/////4OhAHT/////O72P6P////97vQAg/////3+j63j/////SAAAAfwAAAN/o+t4/////0gAAAH8AAAD6AEAsP////9/4/t4/////+uhAIj/////6+EAmP////98CAOm/////zghAKD/////ToAAIP////8AAAAA/////wAJAAH/////gAMAAP////8=
+  symbols:
+  - kind: Function
+    name: .sys_interrupt_thread_disestablish
+    size: 148
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._free_dtv_memory
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._free_tls_memory
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 96
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 2
+    addend: 0

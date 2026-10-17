@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: bb26f76eff4d07ce95ab461fa2b82b0d6d81369c
+  signature: ++H/+P////874f+w/////zlgAzb/////fAgCpv////843wAw//////gBABD/////eMYHxv////94xgbm/////0QAAAL/////6AEAEP////98Ywe0/////+vh//j/////fAgDpv////9OgAAg/////wAAAAD/////AAkAAf////8AAQAA/////w==
+  symbols:
+  - kind: Function
+    name: .cellFsGetBlockSize
+    size: 68
+    flags: 1
+    section: .text
+  relocations: []

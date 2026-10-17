@@ -1,0 +1,180 @@
+- symbol: 0
+  hash: 4e6f2007ef486123bb314267b3c06f76b2d9b7eb
+  signature: gSIAAP//AAB8CAKm//////gh/4H/////++EAeP////98fxt4//////gBAJD/////iAkAAP////8vgAAB/////0GeABj/////gIIAAP//AACAYgAA//8AAEgAAAH8AAAD6EEAKP////9IAAAA/////4EiAAD//wAAVGsP/v////+ACQAA/////3+AGAD/////T93oQv////98EBAm/////1QA//7/////fABbeP////8vgAAA/////0GeABz/////fGUbeP////+AggAA//8AAIBiAAD//wAASAAAAfwAAAPoQQAo/////0gAAAD/////OGAAAP////9IAAAB/AAAA2AAAAD/////HX8JMP////+BIgAA//8AAOvhAHj/////gAkAAP////99awIU/////+gBAJD/////OCEAgP////95awAg/////3wIA6b/////wCsIPP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSStreamGetCurrentEnv
+    size: 176
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002C'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@003A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@008A'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 38
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 42
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 44
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 58
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 102
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 106
+    kind: l
+    symbol: 6
+    addend: -14104088
+  - offset: 108
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 124
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 138
+    kind: l
+    symbol: 8
+    addend: -14104088
+- symbol: 0
+  hash: 69b8ec757c054323234bb05c6b43f7b83cfca068
+  signature: gSIAAP//AAB8CAKm//////gh/4H/////++EAeP////98fxt4//////gBAJD/////iAkAAP////8vgAAB/////0GeABj/////gIIAAP//AACAYgAA//8AAEgAAAH8AAADYAAAAP////9IAAAA/////4EiAAD//wAAVGsP/v////+ACQAA/////3+AGAD/////T93oQv////98EBAm/////1QA//7/////fABbeP////8vgAAA/////0GeABz/////fGUbeP////+AggAA//8AAIBiAAD//wAASAAAAfwAAANgAAAA/////0gAAAD/////OGAAAP////9IAAAB/AAAA2AAAAD/////HX8JMP////+BIgAA//8AAOvhAHj/////gAkAAP////99awIU/////+gBAJD/////OCEAgP////95awAg/////3wIA6b/////wCsIPP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSStreamGetCurrentEnv
+    size: 176
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@003A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@008A'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 38
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 42
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 44
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 58
+    kind: l
+    symbol: 5
+    addend: -6468872
+  - offset: 102
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 106
+    kind: l
+    symbol: 6
+    addend: -6468872
+  - offset: 108
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 124
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 138
+    kind: l
+    symbol: 8
+    addend: -6468872

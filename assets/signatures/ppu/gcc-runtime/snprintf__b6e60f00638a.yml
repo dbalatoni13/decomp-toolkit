@@ -1,0 +1,56 @@
+- symbol: 0
+  hash: 43c3533c34415282d68122036da76d85968a7ab3
+  signature: +CH/gf////98CAKm/////y+EAAD/////+AEAkP////84AQDI//////jBAMj/////OWT///////+QAQBw//////jhAND/////+QEA2P/////5IQDg//////lBAOj/////QJ4AUP////+QgQB4/////5CBAHT/////gGIAAP//AAB4pQAg/////ziBAHT/////gMEAcP////9IAAAB/AAAA2AAAAD/////gAEAdP////8vgAAA/////3gJACD/////fGMHtP////9BngAM/////zgAAAD/////mAkAAP/////oAQCQ/////zghAID/////fAgDpv////9OgAAg/////5BhAHT/////kWEAeP////9L//+0/////w==
+  symbols:
+  - kind: Function
+    name: .snprintf
+    size: 140
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Printf
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 62
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 76
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: 493bcc0007be3cf7ef9539693f5f900344843c98
+  signature: +CH+0f////98CAKm/////ywkAAD/////+MEBeP/////4AQFA/////zgBAXj/////OWT////////44QGA/////5ABASD/////+QEBiP/////5IQGQ//////lBAZj/////QIIARP////+QgQEo/////5CBAST/////gGIAAP//AAA4gQEk/////4DBASD/////SAAAAfwAAANgAAAA/////4EhAST/////L6kAAP////9BngAM/////zgAAAD/////mAkAAP/////oAQFA/////zghATD/////fAgDpv////9OgAAg/////5BhAST/////kWEBKP////9L///A/////w==
+  symbols:
+  - kind: Function
+    name: .snprintf
+    size: 128
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Printf
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 62
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 72
+    kind: rel24
+    symbol: 2
+    addend: 0

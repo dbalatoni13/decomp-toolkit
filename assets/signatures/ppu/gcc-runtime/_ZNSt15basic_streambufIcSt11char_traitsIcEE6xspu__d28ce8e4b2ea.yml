@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: e0b0a9b3db74c1d5eba9e90f89ed28d03943f79b
+  signature: L4UAAP////98CAKm//////gh/2H/////+0EAcP/////7YQB4//////uBAID/////+6EAiP/////7wQCQ//////vhAJj/////+AEAsP////98vit4/////3x7G3j/////fJ0jeP////98fBt4/////ztAAAD/////QZ0ARP////9IAAC4/////3ljACD/////QJkACP////9/3/N4/////3vlACD/////f9/wUP////9IAAAB/AAAA2AAAAD/////gTsAJP////8vngAA/////3+9+hT/////f1r6FP////+ACQAA/////3wA+hT/////kAkAAP////9AnQB8/////4E8ACT/////e6oAIP////97gwAg/////4FpAAD/////L4sAAP////9BngAk/////4E8ADT/////fURTeP////+ACQAA/////3wLAFD/////L4AAAP////98HwN4/////38A8AD/////QZ3/kP////+BewAA/////zu9AAH/////iIoAAP////873v///////4ErABD/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////L4P///////9BngAQ/////y+eAAD/////O1oAAf////9Bnf+M/////+gBALD/////f0MHtP/////rYQB4/////+tBAHD/////fAgDpv/////rgQCA/////+uhAIj/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci
+    size: 292
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memcpy
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 88
+    kind: rel24
+    symbol: 1
+    addend: 0

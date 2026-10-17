@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: ef233b4fd0716b8cab8703747c6c5f10f809908f
+  signature: gWIAAP//AAB8CAKm//////gh/4H/////+AEAkP////98aht4/////1SAMDL/////++EAeP////9UhBg4/////4ErAAD/////PGAAev////874P///////y+JAAH/////fAQAUP////9gYxID/////0HeADT/////gWIAAP//AAA4YAAA/////x1KAJz/////gSsAAP////99QFIU/////1UrKDT/////VSAYOP////98AFoU/////3wJAFD/////VAAQOv////98AFIU/////3wfB7T/////SAAAAfwAAANgAAAA/////+gBAJD/////f+P7eP/////r4QB4/////3wIA6b/////OCEAgP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSSurroundGetInfoSize
+    size: 140
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 62
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 108
+    kind: rel24
+    symbol: 3
+    addend: 0

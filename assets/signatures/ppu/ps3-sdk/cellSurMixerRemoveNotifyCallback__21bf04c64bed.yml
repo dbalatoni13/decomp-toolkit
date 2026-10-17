@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: c572ecc0bd73aed65aa51e8125d7d8a205556cc1
+  signature: gSIAAP//AAB8CAKm//////gh/4H/////+AEAkP////89QIAx/////3xoG3j/////YUoAAv////+BaQAA/////y+rAAD/////QJ4AGP/////oAQCQ/////31DU3j/////OCEAgP////98CAOm/////06AACD/////gSIAAP//AAB9Y1t4/////ziBAHD/////gAkAAP////8vgAAA/////0Gc/9j/////kQEAcP////+BKwAA/////4FpACT/////gAsAAP/////4QQAo/////3wJA6b/////gEsABP////9OgAQh/////+hBACj/////6AEAkP////98aht4/////3wIA6b/////OCEAgP////99Q1N4/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellSurMixerRemoveNotifyCallback
+    size: 144
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 62
+    kind: l
+    symbol: 2
+    addend: -15311144

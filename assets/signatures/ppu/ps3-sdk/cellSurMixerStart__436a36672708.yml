@@ -1,0 +1,108 @@
+- symbol: 0
+  hash: 2558d968a3c73f1c15e1f3b7ea00e756e5146042
+  signature: gSIAAP//AAB8CAKm//////gh/3H/////+AEAoP/////7oQB4//////vBAID/////gAkAAP/////74QCI/////y+AAAD/////QJ4ALP////8/4IAx/////2P/AAL/////6AEAoP////9/4/t4/////+uhAHj/////68EAgP////98CAOm/////+vhAIj/////OCEAkP////9OgAAg/////4EiAAD//wAAgAkAAP////8vgAAA/////0Gc/8z/////g8IAAP//AAA4gAPo/////3/D83j/////SAAAAfwAAAPoQQAo/////4OiAAD//wAAgB0AAP////8vgAAA/////0CeAGj/////gSIAAP//AACAaQAA/////0gAAAH8AAAD6EEAKP////8vgwAA/////3x/G3j/////QZwAPP////+BIgAA//8AAOhpAAD/////SAAAAfwAAAPoQQAo/////y+DAAD/////fH8beP////9BnAAg/////zgAAAH/////f8PzeP////874AAA/////5AdAAD/////SAAAAfwAAAPoQQAo/////0v//1z/////f8PzeP////9IAAAB/AAAA+hBACj/////S///TP////8/4IAx/////3/D83j/////Y/8AC/////9IAAAB/AAAA+hBACj/////S///NP////8=
+  symbols:
+  - kind: Function
+    name: .cellSurMixerStart
+    size: 256
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0052'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0062'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@0076'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0086'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellAudioPortStart
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@00A2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellAudioSetNotifyEventQueue
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 82
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 98
+    kind: l
+    symbol: 3
+    addend: -15311144
+  - offset: 108
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 118
+    kind: l
+    symbol: 5
+    addend: -15311144
+  - offset: 134
+    kind: l
+    symbol: 6
+    addend: -15311144
+  - offset: 140
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 162
+    kind: l
+    symbol: 8
+    addend: -15311144
+  - offset: 168
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 204
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 220
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 244
+    kind: rel24
+    symbol: 10
+    addend: 0

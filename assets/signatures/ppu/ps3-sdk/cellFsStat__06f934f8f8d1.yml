@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 15308d98899295a38cbf144baa5180201bca7ea9
+  signature: OWADKP////98CAKm//////gBABD/////RAAAAv/////oAQAQ/////3xjB7T/////fAgDpv////9OgAAg/////wAAAAD/////AAkAAf////8AAAAA/////w==
+  symbols:
+  - kind: Function
+    name: .cellFsStat
+    size: 44
+    flags: 1
+    section: .text
+  relocations: []

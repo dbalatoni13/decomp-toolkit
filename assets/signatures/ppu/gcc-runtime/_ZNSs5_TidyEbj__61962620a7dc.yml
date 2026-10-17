@@ -1,0 +1,93 @@
+- symbol: 0
+  hash: 5a8abd8e9aa8e494212c3c67202854b7367aefdb
+  signature: L6QAAP////98CAKm//////gh/3H/////+8EAgP////98vit4//////vhAIj/////fH8beP/////7oQB4//////gBAKD/////QZ4AMP////+AAwAY/////y8lAAD/////K4AAD/////9AnQAg/////zhjAAT/////g78ABP////94YwAg/////0CaAEj/////f6PreP////9IAAAB/AAAA2AAAAD/////fT/yFP////+T3wAU/////zgAAA//////eSkAIP////85YAAA/////5AfABj/////mWkABP/////oAQCg/////+uhAHj/////68EAgP////98CAOm/////+vhAIj/////OCEAkP////9OgAAg/////3+k63j/////SAAAAfwAAAPoQQAo/////0v//7D/////
+  symbols:
+  - kind: Function
+    name: ._ZNSs5_TidyEbj
+    size: 156
+    flags: 4
+    section: .text
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0090'
+    size: 0
+    flags: 2
+    section: .text
+  relocations:
+  - offset: 76
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 144
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: 61aa51a9cacc36151c8ebef4af75686c818fb599
+  signature: L4QAAP////98CAKm//////gh/3H/////+4EAcP/////7oQB4//////vhAIj/////+8EAgP/////4AQCg/////3x/G3j/////fL0reP////98fBt4/////0GeADj/////gAMAGP////8vBQAA/////yuAAA//////QJ0AKP////84YwAE/////4AfAAT/////eKUAIP////94YwAg/////3geACD/////QJoATP////9/w/N4/////0gAAAH8AAADYAAAAP////99POoU/////zgAAA//////eSkAIP////85YAAA/////5O/ABT/////kB8AGP////+ZaQAE/////+gBAKD/////64EAcP/////roQB4/////3wIA6b/////68EAgP/////r4QCI/////zghAJD/////ToAAIP////9/xPN4/////0gAAAH8AAADYAAAAP////9L//+s/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSs5_TidyEbj
+    size: 176
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memcpy
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 92
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 164
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: 26f33aa799084bd859d4d885469582423e474d5a
+  signature: L6QAAP////98CAKm//////gh/3H/////+6EAeP////98vSt4//////vhAIj/////fH8beP/////7wQCA//////gBAKD/////QZ4ATP////+AAwAY/////y8lAAD/////K4AAD/////9AnQA8/////zhjAAT/////g98ABP////94YwAg/////0GaABD/////f8TzeP////9IAAAB/AAAA2AAAAD/////gL8AGP////9/xPN4/////3/j+3j/////OKUAAf////94pQAg/////0gAAAH8AAADYAAAAP////84AAAP/////3/j+3j/////f6TreP////+QHwAY/////0gAAAH8AAADYAAAAP/////oAQCg/////+uhAHj/////68EAgP////98CAOm/////+vhAIj/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSs5_TidyEbj
+    size: 164
+    flags: 4
+    section: .text
+  - kind: Function
+    name: ._ZNSt11char_traitsIcE4copyEPcPKcj
+    size: 0
+    flags: 4
+    section: .text
+  - kind: Function
+    name: ._ZNSaIcE10deallocateEPcj
+    size: 0
+    flags: 4
+    section: .text
+  - kind: Function
+    name: ._ZNSs4_EosEj
+    size: 0
+    flags: 4
+    section: .text
+  relocations:
+  - offset: 76
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 128
+    kind: rel24
+    symbol: 3
+    addend: 0

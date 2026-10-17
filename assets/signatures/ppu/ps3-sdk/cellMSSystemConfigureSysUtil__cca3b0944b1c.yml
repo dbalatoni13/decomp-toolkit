@@ -1,0 +1,62 @@
+- symbol: 0
+  hash: 1ddc49fe89a86a05f8d8a007960f34733b115545
+  signature: +CH/Qf////98CAKm//////uhAKj/////OGAAAP////87oAAA//////uBAKD/////OIAAAP/////7wQCw/////zigAAT/////++EAuP////84wAAA//////gBAND/////k6EAcP////+ToQB0/////5OhAHj/////k6EAfP////9IAAAB/AAAA+hBACj/////L4MAB/////+ToQB8/////5hhAHD/////m6EAcf////9BnQBE/////y+DAAL/////QZ4BHP////8vgwAG/////0GeAVD/////OGAAAP////84gAAB/////zigAAT/////OMAAAP////9IAAAB/AAAA+hBACj/////L4MAAP////98fBt4/////0CdABD/////OAAAAf////87gAAB/////5gBAHH/////OGAAAP////84gQBw/////zigAAD/////OMAAAf////87oAAA/////0gAAAH8AAAD6EEAKP////87wQCA/////ywjAAD/////fH8beP////9AggCI/////ziAAAD/////e8UAIP////84YAAA/////0gAAAH8AAAD6EEAKP////85YACN/////ywjAAD/////fH8beP////84YBOI/////0CCAJz/////RAAAAv////87vQAB/////3+9B7T/////L50CWP////9B3gDE/////4gBAID/////L4AAAP////9Anv+8/////zhgAAD/////SAAAAfwAAANXgCA2/////4khAHD/////fABLeP////98Hwe0/////+gBAND/////f+P7eP/////rgQCg/////+uhAKj/////fAgDpv/////rwQCw/////+vhALj/////OCEAwP////9OgAAg/////zxgAHr/////YGMSEP////9IAAAB/AAAA+gBAND/////f+P7eP/////rgQCg/////+uhAKj/////fAgDpv/////rwQCw/////+vhALj/////OCEAwP////9OgAAg/////zgAAAH/////kAEAfP////9L//7o/////zxgAHr/////YGMSEf////9IAAAB/AAAA+gBAND/////f+P7eP/////rgQCg/////+uhAKj/////fAgDpv/////rwQCw/////+vhALj/////OCEAwP////9OgAAg/////zgAAAL/////kAEAfP////9L//6s/////zxgAHr/////O+D///////9gYxIE/////0gAAAH8AAADS///VP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSSystemConfigureSysUtil
+    size: 472
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellAudioOutGetSoundAvailability
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellAudioOutConfigure
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellAudioOutGetState
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 64
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 124
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 176
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 212
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 276
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 340
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 400
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 464
+    kind: rel24
+    symbol: 4
+    addend: 0

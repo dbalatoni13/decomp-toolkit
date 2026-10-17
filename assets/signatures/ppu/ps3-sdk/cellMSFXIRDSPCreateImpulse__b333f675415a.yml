@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: 496613167788aca1dc7df33ab74c743f5fdc029a
+  signature: +CH/cf////98CAKm//////vhAIj/////fH8beP/////4AQCg/////zgDABv/////L78AAP/////7gQBw/////1QAADb/////+6EAeP/////7wQCA/////3yDI3j/////fJ4jeP////98vCt4/////3zdM3j/////fAAHtP////9AngAo/////zhg////////6AEAoP/////rgQBw/////+uhAHj/////fAgDpv/////rwQCA/////+vhAIj/////OCEAkP////9OgAAg/////5AfAAj/////SAAAAfwAAANgAAAA/////3/E83j/////kH8AAP////9/5ft4/////3+m63j/////f4PjeP////9IAAAB/AAAAy+D////////OGAAAP////9Bnv+w/////0gAAAH8AAADYAAAAP////84YAAA/////0v//6T/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXIRDSPCreateImpulse
+    size: 168
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSDSPCalcMemoryNeededForChunks
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSFXIRProcessRAWData
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 108
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 136
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 152
+    kind: rel24
+    symbol: 3
+    addend: 0

@@ -1,0 +1,55 @@
+- symbol: 0
+  hash: 5d4a6d2babafb77ea442ebd115a0de1b5b24e469
+  signature: +CH/gf////98CAKm//////vhAHj/////fH8beP/////4AQCQ/////4ACAAD//wAAkAMAAP////9IAAAB/AAAA2AAAAD/////f+P7eP////9IAAAB/AAAA+hBACj/////6AEAkP/////r4QB4/////zghAID/////fAgDpv////9OgAAg/////y+k////////QZ4ADP////9IAAAB/AAAA2AAAAD/////eGMAIP////9IAAAB/AAAAw==
+  symbols:
+  - kind: Function
+    name: ._ZNSt13bad_exceptionD0Ev
+    size: 92
+    flags: 4
+    section: .text
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt9exceptionD2Ev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0028'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: ._Unwind_Resume
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cxa_call_unexpected
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 22
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 28
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 40
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 76
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 88
+    kind: rel24
+    symbol: 5
+    addend: 0

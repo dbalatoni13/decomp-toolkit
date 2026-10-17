@@ -1,0 +1,57 @@
+- symbol: 0
+  hash: 58ab98e2eae4087be204bfbddfbf6391257613e3
+  signature: gSIAAP//AACAqQAA/////0gAAAj/////QZoAqP////+I4wAA/////1TqBj7/////VUkIPP////99RlN4/////30pKhT/////eSkAIP////+gCQAA/////1QAB7z/////LAAAAP////9BggAI/////zjKACD/////iWQAAP////9VaQg8/////31oW3j/////fSkqFP////95KQAg/////6AJAAD/////VAAHvP////8sgAAA/////0GGAAj/////OQsAIP////9/hkAA/////3zgB3T/////OGMAAf////8vAAAA/////ziEAAH/////QZ7/lP////9BggAo/////zgKACD/////QIYAKP////99aVt4/////3+ASAD/////OGD///////9BnAAI/////zhgAAH/////fGMHtP////9OgAAg/////31AU3j/////QYb/4P////85KwAg/////0v//9z/////OGAAAP////98Ywe0/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .strcasecmp
+    size: 192
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -28621288
+- symbol: 0
+  hash: 2f83a3ca99b73d08325a44bfdf4476ede2eff739
+  signature: +cH/+P////+BwgAA//8AAHzjIFD/////eIsHYP////84gH9//////3hqB2D/////eISALP////98KlgA/////3iEAA7/////QIICzP////8oCgAA/////zigABD/////QIICfP////98qQOm/////+gDAAD/////fMM4Kv////94CAYg/////30OQK7/////eQAGLP////94CcYi/////30uSK7/////eSBELP////94CoYi/////31OUK7/////eUCCLP////94C0Yi/////31uWK7/////eWDALP////94CAYi/////30OQK7/////eQAGDv////94CcYg/////30uSK7/////eSBEDv////94CoYg/////31OUK7/////eUCCDv////94C0Yg/////31uWK7/////eWDADv////94yAYg/////30OQK7/////eQYGLP////94ycYi/////30uSK7/////eSZELP////94yoYi/////31OUK7/////eUaCLP////94y0Yi/////31uWK7/////eWbALP////94yAYi/////30OQK7/////eQYGDv////94ycYg/////30uSK7/////eSZEDv////94yoYg/////31OUK7/////eUaCDv////94y0Yg/////31uWK7/////eWbADv////98IDAA/////0CCAVj/////fAggOP////98CSN4/////31IIhT/////fStQ+P////99aQB0/////3kp6ML/////KAkACP////84YwAI/////0GAAWj/////QgD/DP////85gACA/////3zjOhT/////fAAaLP////98ADos/////3wMGiz/////fAw6LP////85gAEA/////zigABD/////fAwaLP////98DDos/////3ypA6b/////6AMAAP/////oxwAA/////3gIBiD/////fQ5Arv////95AAYs/////3gJxiL/////fS5Irv////95IEQs/////3gKhiL/////fU5Qrv////95QIIs/////3gLRiL/////fW5Yrv////95YMAs/////3gIBiL/////fQ5Arv////95AAYO/////3gJxiD/////fS5Irv////95IEQO/////3gKhiD/////fU5Qrv////95QIIO/////3gLRiD/////fW5Yrv////95YMAO/////3jIBiD/////fQ5Arv////95BgYs/////3jJxiL/////fS5Irv////95JkQs/////3jKhiL/////fU5Qrv////95RoIs/////3jLRiL/////fW5Yrv////95ZsAs/////3jIBiL/////fQ5Arv////95BgYO/////3jJxiD/////fS5Irv////95JkQO/////3jKhiD/////fU5Qrv////95RoIO/////3jLRiD/////fW5Yrv////95ZsAO/////3wgMAD/////OOcACP////9AggAw/////3wIIDj/////fAkjeP////99SCIU/////30rUPj/////fWkAdP////95KejC/////ygJAAj/////OGMACP////9BgABA/////0IA/wj/////S//++P////98CCA4/////3wJI3j/////fUgiFP////99K1D4/////3zIIDj/////fMkjeP////99SCIU/////30oUPj/////fAoyeP////99a0N4/////31KW3j/////fUkAdP////95KejC/////zkpAAH/////eSkfJP////94AE4w/////3jGTjD/////fGYAUP/////pwf/4/////06AACD/////fQoA0P////95CAdg/////30JA6b/////iAMAAP////98wziu/////3wOAK7/////fM4wrv////98IDAA/////zhjAAH/////QIL/0P////8oAAAA/////zil////////QYL/xP////8oBQAA/////0GCALT/////QgD/0P////9L//1M/////30rUFD/////eSkHYP////8oCQAE/////0GCAfz/////eSkHoP////8oCQAC/////zigAID/////QYIAmP////98qQOm/////4gDAAD/////fMM4rv////98DgCu/////3zOMK7/////fCAwAP////84YwAB/////0CC/3T/////KAAAAP////9Bgv9s/////0IA/9z/////OYAAgP////984zoU/////3wAGiz/////fAA6LP////98DBos/////3wMOiz/////OYABAP////84oABA/////3wMGiz/////fAw6LP////98qQOm/////4gDAAD/////iMcAAP////98DgCu/////3zOMK7/////fCAwAP////84YwAB/////0CC/yD/////KAAAAP////845wAB/////0GC/xT/////QgD/2P////9L///I/////3xjGFD/////6cH/+P////9OgAAg/////3hpB+D/////KAkAAP////9BggAo/////4gDAAD/////fMM4rv////98DgCu/////3zOMK7/////fCAwAP////84YwAB/////0CC/tj/////KAAAAP////9Bgv7Q/////zigAED/////fKkDpv////+gAwAA/////3zDOi7/////eAgGIP////99DkCu/////3kABiz/////eAnGIv////99Lkiu/////3kgRCz/////eMgGIP////99DkCu/////3kGBiz/////eMnGIv////99Lkiu/////3kmRCz/////OGMAAv////98IDAA/////0CCAKz/////KAABAP////94CAYg/////0GA/3D/////KAgAAP////9Bgv9o/////0IA/6j/////OYAAgP////984zoU/////3wAGiz/////fAA6LP////98DBos/////3wMOiz/////OYABAP////84oABA/////3wMGiz/////fAw6LP////98qQOm/////6ADAAD/////oMcAAP////94CAYg/////30OQK7/////eQAGLP////94CcYi/////30uSK7/////eSBELP////94yAYg/////30OQK7/////eQYGLP////94ycYi/////30uSK7/////eSZELP////84YwAC/////3wgMAD/////QIIAJP////8oAAEA/////3gIBiD/////QYD+6P////8oCAAA/////zjnAAL/////QYL+3P////9CAP+k/////0v//5T/////eAjCAv////94ycIC/////3wISAD/////fGlAUP/////pwf/4/////0yCACD/////KAgAAP////94AAYg/////0GC/rD/////eMYGIP////98ZgBQ/////06AACD/////fQMA0P////95CAeg/////ygIAAD/////QYIAMP////99CQOm/////4gDAAD/////fMM4rv////98DgCu/////3zOMK7/////OGMAAf////98IDAA/////0CC/Xz/////KAAAAP////9Bgv10/////0IA/9z/////OKAAIP////98qQOm/////4ADAAD/////fMM4Lv////94CAYg/////30OQK7/////eQAGLP////94CcYi/////30uSK7/////eSBELP////94CoYi/////31OUK7/////eUCCLP////94C0Yi/////31uWK7/////eWDALP////94yAYg/////30OQK7/////eQYGLP////94ycYi/////30uSK7/////eSZELP////94yoYi/////31OUK7/////eUaCLP////94y0Yi/////31uWK7/////eWbALP////84YwAE/////3wgMAD/////fAggOP////9AggD0/////3wJI3j/////fUgiFP////99K1D4/////3lrACD/////fWkAdP////95KejC/////ygJAAj/////QYD9yP////9CAP9o/////zmAAID/////fOM6FP////98ABos/////3wAOiz/////fAwaLP////98DDos/////zmAAQD/////fAwaLP////98DDos/////3ypA6b/////gAMAAP////+AxwAA/////3gIBiD/////fQ5Arv////95AAYs/////3gJxiL/////fS5Irv////95IEQs/////3gKhiL/////fU5Qrv////95QIIs/////3gLRiL/////fW5Yrv////95YMAs/////3jIBiD/////fQ5Arv////95BgYs/////3jJxiL/////fS5Irv////95JkQs/////3jKhiL/////fU5Qrv////95RoIs/////3jLRiL/////fW5Yrv////95ZsAs/////zhjAAT/////fCAwAP////98CCA4/////0CCADD/////fAkjeP////99SCIU/////30rUPj/////eWsAIP////99aQB0/////3kp6ML/////KAkACP////845wAE/////0GA/QD/////QgD/ZP////9L//9U/////3wMMnj/////fYkAdP////95LAck/////3wIIDj/////fAkjeP////99SCIU/////30rUPj/////eWsAIP////99agB0/////3wMUAD/////QYEACP////99imN4/////zlKAAj/////eABWMP////94xlYw/////3xmAFD/////6cH/+P////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .strcasecmp
+    size: 1772
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: .LibCSToLowerTable
+    size: 4
+    flags: 1
+    section: .got
+  relocations:
+  - offset: 6
+    kind: l
+    symbol: 1
+    addend: -15853480
+- symbol: 0
+  hash: 6ea0c54f0ad626f396639297aba631ceb9efb402
+  signature: fGsbeP////+A4gAA//8AAEgAADj/////fAo4rv////+JJAAA/////3kEACD/////fAAHdP////99KQd0/////3gDBCD/////fAk4rv////98AAd0/////3gABCD/////f4MAAP////9BngAM/////3xgGFD/////ToAAIP////+ICwAA/////zkrAAH/////OQQAAf////98Cgd0/////3krACD/////L6oAAP////9Anv+0/////4gEAAD/////L4AAAP////9Anv+o/////zhgAAD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .strcasecmp
+    size: 112
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0006'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 6
+    kind: l
+    symbol: 1
+    addend: -14058240

@@ -1,0 +1,46 @@
+- symbol: 0
+  hash: 81e0cc31a696a4fc7383f6d7a4970dc2dcf49813
+  signature: fYAAJv/////4Iflx/////9nBBgD/////2eEGCP/////aAQYQ/////9ohBhj/////2kEGIP/////aYQYo/////9qBBjD/////2qEGOP/////awQZA/////9rhBkj/////2wEGUP/////bIQZY/////9tBBmD/////22EGaP/////bgQZw/////9uhBnj/////28EGgP/////b4QaI//////nBBXD/////+eEFeP/////6AQWA//////ohBYj/////+kEFkP/////6YQWY//////qBBaD/////+qEFqP/////6wQWw//////rhBbj/////+wEFwP/////7IQXI//////tBBdD/////+2EF2P/////7gQXg//////uhBej/////fAgCpv/////7wQXw//////vhBfj/////PSDoQf/////4AQag/////zgBAHD/////+GEFUP////9hKQAo/////3gAACD/////+IEFWP/////pQQAA//////ihBWD/////+GEGwP////98AwN4//////jBBWj/////kYEGmP/////4AQVA/////+lqABD/////+IEGyP////84gQaQ//////ihBtD/////gAsAAP////9/gEgA/////3yoAqb/////QZ4ACP/////4SgAo/////0gAAAH8AAADOAEC2P////84oAJo/////+iBBUD/////eAAAIP////98AwN4//////gBBUj/////SAAAAfwAAANgAAAA/////+hhBsD/////6AEGyP/////ogQVI//////gDABD/////6AEG0P/////4AwAY/////0gAAAH8AAAD6IEFSP////8vgwAH/////zlAAAD/////Qd4AzP////+BgQaY/////+gBBqD/////6EEGuP////99kgEg/////+hhBVD/////fAgDpv/////ogQVY/////32RASD/////6KEFYP////99kIEg/////+jBBWj/////6cEFcP/////p4QV4/////+oBBYD/////6iEFiP/////qQQWQ/////+phBZj/////6oEFoP/////qoQWo/////+rBBbD/////6uEFuP/////rAQXA/////+shBcj/////60EF0P/////rYQXY/////+uBBeD/////66EF6P/////rwQXw/////+vhBfj/////ycEGAP/////J4QYI/////8oBBhD/////yiEGGP/////KQQYg/////8phBij/////yoEGMP/////KoQY4/////8rBBkD/////yuEGSP/////LAQZQ/////8shBlj/////y0EGYP/////LYQZo/////8uBBnD/////y6EGeP/////LwQaA/////8vhBoj/////OCEGkP////98IVIU/////06AACD/////6GEFQP////9IAAAB/AAAA4ABBST/////fGobeP/////4AQag/////0v//yT/////
+  symbols:
+  - kind: Function
+    name: ._Unwind_ForcedUnwind
+    size: 552
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .uw_init_context_1
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .memcpy
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unwind_ForcedUnwind_Phase2
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .uw_install_context_1
+    size: 0
+    flags: 2
+    section: .text
+  relocations:
+  - offset: 248
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 276
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 308
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 532
+    kind: rel24
+    symbol: 4
+    addend: 0

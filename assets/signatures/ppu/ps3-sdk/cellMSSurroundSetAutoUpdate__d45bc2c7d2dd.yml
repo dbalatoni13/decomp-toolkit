@@ -1,0 +1,41 @@
+- symbol: 0
+  hash: 243a9a35bcf0ae9a3722b558315895c0cc7df7e7
+  signature: gSIAAP//AAB8CAKm//////gh/5H/////+AEAgP////98axt4/////zxgAHr/////KwsAAf////+ACQAA/////2BjEg3/////L4AAAP////9B3gA4/////zxgAHr/////QZkALP////+BIgAA//8AADhgAAD/////mWkAAP////9IAAAB/AAAA2AAAAD/////6AEAgP////84YAAA/////3wIA6b/////OCEAcP////9OgAAg/////2BjEgL/////SAAAAfwAAANgAAAA/////+gBAID/////OGD///////98CAOm/////zghAHD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSSurroundSetAutoUpdate
+    size: 124
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0036'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 54
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 64
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 3
+    addend: 0

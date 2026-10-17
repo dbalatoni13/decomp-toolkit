@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: fb1c4f73fceccb2e9a4188a75fe5ecb9fc0eb035
+  signature: +CH/gf////98CAKm//////vBAHD/////fJ4jeP/////4AQCQ/////ziAAAT/////gOMACP////+AAwAE/////zknABD/////++EAeP////98fxt4/////3+JAED/////QZ0AVP////85ZwAI/////zwAAAT/////eWsAIP////9gAB2U/////3jpACD/////PUAABP////+QCQAA/////zkLAAj/////YUoBAP////+TyQAE/////zgAAAD/////kR8ACP////+RSwAA/////5ALAAT/////6AEAkP/////rwQBw/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////gSMADP////+ACQAA//////hBACj/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////8vowAA/////0Ce/8j/////gP8ACP////9L//+I/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetClearSurface
+    size: 176
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: d144c1df37a87bac86e4b341fe01921c25269089
+  signature: +CH/gf////98CAKm//////vhAHj/////fH8beP/////4AQCQ//////vBAHD/////fJ4jeP////84gAAE/////4D/AAj/////gT8ABP////84BwAQ/////3+ASED/////QZ0AVP////946AAg/////zjnAAj/////PSAABP////946gAg/////zgHAAj/////PWAABP////9hKR2U/////2FrAQD/////kB8ACP////84AAAA/////5PIAAT/////kSgAAP////+QCgAE/////5FqAAD/////6AEAkP/////rwQBw/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////gT8ADP////+ACQAA//////hBACj/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////8vgwAA/////0Ce/8j/////gP8ACP////9L//+I/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetClearSurface
+    size: 176
+    flags: 1
+    section: .text
+  relocations: []

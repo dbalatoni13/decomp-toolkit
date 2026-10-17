@@ -1,0 +1,23 @@
+- symbol: 0
+  hash: 984f0a56f5ef54c41be427544680f1635f01e6a1
+  signature: +CH/gf////98CAKm//////vhAHj/////fH8beP/////4AQCQ/////zhgAAD/////OB////////8rgAAH/////0GdADD/////SAAAAfwAAANgAAAA/////zwAAAL/////YADxwP////98HwHW/////3wDB7T/////6AEAkP/////r4QB4/////zghAID/////fAgDpv////9OgAAg/////zxgAHr/////YGMSAv////9IAAAB/AAAA2AAAAD/////OGD///////9L///Y/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSFXDelayGetNeededMemorySize
+    size: 104
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 36
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 88
+    kind: rel24
+    symbol: 1
+    addend: 0

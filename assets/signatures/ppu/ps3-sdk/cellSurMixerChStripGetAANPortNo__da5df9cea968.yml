@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 8e24c42211679ac6a0aeb76eb789532f4140496e
+  signature: gSIAAP//AAB8Zht4/////zxggDH/////YGMAAv////+ACQAA/////y+gAAD/////TZ4AIP////98AwN4/////0gAAAD8AAAD
+  symbols:
+  - kind: Function
+    name: .cellSurMixerChStripGetAANPortNo
+    size: 36
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZN17SceSurMixerEntity21getAANPortNoOfChStripEjjPj
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 32
+    kind: rel24
+    symbol: 2
+    addend: 0

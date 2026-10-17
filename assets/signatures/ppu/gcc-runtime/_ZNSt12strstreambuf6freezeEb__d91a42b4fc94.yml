@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 53f7ebd82f4961d267c02db51d867ee8a29d2a08
+  signature: L4QAAP////9BngA4/////4ADAGT/////VAkHOP////9gAAAI/////y+JAAD/////TJ4AIP////+BYwA0/////4FDABD/////kAMAZP////+ACwAA/////5ADAFz/////gSoAAP////+RKwAA/////06AACD/////gSMAZP////9VIAc4/////1Ur4H7/////L4AAAP////9VayA+/////02eACD/////gSMANP////+AAwBc/////5FjAGT/////kAkAAP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt12strstreambuf6freezeEb
+    size: 104
+    flags: 1
+    section: .text
+  relocations: []

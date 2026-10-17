@@ -1,0 +1,150 @@
+- symbol: 0
+  hash: da5b8121c0718cfe04c167d701a330509c953f7e
+  signature: LCMAAP////98CAKm//////gh/2H/////+2EAeP////98aRt4//////uBAID/////fLsreP/////7oQCI/////3ycI3j/////+0EAcP////983TN4//////vBAJD/////++EAmP/////4AQCw/////0HCACT/////L6QAAP////9BngAc/////y+lAAD/////QZ4AFP////8vhgAA/////0CdAAz/////L4YACP////9AnQBA/////zxgAHr/////YGMSAv////9IAAAB/AAAA2AAAAD/////6AEAsP////84YP///////+tBAHD/////62EAeP////98CAOm/////+uBAID/////66EAiP/////rwQCQ/////+vhAJj/////OCEAoP////9OgAAg/////zygAAL/////k4kAAP////98gyN4/////2Cl8cD/////OIAAAP////87wAAA/////ztAAAD/////fKYp1v////9UpQAy/////0gAAAH8AAAD6EEAKP////84HAG4/////3gfACD/////OX//+P/////AAgAA//8AADk///z/////k18AAP////95awAg/////3kpACD/////f8XzeP/////QCwAA/////3+D43j/////0AkAAP////9/ZNt4/////0gAAAH8AAADPT8AA/////84HgAB/////y+jAAD/////fB4HtP////85KfHA/////38d8AD/////eT8AIP////9Anv9E/////0Ca/7D/////SAAAAfwAAANgAAAA/////+gBALD/////OGAAAP/////rQQBw/////+thAHj/////fAgDpv/////rgQCA/////+uhAIj/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSFXDelayInit
+    size: 340
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00BC'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@00D2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellMSFXDelaySetParams
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 100
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 188
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 210
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 248
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 288
+    kind: rel24
+    symbol: 1
+    addend: 0
+- symbol: 0
+  hash: 2b825c9b0653b91702b42d6f8a98eeb35c9efcb0
+  signature: L6QAAP////98CAKm//////gh/2H/////+0EAcP////98uit4//////uBAID/////fJwjeP/////7oQCI/////3zdM3j/////+AEAsP/////7YQB4//////vBAJD/////++EAmP////+QgwAA/////0HeABT/////L4YAAP////9AnQAM/////y+GAAj/////QJ0AQP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////+gBALD/////OGD////////rQQBw/////+thAHj/////fAgDpv/////rgQCA/////+uhAIj/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////88oAAC/////3yDI3j/////YKXxwP////84gAAA/////zvAAAD/////O2AAAP////98pinW/////1SlADL/////SAAAAfwAAANgAAAA/////zgcAbj/////eB8AIP////85f//4/////8ACAAD//wAAOT///P////+TfwAA/////3lrACD/////eSkAIP////9/xfN4/////9ALAAD/////f4PjeP/////QCQAA/////39E03j/////SAAAAfwAAAM9PwAD/////zgeAAH/////L6MAAP////98Hge0/////zkp8cD/////fx3wAP////95PwAg/////0Ce/0j/////QJr/sP////9IAAAB/AAAA2AAAAD/////6AEAsP////84YAAA/////+tBAHD/////62EAeP////98CAOm/////+uBAID/////66EAiP/////rwQCQ/////+vhAJj/////OCEAoP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSFXDelayInit
+    size: 320
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memset
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00BE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellMSFXDelaySetParams
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 84
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 168
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 190
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 228
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 268
+    kind: rel24
+    symbol: 1
+    addend: 0
+- symbol: 0
+  hash: 8b113ec2c690b6fc362340068c52d8c0b886a198
+  signature: LCMAAP////98CAKm//////gh/2H/////+2EAeP////98aRt4//////uBAID/////fLsreP/////7oQCI/////3ycI3j/////+0EAcP////983TN4//////vBAJD/////++EAmP/////4AQCw/////0HCACT/////L6QAAP////9BngAc/////y+lAAD/////QZ4AFP////8vhgAA/////0CdAAz/////L4YACP////9AnQBA/////zxgAHr/////YGMSAv////9IAAAB/AAAA2AAAAD/////6AEAsP////84YP///////+tBAHD/////62EAeP////98CAOm/////+uBAID/////66EAiP/////rwQCQ/////+vhAJj/////OCEAoP////9OgAAg/////zygAAL/////k4kAAP////98gyN4/////2Cl8cD/////OIAAAP////87wAAA/////ztAAAD/////fKYp1v////9UpQAy/////0gAAAH8AAADYAAAAP////84HAG4/////3gfACD/////OX//+P/////AAgAA//8AADk///z/////k18AAP////95awAg/////3kpACD/////f8XzeP/////QCwAA/////3+D43j/////0AkAAP////9/ZNt4/////0gAAAH8AAADPT8AA/////84HgAB/////y+jAAD/////fB4HtP////85KfHA/////38d8AD/////eT8AIP////9Anv9E/////0Ca/7D/////SAAAAfwAAANgAAAA/////+gBALD/////OGAAAP/////rQQBw/////+thAHj/////fAgDpv/////rgQCA/////+uhAIj/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSFXDelayInit
+    size: 340
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memset
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00D2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellMSFXDelaySetParams
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 100
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 188
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 210
+    kind: l
+    symbol: 3
+    addend: -15311144
+  - offset: 248
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 288
+    kind: rel24
+    symbol: 1
+    addend: 0

@@ -1,0 +1,86 @@
+- symbol: 0
+  hash: 18fee7b643fa66a44c812d1f4bfd12ca9b073bc6
+  signature: L4MAAP////98CAKm//////gh/1H/////+6EAmP/////74QCo//////thAIj/////+4EAkP/////7wQCg//////gBAMD/////fH8beP////87oAax/////0GcAAj/////fH0beP////9IAAAB/AAAA2AAAAD/////OSD///////8vgwAA/////0GeADj/////g2KJPP////84AAAA/////zkgAAD/////YAD///////9/HwAA/////4PbAAD/////L54AAP////9AngAY/////ziAAAH/////OKAAAP////84YAAC/////zkg//7/////QJkALP/////oAQDA/////3kjACD/////62EAiP/////rgQCQ/////3wIA6b/////66EAmP/////rwQCg/////+vhAKj/////OCEAsP////9OgAAg/////0gAAAH8AAAD6EEAKP////84gQBw/////zgAAAL/////VIQANv////84oAAQ/////5PBAHT/////fHwbeP////+YAQBx/////7OhAHL/////SAAAAfwAAAPoQQAo/////y+DAAD/////fH4beP////97pAQg/////0GeADz/////gGKJQP////9IAAAB/AAAA2AAAAD/////6AEAwP/////rYQCI/////zkg//z/////64EAkP/////roQCY/////3wIA6b/////eSMAIP/////rwQCg/////+vhAKj/////OCEAsP////9OgAAg/////4BiiUT/////SAAAAfwAAANgAAAA/////ziAAAX/////f4PjeP////9IAAAB/AAAA+hBACj/////OIAACP////84YAAB/////0gAAAH8AAADYAAAAP////+AgolI/////3xpG3j/////OKAAAP////94YwAg/////5PJAAT/////k4kAAP////+zqQAE/////0gAAAH8AAADYAAAAP////+A4olY/////4BiiUz/////gIKJUP////84wAAA/////4CiiVT/////SAAAAfwAAANgAAAA/////zgAAAH/////OSAAAP////+QGwAA/////0v//uj/////
+  symbols:
+  - kind: Function
+    name: .cellConsoleNetworkServerInit
+    size: 408
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleInitialized
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .socket
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .bind
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .listen
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellConsoleMemalign
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleRecurringTaskAdd
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleInputProcessorAdd
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 52
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 164
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 204
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 232
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 288
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 304
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 320
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 356
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 384
+    kind: rel24
+    symbol: 8
+    addend: 0

@@ -1,0 +1,76 @@
+- symbol: 0
+  hash: 578fcff033769792ba0a919c49e67d743f7f5e73
+  signature: gSIAAP//AAB8CAKm//////gh/3H/////+AEAoP/////74QCI//////uBAHD/////fJwjeP////+D6QAA//////uhAHj/////fH0beP////8vvwAA//////vBAID/////QJ4AFP////9IAACo/////4P/ABT/////L78AAP////9BngCc/////4AfAAD/////f4DoQP////9Bnf/s/////3/j+3j/////f6TreP////9IAAAB/AAAAywjAAD/////fH4beP////9BggB8/////4AfAAT/////kBwAAP////+BPwAI/////5E8AAT/////gB8AEP////9UCQCE/////3gDXiL/////L4kAAP////9AngD8/////3h9BiD/////f+T7eP////9/o+t4/////0gAAAH8AAADONwACP////84vgAI/////3xkG3j/////eKUAIP////9/o+t4/////3jGACD/////SAAAAfwAAAPoAQCg/////3/D83j/////64EAcP/////roQB4/////3wIA6b/////68EAgP/////r4QCI/////zghAJD/////ToAAIP////87wAAA/////4EiAAD//wAAg+kAAP////8vvwAA/////0Ge/8z/////gB8AFP////9/4/t4/////3+k63j/////kAkAAP////9IAAAB/AAAA4EiAAD//wAAfH4beP////+BKQAA/////y+pAAD/////QZ4AOP////+BXwAA/////4AJAAD/////f4BQQP////9BnAAo/////zgJABT/////eAsAIP////+BKwAA/////y+pAAD/////QZ4AGP////+ACQAA/////3+AUED/////QJz/5P////9IAAAI/////4FiAAD//wAAL74AAP////+RPwAU/////5PrAAD/////QZ7/hP////+AHwAE/////5AcAAD/////gT8ACP////+RPAAE/////4AfABD/////VAkAhP////94A14i/////y+JAAD/////QZ7/DP////+AHgAE/////zh+AAT/////fGAYUP////94YwAg/////0gAAAH8AAADS//+9P////8=
+  symbols:
+  - kind: Function
+    name: ._Unwind_Find_FDE
+    size: 412
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .search_object
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .base_from_object
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .read_encoded_value_with_base
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@00E2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .get_cie_encoding
+    size: 0
+    flags: 2
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 88
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 152
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 180
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 226
+    kind: l
+    symbol: 5
+    addend: -10216440
+  - offset: 256
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 262
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 334
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 404
+    kind: rel24
+    symbol: 6
+    addend: 0

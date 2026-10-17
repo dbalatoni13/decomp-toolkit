@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 3880d3c056af93157c56cd06d57ce31184bb1566
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP/////4AQCg/////0gAAAH8AAADYAAAAP/////oAQCg/////3wIA6b/////kH0ARP/////roQB4/////zghAJD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellPadRegister
+    size: 52
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellPadLddRegisterController
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0

@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: ba0641cf5c0fcc0215ece4e2d222a94231d04610
+  signature: VKUAOv////+QwwAM/////3ylIhT/////kIMAAP////84pf/8/////5CDAAj/////kKMABP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetupContextData
+    size: 32
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: cd1aca9fc282c9a954e03bd13db8df8745320cd6
+  signature: VKUAOv////+QwwAM/////5CDAAD/////fKUiFP////+QgwAI/////zil//z/////kKMABP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetupContextData
+    size: 32
+    flags: 1
+    section: .text
+  relocations: []

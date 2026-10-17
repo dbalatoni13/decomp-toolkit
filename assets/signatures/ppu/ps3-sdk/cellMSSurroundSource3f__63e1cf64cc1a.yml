@@ -1,0 +1,54 @@
+- symbol: 0
+  hash: 4caa1eb0e05602f790f5c6b3c4068200757c0908
+  signature: gSIAAP//AAB8CAKm//////gh/2H/////+AEAsP/////boQCI//////+gGJD/////28EAkP//////wBCQ/////4AJAAD/////2+EAmP//////4AiQ/////y+AAAD/////+8EAeP/////74QCA/////zvA////////fJ8jeP////9BngB0/////0gAAAH8AAADO8D///////8vowAA//////wg+JD/////f+T7eP/////8QPCQ//////xg6JD/////Qd4AaP////9IAAAB/AAAA2AAAAD/////fH4beP////88YAB6/////y+e////////YGMSAv////9BngAI/////zhgAAD/////SAAAAfwAAANgAAAA/////+gBALD/////f8PzeP/////r4QCA/////+vBAHj/////fAgDpv/////LoQCI/////8vBAJD/////y+EAmP////84IQCg/////06AACD/////PGAAev////9gYxIN/////0gAAAH8AAADYAAAAP////9L///I/////zxgAHr/////YGMSAv////9IAAAB/AAAA2AAAAD/////S///tP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSSurroundSource3f
+    size: 220
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__getSourceAddr
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__alSource3f_Process
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 68
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 100
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 132
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 188
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 208
+    kind: rel24
+    symbol: 4
+    addend: 0

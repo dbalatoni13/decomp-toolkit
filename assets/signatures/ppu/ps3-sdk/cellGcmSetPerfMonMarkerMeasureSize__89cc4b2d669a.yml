@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 13e8dd3a712c8d2c0dd9b6e4fe4e98897fa0246f
+  signature: iAQAAP////98iyN4/////zkgAAD/////L4AAAP////9BngAc/////4wEAAH/////L4AAAP////9Anv/4/////30rIFD/////OSkAA/////9VKfC+/////zhjAAL/////fGNKFP////94YwAg/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellGcmSetPerfMonMarkerMeasureSize
+    size: 60
+    flags: 1
+    section: .text
+  relocations: []

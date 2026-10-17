@@ -1,0 +1,38 @@
+- symbol: 0
+  hash: af672295cfc2c15899824218bc9588bb3cf80201
+  signature: L4QAAf////98CAKm//////gh/0H/////+uEAeP////99V1N4//////sBAID/////fThLeP/////7IQCI/////30ZQ3j/////+0EAkP////98+jt4//////thAJj/////fNszeP/////7gQCg/////3y8K3j/////++EAuP////98fxt4//////uhAKj/////+8EAsP/////4AQDQ/////0GeARj/////K4QAAf////9AnADM/////zvAAAD/////Z97+7f////9/3fN4/////4F/AAj/////gB8ABP////85KwAM/////3+JAED/////QJ0ANP////+BPwAM/////3/j+3j/////OIAAA/////+ACQAA//////hBACj/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////8vowAA/////0CeAIj/////gX8ACP////88AAAI/////zlLAAz/////YAAhhP////95awAg/////5FfAAj/////f+P7eP////9/hON4/////5OrAAj/////f2UHtP////+QCwAA/////39G03j/////k8sABP////9/Jwe0/////38IB7T/////fukHtP////9IAAAB/AAAA+gBAND/////OGAAAP/////q4QB4/////+sBAID/////fAgDpv/////rIQCI/////+tBAJD/////62EAmP/////rgQCg/////+uhAKj/////68EAsP/////r4QC4/////zghAMD/////ToAAIP////8vhAAC/////0GeAFT/////6AEA0P////84YAD//////+rhAHj/////ZGOAIf/////rAQCA/////+shAIj/////fAgDpv/////rQQCQ/////+thAJj/////64EAoP/////roQCo/////+vBALD/////6+EAuP////84IQDA/////06AACD/////O8AAAf////87oAAA/////2fe/u3/////Z73+7f////9L//7w/////zvAAAD/////O6AAAf////9n3v7t/////2e9/u3/////S//+3P////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetTransferData
+    size: 400
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmTransferData
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 232
+    kind: rel24
+    symbol: 1
+    addend: 0
+- symbol: 0
+  hash: e6fe9883cd449646b9b9faf61715e13d3b3ea182
+  signature: L4QAAf////98CAKm//////gh/0H/////+uEAeP////99V1N4//////sBAID/////fThLeP/////7IQCI/////30ZQ3j/////+0EAkP////98+jt4//////thAJj/////fNszeP/////7gQCg/////3y8K3j/////++EAuP////98fxt4//////uhAKj/////+8EAsP/////4AQDQ/////0GeASD/////K4QAAf////9AnADM/////zvAAAD/////Z97+7f////9/3fN4/////4F/AAj/////gB8ABP////85KwAM/////3+JAED/////QJ0ANP////+BPwAM/////3/j+3j/////OIAAA/////+ACQAA//////hBACj/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////8vowAA/////0CeAJD/////gX8ACP////88AAAI/////zlLAAz/////YAAhhP////95awAg/////5FfAAj/////f+P7eP////9/hON4/////5OrAAj/////f2UHtP////+QCwAA/////39G03j/////k8sABP////9/Jwe0/////38IB7T/////fukHtP////9IAAAB/AAAA+gBAND/////OGAAAP/////q4QB4/////+sBAID/////fAgDpv/////rIQCI/////+tBAJD/////62EAmP/////rgQCg/////+uhAKj/////68EAsP/////r4QC4/////zghAMD/////ToAAIP////8vhAAC/////0GeAGz/////L4QAA/////9BngBU/////+gBAND/////OGAA///////q4QB4/////2RjgCH/////6wEAgP/////rIQCI/////3wIA6b/////60EAkP/////rYQCY/////+uBAKD/////66EAqP/////rwQCw/////+vhALj/////OCEAwP////9OgAAg/////zvAAAH/////O6AAAP////9n3v7t/////2e9/u3/////S//+6P////87wAAB/////2fe/u3/////f93zeP////9L//7Y/////zvAAAD/////O6AAAf////9n3v7t/////2e9/u3/////S//+xP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetTransferData
+    size: 424
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmTransferData
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 232
+    kind: rel24
+    symbol: 1
+    addend: 0

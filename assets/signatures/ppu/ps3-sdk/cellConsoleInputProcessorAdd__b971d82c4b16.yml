@@ -1,0 +1,45 @@
+- symbol: 0
+  hash: 8f460bf284bb302a115c4bfad4ade9a125f73bf2
+  signature: +CH/Uf////98CAKm//////shAHj/////+0EAgP/////7YQCI//////uBAJD/////++EAqP/////7oQCY//////vBAKD/////+AEAwP////98fxt4/////3z8O3j/////fNkzeP////98myN4/////3y6K3j/////SAAAAfwAAAMvgwAA/////zhg////////QZ4A3P////8vnwAA/////0HeAQT/////iB8AAP////97/QAg/////y+AAAD/////QZ4A9P////8vmwAA/////0HeAOz/////L5oAAP////9B3gDk/////y+cAAD/////QZ4A3P////84YAAB/////ziAAVD/////SAAAAfwAAAN8fht4/////zhg//3/////L54AAP////9BngCQ/////zh+AAj/////f6TreP////84oABA/////3hjACD/////kz4ABP////+TngAA/////0gAAAH8AAADYAAAAP////84fgBI/////zugAAD/////e2QAIP////84oACA/////3hjACD/////m74AR/////9IAAAB/AAAA2AAAAD/////OH4AyP////97RAAg/////3hjACD/////OKAAgP////+bvgDH/////0gAAAH8AAADYAAAAP////+BYoiU/////5u+AUf/////OAAAAP////+BKwBQ/////5AeAUz/////L4kAAP////+RPgFI/////0GeAAz/////eSkAIP////+TyQFM/////zhgAAD/////k8sAUP/////oAQDA/////3hjACD/////6yEAeP/////rQQCA/////3wIA6b/////62EAiP/////rgQCQ/////+uhAJj/////68EAoP/////r4QCo/////zghALD/////ToAAIP////84YP/+/////0v//8z/////
+  symbols:
+  - kind: Function
+    name: .cellConsoleInputProcessorAdd
+    size: 348
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleInitialized
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleMemalign
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .strncpy
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 60
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 132
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 176
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 208
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 236
+    kind: rel24
+    symbol: 3
+    addend: 0

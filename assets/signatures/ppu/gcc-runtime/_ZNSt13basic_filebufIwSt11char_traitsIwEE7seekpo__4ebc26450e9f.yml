@@ -1,0 +1,73 @@
+- symbol: 0
+  hash: 7b3ec696549fc5489c595e52fce0b19b2f324856
+  signature: +CH/Qf////98CAKm//////jBAQj/////+AEA0P////+ABABs//////ihAQD/////L4AAAP////+gAQEO/////6EhAQz/////sAEAev////+AAQEI//////jhARD/////kAEAdP////+AAQEE//////sBAID/////+yEAiP/////7QQCQ//////uBAKD/////+6EAqP/////7wQCw//////vhALj/////+2EAmP////94fwAg/////6NBARb/////fJ4jeP////+jIQEU/////3ydI3j/////gwEBEP////+xIQB4/////5ABAHD/////g4EBAP////94gwAg/////0GeABj/////SAAAAfwAAANgAAAA/////1RjBj7/////L4MAAP////9AngCE/////4FiAAD//wAAgSIAAP//AACBQgAA//8AAIAJAAD/////gSsAAP////+QHwAA/////5E/AAT/////gAsABP////+hKwAI/////5AfAAj/////sT8ADP////+gCwAK/////4EqAAD/////sB8ADv////+RPwAQ/////6AKAAT/////oSoABv////+wHwAU/////7E/ABb/////6AEA0P////9/4/t4/////+sBAID/////6yEAiP////98CAOm/////+tBAJD/////62EAmP/////rgQCg/////+uhAKj/////68EAsP/////r4QC4/////zghAMD/////ToAAIP////84AQBw/////4B+AGz/////eBsAIP////9/ZNt4/////0gAAAH8AAADYAAAAP////8vgwAA/////0Ce/2T/////L5wAAP////9AngCA/////39k23j/////gH4AbP////9IAAAB/AAAA2AAAAD/////L4MAAP////9Anv9E/////4EdACD/////OV0AXP////+zXgBm/////7M+AGT/////kx4AYP////+ACAAA/////3+KAAD/////QZ4AaP////+gAQB6/////zkgAAD/////gN4AYP////+BYQB0/////4FBAHD/////oR4AZv////+g/gBk/////7AfAA7/////oAEAeP////+RPwAA/////7AfAAz/////kX8ACP////+RXwAE/////7EfABb/////sP8AFP////+Q3wAQ/////0v//yz/////f4QHtP////+AfgBs/////zigAAH/////SAAAAfwAAANgAAAA/////y+DAAD/////QJ7+xP////9L//9o/////4E9ADD/////OB0AXv////+BfQAQ/////5FLAAD/////kAgAAP////+QCQAA/////0v//4T/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt13basic_filebufIwSt11char_traitsIwEE7seekposESt4fposISt9_MbstatetENSt5_IosbIiE9_OpenmodeE
+    size: 504
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt13basic_filebufIwSt11char_traitsIwEE9_EndwriteEv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@009A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@009E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00A2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .fsetpos
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .fgetpos
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .fseek
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 132
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 154
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 158
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 162
+    kind: l
+    symbol: 4
+    addend: -28621288
+  - offset: 296
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 328
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 456
+    kind: rel24
+    symbol: 7
+    addend: 0

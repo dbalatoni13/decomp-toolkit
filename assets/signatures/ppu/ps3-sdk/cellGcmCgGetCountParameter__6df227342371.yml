@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: a6b0de511825ebdc52f89e2e480195b16ee05991
+  signature: LCMAAP////84AAAA/////0GCAAj/////gAMADP////98AwN4/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetCountParameter
+    size: 24
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: f2a0267a2a1e09c9f36f2c66e5e5d8265238352c
+  signature: LCMAAP////84AAAA/////0GCAAj/////gAMADP////94AwAg/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetCountParameter
+    size: 24
+    flags: 1
+    section: .text
+  relocations: []

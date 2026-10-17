@@ -1,0 +1,30 @@
+- symbol: 0
+  hash: 1aed52c75eaebbb741d4755209dce11b48e7198f
+  signature: iAMAAP////98hAd0/////3wAB3T/////f4QAAP////9NngAg/////y+gAAD/////QZ4AJP////84AwAB/////3gDACD/////iSMAAP////99KQd0/////3+JIAD/////LykAAP////9BngAQ/////0Ca/+T/////OGAAAP////9OgAAg/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .strchr
+    size: 72
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: af57a819e766df457773a0adbf5292dfdf86c68c
+  signature: VGAHfv////8vgAAA/////0CeAQj/////PQB/f//////owwAA/////2EIf3//////eQgHxv////9lCH9//////2EIf3//////fMBAOP////98yUN4/////3wAQhT/////fAtI+P////8vqwAA/////0CeAIz/////eIAGIP////94CUXk/////3wAS3j/////eAuD5P////98AFt4/////3gKB8b/////fAdTeP////986TJ4/////30gQDj/////fSlDeP////98AEIU/////3wASPj/////L6AAAP////9BngAM/////0gAAXD/////QJoBbP////88AH9//////+lDAAn/////YAB/f/////986FJ4/////3gAB8b/////ZAB/f/////9gAH9//////30LADj/////fUkAOP////99awIU/////30pAhT/////fUoDeP////99CAN4/////31gQPj/////fStQ+P////8vIAAA/////ywrAAD/////QYL/uP////98aRt4/////3kjACD/////fIQHdP////+IAwAA/////3wAB3T/////f4QAAP////9NngAg/////y+AAAD/////QJ4ADP////9IAAD0/////0GaAPD/////OSkAAf////95IwAg/////4gDAAD/////fAAHdP////9/hAAA/////y8AAAD/////QJ7/5P////9OgAAg/////1RgB77/////fGkbeP////8vgAAA/////0Ce/6z/////PQB/f/////+BYwAA/////2EIf3//////ZWB/f/////99aUA4/////2AAf3//////PSl/f/////85KX9//////3wASPj/////L4AAAP////9Anv98/////1SABj7/////VAlALv////98AEt4/////1QKgB7/////fAdTeP////9861p4/////31pQDj/////ZWt/f/////89KX9//////2Frf3//////OSl/f/////99KVj4/////y+JAAD/////QZ4ADP////9IAAB0/////0CaAHD/////PSB/f/////+EAwAE/////2Epf3//////fOoCeP////98C0g4/////2QAf3//////PWt/f/////99SUg4/////zlrf3//////YAB/f/////89KX9//////2VKf3//////fWsA+P////85CX9//////2FJf3//////L4sAAP////99CUj4/////y8JAAD/////QZ7/tP////9L//7s/////zhgAAD/////ToAAIP////98AAB0/////3gA6ML/////fSMCFP////95IwAg/////06AACD/////fSAANP////9UAOj+/////30gGhT/////eSMAIP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .strchr
+    size: 524
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: aed1fe872e66931775900e5136f0995bb074a046
+  signature: eIQGIP////98AwDQ/////3wAGiz/////eAAHYP////84oACA/////ygAAAD/////fAUaLP////9AggCQ/////zjAf3//////fIgjeP////95CEQs/////3jGgCz/////eQiALP////94xgAO/////3kIAA7/////OYABAP////844AAQ/////3wMGiz/////fOkDpv/////oAwAA/////3wEA3j/////fAcwOP////98CTN4/////31HMhT/////fStQ+P////99YAB0/////3gF6ML/////fIBCeP////98BzA4/////3wJM3j/////fUcyFP////99K1D4/////31gAHT/////eADowv////98BQBA/////0GAAET/////KAAACP////9BgAAQ/////zhjAAj/////QgD/sP////9L//+g/////3xjAhT/////ToAAIP////98CQOm/////4gDAAD/////fCAgQP////9NggAg/////yggAAD/////OGMAAf////9BggAM/////0IA/+j/////S///VP////98Yxp4/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .strchr
+    size: 216
+    flags: 1
+    section: .text
+  relocations: []

@@ -1,0 +1,23 @@
+- symbol: 0
+  hash: fa6b66e6df95a7f5e7b2556d84b6a46c2b70f5c7
+  signature: LCMAAP////98CAKm/////3xpG3j/////PGAAev/////4If+R//////gBAID/////YGMSAv////8vJAAA/////0HCAFT/////PGAAev////8rhQAH/////2BjEgL/////QdoARP////9UpRg4/////zxgAHr/////QZ0ANP////99JUoU/////zhgAAD/////eSkAIP/////ACQAA/////9AEAAD/////SAAAAfwAAANgAAAA/////zhgAAD/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP////9gYxIC/////0gAAAH8AAADYAAAAP////84YP///////0v//+D/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXRingModGetFrequency
+    size: 132
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 84
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 116
+    kind: rel24
+    symbol: 1
+    addend: 0

@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: 49d311a23786ec652dec58c7251e32c80ab6ac3e
+  signature: fGkbeP////+AZAAY/////zgAAAD/////L4kAAP////8vAwAA/////0GeABT/////fGkaFP////9BmgAM/////3hpACD/////gAkAAP////94AwAg/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetEmbeddedConstantCount
+    size: 48
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: f83e3aecb2e815cda168dafd5e6f6b116ad680f7
+  signature: LCMAAP////98aRt4/////4BkABj/////OAAAAP////8vowAA/////0GCABT/////fGkaFP////9BngAM/////3hpACD/////gAkAAP////98AwN4/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetEmbeddedConstantCount
+    size: 48
+    flags: 1
+    section: .text
+  relocations: []

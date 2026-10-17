@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 718a3a34e342d50da36a9814b6c21bcf04a499c0
+  signature: OKAAAP////98CAKm//////gh/5H/////+AEAgP////9IAAAB/AAAA2AAAAD/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .strtod
+    size: 40
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Stod
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 16
+    kind: rel24
+    symbol: 1
+    addend: 0

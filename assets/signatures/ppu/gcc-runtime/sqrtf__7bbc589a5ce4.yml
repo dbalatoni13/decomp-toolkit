@@ -1,0 +1,283 @@
+- symbol: 0
+  hash: 3b86b5668d636e45c1d155e0ae95279dcd1a97ff
+  signature: +CH/cf////98CAKm/////zhhAHD/////0CEAwP////84gQDA//////gBAKD/////SAAAAfwAAANgAAAA/////3xjBzT/////L4MAAf////9BngCs/////y+DAAL/////QZ4AkP////8vgwAA/////0GeAIj/////wUEAwP/////RQQCA/////4ABAID/////VACEIP////8vgAAA/////0CeALT/////oIEAcP////9UgAf+/////y+AAAD/////QJ4AyP/////BogAA//8AAHyEBzT/////wAIAAP//AAA4YQB0/////+wKaDr/////wYIAAP//AADBYgAA//8AAHyEDnD/////fIQBlP////98hAe0/////+wKYDr/////7aoAJP/////sAGgq/////+2KACT/////7ABi+v/////QAQB0/////0gAAAH8AAADYAAAAP/////oAQCg/////8AhAHT/////OCEAkP////98CAOm/////06AACD/////wCEAwP/////oAQCg/////zghAJD/////fAgDpv////9OgAAg/////8AhAMD/////0CEAgP/////9QAiQ/////4ABAID/////VACEIP////8vgAAA/////0Ge/9j/////0UEAgP////+AAQCA/////1QAhCD/////L4AAAP////9Bnv9U/////zxgIAD/////SAAAAfwAAANgAAAA/////4EiAAD//wAA6AEAoP////84IQCQ/////3wIA6b/////wCkAAP////9OgAAg/////+1KUCr/////OAT///////98BAN4/////7ABAHD/////0UEAwP////9L//8o/////w==
+  symbols:
+  - kind: Function
+    name: .sqrtf
+    size: 320
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDunscale
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0066'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@007A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@007E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._FDscale
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Feraise
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0112'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 102
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 110
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 122
+    kind: l
+    symbol: 4
+    addend: -28621288
+  - offset: 126
+    kind: l
+    symbol: 5
+    addend: -28621288
+  - offset: 164
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 264
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 274
+    kind: l
+    symbol: 8
+    addend: -28621288
+- symbol: 0
+  hash: 8915af219e4e982a0f7aa1107595f45f002ec558
+  signature: +CH/cf////98CAKm/////zhhAHD/////0CEAwP////84gQDA//////gBAKD/////SAAAAfwAAANgAAAA/////y+DAAH/////QZ4AsP////8vgwAC/////0GeAJT/////L4MAAP////9BngCM/////8FBAMD/////0UEAgP////+AAQCA/////1QAhCD/////L4AAAP////9AngC4/////6CBAHD/////fIkHNP////9VIAf+/////y+AAAD/////QJ4AyP/////BogAA//8AADhhAHT/////wAIAAP//AAB8hAc0/////+wKaDr/////wYIAAP//AADBYgAA//8AAHyEDnD/////fIQBlP////98hAe0/////+wKYDr/////7aoAJP/////sAGgq/////+2KACT/////7ABi+v/////QAQB0/////0gAAAH8AAADYAAAAP/////oAQCg/////8AhAHT/////OCEAkP////98CAOm/////06AACD/////wCEAwP/////oAQCg/////zghAJD/////fAgDpv////9OgAAg/////8AhAMD/////0CEAgP/////9QAiQ/////4ABAID/////VACEIP////8vgAAA/////0Ge/9j/////0UEAgP////+AAQCA/////1QAhCD/////L4AAAP////9Bnv9Q/////zxgIAD/////SAAAAfwAAANgAAAA/////+gBAKD/////gSIAAP//AAA4IQCQ/////3wIA6b/////wCkAAP////9OgAAg/////+1KUCr/////OAn///////98BAN4/////7ABAHD/////0UEAwP////9L//8o/////w==
+  symbols:
+  - kind: Function
+    name: .sqrtf
+    size: 320
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDunscale
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0066'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@007A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@007E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._FDscale
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Feraise
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0116'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 102
+    kind: l
+    symbol: 2
+    addend: -10216440
+  - offset: 110
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 122
+    kind: l
+    symbol: 4
+    addend: -10216440
+  - offset: 126
+    kind: l
+    symbol: 5
+    addend: -10216440
+  - offset: 164
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 264
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 278
+    kind: l
+    symbol: 8
+    addend: -10216440
+- symbol: 0
+  hash: 5727ae5416165099cb44f74d8a00a495cf9be773
+  signature: +CH/cf////98CAKm/////zhhAHD/////0CEAwP////84gQDA//////gBAKD/////SAAAAfwAAANgAAAA/////3xjBzT/////L4MAAf////9BngCs/////y+DAAL/////QZ4AkP////8vgwAA/////0GeAIj/////wUEAwP/////RQQCA/////4ABAID/////VACEIP////8vgAAA/////0CeALT/////oIEAcP////9UgAf+/////y+AAAD/////QJ4AyP/////Bop7w/////3yEBzT/////wAKe7P////84YQB0/////+wKaDr/////wYKe9P/////BYp74/////3yEDnD/////fIQBlP////98hAe0/////+wKYDr/////7aoAJP/////sAGgq/////+2KACT/////7ABi+v/////QAQB0/////0gAAAH8AAADYAAAAP/////oAQCg/////8AhAHT/////OCEAkP////98CAOm/////06AACD/////wCEAwP/////oAQCg/////zghAJD/////fAgDpv////9OgAAg/////8AhAMD/////0CEAgP/////9QAiQ/////4ABAID/////VACEIP////8vgAAA/////0Ge/9j/////0UEAgP////+AAQCA/////1QAhCD/////L4AAAP////9Bnv9U/////zxgIAD/////SAAAAfwAAANgAAAA/////4Einuj/////6AEAoP////84IQCQ/////3wIA6b/////wCkAAP////9OgAAg/////+1KUCr/////OAT///////98BAN4/////7ABAHD/////0UEAwP////9L//8o/////w==
+  symbols:
+  - kind: Function
+    name: .sqrtf
+    size: 320
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDunscale
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDscale
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Feraise
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 164
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 264
+    kind: rel24
+    symbol: 3
+    addend: 0
+- symbol: 0
+  hash: 832e8d0779c6290f979f3fb982701591cf5bf102
+  signature: +CH/cf////98CAKm/////zhhAHD/////0CEAwP////84gQDA//////gBAKD/////SAAAAfwAAANgAAAA/////y+DAAH/////QZ4AsP////8vgwAC/////0GeAJT/////L4MAAP////9BngCM/////8FBAMD/////0UEAgP////+AAQCA/////1QAhCD/////L4AAAP////9AngC4/////6CBAHD/////fIkHNP////9VIAf+/////y+AAAD/////QJ4AyP/////BogAA//8AADhhAHT/////wAIAAP//AAB8hAc0/////+wKaDr/////wYIAAP//AADBYgAA//8AAHyEDnD/////fIQBlP////98hAe0/////+wKYDr/////7aoAJP/////sAGgq/////+2KACT/////7ABi+v/////QAQB0/////0gAAAH8AAADYAAAAP/////oAQCg/////8AhAHT/////OCEAkP////98CAOm/////06AACD/////wCEAwP/////oAQCg/////zghAJD/////fAgDpv////9OgAAg/////8AhAMD/////0CEAgP/////9QAiQ/////4ABAID/////VACEIP////8vgAAA/////0Ge/9j/////0UEAgP////+AAQCA/////1QAhCD/////L4AAAP////9Bnv9Q/////zxgIAD/////SAAAAfwAAAPoQQAo/////+gBAKD/////gSIAAP//AAA4IQCQ/////3wIA6b/////wCkAAP////9OgAAg/////+1KUCr/////OAn///////98BAN4/////7ABAHD/////0UEAwP////9L//8o/////w==
+  symbols:
+  - kind: Function
+    name: .sqrtf
+    size: 320
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDunscale
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0066'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@007A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@007E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._FDscale
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0108'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@0116'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 102
+    kind: l
+    symbol: 2
+    addend: -14169624
+  - offset: 110
+    kind: l
+    symbol: 3
+    addend: -14169624
+  - offset: 122
+    kind: l
+    symbol: 4
+    addend: -14169624
+  - offset: 126
+    kind: l
+    symbol: 5
+    addend: -14169624
+  - offset: 164
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 264
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 278
+    kind: l
+    symbol: 8
+    addend: -14169624

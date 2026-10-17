@@ -1,0 +1,76 @@
+- symbol: 0
+  hash: 12bae0ccf7a45460ef0ea4d6d7e76ea69bbca81b
+  signature: LCMAAP////98CAKm//////gh/zH/////24EAsP//////gBCQ/////9uhALj//////6AIkP/////7IQB4/////3yZI3j/////+0EAgP////98eht4/////9vBAMD/////2+EAyP/////7AQBw//////thAIj/////+4EAkP/////7oQCY//////vBAKD/////++EAqP/////4AQDg/////0HCAVz/////L6QAAP////9B3gFU/////4ADAAT/////gGMACP////8vgAAA/////0HeAUT/////OAMADP/////D4gAA//8AADkjAAj/////w8IAAP//AAB8fxt4/////3gcACD/////eT4AIP////87YAAA/////zsAAAD/////SAAAMP////84GwAB/////4FaAAT/////OT8AEP////94GwAg/////zl+ABD/////f4rYQP////84HAAQ/////3k/ACD/////eBwAIP////95fgAg/////0CdAIj/////OIAACP////9/4/t4/////0gAAAH8AAADf+T7eP////98ZRt4/////38jy3j/////SAAAAfwAAAM4gAAK/////y+DAAH/////fyPLeP////9Anv+s/////0gAAAH8AAADOIAACv////98fRt4/////3/j+3j/////SAAAAfwAAAP9oPiQ/////3+D6AD/////OBgAAf////9Anv+I//////+d8AD/////eBgAIP/////TvgAA/////9OcAAD/////QZ0AfP/////AHgAA//////+AaAD/////QZwAeP/////AHAAA//////+A+AD/////QJz/XP/////T/AAA/////0v//1T/////f0PTeP////9IAAAB/AAAAzhgAAD/////SAAAAfwAAANgAAAA/////38DB7T/////6AEA4P/////rAQBw/////+shAHj/////fAgDpv/////rQQCA/////+thAIj/////64EAkP/////roQCY/////+vBAKD/////6+EAqP/////LgQCw/////8uhALj/////y8EAwP/////L4QDI/////zghAND/////ToAAIP/////T3gAA/////0v//4T/////0b4AAP////9L//+I/////zxgAHr/////YGMSAv////9IAAAB/AAAA2AAAAD/////OGD///////9L//+c/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSEQSetTag
+    size: 452
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0072'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@007A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__cellMSEQSTRLEN
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cellMSEQSTRNCMP
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._cellMSEQSortPoints
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 114
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 122
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 200
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 216
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 236
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 252
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 328
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 336
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 436
+    kind: rel24
+    symbol: 6
+    addend: 0

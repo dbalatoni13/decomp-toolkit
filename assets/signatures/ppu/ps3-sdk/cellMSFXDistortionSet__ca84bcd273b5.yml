@@ -1,0 +1,96 @@
+- symbol: 0
+  hash: 552097dd7457ca7ff09f3071d2ef775da24c362a
+  signature: +CH/cf////98CAKm/////ywjAAD/////++EAeP////98fxt4//////vBAHD/////PGAAev/////bwQCA/////9vhAIj/////fJ4jeP/////4AQCg/////2BjEgL/////L6QAAP////9BwgDk/////0GeALz/////w+IAAP//AADDwgAA//8AAPxA+JD//////GDwkP/////AJAAA/////0gAAAH8AAAD/GDwkP/////8QPiQ/////9A/AAD/////wD4ABP////9IAAAB/AAAA/xA+JD/////w8IAAP//AAD8YPCQ/////9A/AAT/////wD4ACP////9IAAAB/AAAA/xg8JD//////ED4kP/////QPwAI/////8A+AAz/////SAAAAfwAAAP8QPiQ/////8PCAAD//wAA/GDwkP/////QPwAM/////8A+ABD/////SAAAAfwAAAP8QPiQ//////xg8JD/////0D8AEP/////APgAU/////0gAAAH8AAAD0D8AFP////84YAAA/////0gAAAH8AAADYAAAAP////84YAAA/////+gBAKD/////68EAcP/////r4QB4/////3wIA6b/////y8EAgP/////L4QCI/////zghAJD/////ToAAIP/////BogAA//8AAMACAAD//wAA0b8AFP/////QHwAQ/////9AfAAD/////0b8ABP/////QHwAI/////9G/AAz/////S///sP////9IAAAB/AAAA2AAAAD/////OGD///////9L//+w/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSFXDistortionSet
+    size: 296
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0042'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__MSFXDistortion_Limit
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@009A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 62
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 66
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 80
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 100
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 110
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 124
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 144
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 154
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 168
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 188
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 200
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 246
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 250
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 280
+    kind: rel24
+    symbol: 6
+    addend: 0

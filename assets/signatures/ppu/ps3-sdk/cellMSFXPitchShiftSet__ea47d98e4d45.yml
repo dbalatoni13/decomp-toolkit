@@ -1,0 +1,124 @@
+- symbol: 0
+  hash: b9c54314bb17299a0ab68a89ce33e48a502eb121
+  signature: LCMAAP////98CAKm//////gh/2H/////28EAkP//////wAiQ/////9vhAJj/////+6EAeP/////74QCI//////gBALD/////QcIAuP////84BQAB/////yuAAAj/////Qd0ArP////8vhf///////0GeAFz/////wEIAAP//AABUvRg4/////8AiAAD//wAA7F4QJP////9/vRoU/////3u9ACD/////SAAAAfwAAAPoQQAo/////9PdACD/////0D0AHP////84YAAA/////0gAAAH8AAADYAAAAP////84YAAA/////+gBALD/////66EAeP/////r4QCI/////3wIA6b/////y8EAkP/////L4QCY/////zghAKD/////ToAAIP/////AAgAA//8AADgDABz/////O+AAAP/////v4QAk/////3gdACD//////ED4kP/////AIgAA//8AAEgAAAH8AAAD6EEAKP////84HwAB/////zk9AAj/////0D0AAP////98Hwe0/////9PdAAT/////eT0AIP////8vnwAI/////0Ce/9T/////S///jP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////zhg////////S///hP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSFXPitchShiftSet
+    size: 244
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0054'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 62
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 70
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 84
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 150
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 174
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 176
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 228
+    kind: rel24
+    symbol: 4
+    addend: 0
+- symbol: 0
+  hash: ae7f40c8aa1b0bb09b7569dee96d58be825525c3
+  signature: LCMAAP////98CAKm//////gh/2H/////28EAkP//////wAiQ/////9vhAJj/////+6EAeP/////74QCI//////gBALD/////QcIAuP////84BQAB/////yuAAAj/////Qd0ArP////8vhf///////0GeAFz/////wEIAAP//AABUvRg4/////8AiAAD//wAA7F4QJP////9/vRoU/////3u9ACD/////SAAAAfwAAANgAAAA/////9PdACD/////0D0AHP////84YAAA/////0gAAAH8AAADYAAAAP////84YAAA/////+gBALD/////66EAeP/////r4QCI/////3wIA6b/////y8EAkP/////L4QCY/////zghAKD/////ToAAIP/////AAgAA//8AADgDABz/////O+AAAP/////v4QAk/////3gdACD//////ED4kP/////AIgAA//8AAEgAAAH8AAADYAAAAP////84HwAB/////zk9AAj/////0D0AAP////98Hwe0/////9PdAAT/////eT0AIP////8vnwAI/////0Ce/9T/////S///jP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////zhg////////S///hP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSFXPitchShiftSet
+    size: 244
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .powf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 62
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 70
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 84
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 150
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 174
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 176
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 228
+    kind: rel24
+    symbol: 4
+    addend: 0

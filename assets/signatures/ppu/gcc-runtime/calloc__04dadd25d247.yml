@@ -1,0 +1,56 @@
+- symbol: 0
+  hash: 68b0a86d92c571f264005989d2f757b71eb0a66a
+  signature: LCMAAP////98CAKm//////gh/4H/////++EAeP////874AAA//////gBAJD/////fGAjeP/////7wQBw/////0GCABj/////VAkAHv////98AyHW/////y+JAAD/////eB8AIP////9AngBE/////3/j+3j/////SAAAAfwAAAN/5ft4/////ywjAAD/////fH4beP////84gAAA/////0GCAAz/////SAAAAfwAAANgAAAA/////+gBAJD/////f8PzeP/////r4QB4/////+vBAHD/////fAgDpv////84IQCA/////06AACD/////fB8blv////9/gCAA/////0Ge/7j/////O+D///////97/wAg/////0v//6z/////
+  symbols:
+  - kind: Function
+    name: .calloc
+    size: 144
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .malloc
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memset
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 60
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 84
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: 6c5f6739d8f1f0b6922881a7c5ea17655d4b0ba6
+  signature: +CH/kf////98CAKm/////3yFI3j/////+AEAgP////98YBt4/////4BiAAD//wAAfAQDeP////9IAAAB/AAAA2AAAAD/////6AEAgP////94YwAg/////3wIA6b/////OCEAcP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .calloc
+    size: 56
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .mspace_calloc
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 22
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 28
+    kind: rel24
+    symbol: 2
+    addend: 0

@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 12368ab998f21a91dec4a94603ea02a3faebb26c
+  signature: gUIAAP//AAA9YH/O/////2Fr//7/////gSoAAP////98CQDQ/////5EjAAD/////fAD+dv////98A1g4/////zxjgDH/////OGMAAv////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellSurMixerGetAANHandle
+    size: 44
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -15311144

@@ -1,0 +1,48 @@
+- symbol: 0
+  hash: b8dd4e40f7b4e49dddcd3b85c3f2c49035b78d06
+  signature: gUKIlP////98CAKm//////gh/3H/////+AEAoP////98aBt4/////y8DAAD/////gSoAAP////98hSN4//////uhAHj/////L4kAAP////84YAAA/////0CeAMD/////L4QAAP////9B2gDQ/////zjAAAD/////QZ4AyP////+Dooig/////zgAAAH/////kKoATP////+Agoic/////3+l63j/////gOKIpP////+AYoiY/////5AKAAD/////kQoARP////9IAAAB/AAAA4CCiKz/////gKKIsP////84wAAA/////4DiiLT/////gGKIqP////9IAAAB/AAAA4CCiLz/////gKKIwP////84wAAA/////4DiiMT/////gGKIuP////9IAAAB/AAAA4CCiMz/////f6XreP////+A4ojQ/////zjAAAD/////gGKIyP////9IAAAB/AAAA4CCiNj/////f6XreP////+A4ojc/////zjAAAD/////gGKI1P////9IAAAB/AAAA3+l63j/////gOKI6P////84wAAA/////4CCiOT/////gGKI4P////9IAAAB/AAAA0gAAAH8AAADYAAAAP////84YAAA/////+gBAKD/////VGMAPP/////roQB4/////zghAJD/////fAgDpv////9OgAAg/////+gBAKD/////OGD//v/////roQB4/////zghAJD/////VGMAPP////98CAOm/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellConsoleInitWithAllocator
+    size: 288
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleInputProcessorAdd
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._cellConsoleVariablePluginInit
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 100
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 124
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 148
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 172
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 196
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 220
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 224
+    kind: rel24
+    symbol: 2
+    addend: 0

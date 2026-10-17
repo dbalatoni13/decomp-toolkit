@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 50009f9a8cf1785caa748dcbcf4bd628488140f4
+  signature: OGP/0P////94YwAg/////4BjACj/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .__cxa_get_exception_ptr
+    size: 16
+    flags: 1
+    section: .text
+  relocations: []

@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: f11c9f8d9b7ec14cd66190d65313d2148f5d3890
+  signature: +CH/cf////98CAKm//////uhAHj/////fJ0jeP/////4AQCg/////0gAAAH8AAADYAAAAP////9/pOt4/////zlgAyn/////RAAAAv/////oAQCg/////3xjB7T/////66EAeP////84IQCQ/////3wIA6b/////ToAAIP////8AAAAA/////wAJAAH/////gAMAAP////8=
+  symbols:
+  - kind: Function
+    name: .cellFsFstat
+    size: 76
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._get_fsfd
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0

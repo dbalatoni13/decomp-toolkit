@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: 93f8eba91168a023743b050565e292c59d13a895
+  signature: +CH/Yf////98CAKm//////vBAJD/////++EAmP/////7oQCI//////gBALD/////+OEA8P/////5AQD4//////khAQD/////+UEBCP/////4oQDg//////jBAOj/////fH8beP////98niN4/////0gAAAH8AAADL4MAAP////8rHwAP/////zhg////////QZ4AkP////9X4xA6/////0GZAKj/////fGkHtP////+BYoiU/////y8eAAD/////fSlaFP////+DqQAE/////y+dAAD/////Qd4AjP////84CwBY/////zkhAOD/////eB8AIP////97xQAg/////30mS3j/////OIAQAP////9/4/t4/////0GaAGz/////kSEAcP////9IAAAB/AAAA2AAAAD/////f+P7eP////9IAAAB/AAAA2AAAAD/////e6sAIP////98ZQe0/////3/k+3j/////gSsADP////+AawAE/////4AJAAD/////+EEAKP////98CQOm/////4BJAAT/////ToAEIf/////oQQAo/////zhgAAD/////6AEAsP////94YwAg/////+uhAIj/////68EAkP////98CAOm/////+vhAJj/////OCEAoP////9OgAAg/////+gBALD/////OGD//v/////roQCI/////3hjACD/////68EAkP/////r4QCY/////3wIA6b/////OCEAoP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellConsolePrintf
+    size: 284
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleInitialized
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .vsnprintf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .strlen
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 56
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 148
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 160
+    kind: rel24
+    symbol: 3
+    addend: 0

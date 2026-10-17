@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 6959ef1dd22246cd9ed1d25b917bc6dc605b233b
+  signature: ++H/+P////98nyN4/////zyAgAH/////fAgCpv/////7wf/w/////zlgAF//////+AEAEP////98fht4/////2CEAAL/////gB8ABP////84Yf/g/////y+AABD/////LwAAIP////9BngAg/////0GaABz/////6AEAEP////98gyN4/////+vB//D/////fAgDpv/////r4f/4/////06AACD/////gJ8AAP////9EAAAC/////3xjB7T/////L6MAAP////98ZBt4/////0Ce/9T/////kH4ABP////84AP///////4F/AAT/////gT8AAP////+BQf/g/////30pW3j/////kB4AAP////+QfgAM/////5E+AAj/////kV4AEP////98IASs/////ziAAAD/////6AEAEP/////rwf/w/////3yDI3j/////fAgDpv/////r4f/4/////06AACD/////AAAAAP////8ACQAB/////wACAAD/////
+  symbols:
+  - kind: Function
+    name: .sys_lwmutex_create
+    size: 192
+    flags: 1
+    section: .text
+  relocations: []

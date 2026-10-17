@@ -1,0 +1,73 @@
+- symbol: 0
+  hash: f677a8d523a2429ff1aec4b559d3d9e0e253c7cc
+  signature: LCMAAP////98CAKm//////gh/tH/////+6EBGP/////7QQEA//////thAQj/////+4EBEP/////7wQEg//////vhASj/////+AEBQP////98fRt4/////0GCABT/////g/0AAP////84YAA0/////y+fAAD/////QZ4AMP/////oAQFA/////zhgAAP/////60EBAP/////rYQEI/////3wIA6b/////64EBEP/////roQEY/////+vBASD/////6+EBKP////84IQEw/////06AACD/////SAAAAfwAAANgAAAA/////zgBAHD/////fHobeP////94HAAg/////y+aAAD/////f4PjeP////97XgAg/////zkgAAD/////QZ4ATP////84AAAB/////4FiAAD//wAAgIIAAP//AACYHgAo/////5F+AAD/////k/4ABP////9IAAAB/AAAA2AAAAD/////f8PzeP////9/hON4/////0gAAAH8AAADYAAAAP////9/g+N4/////0gAAAH8AAADYAAAAP////+AAgAA//8AAH9J03j/////kBoAAP/////oAQFA/////zhgAAP/////kT0AAP/////rQQEA/////3wIA6b/////62EBCP/////rgQEQ/////+uhARj/////68EBIP/////r4QEo/////zghATD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt10moneypunctIwLb1EE7_GetcatEPPKNSt6locale5facetE
+    size: 268
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Znwj
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@009A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@009E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt8_LocinfoC1EPKc
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt7_MpunctIwE5_InitERKSt8_Locinfo
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt8_LocinfoD1Ev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00D2'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 108
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 154
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 158
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 172
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 188
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 200
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 210
+    kind: l
+    symbol: 7
+    addend: -28621288

@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 17f2587e4032664ada003f0f0d15b2ebca2f1f15
+  signature: LCMAAP////98CAKm/////3xqG3j/////PGAAev/////4If+B//////vhAHj/////YGMSAv/////4AQCQ/////zvg////////fKgreP////8vpQAA/////0HCAFj/////fIsHtP////88YAB6/////3lpbKT/////eWAm5P////98hP5w/////3wAShT/////fUVTeP////94CZNk/////2BjEgL/////O+D///////98AEoU/////0HeACj/////fABaFP////99A0N4/////3gAACL/////fABOcP////98BABQ/////3wfB7T/////f+T7eP////9IAAAB/AAAAzhgAAD/////SAAAAfwAAANgAAAA/////+gBAJD/////f+P7eP/////r4QB4/////3wIA6b/////OCEAgP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSDSPCreateFFTChunks
+    size: 164
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__createImpulseFFTChunks
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 124
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 132
+    kind: rel24
+    symbol: 2
+    addend: 0

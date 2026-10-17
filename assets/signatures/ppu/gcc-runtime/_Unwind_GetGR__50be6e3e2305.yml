@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 457861063829b53d299f7c0835380d8b672465c6
+  signature: L4QEsP////98CAKm//////gh/5H/////+AEAgP////9AnQAM/////zgE+8H/////fAQHtP////8vhACR/////0HdAFD/////VIAQOv////+BIgAA//8AAHyJIK7/////fAAHtP////8vhAAE/////3xjAC7/////QZ4AIP////8vhAAI/////0DeACz/////6AEAgP////84IQBw/////+hjAAD/////fAgDpv////9OgAAg/////+gBAID/////OCEAcP////+AYwAA/////3wIA6b/////ToAAIP////9IAAAB/AAAA2AAAAD/////
+  symbols:
+  - kind: Function
+    name: ._Unwind_GetGR
+    size: 120
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .abort
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 42
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 112
+    kind: rel24
+    symbol: 2
+    addend: 0

@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 38650e5c533758a9b13ad3c501c214b4067a1628
+  signature: gSIAAP//AAB8CAKm//////gh/4H/////+AEAkP////88AIAx/////3xqG3j/////fIgjeP////+BaQAA/////y8jAAD/////YAAAA/////8vqwAA/////0CeACD/////PACAMf////9gAAAC/////3wDA3j/////6AEAkP////84IQCA/////3wIA6b/////ToAAIP////9Bmv/s/////4EiAAD//wAAfWNbeP////84gQBw/////4AJAAD/////L4AAAP////9BnP/M/////5FBAHD/////kQEAdP////+BKwAA/////4FpACD/////gAsAAP/////4QQAo/////3wJA6b/////gEsABP////9OgAQh/////+hBACj/////fGAbeP////9L//+k/////w==
+  symbols:
+  - kind: Function
+    name: .cellSurMixerSetNotifyCallback
+    size: 152
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0052'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 82
+    kind: l
+    symbol: 2
+    addend: -15311144

@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: 303026d2f9903249afdccd84dbb24e838af8ecc9
+  signature: +CH2Af////98CAKm//////uBCeD/////O4EAcP/////7oQno/////3x9G3j/////+8EJ8P////98niN4//////vhCfj/////+AEKEP////9IAABk/////4EhCbT/////L6kAAP////9BngBE/////4AJAAD/////Y+QAAv/////4QQAo/////zhgAAH/////fAkDpv////98hAe0/////4BJAAT/////f6breP/////ovQAA/////3/H83j/////ToAEIf/////oQQAo/////y+DAAf/////QZ4AUP////8vgwAI/////0CeAET/////L78AAP////9A3gBg/////3/D83j/////e4QAIP////9IAAAB/AAAA3/D83j/////e4QAIP////9IAAAB/AAAA4E+Akz/////L6MAAP/////oHQAY/////30/Anj/////IX8AAP////9/6/kU/////3v/F2T/////QZ7/eP////84YAAC/////+gBChD/////64EJ4P/////roQno/////3wIA6b/////68EJ8P/////r4Qn4/////zghCgD/////ToAAIP////9IAAAB/AAAA2AAAAD/////
+  symbols:
+  - kind: Function
+    name: ._Unwind_RaiseException_Phase2
+    size: 228
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .uw_update_context
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .uw_frame_state_for
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .abort
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 136
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 148
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 220
+    kind: rel24
+    symbol: 3
+    addend: 0

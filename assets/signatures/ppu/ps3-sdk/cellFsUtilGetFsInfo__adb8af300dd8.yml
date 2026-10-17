@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: b5dd0d4ad0cdec0ceab63e0571601601b9f6721f
+  signature: OWADTP////98CAKm//////gBABD/////RAAAAv/////oAQAQ/////3xjB7T/////fAgDpv////9OgAAg/////wAAAAD/////AAkAAf////8AAAAA/////w==
+  symbols:
+  - kind: Function
+    name: .cellFsUtilGetFsInfo
+    size: 44
+    flags: 1
+    section: .text
+  relocations: []

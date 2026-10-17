@@ -1,0 +1,109 @@
+- symbol: 0
+  hash: ebaebd072d88250511fac0cd4c77b0debd4888ba
+  signature: gUIAAP//AAB8CAKm//////gh/zH/////+AEA4P////+AAgAA//8AAPqBAHD/////gWoABP////98tCt4//////rBAID/////OSv/9P/////64QCI/////3kpACD/////+2EAqP/////7gQCw//////uhALj/////+8EAwP/////74QDI//////qhAHj/////+wEAkP/////7IQCY//////tBAKD/////kAMAeP////+RYwAA/////4FpAAD/////fHwbeP////+ACgAI/////zvDAAj/////fWNaFP////98fxt4/////3lrACD/////fJsjeP////84oAAA/////3vEACD/////fN0zeP////+QCwAA/////4EjAAD/////V70HOP////9/d9t4/////zkp//T/////e3YAIP////95KQAg/////4BpAAD/////fHwaFP////94YwAg/////0gAAAH8AAADYAAAAP////+BIgAA//8AAC+bAAD/////OAkAFP////8vHQAA/////5E8AAD/////kBwAeP////9BngAI/////0CaAQD/////OH8ADP////+AAgAA//8AAHvVACD/////eGMAIP////+QHgAA/////0gAAAH8AAADYAAAAP////84YAAE/////0gAAAH8AAADYAAAAP////8vgwAA/////3x4G3j/////eGMAIP////9BngAM/////0gAAAH8AAADYAAAAP////87vwAg/////4MiAAD//wAAO58AJP////87fwAw/////ztfADT/////OV4ACP////85HwAU/////zgAAAD/////OX8AUP////85PwBI/////5MeADj/////kAgAAP////+QHAAA/////5AaAAD/////kAoAAP////+QHQAA/////5AbAAD/////kz4AAP/////oAQDg/////36jq3j/////k74AIP////+TngAk/////3wIA6b/////k34AMP////+TXgA0/////36EB7T/////6qEAeP////9+xbN4/////+qBAHD/////euYAIP/////qwQCA/////5E+AFD/////kX4AVP////+RXgAQ/////5EeABT/////6uEAiP////844AAA/////+sBAJD/////6yEAmP/////rQQCg/////+thAKj/////64EAsP/////roQC4/////+vBAMD/////6+EAyP////84IQDQ/////0gAAAD8AAADfsOzeP////9IAAAB/AAAA2AAAAD/////fvsaFP////9L//70/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt10ostrstreamC1EPciNSt5_IosbIiE9_OpenmodeE
+    size: 488
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0012'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt9basic_iosIcSt11char_traitsIcEE4initEPSt15basic_streambufIcS1_Eb
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00BA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00DE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt6_MutexC1Ev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Znwj
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt6localeC1Ev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@011E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt12strstreambuf5_InitEiPcS0_i
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .strlen
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 18
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 176
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 186
+    kind: l
+    symbol: 4
+    addend: -28621288
+  - offset: 222
+    kind: l
+    symbol: 5
+    addend: -28621288
+  - offset: 236
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 248
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 272
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 286
+    kind: l
+    symbol: 9
+    addend: -28621288
+  - offset: 464
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 472
+    kind: rel24
+    symbol: 11
+    addend: 0

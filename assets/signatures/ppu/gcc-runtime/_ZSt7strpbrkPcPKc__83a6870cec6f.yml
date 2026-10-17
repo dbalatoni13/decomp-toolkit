@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: bcddc0cb88af4289377e4bbbeeb0cd884ae34346
+  signature: +CH/kf////98CAKm//////gBAID/////SAAAAfwAAAPoAQCA/////3hjACD/////fAgDpv////84IQBw/////06AACD/////
+  symbols:
+  - kind: Function
+    name: ._ZSt7strpbrkPcPKc
+    size: 36
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .strpbrk
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 12
+    kind: rel24
+    symbol: 1
+    addend: 0

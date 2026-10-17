@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: d8afaab7bad05fa4c3525e859a798bf11bfac385
+  signature: +CH/Yf////98CAKm//////uhAIj/////fJ0jeP////84gQBw//////uBAID/////LCYAAP/////7wQCQ/////zjgAAD/////++EAmP////94hAfG//////gBALD/////fHwbeP/////44QBw/////3zfM3j/////fMMzeP////98vit4/////3iEBub/////QYIAFP////9IAAAB/AAAAywjAAD/////QIIAJP/////o4QBw/////3+D43j/////f6TreP////9/xfN4/////3/m+3j/////OWADRP////9EAAAC/////3xjB7T/////6AEAsP/////rgQCA/////+uhAIj/////fAgDpv/////rwQCQ/////+vhAJj/////OCEAoP////9OgAAg/////wAAAAD/////AAkAAf////+ABAAA/////w==
+  symbols:
+  - kind: Function
+    name: .cellFsUtilNewfs
+    size: 164
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Z14isVaildOptionsPPKcPy
+    size: 0
+    flags: 2
+    section: .text
+  relocations:
+  - offset: 76
+    kind: rel24
+    symbol: 1
+    addend: 0

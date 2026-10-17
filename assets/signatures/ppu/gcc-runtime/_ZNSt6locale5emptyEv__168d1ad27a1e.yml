@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: a0bd82890fb83110d250850a486e21ce68b93b06
+  signature: +CH/gf////98CAKm//////vBAHD/////++EAeP/////4AQCQ/////3x+G3j/////SAAAAfwAAAM4YAA0/////0gAAAH8AAADYAAAAP////84gAAB/////y+DAAD/////fH8beP////94YwAg/////0GeAAj/////SAAAAfwAAAPoAQCQ/////3vDACD/////k/4AAP/////rwQBw/////3wIA6b/////6+EAeP////84IQCA/////06AACD/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt6locale5emptyEv
+    size: 96
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt6locale5_InitEv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Znwj
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt6locale7_LocimpC1Eb
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 32
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 60
+    kind: rel24
+    symbol: 3
+    addend: 0

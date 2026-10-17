@@ -1,0 +1,140 @@
+- symbol: 0
+  hash: 294380e31e0539759201875eb3e80bbf6b77c64e
+  signature: +CH/Uf////98CAKm//////tBAID/////+AEAwP/////7IQB4/////3yZI3j/////+4EAkP////98fBt4//////uhAJj/////fN0zeP/////7YQCI//////vBAKD/////++EAqP////98BCnW/////3gaACD/////L7oAAP////9BngGE/////y+kAAD/////QJ4ANP/////oAQDA/////3yjK3j/////6yEAeP/////rQQCA/////3wIA6b/////62EAiP/////rgQCQ/////+uhAJj/////68EAoP/////r4QCo/////zghALD/////ToAAIP////98wzN4/////39e03j/////SAAAAfwAAANgAAAA/////0gAAIz/////oB0AAP////9/3/N4/////ztgAAD/////VAAFav////8vgAAA/////0CeAPD/////gH0AEP////+AHQAY/////3wDAFD/////eAAAIP////9/nwBA/////0CdAAz/////fB8DeP////87YAAA/////3+E43j/////f+X7eP////9IAAAB/AAAA2AAAAD/////gB0AEP////8vuwAA/////3wA+hT/////fT/iFP////99f/BQ/////5AdABD/////eTwAIP////95fgAg/////0GeABj/////f6PreP////9IAAAB/AAAA2AAAAD/////L6MAAP////9AngAw/////y++AAD/////QZ4AKP////+AHQAQ/////4E9ABj/////f4BIQP////9BnP9s/////3+j63j/////SAAAAfwAAANgAAAA/////y+DAAD/////QJz/WP////+gHQAA/////1QABSj/////L4AAAP////9AngCw/////3+j63j/////SAAAAfwAAANgAAAA/////3we0FD/////62EAiP/////rQQCA/////+uBAJD/////66EAmP/////rwQCg/////+vhAKj/////fADLlv////94BQAg/////+gBAMD/////6yEAeP////84IQCw/////3yjK3j/////fAgDpv////9OgAAg/////3+D43j/////OIAACv////9/xfN4/////0gAAAH8AAADYAAAAP////8sIwAA/////3x7G3j/////QYL++P////99PBhQ/////zkpAAH/////eT8AIP////9L//7o/////+gBAMD/////OKAAAP/////rIQB4/////3yjK3j/////60EAgP/////rYQCI/////3wIA6b/////64EAkP/////roQCY/////+vBAKD/////6+EAqP////84IQCw/////06AACD/////f6PreP////9IAAAB/AAAA2AAAAD/////S///SP////8=
+  symbols:
+  - kind: Function
+    name: .fwrite
+    size: 520
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Lockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memcpy
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .fflush
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Fwprep
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memchr
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 132
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 208
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 256
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 300
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 336
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 416
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 508
+    kind: rel24
+    symbol: 3
+    addend: 0
+- symbol: 0
+  hash: fb017b52e2be03bcd6a71990d0058bacfadcf3b0
+  signature: +CH/Qf////98CAKm//////rBAHD/////+uEAeP/////7oQCo//////gBAND/////+wEAgP/////7IQCI//////tBAJD/////+2EAmP/////7gQCg//////vBALD/////++EAuP////98lyN4/////3zdM3j/////fGAbeP////9+xCnW/////y+WAAD/////QZ4B4P////8vhAAA/////0CeAED/////6AEA0P////94owAg/////+rBAHD/////6uEAeP////98CAOm/////+sBAID/////6yEAiP/////rQQCQ/////+thAJj/////64EAoP/////roQCo/////+vBALD/////6+EAuP////84IQDA/////06AACD/////eNgAIP////9+3LN4/////38Dw3j/////fBoDeP////9IAAAB/AAAA2AAAAD/////SAAARP////9IAAAB/AAAA2AAAAD/////gB0AEP////8vmQAA/////3wA8hT/////fwPDeP////9/nuBQ/////5AdABD/////f1ryFP////9BngAU/////0gAAAH8AAADYAAAAP////8vgwAA/////0CeAJT/////L5wAAP////9BngCM/////4AdABD/////fwPDeP////+BPQAY/////3+e43j/////e1sAIP////9/gEhA/////zsgAAD/////QJwAzP////+gHQAA/////3uFACD/////OIAACv////9UAAVq/////y+AAAD/////QJ4A3P////+BPQAQ/////39k23j/////gB0AGP////97xQAg/////3kjACD/////f+kAUP////9/nvhA/////0Cd/2z/////eSMAIP////9/ZNt4/////3vlACD/////f5/gUP////9IAAAB/AAAA2AAAAD/////gB0AEP////8vnAAA/////3wA+hT/////f1r6FP////+QHQAQ/////0Ce/3z/////oB0AAP////9UAAUo/////y+AAAD/////QJ4A6P////9/A8N4/////0gAAAH8AAADYAAAAP////98HLBQ/////+sBAID/////6sEAcP/////rIQCI/////+tBAJD/////62EAmP/////rgQCg/////+uhAKj/////68EAsP/////r4QC4/////3ygu5b/////6AEA0P////94owAg/////+rhAHj/////OCEAwP////98CAOm/////06AACD/////SAAAAfwAAANgAAAA/////y+DAAD/////QZz/lP////+gHQAA/////3uFACD/////OIAACv////9UAAVq/////y+AAAD/////QZ7/LP////97WwAg/////3+e43j/////f2PbeP////9IAAAB/AAAA2AAAAD/////L4MAAP////98eRt4/////306GFD/////QZ7/CP////87yQAB/////0v//wD/////6AEA0P////84oAAA/////+rBAHD/////eKMAIP/////q4QB4/////+sBAID/////fAgDpv/////rIQCI/////+tBAJD/////62EAmP/////rgQCg/////+uhAKj/////68EAsP/////r4QC4/////zghAMD/////ToAAIP////9/A8N4/////0gAAAH8AAADYAAAAP////9L//8Q/////w==
+  symbols:
+  - kind: Function
+    name: .fwrite
+    size: 632
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Lockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memcpy
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .fflush
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Fwprep
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memchr
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 160
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 172
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 212
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 340
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 392
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 468
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 520
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 620
+    kind: rel24
+    symbol: 3
+    addend: 0

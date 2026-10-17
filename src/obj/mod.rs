@@ -39,6 +39,7 @@ pub enum ObjKind {
 #[derive(Debug, Copy, Clone, Eq, PartialEq, Hash)]
 pub enum ObjArchitecture {
     PowerPc,
+    PowerPc64,
 }
 
 /// Translation unit information.

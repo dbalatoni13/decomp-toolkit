@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: 6029c21e0db68339c1e8887d1bc25ca798b17afc
+  signature: L4MAAP////9AngAQ/////ziAAAD/////eIMAIP////9OgAAg/////4EjABD/////OAQAMP////8viQAA/////3wEA3j/////fWkaFP////9Bnv/g/////4ADAAz/////VAkwMv////9UACA2/////30gSFD/////fStKFP////9/iSBA/////0Gd/8j/////S///wP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetNextLeafParameter
+    size: 76
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: 7bf92374f8e3f7ff98598422ed3ebede15072384
+  signature: LCMAAP////98axt4/////0CCAAz/////OGAAAP////9OgAAg/////4EjABD/////OAQAMP////8vqQAA/////3gAACD/////fUkaFP////98AwN4/////0Ge/+D/////gAsADP////9UCTAy/////1QAIDb/////fSBIUP////99KkoU/////3+JGED/////TZ0AIP////84YAAA/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetNextLeafParameter
+    size: 84
+    flags: 1
+    section: .text
+  relocations: []

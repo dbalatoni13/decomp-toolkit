@@ -1,0 +1,46 @@
+- symbol: 0
+  hash: 249275791bea578fc48c54105614ed6a98b7a0cd
+  signature: +CH/kf////98CAKm/////3xqG3j/////gWIAAP//AAD4AQCA/////zwACdD/////gSIAAP//AAA8gAnQ/////4CiAAD//wAAkAkAAP////+RSwAA/////0gAAAH8AAAD6EEAKP/////oAQCA/////zghAHD/////fAgDpv////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmUtilInitializeMainMemory
+    size: 68
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@001A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0022'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellGcmMapMainMemory
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -10154688
+  - offset: 26
+    kind: l
+    symbol: 2
+    addend: -10154688
+  - offset: 34
+    kind: l
+    symbol: 3
+    addend: -10154688
+  - offset: 44
+    kind: rel24
+    symbol: 4
+    addend: 0

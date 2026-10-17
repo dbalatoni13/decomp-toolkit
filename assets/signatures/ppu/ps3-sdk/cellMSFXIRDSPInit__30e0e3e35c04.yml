@@ -1,0 +1,42 @@
+- symbol: 0
+  hash: db285cb212f7e0ba5eb86e4825b400c3bc41a74f
+  signature: LCMAAP////98CAKm//////gh/5H/////+AEAgP////9BwgBc/////y+kAAD/////Qd4AVP////84AwCM/////5CDAAD/////OWAAAP////94CQAg/////zgAAAj/////fAkDpv////84AAAA/////5ADAAT/////OAkABP////+RaQAA/////3gJACD/////QgD/9P////84YAAA/////0gAAAH8AAADYAAAAP////84YAAA/////+gBAID/////OCEAcP////98CAOm/////06AACD/////PGAAev////9gYxIC/////0gAAAH8AAADYAAAAP////84YP///////0v//9z/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXIRDSPInit
+    size: 132
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 80
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 116
+    kind: rel24
+    symbol: 1
+    addend: 0
+- symbol: 0
+  hash: 79f2dc6971425ceea983f9a6612012b77a580db8
+  signature: LCQAAP////98CAKm//////gh/5H/////+AEAgP////84AP///////0GCAET/////OAMAjP////+QgwAA/////zlgAAD/////eAkAIP////84AAAI/////3wJA6b/////OAAAAP////+QAwAE/////zgJAAT/////kWkAAP////94CQAg/////0IA//T/////OGAAAP////9IAAAB/AAAA2AAAAD/////OAAAAP////98AwN4/////+gBAID/////OCEAcP////98CAOm/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXIRDSPInit
+    size: 108
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 76
+    kind: rel24
+    symbol: 1
+    addend: 0

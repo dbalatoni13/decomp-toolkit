@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 9bc5d4fe20073bbfc74cafd5ad9b2b346af8a900
+  signature: +CH/kf////98CAKm//////gBAID/////gAIAAP//AACQAwAA/////0gAAAH8AAAD6EEAKP/////oAQCA/////zghAHD/////fAgDpv////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt9type_infoD0Ev
+    size: 44
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0014'
+    size: 0
+    flags: 2
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 20
+    kind: rel24
+    symbol: 2
+    addend: 0

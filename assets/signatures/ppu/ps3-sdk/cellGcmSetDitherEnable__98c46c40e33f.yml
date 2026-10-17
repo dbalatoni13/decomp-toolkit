@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 87d26f23bf42eaaf5d6237ead0007881d63dc1d3
+  signature: +CH/gf////98CAKm//////vBAHD/////fJ4jeP/////4AQCQ/////ziAAAL/////gUMACP////+AAwAE/////zkqAAj/////++EAeP////98fxt4/////3+JAED/////QZ0AOP////88AAAE/////3lJACD/////OWoACP////9gAAMA/////5PJAAT/////kX8ACP////+QCQAA/////+gBAJD/////68EAcP/////r4QB4/////3wIA6b/////OCEAgP////9OgAAg/////4EjAAz/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////L6MAAP////9Anv/I/////4FfAAj/////S///pP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetDitherEnable
+    size: 148
+    flags: 1
+    section: .text
+  relocations: []

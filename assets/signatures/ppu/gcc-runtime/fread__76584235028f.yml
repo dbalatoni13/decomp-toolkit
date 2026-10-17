@@ -1,0 +1,104 @@
+- symbol: 0
+  hash: 069cea133502d317aa5bfec4b3285177b977253f
+  signature: +CH/Uf////98CAKm//////shAHj/////+wEAcP/////7wQCg//////gBAMD/////+0EAgP/////7YQCI//////uBAJD/////+6EAmP/////74QCo/////3yYI3j/////fN4zeP////84AAAA/////38kKdb/////L5kAAP////9AngA4/////3gDACD/////6AEAwP/////rAQBw/////+shAHj/////fAgDpv/////rQQCA/////+thAIj/////64EAkP/////roQCY/////+vBAKD/////6+EAqP////84IQCw/////06AACD/////eNoAIP////98ext4/////39D03j/////fzzLeP////9IAAAB/AAAA2AAAAD/////oB4AAP////9UAARi/////3spACD/////L4AAAP////85HgBD/////30pA6b/////QJ4BBP////9/PMt4/////+l+AEj/////gB4AKP////9/Q9N4/////y+AAAD/////QZ4AEP////+QHgAU/////zgAAAD/////kB4AKP////+DvgBg/////+geAFD/////e6kAIP////98AEhQ/////38rSED/////f6BYQP////9BnQAI/////0GYABz/////SAAAAfwAAANgAAAA/////y+DAAD/////QJ0AaP/////pfgBI/////4O+AGD/////f+voUP////97YwAg/////3+f4ED/////QJ0ACP////9/n+N4/////3v9ACD/////gJ4AEP////9/n+BQ/////3+l63j/////f3v6FP////9IAAAB/AAAA2AAAAD/////gB4AEP/////pPgBY/////+l+AEj/////L5wAAP////98HwIU/////319WhT/////fSnqFP////+QHgAQ//////k+AFj/////+X4ASP////9Anv9U/////39D03j/////SAAAAfwAAANgAAAA/////3wcyFD/////fADDlv////94AwAg/////+gBAMD/////6wEAcP/////rIQB4/////3wIA6b/////60EAgP/////rYQCI/////+uBAJD/////66EAmP/////rwQCg/////+vhAKj/////OCEAsP////9OgAAg/////4E+ABz/////e2oAIP////9/iEhA/////3krACD/////OSkAAf////9AnQA0/////4gLAAD/////O3sAAf////87nP///////5gKAAD/////kT4AHP////9CAP/U/////39D03j/////SAAAAfwAAANgAAAA/////3wcyFD/////fADDlv////9L//+I/////y+cAAD/////Qd7/bP/////pfgBI/////0v//rT/////
+  symbols:
+  - kind: Function
+    name: .fread
+    size: 516
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Lockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Frprep
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memcpy
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 136
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 240
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 304
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 360
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 480
+    kind: rel24
+    symbol: 4
+    addend: 0
+- symbol: 0
+  hash: 71e49605563f97b0decc10370b30dd12a3889b92
+  signature: +CH/Yf////98CAKm//////thAHj/////+0EAcP////98miN4//////uBAID/////fHwbeP/////7oQCI/////zhgAAD/////+8EAkP////983TN4//////vhAJj/////+AEAsP////98pSHW/////3i7ACD/////L7sAAP////9AngAs/////+gBALD/////60EAcP/////rYQB4/////3wIA6b/////64EAgP/////roQCI/////+vBAJD/////6+EAmP////84IQCg/////06AACD/////fMMzeP////9IAAAB/AAAA2AAAAD/////oB0AAP////9UAARi/////y+AAAD/////QJ4BEP////9/ftt4/////4CdABD/////SAAAOP////9/3/N4/////3+D43j/////f+X7eP////87wAAA/////0gAAAH8AAADYAAAAP////+AnQAQ/////y++AAD/////fIT6FP////98H+IU/////5CdABD/////eBwAIP////9BngB0/////4AdACj/////f6PreP////8voAAA/////0GeABD/////kB0AFP////84AAAA/////5AdACj/////gB0AFP////9/hABA/////0CcAIz/////eIQAIP////98BABQ/////3gfACD/////f5/wQP////98H/BQ/////0Gd/5D/////f4PjeP////9/5ft4/////3geACD/////SAAAAfwAAANgAAAA/////4CdABD/////L74AAP////98hPoU/////3wf4hT/////kJ0AEP////94HAAg/////0Ce/5T/////f6PreP////9IAAAB/AAAA2AAAAD/////fB7YUP////98ANOW/////3gDACD/////6AEAsP/////rQQBw/////+thAHj/////fAgDpv/////rgQCA/////+uhAIj/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////9IAAAB/AAAA2AAAAD/////L4MAAP////9Anf+0/////4CdABD/////gB0AFP////9L//9g/////3082hT/////f4PjeP////95KQAg/////39+23j/////fSngUP////84/QBD/////30pSPj/////eSkAIP////85KQAB/////30pA6b/////gT0AHP////85AwAB/////zl+////////f4dIQP////85SQAB/////0CdADj/////iAkAAP////95fgAg/////5gDAAD/////eQMAIP////+RXQAc/////0IA/9T/////f6PreP////9IAAAB/AAAA2AAAAD/////fB7YUP////98ANOW/////3gDACD/////S///TP////98fBt4/////4CdABD/////S//+uP////8=
+  symbols:
+  - kind: Function
+    name: .fread
+    size: 532
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Lockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memcpy
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Frprep
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 112
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 164
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 276
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 316
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 376
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 496
+    kind: rel24
+    symbol: 3
+    addend: 0

@@ -1,0 +1,234 @@
+- symbol: 0
+  hash: fa5894ac8d7fa29455ef957d6e996d26fdf96593
+  signature: +CH/Yf////98CAKm//////uhAIj/////g6IAAP//AAD7gQCA//////vhAJj/////+AEAsP////+IHQAA/////y+AAAD/////QZ4BvP////+BIgAA//8AAIAJAAD/////L4AAAP////9AngHI/////4EiAAD//wAAgAkAAP////8vgAAA/////0GeAUT/////f7/reP////87gAAA/////4OiAAD//wAAOIAXcP////9/o+t4/////0gAAAH8AAAD6EEAKP////8vowAA/////3+j63j/////QJ4AFP////+JPwAA/////1UgB3r/////L4AAAP////9BngGg/////0gAAAH8AAAD6EEAKP////84YAEs/////zlgAI3/////RAAAAv////84HAAB/////3gcACD/////L5wACv////9Anv+w/////4BiAAD//wAASAAAAfwAAAPoQQAo/////4OCAAD//wAAgHwAAP////9IAAAB/AAAA+hBACj/////OAAAAf////+DogAA//8AAIEiAAD//wAAkAkAAP////+BfQAA/////31jW3j/////gSsAAP////+BSQAA/////4AKAAD/////+EEAKP////98CQOm/////4BKAAT/////ToAEIf/////oQQAo/////4CdAAD/////gSIAAP//AACAaQAA/////0gAAAH8AAAD6EEAKP////84YQBw/////ziAAAH/////OKAAAP////85YACG/////0QAAAL/////g6IAAP//AAA5YACI/////4BhAHD/////gJ0AAP////9EAAAC/////ziA//D/////gGEAcP////84oP/w/////zjA//D/////OWAAiv////9EAAAC/////zhgA+j/////OWAAjf////9EAAAC/////zlgAIn/////gGEAcP////9EAAAC/////zlgAIf/////gGEAcP////9EAAAC/////zhgA+j/////OWAAjf////9EAAAC/////4B8AAD/////SAAAAfwAAAPoQQAo/////4EiAAD//wAAO6AAAP////+AYgAA//8AAJOpAAD/////SAAAAfwAAAPoQQAo/////4BiAAD//wAASAAAAfwAAAPoQQAo/////4BiAAD//wAASAAAAfwAAAPoQQAo/////4EiAAD//wAAgGkAAP////9IAAAB/AAAA+hBACj/////gSIAAP//AACBYgAA//8AAIFCAAD//wAAk6kAAP////+bqwAA/////5OqAAD/////6AEAsP/////rgQCA/////+uhAIj/////fAgDpv/////r4QCY/////zghAKD/////ToAAIP////+BIgAA//8AAOhpAAD/////SAAAAfwAAAPoQQAo/////zhgASz/////OWAAjf////9EAAAC/////0v//iD/////YSAAAv////9/o+t4/////5gfAAD/////SAAAAfwAAAPoQQAo/////0v//nT/////
+  symbols:
+  - kind: Function
+    name: .cellSurMixerDelete
+    size: 564
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@003A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0052'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@00B2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellAudioPortStop
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@00CA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00FE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._sys_heap_free
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@0122'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellAudioPortClose
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .sys_lwmutex_destroy
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@01A2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01AE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._sys_heap_delete_heap
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@01D2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01FE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellAudioRemoveNotifyEventQueue
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 42
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 58
+    kind: l
+    symbol: 3
+    addend: -15311144
+  - offset: 82
+    kind: l
+    symbol: 4
+    addend: -15311144
+  - offset: 92
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 128
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 166
+    kind: l
+    symbol: 4
+    addend: -15311144
+  - offset: 168
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 178
+    kind: l
+    symbol: 7
+    addend: -15311144
+  - offset: 184
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 198
+    kind: l
+    symbol: 3
+    addend: -15311144
+  - offset: 202
+    kind: l
+    symbol: 9
+    addend: -15311144
+  - offset: 254
+    kind: l
+    symbol: 10
+    addend: -15311144
+  - offset: 260
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 290
+    kind: l
+    symbol: 12
+    addend: -15311144
+  - offset: 384
+    kind: rel24
+    symbol: 13
+    addend: 0
+  - offset: 394
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 402
+    kind: l
+    symbol: 4
+    addend: -15311144
+  - offset: 408
+    kind: rel24
+    symbol: 14
+    addend: 0
+  - offset: 418
+    kind: l
+    symbol: 15
+    addend: -15311144
+  - offset: 420
+    kind: rel24
+    symbol: 14
+    addend: 0
+  - offset: 430
+    kind: l
+    symbol: 16
+    addend: -15311144
+  - offset: 432
+    kind: rel24
+    symbol: 14
+    addend: 0
+  - offset: 442
+    kind: l
+    symbol: 10
+    addend: -15311144
+  - offset: 448
+    kind: rel24
+    symbol: 17
+    addend: 0
+  - offset: 458
+    kind: l
+    symbol: 3
+    addend: -15311144
+  - offset: 462
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 466
+    kind: l
+    symbol: 18
+    addend: -15311144
+  - offset: 510
+    kind: l
+    symbol: 19
+    addend: -15311144
+  - offset: 516
+    kind: rel24
+    symbol: 20
+    addend: 0
+  - offset: 552
+    kind: rel24
+    symbol: 6
+    addend: 0

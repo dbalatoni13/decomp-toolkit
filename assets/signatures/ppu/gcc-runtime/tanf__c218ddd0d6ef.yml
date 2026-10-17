@@ -1,0 +1,565 @@
+- symbol: 0
+  hash: 1cb843fbfd998e3fb3f8e983e592dc1aedc6cad6
+  signature: +CH/cf////98CAKm/////zhhAMD/////0CEAwP/////4AQCg/////0gAAAH8AAADYAAAAP////8vgwAB/////0GeAPz/////L4MAAv////9BngAM/////y+DAAD/////QJ4AGP/////AIQDA/////+gBAKD/////OCEAkP////98CAOm/////06AACD/////wCEAwP/////9oAiQ/////8gCAAD//wAA/40AAP////9BnAAQ/////8gCAAD//wAA/40AAP////9AnQAU/////8BCAAD//wAASAAAAfwAAANgAAAA/////9AhAMD/////wAIAAP//AADtgQAy/////8GiAAD//wAA/4xoAP////9AnQD8/////8ACAAD//wAA7AwAKv/////8AAAe/////9gBAHD/////gAEAdP////98AAe0/////3gLBWD/////fAmudv////8vqwAA/////zkpAAH/////QZ4AFP////8rqQAC/////0GcAAz/////fABaeP////9gAAgA//////gBAID/////yAEAgP/////8AAac/////4EiAAD//wAAwYIAAP//AADBSQAA//////2gUFD//////WAAGP/////AAgAA//8AAOwLCDr/////7CsDOv//////gWgA/////0CdAEj//////4FQAP////9AnABA/////1QAB/7/////L4AAAP////9Bnv8s/////8ACAAD//wAA7CAIJP////9L//8g/////zxgIAD/////SAAAAfwAAANgAAAA/////+gBAKD/////gSIAAP//AAA4IQCQ/////3wIA6b/////wCkAAP////9OgAAg/////+2BAHL/////wAIAAP//AADBQgAA//8AAFQAB/7/////wSIAAP//AAAvgAAA/////8FiAAD//wAA7AxQOv/////toQMy/////+wMWDr/////7C0Kev////9BngAQ//////wAAFD/////7CAIJP////9L//7A/////+whACT/////S//+uP/////AAgAA//8AAOwMACj//////AAAHv/////YAQBw/////4ABAHT/////fAAHtP////9L//8I/////w==
+  symbols:
+  - kind: Function
+    name: .tanf
+    size: 416
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDtest
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0052'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .fmodf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@007A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0082'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@008E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00D6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00DA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00EA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0112'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Feraise
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@012E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0146'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@014A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0152'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@015A'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 82
+    kind: l
+    symbol: 2
+    addend: -10216440
+  - offset: 94
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 106
+    kind: l
+    symbol: 4
+    addend: -10216440
+  - offset: 108
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 122
+    kind: l
+    symbol: 6
+    addend: -10216440
+  - offset: 130
+    kind: l
+    symbol: 7
+    addend: -10216440
+  - offset: 142
+    kind: l
+    symbol: 8
+    addend: -10216440
+  - offset: 214
+    kind: l
+    symbol: 9
+    addend: -10216440
+  - offset: 218
+    kind: l
+    symbol: 10
+    addend: -10216440
+  - offset: 234
+    kind: l
+    symbol: 11
+    addend: -10216440
+  - offset: 274
+    kind: l
+    symbol: 12
+    addend: -10216440
+  - offset: 288
+    kind: rel24
+    symbol: 13
+    addend: 0
+  - offset: 302
+    kind: l
+    symbol: 14
+    addend: -10216440
+  - offset: 326
+    kind: l
+    symbol: 15
+    addend: -10216440
+  - offset: 330
+    kind: l
+    symbol: 16
+    addend: -10216440
+  - offset: 338
+    kind: l
+    symbol: 17
+    addend: -10216440
+  - offset: 346
+    kind: l
+    symbol: 18
+    addend: -10216440
+  - offset: 390
+    kind: l
+    symbol: 8
+    addend: -10216440
+- symbol: 0
+  hash: 3b2522d653226e3806ef808f22da33b6c652a6f5
+  signature: +CH/cf////98CAKm/////zhhAMD/////0CEAwP/////4AQCg/////0gAAAH8AAADYAAAAP////98Ywc0/////y+DAAH/////QZ4A3P////8vgwAC/////0GeAAz/////L4MAAP////9AngAY/////8AhAMD/////6AEAoP////84IQCQ/////3wIA6b/////ToAAIP/////AIQDA//////2gCJD/////yAIAAP//AAD/jQAA/////0GcABD/////yAIAAP//AAD/jQAA/////0CdABT/////wEIAAP//AABIAAAB/AAAA2AAAAD/////0CEAwP/////AAgAA//8AAO2BADL/////waIAAP//AAD/jGgA/////0CdANz/////wAIAAP//AAA5IQBw/////+wMACr//////AAAHv////98AE+u/////4FhAHD/////fWAHtP/////AAgAA//8AAIEiAAD//wAA+AEAgP/////JoQCA//////2gbpz/////wYIAAP//AADBSQAA//////1gaBj//////aBQUP/////sCwg6/////+wrAzr//////40IAP////9AnABI//////+BUAD/////QJwAQP////9VYAf+/////y+AAAD/////QZ7/TP/////AAgAA//8AAOwgCCT/////S///QP////88YCAA/////0gAAAH8AAADYAAAAP////+BIgAA//8AAOgBAKD/////OCEAkP////98CAOm/////8ApAAD/////ToAAIP/////tgQBy/////8ACAAD//wAAwUIAAP//AABVYAf+/////8EiAAD//wAAL4AAAP/////BYgAA//8AAOwMUDj/////7aEDMv/////sDFg6/////+wtCnr/////QZ4AEP/////8AABQ/////+wgCCT/////S//+4P/////sIQAk/////0v//tj/////wAIAAP//AAA5IQBw/////+wMACj//////AAAHv////98AE+u/////4FhAHD/////S///KP////8=
+  symbols:
+  - kind: Function
+    name: .tanf
+    size: 388
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDtest
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0056'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0062'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .fmodf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@007E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0086'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0092'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00AE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00B2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00C2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00F6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Feraise
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@010E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@012A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@012E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0136'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@013E'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 86
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 98
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 110
+    kind: l
+    symbol: 4
+    addend: -28621288
+  - offset: 112
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 126
+    kind: l
+    symbol: 6
+    addend: -28621288
+  - offset: 134
+    kind: l
+    symbol: 7
+    addend: -28621288
+  - offset: 146
+    kind: l
+    symbol: 8
+    addend: -28621288
+  - offset: 174
+    kind: l
+    symbol: 9
+    addend: -28621288
+  - offset: 178
+    kind: l
+    symbol: 10
+    addend: -28621288
+  - offset: 194
+    kind: l
+    symbol: 11
+    addend: -28621288
+  - offset: 246
+    kind: l
+    symbol: 12
+    addend: -28621288
+  - offset: 260
+    kind: rel24
+    symbol: 13
+    addend: 0
+  - offset: 270
+    kind: l
+    symbol: 14
+    addend: -28621288
+  - offset: 298
+    kind: l
+    symbol: 15
+    addend: -28621288
+  - offset: 302
+    kind: l
+    symbol: 16
+    addend: -28621288
+  - offset: 310
+    kind: l
+    symbol: 17
+    addend: -28621288
+  - offset: 318
+    kind: l
+    symbol: 18
+    addend: -28621288
+  - offset: 362
+    kind: l
+    symbol: 8
+    addend: -28621288
+- symbol: 0
+  hash: 2a74375bcfa62b33e5409ce160a3b941fdb8ec5c
+  signature: +CH/cf////98CAKm/////zhhAMD/////0CEAwP/////4AQCg/////0gAAAH8AAADYAAAAP////98Ywc0/////y+DAAH/////QZ4A3P////8vgwAC/////0GeAAz/////L4MAAP////9AngAY/////8AhAMD/////6AEAoP////84IQCQ/////3wIA6b/////ToAAIP/////AIQDA//////2gCJD/////yAKIsP//////jQAA/////0GcABD/////yAKIuP//////jQAA/////0CdABT/////wEKIwP////9IAAAB/AAAA2AAAAD/////0CEAwP/////AAojE/////+2BADL/////waKI7P//////jGgA/////0CdANz/////wAKIyP////85IQBw/////+wMACr//////AAAHv////98AE+u/////4FhAHD/////fWAHtP/////AAojM/////4EiiNT/////+AEAgP/////JoQCA//////2gbpz/////wYKI0P/////BSQAA//////1gaBj//////aBQUP/////sCwg6/////+wrAzr//////40IAP////9AnABI//////+BUAD/////QJwAQP////9VYAf+/////y+AAAD/////QZ7/TP/////AAojY/////+wgCCT/////S///QP////88YCAA/////0gAAAH8AAADYAAAAP////+BIoio/////+gBAKD/////OCEAkP////98CAOm/////8ApAAD/////ToAAIP/////tgQBy/////8ACiNz/////wUKI4P////9VYAf+/////8EiiOj/////L4AAAP/////BYojk/////+wMUDj/////7aEDMv/////sDFg6/////+wtCnr/////QZ4AEP/////8AABQ/////+wgCCT/////S//+4P/////sIQAk/////0v//tj/////wAKIyP////85IQBw/////+wMACj//////AAAHv////98AE+u/////4FhAHD/////S///KP////8=
+  symbols:
+  - kind: Function
+    name: .tanf
+    size: 388
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDtest
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .fmodf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Feraise
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 112
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 260
+    kind: rel24
+    symbol: 3
+    addend: 0
+- symbol: 0
+  hash: 73e6a160d39c9178a5deaa1859c82a1b8e44d6fb
+  signature: +CH/cf////98CAKm/////zhhAMD/////0CEAwP/////4AQCg/////0gAAAH8AAAD6EEAKP////8vgwAB/////0GeAPz/////L4MAAv////9BngAM/////y+DAAD/////QJ4AGP/////AIQDA/////+gBAKD/////OCEAkP////98CAOm/////06AACD/////wCEAwP/////9oAiQ/////8gCAAD//wAA/40AAP////9BnAAQ/////8gCAAD//wAA/40AAP////9AnQAU/////8BCAAD//wAASAAAAfwAAAPoQQAo/////9AhAMD/////wAIAAP//AADtgQAy/////8GiAAD//wAA/4xoAP////9AnQD8/////8ACAAD//wAA7AwAKv/////8AAAe/////9gBAHD/////gAEAdP////98AAe0/////3gLBWD/////fAmudv////8vqwAA/////zkpAAH/////QZ4AFP////8rqQAC/////0GcAAz/////fABaeP////9gAAgA//////gBAID/////yAEAgP/////8AAac/////4EiAAD//wAAwYIAAP//AADBSQAA//////2gUFD//////WAAGP/////AAgAA//8AAOwLCDr/////7CsDOv//////gWgA/////0CdAEj//////4FQAP////9AnABA/////1QAB/7/////L4AAAP////9Bnv8s/////8ACAAD//wAA7CAIJP////9L//8g/////zxgIAD/////SAAAAfwAAAPoQQAo/////+gBAKD/////gSIAAP//AAA4IQCQ/////3wIA6b/////wCkAAP////9OgAAg/////+2BAHL/////wAIAAP//AADBQgAA//8AAFQAB/7/////wSIAAP//AAAvgAAA/////8FiAAD//wAA7AxQOv/////toQMy/////+wMWDr/////7C0Kev////9BngAQ//////wAAFD/////7CAIJP////9L//7A/////+whACT/////S//+uP/////AAgAA//8AAOwMACj//////AAAHv/////YAQBw/////4ABAHT/////fAAHtP////9L//8I/////w==
+  symbols:
+  - kind: Function
+    name: .tanf
+    size: 416
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0014'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@0052'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006C'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@007A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0082'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@008E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00D6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00DA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00EA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0112'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0120'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@012E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0146'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@014A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0152'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@015A'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 82
+    kind: l
+    symbol: 2
+    addend: -14169624
+  - offset: 94
+    kind: l
+    symbol: 3
+    addend: -14169624
+  - offset: 106
+    kind: l
+    symbol: 4
+    addend: -14169624
+  - offset: 108
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 122
+    kind: l
+    symbol: 6
+    addend: -14169624
+  - offset: 130
+    kind: l
+    symbol: 7
+    addend: -14169624
+  - offset: 142
+    kind: l
+    symbol: 8
+    addend: -14169624
+  - offset: 214
+    kind: l
+    symbol: 9
+    addend: -14169624
+  - offset: 218
+    kind: l
+    symbol: 10
+    addend: -14169624
+  - offset: 234
+    kind: l
+    symbol: 11
+    addend: -14169624
+  - offset: 274
+    kind: l
+    symbol: 12
+    addend: -14169624
+  - offset: 288
+    kind: rel24
+    symbol: 13
+    addend: 0
+  - offset: 302
+    kind: l
+    symbol: 14
+    addend: -14169624
+  - offset: 326
+    kind: l
+    symbol: 15
+    addend: -14169624
+  - offset: 330
+    kind: l
+    symbol: 16
+    addend: -14169624
+  - offset: 338
+    kind: l
+    symbol: 17
+    addend: -14169624
+  - offset: 346
+    kind: l
+    symbol: 18
+    addend: -14169624
+  - offset: 390
+    kind: l
+    symbol: 8
+    addend: -14169624

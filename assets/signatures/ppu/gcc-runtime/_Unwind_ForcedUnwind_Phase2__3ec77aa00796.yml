@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 7006bdbf1f9efe943419b7fb7755e2b566b34845
+  signature: +CH18f////98CAKm//////tBCeD/////O0EAcP/////4AQog//////thCej/////+4EJ8P/////7oQn4/////3x9G3j/////+8EKAP////98niN4/////4ODABT/////g2MAHP/////74QoI/////0gAAEz/////QZoAvP////+BIQm0/////y+pAAD/////QZ4AMP////+ACQAA/////+i9AAD/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////8vgwAH/////3x/G3j/////LwMACP////9BngCI/////0CaAID/////f8PzeP////97RAAg/////0gAAAH8AAADe0QAIP////9/w/N4/////0gAAAH8AAADOIAACv////8sIwAA/////3x/G3j/////L4MABf////9BggAM/////0CeAFD/////OIAAGv////+AHAAA/////3+m63j/////+EEAKP////9/x/N4/////3wJA6b/////6L0AAP////9/aNt4/////4BcAAT/////OGAAAf////9OgAQh/////+hBACj/////f6breP////8vowAA/////3/H83j/////OIAACv////84YAAB/////y8fAAX/////QZ7/TP////874AAC/////+gBCiD/////f+P7eP/////rQQng/////+thCej/////fAgDpv/////rgQnw/////+uhCfj/////68EKAP/////r4QoI/////zghChD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._Unwind_ForcedUnwind_Phase2
+    size: 292
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .uw_update_context
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .uw_frame_state_for
+    size: 0
+    flags: 2
+    section: .text
+  relocations:
+  - offset: 128
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 140
+    kind: rel24
+    symbol: 2
+    addend: 0

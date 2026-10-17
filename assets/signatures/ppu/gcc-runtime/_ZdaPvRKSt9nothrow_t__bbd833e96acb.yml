@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 51e25b715e0b825e62cb02491007391ea761ad73
+  signature: +CH/kf////98CAKm//////gBAID/////SAAAAfwAAANgAAAA/////+gBAID/////OCEAcP////98CAOm/////06AACD/////
+  symbols:
+  - kind: Function
+    name: ._ZdaPvRKSt9nothrow_t
+    size: 36
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZdlPvRKSt9nothrow_t
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 12
+    kind: rel24
+    symbol: 1
+    addend: 0

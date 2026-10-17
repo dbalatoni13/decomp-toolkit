@@ -1,0 +1,45 @@
+- symbol: 0
+  hash: 42b50e6249a626e332ea604d76f09ecb15cf2b1f
+  signature: +CH/Yf////98CAKm//////vhAJj/////O+MAWP/////4AQCw//////uBAID/////fHwbeP/////7YQB4/////4AfABT/////O2AAD//////7oQCI/////y+AAAD/////+8EAkP////87oAAA/////zvDAHT/////OJwAXP////84YAA//////0GeABz/////gB8AGP////8rgAAP/////0GdAHT/////eIQAIP////9IAAAB/AAAA2AAAAD/////gB4AGP////8rgAAP/////0GdALD/////k34AGP////+AHwAY/////5u+AAT/////K4AAD/////+TvgAU/////0GdAEz/////m78ABP////+TfwAY/////5O/ABT/////gHwAAP////98Ywe0/////0gAAAH8AAADYAAAAP/////oAQCw/////+thAHj/////64EAgP////98CAOm/////+uhAIj/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////+AnwAE/////0v//4z/////gH8ABP////9IAAAB/AAAA2AAAAD/////m78ABP////+TfwAY/////5O/ABT/////gHwAAP////98Ywe0/////0gAAAH8AAADYAAAAP/////oAQCw/////+thAHj/////64EAgP////98CAOm/////+uhAIj/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////+AfgAE/////0gAAAH8AAADYAAAAP////9L//9I/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt8_LocinfoD1Ev
+    size: 296
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .setlocale
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 88
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 152
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 208
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 236
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 284
+    kind: rel24
+    symbol: 3
+    addend: 0

@@ -1,0 +1,57 @@
+- symbol: 0
+  hash: 858e9097641d2255a04c67a91b2f650f2de99a35
+  signature: +CH/Ef////98CAKm/////y+F////////+0EAsP/////4AQEA/////zgFAAH/////28EA4P////98miN4/////9vhAOj/////fAsHtP/////6oQCI//////rBAJD/////+uEAmP/////7AQCg//////shAKj/////+2EAuP/////7gQDA//////uhAMj/////+8EA0P/////74QDY/////0GeAez/////K4AACP////9B3QGM/////y+kAAD/////QZ4BhP////8vowAA/////0GeAXz/////f4VYAP////9AnAHc/////z1AAAL/////w8IAAP//AAB4oAAg/////2FK8cD/////fWVYUP////85OgAQ/////36rAhT/////fLgreP////95OQAg/////zr6ACD/////OtoAcP////98AFHW/////3wAGhT/////eBwAIP////+AugAA/////3+H43j/////OQAAAP/////AOgAE/////8BaAAj/////wHoADP////9IAAAB/AAAAy+jAAD/////QN4BGP////+AuQAA/////3+H43j/////OQAAAf/////AOQAE/////8BZAAj/////wHkADP////9IAAAB/AAAAy+jAAD/////QN4A9P//////4PCQ/////zgcAYD/////et4AIP////94HwAg/////zugAAD/////V6kgNv////97qwAg/////303ShT/////OQsAAv////95KQAg/////30IB7T/////f4fjeP/////AaQAM/////8ApAAT/////fXsHtP/////ASQAI/////zu9AAH/////gKkAAP////9IAAAB/AAAAzge//D/////LKMAAP////85QAAA/////3gJACD/////YUq8AP////8sPQAE/////zl/AAT/////OB4ABP////9AhgBU/////8AeAAD/////0B8AEP/////BvgAQ/////3geACD/////0b8AIP/////ACQAA/////+wAB/L//////AAAHv/////YAQBw/////4ABAHT/////fAAHtP////8vgAD//////5AfAAD/////VAkAOv////9/AFAA/////0CdAMD/////QZkA6P////+RPwAA/////3l/ACD/////QIL/WP////84GAAB/////8AaAJT/////0BwBsP////98GAe0/////8AaAJD/////0BwBtP////9/lcAA/////0HeAHj/////PTwAA/////85KfHA/////3k8ACD/////QYb+zP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////zhg////////6AEBAP/////qoQCI/////+rBAJD/////fAgDpv/////q4QCY/////+sBAKD/////6yEAqP/////rQQCw/////+thALj/////64EAwP/////roQDI/////+vBAND/////6+EA2P/////LwQDg/////8vhAOj/////OCEA8P////9OgAAg/////zlgAAj/////OKAAAP////9L//4w/////0Dm/5z/////OGAAAP////9IAAAB/AAAA2AAAAD/////OGAAAP////9L//+c/////1dpEDr/////PGAAev////85KQGA/////zgAAQD/////fSkHtP////9gYxIC/////3wcSS7/////SAAAAfwAAANgAAAA/////zhg////////S///cP////9XaRA6/////zxgAHr/////OSkBgP////9gYxIC/////30pB7T/////fVxJLv////9IAAAB/AAAA2AAAAD/////OGD///////9L//9I/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSFXDelaySetParams
+    size: 692
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@007A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__CalcBiQuadCoEffs
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 122
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 196
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 232
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 316
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 492
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 592
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 636
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 676
+    kind: rel24
+    symbol: 3
+    addend: 0

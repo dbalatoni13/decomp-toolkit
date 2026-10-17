@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: f354da72a0c228519b48fa6733b48adc09c6bb3e
+  signature: L4QAAf////98CAKm//////gh/3H/////+6EAeP////98fRt4//////vBAID/////++EAiP/////4AQCg/////0GeAMT/////K4QAAf////9AnABg/////zvgAAD/////Z//+7f////9//vt4/////4FdAAj/////gB0ABP////85KgAM/////3+JAED/////QZ0AaP////88AAAI/////3lJACD/////OWoADP////9gACGE/////5PJAAj/////kX0ACP////+QCQAA/////5PpAAT/////6AEAoP/////roQB4/////+vBAID/////fAgDpv/////r4QCI/////zghAJD/////ToAAIP////8vhAAC/////0GeAGz/////L4QAA/////874AAA/////zvAAAD/////QJ7/nP////874AAB/////2f//u3/////f/77eP////9L//+M/////4E9AAz/////f6PreP////84gAAD/////4AJAAD/////+EEAKP////98CQOm/////4BJAAT/////ToAEIf/////oQQAo/////y+jAAD/////QJ7/lP////+BXQAI/////0v//2z/////O+AAAf////87wAAA/////2f//u3/////Z97+7f////9L//9E/////zvgAAD/////O8AAAf////9n//7t/////2fe/u3/////S///MP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetTransferDataMode
+    size: 268
+    flags: 1
+    section: .text
+  relocations: []

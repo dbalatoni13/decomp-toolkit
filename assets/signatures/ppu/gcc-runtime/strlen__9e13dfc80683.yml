@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: 31ee333f6880142fbafae5cf47a3dea96ad88c9f
+  signature: iAMAAP////85IAAA/////y+AAAD/////QZ4AJP////98axt4/////zgLAAH/////eAsAIP////+JKwAA/////y+JAAD/////QJ7/8P////98A1hQ/////3wJB7T/////eSMAIP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .strlen
+    size: 56
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: b751cc66938d0667329619e955b4a459e3d00647
+  signature: fAMA0P////94AAdg/////3ylKnj/////KAAAAP////98ZBt4/////0GCABz/////fAkDpv////+IBAAA/////3wlAAD/////OIQAAf////9BggBw/////0IA//D/////OMAAgP////98ACIs/////3wGIiz/////OMB/f/////94xoAs/////zkAABD/////eMYADv////84BAEA/////3wAAiz/////fQkDpv/////oBAAA/////3wHMDj/////fAkzeP////99RzIU/////30rUPj/////fWAAdP////94AOjC/////ygAAAj/////OIQACP////9BgAAM/////0IA/9j/////S///yP////84hP/4/////3yEAhT/////fGMgUP////9OgAAg/////ziE////////fGMgUP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .strlen
+    size: 164
+    flags: 1
+    section: .text
+  relocations: []

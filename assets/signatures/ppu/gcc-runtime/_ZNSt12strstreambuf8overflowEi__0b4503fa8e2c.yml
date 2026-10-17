@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: d356ca2f0527c71e3cc5586cd106a1c96782f11a
+  signature: fYAAJv////8vhP////////gh/2H/////+6EAiP/////7wQCQ//////tBAHD/////fH4beP/////7YQB4//////uBAID/////++EAmP////98nSN4/////zhgAAD/////kYEAqP////98CAKm//////gBALD/////QZ4APP////+BXgAk/////3/f83j/////gWoAAP////8viwAA/////0HeABT/////gT4ANP////+ACQAA/////3+AWED/////QZ0ATP////+BPgBk/////1UgB3r/////L4AAAP////9AngCE/////zhg////////6AEAsP////98Ywe0/////4GBAKj/////60EAcP////98CAOm/////+thAHj/////fZCBIP/////rgQCA/////+uhAIj/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////95aQAg/////zgLAAH/////VIMGPv////+QCgAA/////3xjB7T/////mIkAAP/////oAQCw/////4GBAKj/////60EAcP////98CAOm/////+thAHj/////fZCBIP/////rgQCA/////+uhAIj/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////84AAAK/////30gADj/////L4AAAP////9Anv90/////4E/ACD/////O2AAAP////85YAAA/////4AJAAD/////L4AAAP////9BngAg/////4F/ABD/////gT8ANP////+ACwAA/////4FJAAD/////f2BQUP////9/aw5w/////31rAZT/////gH4AWP////9/g1gA/////0CcAAj/////fWNbeP////8vgwAA/////zgAACD/////kB4AWP////9Anf8g/////z0gf///////YSn///////98A0hQ/////3+A2AD/////QJwAIP////98Yw5w/////ywDAAD/////fANIUP////9/gNgA/////0GB/+z/////OGD///////9L//70/////4E+AGj/////f1saFP////8viQAA/////0GeAQD/////eSkAIP////97QwAg/////4AJAAD/////+EEAKP////98CQOm/////4BJAAT/////ToAEIf/////oQQAo/////3x8G3j/////L5wAAP////9Bnv60/////y4bAAD/////QJEAHP////+BPwAQ/////3tlACD/////e4MAIP////+AiQAA/////0gAAAH8AAADYAAAAP////+BfgBk/////1VgB/7/////L4AAAP////9BngFo/////4E+AGz/////L4kAAP////9BngEw/////3kpACD/////gX8AEP////+ACQAA/////4BrAAD/////+EEAKP////98CQOm/////4BJAAT/////ToAEIf/////oQQAo/////4D/ABD/////gX4AZP////9hYAAB/////5AeAGT/////QJIAdP////+DfwAk/////3jnACD/////gN8AMP////98HNIU/////4E/ABT/////e2sAIP////+BXwA0/////4EfACD/////k54AYP////+TiQAA/////5OLAAD/////kAoAAP////+ThwAA/////5OIAAD/////k4YAAP////97aQAg/////1ejBj7/////gWkAAP////99alt4/////zlrAAH/////kWkAAP////+bqgAA/////0v//ej/////e0MAIP////9IAAAB/AAAA2AAAAD/////fHwbeP////9L//8Y/////3jqACD/////gB4AYP////+DfwAk/////3yc0hT/////gP8AFP////97aAAg/////4DfADT/////gL8AIP////+BKgAA/////4B/ADD/////fAkAUP////98HAIU/////5AeAGD/////gWoAAP////+BKAAA/////4AHAAD/////fStIUP////98CwBQ/////308ShT/////fBwCFP////+QBwAA/////5EoAAD/////kIYAAP////+ABQAA/////4FqAAD/////gSgAAP////98CwBQ/////zkpAAH/////fBwCFP////+TigAA/////5AFAAD/////kSMAAP////9L//9M/////4D/ABD/////eOkAIP////+AaQAA/////y+DAAD/////QZ7+8P////94YwAg/////0gAAAH8AAADYAAAAP////+A/wAQ/////4F+AGT/////S//+2P////+A/wAQ/////0v//tD/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt12strstreambuf8overflowEi
+    size: 864
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memcpy
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Znaj
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZdaPv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 476
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 664
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 836
+    kind: rel24
+    symbol: 3
+    addend: 0

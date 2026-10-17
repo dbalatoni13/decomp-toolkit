@@ -1,0 +1,50 @@
+- symbol: 0
+  hash: 2614a857335baed3fd604d1a65c4a4384b5211bd
+  signature: L4MAAP////98CAKm//////gh/3H/////+6EAeP/////7wQCA//////vhAIj/////+AEAoP////98fRt4/////0GeAND/////e78AIP////+j3wAA/////y+eAAD/////QJ4AYP////9IAACY/////3vDBCD/////O70ABP////9IAAAB/AAAA2AAAAD/////f8AANP////8vgwAB/////yAAAB//////VAAQOv////9AngBM/////3wKB7T/////gSIAAP//AAChfwAA/////30KShT/////fWlTLv////+IHwAC/////5gIAAL/////iT8AA/////97vwAg/////5koAAP/////o98AAP////8vngAA/////0GeAED/////iT8AAv////85Kf/+/////1UpBj7/////K4kAAf////9Anf+Y/////zxggAD/////6AEAoP/////roQB4/////2BjAAT/////68EAgP/////r4QCI/////3wIA6b/////fGMHtP////84IQCQ/////06AACD/////6AEAoP////84YAAA/////+uhAHj/////fGMHtP/////rwQCA/////+vhAIj/////fAgDpv////84IQCQ/////06AACD/////gGIAAP//AAA4gAAA/////zigAED/////SAAAAfwAAANgAAAA/////4EiAAD//wAAO6kAEP////9L//8Y/////w==
+  symbols:
+  - kind: Function
+    name: .cellPadSetMappings
+    size: 272
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__popcountdi2
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0062'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .memset
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0106'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 64
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 98
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 242
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 252
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 262
+    kind: l
+    symbol: 4
+    addend: -28621288

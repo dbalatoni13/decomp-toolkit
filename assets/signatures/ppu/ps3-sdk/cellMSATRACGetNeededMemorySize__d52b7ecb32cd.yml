@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 142c45ab249885add1726f98d8b0d39f1914ce57
+  signature: fGkbeP////98CAKm//////gh/4H/////+AEAkP////84Cf///////zxgAHr/////++EAeP////8rgAH//////2BjEgL/////O+D///////9BnQAQ/////zhgAAD/////HAkTgf////98Hwe0/////0gAAAH8AAADYAAAAP/////oAQCQ/////3/j+3j/////6+EAeP////98CAOm/////zghAID/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSATRACGetNeededMemorySize
+    size: 88
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 56
+    kind: rel24
+    symbol: 1
+    addend: 0

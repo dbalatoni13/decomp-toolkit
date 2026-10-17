@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 16077c84cfca4b76243f3eef7b9f1901e75604bf
+  signature: fGkbeP////98CAKm//////gh/5H/////+AEAgP////99JEt4/////zhgAAH/////gSkACP////8vqQAA/////0GeABz/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._Unwind_DeleteException
+    size: 76
+    flags: 1
+    section: .text
+  relocations: []

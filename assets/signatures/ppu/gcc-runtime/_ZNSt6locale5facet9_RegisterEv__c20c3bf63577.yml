@@ -1,0 +1,46 @@
+- symbol: 0
+  hash: 254909f73c8ad6926c6e283e51521a60f69fdf47
+  signature: +CH/gf////98CAKm//////vhAHj/////g+IAAP//AAD4AQCQ//////vBAHD/////fH4beP////+AHwAA/////y+AAAD/////QZ4AQP////84YAAI/////0gAAAH8AAADYAAAAP////8vgwAA/////0GeABD/////gB8AAP////+TwwAE/////5ADAAD/////6AEAkP////+QfwAA/////+vBAHD/////fAgDpv/////r4QB4/////zghAID/////ToAAIP////+AYgAA//8AAEgAAAH8AAADYAAAAP////9L//+4/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt6locale5facet9_RegisterEv
+    size: 116
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Znwj
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0066'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .atexit
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 44
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 102
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 104
+    kind: rel24
+    symbol: 4
+    addend: 0

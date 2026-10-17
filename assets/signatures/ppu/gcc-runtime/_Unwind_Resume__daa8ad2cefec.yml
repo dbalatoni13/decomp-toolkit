@@ -1,0 +1,64 @@
+- symbol: 0
+  hash: e2c9795eb6e402c8e529e515b281f2a0ccce11a1
+  signature: fYAAJv/////4Iflh/////9nBBhD/////2eEGGP/////aAQYg/////9ohBij/////2kEGMP/////aYQY4/////9qBBkD/////2qEGSP/////awQZQ/////9rhBlj/////2wEGYP/////bIQZo/////9tBBnD/////22EGeP/////bgQaA/////9uhBoj/////28EGkP/////b4QaY//////nBBYD/////+eEFiP/////6AQWQ//////ohBZj/////+kEFoP/////6YQWo//////qBBbD/////+qEFuP/////6wQXA//////rhBcj/////+wEF0P/////7IQXY//////tBBeD/////+2EF6P/////7gQXw//////uhBfj/////fAgCpv/////7wQYA//////vhBgj/////PWDoQf/////4YQVg//////iBBWj/////YWsAKP/////4oQVw/////+lBAAD/////+MEFeP/////4AQaw/////5GBBqj/////+GEG0P/////pKgAQ/////4AJAAD/////f4BYAP////9BngAI//////hKACj/////OAEAcP////98qAKm/////zkhAtj/////+AEFWP////94AAAg//////khBVD/////OIEGoP////98AwN4//////gBBUD/////eSkAIP/////5IQVI/////0gAAAH8AAAD6IEFQP////84oAJo/////+hhBUj/////SAAAAfwAAANgAAAA/////+khBtD/////6AkAEP////8voAAA/////0CeACD/////fSNLeP/////ogQVI/////0gAAAH8AAADL4MAB/////9B3gAc/////0gAAAH8AAADYAAAAP/////oYQbQ/////+iBBUj/////SAAAAfwAAANL///k/////+iBBVD/////6GEFWP////9IAAAB/AAAA4ABBST/////gYEGqP////98aht4//////gBBrD/////6AEGsP////99kgEg/////+hBBsj/////fZEBIP/////oYQVg/////3wIA6b/////6IEFaP////99kIEg/////+ihBXD/////6MEFeP/////pwQWA/////+nhBYj/////6gEFkP/////qIQWY/////+pBBaD/////6mEFqP/////qgQWw/////+qhBbj/////6sEFwP/////q4QXI/////+sBBdD/////6yEF2P/////rQQXg/////+thBej/////64EF8P/////roQX4/////+vBBgD/////6+EGCP/////JwQYQ/////8nhBhj/////ygEGIP/////KIQYo/////8pBBjD/////ymEGOP/////KgQZA/////8qhBkj/////ysEGUP/////K4QZY/////8sBBmD/////yyEGaP/////LQQZw/////8thBnj/////y4EGgP/////LoQaI/////8vBBpD/////y+EGmP////84IQag/////3whUhT/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._Unwind_Resume
+    size: 568
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .uw_init_context_1
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .memcpy
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unwind_RaiseException_Phase2
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .abort
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unwind_ForcedUnwind_Phase2
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .uw_install_context_1
+    size: 0
+    flags: 2
+    section: .text
+  relocations:
+  - offset: 260
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 276
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 308
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 320
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 336
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 352
+    kind: rel24
+    symbol: 6
+    addend: 0

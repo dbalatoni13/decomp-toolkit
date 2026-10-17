@@ -1,0 +1,30 @@
+- symbol: 0
+  hash: 606723b622bf6a5c5baaa2ef4bf6ed782c1b209f
+  signature: +CH/cf////98CAKm//////uhAHj/////fJ0jeP/////4AQCg/////ziAAAL/////gWMACP////+AAwAE/////zkrAAj/////+8EAgP/////74QCI/////3y+K3j/////f4kAQP////98fxt4/////0GdAET/////V6kQOv////84CwAI/////zkpCwD/////eWsAIP////+QHwAI/////2PKLcD/////ZSkABP////+RSwAE/////5ErAAD/////6AEAoP/////roQB4/////+vBAID/////fAgDpv/////r4QCI/////zghAJD/////ToAAIP////+BIwAM/////4AJAAD/////+EEAKP////98CQOm/////4BJAAT/////ToAEIf/////oQQAo/////y+jAAD/////QJ7/xP////+BfwAI/////0v//5j/////
+  symbols:
+  - kind: Function
+    name: .cellGcmSetTextureOptimization
+    size: 168
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: 29604271324e0ef91275b2b2513c7f194764cf14
+  signature: +CH/Yf////98CAKm//////thAHj/////fJsjeP/////4AQCw/////ziAAAL/////gUMACP////+BIwAE/////zgKAAj/////+4EAgP/////7oQCI/////3y8K3j/////f4BIQP/////7wQCQ//////vhAJj/////fN0zeP////98fxt4/////3z+O3j/////QZ0AXP////9XoDAy/////1fLODD/////V2kQOv////98AON4/////zkpCwD/////fABbeP////9lKQAE/////zlqAAj/////YAAtAP////95SgAg/////5F/AAj/////kAoABP////+RKgAA/////+gBALD/////62EAeP/////rgQCA/////3wIA6b/////66EAiP/////rwQCQ/////+vhAJj/////OCEAoP////9OgAAg/////4EjAAz/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////L6MAAP////9Anv+8/////4FfAAj/////S///gP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetTextureOptimization
+    size: 208
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: 2f8a274c72e4123a2178d01d3efcfffa748c98cf
+  signature: +CH/Yf////98CAKm//////thAHj/////+AEAsP////+BQwAI/////3ybI3j/////gSMABP////84gAAC/////zgKAAj/////+4EAgP////9/gEhA//////uhAIj/////+8EAkP/////74QCY/////3y+K3j/////fH8beP////983TN4/////3z8O3j/////QZ0AYP////9XoDSy/////1fJBj7/////V2sVuv////99KQN4/////3lIACD/////OWsLAP////9XgDxw/////2EpLQD/////ZWsABP////98AEt4/////zlKAAj/////kAgABP////+RXwAI/////5FoAAD/////6AEAsP/////rYQB4/////+uBAID/////fAgDpv/////roQCI/////+vBAJD/////6+EAmP////84IQCg/////06AACD/////gT8ADP////+ACQAA//////hBACj/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////8vgwAA/////0Ce/7z/////gV8ACP////9L//98/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetTextureOptimization
+    size: 212
+    flags: 1
+    section: .text
+  relocations: []

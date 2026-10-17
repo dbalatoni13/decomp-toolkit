@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 46a838d0d726e00441c06003f4d8bed882d71daf
+  signature: fGkbeP////99q2t4/////zlrj+j/////OGAAAP////95awAg/////+gLAAD/////+AkAAP////9OgAAg/////wAAAAD/////AAkAAP////8AAAAA/////w==
+  symbols:
+  - kind: Function
+    name: .sys_ppu_thread_get_id
+    size: 44
+    flags: 1
+    section: .text
+  relocations: []

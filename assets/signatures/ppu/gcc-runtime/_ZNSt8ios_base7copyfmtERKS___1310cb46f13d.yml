@@ -1,0 +1,89 @@
+- symbol: 0
+  hash: 780af555213561f250de9ca3545a56462961212d
+  signature: f4MgAP////98CAKm//////gh/2H/////+4EAgP/////7wQCQ//////vhAJj/////+0EAcP/////7YQB4//////uhAIj/////+AEAsP////98fBt4/////3yeI3j/////eH8AIP////9BngGc/////3/j+3j/////SAAAAfwAAAODXAAk/////4N+ACT/////gHoAAP////+AGwAA/////3+AGAD/////QZ4AlP////94fQAg/////zhgAAD/////SAAAAfwAAANgAAAA/////zgA//3/////gT0ABP////85af///////3+LAED/////QJ0BlP////8viQAA/////0CeAXz/////OGAAAP////9IAAAB/AAAA2AAAAD/////gT0AAP////9/o+t4/////4FpAAT/////gAsAAP/////4QQAo/////3wJA6b/////gEsABP////9OgAQh/////+hBACj/////g7sAAP////84YAAA/////5O6AAD/////SAAAAfwAAANgAAAA/////4E9AAT/////L4n///////9BngAM/////zgJAAH/////kB0ABP////84YAAA/////0gAAAH8AAADYAAAAP////+BXgAc/////4AeABT/////L4oAAP////+BfgAQ/////4E+ABj/////kBwAFP////84AAAA/////5F8ABD/////kTwAGP////+QHAAc/////0GeAGT/////eV0AIP////9/4/t4/////4AdAAj/////L4AAAP////9AngAQ/////4AdAAz/////L4AAAP////9BngA4/////4CdAAT/////fIQHtP////9IAAAB/AAAA4CdAAT/////eGkAIP////+AHQAI/////3yEB7T/////f+P7eP////+QCQAI/////0gAAAH8AAADgB0ADP////94YwAg/////5ADAAz/////gV0AAP////8vigAA/////0Ce/6T/////g74AIP////8vnQAA/////0GeACj/////e70AIP////9/4/t4/////4C9AAT/////gJ0ACP////98pQe0/////0gAAAH8AAADg70AAP////8vnQAA/////0Ce/+D/////f+P7eP////84gAAC/////0gAAAH8AAADgB4ADP////85IAAX/////4CcAAj/////f+P7eP////98AEg4/////zigAAD/////kBwADP////9IAAAB/AAAA+gBALD/////f+P7eP/////rQQBw/////+thAHj/////fAgDpv/////rgQCA/////+uhAIj/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////84YAAA/////0gAAAH8AAADYAAAAP////9L//6s/////31pW3j/////kX0ABP////8viQAA/////0Ce/+T/////S//+aP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt8ios_base7copyfmtERKS_
+    size: 544
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt8ios_base5_TidyEv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt8ios_base8_FindarrEi
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt8ios_base17register_callbackEPFvNS_5eventERS_iEi
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt8ios_base8_CallfnsENS_5eventE
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt8ios_base5clearENSt5_IosbIiE8_IostateEb
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 60
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 136
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 192
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 224
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 316
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 344
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 404
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 428
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 460
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 512
+    kind: rel24
+    symbol: 3
+    addend: 0

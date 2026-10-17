@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: 35fa3abca8994365b0c4221cc5dcbcfffa23319a
+  signature: gSIAAP//AAB4awAg/////4FCAAD//wAAgQIAAP//AAB9Y1t4/////4AJAAD/////kAsAAP////+BKgAA/////5ErAAT/////gAoABP////+QCwAI/////6EqAAj/////sSsADP////+gCgAK/////7ALAA7/////gSgAAP////+RKwAQ/////6AIAAT/////sAsAFP////+hKAAG/////7ErABb/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt15basic_streambufIwSt11char_traitsIwEE7seekoffElNSt5_IosbIiE8_SeekdirENS4_9_OpenmodeE
+    size: 88
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@000A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 10
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 14
+    kind: l
+    symbol: 3
+    addend: -28621288

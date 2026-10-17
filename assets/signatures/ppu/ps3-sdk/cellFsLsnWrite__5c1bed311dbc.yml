@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 2017481155cbdb45d11d3a113e7613307bf41aa6
+  signature: PGCAAf////9gYwA3/////06AACD/////AAAAAP////8ACQAA/////wAAAAD/////
+  symbols:
+  - kind: Function
+    name: .cellFsLsnWrite
+    size: 24
+    flags: 1
+    section: .text
+  relocations: []

@@ -1,0 +1,23 @@
+- symbol: 0
+  hash: e6e238628aade79fb7d1a439d0d0509d2a5970fc
+  signature: LCMAAP////98CAKm/////3xpG3j/////PGAAev/////4If+B//////vhAHj/////YGMSAv/////7wQBw/////3yfI3j/////+AEAkP////9BwgBU/////4AJAAT/////PGAAev////8vBAAA/////4PJAAj/////f4AgAP////9gYxIK/////0GcADj/////QZgANP////84YAAA/////0gAAAH8AAADYAAAAP////9X4CA2/////+vhAHj/////fADyFP/////rwQBw/////3gDACD/////6AEAkP////84IQCA/////3wIA6b/////ToAAIP////9IAAAB/AAAA2AAAAD/////6AEAkP////84YAAA/////+vBAHD/////6+EAeP////98CAOm/////zghAID/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSEQGetPoint
+    size: 160
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 80
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 124
+    kind: rel24
+    symbol: 1
+    addend: 0

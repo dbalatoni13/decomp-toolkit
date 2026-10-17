@@ -1,0 +1,23 @@
+- symbol: 0
+  hash: eee5ef366a00bc2d5322e066d40f51338f8ac13c
+  signature: +CH/kf////98CAKm//////gBAID/////OAP///////88YAB6/////yuAAAf/////YGMSAv////9AnQAg/////0gAAAH8AAADYAAAAP/////oAQCA/////zhg////////fAgDpv////84IQBw/////06AACD/////OGAAAP////9IAAAB/AAAA2AAAAD/////6AEAgP////84YAGA/////3wIA6b/////OCEAcP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSFXFilterGetNeededMemorySize
+    size: 92
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 64
+    kind: rel24
+    symbol: 1
+    addend: 0

@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 22d767e034d3428fc5bb5d4fe14b64cb855e27ee
+  signature: +CH/gf////98CAKm//////vhAHj/////OIAABP/////4AQCQ/////3x/G3j/////gQMACP////+AAwAE/////zkoABD/////f4kAQP////9BnQBU/////zkoAAj/////OAAAAP////95KQAg/////3kIACD/////PWAABP////89QAAE/////5AIAAT/////YWsBEP////9hSgFA/////zjpAAj/////kWgAAP////84AAAB/////5FJAAD/////kP8ACP////+QCQAE/////+gBAJD/////6+EAeP////84IQCA/////3wIA6b/////ToAAIP////+BIwAM/////4AJAAD/////+EEAKP////98CQOm/////4BJAAT/////ToAEIf/////oQQAo/////y+jAAD/////QJ7/zP////+BHwAI/////0v//4j/////
+  symbols:
+  - kind: Function
+    name: .cellGcmSetPerfMonTrigger
+    size: 168
+    flags: 1
+    section: .text
+  relocations: []

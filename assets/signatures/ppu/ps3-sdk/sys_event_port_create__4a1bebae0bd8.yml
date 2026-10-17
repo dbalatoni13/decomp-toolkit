@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: 4086ec45de36f632c9cfa78487cae7f7674aa94c
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4/////3xgG3j/////fIsjeP/////4vwCA/////5AfAHD/////kX8AeP////+AHwBw/////3gAACD/////fAMDeP////+AHwB4/////3wAB7T/////fAQDeP/////ovwCA/////zlgAIb/////RAAAAv////98YBt4/////3wAB7T/////fAMDeP/////pYQAA/////+gLABD/////fAgDpv/////r6//4/////31hW3j/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .sys_event_port_create
+    size: 112
+    flags: 2
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: 39c8fb9bd51ff4713ecda87af528691d87864312
+  signature: OWAAhv////98CAKm//////gBABD/////RAAAAv/////oAQAQ/////3xjB7T/////fAgDpv////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .sys_event_port_create
+    size: 32
+    flags: 2
+    section: .text
+  relocations: []

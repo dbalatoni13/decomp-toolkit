@@ -1,0 +1,886 @@
+- symbol: 0
+  hash: b40def39893a659b92f10e1dc4005a5abf0c23a3
+  signature: gSIAAP//AAB8CAKm//////gh/1H/////+6EAmP/////74QCo//////gBAMD/////iAkAAP////8vgAAB/////0GeABj/////gIIAAP//AACAYgAA//8AAEgAAAH8AAAD6EEAKP////9IAAAA/////zgAAAD/////gGIAAP//AACYCQAA/////0gAAAH8AAAD6EEAKP////+D4gAA//8AAIAfAAD/////fAAHtP////8vgAAB/////0GeAQT/////L6AAAP////9AngC8/////4OiAAD//wAAOIAAAP////85YAC+/////2CE+vr/////gH0AAP////9EAAAC/////4O/AAD/////L50AAP////9AngDA/////4OiAAD//wAAOIEAcP////84oAAA/////zlgAIL/////gH0AAP////9EAAAC//////iBAHD/////+KEAeP/////4wQCA//////jhAIj/////g6IAAP//AAA4gAAB/////zigACr/////OWAAwP////+AfQAA/////0QAAAL/////g6IAAP//AAA4gAAA/////zlgAIH/////gH0AAP////9EAAAC/////4OiAAD//wAAgB0AAP////8vgAAA/////0GeAAj/////SAAAAfwAAAODogAA//8AADiAAAD/////OWAAsf////+AfQAA/////0QAAAL/////OWAAq/////+AfQAA/////0QAAAL/////gGIAAP//AABIAAAB/AAAA+hBACj/////OGAAAP////9IAAAB/AAAA+gBAMD/////gSIAAP//AADroQCY/////3wIA6b/////6+EAqP////84IQCw/////4BpAAD/////ToAAIP////+AggAA//8AADigAAH/////gGIAAP//AABIAAAB/AAAA+hBACj/////S///WP////+BYgAA//8AADgAAAD/////gSIAAP//AABgAPr6/////4BiAAD//wAAkAkAAP////+AiwAA/////0gAAAH8AAAD6EEAKP////+AHwAA/////y+AAAD/////QJ4AdP////+DogAA//8AADiBAHD/////OKAAAP////85YACC/////4B9AAD/////RAAAAv/////4gQBw//////ihAHj/////+MEAgP/////44QCI/////4EiAAD//wAAgAkAAP////8vgAAA/////0GeABD/////gSIAAP//AACAaQAA/////0gAAAH8AAADgGIAAP//AABIAAAB/AAAA+hBACj/////g6IAAP//AAB/o+t4/////0gAAAH8AAAD6EEAKP////9/o+t4/////0gAAAH8AAAD6EEAKP////9L//8k/////4CCAAD//wAAOKAAAf////+AYgAA//8AAEgAAAH8AAAD6EEAKP////9L//+k/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSSystemClose
+    size: 536
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002C'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_destroy
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@004E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@008E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00E2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__spu_printf_server_finalize_MS
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00F6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0116'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_spu_image_close
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@012E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@014A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0152'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellSpursEventFlagWait
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@0162'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@016A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0172'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._cellSpursSendSignal
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@01CA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .spurs_printf_service_finalize_MS
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellSpursEventFlagDetachLv2EventQueue
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellSpursShutdownTaskset
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellSpursJoinTaskset
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 38
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 42
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 44
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 62
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 68
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 78
+    kind: l
+    symbol: 7
+    addend: -14104088
+  - offset: 106
+    kind: l
+    symbol: 8
+    addend: -14104088
+  - offset: 142
+    kind: l
+    symbol: 9
+    addend: -14104088
+  - offset: 182
+    kind: l
+    symbol: 8
+    addend: -14104088
+  - offset: 206
+    kind: l
+    symbol: 9
+    addend: -14104088
+  - offset: 226
+    kind: l
+    symbol: 10
+    addend: -14104088
+  - offset: 240
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 246
+    kind: l
+    symbol: 12
+    addend: -14104088
+  - offset: 278
+    kind: l
+    symbol: 13
+    addend: -14104088
+  - offset: 280
+    kind: rel24
+    symbol: 14
+    addend: 0
+  - offset: 292
+    kind: rel24
+    symbol: 15
+    addend: 0
+  - offset: 302
+    kind: l
+    symbol: 16
+    addend: -14104088
+  - offset: 330
+    kind: l
+    symbol: 17
+    addend: -14104088
+  - offset: 338
+    kind: l
+    symbol: 18
+    addend: -14104088
+  - offset: 340
+    kind: rel24
+    symbol: 19
+    addend: 0
+  - offset: 354
+    kind: l
+    symbol: 20
+    addend: -14104088
+  - offset: 362
+    kind: l
+    symbol: 21
+    addend: -14104088
+  - offset: 370
+    kind: l
+    symbol: 22
+    addend: -14104088
+  - offset: 380
+    kind: rel24
+    symbol: 23
+    addend: 0
+  - offset: 402
+    kind: l
+    symbol: 9
+    addend: -14104088
+  - offset: 442
+    kind: l
+    symbol: 10
+    addend: -14104088
+  - offset: 458
+    kind: l
+    symbol: 24
+    addend: -14104088
+  - offset: 464
+    kind: rel24
+    symbol: 25
+    addend: 0
+  - offset: 470
+    kind: l
+    symbol: 18
+    addend: -14104088
+  - offset: 472
+    kind: rel24
+    symbol: 26
+    addend: 0
+  - offset: 482
+    kind: l
+    symbol: 22
+    addend: -14104088
+  - offset: 488
+    kind: rel24
+    symbol: 27
+    addend: 0
+  - offset: 500
+    kind: rel24
+    symbol: 28
+    addend: 0
+  - offset: 514
+    kind: l
+    symbol: 17
+    addend: -14104088
+  - offset: 522
+    kind: l
+    symbol: 18
+    addend: -14104088
+  - offset: 524
+    kind: rel24
+    symbol: 19
+    addend: 0
+- symbol: 0
+  hash: 966421c9076a9c13dbff3854e572d694f593d609
+  signature: gSIAAP//AAB8CAKm//////gh/1H/////+6EAmP/////74QCo//////gBAMD/////iAkAAP////8vgAAB/////0GeABj/////gIIAAP//AACAYgAA//8AAEgAAAH8AAADYAAAAP////9IAAAA/////zgAAAD/////gGIAAP//AACYCQAA/////0gAAAH8AAAD6EEAKP////+D4gAA//8AAIAfAAD/////fAAHtP////8vgAAB/////0GeANT/////L6AAAP////9AngCY/////4OiAAD//wAAOIAAAP////85YAC+/////2CE+vr/////gH0AAP////9EAAAC/////4O/AAD/////L50AAP////9AngE4/////4OiAAD//wAAOIEAcP////84oAAA/////zlgAIL/////gH0AAP////9EAAAC//////iBAHD/////+KEAeP/////4wQCA//////jhAIj/////g6IAAP//AAA4gAAB/////zigACr/////OWAAwP////+AfQAA/////0QAAAL/////SAAAAfwAAAM4gAAA/////4OiAAD//wAAOWAAsf////+AfQAA/////0QAAAL/////OWAAq/////+AfQAA/////0QAAAL/////gGIAAP//AABIAAAB/AAAA+hBACj/////gSIAAP//AAA4AP///////zhgAAD/////kAkAAP////9IAAAB/AAAA+gBAMD/////gSIAAP//AADroQCY/////3wIA6b/////6+EAqP////84IQCw/////4BpAAD/////ToAAIP////+BYgAA//8AADgAAAD/////gSIAAP//AABgAPr6/////4BiAAD//wAAkAkAAP////+AiwAA/////0gAAAH8AAAD6EEAKP////+AHwAA/////y+AAAD/////QJ4AfP////+DogAA//8AADiBAHD/////OKAAAP////85YACC/////4B9AAD/////RAAAAv/////4gQBw//////ihAHj/////+MEAgP/////44QCI/////4EiAAD//wAAgGkAAP////9IAAAB/AAAA4BiAAD//wAASAAAAfwAAAPoQQAo/////4OiAAD//wAAf6PreP////9IAAAB/AAAA+hBACj/////f6PreP////9IAAAB/AAAA+hBACj/////S///QP////+AggAA//8AADigAAH/////gGIAAP//AABIAAAB/AAAA+hBACj/////S//+4P////+AggAA//8AADigAAH/////gGIAAP//AABIAAAB/AAAA+hBACj/////S///nP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSSystemClose
+    size: 496
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_destroy
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@004E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@008E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__spu_printf_server_finalize_MS
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00D6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00F2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_spu_image_close
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@00FE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0116'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0132'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@013A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0142'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._cellSpursSendSignal
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@018A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .spurs_printf_service_finalize_MS
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0196'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellSpursEventFlagDetachLv2EventQueue
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellSpursShutdownTaskset
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellSpursJoinTaskset
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@01C2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellSpursEventFlagWait
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 38
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 42
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 44
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 62
+    kind: l
+    symbol: 5
+    addend: -6468872
+  - offset: 68
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 78
+    kind: l
+    symbol: 7
+    addend: -6468872
+  - offset: 106
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 142
+    kind: l
+    symbol: 9
+    addend: -6468872
+  - offset: 182
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 204
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 214
+    kind: l
+    symbol: 11
+    addend: -6468872
+  - offset: 242
+    kind: l
+    symbol: 12
+    addend: -6468872
+  - offset: 244
+    kind: rel24
+    symbol: 13
+    addend: 0
+  - offset: 254
+    kind: l
+    symbol: 14
+    addend: -6468872
+  - offset: 268
+    kind: rel24
+    symbol: 15
+    addend: 0
+  - offset: 278
+    kind: l
+    symbol: 16
+    addend: -6468872
+  - offset: 306
+    kind: l
+    symbol: 17
+    addend: -6468872
+  - offset: 314
+    kind: l
+    symbol: 18
+    addend: -6468872
+  - offset: 322
+    kind: l
+    symbol: 19
+    addend: -6468872
+  - offset: 332
+    kind: rel24
+    symbol: 20
+    addend: 0
+  - offset: 354
+    kind: l
+    symbol: 9
+    addend: -6468872
+  - offset: 394
+    kind: l
+    symbol: 21
+    addend: -6468872
+  - offset: 400
+    kind: rel24
+    symbol: 22
+    addend: 0
+  - offset: 406
+    kind: l
+    symbol: 23
+    addend: -6468872
+  - offset: 408
+    kind: rel24
+    symbol: 24
+    addend: 0
+  - offset: 418
+    kind: l
+    symbol: 19
+    addend: -6468872
+  - offset: 424
+    kind: rel24
+    symbol: 25
+    addend: 0
+  - offset: 436
+    kind: rel24
+    symbol: 26
+    addend: 0
+  - offset: 450
+    kind: l
+    symbol: 27
+    addend: -6468872
+  - offset: 458
+    kind: l
+    symbol: 23
+    addend: -6468872
+  - offset: 460
+    kind: rel24
+    symbol: 28
+    addend: 0
+  - offset: 474
+    kind: l
+    symbol: 27
+    addend: -6468872
+  - offset: 482
+    kind: l
+    symbol: 23
+    addend: -6468872
+  - offset: 484
+    kind: rel24
+    symbol: 28
+    addend: 0
+- symbol: 0
+  hash: a397691375667e471e5015a8d8cfc2a0ea0e3771
+  signature: gSIAAP//AAB8CAKm//////gh/1H/////+6EAmP/////74QCo//////gBAMD/////iAkAAP////8vgAAB/////0GeABj/////gIIAAP//AACAYgAA//8AAEgAAAH8AAADYAAAAP////9IAAAA/////zgAAAD/////gGIAAP//AACYCQAA/////0gAAAH8AAAD6EEAKP////+D4gAA//8AAIAfAAD/////fAAHtP////8vgAAB/////0GeAQT/////L6AAAP////9AngC8/////4OiAAD//wAAOIAAAP////85YAC+/////2CE+vr/////gH0AAP////9EAAAC/////4O/AAD/////L50AAP////9AngDA/////4OiAAD//wAAOIEAcP////84oAAA/////zlgAIL/////gH0AAP////9EAAAC//////iBAHD/////+KEAeP/////4wQCA//////jhAIj/////g6IAAP//AAA4gAAB/////zigACr/////OWAAwP////+AfQAA/////0QAAAL/////g6IAAP//AAA4gAAA/////zlgAIH/////gH0AAP////9EAAAC/////4OiAAD//wAAgB0AAP////8vgAAA/////0GeAAj/////SAAAAfwAAAODogAA//8AADiAAAD/////OWAAsf////+AfQAA/////0QAAAL/////OWAAq/////+AfQAA/////0QAAAL/////gGIAAP//AABIAAAB/AAAA+hBACj/////OGAAAP////9IAAAB/AAAA+gBAMD/////gSIAAP//AADroQCY/////3wIA6b/////6+EAqP////84IQCw/////4BpAAD/////ToAAIP////+AggAA//8AADigAAH/////gGIAAP//AABIAAAB/AAAA+hBACj/////S///WP////+BYgAA//8AADgAAAD/////gSIAAP//AABgAPr6/////4BiAAD//wAAkAkAAP////+AiwAA/////0gAAAH8AAAD6EEAKP////+AHwAA/////y+AAAD/////QJ4AdP////+DogAA//8AADiBAHD/////OKAAAP////85YACC/////4B9AAD/////RAAAAv/////4gQBw//////ihAHj/////+MEAgP/////44QCI/////4EiAAD//wAAgAkAAP////8vgAAA/////0GeABD/////gSIAAP//AACAaQAA/////0gAAAH8AAADgGIAAP//AABIAAAB/AAAA+hBACj/////g6IAAP//AAB/o+t4/////0gAAAH8AAAD6EEAKP////9/o+t4/////0gAAAH8AAAD6EEAKP////9L//8k/////4CCAAD//wAAOKAAAf////+AYgAA//8AAEgAAAH8AAAD6EEAKP////9L//+k/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSSystemClose
+    size: 536
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_destroy
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@004E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@008E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00E2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__spu_printf_server_finalize_MS
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00F6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0116'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_spu_image_close
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@012E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@014A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0152'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellSpursEventFlagWait
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@0162'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@016A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0172'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._cellSpursSendSignal
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@01CA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .spurs_printf_service_finalize_MS
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellSpursEventFlagDetachLv2EventQueue
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellSpursShutdownTaskset
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellSpursJoinTaskset
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 38
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 42
+    kind: l
+    symbol: 3
+    addend: -15311144
+  - offset: 44
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 62
+    kind: l
+    symbol: 5
+    addend: -15311144
+  - offset: 68
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 78
+    kind: l
+    symbol: 7
+    addend: -15311144
+  - offset: 106
+    kind: l
+    symbol: 8
+    addend: -15311144
+  - offset: 142
+    kind: l
+    symbol: 9
+    addend: -15311144
+  - offset: 182
+    kind: l
+    symbol: 8
+    addend: -15311144
+  - offset: 206
+    kind: l
+    symbol: 9
+    addend: -15311144
+  - offset: 226
+    kind: l
+    symbol: 10
+    addend: -15311144
+  - offset: 240
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 246
+    kind: l
+    symbol: 12
+    addend: -15311144
+  - offset: 278
+    kind: l
+    symbol: 13
+    addend: -15311144
+  - offset: 280
+    kind: rel24
+    symbol: 14
+    addend: 0
+  - offset: 292
+    kind: rel24
+    symbol: 15
+    addend: 0
+  - offset: 302
+    kind: l
+    symbol: 16
+    addend: -15311144
+  - offset: 330
+    kind: l
+    symbol: 17
+    addend: -15311144
+  - offset: 338
+    kind: l
+    symbol: 18
+    addend: -15311144
+  - offset: 340
+    kind: rel24
+    symbol: 19
+    addend: 0
+  - offset: 354
+    kind: l
+    symbol: 20
+    addend: -15311144
+  - offset: 362
+    kind: l
+    symbol: 21
+    addend: -15311144
+  - offset: 370
+    kind: l
+    symbol: 22
+    addend: -15311144
+  - offset: 380
+    kind: rel24
+    symbol: 23
+    addend: 0
+  - offset: 402
+    kind: l
+    symbol: 9
+    addend: -15311144
+  - offset: 442
+    kind: l
+    symbol: 10
+    addend: -15311144
+  - offset: 458
+    kind: l
+    symbol: 24
+    addend: -15311144
+  - offset: 464
+    kind: rel24
+    symbol: 25
+    addend: 0
+  - offset: 470
+    kind: l
+    symbol: 18
+    addend: -15311144
+  - offset: 472
+    kind: rel24
+    symbol: 26
+    addend: 0
+  - offset: 482
+    kind: l
+    symbol: 22
+    addend: -15311144
+  - offset: 488
+    kind: rel24
+    symbol: 27
+    addend: 0
+  - offset: 500
+    kind: rel24
+    symbol: 28
+    addend: 0
+  - offset: 514
+    kind: l
+    symbol: 17
+    addend: -15311144
+  - offset: 522
+    kind: l
+    symbol: 18
+    addend: -15311144
+  - offset: 524
+    kind: rel24
+    symbol: 19
+    addend: 0

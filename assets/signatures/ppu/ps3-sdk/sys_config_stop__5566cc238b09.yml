@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: d5963b94f29bbc4f56d7e50aeedd7af28252ba03
+  signature: +CH/kf////98CAKm//////gBAID/////SAAAAfwAAANgAAAA/////+gBAID/////OCEAcP////98CAOm/////06AACD/////AAAAAP////8ACQAB/////4AAAAD/////
+  symbols:
+  - kind: Function
+    name: .sys_config_stop
+    size: 48
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZN5iosys6config20config_service_agent4stopEv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 12
+    kind: rel24
+    symbol: 1
+    addend: 0

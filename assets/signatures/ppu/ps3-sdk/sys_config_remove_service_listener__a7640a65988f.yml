@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 7c3482f806fc0d82894251d0c9493f5aa34ebae1
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP/////4AQCg/////0gAAAH8AAADYAAAAP////9/pOt4/////0gAAAH8AAADYAAAAP/////oAQCg/////+uhAHj/////OCEAkP////98CAOm/////06AACD/////AAAAAP////8ACQAB/////4ADAAD/////
+  symbols:
+  - kind: Function
+    name: .sys_config_remove_service_listener
+    size: 72
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZN5iosys6config20config_service_agent12get_instanceEv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZN5iosys6config20config_service_agent23remove_service_listenerEj
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 32
+    kind: rel24
+    symbol: 2
+    addend: 0

@@ -1,0 +1,55 @@
+- symbol: 0
+  hash: d4550e2515f90791018aca8d3f60aa078f2f3f5a
+  signature: gMIAAP//AAB8CAKm//////gh/5H/////+AEAgP////985ADQ/////4FCAAD//wAAgQIAAP//AACBJgAA/////4CiAAD//wAAfSkiFP////+BagAA/////zkp////////gAgAAP////99KTg4/////3wAWhT/////eSkAIP////98Y0oU/////3hjACD/////f4AYQP////+QZgAA/////5BlAAD/////QdwAGP/////oAQCA/////30jS3j/////OCEAcP////98CAOm/////06AACD/////OGAAAf////9IAAAB/AAAA+hBACj/////
+  symbols:
+  - kind: Function
+    name: .cellGcmUtilAllocateLocalMemory
+    size: 120
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@001A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0022'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0070'
+    size: 0
+    flags: 2
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -10154688
+  - offset: 22
+    kind: l
+    symbol: 2
+    addend: -10154688
+  - offset: 26
+    kind: l
+    symbol: 3
+    addend: -10154688
+  - offset: 34
+    kind: l
+    symbol: 4
+    addend: -10154688
+  - offset: 112
+    kind: rel24
+    symbol: 5
+    addend: 0

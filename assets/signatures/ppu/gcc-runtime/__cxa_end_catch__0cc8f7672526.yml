@@ -1,0 +1,50 @@
+- symbol: 0
+  hash: 09a8c59e6430badd958976abf343e98fbd393187
+  signature: +CH/kf////98CAKm//////gBAID/////SAAAAfwAAANgAAAA/////4FjAAD/////fGobeP////8vqwAA/////0GeACz/////6SIAAP//AAPoCwAw/////3+gSAD/////QZ4ALP////84awAw/////zgAAAD/////eGMAIP////+QCgAA/////0gAAAH8AAADYAAAAP/////oAQCA/////zghAHD/////fAgDpv////9OgAAg/////4ALABT/////fAkHtP////8viQAA/////0GcAFj/////OAn///////98CQe0/////y+pAAD/////QZ4AIP////8viQAA/////0HcAGD/////kSsAFP/////oAQCA/////zghAHD/////fAgDpv////9OgAAg/////zhrADD/////gAsAEP////94YwAg/////5AKAAD/////SAAAAfwAAANgAAAA/////+gBAID/////OCEAcP////98CAOm/////06AACD/////OAkAAf////98CQe0/////y+pAAD/////QJ7/uP////+ACwAQ/////5ErABT/////kAMAAP////9L//+s/////0gAAAH8AAADYAAAAP////8=
+  symbols:
+  - kind: Function
+    name: .__cxa_end_catch
+    size: 232
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cxa_get_globals_fast
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Unwind_DeleteException
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZSt9terminatev
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 12
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 38
+    kind: lo_ds
+    symbol: 2
+    addend: -10216440
+  - offset: 68
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 168
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 224
+    kind: rel24
+    symbol: 4
+    addend: 0

@@ -1,0 +1,312 @@
+- symbol: 0
+  hash: bbd98b271de567a42867ec788b582587140739a7
+  signature: LCQAAP////98CAKm//////gh/xH/////+0EAwP////98miN4//////vBAOD/////fL4reP/////7YQDI//////uBAND/////+6EA2P/////74QDo//////gBAQD/////QcIC5P////9IAAAB/AAAAywjAAD/////QIIBvP////+AAgAA//8AADlgAH//////OMAAAf////+QYQCE/////31pA6b/////fAUDeP////85YAAC/////5DBAIz/////OIAAAP////+QYQB8/////5FhAIj/////kAEAgP////9IAAAM/////3zEB7T/////QkAAHP////+IBQAA/////zllAAH/////OMQAAf////8vgAAA/////3llACD/////QJ7/5P////84BAAB/////4BiAAD//wAAOIEAiP////+QAQB8/////zigAAD/////OMAAIP////85YACA/////0QAAAL/////fH8HtP////8vvwAA/////0DeAdz/////f8XzeP////+AYgAA//8AADiAAAH/////OMEAfP////85YACq/////0QAAAL/////fH0HtP////8vvQAA/////0CeAYz/////gIIAAP//AAA4oAAB/////4BiAAD//wAASAAAAfwAAAPoQQAo/////zkgAH//////gAIAAP//AAA44AAA/////30pA6b/////k6EAeP////98CwN4/////5OhAHT/////kAEAcP////9IAAAM/////30HB7T/////QkAAHP////+ICwAA/////zlrAAH/////OQcAAf////8vgAAA/////3lrACD/////QJ7/5P////+DYgAA//8AADgHAAH/////g4IAAP//AAA4oAAA/////5ABAHT/////OOEAcP////9/g+N4/////4DCAAD//wAAOQEAmP////+AmwAA/////zlgAKz/////RAAAAv////98fge0/////y++AAD/////QN4BgP////+DogAA//8AADigAAH/////gHwAAP////84wAAq/////zlgAL//////gJ0AAP////9EAAAC/////3x/B7T/////L78AAP////9A3gEs/////4B7AAD/////OWAArf////9EAAAC/////3xlB7T/////L6UAAP////9A3gFM/////4AaAAz/////VB8HOP////8vnwAA/////0GeAFz/////gSIAAP//AACAYgAA//8AAICJAAD/////SAAAAfwAAANgAAAA/////zgAAAD/////gSIAAP//AACQCQAA/////0gAAAH8AAADOGAAAP////9IAAAB/AAAAzhgAAD/////6AEBAP/////rQQDA/////+thAMj/////fAgDpv/////rgQDQ/////+uhANj/////68EA4P/////r4QDo/////zghAPD/////ToAAIP////9IAAAB/AAAAywjAAD/////QIIAWP////+AfAAA/////0gAAAH8AAADLCMAAP////9B4v+Q/////3xlG3j/////gIIAAP//AACAYgAA//8AAEgAAAH8AAADYAAAAP////88YAB6/////2BjEgT/////SAAAAfwAAAM4YP///////4EiAAD//wAAm+kAAP////9L//+Q/////4BiAAD//wAAf6TreP////9IAAAB/AAAA2AAAAD/////S///1P////98ZRt4/////4CCAAD//wAAgGIAAP//AABIAAAB/AAAA2AAAAD/////S///vP////+AYgAA//8AAH/k+3j/////SAAAAfwAAANgAAAA/////zxgAHr/////YGMSBP////9IAAAB/AAAAzgAAAD/////gSIAAP//AAA4YP///////5gJAAD/////S///NP////+AYgAA//8AAH/k+3j/////SAAAAfwAAANgAAAA/////zxgAHr/////YGMSBP////9IAAAB/AAAAzhg////////gSIAAP//AACbyQAA/////0v//wj/////gGIAAP//AAB/xPN4/////0v//6T/////gIIAAP//AACAYgAA//8AAEgAAAH8AAADYAAAAP////9L//9A/////zxgAHr/////YGMSAv////9IAAAB/AAAAzhg////////S//+1P////8=
+  symbols:
+  - kind: Function
+    name: .cellMSSystemInitSPUThread
+    size: 808
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cellMSSystemInitBasic
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0042'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@009A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00C6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00E6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00EE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_spu_image_import
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@00FE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0146'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01CE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@01E2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__gaf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__spu_printf_server_initialize_MS
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__spu_printf_server_register_MS
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0242'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0246'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .fprintf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0262'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@026E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0286'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@029A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@02CA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@02F6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0302'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 52
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 66
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 154
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 198
+    kind: l
+    symbol: 4
+    addend: -6468872
+  - offset: 230
+    kind: l
+    symbol: 5
+    addend: -6468872
+  - offset: 238
+    kind: l
+    symbol: 6
+    addend: -6468872
+  - offset: 240
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 254
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 318
+    kind: l
+    symbol: 4
+    addend: -6468872
+  - offset: 326
+    kind: l
+    symbol: 9
+    addend: -6468872
+  - offset: 346
+    kind: l
+    symbol: 6
+    addend: -6468872
+  - offset: 378
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 458
+    kind: l
+    symbol: 9
+    addend: -6468872
+  - offset: 462
+    kind: l
+    symbol: 10
+    addend: -6468872
+  - offset: 468
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 482
+    kind: l
+    symbol: 12
+    addend: -6468872
+  - offset: 488
+    kind: rel24
+    symbol: 13
+    addend: 0
+  - offset: 496
+    kind: rel24
+    symbol: 14
+    addend: 0
+  - offset: 544
+    kind: rel24
+    symbol: 15
+    addend: 0
+  - offset: 560
+    kind: rel24
+    symbol: 16
+    addend: 0
+  - offset: 578
+    kind: l
+    symbol: 17
+    addend: -6468872
+  - offset: 582
+    kind: l
+    symbol: 18
+    addend: -6468872
+  - offset: 584
+    kind: rel24
+    symbol: 19
+    addend: 0
+  - offset: 600
+    kind: rel24
+    symbol: 14
+    addend: 0
+  - offset: 610
+    kind: l
+    symbol: 20
+    addend: -6468872
+  - offset: 622
+    kind: l
+    symbol: 21
+    addend: -6468872
+  - offset: 628
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 646
+    kind: l
+    symbol: 22
+    addend: -6468872
+  - offset: 650
+    kind: l
+    symbol: 18
+    addend: -6468872
+  - offset: 652
+    kind: rel24
+    symbol: 19
+    addend: 0
+  - offset: 666
+    kind: l
+    symbol: 23
+    addend: -6468872
+  - offset: 672
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 688
+    kind: rel24
+    symbol: 14
+    addend: 0
+  - offset: 698
+    kind: l
+    symbol: 20
+    addend: -6468872
+  - offset: 714
+    kind: l
+    symbol: 24
+    addend: -6468872
+  - offset: 720
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 736
+    kind: rel24
+    symbol: 14
+    addend: 0
+  - offset: 746
+    kind: l
+    symbol: 20
+    addend: -6468872
+  - offset: 758
+    kind: l
+    symbol: 25
+    addend: -6468872
+  - offset: 770
+    kind: l
+    symbol: 26
+    addend: -6468872
+  - offset: 774
+    kind: l
+    symbol: 18
+    addend: -6468872
+  - offset: 776
+    kind: rel24
+    symbol: 19
+    addend: 0
+  - offset: 796
+    kind: rel24
+    symbol: 14
+    addend: 0

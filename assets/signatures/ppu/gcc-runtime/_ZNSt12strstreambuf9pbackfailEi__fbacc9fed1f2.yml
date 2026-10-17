@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: d5155b6bed007d90e7c8419fb4191ad6c19b6c5d
+  signature: gOMAIP////84oP///////3xmG3j/////gWcAAP////8viwAA/////0CeAAz/////fKMHtP////9OgAAg/////4EjABD/////LwT///////+ACQAA/////3+AWED/////QJz/6P////85i////////1SKBj7/////eYkAIP////9BmgBI/////4gJAAD/////f4BQAP////9AngBo/////4FGAFD/////VIUGPv////+BJgAg/////4EGAFT/////kYcAAP/////pagAA/////4DpAAD/////OWv////////5agAA/////+koAAD/////OSn////////5KAAA/////5iHAAD/////S///lP////+BQwBQ/////zigAAD/////gQMAVP////+RhwAA/////+kqAAD/////OSn////////5KgAA/////+loAAD/////OWv////////5aAAA/////0v//2j/////gAMAZP////9UAAe8/////y+AAAD/////QZ7/kP////9L//9U/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt12strstreambuf9pbackfailEi
+    size: 200
+    flags: 1
+    section: .text
+  relocations: []

@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: aafe88d4c65b1c70b48394effd2268e58c4055b8
+  signature: +CH/gf////98CAKm//////vhAHj/////+AEAkP////98fxt4/////0gAAAH8AAADYAAAAP////8vgwAA/////zlg////////e+MAIP////9AngAc/////+gBAJD/////eWMAIP/////r4QB4/////zghAID/////fAgDpv////9OgAAg/////0gAAAH8AAADOWAAAP////8vgwAA/////0CeACz/////gGKLdP////9IAAAB/AAAA2AAAAD/////6AEAkP/////r4QB4/////zlg//7/////fAgDpv////84IQCA/////3ljACD/////ToAAIP////+IAwAc/////4EjABT/////aAAAAf////85KQAB/////5gDABz/////6AEAkP////+RIwAU/////+vhAHj/////eWMAIP////98CAOm/////zghAID/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellConsolePerfDataIncrementDataCounter
+    size: 172
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleInitialized
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._cellConsolePerfDataDataSetValid
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .puts
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 68
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 88
+    kind: rel24
+    symbol: 3
+    addend: 0

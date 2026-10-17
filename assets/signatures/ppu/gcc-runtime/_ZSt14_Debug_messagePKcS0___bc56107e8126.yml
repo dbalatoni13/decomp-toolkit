@@ -1,0 +1,216 @@
+- symbol: 0
+  hash: 8758f0d51419ce5a6573698a9695708a94686e98
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP////84YAAA//////vBAID/////++EAiP/////4AQCg/////3yfI3j/////SAAAAfwAAANgAAAA/////4PCAAD//wAAe6MAIP////9/xPN4/////0gAAAH8AAADYAAAAP////8vnwAA/////0GeACz/////f8TzeP////974wAg/////0gAAAH8AAADYAAAAP////9/xPN4/////4BiAAD//wAASAAAAfwAAANgAAAA/////0gAAAH8AAADYAAAAP////+D4gAA//8AAEv//9T/////
+  symbols:
+  - kind: Function
+    name: ._ZSt14_Debug_messagePKcS0_
+    size: 120
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .fflush
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@002E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .fputs
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@005E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .abort
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0072'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 36
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 46
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 56
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 80
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 94
+    kind: l
+    symbol: 4
+    addend: -28621288
+  - offset: 96
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 114
+    kind: l
+    symbol: 6
+    addend: -28621288
+- symbol: 0
+  hash: ebbe43e488d1339546672598ba33aa2afeeb296e
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP/////74QCI/////zhgAAD/////fJ8jeP/////7wQCA//////gBAKD/////SAAAAfwAAANgAAAA/////3+j63j/////g8IAAP//AAB/xPN4/////0gAAAH8AAADYAAAAP////8vvwAA/////0GeACz/////f8TzeP////9/4/t4/////0gAAAH8AAADYAAAAP////9/xPN4/////4BiAAD//wAASAAAAfwAAANgAAAA/////0gAAAH8AAADYAAAAP////+D4gAA//8AAEv//9T/////
+  symbols:
+  - kind: Function
+    name: ._ZSt14_Debug_messagePKcS0_
+    size: 120
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .fflush
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0032'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .fputs
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@005E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .abort
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0072'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 36
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 50
+    kind: l
+    symbol: 2
+    addend: -10216440
+  - offset: 56
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 80
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 94
+    kind: l
+    symbol: 4
+    addend: -10216440
+  - offset: 96
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 114
+    kind: l
+    symbol: 6
+    addend: -10216440
+- symbol: 0
+  hash: 3b212f44c4f765bdc045fbf6c7fffee28ece427e
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP/////74QCI/////zhgAAD/////fJ8jeP/////7wQCA//////gBAKD/////SAAAAfwAAAPoQQAo/////3+j63j/////g8IAAP//AAB/xPN4/////0gAAAH8AAAD6EEAKP////8vvwAA/////0GeACz/////f8TzeP////9/4/t4/////0gAAAH8AAAD6EEAKP////9/xPN4/////4BiAAD//wAASAAAAfwAAAPoQQAo/////0gAAAH8AAAD6EEAKP////+D4gAA//8AAEv//9T/////
+  symbols:
+  - kind: Function
+    name: ._ZSt14_Debug_messagePKcS0_
+    size: 120
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0024'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@0032'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0038'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@005E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0068'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@0072'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 36
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 50
+    kind: l
+    symbol: 2
+    addend: -14058240
+  - offset: 56
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 80
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 94
+    kind: l
+    symbol: 4
+    addend: -14058240
+  - offset: 96
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 114
+    kind: l
+    symbol: 6
+    addend: -14058240

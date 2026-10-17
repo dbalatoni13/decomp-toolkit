@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 87f9e6eebcdc69708e825a27a1995c639d73d787
+  signature: +CH/cf////98CAKm//////uBAHD/////fLwreP/////7oQB4/////3ydI3j/////+AEAoP////9IAAAB/AAAA2AAAAD/////f6TreP////9/heN4/////zlgAyb/////RAAAAv/////oAQCg/////3xjB7T/////64EAcP/////roQB4/////3wIA6b/////OCEAkP////9OgAAg/////wAAAAD/////AAkAAf////+ABAAA/////w==
+  symbols:
+  - kind: Function
+    name: .cellFsReaddir
+    size: 92
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._get_fsfd
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 28
+    kind: rel24
+    symbol: 1
+    addend: 0

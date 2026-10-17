@@ -1,0 +1,220 @@
+- symbol: 0
+  hash: 438bd27dfaef7645481d856929ac97b57cb1e834
+  signature: +CH/kf////98CAKm/////zhhAKD/////0CEAoP/////4AQCA/////0gAAAH8AAADYAAAAP////98Ywc0/////y+DAAH/////QZ4AdP////8vgwAC/////0GeAAz/////L4MAAP////9AngAY/////8AhAKD/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP/////AIQCg/////ziAAAD/////wAIAAP//AAD/gQAA/////0GcAGj/////wAIAAP//AAD/gQAA/////0CdABT/////aIQAAv/////sAAgk//////wgAJD/////0AEAoP////94hAQg/////0gAAAH8AAADYAAAAP/////oAQCA/////3wIA6b/////OCEAcP////9OgAAg/////6ABAKD/////eAmLwv////8sKQAA/////0GCABj/////6AEAgP////84IQBw/////8AiAAD//wAAfAgDpv////9OgAAg/////8AiAAD//wAAS///fP/////8AAhQ/////ziAAAj//////CAAkP/////QAQCg/////0v//4z/////
+  symbols:
+  - kind: Function
+    name: .atanf
+    size: 216
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDtest
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0056'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0062'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._FAtan
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00B2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00BE'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 86
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 98
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 128
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 178
+    kind: l
+    symbol: 5
+    addend: -28621288
+  - offset: 190
+    kind: l
+    symbol: 6
+    addend: -28621288
+- symbol: 0
+  hash: ed5b88fdbe2a6f496c017bcfd495fc0b67c632a6
+  signature: +CH/kf////98CAKm/////zhhAKD/////0CEAoP/////4AQCA/////0gAAAH8AAADYAAAAP////8vgwAB/////0GeAGz/////L4MAAv////9BngAM/////y+DAAD/////QJ4AGP/////AIQCg/////+gBAID/////OCEAcP////98CAOm/////06AACD/////wCEAoP////84gAAA/////8ACAAD//wAA/4EAAP////9BnABg/////8ACAAD//wAA/4EAAP////9AnQAQ/////2iEAAL/////7CAIJP/////QIQCg/////0gAAAH8AAADYAAAAP/////oAQCA/////zghAHD/////fAgDpv////9OgAAg/////6ABAKD/////eAmLwv////8sKQAA/////0GCABj/////6AEAgP////84IQBw/////8AiAAD//wAAfAgDpv////9OgAAg/////8AiAAD//wAAS///hP/////8IAhQ/////ziAAAj/////0CEAoP////9L//+Y/////w==
+  symbols:
+  - kind: Function
+    name: .atanf
+    size: 200
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDtest
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0052'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._FAtan
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00A6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00B2'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 82
+    kind: l
+    symbol: 2
+    addend: -10216440
+  - offset: 94
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 116
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 166
+    kind: l
+    symbol: 5
+    addend: -10216440
+  - offset: 178
+    kind: l
+    symbol: 6
+    addend: -10216440
+- symbol: 0
+  hash: b63a53968c4e3e717d71d0b914c6460bffa14ba6
+  signature: +CH/kf////98CAKm/////zhhAKD/////0CEAoP/////4AQCA/////0gAAAH8AAAD6EEAKP////8vgwAB/////0GeAGz/////L4MAAv////9BngAM/////y+DAAD/////QJ4AGP/////AIQCg/////+gBAID/////OCEAcP////98CAOm/////06AACD/////wCEAoP////84gAAA/////8ACAAD//wAA/4EAAP////9BnABg/////8ACAAD//wAA/4EAAP////9AnQAQ/////2iEAAL/////7CAIJP/////QIQCg/////0gAAAH8AAAD6EEAKP/////oAQCA/////zghAHD/////fAgDpv////9OgAAg/////6ABAKD/////eAmLwv////8sKQAA/////0GCABj/////6AEAgP////84IQBw/////8AiAAD//wAAfAgDpv////9OgAAg/////8AiAAD//wAAS///hP/////8IAhQ/////ziAAAj/////0CEAoP////9L//+Y/////w==
+  symbols:
+  - kind: Function
+    name: .atanf
+    size: 200
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0014'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@0052'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0074'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@00A6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00B2'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 82
+    kind: l
+    symbol: 2
+    addend: -14169624
+  - offset: 94
+    kind: l
+    symbol: 3
+    addend: -14169624
+  - offset: 116
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 166
+    kind: l
+    symbol: 5
+    addend: -14169624
+  - offset: 178
+    kind: l
+    symbol: 6
+    addend: -14169624
+- symbol: 0
+  hash: d8ec12cb76fee651bb586238cc7c8db6e33f25b4
+  signature: +CH/kf////98CAKm/////zhhAKD/////0CEAoP/////4AQCA/////0gAAAH8AAADYAAAAP////98Ywc0/////y+DAAH/////QZ4AdP////8vgwAC/////0GeAAz/////L4MAAP////9AngAY/////8AhAKD/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP/////AIQCg/////ziAAAD/////wAKepP//////gQAA/////0GcAGj/////wAKeoP//////gQAA/////0CdABT/////aIQAAv/////sAAgk//////wgAJD/////0AEAoP////94hAQg/////0gAAAH8AAADYAAAAP/////oAQCA/////3wIA6b/////OCEAcP////9OgAAg/////6ABAKD/////eAmLwv////8sKQAA/////0GCABj/////6AEAgP////84IQBw/////8Ainpj/////fAgDpv////9OgAAg/////8Ainpz/////S///fP/////8AAhQ/////ziAAAj//////CAAkP/////QAQCg/////0v//4z/////
+  symbols:
+  - kind: Function
+    name: .atanf
+    size: 216
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDtest
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FAtan
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 128
+    kind: rel24
+    symbol: 2
+    addend: 0

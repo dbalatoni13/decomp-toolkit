@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 7180dbfc2b7a3e0377883e8754f111b540df19d7
+  signature: gSKIlP////98CAKm//////gh/5H/////+AEAgP////+BaQBE/////4ALAAD/////+EEAKP////98CQOm/////4BLAAT/////ToAEIf/////oQQAo/////+gBAID/////eGMAIP////98CAOm/////zghAHD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellConsoleMemalign
+    size: 64
+    flags: 1
+    section: .text
+  relocations: []

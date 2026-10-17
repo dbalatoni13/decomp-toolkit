@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 87b8e7b1b0c9a4a3bf4af1374a6d17a37ca6497e
+  signature: +CH/gf////98CAKm//////vhAHj/////fH8beP/////4AQCQ/////ziA////////gB8AbP////8vgAAA/////0GeACz/////gT8AAP////+BaQAQ/////4ALAAD/////+EEAKP////98CQOm/////4BLAAT/////ToAEIf/////oQQAo/////y+D////////QN4AIP////84YAAA/////+gBAJD/////fGMHtP/////r4QB4/////zghAID/////fAgDpv////9OgAAg/////4B/AGz/////SAAAAfwAAANgAAAA/////y+DAAD/////OGD///////9AnP/Q/////0v//9D/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt13basic_filebufIwSt11char_traitsIwEE4syncEv
+    size: 132
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .fflush
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 108
+    kind: rel24
+    symbol: 1
+    addend: 0

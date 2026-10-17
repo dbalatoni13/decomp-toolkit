@@ -1,0 +1,270 @@
+- symbol: 0
+  hash: ae7da02cbdc9e1d863d21ba9cb4fd879ba4af415
+  signature: gSIAAP//AAB8CAKm//////gh/4H/////++EAeP////98fxt4//////gBAJD/////iAkAAP////8vgAAB/////0GeABj/////gIIAAP//AACAYgAA//8AAEgAAAH8AAAD6EEAKP////9IAAAA/////4EiAAD//wAAVGsP/v////+ACQAA/////3+AGAD/////T93oQv////98EBAm/////1QA//7/////fABbeP////8vgAAA/////0GeABz/////fGUbeP////+AggAA//8AAIBiAAD//wAASAAAAfwAAAPoQQAo/////0gAAAD/////OGAAAP////9IAAAB/AAAA2AAAAD/////V+tQKv////+BQgAA//8AAFfpKDT/////6+EAeP////99KVoU/////4AKAAD/////fSkCFP/////oAQCQ/////zghAID/////eSkAIP////98CAOm/////+hpADD/////eGMAIP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSStreamGetCallbackData
+    size: 188
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002C'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@003A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@008A'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 38
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 42
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 44
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 58
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 102
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 106
+    kind: l
+    symbol: 6
+    addend: -14104088
+  - offset: 108
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 124
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 138
+    kind: l
+    symbol: 8
+    addend: -14104088
+- symbol: 0
+  hash: 758bb159a6cfaefaa694fa6f0d6d7a2153f076b2
+  signature: gSIAAP//AAB8CAKm//////gh/4H/////++EAeP////98fxt4//////gBAJD/////iAkAAP////8vgAAB/////0GeABj/////gIIAAP//AACAYgAA//8AAEgAAAH8AAADYAAAAP////9IAAAA/////4EiAAD//wAAVGsP/v////+ACQAA/////3+AGAD/////T93oQv////98EBAm/////1QA//7/////fABbeP////8vgAAA/////0GeABz/////fGUbeP////+AggAA//8AAIBiAAD//wAASAAAAfwAAANgAAAA/////0gAAAD/////OGAAAP////9IAAAB/AAAA2AAAAD/////V+tQKv////+BQgAA//8AAFfpKDT/////6+EAeP////99KVoU/////4AKAAD/////fSkCFP/////oAQCQ/////zghAID/////eSkAIP////98CAOm/////+hpADD/////eGMAIP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSStreamGetCallbackData
+    size: 188
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@003A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@008A'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 38
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 42
+    kind: l
+    symbol: 3
+    addend: -15311144
+  - offset: 44
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 58
+    kind: l
+    symbol: 5
+    addend: -15311144
+  - offset: 102
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 106
+    kind: l
+    symbol: 6
+    addend: -15311144
+  - offset: 108
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 124
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 138
+    kind: l
+    symbol: 8
+    addend: -15311144
+- symbol: 0
+  hash: 8c93dd68b5bd00321341a085fe2be04ac8efa261
+  signature: gSIAAP//AAB8CAKm//////gh/4H/////++EAeP////98fxt4//////gBAJD/////iAkAAP////8vgAAB/////0GeABj/////gIIAAP//AACAYgAA//8AAEgAAAH8AAADYAAAAP////9IAAAA/////4EiAAD//wAAVGsP/v////+ACQAA/////3+AGAD/////T93oQv////98EBAm/////1QA//7/////fABbeP////8vgAAA/////0GeABz/////fGUbeP////+AggAA//8AAIBiAAD//wAASAAAAfwAAANgAAAA/////0gAAAD/////OGAAAP////9IAAAB/AAAA2AAAAD/////HT8DoP////+BYgAA//8AAOvhAHj/////gAsAAP////99KQIU/////+gBAJD/////OCEAgP////95KQAg/////3wIA6b/////6GkAMP////94YwAg/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellMSStreamGetCallbackData
+    size: 180
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@003A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@008A'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 38
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 42
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 44
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 58
+    kind: l
+    symbol: 5
+    addend: -6468872
+  - offset: 102
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 106
+    kind: l
+    symbol: 6
+    addend: -6468872
+  - offset: 108
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 124
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 138
+    kind: l
+    symbol: 8
+    addend: -6468872

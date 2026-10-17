@@ -1,0 +1,38 @@
+- symbol: 0
+  hash: 5b6537f48dce4e96794280a966ff44da9cbe77cc
+  signature: gSIAAP//AACACQAA/////5BpAAD/////eAMAIP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt9exception18_Set_raise_handlerEPFvRKS_E
+    size: 20
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -28621288
+- symbol: 0
+  hash: 91fafb035587802d2606af1fc6c7c3c8d00d7188
+  signature: gSIAAP//AACACQAA/////5BpAAD/////fAMDeP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt9exception18_Set_raise_handlerEPFvRKS_E
+    size: 20
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -10216440

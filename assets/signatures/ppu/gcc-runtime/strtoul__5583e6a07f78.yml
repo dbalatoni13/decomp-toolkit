@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 12cb9ea6eaaaf585815f7cf754c7230c620ad561
+  signature: +CH/kf////98CAKm//////gBAID/////SAAAAfwAAANgAAAA/////+gBAID/////eGMAIP////98CAOm/////zghAHD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .strtoul
+    size: 40
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Stoul
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 12
+    kind: rel24
+    symbol: 1
+    addend: 0

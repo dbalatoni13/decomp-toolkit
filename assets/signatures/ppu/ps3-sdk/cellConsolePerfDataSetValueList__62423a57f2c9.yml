@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: 06b9efe25ceefc93f95cb07589d8997f5339da44
+  signature: +CH/gf////98CAKm//////vBAHD/////++EAeP/////4AQCQ/////3yeI3j/////fH8beP////9IAAAB/AAAA2AAAAD/////L4MAAP////84YP///////0CeACD/////6AEAkP////94YwAg/////+vBAHD/////6+EAeP////98CAOm/////zghAID/////ToAAIP////974wAg/////0gAAAH8AAADL4MAAP////9AngAw/////4Bii3j/////SAAAAfwAAANgAAAA/////+gBAJD/////68EAcP////84YP/+/////+vhAHj/////fAgDpv////84IQCA/////3hjACD/////ToAAIP////+BIwAI/////4gDABz/////L4kAAf////8hYAAB/////0GeANz/////K4kAAf////9AnAB0/////4ADAAz/////VWcdeP////9/xPN4/////y+AAAD/////OQAAAP////85QAAA/////0GeADj/////gSMAEP////94iwAg/////zkIAAH/////fSpKFP////84hAAI/////3kpACD/////yAsAAP////85SgAY/////30pOhT/////2AkACP////+AAwAM/////3+AQED/////QZ3/0P////84YAAA/////+gBAJD/////eGMAIP/////rwQBw/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////L4kAAv////9Anv/c/////4ADAAz/////VWYdeP////9/xPN4/////y+AAAD/////OOAAAP////85AAAA/////0Ge/8D/////gSMAEP////94igAg/////zjnAAH/////fShKFP////84hAAI/////3kpACD/////6WoAAP////85CAAY/////30pMhT/////+WkACP////+AAwAM/////3+AOED/////QZ3/0P////84YAAA/////0v//4j/////gAMADP////9VZh14/////3/E83j/////L4AAAP////844AAA/////zkAAAD/////QZ7/aP////+BIwAQ/////3iKACD/////OOcAAf////99KEoU/////ziEAAT/////eSkAIP////+BagAA/////zkIABj/////fSkyFP////+RaQAI/////4ADAAz/////f4A4QP////9Bnf/Q/////zhgAAD/////S///MP////8=
+  symbols:
+  - kind: Function
+    name: .cellConsolePerfDataSetValueList
+    size: 460
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleInitialized
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._cellConsolePerfDataDataSetValid
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .puts
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 28
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 80
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 3
+    addend: 0

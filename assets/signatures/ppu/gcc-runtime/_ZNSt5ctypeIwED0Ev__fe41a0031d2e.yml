@@ -1,0 +1,54 @@
+- symbol: 0
+  hash: 9360be912d251a587d38f5435bd5a1e316dd1812
+  signature: +CH/gf////98CAKm/////4EiAAD//wAA+AEAkP////+AAwAU//////vBAHD/////L4AAAP/////74QB4/////3h+ACD/////fH8beP////+RIwAA/////0CeADD/////gSIAAP//AAB/w/N4/////5E/AAD/////SAAAAfwAAANgAAAA/////+gBAJD/////68EAcP/////r4QB4/////3wIA6b/////OCEAgP////9OgAAg/////4BjAAj/////SAAAAfwAAANgAAAA/////4EiAAD//wAAf8PzeP////+RPwAA/////0gAAAH8AAADYAAAAP/////oAQCQ/////+vBAHD/////6+EAeP////98CAOm/////zghAID/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt5ctypeIwED0Ev
+    size: 148
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0032'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .free
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 10
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 50
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 60
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 106
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 116
+    kind: rel24
+    symbol: 3
+    addend: 0

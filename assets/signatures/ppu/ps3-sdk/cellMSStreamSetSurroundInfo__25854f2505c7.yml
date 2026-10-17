@@ -1,0 +1,302 @@
+- symbol: 0
+  hash: c87bbc16fd70c4b71344346b751ee57c0601e887
+  signature: +CH/Yf////98CAKm//////vBAJD/////g8IAAP//AAD7gQCA/////3ycI3j/////+6EAiP////84gAAA//////vhAJj/////fH0beP////98vyt4//////gBALD/////f8PzeP////9IAAAB/AAAA+hBACj/////gSIAAP//AACICQAA/////y+AAAH/////QZ4AGP////+AggAA//8AAIBiAAD//wAASAAAAfwAAAPoQQAo/////0gAAAD/////gSIAAP//AABXqw/+/////4AJAAD/////f4DoAP////9P3ehC/////3wQECb/////VAD//v////98AFt4/////y+AAAD/////QJ4BAP////+BIgAA//8AAIAJAAD/////L4AAAP////9B3gE4/////4EiAAD//wAAgGkAAP////8vowAA/////0HeAQT/////L7wAAP////9B3gD8/////xwdAJz/////fAAaFP////94AwAg/////4EjAGj/////fSAHtP////8vgP///////0HeAOD/////L6AAAP////9BngAc/////4EiAAD//wAAHAAAnP////+BaQAA/////31rAhT/////OWv/ZP////95YwAg/////3vgBWD/////f+mudv////8voAAA/////zkpAAH/////QZ4ADP////8rqQAC/////0CcAJj/////++EAcP////84AwBw/////8mhAHD//////aBunP////94CgAg/////zgAAAj/////fAkDpv/////8AGgY/////9ADAJD/////OBwABP/////AHAAA/////zkqAAT/////0AoAAP////94HAAg/////3kqACD/////QgD/6P////84YAAA/////0gAAAH8AAADYAAAAP////9/w/N4/////0gAAAH8AAAD6EEAKP////84YAAA/////+gBALD/////64EAgP/////roQCI/////3wIA6b/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////+AggAA//8AAH+l63j/////gGIAAP//AABIAAAB/AAAA+hBACj/////SAAAAP////9//wJ4/////2P/CAD/////S///ZP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////3/D83j/////SAAAAfwAAAPoQQAo/////zhg////////S///nP////88YAB6/////2BjEg3/////SAAAAfwAAANgAAAA/////3/D83j/////SAAAAfwAAAPoQQAo/////zhg////////S///eP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSStreamSetSurroundInfo
+    size: 496
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@004E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0052'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0054'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@0062'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@008A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@009A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00D6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@018E'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 52
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 62
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 78
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 82
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 84
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 98
+    kind: l
+    symbol: 7
+    addend: -14104088
+  - offset: 138
+    kind: l
+    symbol: 8
+    addend: -14104088
+  - offset: 154
+    kind: l
+    symbol: 9
+    addend: -14104088
+  - offset: 214
+    kind: l
+    symbol: 10
+    addend: -14104088
+  - offset: 332
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 344
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 390
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 398
+    kind: l
+    symbol: 13
+    addend: -14104088
+  - offset: 400
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 432
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 444
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 468
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 480
+    kind: rel24
+    symbol: 12
+    addend: 0
+- symbol: 0
+  hash: 910e244b6ba520a2e351fff5cc8f5e2251d3c1d0
+  signature: +CH/Yf////98CAKm//////vBAJD/////g8IAAP//AAD7gQCA/////3ycI3j/////+6EAiP////84gAAA//////vhAJj/////fH0beP////98vyt4//////gBALD/////f8PzeP////9IAAAB/AAAA+hBACj/////gSIAAP//AACICQAA/////y+AAAH/////QZ4AGP////+AggAA//8AAIBiAAD//wAASAAAAfwAAANgAAAA/////0gAAAD/////gSIAAP//AABXqw/+/////4AJAAD/////f4DoAP////9P3ehC/////3wQECb/////VAD//v////98AFt4/////y+AAAD/////QJ4BAP////+BIgAA//8AAIAJAAD/////L4AAAP////9B3gE4/////4EiAAD//wAAgGkAAP////8vowAA/////0HeAQT/////L7wAAP////9B3gD8/////xwdAJz/////fAAaFP////94AwAg/////4EjAGj/////fSAHtP////8vgP///////0HeAOD/////L6AAAP////9BngAc/////4EiAAD//wAAHAAAnP////+BaQAA/////31rAhT/////OWv/ZP////95YwAg/////3vgBWD/////f+mudv////8voAAA/////zkpAAH/////QZ4ADP////8rqQAC/////0CcAJj/////++EAcP////84AwBw/////8mhAHD//////aBunP////94CgAg/////zgAAAj/////fAkDpv/////8AGgY/////9ADAJD/////OBwABP/////AHAAA/////zkqAAT/////0AoAAP////94HAAg/////3kqACD/////QgD/6P////84YAAA/////0gAAAH8AAADYAAAAP////9/w/N4/////0gAAAH8AAAD6EEAKP////84YAAA/////+gBALD/////64EAgP/////roQCI/////3wIA6b/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////+AggAA//8AAH+l63j/////gGIAAP//AABIAAAB/AAAA2AAAAD/////SAAAAP////9//wJ4/////2P/CAD/////S///ZP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////3/D83j/////SAAAAfwAAAPoQQAo/////zhg////////S///nP////88YAB6/////2BjEg3/////SAAAAfwAAANgAAAA/////3/D83j/////SAAAAfwAAAPoQQAo/////zhg////////S///eP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSStreamSetSurroundInfo
+    size: 496
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@004E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0052'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0062'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@008A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@009A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00D6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@018E'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 52
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 62
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 78
+    kind: l
+    symbol: 4
+    addend: -6468872
+  - offset: 82
+    kind: l
+    symbol: 5
+    addend: -6468872
+  - offset: 84
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 98
+    kind: l
+    symbol: 7
+    addend: -6468872
+  - offset: 138
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 154
+    kind: l
+    symbol: 9
+    addend: -6468872
+  - offset: 214
+    kind: l
+    symbol: 10
+    addend: -6468872
+  - offset: 332
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 344
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 390
+    kind: l
+    symbol: 4
+    addend: -6468872
+  - offset: 398
+    kind: l
+    symbol: 13
+    addend: -6468872
+  - offset: 400
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 432
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 444
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 468
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 480
+    kind: rel24
+    symbol: 12
+    addend: 0

@@ -1,0 +1,81 @@
+- symbol: 0
+  hash: 32850d70113ab0845753054351edcfc366cbed0e
+  signature: +CH/gf////98CAKm//////vhAHj/////OIAAAP////+D4gAA//8AAPgBAJD/////f+P7eP////9IAAAB/AAAA+hBACj/////PGAAev////+BIgAA//8AAGBjEg3/////gAkAAP////8vgAAA/////0HeAFT/////gSIAAP//AAA8YAB6/////4gJAAD/////YGMSAv////8vgAAB/////0HeADz/////OGAAAf////9IAAAB/AAAAzhgAAD/////SAAAAfwAAANgAAAA/////3/j+3j/////SAAAAfwAAAPoQQAo/////zhgAAD/////6AEAkP/////r4QB4/////zghAID/////fAgDpv////9OgAAg/////0gAAAH8AAADYAAAAP////9/4/t4/////0gAAAH8AAAD6EEAKP////84YP///////0v//9T/////
+  symbols:
+  - kind: Function
+    name: .cellMSSurroundUpdate
+    size: 168
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0012'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._SurroundUpdate
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 18
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 28
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 42
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 62
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 88
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 108
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 140
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 152
+    kind: rel24
+    symbol: 7
+    addend: 0

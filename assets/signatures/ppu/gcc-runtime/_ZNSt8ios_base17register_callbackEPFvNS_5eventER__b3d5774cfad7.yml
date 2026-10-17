@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 014de6410ffaa2d554bb20548238b5331856fb2e
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP////84YAAM//////vBAID/////++EAiP/////4AQCg/////3yfI3j/////fL4reP////9IAAAB/AAAA2AAAAD/////L4MAAP////9BngAU/////4AdACD/////k+MACP////+TwwAE/////5ADAAD/////6AEAoP////+QfQAg/////+vBAID/////fAgDpv/////roQB4/////+vhAIj/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt8ios_base17register_callbackEPFvNS_5eventERS_iEi
+    size: 104
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Znwj
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 40
+    kind: rel24
+    symbol: 1
+    addend: 0

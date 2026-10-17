@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: b93f463598f2779c027d6c5e46e0af15dc8891cb
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4/////3xgG3j/////+J8AeP////+QHwBw/////4AfAHD/////eAAAIP////98AwN4/////+ifAHj/////OWAAZv////9EAAAC/////3xgG3j/////fAAHtP////98AwN4/////+lhAAD/////6AsAEP////98CAOm/////+vr//j/////fWFbeP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .sys_mutex_lock
+    size: 92
+    flags: 2
+    section: .text
+  relocations: []

@@ -1,0 +1,55 @@
+- symbol: 0
+  hash: ab2454448f8b138d14649629d77012c79e6d750b
+  signature: +CH/cf////98CAKm//////uBAHD/////PSCAEv////+DggAA//8AAPgBAKD/////YSkRA//////74QCI//////vBAID/////fH4beP/////7oQB4/////4v8AAD/////L58AAP////9BngAo/////+gBAKD/////fSNLeP/////rgQBw/////+uhAHj/////fAgDpv/////rwQCA/////+vhAIj/////OCEAkP////9OgAAg/////0gAAAH8AAADYAAAAP////89IIAS/////4OiAAD//wAAf8TzeP////9hKREF/////5B9AAD/////gB0AAP////8vgAAA/////3gDACD/////QZ7/tP////9IAAAB/AAAA2AAAAD/////OSAAAP////8sIwAA/////3x+G3j/////QIIAEP////84AAAB/////5gcAAD/////S///kP////9IAAAB/AAAA2AAAAD/////f8nzeP////+T/QAA/////0v//3z/////AAAAAP////8ACQAB/////4AEAAD/////
+  symbols:
+  - kind: Function
+    name: .cellPadInit
+    size: 204
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0012'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZN5iosys5input3lib11libpad_stub12get_instanceEv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZN5iosys5input3lib11libpad_stub10initializeEj
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZN5iosys5input3lib11libpad_stub15delete_instanceEv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 18
+    kind: l
+    symbol: 1
+    addend: -7170272
+  - offset: 92
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 106
+    kind: l
+    symbol: 3
+    addend: -7170272
+  - offset: 136
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 172
+    kind: rel24
+    symbol: 5
+    addend: 0

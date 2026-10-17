@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: fa39594d3d83b3a3542ff07944486cbf130fb2df
+  signature: +CH/Yf////98CAKm//////uBAID/////fLwreP/////7oQCI/////3ydI3j/////+AEAsP////9IAAAB/AAAA2AAAAD/////OMEAcP////9/pOt4/////3jGB8b/////f4XjeP////94xgbm/////zlgAzX/////RAAAAv/////oAQCw/////3xjB7T/////64EAgP/////roQCI/////3wIA6b/////OCEAoP////9OgAAg/////wAAAAD/////AAkAAf////+ABAAA/////w==
+  symbols:
+  - kind: Function
+    name: .cellFsFGetBlockSize
+    size: 104
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._get_fsfd
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 28
+    kind: rel24
+    symbol: 1
+    addend: 0

@@ -1,0 +1,41 @@
+- symbol: 0
+  hash: 843578555427640c4a33da215ddf41f4513b2f5a
+  signature: +CH/gf////98CAKm//////vhAHj/////fH8beP/////4AQCQ/////zhgAAD/////K58AH/////9AnQAs/////zxgAHr/////YGMSAv////9IAAAB/AAAA2AAAAD/////6AEAkP/////AIgAA//8AAOvhAHj/////fAgDpv////84IQCA/////06AACD/////SAAAAfwAAANgAAAA/////1fgEDr/////gSIAAP//AAB8AAe0/////+vhAHj/////fCkELv/////oAQCQ/////zghAID/////fAgDpv////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSStreamGetPriorityBankThreshold
+    size: 116
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0036'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0056'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 40
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 54
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 72
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 86
+    kind: l
+    symbol: 3
+    addend: -14104088

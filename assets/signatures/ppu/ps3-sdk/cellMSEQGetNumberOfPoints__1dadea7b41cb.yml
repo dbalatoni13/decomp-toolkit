@@ -1,0 +1,23 @@
+- symbol: 0
+  hash: 98e8d75a3d85eb4db1c07d2b64db4ef7d48a79d9
+  signature: +CH/gf////98CAKm/////ywjAAD/////++EAeP////98fxt4//////gBAJD/////PGAAev////9gYxIC/////0HCACz/////OGAAAP////9IAAAB/AAAA2AAAAD/////gB8ABP////98Awe0/////+gBAJD/////6+EAeP////84IQCA/////3wIA6b/////ToAAIP////9IAAAB/AAAA2AAAAD/////OGD///////9L///g/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSEQGetNumberOfPoints
+    size: 92
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 40
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 76
+    kind: rel24
+    symbol: 1
+    addend: 0

@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: 542cd905c7510bb08565ebc98a5e227876d737f7
+  signature: fGobeP////98CAKm//////gh/5H/////+AEAgP////+BAgAA//8AAHhjACD/////gAIAAP//AACQCgAA/////5EKAAD/////SAAAAfwAAANgAAAA/////+gBAID/////OCEAcP////98CAOm/////06AACD/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt8messagesIwED0Ev
+    size: 60
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0012'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@001A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 18
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 26
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 36
+    kind: rel24
+    symbol: 3
+    addend: 0

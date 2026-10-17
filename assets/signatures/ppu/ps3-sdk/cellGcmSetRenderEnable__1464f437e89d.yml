@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: 13bd8749f29d60b74208953e66b7d36e9b1de81c
+  signature: L4QAAv////98CAKm//////gh/4H/////+8EAcP////94viAo//////vhAHj/////fH8beP/////4AQCQ/////0GeAID/////gMMACP////84gAAC/////4ADAAT/////OSYACP////9/iQBA/////0GdADz/////PSAABP////94ywAg/////zlGAAj/////YSkemP////88AAEA/////5FfAAj/////kSsAAP////+QCwAE/////+gBAJD/////68EAcP/////r4QB4/////3wIA6b/////OCEAgP////9OgAAg/////4EjAAz/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////L6MAAP////9Anv/I/////4DfAAj/////S///oP////+AwwAI/////ziAAAT/////gAMABP////85JgAQ/////3+JAED/////QZ0AWP////85JgAI/////3jIACD/////eSkAIP////84AAAA/////z1gAAT/////kAgABP////89QAAE/////+gBAJD/////OMkACP////9nxwIA/////+vBAHD/////YWsBAP////+Q3wAI/////2FKHpj/////6+EAeP////98CAOm/////zghAID/////kWgAAP////+RSQAA/////5DpAAT/////ToAAIP////+BIwAM/////4AJAAD/////+EEAKP////98CQOm/////4BJAAT/////ToAEIf/////oQQAo/////y+jAAD/////QJ7/MP////+A3wAI/////0v//4T/////
+  symbols:
+  - kind: Function
+    name: .cellGcmSetRenderEnable
+    size: 312
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: 2fbdec95eecf4e421cf1f3d570d10bd5cddb80fd
+  signature: L4QAAv////98CAKm//////gh/4H/////+8EAcP/////74QB4//////gBAJD/////fH8beP////98vit4/////0GeAIT/////gN8ACP////84gAAC/////4E/AAT/////eGMAIP////84BgAI/////3+ASED/////QZ0APP////94ygAg/////z0gAAT/////OWYACP////9hKR6Y/////zwAAQD/////kX8ACP////+QCgAE/////5EqAAD/////6AEAkP/////rwQBw/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////gT8ADP////+ACQAA//////hBACj/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////8vgwAA/////0Ce/8j/////gN8ACP////9L//+g/////4DfAAj/////OIAABP////+BPwAE/////3hjACD/////OAYAEP////9/gEhA/////0GdAFz/////eMcAIP////84AAAA/////zjGAAj/////V8ogNv/////rwQBw/////3jIACD/////kAcABP////89IAAE/////+gBAJD/////PWAABP////84xgAI/////3wIA6b/////YSkBAP////9hax6Y/////2VKAgD/////kN8ACP/////r4QB4/////zghAID/////kScAAP////+RSAAE/////5FoAAD/////ToAAIP////+BPwAM/////4AJAAD/////+EEAKP////98CQOm/////4BJAAT/////ToAEIf/////oQQAo/////y+DAAD/////QJ7/KP////+A3wAI/////0v//4D/////
+  symbols:
+  - kind: Function
+    name: .cellGcmSetRenderEnable
+    size: 324
+    flags: 1
+    section: .text
+  relocations: []

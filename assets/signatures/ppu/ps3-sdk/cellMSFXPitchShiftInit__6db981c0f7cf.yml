@@ -1,0 +1,82 @@
+- symbol: 0
+  hash: a9451a0759e976164fe84c113a627907ee2cec80
+  signature: LCMAAP////98CAKm//////gh/1H/////2+EAqP//////4AiQ//////uhAJD/////fN0zeP/////7wQCY/////3x+G3j/////++EAoP////98nyN4//////tBAHj/////+2EAgP/////7gQCI//////gBAMD/////QcIA0P////8vpAAA/////0HeAMj/////fIMjeP////9/+we0/////ziAAAD/////HKZMAP////9UpQAq/////0gAAAH8AAAD6EEAKP////85OwoA/////y+dAAD/////k/4AAP////95KQAg/////zlpCgD/////kT4ABP////95fAAg/////zgcGAD/////eBoAIP////9BnQBc/////zk7PAD/////k74AGP////84AAAB/////5OeAAj/////OGAAAP////+TXgAM/////5AeABD/////kT4AFP////9IAAAB/AAAA2AAAAD/////OGAAAP/////oAQDA/////+tBAHj/////62EAgP////98CAOm/////+uBAIj/////66EAkP/////rwQCY/////+vhAKD/////y+EAqP////84IQCw/////06AACD/////O+AAAP/////8IPiQ/////3/l+3j/////f8PzeP////9IAAAB/AAAAzgfAAH/////fB8HtP////9/nfgA/////0Ce/+T/////S///hP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////zhg////////S///mP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSFXPitchShiftInit
+    size: 292
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@005C'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSFXPitchShiftSet
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 92
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 172
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 244
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 276
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: 5835540ac5ddad9cf8277f1bf12c3ff022d6d48d
+  signature: LCMAAP////98CAKm//////gh/1H/////2+EAqP//////4AiQ//////uhAJD/////fN0zeP/////7wQCY/////3x+G3j/////++EAoP////98nyN4//////tBAHj/////+2EAgP/////7gQCI//////gBAMD/////QcIA0P////8vpAAA/////0HeAMj/////fIMjeP////9/+we0/////ziAAAD/////HKZMAP////9UpQAq/////0gAAAH8AAADYAAAAP////85OwoA/////y+dAAD/////k/4AAP////95KQAg/////zlpCgD/////kT4ABP////95fAAg/////zgcGAD/////eBoAIP////9BnQBc/////zk7PAD/////k74AGP////84AAAB/////5OeAAj/////OGAAAP////+TXgAM/////5AeABD/////kT4AFP////9IAAAB/AAAA2AAAAD/////OGAAAP/////oAQDA/////+tBAHj/////62EAgP////98CAOm/////+uBAIj/////66EAkP/////rwQCY/////+vhAKD/////y+EAqP////84IQCw/////06AACD/////O+AAAP/////8IPiQ/////3/l+3j/////f8PzeP////9IAAAB/AAAAzgfAAH/////fB8HtP////9/nfgA/////0Ce/+T/////S///hP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////zhg////////S///mP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSFXPitchShiftInit
+    size: 292
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memset
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSFXPitchShiftSet
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 92
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 172
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 244
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 276
+    kind: rel24
+    symbol: 2
+    addend: 0

@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: c1dde08a201a1bc51da9bfb0e002b058f51afe8e
+  signature: +CH/Uf////98CAKm/////3zK/nD/////+yEAeP/////4AQDA/////3yg/nD/////LCMAAP/////7QQCA/////3wLKnj/////+2EAiP/////7gQCQ/////3z5O3j/////fWsAUP/////7oQCY/////31AMnj/////+8EAoP/////74QCo/////3y+K3j/////fABQUP////98fxt4/////3wAW3j/////PGCAAf////983TN4/////3ycI3j/////L4AAAP////99G0N4/////306S3j/////QIAADP////9gYwAC/////0GcADD/////SAAAAfwAAANgAAAA/////3/k+3j/////f4XjeP////9/xvN4/////3+n63j/////fyjLeP////9/adt4/////39K03j/////SAAAAfwAAANgAAAA/////+gBAMD/////6yEAeP/////rQQCA/////3wIA6b/////62EAiP/////rgQCQ/////+uhAJj/////68EAoP/////r4QCo/////zghALD/////ToAAIP////8AAAAA/////wAJAAH/////gAcAAP////8=
+  symbols:
+  - kind: Function
+    name: .sys_config_add_service_listener
+    size: 220
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZN5iosys6config20config_service_agent12get_instanceEv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZN5iosys6config20config_service_agent20add_service_listenerEyyPvjP33sys_config_service_state_operatorjPj
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 120
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 156
+    kind: rel24
+    symbol: 2
+    addend: 0

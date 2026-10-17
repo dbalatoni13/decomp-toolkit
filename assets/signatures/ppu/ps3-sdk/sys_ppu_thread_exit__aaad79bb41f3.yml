@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 5b050728eecbda819910b927d1ad812e425d12c1
+  signature: +CH/cf////98CAKm//////uBAHD/////fHwbeP/////7oQB4//////gBAKD/////fb1reP////87vY/o/////3u9ACD/////f6PreP////9IAAAB/AAAA3+j63j/////SAAAAfwAAAN/g+N4/////zlgACn/////RAAAAv/////oAQCg/////+uBAHD/////66EAeP////98CAOm/////zghAJD/////ToAAIP////8AAAAA/////wAJAAH/////gAQAAP////8=
+  symbols:
+  - kind: Function
+    name: .sys_ppu_thread_exit
+    size: 100
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._free_dtv_memory
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._free_tls_memory
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 40
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 48
+    kind: rel24
+    symbol: 2
+    addend: 0

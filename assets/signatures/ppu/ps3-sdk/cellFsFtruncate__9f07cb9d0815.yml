@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: ed2cfffa9bd35e4534d142638bd5fa77439e9015
+  signature: +CH/cf////98CAKm//////uhAHj/////fJ0jeP/////4AQCg/////0gAAAH8AAADYAAAAP////9/pOt4/////zlgA0D/////RAAAAv/////oAQCg/////3xjB7T/////66EAeP////84IQCQ/////3wIA6b/////ToAAIP////8AAAAA/////wAJAAH/////gAMAAP////8=
+  symbols:
+  - kind: Function
+    name: .cellFsFtruncate
+    size: 76
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._get_fsfd
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0

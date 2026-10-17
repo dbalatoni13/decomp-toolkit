@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: e7f8b18f219bc35c0323bca58d4e33a6aaddc4f8
+  signature: OWADSv////98CAKm//////gBABD/////RAAAAv/////oAQAQ/////3xjB7T/////fAgDpv////9OgAAg/////wAAAAD/////AAkAAf////8AAAAA/////w==
+  symbols:
+  - kind: Function
+    name: .cellFsUtilGetMountInfo
+    size: 44
+    flags: 1
+    section: .text
+  relocations: []

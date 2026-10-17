@@ -1,0 +1,76 @@
+- symbol: 0
+  hash: 5c6db02afe221de6192aabebfe20e782610b490c
+  signature: LCMAAP////98CAKm//////gh/2H/////+8EAkP////98niN4//////vhAJj/////fL8reP/////7gQCA//////uhAIj/////+AEAsP////9BwgGw/////y+kAAD/////QZ4BqP////84BQAB/////yuAAAj/////Qd0BnP////8vhf///////4ODAAD/////OAMABP////94HQAg/////0GeALj/////f4fjeP////+ApAAA/////3/o+3j/////wCQABP/////ARAAI/////8BkAAz/////SAAAAfwAAAMvowAA/////0DeAWT/////gX4AAP////9X4CA2/////3lpBWD/////fKDqFP////8vqQAA/////3iqACD/////QZ4AGP////84AAAB/////yugAAL/////QZwADP////99a0p4/////2FrCAD/////+WEAcP////94qQAg/////8gBAHD//////AAGnP/////9oAAY/////9GqAAD/////wB4ABP/////QCQAE/////8G+AAj/////0akACP/////AHgAM/////9AJAAz/////OGAAAP////9IAAAB/AAAA2AAAAD/////6AEAsP////84YAAA/////+uBAID/////66EAiP////98CAOm/////+vBAJD/////6+EAmP////84IQCg/////06AACD/////f7/reP////+ApAAA/////zugAAD/////wD4ABP////94pQAg/////8BeAAj/////f6jreP/////AfgAM/////3+H43j/////SAAAAfwAAAM4HQAB/////y+jAAD/////fB0HtP////85fwAQ/////yydAAj/////QJ4AlP////+AvgAA/////zgAAAH/////eKkAIP////8rIAAC/////3kgBWD/////L6AAAP////9BngAQ/////0GYAAz/////fSkCeP////9hKQgA//////khAHD/////yaEAcP/////9oG6c//////wAaBj/////0B8AAP/////BvgAE/////9G/AAT/////wB4ACP/////QHwAI/////8G+AAz/////0b8ADP////95fwAg/////0GG/zj/////f6jreP/////APgAE/////3ilACD/////wF4ACP////9/h+N4/////8B+AAz/////SAAAAfwAAAM4HQAB/////y+jAAD/////fB0HtP////85fwAQ/////yydAAj/////QZ7/dP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////+gBALD/////OGD////////rgQCA/////+uhAIj/////fAgDpv/////rwQCQ/////+vhAJj/////OCEAoP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSFXFilterSet
+    size: 524
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__CalcBiQuadCoEffs
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 108
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 220
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 300
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 444
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 480
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: a8c26e8147694f073219294720ab46ab0f24c8bd
+  signature: LCMAAP////98CAKm//////gh/2H/////+8EAkP////98niN4//////vhAJj/////fL8reP/////7gQCA//////uhAIj/////+AEAsP////9BwgFw/////zgFAAH/////K4AACP////9B3QFk/////y+F////////g4MAAP////84AwAE/////3gdACD/////QZ4AsP////9/h+N4/////4CkAAD/////f+j7eP/////AJAAE/////8BEAAj/////wGQADP////9IAAAB/AAAAy+jAAD/////QN4BLP////+BfgAA/////1fgIDb/////eWkFYP////98oOoU/////y+pAAD/////eKoAIP////9BngAQ/////zgAAAH/////K6AAAv////9AnAE4//////lhAHD/////eKkAIP/////IAQBw//////wABpz//////aAAGP/////RqgAA/////8AeAAT/////0AkABP/////BvgAI/////9GpAAj/////wB4ADP/////QCQAM/////zhgAAD/////SAAAAfwAAANgAAAA/////+gBALD/////OGAAAP/////rgQCA/////+uhAIj/////fAgDpv/////rwQCQ/////+vhAJj/////OCEAoP////9OgAAg/////3+/63j/////gKQAAP////87oAAA/////0gAAGD/////gL4AAP////84AAAB/////3ipACD/////KyAAAv////95IAVg/////y+gAAD/////QZ4AEP////9BmAAM/////30pAnj/////YSkIAP/////5IQBw/////8mhAHD//////aBunP/////8AGgY/////9AfAAD/////wb4ABP/////RvwAE/////8AeAAj/////0B8ACP/////BvgAM/////9G/AAz/////eX8AIP////9Bhv9o/////3+o63j/////wD4ABP////94pQAg/////8BeAAj/////f4fjeP/////AfgAM/////0gAAAH8AAADOB0AAf////8vowAA/////3wdB7T/////OX8AEP////8snQAI/////0Ge/3T/////PGAAev////9gYxIC/////0gAAAH8AAADYAAAAP/////oAQCw/////zhg////////64EAgP/////roQCI/////3wIA6b/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////99a0p4/////2FrCAD/////S//+xP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSFXFilterSet
+    size: 472
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__CalcBiQuadCoEffs
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 100
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 204
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 380
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 416
+    kind: rel24
+    symbol: 2
+    addend: 0

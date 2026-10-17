@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 281665cdb43460530fc177435836585daedbc50e
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4/////3xgG3j/////kB8AcP////+AHwBw/////3gAACD/////fAMDeP////85YABo/////0QAAAL/////fGAbeP////98AAe0/////3wDA3j/////6WEAAP/////oCwAQ/////3wIA6b/////6+v/+P////99YVt4/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .sys_mutex_unlock
+    size: 84
+    flags: 2
+    section: .text
+  relocations: []

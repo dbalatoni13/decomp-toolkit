@@ -1,0 +1,64 @@
+- symbol: 0
+  hash: da2fed3b520f5b9e096fbc18b10a61079ceca8a2
+  signature: LCMAAP////98CAKm//////gh/uH/////+8EBEP/////7gQEA//////uhAQj/////++EBGP/////4AQEw/////3x+G3j/////QYIAFP////+D/gAA/////zhgAAj/////L58AAP////9BngAo/////+gBATD/////OGAABv/////rgQEA/////+uhAQj/////fAgDpv/////rwQEQ/////+vhARj/////OCEBIP////9OgAAg/////0gAAAH8AAADYAAAAP////84AQBw/////3x8G3j/////eB0AIP////8vnAAA/////3hoACD/////OAAAAP////9/o+t4/////0GeADT/////gSIAAP//AACBYgAA//8AAICCAAD//wAAkSgAAP////+T6AAE/////5F8AAD/////SAAAAfwAAANgAAAA/////3+j63j/////SAAAAfwAAANgAAAA/////3+A43j/////kB4AAP/////oAQEw/////zhgAAb/////64EBAP/////roQEI/////3wIA6b/////68EBEP/////r4QEY/////zghASD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt8messagesIwE7_GetcatEPPKNSt6locale5facetE
+    size: 220
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Znwj
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0086'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@008A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@008E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt8_LocinfoC1EPKc
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt8_LocinfoD1Ev
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 92
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 134
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 138
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 142
+    kind: l
+    symbol: 4
+    addend: -28621288
+  - offset: 156
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 168
+    kind: rel24
+    symbol: 6
+    addend: 0

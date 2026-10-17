@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 78d5b6de4ac18e93154a80efc5f1bad84c3c28ff
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4/////3xgG3j/////fIsjeP////+QHwBw/////5F/AHj/////gB8AcP////94AAAg/////3wDA3j/////gB8AeP////94AAAg/////3wEA3j/////OWAAZP////9EAAAC/////3xgG3j/////fAAHtP////98AwN4/////+lhAAD/////6AsAEP////98CAOm/////+vr//j/////fWFbeP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .sys_mutex_create
+    size: 104
+    flags: 2
+    section: .text
+  relocations: []

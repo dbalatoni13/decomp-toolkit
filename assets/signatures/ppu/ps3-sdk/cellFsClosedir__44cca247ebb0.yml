@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 5a170f87ee9cbe25307407fb48d7f60ec9350334
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP/////74QCI//////gBAKD/////SAAAAfwAAANgAAAA/////zlgAyf/////RAAAAv////98fwe0/////3+j63j/////L78AAP////9BngAg/////+gBAKD/////f+P7eP/////roQB4/////+vhAIj/////fAgDpv////84IQCQ/////06AACD/////SAAAAfwAAANgAAAA/////+gBAKD/////f+P7eP/////roQB4/////+vhAIj/////fAgDpv////84IQCQ/////06AACD/////AAAAAP////8ACQAB/////4ADAAD/////
+  symbols:
+  - kind: Function
+    name: .cellFsClosedir
+    size: 132
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._get_fsfd
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._put_fd
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 84
+    kind: rel24
+    symbol: 2
+    addend: 0

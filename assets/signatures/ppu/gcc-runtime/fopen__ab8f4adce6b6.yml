@@ -1,0 +1,118 @@
+- symbol: 0
+  hash: 3829dd89e52faf87039d30546eb86c2a99e060e5
+  signature: +CH/cf////98CAKm//////uBAHD/////fHwbeP////84YAAC//////gBAKD/////+6EAeP////98nSN4/////0gAAAH8AAADYAAAAP////9IAAAB/AAAA2AAAAD/////eGUAIP////97pAAg/////3uDACD/////OMD///////9IAAAB/AAAA2AAAAD/////fH0beP////84YAAC/////0gAAAH8AAADYAAAAP/////oAQCg/////+uBAHD/////e6MAIP////98CAOm/////+uhAHj/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .fopen
+    size: 116
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Fofind
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Foprep
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 40
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 64
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 80
+    kind: rel24
+    symbol: 4
+    addend: 0
+- symbol: 0
+  hash: d4aaf332d08dbd49e1fe94a3c336d556b5f0dd98
+  signature: +CH/cf////98CAKm//////uBAHD/////fHwbeP////84YAAC//////gBAKD/////+6EAeP////98nSN4/////0gAAAH8AAADYAAAAP////9IAAAB/AAAA2AAAAD/////f6TreP////98ZRt4/////zjA////////f4PjeP////9IAAAB/AAAA2AAAAD/////LCMAAP////98fRt4/////0GCACT/////oAMABP////+BYgAA//8AAHwABzT/////VAoQOv////99SQe0/////3wLSC7/////L4AAAP////9BngAs/////zhgAAL/////SAAAAfwAAANgAAAA/////+gBAKD/////f6PreP/////rgQBw/////+uhAHj/////fAgDpv////84IQCQ/////06AACD/////gGIAAP//AAB8ahoU/////3hjACD/////SAAAAfwAAANgAAAA/////zhgAAL/////SAAAAfwAAANgAAAA/////+gBAKD/////f6PreP/////rgQBw/////+uhAHj/////fAgDpv////84IQCQ/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .fopen
+    size: 216
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Fofind
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Foprep
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Mtxinit
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 40
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 64
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 90
+    kind: l
+    symbol: 4
+    addend: -10216440
+  - offset: 120
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 158
+    kind: l
+    symbol: 4
+    addend: -10216440
+  - offset: 168
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 180
+    kind: rel24
+    symbol: 5
+    addend: 0

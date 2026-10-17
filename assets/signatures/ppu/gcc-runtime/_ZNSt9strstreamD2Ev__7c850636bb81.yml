@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 983b74bd2a640c1ef07e97600c025c50296cc21f
+  signature: gSQAAP////98aht4//////gh/2H/////fAgCpv////85af/0//////gBALD/////eWsAIP/////7YQB4//////uBAID/////+6EAiP////+RKgAA/////4ErAAD/////fH0beP////+BBAAg/////zhjABD/////fSpKFP////98nCN4/////3kpACD/////eGMAIP////95WwAg/////5EJAAD/////gAQAJP////+QCgAI/////0gAAAH8AAADf4jjeP////+FKAAE/////zlp//T/////kT0AAP////95awAg/////4FIABT/////gSsAAP////9/q+t4/////309ShT/////eSkAIP////+RSQAA/////4AIABj/////kB0ACP////+FXAAQ/////zkq//T/////lUsACP////95KQAg/////4D8AAT/////gAkAAP////99awIU/////3lrACD/////kOsAAP////+FSAAE/////zkq//T/////kVsAAP////95KQAg/////4FoAAT/////gAkAAP////9/vQIU/////3u9ACD/////kX0AAP/////oAQCw/////+thAHj/////64EAgP////98CAOm/////+uhAIj/////OCEAoP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt9strstreamD2Ev
+    size: 248
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt12strstreambufD1Ev
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 92
+    kind: rel24
+    symbol: 1
+    addend: 0

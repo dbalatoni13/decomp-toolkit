@@ -1,0 +1,56 @@
+- symbol: 0
+  hash: 1f7b869163fbc0773ededb7c9b6da3eb385d7cb5
+  signature: fGsbeP////98CAKm//////gh/4H/////++EAeP/////4AQCQ/////4ErAAD/////gUkACP////+ACgAA//////hBACj/////fAkDpv////+ASgAE/////06ABCH/////6EEAKP/////oAQCQ/////3hkACD/////6+EAeP////84IQCA/////4BiAAD//wAAfAgDpv////9IAAAA/AAAAw==
+  symbols:
+  - kind: Function
+    name: ._ZSt6_ThrowRKSt9exception
+    size: 80
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZSt14_Debug_messagePKcS0_
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 70
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 76
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: c2c341132a64c303d864dbbfbd819ec15294df0b
+  signature: +CH/gf////98CAKm//////vhAHj/////+AEAkP////+BIwAA/////4FpAAj/////gAsAAP/////4QQAo/////3wJA6b/////gEsABP////9OgAQh/////+hBACj/////6AEAkP////98ZBt4/////+vhAHj/////gGIAAP//AAA4IQCA/////3wIA6b/////SAAAAPwAAAM=
+  symbols:
+  - kind: Function
+    name: ._ZSt6_ThrowRKSt9exception
+    size: 76
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZSt14_Debug_messagePKcS0_
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 62
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 72
+    kind: rel24
+    symbol: 2
+    addend: 0

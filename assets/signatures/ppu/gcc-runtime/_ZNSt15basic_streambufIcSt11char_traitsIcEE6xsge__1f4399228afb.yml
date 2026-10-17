@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: fa9129fa2cba6a65707794a46f273bd07e34c55a
+  signature: L4UAAP////98CAKm//////gh/2H/////+0EAcP/////7YQB4//////uBAID/////+6EAiP/////7wQCQ//////vhAJj/////+AEAsP////98vit4/////3x7G3j/////fJwjeP////98fRt4/////ztAAAD/////QZ0AaP////9IAADc/////3uDACD/////QJkACP////9/3/N4/////3vlACD/////f9/wUP////9IAAAB/AAAA2AAAAD/////gRsAUP////+A+wAg/////3/qB7T/////gNsAVP////8vngAA/////3+c+hT/////6AgAAP////9/WvoU/////4EnAAD/////fABSFP////99P0oU//////gIAAD/////6WYAAP////+RJwAA/////31KWhT/////+UYAAP////9AnQB8/////4E9ACD/////e6MAIP////+BaQAA/////y+LAAD/////QZ4AJP////+BPQAw/////3lkACD/////gAkAAP////98CwBQ/////y+AAAD/////fB8DeP////9/APAA/////0Gd/3D/////gTsAAP////873v///////4FpACD/////gAsAAP/////4QQAo/////3wJA6b/////gEsABP////9OgAQh/////+hBACj/////e4kAIP////8vg////////zucAAH/////QZ4AFP////8vngAA/////ztaAAH/////mGkAAP////9Bnf+M/////+gBALD/////f0MHtP/////rYQB4/////+tBAHD/////fAgDpv/////rgQCA/////+uhAIj/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci
+    size: 328
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memcpy
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 88
+    kind: rel24
+    symbol: 1
+    addend: 0

@@ -1,0 +1,72 @@
+- symbol: 0
+  hash: 63126e76e2dc9d3fbaf7d0634cdc192234699d16
+  signature: +CH/gf////98CAKm//////vhAHj/////fH8beP/////4AQCQ/////4ACAAD//wAA+8EAcP////+BXwAE/////5AfAAD/////L4oAAP////9BngA8/////31KB7T/////gWIAAP//AAB9K1Cu/////zkp////////fSAHdP////99K1Gu/////y+AAAD/////QJ0AHP/////oAQCQ/////+vBAHD/////6+EAeP////98CAOm/////zghAID/////ToAAIP////94YwAg/////0gAAAH8AAADgH8AJP////8vgwAA/////0Ge/9j/////eH4AIP////+AfgAA/////y+DAAD/////QZ4APP////94fwAg/////zhgAAD/////SAAAAfwAAANgAAAA/////zgA//3/////gT8ABP////85af///////3+LAED/////QJ0AfP////8viQAA/////0GeADT/////OGAAAP////9IAAAB/AAAA2AAAAD/////f8PzeP////9IAAAB/AAAA2AAAAD/////6AEAkP/////rwQBw/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////OGAAAP////9IAAAB/AAAA2AAAAD/////gT8AAP////9/4/t4/////4FpAAT/////gAsAAP/////4QQAo/////3wJA6b/////gEsABP////9OgAQh/////+hBACj/////f8PzeP////9IAAAB/AAAA2AAAAD/////S///rP////99aVt4/////5F/AAT/////L4kAAP////9Anv+E/////0v//7D/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt8ios_baseD2Ev
+    size: 312
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0032'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt8ios_base5_TidyEv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 22
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 50
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 104
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 144
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 184
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 196
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 232
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 280
+    kind: rel24
+    symbol: 6
+    addend: 0

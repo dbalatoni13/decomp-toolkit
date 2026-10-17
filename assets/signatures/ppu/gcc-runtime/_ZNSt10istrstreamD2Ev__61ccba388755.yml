@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: c52691358fed9603b9677c28107d77f8fad8b3e4
+  signature: gSQAAP////98CAKm//////gh/3H/////OWn/9P/////4AQCg/////3lrACD/////+4EAcP/////7oQB4/////5EjAAD/////fH0beP////+BRAAM/////4ErAAD/////OAMACP////98nCN4/////309ShT/////eAMAIP////95KQAg/////5FJAAD/////SAAAAfwAAAOFfAAE/////zkr//T/////kX0AAP////95KQAg/////4F8AAT/////gAkAAP////9/vQIU/////3u9ACD/////kX0AAP/////oAQCg/////+uBAHD/////66EAeP////98CAOm/////zghAJD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt10istrstreamD2Ev
+    size: 136
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt12strstreambufD1Ev
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 72
+    kind: rel24
+    symbol: 1
+    addend: 0

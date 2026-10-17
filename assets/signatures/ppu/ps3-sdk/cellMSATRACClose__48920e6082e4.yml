@@ -1,0 +1,55 @@
+- symbol: 0
+  hash: c5dd5ae5e5c97eecd98141751b3cff1209cc3688
+  signature: +CH/kf////98CAKm/////4ECAAD//wAAOGAAAP/////4AQCA/////zgAAAD/////gSIAAP//AACBYgAA//8AAIFCAAD//wAAkAgAAP////+QCQAA/////5ALAAD/////kAoAAP////9IAAAB/AAAA2AAAAD/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSATRACClose
+    size: 76
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@001A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@001E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0022'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 10
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 26
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 30
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 34
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 52
+    kind: rel24
+    symbol: 5
+    addend: 0

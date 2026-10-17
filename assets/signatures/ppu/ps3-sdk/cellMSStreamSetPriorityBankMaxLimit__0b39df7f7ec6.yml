@@ -1,0 +1,198 @@
+- symbol: 0
+  hash: 9a2a10b0def8c0b411ca4160633b08a0e270014c
+  signature: gSIAAP//AAB8CAKm//////gh/2H/////+6EAiP////98fRt4//////vhAJj/////fJ8jeP/////7wQCQ//////gBALD/////iAkAAP////8vgAAB/////0GeABj/////gIIAAP//AACAYgAA//8AAEgAAAH8AAAD6EEAKP////9IAAAA/////4PCAAD//wAAOIAAAP////9/w/N4/////0gAAAH8AAAD6EEAKP////8rnQAf/////0HdAHz/////K58CAP////9BnQB0/////3vqBWD/////gWIAAP//AABXoBA6/////y+qAAD/////f+mudv////98AAe0/////zkpAAH/////QZ4AFP////8rqQAC/////0GcAAz/////f/9SeP////9j/wgA//////vhAHD/////yaEAcP/////9oG6c/////4BiAAD//wAA/ABoGP////98CwUu/////0gAAAH8AAAD6EEAKP////84YAAA/////+gBALD/////66EAiP/////rwQCQ/////3wIA6b/////6+EAmP////84IQCg/////06AACD/////PGAAev////9gYxIC/////0gAAAH8AAADYAAAAP////9/w/N4/////0gAAAH8AAAD6EEAKP////84YP///////0v//8T/////
+  symbols:
+  - kind: Function
+    name: .cellMSStreamSetPriorityBankMaxLimit
+    size: 252
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0032'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0036'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0038'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 50
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 54
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 56
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 70
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 80
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 110
+    kind: l
+    symbol: 7
+    addend: -14104088
+  - offset: 166
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 176
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 224
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 236
+    kind: rel24
+    symbol: 8
+    addend: 0
+- symbol: 0
+  hash: 58f50f9132970cfbd6b1f26099027d2452ad2360
+  signature: gSIAAP//AAB8CAKm//////gh/2H/////+6EAiP////98fRt4//////vhAJj/////fJ8jeP/////7wQCQ//////gBALD/////iAkAAP////8vgAAB/////0GeABj/////gIIAAP//AACAYgAA//8AAEgAAAH8AAADYAAAAP////9IAAAA/////4PCAAD//wAAOIAAAP////9/w/N4/////0gAAAH8AAAD6EEAKP////8rnQAf/////0HdAHz/////K58CAP////9BnQB0/////3vqBWD/////gWIAAP//AABXoBA6/////y+qAAD/////f+mudv////98AAe0/////zkpAAH/////QZ4AFP////8rqQAC/////0GcAAz/////f/9SeP////9j/wgA//////vhAHD/////yaEAcP/////9oG6c/////4BiAAD//wAA/ABoGP////98CwUu/////0gAAAH8AAAD6EEAKP////84YAAA/////+gBALD/////66EAiP/////rwQCQ/////3wIA6b/////6+EAmP////84IQCg/////06AACD/////PGAAev////9gYxIC/////0gAAAH8AAADYAAAAP////9/w/N4/////0gAAAH8AAAD6EEAKP////84YP///////0v//8T/////
+  symbols:
+  - kind: Function
+    name: .cellMSStreamSetPriorityBankMaxLimit
+    size: 252
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0032'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0036'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 50
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 54
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 56
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 70
+    kind: l
+    symbol: 5
+    addend: -6468872
+  - offset: 80
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 110
+    kind: l
+    symbol: 7
+    addend: -6468872
+  - offset: 166
+    kind: l
+    symbol: 5
+    addend: -6468872
+  - offset: 176
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 224
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 236
+    kind: rel24
+    symbol: 8
+    addend: 0

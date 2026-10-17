@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: b6cb82e1bd2a3203ba0494714cc97c2f3ecb15a4
+  signature: +CH/cf////98CAKm//////uhAHj/////+AEAoP////+DowAg/////3yAI3j/////+8EAgP////8vnQAA//////vhAIj/////QZ4ASP////94HgAg/////3h/ACD/////e70AIP////9/w/N4/////3/k+3j/////gT0ACP////+AvQAE/////3ylB7T/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////g70AAP////8vnQAA/////0Ce/8j/////6AEAoP/////roQB4/////+vBAID/////fAgDpv/////r4QCI/////zghAJD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt8ios_base8_CallfnsENS_5eventE
+    size: 136
+    flags: 1
+    section: .text
+  relocations: []

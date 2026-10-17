@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: d3859d24afc27659d8c5c097db31206a8c8e0f84
+  signature: gSIAAP//AAA9YIAx/////2FrAAL/////iAkAAP////8vgAAA/////0GeABT/////gSIAAP//AAA5YAAA/////+gJAAD/////+AMAAP////99Y1t4/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellSurMixerGetCurrentBlockTag
+    size: 48
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@001A'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 26
+    kind: l
+    symbol: 2
+    addend: -15311144

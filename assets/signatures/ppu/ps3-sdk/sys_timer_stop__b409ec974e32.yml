@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 251389b929f24721d4de2ac0a76a9b40303a144e
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4/////3xgG3j/////kB8AcP////+AHwBw/////3gAACD/////fAMDeP////85YABK/////0QAAAL/////fGAbeP////98AAe0/////3wDA3j/////6WEAAP/////oCwAQ/////3wIA6b/////6+v/+P////99YVt4/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .sys_timer_stop
+    size: 84
+    flags: 2
+    section: .text
+  relocations: []

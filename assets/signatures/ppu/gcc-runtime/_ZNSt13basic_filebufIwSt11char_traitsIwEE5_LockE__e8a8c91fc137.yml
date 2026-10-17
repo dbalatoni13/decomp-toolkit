@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 163f9c4c6407f70b5c23366e9d555fe0d7d793d8
+  signature: +CH/kf////98CAKm//////gBAID/////gGMAbP////9IAAAB/AAAA2AAAAD/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt13basic_filebufIwSt11char_traitsIwEE5_LockEv
+    size: 40
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Lockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 16
+    kind: rel24
+    symbol: 1
+    addend: 0

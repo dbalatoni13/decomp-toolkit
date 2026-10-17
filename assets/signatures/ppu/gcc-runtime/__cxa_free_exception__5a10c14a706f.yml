@@ -1,0 +1,82 @@
+- symbol: 0
+  hash: d01befc1d9fc75ebd1c59db25ba8d74f49e227d9
+  signature: gSIAAP//AAB8CAKm//////gh/4H/////f4NIQP/////7wQBw//////vhAHj/////+AEAkP////9BnAAQ/////zgJQAD/////f4AYQP////9BnQAs/////zhj/7D/////eGMAIP////9IAAAB/AAAA2AAAAD/////6AEAkP/////rwQBw/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////fAkYUP////+D4gAA//8AAHgeumL/////f+P7eP////9IAAAB/AAAA2AAAAD/////gSIAAP//AAA4AP/+/////3/j+3j/////XADwPv////+BaQAA/////3wAWDj/////kAkAAP////9IAAAB/AAAA2AAAAD/////6AEAkP/////rwQBw/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////L6T///////9BngAM/////0gAAAH8AAADYAAAAP////94YwAg/////0gAAAH8AAADYAAAAP////8=
+  symbols:
+  - kind: Function
+    name: .__cxa_free_exception
+    size: 196
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .free
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Mtxlock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Mtxunlock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unwind_Resume
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cxa_call_unexpected
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 52
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 90
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 100
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 110
+    kind: l
+    symbol: 5
+    addend: -10216440
+  - offset: 136
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 176
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 188
+    kind: rel24
+    symbol: 8
+    addend: 0

@@ -1,0 +1,81 @@
+- symbol: 0
+  hash: d2e052cb13dfe805d0bf1e98e04ba0489af463dd
+  signature: +CH/cf////98CAKm/////3xpG3j/////+8EAgP////98fht4//////gBAKD/////gAIAAP//AAD7oQB4//////vhAIj/////kAkAAP////9IAAAB/AAAA4AeADj/////gSIAAP//AAAvgAAA/////3gdACD/////kT4AAP////9BngBY/////4AdAAD/////OGAAAP////8vgAAA/////3gfACD/////QZ4AOP////9IAAAB/AAAA2AAAAD/////gT8ABP////84AP/9/////zlp////////OGAAAP////9/iwBA/////0CdAIz/////L4kAAP////9BngBI/////zhgAAD/////SAAAAfwAAANgAAAA/////3+j63j/////SAAAAfwAAANgAAAA/////zh+AAT/////eGMAIP////9IAAAB/AAAA2AAAAD/////6AEAoP/////roQB4/////+vBAID/////fAgDpv/////r4QCI/////zghAJD/////ToAAIP////9IAAAB/AAAA2AAAAD/////gT8AAP////9/4/t4/////4FpAAT/////gAsAAP/////4QQAo/////3wJA6b/////gEsABP////9OgAQh/////+hBACj/////f6PreP////9IAAAB/AAAA2AAAAD/////S///nP////99aVt4/////5F/AAT/////L4kAAP////9Anv90/////0v//7T/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt12strstreambufD1Ev
+    size: 276
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@001A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt12strstreambuf5_TidyEv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0032'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt6_MutexD1Ev
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 26
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 40
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 50
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 88
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 132
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 144
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 160
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 196
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 244
+    kind: rel24
+    symbol: 6
+    addend: 0

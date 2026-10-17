@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 2cca23d1fa9814dcc74d8cc9419b7123a993a80d
+  signature: +CH/gf////98CAKm/////y+EAAD/////+8EAcP////8vBQAA/////30gACb/////VSn//v/////4AQCQ/////z1ggAH/////++EAeP////98vit4/////3yfI3j/////YWsADf////98AAAm/////1QA3/7/////fSkDeP////8viQAA/////0GeACD/////6AEAkP////99Y1t4/////+vBAHD/////6+EAeP////98CAOm/////zghAID/////ToAAIP////9IAAAB/AAAA2AAAAD/////f+T7eP////9/xfN4/////zlgAz3/////OMAAAP////9EAAAC/////+gBAJD/////fGsHtP/////rwQBw/////31jW3j/////6+EAeP////98CAOm/////zghAID/////ToAAIP////8AAAAA/////wAJAAH/////gAIAAP//AAA=
+  symbols:
+  - kind: Function
+    name: .cellFsLsnRead2
+    size: 172
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._get_fsfd
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00AA'
+    size: 0
+    flags: 2
+    section: .bss
+  relocations:
+  - offset: 100
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 170
+    kind: l
+    symbol: 2
+    addend: -7170272

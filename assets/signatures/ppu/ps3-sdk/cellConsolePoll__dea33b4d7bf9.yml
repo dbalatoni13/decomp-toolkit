@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: 20ebaa06b34cf30c19ff1fc9282a4fe2ea9de1c0
+  signature: +CH/Yf////98CAKm//////thAHj/////+4EAgP/////7oQCI//////vBAJD/////++EAmP/////4AQCw/////0gAAAH8AAADL4MAAP////84YP///////0GeAYD/////g4KIlP////+AHABI/////y+AAAD/////QJ4AFP////9IAABQ/////y+fAAD/////f+D7eP////9BngBE/////3gLACD/////gAsABP////+D6wAM/////y+AAAD/////QZ7/5P////+BKwAA/////4BrAAj/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////L58AAP////9/4Pt4/////0Ce/8T/////gBwASP////8vgAAA/////0CeABT/////SAAAUP////8vnwAA/////3/g+3j/////QZ4ARP////94CwAg/////4ALAAT/////g+sADP////8vgAAA/////0Ce/+T/////gSsAAP////+AawAI/////4AJAAD/////+EEAKP////98CQOm/////4BJAAT/////ToAEIf/////oQQAo/////y+fAAD/////f+D7eP////9Anv/E/////zvcAAT/////O34APP////973wAg/////4AfAAD/////L4AAAP////94HQAg/////0GeAET/////gT0AEP////9/pOt4/////4B9AAT/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////L4MAAP////9/o+t4/////0GeACT/////SAAAAfwAAAOAHwAA/////y+AAAD/////QJ7/xP////9/m/AA/////0GeACj/////O94ABP////9L//+g/////4AfAAD/////L4AAAP////9Bnv/o/////4B9ABj/////SAAAAfwAAAN/m/AA/////0Ce/+D/////gBwQWP////8vgAAA/////0GeABz/////OGAAZP////85YACN/////0QAAAL/////g7wQWP////8vnQAA/////0Ce/vz/////gTwQXP////84AAAA/////zhgAAD/////kBwQXP////+RPBBY/////+gBALD/////eGMAIP/////rYQB4/////+uBAID/////fAgDpv/////roQCI/////+vBAJD/////6+EAmP////84IQCg/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellConsolePoll
+    size: 468
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleInitialized
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._cellConsoleProcessLine
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .cellConsoleFlush
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 312
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 360
+    kind: rel24
+    symbol: 3
+    addend: 0

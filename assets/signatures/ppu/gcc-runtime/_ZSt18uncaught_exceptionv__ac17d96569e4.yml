@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 2625107cc78299a446adbe3e9b909020fd96ba8c
+  signature: +CH/kf////98CAKm//////gBAID/////SAAAAfwAAANgAAAA/////4ADAAT/////fAn+cP////99IwJ4/////+gBAID/////OCEAcP////98Y0hQ/////3wIA6b/////VGMP/v////98Ywe0/////06AACD/////
+  symbols:
+  - kind: Function
+    name: ._ZSt18uncaught_exceptionv
+    size: 60
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cxa_get_globals
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 12
+    kind: rel24
+    symbol: 1
+    addend: 0

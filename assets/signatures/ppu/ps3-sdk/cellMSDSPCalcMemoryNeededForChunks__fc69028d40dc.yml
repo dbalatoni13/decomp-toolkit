@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: a6b01a2549e7cbc1c2d7773dc1fb835c2620f4b1
+  signature: fGoOcP////99SgGU/////31JB7T/////+CH/cf////98CAKm//////uhAHj/////eStspP////95PSbk//////gBAKD/////fUr+cP////9/vVoU/////zhgAAD/////e6CTZP////9/vQIU/////3+9ShT/////e70AIv////9/vUZw/////3+q6FD/////SAAAAfwAAANgAAAA/////+gBAKD/////f70HtP////98CAOm/////1e9YCb/////O70EAP////9/owe0/////+uhAHj/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSDSPCalcMemoryNeededForChunks
+    size: 116
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 72
+    kind: rel24
+    symbol: 1
+    addend: 0

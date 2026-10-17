@@ -1,0 +1,106 @@
+- symbol: 0
+  hash: 0057b97fce0f4239eac6f1ec5bfddf14bfa0b5f6
+  signature: +CH/Uf////98CAKm//////vBAKD/////fH4beP////84YAAA//////tBAID/////+2EAiP/////7gQCQ//////gBAMD/////fJwjeP////98uyt4//////shAHj/////+6EAmP/////74QCo/////0gAAAH8AAADYAAAAP////+AHgAM/////3+a43j/////f4DYQP////9BnQB4/////zu7AAH/////K50AJ/////9XpBA6/////0CdAXz/////VIQAOv////+AfgAI/////0gAAAH8AAADYAAAAP////8vgwAA/////3x/G3j/////QZ4BhP////+BfgAM/////5P+AAj/////f51YQP////9AnQA8/////zgLAAH/////fSvoUP////9/gOhA/////3kpACD/////OAAAAP////99KQOm/////0HdAaD/////VWkQOv////85awAB/////30p+hT/////eSkAIP////+QCQAA/////0IA/+z/////kX4ADP////84YAAA/////0gAAAH8AAADYAAAAP////+BPAAE/////y+J////////QZ4ADP////84CQAB/////5AcAAT/////OGAAAP////9XfRA6/////0gAAAH8AAADYAAAAP////+AvgAI/////309KhT/////eSkAIP////+AaQAA/////y+DAAD/////QZ4AQP////94fwAg/////zhgAAD/////SAAAAfwAAANgAAAA/////zgA//3/////gT8ABP////85af///////3+LAED/////QJ0AmP////8viQAA/////0GeAFj/////OGAAAP////9IAAAB/AAAA2AAAAD/////gL4ACP////99PSoU/////zhgAAD/////eSkAIP////+TSQAA/////0gAAAH8AAADYAAAAP/////oAQDA/////+shAHj/////60EAgP////98CAOm/////+thAIj/////64EAkP/////roQCY/////+vBAKD/////6+EAqP////84IQCw/////06AACD/////OGAAAP////9IAAAB/AAAA2AAAAD/////gT8AAP////9/4/t4/////4FpAAT/////gAsAAP/////4QQAo/////3wJA6b/////gEsABP////9OgAQh/////+hBACj/////gL4ACP////9L//+I/////31pW3j/////kX8ABP////8viQAA/////0Ce/2j/////S///uP////84gACg/////4B+AAj/////O6AAKP////9UhAA6/////0gAAAH8AAADYAAAAP////8vgwAA/////3x/G3j/////QJ7+hP////+DIgAA//8AADgZAAj/////eAsAIP////+JKwAA/////y+JAAD/////QZ4AFP////9/I8t4/////0gAAAH8AAADYAAAAP////9L//5c/////4EiAAD//wAAOAAAAf////+AYgAA//8AAJE5AAD/////mAsAAP////9IAAAB/AAAA2AAAAD/////S///1P////85IAAB/////30pA6b/////S//+XP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt6locale7_Locimp7_AddfacEPNS_5facetEj
+    size: 592
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .realloc
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@01FE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZSt6_ThrowRKSt9exception
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0226'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@022E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .atexit
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 56
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 200
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 236
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 276
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 316
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 344
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 400
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 488
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 510
+    kind: l
+    symbol: 4
+    addend: -28621288
+  - offset: 536
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 550
+    kind: l
+    symbol: 6
+    addend: -28621288
+  - offset: 558
+    kind: l
+    symbol: 7
+    addend: -28621288
+  - offset: 568
+    kind: rel24
+    symbol: 8
+    addend: 0

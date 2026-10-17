@@ -1,0 +1,67 @@
+- symbol: 0
+  hash: 85d5a9816d75681aa522040a564ee799e24067a2
+  signature: +CH/Yf////98CAKm//////thAHj/////fHsbeP/////4AQCw//////uBAID/////+6EAiP/////7wQCQ//////vhAJj/////SAAAAfwAAANgAAAA/////3x9G3j/////SAAAAfwAAANgAAAA/////zgAAAD/////k7sAFP////+QGwAM/////5AbAAj/////kHsAGP////9IAAAB/AAAA2AAAAD/////g+MABP////97/gAg/////3/D83j/////SAAAAfwAAANgAAAA/////zuDAAH/////e50AIP////9/o+t4/////0gAAAH8AAADYAAAAP////8vnAAA/////3+pA6b/////fGkbeP////9BngAc/////4geAAD/////O/8AAf////+YCQAA/////3v+ACD/////OSkAAf////9CAP/s/////5B7AAj/////SAAAAfwAAANgAAAA/////4PjABD/////e/4AIP////9/w/N4/////0gAAAH8AAADYAAAAP////87gwAB/////3udACD/////f6PreP////9IAAAB/AAAA2AAAAD/////L5wAAP////9/qQOm/////3xpG3j/////QZ4AHP////+IHgAA/////zv/AAH/////mAkAAP////97/gAg/////zkpAAH/////QgD/7P////84AAAC/////+uBAID/////kHsADP////+QGwAQ/////+gBALD/////62EAeP/////roQCI/////3wIA6b/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE5_InitERKSt8_Locinfo
+    size: 304
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Getpmbstate
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Getpwcstate
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Getptimes
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .strlen
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Znaj
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 36
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 48
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 76
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 116
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 168
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 188
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 208
+    kind: rel24
+    symbol: 5
+    addend: 0

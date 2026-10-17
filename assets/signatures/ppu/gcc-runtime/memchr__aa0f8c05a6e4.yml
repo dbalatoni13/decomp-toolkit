@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: 097e189cdce31f37f718ffb182bafb27e9fda8e7
+  signature: LCUAAP////98axt4/////3iEBiD/////QYIAFP////+ICwAA/////3+AIAD/////QJ4AEP////9OgAAg/////zhgAAD/////ToAAIP////85Jf///////3kpACD/////OSkAAf////99KQOm/////zgDAAH/////eAMAIP////9CQP/g/////4gDAAD/////f4AgAP////9Anv/s/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .memchr
+    size: 84
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: a92f73989ad0be448264d68fd1d0596729d73ef6
+  signature: KAUAAP////94hAYg/////0GCACT/////KAUACP////9AgAAk/////3ypA6b/////iAMAAP////98JAAA/////02CACD/////OGMAAf////9CAP/w/////3xjGnj/////ToAAIP////98ABos/////3wDAND/////eAAHYP////8oAAAA/////0GCACj/////fAkDpv////98oChQ/////4gDAAD/////fCAgQP////9NggAg/////zhjAAH/////QgD/8P////8oBQAI/////0GAALz/////fYMqFP////95jAck/////zjAf3//////fIgjeP////95CEQs/////3jGgCz/////eQiALP////94xgAO/////3kIAA7/////fAMA0P////94AAZg/////ygAAAD/////QYIAJP////98AChA/////0GAABD/////eKDowv////94pQdg/////0gAADD/////fKAoUP////94AOjC/////0gAACT/////OAMAgP////98AAIs/////3ig6ML/////KAAAEP////9BgAAI/////zgAABD/////eAcfJP////98pyhQ/////3wJA6b/////6AMAAP////98AEJ4/////3wHMDj/////fAkzeP////99RzIU/////30rUPj/////fWAAdP////94AOjC/////ygAAAj/////QYAAPP////84YwAI/////0IA/9T/////fCNgAP////9BgP+o/////ygFAAD/////QYL/DP////98qQOm/////4gDAAD/////fCQAAP////9NggAg/////zhjAAH/////QgD/8P////98Yxp4/////06AACD/////fGMCFP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .memchr
+    size: 332
+    flags: 1
+    section: .text
+  relocations: []

@@ -1,0 +1,110 @@
+- symbol: 0
+  hash: 2954d49d6066d0d377ade70c6d8ea45ef251ea72
+  signature: gWIAAP//AAB8CAKm//////gh/4H/////+AEAkP////98aht4/////zxgAHr/////++EAeP////8vJQAA/////4ErAAD/////O+D///////9gYxIN/////y+JAAD/////Qd4AbP////88YAB6/////zvg////////YGMSAv////9B2gBc/////4FiAAD//wAAVUAYOP////9VSTAy/////zxgAHr/////fQBIUP////874P///////4ALAAD/////YGMSCv////9/gFBA/////0CdADT/////gSIAAP//AACAaQAA/////3xoGhT/////eGMAIP////9IAAAB/AAAA2AAAAD/////fH8beP////88YAB6/////y+f////////YGMSAv////9BngAI/////zhgAAD/////SAAAAfwAAANgAAAA/////+gBAJD/////f+P7eP/////r4QB4/////3wIA6b/////OCEAgP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSSurroundListenerfv
+    size: 188
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__alListenerfv_Process
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 70
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 110
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 124
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 156
+    kind: rel24
+    symbol: 5
+    addend: 0
+- symbol: 0
+  hash: 648fabc102e2d39c60cbdbb3fd22a48ed99b3279
+  signature: gSIAAP//AAB8CAKm//////gh/4H/////+AEAkP////98aht4/////zxgAHr/////++EAeP////874P///////4AJAAD/////YGMSDf////8vgAAA/////0HeAFz/////gWIAAP//AABVQBg4/////1VJMDL/////PGAAev////99AEhQ/////zvg////////gAsAAP////9gYxIK/////3+AUED/////QJ0ANP////+BIgAA//8AAIBpAAD/////fGgaFP////94YwAg/////0gAAAH8AAADYAAAAP////98fxt4/////zxgAHr/////L5////////9gYxIC/////0GeAAj/////OGAAAP////9IAAAB/AAAA2AAAAD/////6AEAkP////9/4/t4/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellMSSurroundListenerfv
+    size: 168
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0032'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__alListenerfv_Process
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 50
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 90
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 104
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 136
+    kind: rel24
+    symbol: 5
+    addend: 0

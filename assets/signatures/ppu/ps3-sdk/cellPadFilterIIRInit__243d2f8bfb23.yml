@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 57d64aed0ebbce62d2bd83916efe95c7d899b941
+  signature: K4QAAv////88AIAS/////2AAFAH/////QZ0AaP////9UiRA6/////4FCAAD//wAAfGgbeP////99KQe0/////zjgAAP/////OMAAAP////99akgu/////4ALAAD/////kAMADP////+BKwAE/////5EjABD/////gAsACP////+QAwAU/////4ErAAz/////kSMAGP////+ACwAQ/////5ADABz/////OAf///////+QyAAA/////zkoAAT/////eAcAIP////95KAAg/////y+nAAD/////QJ7/6P////84AAAA/////3wDA3j/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellPadFilterIIRInit
+    size: 124
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 22
+    kind: l
+    symbol: 1
+    addend: -14104088

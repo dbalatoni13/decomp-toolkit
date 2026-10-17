@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: 3490ad26a8cd6082215ff4b24857d3dc70f68231
+  signature: +CH/gf////98CAKm//////vhAHj/////fH8beP////84YAAC//////vBAHD/////+AEAkP////9IAAAB/AAAA2AAAAD/////gQIAAP//AAA4AAAB/////3/++3j/////OUAAAf////+QHwAE/////1VLEDr/////fWkHtP////99KUIU/////4AJAAz/////L4AAAP////9/HgAA/////0GeACD/////QZoAHP////+BPwAE/////zlJAAH/////K4oAB/////+RXwAE/////0Cd/9D/////VUsQOv////99Sge0/////31rB7T/////OGAAAv////99a0IU/////30oUK7/////OSkAAf////+TywAM/////30oUa7/////SAAAAfwAAANgAAAA/////+gBAJD/////68EAcP/////r4QB4/////3wIA6b/////OCEAgP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt8ios_base7_AddstdEv
+    size: 176
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 28
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 38
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 144
+    kind: rel24
+    symbol: 3
+    addend: 0

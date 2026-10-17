@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: cdf928727bc722bb4c94eac974323cfd2566fea5
+  signature: gUIAAP//AAB8CAKm//////gh/5H/////+AEAgP////98aBt4/////3hkACD/////gSoAAP////+BaQAA/////31jW3j/////gAsAFP////8vgAAA/////3gLACD/////QZ4AOP////+BKwAA/////31jW3j/////gWkACP////+ACwAA//////hBACj/////fAkDpv////+ASwAE/////06ABCH/////6EEAKP/////oAQCA/////zghAHD/////fAgDpv////9OgAAg/////+gBAID/////eQQAIP////84IQBw/////3wIA6b/////SAAAAPwAAAM=
+  symbols:
+  - kind: Function
+    name: ._ZdaPvN3bfx10bfxMemHeapENS0_9bfxMemTagE
+    size: 124
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZN3bfx13MemoryManager17bfxMemDefaultFreeEPv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 120
+    kind: rel24
+    symbol: 2
+    addend: 0

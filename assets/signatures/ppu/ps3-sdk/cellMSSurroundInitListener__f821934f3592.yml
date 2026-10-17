@@ -1,0 +1,59 @@
+- symbol: 0
+  hash: dca90639838b13c600fe644a628e88d8b9d12565
+  signature: gSIAAP//AAB8CAKm//////gh/5H/////+AEAgP////98aht4/////zxgAHr/////gAkAAP////9gYxIN/////y+AAAD/////Qd4AYP////+BYgAA//8AAFVAGDj/////VUkwMv////88YAB6/////30ASFD/////YGMSCv////+ACwAA/////3+AUED/////QJ0APP////+BIgAA//8AAIBpAAD/////fGgaFP////94YwAg/////0gAAAH8AAADYAAAAP////84YAAA/////0gAAAH8AAADYAAAAP////84YAAA/////+gBAID/////OCEAcP////98CAOm/////06AACD/////SAAAAfwAAANgAAAA/////zhg////////S///5P////8=
+  symbols:
+  - kind: Function
+    name: .cellMSSurroundInitListener
+    size: 148
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@004E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__alInitListener
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 42
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 78
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 92
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 132
+    kind: rel24
+    symbol: 5
+    addend: 0

@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 80c0a1c765ef2cd994fbbd82b6bb137cec914bcd
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4/////zlgAJP/////RAAAAv////98YBt4/////3wDA3j/////6WEAAP/////oCwAQ/////3wIA6b/////6+v/+P////99YVt4/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .sys_time_get_timebase_frequency
+    size: 60
+    flags: 2
+    section: .text
+  relocations: []

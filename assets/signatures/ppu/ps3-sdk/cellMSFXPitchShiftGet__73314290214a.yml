@@ -1,0 +1,46 @@
+- symbol: 0
+  hash: 0a3def3bbdd12f21ee62bfe48699ec985072b02f
+  signature: LCMAAP////98CAKm/////3xpG3j/////PGAAev/////4If+R//////gBAID/////YGMSAv////8vJAAA/////0HCAFT/////PGAAev////8rhQAH/////2BjEgL/////QdoARP////9UpRg4/////zxgAHr/////QZ0ANP////99JUoU/////zhgAAD/////eSkAIP/////ACQAg/////9AEAAD/////SAAAAfwAAANgAAAA/////zhgAAD/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP////9gYxIC/////0gAAAH8AAADYAAAAP////84YP///////0v//+D/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXPitchShiftGet
+    size: 132
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 84
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 116
+    kind: rel24
+    symbol: 1
+    addend: 0
+- symbol: 0
+  hash: 998669a78e3864e9a238cdba24f232a328a9c09c
+  signature: LCMAAP////98CAKm/////3xpG3j/////PGAAev/////4If+R//////gBAID/////YGMSAv////8rhQAH/////0HCAET/////VKAYOP////88YAB6/////3wAShT/////YGMSAv////94BQAg/////0GdACz/////wAUAIP////84YAAA/////9AEAAD/////SAAAAfwAAANgAAAA/////zhgAAD/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP////9IAAAB/AAAA2AAAAD/////OGD///////9L///k/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSFXPitchShiftGet
+    size: 116
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 72
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 100
+    kind: rel24
+    symbol: 1
+    addend: 0

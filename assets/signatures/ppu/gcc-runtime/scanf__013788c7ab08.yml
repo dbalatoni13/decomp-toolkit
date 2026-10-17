@@ -1,0 +1,55 @@
+- symbol: 0
+  hash: 0b2c11b5c75bdb835c39aa31d430e4ce8c440e83
+  signature: +CH/Yf////98CAKm//////uBAID/////g4IAAP//AAD7oQCI//////gBALD/////fH0beP////84AQDY/////3+D43j/////kAEAcP/////44QDw//////kBAPj/////+SEBAP/////5QQEI//////iBANj/////+KEA4P/////4wQDo/////0gAAAH8AAADYAAAAP////+AwQBw/////3ulACD/////gGIAAP//AAB/hON4/////0gAAAH8AAADYAAAAP////98fRt4/////3+D43j/////SAAAAfwAAANgAAAA/////+gBALD/////64EAgP////9/owe0/////3wIA6b/////66EAiP////84IQCg/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .scanf
+    size: 144
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Lockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0056'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Scanf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 68
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 86
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 92
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 108
+    kind: rel24
+    symbol: 5
+    addend: 0

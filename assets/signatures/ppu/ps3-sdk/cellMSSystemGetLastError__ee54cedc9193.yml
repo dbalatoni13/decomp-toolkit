@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: 2b01e6934df961c7bc43465fb9ddff46bab86158
+  signature: +CH/gf////98CAKm/////zhhAHD/////+AEAkP////9IAAAB/AAAA+hBACj/////6AEAcP////+A4gAA//8AADlAAAD/////fAgHtP////+BIgAA//8AADgAAED/////fAkDpv////9IAAAM/////31qB7T/////QkAAPP////+ACQAA/////zkpAAT/////OWoAAf////9/gEAA/////3kpACD/////QJ7/5P////9VQBA6/////3wAB7T/////fScALv/////oAQCQ/////zghAID/////fSMHtP////98CAOm/////06AACD/////6AEAkP////84YAAA/////zghAID/////fAgDpv////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSSystemGetLastError
+    size: 140
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_ppu_thread_get_id
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@001E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 16
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 30
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 42
+    kind: l
+    symbol: 3
+    addend: -14104088

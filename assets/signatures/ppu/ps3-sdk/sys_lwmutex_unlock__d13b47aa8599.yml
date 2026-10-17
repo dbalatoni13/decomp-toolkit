@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 1e7b84f9d2392eabba02bc01a56fbcc381866548
+  signature: +CH/Yf////98CAKm//////vhAJj/////fH8beP////84YQBw//////uhAIj/////+AEAsP////94YwfG/////3hjBub/////SAAAAfwAAANgAAAA/////4AfAAD/////g6EAdP////88YIAB/////3+g6AD/////YGMACf////9BngAc/////+gBALD/////66EAiP/////r4QCY/////3wIA6b/////OCEAoP////9OgAAg/////4F/AAz/////OGAAAP////8viwAA/////zlr////////QJ4AnP////+AHwAE/////zhg////////e6sHxv////8voAAA/////3hjB8T/////QJ4AIP////98APio/////3wgWAD/////QMIADP////98YPmt/////0DC//D/////f6BYAP////9BngCE/////zgA//3/////kB8AAP////98IASs/////zlgAGL/////gH8AEP////9EAAAC/////z+ggAH/////6+EAmP////98Ywe0/////2O9AAX/////PSB//v////98Y+p4/////+uhAIj/////YSn/+/////98a/5w/////31gGnj/////fABYUP////98AP5w/////3wDB7T/////6AEAsP////84IQCg/////3xjSDj/////fAgDpv////98aRhQ/////06AACD/////6AEAsP////+RfwAM/////+uhAIj/////fAgDpv/////r4QCY/////zghAKD/////ToAAIP////98IASs/////zhgAAD/////S///GP////8AAAAA/////wAJAAH/////gAMAAP////8=
+  symbols:
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 316
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_ppu_thread_get_id
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 36
+    kind: rel24
+    symbol: 1
+    addend: 0

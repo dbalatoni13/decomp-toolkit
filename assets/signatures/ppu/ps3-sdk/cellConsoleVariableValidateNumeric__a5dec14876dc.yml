@@ -1,0 +1,55 @@
+- symbol: 0
+  hash: 603e2967474c6980412e8728310bd254ed7c7e6a
+  signature: LCYAAP////98CAKm//////gh/3H/////2+EAiP/////4AQCg/////0GCAAz/////K4MACf////9AnQAg/////zgAAAD/////fAMHtP/////oAQCg/////8vhAIj/////OCEAkP////98CAOm/////06AACD/////gWIAAP//AAB4aReI/////3wJWC7/////fAAHtP////98AFoU/////3wJA6b/////ToAEIP////8AAAAo/////wAAAez/////AAABqP////8AAAIc/////wAAASj/////AAACfP////8AAAFc/////wAAAkz/////AAAA0P////8AAAB8/////3iARiD/////iSYAAP////98Cwd0/////30pB3T/////f4tIAP////9BnP+M/////4gGAAj/////fAAHdP////9/gFgA/////0Gc/3z/////iAYAEP////98Bgd0/////y+GAAD/////QJ4BhP////84AAAB/////3wDB7T/////6AEAoP/////L4QCI/////zghAJD/////fAgDpv////9OgAAg//////iBAHj/////yCEAeP/////JpgAA//////+BaAD/////T93zgv////9Anv84/////8gGAAj//////4AIAP////9P3fOC/////0Ce/yj/////yEYAEP/////L4gAA//8AAP+C+AD/////QZ7/sP/////8IWgo/////0gAAAH8AAADYAAAAP////84AAAB//////+B+AD/////QZ7/BP////9L//78/////3iAACL/////waYAAP////+QAQBw/////8AhAHD//////4FoAP////9P3fOC/////0Ce/uD/////wAYACP//////gAgA/////0/d84L/////QJ7+0P/////ARgAQ/////8PiAAD//wAA/4L4AP////9Bnv9Y/////+whaCj/////SAAAAfwAAANgAAAA/////zgAAAH//////4H4AP////9Bnv6s/////0v//qT/////eIkAIv////+BZgAA/////3+JWAD/////QZz+lP////+ABgAI/////3+ASAD/////QZz+iP////+AxgAQ/////y+GAAD/////QZ7/FP////98C0hQ/////30gM9b/////SAABVP/////pJgAA/////3+kSAD/////QZz+ZP/////oBgAI/////3+gIAD/////QZz+WP/////oxgAQ/////y+mAAD/////QZ7+5P////98CSBQ/////30gM9L/////fSkx0v////98CQBQ/////3wJ/nb/////fSsCeP////99aVhQ/////zlr////////eWAP4P////9L//4o/////3iAhCD/////oSYAAP////98Cwc0/////30pBzT/////f4tIAP////9BnP4M/////6AGAAj/////fAAHNP////9/gFgA/////0Gc/fz/////oAYAEP////98Bgc0/////y+GAAD/////QZ7+hP////98CVhQ/////30gM9b/////SAAAxP////94iUYg/////4lmAAD/////f4lYQP////9BnP3Q/////4gGAAj/////f4BIQP////9BnP3E/////4jGABD/////L4YAAP////9Anv9A/////zgAAAH/////S//+TP////94iYQg/////6FmAAD/////f4lYQP////9BnP2g/////6AGAAj/////f4BIQP////9BnP2U/////6DGABD/////L4YAAP////9Anv8Q/////zgAAAH/////S//+HP/////pJgAA/////3+kSED/////QZz9dP/////oBgAI/////3+gIED/////QZz9aP/////oxgAQ/////y+mAAD/////QZ799P////98CSBQ/////30gM5L/////S///EP////94iQAi/////4FmAAD/////f4lYQP////9BnP1A/////4AGAAj/////f4BIQP////9BnP00/////4DGABD/////L4YAAP////9Bnv3A/////3wLSFD/////fSAzlv////99KTHW/////3wJAFD/////fAn+cP////99KwJ4/////31pWFD/////OWv///////9VYA/+/////0v//QT/////
+  symbols:
+  - kind: Function
+    name: .cellConsoleVariableValidateNumeric
+    size: 804
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0102'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .fmod
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@015A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .fmodf
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 62
+    kind: l
+    symbol: 1
+    addend: -13346400
+  - offset: 258
+    kind: l
+    symbol: 2
+    addend: -13346400
+  - offset: 272
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 346
+    kind: l
+    symbol: 4
+    addend: -13346400
+  - offset: 360
+    kind: rel24
+    symbol: 5
+    addend: 0

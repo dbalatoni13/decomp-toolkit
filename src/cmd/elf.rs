@@ -21,7 +21,6 @@ use crate::{
         IntoCow, ToCow,
         asm::write_asm,
         comment::{CommentSym, MWComment},
-        config::{write_splits_file, write_symbols_file},
         elf::process_elf,
         file::{buf_writer, process_rsp},
         path::native_path,
@@ -42,11 +41,12 @@ pub struct Args {
 #[derive(FromArgs, PartialEq, Debug)]
 #[argp(subcommand)]
 enum SubCommand {
-    Config(ConfigArgs),
     Disasm(DisasmArgs),
     Fixup(FixupArgs),
     Signatures(SignaturesArgs),
     Info(InfoArgs),
+    Split(SplitArgs),
+    Verify(VerifyArgs),
 }
 
 #[derive(FromArgs, PartialEq, Eq, Debug)]
@@ -62,6 +62,36 @@ pub struct DisasmArgs {
 }
 
 #[derive(FromArgs, PartialEq, Eq, Debug)]
+/// Splits a PS3 PPU executable ELF into ELF64 relocatable objects.
+#[argp(subcommand, name = "split")]
+pub struct SplitArgs {
+    #[argp(positional, from_str_fn(native_path))]
+    /// input PPU executable (auto-creates editable config/) or existing config.yml
+    config: Utf8NativePathBuf,
+    #[argp(positional, from_str_fn(native_path))]
+    /// output directory
+    out_dir: Utf8NativePathBuf,
+    #[argp(option, short = 's', from_str_fn(native_path))]
+    /// optional PPU signature database (for direct ELF input)
+    signatures: Option<Utf8NativePathBuf>,
+}
+
+#[derive(FromArgs, PartialEq, Eq, Debug)]
+/// Verifies a relinked PS3 ELF against its original executable.
+#[argp(subcommand, name = "verify")]
+pub struct VerifyArgs {
+    #[argp(positional, from_str_fn(native_path))]
+    /// project config
+    config: Utf8NativePathBuf,
+    #[argp(positional, from_str_fn(native_path))]
+    /// relinked ELF
+    linked_elf: Utf8NativePathBuf,
+    #[argp(option, short = 'o', from_str_fn(native_path))]
+    /// create an .ok marker after verifying the executable image (not a full-file SHA-1)
+    output: Option<Utf8NativePathBuf>,
+}
+
+#[derive(FromArgs, PartialEq, Eq, Debug)]
 /// Fixes issues with GNU assembler built object files.
 #[argp(subcommand, name = "fixup")]
 pub struct FixupArgs {
@@ -74,18 +104,6 @@ pub struct FixupArgs {
 }
 
 #[derive(FromArgs, PartialEq, Eq, Debug)]
-/// Generates configuration files from an executable ELF.
-#[argp(subcommand, name = "config")]
-pub struct ConfigArgs {
-    #[argp(positional, from_str_fn(native_path))]
-    /// input file
-    in_file: Utf8NativePathBuf,
-    #[argp(positional, from_str_fn(native_path))]
-    /// output directory
-    out_dir: Utf8NativePathBuf,
-}
-
-#[derive(FromArgs, PartialEq, Eq, Debug)]
 /// Builds function signatures from an ELF file.
 #[argp(subcommand, name = "sigs")]
 pub struct SignaturesArgs {
@@ -93,8 +111,8 @@ pub struct SignaturesArgs {
     /// input file(s)
     files: Vec<Utf8NativePathBuf>,
     #[argp(option, short = 's')]
-    /// symbol name
-    symbol: String,
+    /// optional symbol name (omit on PS3 to generate a file per SDK/GCC function)
+    symbol: Option<String>,
     #[argp(option, short = 'o', from_str_fn(native_path))]
     /// output yml
     out_file: Utf8NativePathBuf,
@@ -111,22 +129,52 @@ pub struct InfoArgs {
 
 pub fn run(args: Args) -> Result<()> {
     match args.command {
-        SubCommand::Config(c_args) => config(c_args),
         SubCommand::Disasm(c_args) => disasm(c_args),
         SubCommand::Fixup(c_args) => fixup(c_args),
         SubCommand::Signatures(c_args) => signatures(c_args),
         SubCommand::Info(c_args) => info(c_args),
+        SubCommand::Split(c_args) => {
+            if crate::util::ppu_split::is_ppu(&c_args.config)? {
+                // Match DTK's split-time analysis/writeback: derive editable
+                // config on the first split, then consume its symbols and
+                // splits on this and subsequent runs. Reuse the existing PPU
+                // config parser and its preservation/merge logic verbatim.
+                let config_dir = c_args.out_dir.join("config");
+                crate::ps3::util::ppu_split::config_with_signatures(
+                    &c_args.config,
+                    &config_dir,
+                    c_args.signatures.as_deref(),
+                )?;
+                crate::util::ppu_split::split(&config_dir.join("config.yml"), &c_args.out_dir)
+            } else {
+                ensure!(c_args.signatures.is_none(), "-s requires a PPU ELF input");
+                crate::util::ppu_split::split(&c_args.config, &c_args.out_dir)
+            }
+        }
+        SubCommand::Verify(c_args) => {
+            // A failed verification must never leave a stale .ok marker.
+            if let Some(out) = &c_args.output {
+                match fs::remove_file(out.as_str()) {
+                    Ok(()) => {}
+                    Err(e) if e.kind() == std::io::ErrorKind::NotFound => {}
+                    Err(e) => return Err(e.into()),
+                }
+                let config: crate::ps3::util::ppu_split::ElfProjectConfig =
+                    serde_yaml::from_slice(&fs::read(&c_args.config)?)?;
+                ensure!(
+                    config.hash.is_some(),
+                    "Cannot generate .ok: original ELF SHA-1 missing from config.yml"
+                );
+            }
+            let count = crate::util::ppu_split::verify(&c_args.config, &c_args.linked_elf)?;
+            if let Some(out) = c_args.output {
+                fs::write(out.as_str(), format!(
+                    "PS3 PPU executable-image match: {count} allocated sections and entrypoint\nOriginal ELF SHA-1 checked against config.yml; linked ELF SHA-1 not checked\n"
+                ))?;
+            }
+            Ok(())
+        }
     }
-}
-
-fn config(args: ConfigArgs) -> Result<()> {
-    log::info!("Loading {}", args.in_file);
-    let obj = process_elf(&args.in_file)?;
-
-    DirBuilder::new().recursive(true).create(&args.out_dir)?;
-    write_symbols_file(&args.out_dir.join("symbols.txt"), &obj, None)?;
-    write_splits_file(&args.out_dir.join("splits.txt"), &obj, false, None)?;
-    Ok(())
 }
 
 fn disasm(args: DisasmArgs) -> Result<()> {
@@ -391,13 +439,37 @@ fn has_section_flags(flags: SectionFlags, flag: u32) -> Result<bool> {
 }
 
 fn signatures(args: SignaturesArgs) -> Result<()> {
-    // Process response files (starting with '@')
+    // Keep the original DTK `elf sigs -s FUNCTION -o FUNCTION.yml` interface.
+    // PS3 uses the same per-function layout, with a variant list in each file.
     let files = process_rsp(&args.files)?;
+    anyhow::ensure!(!files.is_empty(), "At least one ELF input is required");
+    if crate::util::ppu_split::is_ppu(&files[0])? {
+        let input_paths: Vec<&typed_path::Utf8NativePath> =
+            files.iter().map(|path| path.as_ref()).collect();
+        let all = crate::ps3::util::signatures::generate(&input_paths)?;
+        if let Some(symbol) = args.symbol {
+            let variants: Vec<_> = all.into_iter().filter(|entry| entry.name() == symbol).collect();
+            anyhow::ensure!(!variants.is_empty(), "No signature variants found for {symbol}");
+            crate::ps3::util::signatures::save(&args.out_file, &variants)?;
+            println!("Wrote {} variants of {symbol} to {}", variants.len(), args.out_file);
+        } else {
+            let count = crate::ps3::util::signatures::save_directory(&args.out_file, &all)?;
+            println!(
+                "Wrote {count} per-function YAML files ({} variants) to {}",
+                all.len(),
+                args.out_file
+            );
+        }
+        return Ok(());
+    }
+    let symbol = args.symbol.as_deref().ok_or_else(|| {
+        anyhow::anyhow!("Non-PPU ELF sigs requires -s FUNCTION (the original DTK command)")
+    })?;
 
     let mut signatures: HashMap<String, FunctionSignature> = HashMap::new();
     for path in files {
         log::info!("Processing {}", path);
-        let signature = match generate_signature(&path, &args.symbol) {
+        let signature = match generate_signature(&path, symbol) {
             Ok(Some(signature)) => signature,
             Ok(None) => continue,
             Err(e) => {
@@ -422,7 +494,7 @@ fn signatures(args: SignaturesArgs) -> Result<()> {
 }
 
 fn info(args: InfoArgs) -> Result<()> {
-    let in_buf = fs::read(&args.input)
+    let in_buf = crate::util::ppu_split::read_elf(&args.input)
         .with_context(|| format!("Failed to open input file: '{}'", args.input))?;
     let in_file = object::read::File::parse(&*in_buf).context("Failed to parse input ELF")?;
 

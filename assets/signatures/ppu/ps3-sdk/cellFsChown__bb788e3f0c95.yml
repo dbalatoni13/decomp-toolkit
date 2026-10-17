@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: c6e30af5cefa1d00dc25b0ed53165d3c2c606442
+  signature: OWADQ/////98CAKm//////gBABD/////RAAAAv/////oAQAQ/////3xjB7T/////fAgDpv////9OgAAg/////wAAAAD/////AAkAAf////8AAAAA/////w==
+  symbols:
+  - kind: Function
+    name: .cellFsChown
+    size: 44
+    flags: 1
+    section: .text
+  relocations: []

@@ -1,0 +1,46 @@
+- symbol: 0
+  hash: c33871f257d14e55ce33f25ed69b09926d11334c
+  signature: gOIAAP//AAB8CAKm/////4FiAAD//wAAfGobeP/////4If+R/////zkLACj/////gIIAAP//AAD4AQCA/////4DHAAz/////OAsAFP////+RAwAM/////zkm//T/////gKcABP////98aBt4/////3kpACD/////kWMAAP////+QAwAI/////zll//T/////lMgACP////+ACQAA/////3lrACD/////gMcACP////99CAIU/////4AHABD/////eQgAIP////+QCAAA/////5CjAAD/////gSsAAP////99I0oU/////3kpACD/////kMkAAP////+UigAM/////3lDACD/////SAAAAfwAAANgAAAA/////+gBAID/////OCEAcP////98CAOm/////06AACD/////
+  symbols:
+  - kind: Function
+    name: ._ZNSdD1Ev
+    size: 156
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@000A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@001A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt8ios_baseD2Ev
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 10
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 26
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 132
+    kind: rel24
+    symbol: 4
+    addend: 0

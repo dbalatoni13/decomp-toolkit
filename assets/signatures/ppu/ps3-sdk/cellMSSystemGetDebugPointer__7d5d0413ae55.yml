@@ -1,0 +1,50 @@
+- symbol: 0
+  hash: 9b8b86c16e0f23ea4dc66ed5216cf969d6a074c1
+  signature: gSIAAP//AAB8CAKm//////gh/5H/////+AEAgP////98Zht4/////zhgAAD/////gAkAAP////8vgAAA/////0GeAHD/////gSIAAP//AACBQgAA//8AAIFpAAD/////gQoAAP////99awe0/////zjoACD/////kQYAAP////9VaRg4/////1VrEDr/////kOYABP////99KUIU/////31rQhT/////eSkAIP////85awCg/////zgJASD/////OUgAoP////+RZgAM/////zkpAKD/////kAYAFP////+RRgAI/////5EmABD/////SAAAAfwAAAM4YAAA/////+gBAID/////OCEAcP////98CAOm/////06AACD/////PGAAev////9gYxID/////0gAAAH8AAADOGD///////9L///g/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSSystemGetDebugPointer
+    size: 164
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 38
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 42
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 120
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 152
+    kind: rel24
+    symbol: 4
+    addend: 0

@@ -1,0 +1,32 @@
+- symbol: 0
+  hash: cfcb271ce76a265c722bb55c26745c54b67d27e1
+  signature: +CH/cf////98CAKm//////vhAIj/////fH8beP////84gAAA//////uhAHj/////+AEAoP////9IAAAB/AAAA4O/ABz/////L50AAP////9BngAg/////3upACD/////fSNLeP////+DqQAA/////0gAAAH8AAADYAAAAP////8vnQAA/////0Ce/+j/////g78AIP////84AAAA/////y+dAAD/////kB8AHP////9BngAg/////3upACD/////fSNLeP////+DqQAA/////0gAAAH8AAADYAAAAP////8vnQAA/////0Ce/+j/////OAAAAP/////roQB4/////5AfACD/////6AEAoP/////r4QCI/////zghAJD/////fAgDpv////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt8ios_base5_TidyEv
+    size: 152
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt8ios_base8_CallfnsENS_5eventE
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 28
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 56
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 2
+    addend: 0

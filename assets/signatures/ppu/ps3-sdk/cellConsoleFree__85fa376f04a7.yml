@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 79a9ddeb53e2e722d8c3feb640f9785ede74b916
+  signature: gSKIlP////98CAKm//////gh/5H/////+AEAgP////+BaQBM/////4ALAAD/////+EEAKP////98CQOm/////4BLAAT/////ToAEIf/////oQQAo/////+gBAID/////OCEAcP////98CAOm/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellConsoleFree
+    size: 60
+    flags: 1
+    section: .text
+  relocations: []

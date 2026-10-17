@@ -1,0 +1,63 @@
+- symbol: 0
+  hash: bac2dc95b309e58298d7fcb900adfa45736596a3
+  signature: +CH/cf////98CAKm/////4EiAAD//wAA+AEAoP////+AAwA4//////uhAHj/////L4AAAP/////7wQCA//////vhAIj/////fH0beP////+RIwAA/////3geACD/////QZ4AWP////+AHgAA/////zhgAAD/////L4AAAP////94HwAg/////0GeADj/////SAAAAfwAAANgAAAA/////4E/AAT/////OAD//f////85af///////zhgAAD/////f4sAQP////9AnQCM/////y+JAAD/////QZ4ASP////84YAAA/////0gAAAH8AAADYAAAAP////9/w/N4/////0gAAAH8AAADYAAAAP////84fQAE/////3hjACD/////SAAAAfwAAANgAAAA/////+gBAKD/////66EAeP/////rwQCA/////3wIA6b/////6+EAiP////84IQCQ/////06AACD/////SAAAAfwAAANgAAAA/////4E/AAD/////f+P7eP////+BaQAE/////4ALAAD/////+EEAKP////98CQOm/////4BLAAT/////ToAEIf/////oQQAo/////3/D83j/////SAAAAfwAAANgAAAA/////0v//5z/////fWlbeP////+RfwAE/////y+JAAD/////QJ7/dP////9L//+0/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt15basic_streambufIcSt11char_traitsIcEED1Ev
+    size: 260
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt6_MutexD1Ev
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 10
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 72
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 116
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 128
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 144
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 180
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 228
+    kind: rel24
+    symbol: 4
+    addend: 0

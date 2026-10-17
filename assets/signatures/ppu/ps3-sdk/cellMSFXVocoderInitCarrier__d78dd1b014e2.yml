@@ -1,0 +1,23 @@
+- symbol: 0
+  hash: 80ac4b0b45492df4b45d47c1208b147f1339d899
+  signature: LCMAAP////98CAKm/////3xpG3j/////PGAAev/////4If+R//////gBAID/////YGMSAv////8vpAAA/////0HCADz/////PGAAev////9gYxIC/////0HeADD/////OAAAAP////+QiQAA/////zhgAAD/////kAkABP////9IAAAB/AAAA2AAAAD/////OGAAAP/////oAQCA/////zghAHD/////fAgDpv////9OgAAg/////0gAAAH8AAADYAAAAP////84YP///////0v//+T/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXVocoderInitCarrier
+    size: 108
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 64
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 92
+    kind: rel24
+    symbol: 1
+    addend: 0

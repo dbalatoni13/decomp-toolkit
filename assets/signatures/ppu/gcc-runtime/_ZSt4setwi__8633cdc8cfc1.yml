@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 39fec9e5c4c32ab50c76a9c89057d08f4e7f95bd
+  signature: eGkAIP////+AAgAA//8AAH0jS3j/////kAkAAP////+QiQAE/////06AACD/////
+  symbols:
+  - kind: Function
+    name: ._ZSt4setwi
+    size: 24
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0006'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 6
+    kind: l
+    symbol: 1
+    addend: -28621288

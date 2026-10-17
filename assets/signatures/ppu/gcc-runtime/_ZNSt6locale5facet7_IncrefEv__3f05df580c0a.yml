@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 49271f8c7953412cf63e7a6de27c870ace2eec47
+  signature: +CH/gf////98CAKm//////vhAHj/////fH8beP////84YAAA//////gBAJD/////SAAAAfwAAANgAAAA/////zhgAAD/////gT8ABP////8vif///////zkpAAH/////QZ4ACP////+RPwAE/////0gAAAH8AAADYAAAAP/////oAQCQ/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt6locale5facet7_IncrefEv
+    size: 84
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 56
+    kind: rel24
+    symbol: 2
+    addend: 0

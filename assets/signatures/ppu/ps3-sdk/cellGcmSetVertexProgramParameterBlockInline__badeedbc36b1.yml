@@ -1,0 +1,23 @@
+- symbol: 0
+  hash: b3eb73053671e53d9737d659f93b1cade467b5db
+  signature: eKUQKP////98CAKm//////gh/1H/////+6EAmP////94vdlC//////gBAMD/////V6koNP/////7IQB4/////1egCDz/////+wEAcP////94uQbg/////4FDAAj/////fABKFP////+BYwAE/////3yYI3j/////+2EAiP////98AMoU//////uBAJD/////+0EAgP////98ext4/////3gEACD/////+8EAoP/////74QCo/////3zcM3j/////VIkQOv////99KkoU/////zkpAAj/////f4lYQP////9BnQDI/////y+9AAD/////QJ4A9P////8vuQAA/////0CeADT/////6AEAwP/////rAQBw/////+shAHj/////fAgDpv/////rQQCA/////+thAIj/////64EAkP/////roQCY/////+vBAKD/////6+EAqP////84IQCw/////06AACD/////gXsACP////84GQAB/////1epGDj/////OUsACP////9UAJAa/////3s9F2T/////eUoAIP////99KcIU/////2AAHvz/////kVsACP////95awAg/////3+E43j/////f6XreP////+QCwAA/////31DU3j/////kSsABP////9IAAAB/AAAA2AAAAD/////gBsACP/////rAQBw/////3wA6hT/////6yEAeP/////rQQCA/////5AbAAj/////6AEAwP/////rYQCI/////+uBAJD/////fAgDpv/////roQCY/////+vBAKD/////6+EAqP////84IQCw/////06AACD/////gSMADP////84hAAC/////1SEADz/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////L6MAAP////9Anv8k/////y+9AAD/////QZ7/FP////8/QACE/////4FbAAj/////fx/DeP////9jWh78/////zvAAAD/////OGoACP////95SQAg/////3+E43j/////eGMAIP////+T6QAE/////zigAID/////k0kAAP////9IAAAB/AAAA2AAAAD/////OB4AAf////+BWwAI/////zk/AAj/////eB4AIP////85SgCI/////3+d8ED/////OBwAgP////+RWwAI/////3k/ACD/////eBwAIP////9Anv+0/////0v//qz/////
+  symbols:
+  - kind: Function
+    name: .cellGcmSetVertexProgramParameterBlockInline
+    size: 468
+    flags: 4
+    section: .text
+  - kind: Function
+    name: .memcpy
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 244
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 412
+    kind: rel24
+    symbol: 1
+    addend: 0

@@ -1,0 +1,84 @@
+- symbol: 0
+  hash: 46cdcf5add181b053d1ac6d5ee21bef01ea453fd
+  signature: +CH/Yf////98CAKm/////zhhAHD/////2+EAmP////84gAAA///////gCJD/////+AEAsP/////QIQBw/////0gAAAH8AAADYAAAAP////98Ywc0/////y+DAAD/////QZwAHP/////oAQCw/////8AhAHD/////y+EAmP////98CAOm/////zghAKD/////ToAAIP////84AAAA/////5ABAID/////wAEAgP//////nwAA/////0Cd/9j/////6AEAsP/////AAQBw/////8GiAAD//wAAfAgDpv/////sIGgq/////8vhAJj/////OCEAoP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .ceilf
+    size: 128
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDint
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 106
+    kind: l
+    symbol: 2
+    addend: -28621288
+- symbol: 0
+  hash: f6f3eee978388e67df3968f06bb14cc8f7f0efbf
+  signature: +CH/cf////98CAKm/////zhhAHD/////2+EAiP////84gAAA//////gBAKD//////+AIkP/////QIQBw/////0gAAAH8AAADYAAAAP////8vgwAA/////0GcABz/////6AEAoP/////AIQBw/////8vhAIj/////fAgDpv////84IQCQ/////06AACD/////wAIAAP//AAD/nwAA/////0Cd/+D/////6AEAoP/////AAQBw/////8GiAAD//wAAfAgDpv/////sIGgq/////8vhAIj/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .ceilf
+    size: 116
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDint
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@004A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005E'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 74
+    kind: l
+    symbol: 2
+    addend: -10216440
+  - offset: 94
+    kind: l
+    symbol: 3
+    addend: -10216440
+- symbol: 0
+  hash: 3d4209e7e27b85e657d65038bdf27a526e2e6137
+  signature: +CH/Yf////98CAKm/////zhhAHD/////2+EAmP////84gAAA///////gCJD/////+AEAsP/////QIQBw/////0gAAAH8AAADYAAAAP////98Ywc0/////y+DAAD/////QZwAHP/////oAQCw/////8AhAHD/////y+EAmP////98CAOm/////zghAKD/////ToAAIP////84AAAA/////5ABAID/////wAEAgP//////nwAA/////0Cd/9j/////6AEAsP/////AAQBw/////8Gih4D/////fAgDpv/////sIGgq/////8vhAJj/////OCEAoP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .ceilf
+    size: 128
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDint
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0

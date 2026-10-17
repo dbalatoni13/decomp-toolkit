@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: c516b13c24aced562eba0c329674dfea4e59eed6
+  signature: OIAAAf////98CAKm/////zigAAD/////+CH/kf/////4AQCA/////0gAAAH8AAADYAAAAP/////oAQCA/////zghAHD/////fAgDpv////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetWaitFlip
+    size: 44
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmSetWaitLabel
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0

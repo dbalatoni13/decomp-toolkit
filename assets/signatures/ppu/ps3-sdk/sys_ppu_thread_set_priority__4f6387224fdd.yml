@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 5eaddec0db0da232815789868febf414b0bb0da8
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4//////h/AHD/////fIAjeP////+QHwB4/////+h/AHD/////gB8AeP////98AAe0/////3wEA3j/////OWAAL/////9EAAAC/////3xgG3j/////fAAHtP////98AwN4/////+lhAAD/////6AsAEP////98CAOm/////+vr//j/////fWFbeP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .sys_ppu_thread_set_priority
+    size: 92
+    flags: 2
+    section: .text
+  relocations: []

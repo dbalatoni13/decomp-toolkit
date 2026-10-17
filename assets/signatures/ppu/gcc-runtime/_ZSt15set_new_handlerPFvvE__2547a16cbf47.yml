@@ -1,0 +1,74 @@
+- symbol: 0
+  hash: 77f11903b0a01359345bf79d8ec528c8db970d41
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP////84YAAB//////gBAKD/////+4EAcP////9IAAAB/AAAA2AAAAD/////gSIAAP//AAA4YAAB/////4OJAAD/////k6kAAP////9IAAAB/AAAA2AAAAD/////6AEAoP/////roQB4/////3uDACD/////fAgDpv/////rgQBw/////zghAJD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZSt15set_new_handlerPFvvE
+    size: 88
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 28
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 38
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 52
+    kind: rel24
+    symbol: 3
+    addend: 0
+- symbol: 0
+  hash: b1524d70c977f318ae46fa463aa00bd878aa10e9
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP////84YAAB//////gBAKD/////+4EAcP////9IAAAB/AAAA+hBACj/////OGAAAf////+BIgAA//8AAIOJAAD/////k6kAAP////9IAAAB/AAAA+hBACj/////6AEAoP////9/g+N4/////+uhAHj/////64EAcP////98CAOm/////zghAJD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZSt15set_new_handlerPFvvE
+    size: 88
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@001C'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0034'
+    size: 0
+    flags: 2
+    section: .text
+  relocations:
+  - offset: 28
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 42
+    kind: l
+    symbol: 2
+    addend: -14058240
+  - offset: 52
+    kind: rel24
+    symbol: 3
+    addend: 0

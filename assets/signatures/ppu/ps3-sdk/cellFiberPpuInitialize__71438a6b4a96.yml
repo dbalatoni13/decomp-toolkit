@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: c5564b3156df658416dbe234eec1eed8e1bff90c
+  signature: OGAAQ/////98CAKm//////gh/4H/////++EAeP/////4AQCQ/////0gAAAH8AAAD6EEAKP////88AIAB/////3x/G3j/////YAAgA/////8vAwAA/////3+DAAD/////QZ4AMP////89LQAA/////0CaABD/////OGmQxP////9IAAAB/AAAA+hBACj/////6AEAkP////9/4we0/////+vhAHj/////OCEAgP////98CAOm/////06AACD/////P+CAdv/////oAQCQ/////2P/AA//////fAgDpv////9/4we0/////+vhAHj/////OCEAgP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellFiberPpuInitialize
+    size: 128
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellSysmoduleIsLoaded
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: ._cellFiberPpuInitialize
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 64
+    kind: rel24
+    symbol: 2
+    addend: 0

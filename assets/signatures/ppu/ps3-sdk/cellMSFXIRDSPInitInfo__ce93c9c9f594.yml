@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: eb46785d3579d173084f32578134c0154b044d63
+  signature: fYAAJv////8sIwAA//////gh/3H/////+4EAcP////98vCt4//////uhAHj/////fJ0jeP/////7wQCA/////3x+G3j/////++EAiP////+RgQCY/////3wIAqb/////+AEAoP////9AggAw/////+gBAKD/////OGD///////+BgQCY/////+uBAHD/////fAgDpv/////roQB4/////32QgSD/////68EAgP/////r4QCI/////zghAJD/////ToAAIP////8vpQAA/////0Ge/9D/////LgQAAP////84AwIA/////3wEB7T/////QZEAgP////9/w/N4/////3+k63j/////SAAAAfwAAANBkQA8/////zhgAAD/////SAAAAfwAAANgAAAA/////+gBAKD/////gYEAmP////84YAAA/////+uBAHD/////fAgDpv/////roQB4/////32QgSD/////68EAgP/////r4QCI/////zghAJD/////ToAAIP////874AAA/////1fpEDr/////f+T7eP////99KeIU/////3/D83j/////eSkAIP////+AqQAA/////0gAAAH8AAADOB8AAf////98Hwe0/////3+d+AD/////QJ7/2P////9L//+Y/////4AFAAD/////L4D///////98BgN4/////0Ge/zT/////OT3///////84AwDk/////3kpACD/////OWMAxP////85KQAB/////3ljACD/////eAUAIP////99KQOm/////zkAAAD/////OSQQAP////+BZgAA/////zkIAAH/////kIMAAP////99KQe0/////zlDAAT/////fAtKFP////+RJQAA/////zjlAAz/////fAAHtP////99CAe0/////31rAhT/////kAUABP////95QwAg/////3jlACD/////fWQHtP////9VCRA6/////0JA/wz/////fSniFP////95KQAg/////4DJAAD/////L4b///////9Anv+o/////0v//rD/////
+  symbols:
+  - kind: Function
+    name: .cellMSFXIRDSPInitInfo
+    size: 396
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSFXIRDSPInfoInitStage2
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSFXIRAddImpulseToDSP
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 132
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 144
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 224
+    kind: rel24
+    symbol: 3
+    addend: 0

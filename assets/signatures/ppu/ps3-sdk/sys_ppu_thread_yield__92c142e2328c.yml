@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 961b143a93f75893800871f496fa9a4f78d675a4
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4/////zlgACv/////RAAAAv/////pYQAA/////+gLABD/////fAgDpv/////r6//4/////31hW3j/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .sys_ppu_thread_yield
+    size: 52
+    flags: 2
+    section: .text
+  relocations: []

@@ -1,0 +1,55 @@
+- symbol: 0
+  hash: 69b824c6d7ec9fbd9545fa99416bdfb0a47c0638
+  signature: OIAQAP////98CAKm//////gh/3H/////+6EAeP/////74QCI//////gBAKD/////SAAAAfwAAANgAAAA/////3wABKz/////SAAAAfwAAANgAAAA/////zgAEAD/////kAMAAP////+BIwAE/////3x/G3j/////L4kQAP////9BngAc/////zhgAB7/////OWAAjf////9EAAAC/////4O/AAT/////L50QAP////9Anv/s/////0gAAAH8AAADYAAAAP////98fRt4/////0gAAAH8AAADYAAAAP////94ZAAg/////3ujACD/////SAAAAfwAAANgAAAA/////+gBAKD/////66EAeP/////r4QCI/////3wIA6b/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmResetDefaultCommandBuffer
+    size: 152
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmSetJumpCommand
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmGetControlRegister
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellGcmGetDefaultCommandWordSize
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellGcmGetDefaultSegmentWordSize
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .cellGcmSetDefaultFifoSize
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 36
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 92
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 120
+    kind: rel24
+    symbol: 5
+    addend: 0

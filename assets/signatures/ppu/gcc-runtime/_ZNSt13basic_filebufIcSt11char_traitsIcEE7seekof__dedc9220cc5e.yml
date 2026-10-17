@@ -1,0 +1,64 @@
+- symbol: 0
+  hash: c538130c333094cca7774f2bae608523840665fd
+  signature: +CH/Uf////98CAKm//////tBAID/////+AEAwP////+BJAAg/////3yaI3j/////gWQAMP/////7YQCI//////uBAJD/////+6EAmP////+BKQAA/////3y7K3j/////gAsAAP////98nSN4//////vBAKD/////f4BIQP/////74QCo/////3yeI3j/////fNwzeP////94fwAg/////0CdABD/////OAQAXP////9/gEgA/////0GeATz/////gB4AbP////97owAg/////y+AAAD/////QZ4AGP////9IAAAB/AAAA2AAAAD/////VGMGPv////8vgwAA/////0CeAHz/////gWIAAP//AACBIgAA//8AAIFCAAD//wAAgAkAAP////+BKwAA/////5AfAAD/////kT8ABP////+ACwAE/////6ErAAj/////kB8ACP////+xPwAM/////6ALAAr/////gSoAAP////+wHwAO/////5E/ABD/////oAoABP////+hKgAG/////7AfABT/////sT8AFv/////oAQDA/////3/j+3j/////60EAgP/////rYQCI/////3wIA6b/////64EAkP/////roQCY/////+vBAKD/////6+EAqP////84IQCw/////06AACD/////L5sAAP////9AngAM/////y+cAAH/////QZ4AIP////9/ZAe0/////4B+AGz/////f4UHtP////9IAAAB/AAAA2AAAAD/////L4MAAP////9Anv9g/////4B+AGz/////OIEAcP////9IAAAB/AAAA2AAAAD/////L4MAAP////9Anv9I/////4EaACD/////OV0AXP////+ACAAA/////3+KAAD/////QZ4AZP////+gAQB6/////zkgAAD/////gN4AYP////+BYQB0/////4FBAHD/////oR4AZv////+g/gBk/////7AfAA7/////oAEAeP////+RPwAA/////7AfAAz/////kX8ACP////+RXwAE/////7EfABb/////sP8AFP////+Q3wAQ/////0v//zz/////L4YAAf////9Anv7E/////4AEAFj/////L4AAAP////9Anv64/////zt7////////S//+sP////+BOgAw/////zgdAF3/////gXoAEP////+RSwAA/////5AIAAD/////kAkAAP////9L//+I/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffElNSt5_IosbIiE8_SeekdirENS4_9_OpenmodeE
+    size: 464
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt13basic_filebufIcSt11char_traitsIcEE9_EndwriteEv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0086'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@008A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@008E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .fseek
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .fgetpos
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 112
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 134
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 138
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 142
+    kind: l
+    symbol: 4
+    addend: -28621288
+  - offset: 280
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 304
+    kind: rel24
+    symbol: 6
+    addend: 0

@@ -1,0 +1,376 @@
+- symbol: 0
+  hash: d0134f23805d806884bdf728eb6620722779382b
+  signature: +CH/Uf////98CAKm//////uhAIj/////g6IAAP//AAD7wQCQ/////3yeI3j/////++EAmP////84gAAA/////3x/G3j/////28EAoP////9/o+t4/////9vhAKj/////+0EAcP//////4AiQ//////thAHj//////8AQkP/////7gQCA/////3zbM3j/////+AEAwP////98vCt4/////0gAAAH8AAAD6EEAKP////+BIgAA//8AAItJAAD/////L5oAAf////9BngAY/////4CCAAD//wAAgGIAAP//AABIAAAB/AAAA+hBACj/////SAAAAP////+BIgAA//8AAHv/A2D/////e94DYP////+ACQAA/////3wAB7T/////f58AAP////9BnQEE/////3+eAAD/////fVAQJv////9VSvf+/////y8KAAD/////QJoB/P////8vmwAD/////0GeAGT/////L5sAAf////9BngFE/////y+bAAL/////QZ4BGP////9/n/AA/////0HeAbj/////OBz///////8rgAAB/////0GdACj/////gUIAAP//AAB/S/Aw/////x0/DED/////gAoAAP////99KQIU/////3kpACD/////gAkKTP////98C1h4/////5FpCkz/////L7wAAP////9BngCw/////y+cAAL/////QZ4AqP////9IAAAB/AAAA0gAAAH8AAADgSIAAP//AABX6xA6/////4BiAAD//wAAOUsK0P////85awpQ/////31KB7T/////gAkAAP////99awe0/////x0+DED/////fSkCFP////95KQAg/////31JUhT/////fSlaFP/////TygAE/////9PpAAT/////SAAAAfwAAAPoQQAo/////zhgAAD/////SAAAAfwAAANgAAAA/////zhgAAD/////6AEAwP/////rQQBw/////+thAHj/////fAgDpv/////rgQCA/////+uhAIj/////68EAkP/////r4QCY/////8vBAKD/////y+EAqP////84IQCw/////06AACD/////gIIAAP//AAB/5ft4/////4BiAAD//wAASAAAAfwAAAPoQQAo/////0gAAAD/////gUIAAP//AAB/S/Aw/////x0/DED/////gAoAAP////99KQIU/////3kpACD/////gAkKUP////98C1h4/////5FpClD/////S///OP////+BYgAA//8AAB0/DED/////gAsAAP////99KQIU/////zgAAAD/////eSkAIP////+QCQpQ/////5FJCkz/////S///FP////9/n/AA/////0HeAID/////f+P7eP////9/xPN4/////0gAAAH8AAADL6MAAP////9A3gBs/////zgc////////K4AAAf////9BnQAo/////4FiAAD//wAAf0rwMP////8dPwxA/////4ALAAD/////fSkCFP////95KQAg/////4AJCkz/////fABTeP////+QCQpM/////y+8AAD/////QZ4ADP////8vnAAC/////0Ce/rj/////gWIAAP//AAB/SvAw/////x0/DED/////gAsAAP////99KQIU/////3kpACD/////gAkKUP////98AFN4/////5AJClD/////S//+kP////9/o+t4/////0gAAAH8AAAD6EEAKP////88YAB6/////2BjEgX/////SAAAAfwAAANgAAAA/////zhg////////S//+yP////+AggAA//8AAH/F83j/////gGIAAP//AABIAAAB/AAAA+hBACj/////SAAAAP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSCoreSetRouting
+    size: 700
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0070'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@007E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00DA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__workoutSubBusDependency
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__checkPauseStatus
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@01A2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__checkCircularDependency
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 80
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 90
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 106
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 110
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 112
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 126
+    kind: l
+    symbol: 7
+    addend: -14104088
+  - offset: 218
+    kind: l
+    symbol: 8
+    addend: -14104088
+  - offset: 268
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 272
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 278
+    kind: l
+    symbol: 8
+    addend: -14104088
+  - offset: 286
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 336
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 348
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 410
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 418
+    kind: l
+    symbol: 13
+    addend: -14104088
+  - offset: 420
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 434
+    kind: l
+    symbol: 8
+    addend: -14104088
+  - offset: 474
+    kind: l
+    symbol: 8
+    addend: -14104088
+  - offset: 524
+    kind: rel24
+    symbol: 14
+    addend: 0
+  - offset: 550
+    kind: l
+    symbol: 8
+    addend: -14104088
+  - offset: 602
+    kind: l
+    symbol: 8
+    addend: -14104088
+  - offset: 644
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 660
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 678
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 686
+    kind: l
+    symbol: 13
+    addend: -14104088
+  - offset: 688
+    kind: rel24
+    symbol: 6
+    addend: 0
+- symbol: 0
+  hash: 5d814375dc8d1b8610b1749d40af9018c4632481
+  signature: +CH/Uf////98CAKm//////uhAIj/////g6IAAP//AAD7wQCQ/////3yeI3j/////++EAmP////84gAAA/////3x/G3j/////28EAoP////9/o+t4/////9vhAKj/////+0EAcP//////4AiQ//////thAHj//////8AQkP/////7gQCA/////3zbM3j/////+AEAwP////98vCt4/////0gAAAH8AAAD6EEAKP////+BIgAA//8AAItJAAD/////L5oAAf////9BngAY/////4CCAAD//wAAgGIAAP//AABIAAAB/AAAA2AAAAD/////SAAAAP////+BIgAA//8AAHv/A2D/////e94DYP////+ACQAA/////3wAB7T/////f58AAP////9BnQEE/////3+eAAD/////fVAQJv////9VSvf+/////y8KAAD/////QJoB/P////8vmwAD/////0GeAGT/////L5sAAf////9BngFE/////y+bAAL/////QZ4BGP////9/n/AA/////0HeAbj/////OBz///////8rgAAB/////0GdACj/////gUIAAP//AAB/S/Aw/////x0/DED/////gAoAAP////99KQIU/////3kpACD/////gAkKTP////98C1h4/////5FpCkz/////L7wAAP////9BngCw/////y+cAAL/////QZ4AqP////9IAAAB/AAAA0gAAAH8AAADgSIAAP//AABX6xA6/////4BiAAD//wAAOUsK0P////85awpQ/////31KB7T/////gAkAAP////99awe0/////x0+DED/////fSkCFP////95KQAg/////31JUhT/////fSlaFP/////TygAE/////9PpAAT/////SAAAAfwAAAPoQQAo/////zhgAAD/////SAAAAfwAAANgAAAA/////zhgAAD/////6AEAwP/////rQQBw/////+thAHj/////fAgDpv/////rgQCA/////+uhAIj/////68EAkP/////r4QCY/////8vBAKD/////y+EAqP////84IQCw/////06AACD/////gIIAAP//AAB/5ft4/////4BiAAD//wAASAAAAfwAAANgAAAA/////0gAAAD/////gUIAAP//AAB/S/Aw/////x0/DED/////gAoAAP////99KQIU/////3kpACD/////gAkKUP////98C1h4/////5FpClD/////S///OP////+BYgAA//8AAB0/DED/////gAsAAP////99KQIU/////zgAAAD/////eSkAIP////+QCQpQ/////5FJCkz/////S///FP////9/n/AA/////0HeAID/////f+P7eP////9/xPN4/////0gAAAH8AAADL6MAAP////9A3gBs/////zgc////////K4AAAf////9BnQAo/////4FiAAD//wAAf0rwMP////8dPwxA/////4ALAAD/////fSkCFP////95KQAg/////4AJCkz/////fABTeP////+QCQpM/////y+8AAD/////QZ4ADP////8vnAAC/////0Ce/rj/////gWIAAP//AAB/SvAw/////x0/DED/////gAsAAP////99KQIU/////3kpACD/////gAkKUP////98AFN4/////5AJClD/////S//+kP////9/o+t4/////0gAAAH8AAAD6EEAKP////88YAB6/////2BjEgX/////SAAAAfwAAANgAAAA/////zhg////////S//+yP////+AggAA//8AAH/F83j/////gGIAAP//AABIAAAB/AAAA2AAAAD/////SAAAAP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSCoreSetRouting
+    size: 700
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@007E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00DA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__workoutSubBusDependency
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__checkPauseStatus
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@01A2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__checkCircularDependency
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 80
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 90
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 106
+    kind: l
+    symbol: 4
+    addend: -6468872
+  - offset: 110
+    kind: l
+    symbol: 5
+    addend: -6468872
+  - offset: 112
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 126
+    kind: l
+    symbol: 7
+    addend: -6468872
+  - offset: 218
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 268
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 272
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 278
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 286
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 336
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 348
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 410
+    kind: l
+    symbol: 4
+    addend: -6468872
+  - offset: 418
+    kind: l
+    symbol: 13
+    addend: -6468872
+  - offset: 420
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 434
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 474
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 524
+    kind: rel24
+    symbol: 14
+    addend: 0
+  - offset: 550
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 602
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 644
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 660
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 678
+    kind: l
+    symbol: 4
+    addend: -6468872
+  - offset: 686
+    kind: l
+    symbol: 13
+    addend: -6468872
+  - offset: 688
+    kind: rel24
+    symbol: 6
+    addend: 0

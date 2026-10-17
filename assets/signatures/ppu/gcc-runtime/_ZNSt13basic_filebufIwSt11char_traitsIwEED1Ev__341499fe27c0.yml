@@ -1,0 +1,99 @@
+- symbol: 0
+  hash: 6e1f7f8791d817951def5e121bc615d4eac74c39
+  signature: +CH/cf////98CAKm//////vBAID/////fH4beP////+BIgAA//8AAPgBAKD/////++EAiP/////7oQB4/////3x/G3j/////iB4AaP////94YwAg/////5E+AAD/////L4AAAP////9BngCw/////4AeAGz/////L4AAAP////9BngAY/////0gAAAH8AAADYAAAAP////+AfgBs/////0gAAAH8AAADYAAAAP////+BYgAA//8AADi/AAj/////OJ8ADP////84fwAY/////zu/ABz/////ON8AKP////+ACwAA/////zj/ACz/////OUAAAP////+QHgBg/////6ErAAT/////OAAAAP////+ZXgBe/////7E+AGT/////oQsABv////85PwBA/////zl/AEj/////kAQAAP////+QHgBY/////5AdAAD/////kT8AUP////+QBwAA/////5F/AFT/////kAUAAP////+xHgBm/////5ADAAD/////mV4AaP////+QBgAA/////5C/ABD/////kJ8AFP////+QfwAg/////5O/ACT/////kN8AMP////+Q/wA0/////5AeAGz/////gH8AOP////+AAgAA//8AAC+DAAD/////kB8AAP////9BngBY/////3h9ACD/////gH0AAP////8vgwAA/////0GeADz/////eH4AIP////84YAAA/////0gAAAH8AAADYAAAAP////84AP/9/////4E+AAT/////OWn///////9/iwBA/////0CdAJD/////L4kAAP////9BngBI/////zhgAAD/////SAAAAfwAAANgAAAA/////3+j63j/////SAAAAfwAAANgAAAA/////zh/AAT/////eGMAIP////9IAAAB/AAAA2AAAAD/////6AEAoP/////roQB4/////+vBAID/////fAgDpv/////r4QCI/////zghAJD/////ToAAIP////84YAAA/////0gAAAH8AAADYAAAAP////+BPgAA/////3/D83j/////gWkABP////+ACwAA//////hBACj/////fAkDpv////+ASwAE/////06ABCH/////6EEAKP////9/o+t4/////0gAAAH8AAADYAAAAP////9L//+Y/////31pW3j/////kX4ABP////8viQAA/////0Ce/3D/////S///sP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt13basic_filebufIwSt11char_traitsIwEED1Ev
+    size: 460
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0012'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt13basic_filebufIwSt11char_traitsIwEE9_EndwriteEv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .fclose
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00EA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt6_MutexD1Ev
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 18
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 68
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 80
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 90
+    kind: l
+    symbol: 4
+    addend: -28621288
+  - offset: 234
+    kind: l
+    symbol: 5
+    addend: -28621288
+  - offset: 272
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 312
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 324
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 340
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 380
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 428
+    kind: rel24
+    symbol: 8
+    addend: 0

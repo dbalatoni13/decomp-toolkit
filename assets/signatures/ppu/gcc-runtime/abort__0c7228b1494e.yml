@@ -1,0 +1,276 @@
+- symbol: 0
+  hash: 76ea545c7b020bd3bf1d8ad37d807c8fdbd3d158
+  signature: +CH/Qf////98CAKm//////tBAJD/////+2EAmP/////7gQCg//////uhAKj/////+8EAsP/////74QC4//////gBAND/////OGAABP////84gAAA/////zlgA9z/////RAAAAv////98PQt4/////3u9ACD/////gIIAAP//AAA74QBw/////zhgAAH/////OKAAGf////9/5vt4/////4OdAAT/////OWABk/////9EAAAC/////ztBAHj/////6HwAEP////9/RNN4/////0gAAAH8AAADOKAAEP////94ZAAg/////3/m+3j/////OGAAAf////85YAGT/////0QAAAL/////g2IAAP//AAA4YAAB/////zigAAH/////f2TbeP////9/5vt4/////zlgAZP/////RAAAAv/////rnAAA/////y+8AAD/////QZ4AbP////+DwgAA//8AADhgAAH/////f8TzeP////84oAAZ/////3/m+3j/////OWABk/////9EAAAC/////3udACD/////e0QAIP/////ofQAQ/////0gAAAH8AAADOKAAEP////94ZAAg/////3/m+3j/////OGAAAf////85YAGT/////0QAAAL/////OGAAAf////9/ZNt4/////zigAAH/////f+b7eP////85YAGT/////0QAAAL/////650AAP////8vvAAA/////0Ce/6D/////gIIAAP//AAB/5vt4/////zhgAAH/////OKAAJ/////85YAGT/////0QAAAL/////OGAAAf////9IAAAB/AAAA2AAAAD/////OGAAAf////9IAAAB/AAAA2AAAAD/////
+  symbols:
+  - kind: Function
+    name: .abort
+    size: 324
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .hex2str
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@0086'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00AE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0116'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_process_exit
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .exit
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 62
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 104
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 134
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 174
+    kind: l
+    symbol: 4
+    addend: -28621288
+  - offset: 212
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 278
+    kind: l
+    symbol: 5
+    addend: -28621288
+  - offset: 304
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 316
+    kind: rel24
+    symbol: 7
+    addend: 0
+- symbol: 0
+  hash: 82bd03cc09ebdbf083b05f2fb232946e76421c62
+  signature: +CH/Qf////98CAKm//////thAJj/////+4EAoP/////7oQCo//////vBALD/////++EAuP/////4AQDQ/////3wpC3j/////eSkAIP////+AYgAA//8AADvhAHD/////g6kABP////9IAAAB/AAAA2AAAAD/////fGUbeP////+AggAA//8AADhgAAH/////f+b7eP////85YAGT/////0QAAAL/////O2EAdP/////ofQAQ/////39k23j/////SAAAAfwAAAM4oAAQ/////3hkACD/////f+b7eP////84YAAB/////zlgAZP/////RAAAAv////+AYgAA//8AAEgAAAH8AAADYAAAAP////9/5vt4/////4PCAAD//wAAfGUbeP////85YAGT/////zhgAAH/////f8TzeP////9EAAAC/////+u9AAD/////L70AAP////9AngBA/////4BiAAD//wAASAAAAfwAAANgAAAA/////3/m+3j/////fGUbeP////+AggAA//8AADhgAAH/////OWABk/////9EAAAC/////zhgAAH/////SAAAAfwAAAPoQQAo/////zhgAAH/////SAAAAfwAAANgAAAA/////4OCAAD//wAAgGIAAP//AAB7vQAg/////0gAAAH8AAADYAAAAP////9/hON4/////3xlG3j/////f+b7eP////84YAAB/////zlgAZP/////RAAAAv////97ZAAg/////+h9ABD/////SAAAAfwAAAM4oAAQ/////3hkACD/////f+b7eP////84YAAB/////zlgAZP/////RAAAAv////+AYgAA//8AAEgAAAH8AAADYAAAAP////9/xPN4/////3xlG3j/////f+b7eP////84YAAB/////zlgAZP/////RAAAAv/////rvQAA/////y+9AAD/////QJ7/iP////9L//9E/////w==
+  symbols:
+  - kind: Function
+    name: .abort
+    size: 368
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .strlen
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .hex2str
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@007E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00B2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_process_exit
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .exit
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00EE'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 42
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 52
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 66
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 96
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 126
+    kind: l
+    symbol: 4
+    addend: -10216440
+  - offset: 128
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 142
+    kind: l
+    symbol: 4
+    addend: -10216440
+  - offset: 178
+    kind: l
+    symbol: 5
+    addend: -10216440
+  - offset: 180
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 198
+    kind: l
+    symbol: 5
+    addend: -10216440
+  - offset: 216
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 228
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 238
+    kind: l
+    symbol: 8
+    addend: -10216440
+  - offset: 242
+    kind: l
+    symbol: 8
+    addend: -10216440
+  - offset: 248
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 288
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 318
+    kind: l
+    symbol: 4
+    addend: -10216440
+  - offset: 320
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: fe478802322ab64b5eef27610030723ccbb98fbb
+  signature: +CH/Qf////98CAKm//////tBAJD/////+2EAmP/////7gQCg//////uhAKj/////+8EAsP/////74QC4//////gBAND/////YAAAAP////84YAAE/////ziAAAD/////OWAD3P////9EAAAC/////3w9C3j/////e70AIP////+AggAA//8AADvhAHD/////OGAAAf////84oAAZ/////3/m+3j/////g50ABP////85YAGT/////0QAAAL/////O0EAeP/////ofAAQ/////39E03j/////SAAAAfwAAAM4oAAQ/////3hkACD/////f+b7eP////84YAAB/////zlgAZP/////RAAAAv////+DYgAA//8AADhgAAH/////OKAAAf////9/ZNt4/////3/m+3j/////OWABk/////9EAAAC/////+ucAAD/////L7wAAP////9BngBs/////4PCAAD//wAAOGAAAf////9/xPN4/////zigABn/////f+b7eP////85YAGT/////0QAAAL/////e50AIP////97RAAg/////+h9ABD/////SAAAAfwAAAM4oAAQ/////3hkACD/////f+b7eP////84YAAB/////zlgAZP/////RAAAAv////84YAAB/////39k23j/////OKAAAf////9/5vt4/////zlgAZP/////RAAAAv/////rnQAA/////y+8AAD/////QJ7/oP////+AggAA//8AAH/m+3j/////OGAAAf////84oAAn/////zlgAZP/////RAAAAv////84YAAB/////0gAAAH8AAADYAAAAP////84YAAB/////0gAAAH8AAADYAAAAP////8=
+  symbols:
+  - kind: Function
+    name: .abort
+    size: 328
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0042'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .hex2str
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@008A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00B2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@011A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_process_exit
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .exit
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 66
+    kind: l
+    symbol: 1
+    addend: -15853480
+  - offset: 108
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 138
+    kind: l
+    symbol: 3
+    addend: -15853480
+  - offset: 178
+    kind: l
+    symbol: 4
+    addend: -15853480
+  - offset: 216
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 282
+    kind: l
+    symbol: 5
+    addend: -15853480
+  - offset: 308
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 320
+    kind: rel24
+    symbol: 7
+    addend: 0

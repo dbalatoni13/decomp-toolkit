@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 2cf5672906560f633b677b703632c336516095b0
+  signature: fGkbeP////98CAKm//////gh/5H/////+AEAgP////+BaQAM/////4ALAAD/////+EEAKP////98CQOm/////4BLAAT/////ToAEIf/////oQQAo/////+gBAID/////fGMHtP////98CAOm/////zghAHD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmCallbackForSnc
+    size: 64
+    flags: 1
+    section: .text
+  relocations: []

@@ -1,0 +1,351 @@
+- symbol: 0
+  hash: 3f7c0baaa01966e8ae44077fb485dc77dd3a1ab6
+  signature: +CH/cf////98CAKm//////uhAHj/////g6IAAP//AAD7wQCA/////3yeI3j/////++EAiP////84gAAA/////3x/G3j/////+AEAoP////9/o+t4/////0gAAAH8AAAD6EEAKP////+BIgAA//8AAIgJAAD/////L4AAAf////9BngAY/////4CCAAD//wAAgGIAAP//AABIAAAB/AAAA+hBACj/////SAAAAP////+BIgAA//8AAFfrD/7/////gAkAAP////9/gPgA/////0/d6EL/////fBAQJv////9UAP/+/////3wAW3j/////L4AAAP////9BngAc/////4CCAAD//wAAf+X7eP////+AYgAA//8AAEgAAAH8AAAD6EEAKP////9IAAAA/////4FCAAD//wAAV+tQKv////9X6Sg0/////3/IB3T/////fSlaFP////84YAAA/////4AKAAD/////fSkCFP////95KQAg/////5kJAsv/////SAAAAfwAAANgAAAA/////3+j63j/////SAAAAfwAAAPoQQAo/////+gBAKD/////66EAeP/////rwQCA/////3wIA6b/////6+EAiP////84IQCQ/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellMSStreamSetEnvBypass
+    size: 240
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@0036'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@004A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@004C'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@008A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@009A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 44
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 54
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 70
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 74
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 76
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 90
+    kind: l
+    symbol: 7
+    addend: -14104088
+  - offset: 130
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 138
+    kind: l
+    symbol: 8
+    addend: -14104088
+  - offset: 140
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 154
+    kind: l
+    symbol: 9
+    addend: -14104088
+  - offset: 192
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 204
+    kind: rel24
+    symbol: 11
+    addend: 0
+- symbol: 0
+  hash: 2ca7f006f5a33ade9e0b2a95addafc2fdc2fdf23
+  signature: +CH/cf////98CAKm//////uhAHj/////g6IAAP//AAD7wQCA/////3yeI3j/////++EAiP////84gAAA/////3x/G3j/////+AEAoP////9/o+t4/////0gAAAH8AAAD6EEAKP////+BIgAA//8AAIgJAAD/////L4AAAf////9BngAY/////4CCAAD//wAAgGIAAP//AABIAAAB/AAAA2AAAAD/////SAAAAP////+BIgAA//8AAFfrD/7/////gAkAAP////9/gPgA/////0/d6EL/////fBAQJv////9UAP/+/////3wAW3j/////L4AAAP////9BngAc/////4CCAAD//wAAf+X7eP////+AYgAA//8AAEgAAAH8AAADYAAAAP////9IAAAA/////4FiAAD//wAAf8oHdP////84YAAA/////x0/A6D/////gAsAAP////99KQIU/////3kpACD/////mUkCy/////9IAAAB/AAAA2AAAAD/////f6PreP////9IAAAB/AAAA+hBACj/////6AEAoP/////roQB4/////+vBAID/////fAgDpv/////r4QCI/////zghAJD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSStreamSetEnvBypass
+    size: 232
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@0036'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@004A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@008A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@009A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 44
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 54
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 70
+    kind: l
+    symbol: 4
+    addend: -6468872
+  - offset: 74
+    kind: l
+    symbol: 5
+    addend: -6468872
+  - offset: 76
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 90
+    kind: l
+    symbol: 7
+    addend: -6468872
+  - offset: 130
+    kind: l
+    symbol: 4
+    addend: -6468872
+  - offset: 138
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 140
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 154
+    kind: l
+    symbol: 9
+    addend: -6468872
+  - offset: 184
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 196
+    kind: rel24
+    symbol: 11
+    addend: 0
+- symbol: 0
+  hash: 7decce4b7c536b4ba51e581c56674d758eff2864
+  signature: +CH/cf////98CAKm//////uhAHj/////g6IAAP//AAD7wQCA/////3yeI3j/////++EAiP////84gAAA/////3x/G3j/////+AEAoP////9/o+t4/////0gAAAH8AAAD6EEAKP////+BIgAA//8AAIgJAAD/////L4AAAf////9BngAY/////4CCAAD//wAAgGIAAP//AABIAAAB/AAAA2AAAAD/////SAAAAP////+BIgAA//8AAFfrD/7/////gAkAAP////9/gPgA/////0/d6EL/////fBAQJv////9UAP/+/////3wAW3j/////L4AAAP////9BngAc/////4CCAAD//wAAf+X7eP////+AYgAA//8AAEgAAAH8AAADYAAAAP////9IAAAA/////4FCAAD//wAAV+tQKv////9X6Sg0/////3/IB3T/////fSlaFP////84YAAA/////4AKAAD/////fSkCFP////95KQAg/////5kJAsv/////SAAAAfwAAANgAAAA/////3+j63j/////SAAAAfwAAAPoQQAo/////+gBAKD/////66EAeP/////rwQCA/////3wIA6b/////6+EAiP////84IQCQ/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellMSStreamSetEnvBypass
+    size: 240
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@0036'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@004A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@008A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@009A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 44
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 54
+    kind: l
+    symbol: 3
+    addend: -15311144
+  - offset: 70
+    kind: l
+    symbol: 4
+    addend: -15311144
+  - offset: 74
+    kind: l
+    symbol: 5
+    addend: -15311144
+  - offset: 76
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 90
+    kind: l
+    symbol: 7
+    addend: -15311144
+  - offset: 130
+    kind: l
+    symbol: 4
+    addend: -15311144
+  - offset: 138
+    kind: l
+    symbol: 8
+    addend: -15311144
+  - offset: 140
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 154
+    kind: l
+    symbol: 9
+    addend: -15311144
+  - offset: 192
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 204
+    kind: rel24
+    symbol: 11
+    addend: 0

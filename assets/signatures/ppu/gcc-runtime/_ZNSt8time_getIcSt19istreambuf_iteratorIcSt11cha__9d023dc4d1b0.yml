@@ -1,0 +1,41 @@
+- symbol: 0
+  hash: 3950f0c3a4fdc641e0c5494409cb56c71ef508ea
+  signature: +CH/gf////98CAKm//////vBAHD/////+AEAkP/////74QB4/////3x+G3j/////gAIAAP//AAB8fxt4/////4BjAAj/////L4MAAP////94YwAg/////5AfAAD/////QZ4ADP////9IAAAB/AAAA2AAAAD/////gH8ADP////8vgwAA/////3hjACD/////QZ4ADP////9IAAAB/AAAA2AAAAD/////gSIAAP//AACRPgAA/////+gBAJD/////68EAcP/////r4QB4/////3wIA6b/////OCEAgP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED1Ev
+    size: 116
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@001A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZdaPv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0056'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 26
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 52
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 76
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 86
+    kind: l
+    symbol: 3
+    addend: -28621288

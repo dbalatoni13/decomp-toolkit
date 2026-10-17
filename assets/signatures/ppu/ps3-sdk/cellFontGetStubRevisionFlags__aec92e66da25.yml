@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 6ab7b59ca64c920088a776c0c31f79c0380cfa23
+  signature: LCMAAP////9NggAg/////zgAAGH/////+AMAAP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellFontGetStubRevisionFlags
+    size: 20
+    flags: 1
+    section: .text
+  relocations: []

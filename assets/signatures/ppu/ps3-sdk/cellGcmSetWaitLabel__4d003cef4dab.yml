@@ -1,0 +1,30 @@
+- symbol: 0
+  hash: 3a6610af77fab87cbe2efad58eaeb3ace841fafa
+  signature: +CH/cf////98CAKm//////uhAHj/////fL0reP/////4AQCg/////4DDAAj/////gAMABP////85JgAQ//////vBAID/////++EAiP////98niN4/////3+JAED/////fH8beP////84gAAE/////0GdAFj/////OWYACP////89QAAE/////3lrACD/////PQAABP////94yQAg/////2FKAGT/////V8cgNv////9hCABo/////5FJAAD/////OAsACP////+Q6QAE/////5ELAAD/////kB8ACP////+TqwAE/////+gBAKD/////66EAeP/////rwQCA/////3wIA6b/////6+EAiP////84IQCQ/////06AACD/////gSMADP////+ACQAA//////hBACj/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////8vowAA/////0Ce/8T/////gN8ACP////9L//+E/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetWaitLabel
+    size: 188
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: a2f4f4e58acef9d9d7dd1c64fd9c27d84dbf5048
+  signature: +CH/cf////98CAKm//////vhAIj/////fH8beP/////4AQCg//////uhAHj/////+8EAgP////98vSt4/////4DfAAj/////fJ4jeP////+AHwAE/////ziAAAT/////OSYAEP////9/iQBA/////0GdAFj/////eMcAIP////84xgAI/////z0gAAT/////eMgAIP////89YAAE/////2EpAGT/////V8olNv////9hawBo/////zgGAAj/////kUcABP////+RJwAA/////5AfAAj/////k6gABP////+RaAAA/////+gBAKD/////66EAeP/////rwQCA/////3wIA6b/////6+EAiP////84IQCQ/////06AACD/////gT8ADP////+ACQAA//////hBACj/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////8vgwAA/////0Ce/8T/////gN8ACP////9L//+E/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetWaitLabel
+    size: 188
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: c48cba2b959b2ba4710c9496ce8ca3a395f05927
+  signature: +CH/gf////+BgwAE/////4FjAAj/////OWsAEP////98C2BA/////0DhAFz/////gYMADP////98CAKm//////gBAJD/////+GEAeP/////4gQBw//////ihAGj/////OIAABP/////4QQAo/////4AMAAD/////gEwABP////98CQOm/////06ABCH/////LAMAAP/////oYQB4/////+iBAHD/////6KEAaP/////oQQAo/////+gBAJD/////fAgDpv////9BggAM/////zghAID/////ToAAIP////+BQwAI/////z1gAAT/////PAAABP////85KgAI/////3lKACD/////eSgAIP////9hawBk/////1SEJTb/////YAAAaP////85KQAI/////5CKAAT/////kWoAAP////+RIwAI/////5CoAAT/////kAgAAP////84IQCA/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellGcmSetWaitLabel
+    size: 180
+    flags: 1
+    section: .text
+  relocations: []

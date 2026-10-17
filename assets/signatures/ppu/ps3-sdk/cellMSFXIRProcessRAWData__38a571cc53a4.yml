@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: bdc35430458e727a68ce3754028f33477def6150
+  signature: +CH/gf////98CAKm//////vhAHj/////OSD////////4AQCQ/////3y/K3j/////gAUAAP////8vgAAA/////0GdABz/////6AEAkP////99I0t4/////+vhAHj/////OCEAgP////98CAOm/////06AACD/////gAUACP////8voAAA/////3wFA3j/////QZ7/3P////9IAAAB/AAAA2AAAAD/////kH8ABP////84YAAA/////0gAAAH8AAADYAAAAP/////oAQCQ/////zkgAAD/////6+EAeP////98CAOm/////zghAID/////fSNLeP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSFXIRProcessRAWData
+    size: 128
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSDSPCreateFFTChunks
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 76
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 92
+    kind: rel24
+    symbol: 2
+    addend: 0

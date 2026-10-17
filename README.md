@@ -1,15 +1,8 @@
-# decomp-toolkit [![Build Status]][actions]
+# kevin
 
-[Build Status]: https://github.com/encounter/decomp-toolkit/actions/workflows/build.yml/badge.svg
-[actions]: https://github.com/encounter/decomp-toolkit/actions
+> **Disclaimer:** This project is trash in its current state. It is virtually unusable, buggy, and not recommended for anyone to use or even reference.
 
-Yet another GameCube/Wii decompilation toolkit.
-
-decomp-toolkit functions both as a command-line tool for developers, and as a replacement for various parts of a
-decompilation project's build system.
-
-For use in a new decompilation project, see [dtk-template](https://github.com/encounter/dtk-template), which provides a
-project structure and build system that uses decomp-toolkit under the hood.
+A fork of [decomp-toolkit](https://github.com/encounter/decomp-toolkit) with PS3 PPU ELF support.
 
 ## Sections
 
@@ -34,6 +27,10 @@ project structure and build system that uses decomp-toolkit under the hood.
   - [dwarf dump](#dwarf-dump)
   - [elf disasm](#elf-disasm)
   - [elf fixup](#elf-fixup)
+  - [elf info](#elf-info)
+  - [elf split](#elf-split)
+  - [elf verify](#elf-verify)
+  - [elf sigs](#elf-sigs)
   - [elf2dol](#elf2dol)
   - [map](#map)
   - [rel info](#rel-info)
@@ -101,8 +98,7 @@ Discovers function boundaries with high accuracy. Uses various heuristics to dis
 inner-function control flow.
 
 **Signature analysis**  
-Utilizes a built-in signature database to identify common Metrowerks and SDK functions and objects.  
-This also helps decomp-toolkit automatically generate required splits, like `__init_cpp_exceptions`.
+Identifies supported PS3 SDK and runtime functions using bundled signatures.
 
 **Relocation analysis**  
 Performs control-flow analysis and rebuilds relocations with high accuracy.  
@@ -136,11 +132,11 @@ Generates `ldscript.lcf` for `mwldeppc.exe`.
 Create a static library (.a) from the input objects.
 
 ```shell
-$ dtk ar create out.a input_1.o input_2.o
+$ kevin ar create out.a input_1.o input_2.o
 # or
 $ echo input_1.o >> rspfile
 $ echo input_2.o >> rspfile
-$ dtk ar create out.a @rspfile
+$ kevin ar create out.a @rspfile
 ```
 
 ### ar extract
@@ -156,11 +152,11 @@ Options:
 
 ```shell
 # Extracts to outdir
-$ dtk ar extract lib.a -o outdir
+$ kevin ar extract lib.a -o outdir
 
 # With multiple inputs, extracts to separate directories
 # Extracts to outdir/lib1, outdir/lib2
-$ dtk ar extract lib1.a lib2.a -o outdir
+$ kevin ar extract lib1.a lib2.a -o outdir
 ```
 
 ### demangle
@@ -192,7 +188,7 @@ Supported disc image formats:
 - TGC
 
 ```shell
-$ dtk disc info /path/to/game.iso
+$ kevin disc info /path/to/game.iso
 ```
 
 ### disc extract
@@ -205,7 +201,7 @@ See [disc info](#disc-info) for supported formats.
 > [vfs cp](#vfs-cp) is more flexible and supports disc images.
 
 ```shell
-$ dtk disc extract /path/to/game.iso [outdir]
+$ kevin disc extract /path/to/game.iso [outdir]
 ```
 
 By default, only the main **data** partition is extracted.  
@@ -221,7 +217,7 @@ If the format is lossless, the output will be identical to the original disc ima
 See [disc info](#disc-info) for supported formats.
 
 ```shell
-$ dtk disc convert /path/to/game.wia /path/to/game.iso
+$ kevin disc convert /path/to/game.wia /path/to/game.iso
 ```
 
 ### disc verify
@@ -231,7 +227,7 @@ Hashes the contents of a disc image and verifies it against a built-in [Redump](
 See [disc info](#disc-info) for supported formats.
 
 ```shell
-$ dtk disc verify /path/to/game.iso
+$ kevin disc verify /path/to/game.iso
 ```
 
 ### dol info
@@ -241,9 +237,9 @@ Analyzes a DOL file and outputs information section and symbol information.
 See [vfs ls](#vfs-ls) for information on the VFS abstraction.
 
 ```shell
-$ dtk dol info input.dol
+$ kevin dol info input.dol
 # or, directly from a disc image
-$ dtk dol info 'disc.rvz:sys/main.dol'
+$ kevin dol info 'disc.rvz:sys/main.dol'
 ```
 
 ### dol split
@@ -256,7 +252,7 @@ $ dtk dol info 'disc.rvz:sys/main.dol'
 Analyzes and splits a DOL file into relocatable objects based on user configuration.
 
 ```shell
-$ dtk dol split config.yml target
+$ kevin dol split config.yml target
 ```
 
 ### dol diff
@@ -267,7 +263,7 @@ Tries to find the most obvious difference causing a mismatch.
 Pass in the project configuration file, and the path to the linked ELF file to compare against.
 
 ```shell
-$ dtk dol diff config.yml build/main.elf
+$ kevin dol diff config.yml build/main.elf
 ```
 
 ### dol apply
@@ -277,7 +273,7 @@ Applies updated symbols from a linked ELF to the project configuration. (Again, 
 Useful after matching a file. It will pull updated symbol information from the final result.
 
 ```shell
-$ dtk dol apply config.yml build/main.elf
+$ kevin dol apply config.yml build/main.elf
 ```
 
 ### dol config
@@ -288,7 +284,7 @@ Pass in the DOL file, and any REL files that are linked with it.
 Or, for Wii games, pass in the `selfile.sel`. (Not RSOs)
 
 ```shell
-$ dtk dol config main.dol rels/*.rel -o config.yml
+$ kevin dol config main.dol rels/*.rel -o config.yml
 ```
 
 ### dwarf dump
@@ -296,9 +292,9 @@ $ dtk dol config main.dol rels/*.rel -o config.yml
 Dumps DWARF 1.1 information from an ELF file. (Does **not** support DWARF 2+)
 
 ```shell
-$ dtk dwarf dump input.elf
+$ kevin dwarf dump input.elf
 # or, to include data that was stripped by MWLD
-$ dtk dwarf dump input.elf --include-erased
+$ kevin dwarf dump input.elf --include-erased
 ```
 
 ### elf disasm
@@ -307,7 +303,7 @@ Disassemble an unstripped CodeWarrior ELF file. Attempts to automatically split 
 when possible.
 
 ```shell
-$ dtk elf disasm input.elf out
+$ kevin elf disasm input.elf out
 ```
 
 ### elf fixup
@@ -321,7 +317,39 @@ Fixes issues with GNU assembler-built objects to ensure compatibility with `mwld
 
 ```shell
 # input and output can be the same
-$ dtk elf fixup file.o file.o
+$ kevin elf fixup file.o file.o
+```
+
+### elf info
+
+Prints ELF section and symbol information.
+
+```shell
+$ kevin elf info input.elf
+```
+
+### elf split
+
+Splits a PS3 PPU ELF into relocatable objects and editable configuration files.
+
+```shell
+$ kevin elf split input.elf out/
+```
+
+### elf verify
+
+Compares a relinked PS3 executable's allocated sections and entrypoint against the original ELF.
+
+```shell
+$ kevin elf verify out/config/config.yml linked.elf
+```
+
+### elf sigs
+
+Generates ELF function signatures. For PS3, omit `-s` to generate one YAML file per function.
+
+```shell
+$ kevin elf sigs -o signatures/ input.elf
 ```
 
 ### elf2dol
@@ -329,9 +357,9 @@ $ dtk elf fixup file.o file.o
 Creates a DOL file from the provided ELF file.
 
 ```shell
-$ dtk elf2dol input.elf output.dol
+$ kevin elf2dol input.elf output.dol
 # or, to ignore certain sections
-$ dtk elf2dol input.elf output.dol --ignore debug_section1 --ignore debug_section2
+$ kevin elf2dol input.elf output.dol --ignore debug_section1 --ignore debug_section2
 ```
 
 ### map
@@ -358,9 +386,9 @@ Prints information about a REL file.
 See [vfs ls](#vfs-ls) for information on the VFS abstraction.
 
 ```shell
-$ dtk rel info input.rel
+$ kevin rel info input.rel
 # or, directly from a disc image
-$ dtk rel info 'disc.rvz:files/RELS.arc:amem/d_a_tag_so.rel'
+$ kevin rel info 'disc.rvz:files/RELS.arc:amem/d_a_tag_so.rel'
 ```
 
 ### rel merge
@@ -369,7 +397,7 @@ Merges a DOL file and associated RELs into a single ELF file, suitable for analy
 reverse engineering software.
 
 ```shell
-$ dtk rel info main.dol rels/*.rel -o merged.elf
+$ kevin rel info main.dol rels/*.rel -o merged.elf
 ```
 
 ### rso info
@@ -380,7 +408,7 @@ $ dtk rel info main.dol rels/*.rel -o merged.elf
 Prints information about an RSO file.
 
 ```shell
-$ dtk rso info input.rso
+$ kevin rso info input.rso
 ```
 
 ### rso make
@@ -396,7 +424,7 @@ Options:
 - `-e`, `--export <File>`: File containing exported symbol names. (Newline separated)
 
 ```shell
-$ dtk rso make input.elf -o input.rso
+$ kevin rso make input.elf -o input.rso
 ```
 
 ### shasum
@@ -416,16 +444,16 @@ baserom.dol: OK
 Decompresses NLZSS-compressed files.
 
 ```shell
-$ dtk nlzss decompress input.bin.lz -o output.bin
+$ kevin nlzss decompress input.bin.lz -o output.bin
 # or, for batch processing
-$ dtk nlzss decompress rels/*.lz -o rels
+$ kevin nlzss decompress rels/*.lz -o rels
 ```
 
 ### rarc list
 
 > [!NOTE]  
 > [vfs ls](#vfs-ls) is more flexible and supports RARC archives.  
-> This command is now equivalent to `dtk vfs ls -r input.arc:`
+> This command is now equivalent to `kevin vfs ls -r input.arc:`
 
 Lists the contents of an RARC (older .arc) archive.
 
@@ -437,7 +465,7 @@ $ dtk rarc list input.arc
 
 > [!NOTE]  
 > [vfs cp](#vfs-cp) is more flexible and supports RARC archives.  
-> This command is now equivalent to `dtk vfs cp input.arc: output_dir`
+> This command is now equivalent to `kevin vfs cp input.arc: output_dir`
 
 Extracts the contents of an RARC (older .arc) archive.
 
@@ -449,7 +477,7 @@ $ dtk rarc extract input.arc -o output_dir
 
 > [!NOTE]
 > [vfs ls](#vfs-ls) is more flexible and supports U8 archives.  
-> This command is now equivalent to `dtk vfs ls -r input.arc:`
+> This command is now equivalent to `kevin vfs ls -r input.arc:`
 
 Extracts the contents of a U8 (newer .arc) archive.
 
@@ -461,7 +489,7 @@ $ dtk u8 list input.arc
 
 > [!NOTE]
 > [vfs cp](#vfs-cp) is more flexible and supports U8 archives.  
-> This command is now equivalent to `dtk vfs cp input.arc: output_dir`
+> This command is now equivalent to `kevin vfs cp input.arc: output_dir`
 
 Extracts the contents of a U8 (newer .arc) archive.
 
@@ -496,14 +524,14 @@ Examples:
 
 ```shell
 # List the contents of the `amem` directory inside `RELS.arc` in a disc image
-$ dtk vfs ls 'disc.rvz:files/RELS.arc:amem'
+$ kevin vfs ls 'disc.rvz:files/RELS.arc:amem'
 # List the contents of `RELS.arc` recursively
-$ dtk vfs ls -r 'disc.rvz:files/RELS.arc:'
+$ kevin vfs ls -r 'disc.rvz:files/RELS.arc:'
 
 # All commands that accept a file path can also accept a VFS path
-$ dtk rel info 'disc.rvz:files/RELS.arc:amem/d_a_tag_so.rel'
+$ kevin rel info 'disc.rvz:files/RELS.arc:amem/d_a_tag_so.rel'
 # Example disc image within a disc image
-$ dtk dol info 'disc.rvz:files/zz_demo.tgc:sys/main.dol'
+$ kevin dol info 'disc.rvz:files/zz_demo.tgc:sys/main.dol'
 ````
 
 ### vfs cp
@@ -521,12 +549,12 @@ Examples:
 
 ```shell
 # Extract a file from a nested path in a disc image to the current directory
-$ dtk vfs cp 'disc.rvz:files/RELS.arc:amem/d_a_tag_so.rel' .
+$ kevin vfs cp 'disc.rvz:files/RELS.arc:amem/d_a_tag_so.rel' .
 
 # Directories are copied recursively, making it easy to extract entire archives
-$ dtk vfs cp 'disc.rvz:files/RELS.arc:' rels
+$ kevin vfs cp 'disc.rvz:files/RELS.arc:' rels
 # Or, to disable automatic decompression
-$ dtk vfs cp --no-decompress 'disc.rvz:files/RELS.arc:' rels
+$ kevin vfs cp --no-decompress 'disc.rvz:files/RELS.arc:' rels
 ```
 
 ### yay0 decompress
@@ -534,9 +562,9 @@ $ dtk vfs cp --no-decompress 'disc.rvz:files/RELS.arc:' rels
 Decompresses Yay0-compressed files.
 
 ```shell
-$ dtk yay0 decompress input.bin.yay0 -o output.bin
+$ kevin yay0 decompress input.bin.yay0 -o output.bin
 # or, for batch processing
-$ dtk yay0 decompress rels/*.yay0 -o rels
+$ kevin yay0 decompress rels/*.yay0 -o rels
 ```
 
 ### yay0 compress
@@ -544,9 +572,9 @@ $ dtk yay0 decompress rels/*.yay0 -o rels
 Compresses files using Yay0 compression.
 
 ```shell
-$ dtk yay0 compress input.bin -o output.bin.yay0
+$ kevin yay0 compress input.bin -o output.bin.yay0
 # or, for batch processing
-$ dtk yay0 compress rels/* -o rels
+$ kevin yay0 compress rels/* -o rels
 ```
 
 ### yaz0 decompress
@@ -554,9 +582,9 @@ $ dtk yay0 compress rels/* -o rels
 Decompresses Yaz0-compressed files.
 
 ```shell
-$ dtk yaz0 decompress input.bin.yaz0 -o output.bin
+$ kevin yaz0 decompress input.bin.yaz0 -o output.bin
 # or, for batch processing
-$ dtk yaz0 decompress rels/*.yaz0 -o rels
+$ kevin yaz0 decompress rels/*.yaz0 -o rels
 ```
 
 ### yaz0 compress
@@ -564,9 +592,9 @@ $ dtk yaz0 decompress rels/*.yaz0 -o rels
 Compresses files using Yaz0 compression.
 
 ```shell
-$ dtk yaz0 compress input.bin -o output.bin.yaz0
+$ kevin yaz0 compress input.bin -o output.bin.yaz0
 # or, for batch processing
-$ dtk yaz0 compress rels/* -o rels
+$ kevin yaz0 compress rels/* -o rels
 ```
 
 ### wad info
@@ -574,19 +602,19 @@ $ dtk yaz0 compress rels/* -o rels
 Prints information about a WAD file.
 
 ```shell
-$ dtk wad info input.wad
+$ kevin wad info input.wad
 ```
 
 ### wad extract
 
 > [!NOTE]
 > [vfs cp](#vfs-cp) is more flexible and supports WAD files.  
-> This command is now equivalent to `dtk vfs cp input.wad: output_dir`
+> This command is now equivalent to `kevin vfs cp input.wad: output_dir`
 
 Extracts the contents of a WAD file.
 
 ```shell
-$ dtk wad extract input.wad -o output_dir
+$ kevin wad extract input.wad -o output_dir
 ```
 
 ### wad verify
@@ -594,5 +622,5 @@ $ dtk wad extract input.wad -o output_dir
 Verifies the contents of a WAD file.
 
 ```shell
-$ dtk wad verify input.wad
+$ kevin wad verify input.wad
 ```

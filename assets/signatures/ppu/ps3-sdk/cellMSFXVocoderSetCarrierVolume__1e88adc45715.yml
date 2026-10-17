@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: dc55cf016a8aa02887c615ffeb37c99a408c8cb4
+  signature: wAIAAP//AAB8CAKm//////+BAAD/////+CH/kf/////4AQCA/////4EjAAD/////OGAAAP////9AnAAI//////wgAJD/////0CkRCP////9IAAAB/AAAA2AAAAD/////6AEAgP////84YAAA/////3wIA6b/////OCEAcP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSFXVocoderSetCarrierVolume
+    size: 68
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 40
+    kind: rel24
+    symbol: 2
+    addend: 0

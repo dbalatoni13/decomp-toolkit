@@ -1,0 +1,127 @@
+- symbol: 0
+  hash: 9c95ff6014aa83b95ed4158bbea2db678c36a379
+  signature: LCMAAP////98CAKm//////gh/3H/////+8EAgP////98fht4//////uhAHj/////++EAiP/////4AQCg/////0HCAIT/////L6QAAP////9B3gB8/////zgAAAH/////kIMAAP////874AAA/////5ADAAT/////e/0AIP/////AIgAA//8AAH/D83j/////f6TreP////9IAAAB/AAAAzv/AAH/////f8PzeP////9/pOt4/////zigAAD/////SAAAAfwAAAMvvwBA/////0D+/9T/////f8PzeP/////AIgAA//8AAEgAAAH8AAADOGAAAP////9IAAAB/AAAA2AAAAD/////OGAAAP/////oAQCg/////+uhAHj/////68EAgP////98CAOm/////+vhAIj/////OCEAkP////9OgAAg/////zxgAHr/////YGMSAv////9IAAAB/AAAA2AAAAD/////OGD///////9L///Q/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSFXVocoderInitModulator
+    size: 188
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0042'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellMSFXVocoderSetEQBand
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSFXVocoderSetBandBypass
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0072'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellMSFXVocoderSetModulatorVolume
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 66
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 76
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 114
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 116
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 124
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 172
+    kind: rel24
+    symbol: 6
+    addend: 0
+- symbol: 0
+  hash: 18575e9ac46888bac32d81f71c3731fcd9c661c8
+  signature: LCMAAP////98CAKm//////gh/3H/////+8EAeP////98fht4/////9vhAIj/////+6EAcP/////74QCA//////gBAKD/////QcIAjP////8vpAAA/////0HeAIT/////OAAAAf/////D4gAA//8AADvgAAD/////kIMAAP////+QAwAE//////wg+JD/////e/0AIP////9/w/N4/////zv/AAH/////f6TreP////9IAAAB/AAAA3/D83j/////f6TreP////84oAAA/////0gAAAH8AAADL78AQP////9A/v/U//////wg+JD/////f8PzeP////9IAAAB/AAAAzhgAAD/////SAAAAfwAAANgAAAA/////zhgAAD/////6AEAoP/////roQBw/////+vBAHj/////fAgDpv/////r4QCA/////8vhAIj/////OCEAkP////9OgAAg/////zxgAHr/////YGMSAv////9IAAAB/AAAA2AAAAD/////OGD///////9L///M/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSFXVocoderInitModulator
+    size: 200
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0036'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .cellMSFXVocoderSetEQBand
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSFXVocoderSetBandBypass
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSFXVocoderSetCarrierVolume
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 54
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 88
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 124
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 132
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 184
+    kind: rel24
+    symbol: 5
+    addend: 0

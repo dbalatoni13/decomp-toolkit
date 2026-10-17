@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 281133f46c000b5124f660a08c8234150e58ecc2
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP////84YAAo//////gBAKD/////SAAAAfwAAANgAAAA/////3xgG3j/////eGMAIP////+QHQAA/////0gAAAH8AAADYAAAAP/////oAQCg/////+uhAHj/////fAgDpv////84IQCQ/////06AACD/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt6_MutexC1Ev
+    size: 72
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Znwj
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Mtxinit
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 24
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 44
+    kind: rel24
+    symbol: 2
+    addend: 0

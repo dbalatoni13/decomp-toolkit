@@ -1,0 +1,68 @@
+- symbol: 0
+  hash: 92fb838f1c3084ad7896c1f2b4213a5e2930369b
+  signature: gSIAAP//AAB8CAKm//////gh/4H/////+AEAkP////89YIAx//////vhAHj/////fH8beP/////7wQBw/////2FrAAL/////gAkAAP////8vgAAA/////0CeACD/////6AEAkP////99Y1t4/////+vBAHD/////6+EAeP////98CAOm/////zghAID/////ToAAIP////+BIgAA//8AACsDAAL/////gAkAAP////8vgAAA/////0Gc/9T/////PWCAMf////84gCcQ/////2FrAAP/////QZn/xP////+DwgAA//8AAH/D83j/////SAAAAfwAAAPoQQAo/////y+jAAD/////f8PzeP////9AngAg/////4EiAAD//wAAf8PzeP////+T6QAA/////0gAAAH8AAAD6EEAKP////85YAAA/////0v//4z/////SAAAAfwAAAPoQQAo/////z1ggDH/////YWsAAf////9L//94/////w==
+  symbols:
+  - kind: Function
+    name: .cellSurMixerPause
+    size: 188
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@004E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0072'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@008E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 78
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 114
+    kind: l
+    symbol: 3
+    addend: -15311144
+  - offset: 120
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 142
+    kind: l
+    symbol: 5
+    addend: -15311144
+  - offset: 152
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 168
+    kind: rel24
+    symbol: 6
+    addend: 0

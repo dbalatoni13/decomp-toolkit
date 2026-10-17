@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 69784c2a62bba977a10d219138904da49d135764
+  signature: +CH/gf////98CAKm//////vBAHD/////fH4beP/////4AQCQ//////vhAHj/////eH8AIP////+BPgAg/////3/j+3j/////gWkAAP////8viwAA/////0GeABj/////gT4AMP////95ZAAg/////4AJAAD/////f4BYQP////9BnQBY/////4E+AAD/////gWkAIP////+ACwAA//////hBACj/////fAkDpv////+ASwAE/////06ABCH/////6EEAKP////98YBt4/////3/j+3j/////L4D///////98Hwe0/////3/k+3j/////QJ4AQP/////oAQCQ/////3/j+3j/////68EAcP/////r4QB4/////3wIA6b/////OCEAgP////9OgAAg/////4vkAAD/////6AEAkP////9/4/t4/////+vBAHD/////6+EAeP////98CAOm/////zghAID/////ToAAIP////+BPgAA/////4FpABT/////gAsAAP/////4QQAo/////3wJA6b/////gEsABP////9OgAQh/////+hBACj/////6AEAkP////9/4/t4/////+vBAHD/////fAgDpv/////r4QB4/////zghAID/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt13basic_filebufIcSt11char_traitsIcEE9underflowEv
+    size: 244
+    flags: 1
+    section: .text
+  relocations: []

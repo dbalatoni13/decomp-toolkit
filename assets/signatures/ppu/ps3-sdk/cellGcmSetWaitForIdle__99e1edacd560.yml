@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 10436584591599d6ca425795edb278e959875cb3
+  signature: +CH/gf////98CAKm//////vhAHj/////fH8beP/////4AQCQ/////ziAAAL/////gX8ACP////+BPwAE/////zgLAAj/////f4BIQP////9BnQA4/////3lqACD/////PSAABP////85awAI/////2EpARD/////OAAAAP////+RfwAI/////5AKAAT/////kSoAAP/////oAQCQ/////+vhAHj/////OCEAgP////98CAOm/////06AACD/////gT8ADP////+ACQAA//////hBACj/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////8vgwAA/////0Ce/8z/////gX8ACP////9L//+k/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetWaitForIdle
+    size: 140
+    flags: 1
+    section: .text
+  relocations: []

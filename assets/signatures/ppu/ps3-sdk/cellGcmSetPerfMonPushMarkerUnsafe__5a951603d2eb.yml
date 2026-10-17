@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: a5f8e0d6e2f5fe56c13cf5e01f9f423874555844
+  signature: iAQAAP////89YEAE/////3yFI3j/////L4AAAP////9hawEA/////zmAAAD/////OOAAAP////85QAAA/////zjAAAD/////QZ4ANP////+MBAAB/////y+AAAD/////QJ7/+P////985SBQ/////zgHAAP/////VOYHvv////9UCvC+/////3zsO3j/////OAoAAf////9UAJAa/////2QAQAD/////YAsBAP////+BAwAI/////zwAaHX/////L4YAAP////95CQAg/////2AAAAL/////VUYQOv////+QCQAE/////5FpAAD/////QZ4AFP////99JkIU/////zgAAAD/////eSkAIP////+QCQAE/////y+MAAD/////QZ4AMP////85QAAA/////1VJADr/////OUoABP////99aSoU/////30oShT/////eWsAIP////95KQAg/////3+HUED/////gAsAAP////+QCQAI/////0Gd/9z/////fSgyFP////85KQAI/////5EjAAj/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetPerfMonPushMarkerUnsafe
+    size: 208
+    flags: 1
+    section: .text
+  relocations: []

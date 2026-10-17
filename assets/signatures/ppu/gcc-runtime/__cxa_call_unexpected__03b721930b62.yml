@@ -1,0 +1,148 @@
+- symbol: 0
+  hash: 191cc4c47be73483421a838c57647dbcc2a171ec
+  signature: +CH/Qf////98CAKm//////uhAKj/////fH0beP/////7wQCw/////zu9/9D/////++EAuP/////4AQDQ/////3u9ACD/////+0EAkP/////7YQCY//////uBAKD/////SAAAAfwAAANgAAAA/////4AdABj/////gT0AJP////+AfQAI/////3weB7T/////g/0AIP////+RIQB4/////4O9AAz/////SAAAAfwAAANgAAAA/////3hjACD/////SAAAAfwAAANgAAAA/////0gAAAH8AAADYAAAAP////84AQBw/////4NDAAD/////f+T7eP////94HAAg/////zk6AFD/////OGAAAP////95OwAg/////3+F43j/////SAAAAfwAAAN/g+N4/////4CaAAD/////f2XbeP////9/xvN4/////0gAAAH8AAADL6MAAP////9A3gB0/////4PiAAD//wAAf4PjeP////9/xvN4/////3/k+3j/////OKAAAP////9IAAAB/AAAAy+jAAD/////Qd4ASP////84YAAE/////0gAAAH8AAADYAAAAP////9/5Pt4/////4FiAAD//wAAgKIAAP//AACRYwAA/////0gAAAH8AAADYAAAAP////94fQAg/////0gAAAH8AAADYAAAAP////9IAAAB/AAAA2AAAAD/////f6PreP////9IAAAB/AAAA2AAAAD/////f6PreP////9IAAAB/AAAA2AAAAD/////SAAAAfwAAANgAAAA/////w==
+  symbols:
+  - kind: Function
+    name: .__cxa_call_unexpected
+    size: 296
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cxa_begin_catch
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZN10__cxxabiv112__unexpectedEPFvvE
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cxa_get_globals_fast
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Z17parse_lsda_headerP15_Unwind_ContextPKhP16lsda_header_info
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: ._Z20check_exception_specP16lsda_header_infoPKSt9type_infoPvx
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@00B2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__cxa_allocate_exception
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00E2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00E6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__cxa_throw
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cxa_end_catch
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unwind_Resume
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZN10__cxxabiv111__terminateEPFvvE
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cxa_rethrow
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 48
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 84
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 144
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 164
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 178
+    kind: l
+    symbol: 6
+    addend: -10216440
+  - offset: 196
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 212
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 226
+    kind: l
+    symbol: 8
+    addend: -10216440
+  - offset: 230
+    kind: l
+    symbol: 9
+    addend: -10216440
+  - offset: 236
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 248
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 256
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 268
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 280
+    kind: rel24
+    symbol: 13
+    addend: 0
+  - offset: 288
+    kind: rel24
+    symbol: 14
+    addend: 0

@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: fa3b668d671094748bc271b9d4f97d453ded3590
+  signature: gSMACP////85KQAI/////5EjAAj/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetPerfMonPopMarkerMeasure
+    size: 16
+    flags: 1
+    section: .text
+  relocations: []

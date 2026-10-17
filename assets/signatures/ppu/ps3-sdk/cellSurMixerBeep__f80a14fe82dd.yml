@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: b6d2d289bf531d0423c94ad0359158f84575cf0d
+  signature: gSIAAP//AAB8ZBt4/////4BpAAD/////L6MAAP////9NngAg/////4EiAAD//wAAgAkAAP////8vgAAA/////02cACD/////SAAAAPwAAAM=
+  symbols:
+  - kind: Function
+    name: .cellSurMixerBeep
+    size: 40
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZN17SceSurMixerEntity4beepEPv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 22
+    kind: l
+    symbol: 2
+    addend: -15311144
+  - offset: 36
+    kind: rel24
+    symbol: 3
+    addend: 0

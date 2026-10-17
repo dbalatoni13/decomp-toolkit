@@ -1,0 +1,167 @@
+- symbol: 0
+  hash: 19e3d69f31674b76fbd676d659a4f57f824ff2f3
+  signature: +CH/cf////98CAKm//////vhAIj/////+AEAoP////84AQDA/////9AhAMD/////eB8AIP////9/4/t4/////0gAAAH8AAADYAAAAP////98Ywc0/////y+DAAH/////QZ4AcP////8vgwAC/////0GeAFD/////L4MAAP////9AngAc/////8AiAAD//wAA6AEAoP/////r4QCI/////zghAJD/////fAgDpv////9OgAAg/////3/j+3j/////wCIAAP//AAA4oAAA/////0gAAAH8AAADYAAAAP////98Ywc0/////y+DAAD/////QJ4ASP////88YAgA/////0gAAAH8AAADYAAAAP/////AIQDA/////+gBAKD/////6+EAiP////84IQCQ/////3wIA6b/////ToAAIP/////AIQDA/////9AhAHD/////gAEAcP////9UAIQg/////y+AAAD/////QZ7/lP/////AIgAA//8AAEv//4z/////L4MAAf////9Anv/E/////zxgEAD/////SAAAAfwAAANgAAAA/////8AhAMD/////S///tP////8=
+  symbols:
+  - kind: Function
+    name: .expf
+    size: 220
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDtest
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._FExp
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Feraise
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00BA'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 70
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 98
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 104
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 128
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 186
+    kind: l
+    symbol: 5
+    addend: -28621288
+  - offset: 204
+    kind: rel24
+    symbol: 4
+    addend: 0
+- symbol: 0
+  hash: ed5bd24a28a4cfe8a2aeb97b8a8706dac563e29e
+  signature: +CH/cf////98CAKm//////vhAIj/////+AEAoP////84AQDA/////9AhAMD/////eB8AIP////9/4/t4/////0gAAAH8AAADYAAAAP////8vgwAB/////0GeAGz/////L4MAAv////9BngBM/////y+DAAD/////QJ4AHP/////AIgAA//8AAOgBAKD/////6+EAiP////84IQCQ/////3wIA6b/////ToAAIP////9/4/t4/////8AiAAD//wAAOKAAAP////9IAAAB/AAAA2AAAAD/////L4MAAP////9AngBI/////zxgCAD/////SAAAAfwAAANgAAAA/////8AhAMD/////6AEAoP/////r4QCI/////zghAJD/////fAgDpv////9OgAAg/////8AhAMD/////0CEAcP////+AAQBw/////1QAhCD/////L4AAAP////9Bnv+Y/////8AiAAD//wAAS///kP////8vgwAB/////0Ce/8T/////PGAQAP////9IAAAB/AAAA2AAAAD/////wCEAwP////9L//+0/////w==
+  symbols:
+  - kind: Function
+    name: .expf
+    size: 212
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDtest
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0042'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._FExp
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Feraise
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00B2'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 66
+    kind: l
+    symbol: 2
+    addend: -10216440
+  - offset: 94
+    kind: l
+    symbol: 2
+    addend: -10216440
+  - offset: 100
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 120
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 178
+    kind: l
+    symbol: 5
+    addend: -10216440
+  - offset: 196
+    kind: rel24
+    symbol: 4
+    addend: 0
+- symbol: 0
+  hash: 3eb4b124db3829f224e02c80b14dc139bf19f27c
+  signature: +CH/cf////98CAKm//////vhAIj/////+AEAoP////84AQDA/////9AhAMD/////eB8AIP////9/4/t4/////0gAAAH8AAADYAAAAP////98Ywc0/////y+DAAH/////QZ4AcP////8vgwAC/////0GeAFD/////L4MAAP////9AngAc/////8Ainqj/////6AEAoP/////r4QCI/////zghAJD/////fAgDpv////9OgAAg/////3/j+3j/////wCKeqP////84oAAA/////0gAAAH8AAADYAAAAP////98Ywc0/////y+DAAD/////QJ4ASP////88YAgA/////0gAAAH8AAADYAAAAP/////AIQDA/////+gBAKD/////6+EAiP////84IQCQ/////3wIA6b/////ToAAIP/////AIQDA/////9AhAHD/////gAEAcP////9UAIQg/////y+AAAD/////QZ7/lP/////AIp6s/////0v//4z/////L4MAAf////9Anv/E/////zxgEAD/////SAAAAfwAAANgAAAA/////8AhAMD/////S///tP////8=
+  symbols:
+  - kind: Function
+    name: .expf
+    size: 220
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FDtest
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._FExp
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Feraise
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 128
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 204
+    kind: rel24
+    symbol: 3
+    addend: 0

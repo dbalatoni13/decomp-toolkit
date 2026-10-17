@@ -1,0 +1,143 @@
+- symbol: 0
+  hash: 3577e49578d2e6b322f0f9b0454feab542a891f3
+  signature: +CH/cf////98CAKm//////uhAHj/////+AEAoP////98fRt4/////ziAAAD/////OGAAAf////85YAPc/////0QAAAL/////SAAAAfwAAANgAAAA/////0gAAAH8AAADYAAAAP////9IAAAB/AAAA2AAAAD/////f6MHtP////9IAAAB/AAAA2AAAAD/////
+  symbols:
+  - kind: Function
+    name: .exit
+    size: 72
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__exit_user_prx_modules
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__call_functions_registered_with_atexit
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__fini
+    size: 0
+    flags: 1
+    section: .fini
+  - kind: Function
+    name: ._Exit
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 36
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 44
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 52
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 64
+    kind: rel24
+    symbol: 4
+    addend: 0
+- symbol: 0
+  hash: f328ad27e31bde14ea1182a6de57a2c21644c562
+  signature: +CH/cf////98CAKm//////vhAIj/////g+IAAP//AACBIgAA//8AAPgBAKD/////+4EAcP////98fBt4//////uhAHj/////gX8AAP////+ACQAA//////vBAID/////f4BYQP////9BnQBM/////4PiAAD//wAAgT8AAP////8vqQAA/////0CeAKD/////g8IAAP//AACD4gAA//8AAIB+AAD/////f4P4AP////9BngAM/////0gAAAH8AAADYAAAAP////+BIgAA//8AADgAAFD/////f4PjeP////+T/gAA/////5AJAAD/////SAAAAfwAAANgAAAA/////309S3j/////g8IAAP//AABIAAAI/////4PiAAD//wAAgB4AAP////9VaRA6/////zlrAAH/////fSkCFP////+RfwAA/////3kpACD/////gWkAAP////+ACwAA//////hBACj/////fAkDpv////+ASwAE/////06ABCH/////6EEAKP////+BfwAA/////4AdAAD/////f4BYQP////9Bnf+8/////4PiAAD//wAAgT8AAP////8vqQAA/////0Ge/2j/////g8IAAP//AABIAAAI/////4PiAAD//wAAOAn///////+BfgAA/////3gAACD/////VAkQOv////+QHwAA/////30pWhT/////eSkAIP////+BaQAA/////4ALAAD/////+EEAKP////98CQOm/////4BLAAT/////ToAEIf/////oQQAo/////4E/AAD/////L6kAAP////9Anv+8/////0v//xT/////
+  symbols:
+  - kind: Function
+    name: .exit
+    size: 312
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0012'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@003A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@004A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@004E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .free
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Exit
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 18
+    kind: l
+    symbol: 2
+    addend: -10216440
+  - offset: 58
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 74
+    kind: l
+    symbol: 4
+    addend: -10216440
+  - offset: 78
+    kind: l
+    symbol: 5
+    addend: -10216440
+  - offset: 92
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 102
+    kind: l
+    symbol: 2
+    addend: -10216440
+  - offset: 120
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 134
+    kind: l
+    symbol: 4
+    addend: -10216440
+  - offset: 142
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 214
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 230
+    kind: l
+    symbol: 4
+    addend: -10216440
+  - offset: 238
+    kind: l
+    symbol: 3
+    addend: -10216440

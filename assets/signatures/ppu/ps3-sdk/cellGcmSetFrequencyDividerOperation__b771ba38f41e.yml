@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: 2403c9963a4e6f66073baf3e1a5b07a175938765
+  signature: +CH/gf////98CAKm//////vhAHj/////fH8beP/////4AQCQ//////vBAHD/////fJ4jeP////84gAAC/////4EfAAj/////gT8ABP////84CAAI/////3+ASED/////QZ0APP////95CgAg/////z0gAAT/////V8sEPv////9hKR/A/////zgIAAj/////kWoABP////+QHwAI/////5EqAAD/////6AEAkP/////rwQBw/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////gT8ADP////+ACQAA//////hBACj/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////8vgwAA/////0Ce/8j/////gR8ACP////9L//+g/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetFrequencyDividerOperation
+    size: 152
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: 902148fd2ad142150947df02b68aef3f5ff5eba9
+  signature: +CH/gf////98CAKm//////vBAHD/////fJ4jeP/////4AQCQ/////ziAAAL/////gUMACP////+AAwAE/////zkqAAj/////++EAeP////98fxt4/////3+JAED/////QZ0AOP////88AAAE/////3lJACD/////OWoACP////9gAB/A/////5PJAAT/////kX8ACP////+QCQAA/////+gBAJD/////68EAcP/////r4QB4/////3wIA6b/////OCEAgP////9OgAAg/////4EjAAz/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////L6MAAP////9Anv/I/////4FfAAj/////S///pP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetFrequencyDividerOperation
+    size: 148
+    flags: 1
+    section: .text
+  relocations: []

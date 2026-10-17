@@ -1,0 +1,65 @@
+- symbol: 0
+  hash: 30025f41ce30574561c665d799a8ee2d23d10a3c
+  signature: LCMAAP////98hSN4/////3xkG3j/////fKMreP////9BggAM/////4BiAAD//wAASAAAAPwAAANIAAAA/AAAAw==
+  symbols:
+  - kind: Function
+    name: .realloc
+    size: 32
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .internal_realloc
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .malloc
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 22
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 24
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 28
+    kind: rel24
+    symbol: 3
+    addend: 0
+- symbol: 0
+  hash: 6c5f6739d8f1f0b6922881a7c5ea17655d4b0ba6
+  signature: +CH/kf////98CAKm/////3yFI3j/////+AEAgP////98YBt4/////4BiAAD//wAAfAQDeP////9IAAAB/AAAA2AAAAD/////6AEAgP////94YwAg/////3wIA6b/////OCEAcP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .realloc
+    size: 56
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .mspace_realloc
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 22
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 28
+    kind: rel24
+    symbol: 2
+    addend: 0

@@ -1,0 +1,144 @@
+- symbol: 0
+  hash: fea62a7b71be34cd26450c88c660853cce5c434d
+  signature: +CH+wf////98CAKm//////uhASj/////fH0beP////84YAAA//////gBAVD/////+4EBIP/////74QE4//////shAQj/////+0EBEP/////7YQEY//////vBATD/////SAAAAfwAAANgAAAA/////4OCAAD//wAAgGIAAP//AACD/AAA/////0gAAAH8AAADYAAAAP////94ZAAg/////3ujACD/////SAAAAfwAAANgAAAA/////y8fAAD/////L4MAAP////98fRt4/////0GeAED/////OGAAAP////9IAAAB/AAAA2AAAAD/////6AEBUP/////rIQEI/////3ujACD/////60EBEP/////rYQEY/////3wIA6b/////64EBIP/////roQEo/////+vBATD/////6+EBOP////84IQFA/////06AACD/////OGAANP////9//ft4/////0Ca/7z/////SAAAAfwAAANgAAAA/////zgBAHD/////fHkbeP////94GgAg/////y+ZAAD/////f0PTeP////97PgAg/////zugAAD/////QZ4AUP////84AAAB/////4FiAAD//wAAgIIAAP//AAB/Pct4/////5geACj/////kX4AAP////+T/gAE/////0gAAAH8AAADYAAAAP////9/w/N4/////39E03j/////fz/LeP////9IAAAB/AAAA2AAAAD/////f0PTeP////9IAAAB/AAAA2AAAAD/////gAIAAP//AACQGQAA/////3v+ACD/////OGAAAP////+T/AAA/////0gAAAH8AAADYAAAAP////84YAAA/////4E+AAT/////L4n///////85KQAB/////0GeAAj/////kT4ABP////9IAAAB/AAAA2AAAAD/////f8PzeP////9IAAAB/AAAA2AAAAD/////S///BP////8=
+  symbols:
+  - kind: Function
+    name: ._ZSt9use_facetISt10moneypunctIcLb1EEERKT_RKSt6locale
+    size: 364
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@003A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt6locale2idcvjEv
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNKSt6locale9_GetfacetEj
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Znwj
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00E2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00E6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt8_LocinfoC1EPKc
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt7_MpunctIcE5_InitERKSt8_Locinfo
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt8_LocinfoD1Ev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0122'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt6locale5facet9_RegisterEv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 48
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 58
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 62
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 68
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 84
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 112
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 180
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 226
+    kind: l
+    symbol: 8
+    addend: -28621288
+  - offset: 230
+    kind: l
+    symbol: 9
+    addend: -28621288
+  - offset: 248
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 268
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 280
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 290
+    kind: l
+    symbol: 13
+    addend: -28621288
+  - offset: 308
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 340
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 352
+    kind: rel24
+    symbol: 14
+    addend: 0

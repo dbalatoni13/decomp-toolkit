@@ -1,0 +1,56 @@
+- symbol: 0
+  hash: 41cb89764889c91769fe660f1eef9e96908451a5
+  signature: +CH+0f////98CAKm//////ihAXD/////fIUjeP/////4AQFA/////zgBAXD/////+MEBeP////84gQFg/////5BhAWD/////fAYDeP////+AYgAA//8AAJABASD/////+OEBgP/////5AQGI//////khAZD/////+UEBmP////9IAAAB/AAAA2AAAAD/////6AEBQP////84IQEw/////3wIA6b/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .sscanf
+    size: 88
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Scanf
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 42
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 64
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: c522db4513720617791eb9e5cdee865c01c5cdb0
+  signature: +CH/gf////98CAKm/////zlhAMD/////+AEAkP////98gCN4/////ziBALD/////+KEAwP/////4wQDI/////5BhALD/////fAUDeP////+AYgAA//8AAFSEADb/////fWZbeP/////44QDQ//////kBANj/////+SEA4P/////5QQDo/////5FhAHD/////SAAAAfwAAANgAAAA/////+gBAJD/////fGMHtP////98CAOm/////zghAID/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .sscanf
+    size: 100
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Scanf
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 42
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 72
+    kind: rel24
+    symbol: 2
+    addend: 0

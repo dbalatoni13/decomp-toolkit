@@ -1,19 +1,19 @@
 [package]
-name = "decomp-toolkit"
-description = "Yet another GameCube/Wii decompilation toolkit."
+name = "kevin"
+description = "PowerPC decompilation toolkit with PS3 PPU ELF64 support."
 authors = ["Luke Street <luke@street.dev>"]
 license = "MIT OR Apache-2.0"
-version = "1.8.4"
+version = "0.1.0"
 edition = "2024"
 publish = false
-repository = "https://github.com/encounter/decomp-toolkit"
 readme = "README.md"
 categories = ["command-line-utilities"]
 rust-version = "1.85"
 
 [[bin]]
-name = "dtk"
+name = "kevin"
 path = "src/main.rs"
+
 
 [profile.release]
 panic = "abort"
@@ -44,6 +44,7 @@ filetime = "0.2"
 fixedbitset = "0.5"
 flagset = { version = "0.4", features = ["serde"] }
 glob = "0.3"
+gimli = "0.32"
 gnuv2_demangle = "0.4"
 hex = "0.4"
 indent = "0.1"
@@ -56,7 +57,7 @@ multimap = "0.10"
 nodtool = "1.4"
 #nodtool = { path = "../nod-rs/nodtool" }
 num_enum = "0.7"
-objdiff-core = { version = "=2.2", features = ["ppc"] }
+objdiff-core = { version = "=2.2", features = ["ppc", "dwarf"] }
 #objdiff-core = { path = "../objdiff/objdiff-core", features = ["ppc"] }
 object = { version = "0.36", features = ["read_core", "std", "elf", "write_std"], default-features = false }
 once_cell = "1.20"

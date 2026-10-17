@@ -1,0 +1,23 @@
+- symbol: 0
+  hash: a2d6d7fce0a7d40b585833587573a476e0c562a9
+  signature: LCMAAP////98CAKm//////gh/5H/////+AEAgP////9BwgBs/////zgFAAH/////K4AACP////9B3QBg/////y+F////////QZ4ANP////9UqRg4/////30pGhT/////eSkAIP/////QKQAE/////zhgAAD/////SAAAAfwAAANgAAAA/////zhgAAD/////6AEAgP////84IQBw/////3wIA6b/////ToAAIP////84AwAE/////zkgAAj/////eAMAIP////99KQOm/////zgDAAj/////0CMAAP////94AwAg/////0IA//T/////S///wP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////zhg////////S///uP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSFXRingModSetAmplitude
+    size: 148
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 60
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 132
+    kind: rel24
+    symbol: 1
+    addend: 0

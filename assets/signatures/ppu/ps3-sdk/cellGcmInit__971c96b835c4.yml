@@ -1,0 +1,94 @@
+- symbol: 0
+  hash: 430b69cc84191135b8f5712a9f7b31fa3d31a076
+  signature: +CH/kf////98CAKm/////3yJI3j/////+AEAgP////98YBt4/////3ymK3j/////gGIAAP//AAB8BAN4/////30lS3j/////SAAAAfwAAAPoQQAo/////+gBAID/////OCEAcP////98CAOm/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellGcmInit
+    size: 60
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@001A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._cellGcmInitBody
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 26
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 36
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: b9ab87ed0dbbc60d6e8a898afe4e3307e9feb0b1
+  signature: +CH/kf////98CAKm/////3yJI3j/////+AEAgP////98YBt4/////4BiAAD//wAAfKYreP////98BAN4/////30lS3j/////SAAAAfwAAANgAAAA/////+gBAID/////fGMHtP////98CAOm/////zghAHD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmInit
+    size: 64
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._cellGcmInitBody
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 22
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 36
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: 4430570cd816bc8d0728a9e66f2d75ed0b6bef6b
+  signature: +CH/kf////98CAKm/////3yJI3j/////+AEAgP////98YBt4/////4Bihzj/////fKYreP////98BAN4/////30lS3j/////SAAAAfwAAANgAAAA/////+gBAID/////fGMHtP////98CAOm/////zghAHD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmInit
+    size: 64
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._cellGcmInitBody
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 36
+    kind: rel24
+    symbol: 1
+    addend: 0
+- symbol: 0
+  hash: 088917e1bed578248940aa7e193b46165bd289c9
+  signature: +CH/kf////98CAKm/////3yJI3j/////+AEAgP////98YBt4/////4BiiIj/////fKYreP////98BAN4/////30lS3j/////SAAAAfwAAAPoQQAo/////+gBAID/////fGMHtP////98CAOm/////zghAHD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmInit
+    size: 64
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._cellGcmInitBody
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  relocations:
+  - offset: 36
+    kind: rel24
+    symbol: 1
+    addend: 0

@@ -1,0 +1,57 @@
+- symbol: 0
+  hash: 0f4007154ef1d32b17d385c53853c630060fb331
+  signature: +CH/Uf////98CAKm//////vBAKD/////fH4beP/////4AQDA/////4GDAAj/////gAMABP////85LAB4//////vhAKj/////+wEAcP////98nyN4/////3+JAED/////+yEAeP/////7QQCA//////thAIj/////+4EAkP/////7oQCY/////0GdAkz/////PAAABP////+AwgAA//8AAHmHACD/////o18ANP////9gAAGU/////6MfADb/////OQwACP////+QBwAA/////zwAAAT/////iT8ABP////95CAAg/////2AAAYz/////eSkVqP////+RHgAI/////zlIAAj/////YwMQAP////95SgAg/////1RjBD7/////fWZILv////95RQAg/////5FnAAT/////PWAACP////+QCAAA/////4k/AAX/////YWsBtP////+RXgAI/////3kpFaj/////f0cANP////8g5wAf/////1dagB7/////VOeAHv////98Bkgu/////5AIAAT/////kWoAAP////85SgAM/////4gfAAb/////PWAAGP////95SgAg/////3gAFaj/////YWsCCP////9/CAA0/////yEIAB//////fUxTeP////99JgAu/////1UIwA7/////VxiAHv////+RJQAE/////4gfAAf/////kV4ACP////94ABWo/////30mAC7/////PMAABP////+RJQAI/////2DGHYj/////kWoAAP////95SgAg/////4k/ACj/////iB8AAv////+JfwAA/////1UpKDT/////VWtALv////98AEt4/////4k/AAH/////fABbeP////9VKWAm/////z1gABD/////fABLeP////9hawKA/////3wAO3j/////OOwAHP////98AEN4/////3jnACD/////kAoABP////+BPwAY/////zkHAAj/////kSoACP////95CAAg/////4AfAAj/////O6gAFP////+QCgAM/////zwAAAT/////gT8ALP////97vQAg/////2AAAiz/////kSoAEP////87nQAI/////4E/AAz/////e5wAIP////+RKgAU/////4E/ABz/////O3wACP////+gnwA6/////5EqABj/////eQoAIP////+QBwAA/////3t7ACD/////gB8AMP////9UmYAe/////zi7AAz/////k74ACP////+QBwAE/////zzgAAj/////kWgAAP////94pQAg/////4E/ACD/////PQAABP////+hfwA4/////3yEw3j/////kSoABP////9hCAK4/////4AfACT/////fXrTeP////9g5wIA/////5AKAAj/////PAAABP////+BPwAQ/////31ry3j/////YAACIP////+RKgAM/////4E/ABT/////kSoAEP////97agAg/////5AdAAD/////OAUACP////+JPwAD/////5AeAAj/////kT0ABP////+RHAAA/////5F8AAT/////kPsAAP////+QigAI/////5NKAAT/////kMUAAP////+QZQAE/////+gBAMD/////6wEAcP/////rIQB4/////3wIA6b/////60EAgP/////rYQCI/////+uBAJD/////66EAmP/////rwQCg/////+vhAKj/////OCEAsP////9OgAAg/////4EjAAz/////OIAAHv////+ACQAA//////hBACj/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////8vowAA/////0Ce/6z/////gZ4ACP////9L//2M/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetSurface
+    size: 704
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@004E'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 78
+    kind: l
+    symbol: 1
+    addend: -10216440
+- symbol: 0
+  hash: 39aa8b3c931fba031f19e0d3219dfb0ef9e8bc1f
+  signature: +CH/Uf////98CAKm//////vBAKD/////fH4beP/////4AQDA/////4GDAAj/////gAMABP////85LACA//////vhAKj/////+wEAcP////98nyN4/////3+JAED/////+yEAeP/////7QQCA//////thAIj/////+4EAkP/////7oQCY/////0GdAnD/////PAAABP////+AggAA//8AAHmHACD/////o18ANP////9gAAGU/////6MfADb/////OQwACP////+QBwAA/////zwAAAT/////iT8ABP////95CAAg/////2AAAYz/////eSkVqP////+RHgAI/////zlIAAj/////f0YANP////95SgAg/////yDGAB//////fWRILv////95QwAg/////1TGgB7/////kWcABP////89YAAI/////5AIAAD/////POAAGP////+JPwAF/////2FrAbT/////kV4ACP////9g5wII/////3kpFaj/////V1qAHv////98BEgu/////5AIAAT/////kWoAAP////85agAM/////4gfAAb/////PUAABP////95awAg/////3gAFaj/////YUoBmP////84qwAI/////38IADT/////eKUAIP////99JAAu/////yEIAB//////kSMABP////9VCMAO/////4gfAAf/////kX4ACP////94ABWo/////30kAC7/////kSMACP////9jAxAA/////5FLAAD/////eKoAIP////+IHwAp/////1cYgB7/////kL4ACP////9UYwQ+/////3gAFaj/////fSQALv////+RKwAE/////5DlAAD/////OOUAHP////+JPwAo/////4gfAAL/////eOcAIP////+JfwAA/////1UpKDT/////VWtALv////98AEt4/////4k/AAH/////fABbeP////9VKWAm/////3wAS3j/////fAAzeP////88wAAE/////3wAQ3j/////OQcACP////+QCgAE/////2DGHYj/////gT8AGP////95CAAg/////5EqAAj/////O6gAFP////+AHwAI/////3u9ACD/////oJ8AOv////+QCgAM/////zwAAAT/////gT8ALP////87nQAI/////2AAAiz/////k74ACP////+RKgAQ/////3ucACD/////gX8ADP////9UmYAe/////zt8AAj/////kWoAFP////89YAAQ/////4E/ABz/////e3sAIP////9hawKA/////5EqABj/////eQoAIP////+QBwAA/////zi7AAz/////gB8AMP////98hMN4/////3ilACD/////kAcABP////884AAI/////5FoAAD/////PQAABP////+BPwAg/////2DnAgD/////oX8AOP////9hCAK4/////5EqAAT/////gB8AJP////99etN4/////31ry3j/////kAoACP////88AAAE/////4E/ABD/////YAACIP////+RKgAM/////4E/ABT/////kSoAEP////97aQAg/////5AdAAD/////OUUACP////+IHwAD/////5AdAAT/////kRwAAP////+RfAAE/////5D7AAD/////kIkACP////+TSQAE/////5DFAAD/////kGUABP////+RXgAI/////+gBAMD/////6wEAcP/////rIQB4/////3wIA6b/////60EAgP/////rYQCI/////+uBAJD/////66EAmP/////rwQCg/////+vhAKj/////OCEAsP////9OgAAg/////4EjAAz/////OIAAIP////+ACQAA//////hBACj/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////8vowAA/////0Ce/6z/////gZ4ACP////9L//1o/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetSurface
+    size: 740
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@004E'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 78
+    kind: l
+    symbol: 1
+    addend: -14058240
+- symbol: 0
+  hash: aa93a29e12eb361b3684766bc9705a67061f2679
+  signature: OKAAAf////98CAKm/////zjAAAD/////+CH/kf/////4AQCA/////0gAAAH8AAADYAAAAP/////oAQCA/////zghAHD/////fAgDpv////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetSurface
+    size: 44
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmSetSurfaceWindow
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 20
+    kind: rel24
+    symbol: 1
+    addend: 0

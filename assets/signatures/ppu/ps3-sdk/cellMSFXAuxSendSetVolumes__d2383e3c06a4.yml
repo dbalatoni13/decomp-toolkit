@@ -1,0 +1,23 @@
+- symbol: 0
+  hash: d7b83117156e7f249d2b67523b29d05361424bc2
+  signature: LCMAAP////98CAKm//////gh/5H/////+AEAgP////9BwgAg/////y+lAAD/////QZ4AGP////8vhAAA/////0HcABD/////gAMAAP////9/gCAA/////0CcACj/////PGAAev////9gYxIC/////0gAAAH8AAADYAAAAP/////oAQCA/////zhg////////fAgDpv////84IQBw/////06AACD/////gAMABP////98CQe0/////3+JMAD/////QJ7/0P////8viQAA/////3wESdb/////fAQHtP////9AnQBc/////1SKEDr/////gWMACP////9UgCA2/////zkp////////fAoAUP////95KQAg/////31rAhT/////OSkAAf////85awAI/////zlAAAD/////fSkDpv////95YwAg/////1VJEDr/////OAoAAf////99KSoU/////zljAAz/////eSkAIP////98Cge0/////8AJAAD/////0AMAAP////95YwAg/////0IA/9z/////OGAAAP////9IAAAB/AAAA2AAAAD/////6AEAgP////84YAAA/////3wIA6b/////OCEAcP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSFXAuxSendSetVolumes
+    size: 236
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 56
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 208
+    kind: rel24
+    symbol: 1
+    addend: 0

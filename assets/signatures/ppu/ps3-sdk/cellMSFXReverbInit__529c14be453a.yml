@@ -1,0 +1,296 @@
+- symbol: 0
+  hash: 7383a6fdb6a68acb15234ce5697189aef2b4318f
+  signature: LCMAAP////98CAKm//////gh/0H/////+0EAgP////982jN4//////thAIj/////fJsjeP/////7wQCg/////3y+K3j/////28EAsP/////b4QC4//////sBAHD/////+yEAeP/////7gQCQ//////uhAJj/////++EAqP/////4AQDQ/////0HCAfz/////L6QAAP////9BngH0/////y+lAAD/////QZ4B7P////8vhgAA/////0CdAeT/////L4YACP////9BnQHc/////3yfI3j/////w8IAAP//AAA7gAAA/////8PiAAD//wAAOwQBAP////+QgwAA/////zskAoD/////PKAAAf////84gAAA/////2ClpoD/////f+P7eP////9IAAAB/AAAA+hBACj//////ED4kP/////8YPCQ/////8AeAAT/////0B8AFP////84AAAA/////8G+AAD/////OKAAAf/////BggAA//8AAHsHACD/////wAIAAP//AAA5AAAA/////9G/ABD/////0B8AAP/////RnwAE/////5AfAAz/////wD4ADP////9IAAAB/AAAAy+jAAD/////QJ4BXP/////8QPiQ/////zigAAL//////GDwkP////97JwAg/////zkAAAD/////wD4AEP////9IAAAB/AAAAy+jAAD/////QJ4BOP////8/vwAC/////4DiAAD//wAAwCIAAP//AAA4oAAA/////zgdgIj/////gMIAAP//AAB4CAAg/////zgHAAT/////gUcAAP////85KP/8/////9AoAAD/////eAcAIP////85aP/4/////3+GOED/////eSkAIP////95awAg/////zgICYD/////kUkAAP////+QqwAA/////3gIACD/////QJ7/zP////89PwAB/////8G+ABj/////wAIAAP//AAA4oAAA/////zkpv+D/////7ABoKP////+AwgAA//8AAHkoACD/////gOIAAP//AAA4BwAE/////4FHAAD/////OSj/wP/////RqAAA/////3gHACD/////0AgAIP////85aP+g/////9AoAED/////f4Y4QP////95KQAg/////3lrACD/////OAgABP////+RSQAA/////5CrAAD/////eAgAIP////9Anv/E//////xACJD/////f+P7eP////9IAAAB/AAAA3+F43j/////f2PbeP////9/xPN4/////0gAAAH8AAADOBwAAf////85PaaA/////3wcB7T/////eT8AIP////9/muAA/////0Ce/pD/////OGAAAP////9IAAAB/AAAA2AAAAD/////6AEA0P////84YAAA/////+sBAHD/////6yEAeP////98CAOm/////+tBAID/////62EAiP/////rgQCQ/////+uhAJj/////68EAoP/////r4QCo/////8vBALD/////y+EAuP////84IQDA/////06AACD/////PGAAev////9gYxIC/////0gAAAH8AAADYAAAAP/////oAQDQ/////zhg////////6wEAcP/////rIQB4/////3wIA6b/////60EAgP/////rYQCI/////+uBAJD/////66EAmP/////rwQCg/////+vhAKj/////y8EAsP/////L4QC4/////zghAMD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSFXReverbInit
+    size: 652
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0076'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0094'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@00BA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00C2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__CalcBiQuadCoEffs
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0112'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0122'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@016A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@017A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0182'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .SetEarlyReflections
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSFXReverbSetParams
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 110
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 118
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 148
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 186
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 194
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 220
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 256
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 274
+    kind: l
+    symbol: 7
+    addend: -14104088
+  - offset: 278
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 290
+    kind: l
+    symbol: 8
+    addend: -14104088
+  - offset: 362
+    kind: l
+    symbol: 9
+    addend: -14104088
+  - offset: 378
+    kind: l
+    symbol: 10
+    addend: -14104088
+  - offset: 386
+    kind: l
+    symbol: 11
+    addend: -14104088
+  - offset: 460
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 476
+    kind: rel24
+    symbol: 13
+    addend: 0
+  - offset: 508
+    kind: rel24
+    symbol: 14
+    addend: 0
+  - offset: 584
+    kind: rel24
+    symbol: 14
+    addend: 0
+- symbol: 0
+  hash: aaaf9f5c7c0f39bb15a04ed444968b758cddead5
+  signature: LCMAAP////98CAKm//////gh/0H/////+0EAgP////982jN4//////thAIj/////fJsjeP/////7wQCg/////3y+K3j/////28EAsP/////b4QC4//////sBAHD/////+yEAeP/////7gQCQ//////uhAJj/////++EAqP/////4AQDQ/////0HCAfz/////L6QAAP////9BngH0/////y+lAAD/////QZ4B7P////8vhgAA/////0CdAeT/////L4YACP////9BnQHc/////3yfI3j/////w8IAAP//AAA7gAAA/////8PiAAD//wAAOwQBAP////+QgwAA/////zskAoD/////PKAAAf////84gAAA/////2ClpoD/////f+P7eP////9IAAAB/AAAA2AAAAD//////ED4kP/////8YPCQ/////8AeAAT/////0B8AFP////84AAAA/////8G+AAD/////OKAAAf/////BggAA//8AAHsHACD/////wAIAAP//AAA5AAAA/////9G/ABD/////0B8AAP/////RnwAE/////5AfAAz/////wD4ADP////9IAAAB/AAAAy+jAAD/////QJ4BXP/////8QPiQ/////zigAAL//////GDwkP////97JwAg/////zkAAAD/////wD4AEP////9IAAAB/AAAAy+jAAD/////QJ4BOP////8/vwAC/////4DiAAD//wAAwCIAAP//AAA4oAAA/////zgdgIj/////gMIAAP//AAB4CAAg/////zgHAAT/////gUcAAP////85KP/8/////9AoAAD/////eAcAIP////85aP/4/////3+GOED/////eSkAIP////95awAg/////zgICYD/////kUkAAP////+QqwAA/////3gIACD/////QJ7/zP////89PwAB/////8G+ABj/////wAIAAP//AAA4oAAA/////zkpv+D/////7ABoKP////+AwgAA//8AAHkoACD/////gOIAAP//AAA4BwAE/////4FHAAD/////OSj/wP/////RqAAA/////3gHACD/////0AgAIP////85aP+g/////9AoAED/////f4Y4QP////95KQAg/////3lrACD/////OAgABP////+RSQAA/////5CrAAD/////eAgAIP////9Anv/E//////xACJD/////f+P7eP////9IAAAB/AAAA3+F43j/////f2PbeP////9/xPN4/////0gAAAH8AAADOBwAAf////85PaaA/////3wcB7T/////eT8AIP////9/muAA/////0Ce/pD/////OGAAAP////9IAAAB/AAAA2AAAAD/////6AEA0P////84YAAA/////+sBAHD/////6yEAeP////98CAOm/////+tBAID/////62EAiP/////rgQCQ/////+uhAJj/////68EAoP/////r4QCo/////8vBALD/////y+EAuP////84IQDA/////06AACD/////PGAAev////9gYxIC/////0gAAAH8AAADYAAAAP/////oAQDQ/////zhg////////6wEAcP/////rIQB4/////3wIA6b/////60EAgP/////rYQCI/////+uBAJD/////66EAmP/////rwQCg/////+vhAKj/////y8EAsP/////L4QC4/////zghAMD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSFXReverbInit
+    size: 652
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0076'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .memset
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00BA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00C2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__CalcBiQuadCoEffs
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0112'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0122'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@016A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@017A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0182'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .SetEarlyReflections
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellMSFXReverbSetParams
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 110
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 118
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 148
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 186
+    kind: l
+    symbol: 4
+    addend: -6468872
+  - offset: 194
+    kind: l
+    symbol: 5
+    addend: -6468872
+  - offset: 220
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 256
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 274
+    kind: l
+    symbol: 7
+    addend: -6468872
+  - offset: 278
+    kind: l
+    symbol: 4
+    addend: -6468872
+  - offset: 290
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 362
+    kind: l
+    symbol: 9
+    addend: -6468872
+  - offset: 378
+    kind: l
+    symbol: 10
+    addend: -6468872
+  - offset: 386
+    kind: l
+    symbol: 11
+    addend: -6468872
+  - offset: 460
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 476
+    kind: rel24
+    symbol: 13
+    addend: 0
+  - offset: 508
+    kind: rel24
+    symbol: 14
+    addend: 0
+  - offset: 584
+    kind: rel24
+    symbol: 14
+    addend: 0

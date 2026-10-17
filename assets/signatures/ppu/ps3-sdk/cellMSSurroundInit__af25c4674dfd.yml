@@ -1,0 +1,121 @@
+- symbol: 0
+  hash: 010633500a237c34d976c50d0fcc13160734cea0
+  signature: gSIAAP//AAB8CAKm//////gh/2H/////+AEAsP/////7YQB4//////uBAID/////gAkAAP/////7oQCI/////y+AAAH/////+8EAkP/////74QCY/////0HeARz/////L6MAAP////9B3gD8/////y+FAAD/////QN0A9P////8vhAAA/////0HcAOz/////gOIAAP//AAB4mwAg/////3i9ACD/////gUIAAP//AACBAgAA//8AAFerGDj/////kGoAAP////9XqTAy/////4AHAAD/////fStIUP////+BYgAA//8AAC+AAAD/////HBsAnP////98ABoU/////3gAACD/////fSkCFP////+QCwAA/////3k/ACD/////k+gAAP////9AngBo/////4EiAAD//wAAgWIAAP//AACTqQAA/////5NrAAD/////SAAAAfwAAANgAAAA/////zgAAAH/////gUIAAP//AAA5IAAB/////4FiAAD//wAAOGAAAP////+RKgAA/////5gLAAD/////SAAAAfwAAANgAAAA/////zhgAAD/////6AEAsP/////rYQB4/////+uBAID/////fAgDpv/////roQCI/////+vBAJD/////6+EAmP////84IQCg/////06AACD/////fPw7eP////87wAAA/////3/j+3j/////SAAAAfwAAANgAAAA/////zgeAAH/////gXwAAP////85PwCc/////3geACD/////eT8AIP////9/i/BA/////0Gd/9z/////S///bP////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////zhg////////S///lP////88YAB6/////2BjEgP/////SAAAAfwAAANgAAAA/////zhg////////S///fP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSSurroundInit
+    size: 352
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@004A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0056'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0072'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@009A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@009E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__alInit
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00BE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__alInitSource
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 74
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 86
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 90
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 114
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 154
+    kind: l
+    symbol: 6
+    addend: -14104088
+  - offset: 158
+    kind: l
+    symbol: 7
+    addend: -14104088
+  - offset: 168
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 182
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 190
+    kind: l
+    symbol: 9
+    addend: -14104088
+  - offset: 204
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 264
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 312
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 336
+    kind: rel24
+    symbol: 10
+    addend: 0

@@ -1,0 +1,110 @@
+- symbol: 0
+  hash: 2799a491e3152bb9fadbec5ee9a14b1c2d9f3564
+  signature: +CH/Uf////98CAKm//////thAIj/////g2IAAP//AAD7gQCQ//////uhAJj/////fJwjeP/////4AQDA/////3x9G3j/////OAEA8P////9/Y9t4/////5ABAHD/////+OEBAP/////5AQEI//////khARD/////+UEBGP/////4oQDw//////jBAPj/////SAAAAfwAAANgAAAA/////4DBAHD/////e6QAIP////+AYgAA//8AAHuFACD/////SAAAAfwAAANgAAAA/////3x9G3j/////f2PbeP////9IAAAB/AAAA2AAAAD/////6AEAwP/////rYQCI/////3+jB7T/////64EAkP/////roQCY/////3wIA6b/////OCEAsP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .fprintf
+    size: 152
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Lockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 72
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 90
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 96
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 112
+    kind: rel24
+    symbol: 5
+    addend: 0
+- symbol: 0
+  hash: 94857bf858a20cc4b42449224d1a622a377e6579
+  signature: +CH+of////98CAKm//////thATj/////g2IAAP//AAD7gQFA/////3x8G3j/////+AEBcP////9/Y9t4/////zgBAaD/////+6EBSP////98nSN4//////jhAbD/////kAEBIP/////5AQG4//////khAcD/////+UEByP/////4oQGg//////jBAaj/////SAAAAfwAAANgAAAA/////4BiAAD//wAAf4TjeP////9/pet4/////4DBASD/////SAAAAfwAAANgAAAA/////3x9G3j/////f2PbeP////9IAAAB/AAAA2AAAAD/////6AEBcP////9/o+t4/////+thATj/////64EBQP////98CAOm/////+uhAUj/////OCEBYP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .fprintf
+    size: 152
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Lockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0052'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlockfilelock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 72
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 82
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 96
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 112
+    kind: rel24
+    symbol: 5
+    addend: 0

@@ -1,0 +1,56 @@
+- symbol: 0
+  hash: 4de42ebcead2b6f2a01e7f76fa8d0b822ff7385c
+  signature: fGkbeP////98CAKm//////gh/5H/////+AEAgP////+AAgAA//8AAJAJAAD/////SAAAAfwAAANgAAAA/////+gBAID/////OCEAcP////98CAOm/////06AACD/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt9bad_allocD1Ev
+    size: 48
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0012'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt9exceptionD2Ev
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 18
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 24
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: 7dcde665af0ad259105a59ce7889c81bba3f30c4
+  signature: +CH/kf////98CAKm//////gBAID/////gAIAAP//AACQAwAA/////0gAAAH8AAADYAAAAP/////oAQCA/////zghAHD/////fAgDpv////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt9bad_allocD1Ev
+    size: 44
+    flags: 4
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt9exceptionD2Ev
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -14058240
+  - offset: 20
+    kind: rel24
+    symbol: 2
+    addend: 0

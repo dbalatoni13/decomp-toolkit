@@ -12,6 +12,7 @@ pub mod analysis;
 pub mod argp_version;
 pub mod cmd;
 pub mod obj;
+pub mod ps3;
 pub mod util;
 pub mod vfs;
 
@@ -65,7 +66,7 @@ impl FromArgValue for LogLevel {
 }
 
 #[derive(FromArgs, Debug)]
-/// Yet another GameCube/Wii decompilation toolkit.
+/// PowerPC decompilation toolkit for GameCube, Wii, and PS3 PPU.
 struct TopLevel {
     #[argp(subcommand)]
     command: SubCommand,

@@ -1,0 +1,55 @@
+- symbol: 0
+  hash: 8c5feed600efaa5cee3c2faa416f211b072db031
+  signature: fGkbeP////+BYgAA//8AAPgh/2H/////fAgCpv/////7oQCI/////3x9G3j/////OGMAEP/////4AQCw/////zlLABT/////OAsAKP////94YwAg//////thAHj/////+4EAgP////+RSQAI/////5AJAID/////kWkAAP////9IAAAB/AAAA4FCAAD//wAAe7wAIP////+DYgAA//8AAIEqAAT/////gIoAEP////85af/0/////4CqABj/////kT0AAP////95awAg/////4AKABz/////OQT/9P////+AygAI/////4DqABT/////eQgAIP////+AagAM/////4ErAAD/////OWb/9P////99PUoU/////3lrACD/////eSkAIP////+QqQAA/////3+p63j/////kB0ACP////+UiQAI/////4AIAAD/////fSkCFP////95KQAg/////5DpAAD/////kNwAAP////+BKwAA/////309ShT/////eSkAIP////+QaQAA/////5d9AID/////e6MAIP////9IAAAB/AAAA2AAAAD/////6AEAsP/////rYQB4/////+uBAID/////fAgDpv/////roQCI/////zghAKD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZNSt9strstreamD1Ev
+    size: 244
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0006'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt12strstreambufD1Ev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@004E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt8ios_baseD2Ev
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 6
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 64
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 70
+    kind: l
+    symbol: 3
+    addend: -28621288
+  - offset: 78
+    kind: l
+    symbol: 4
+    addend: -28621288
+  - offset: 208
+    kind: rel24
+    symbol: 5
+    addend: 0

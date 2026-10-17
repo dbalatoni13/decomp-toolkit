@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: d91e2ee0ff26e71a87b7db28dff05e65dfbe4a14
+  signature: iAMAAP////98iiN4/////3wLB3T/////L4sAAP////9BngBM/////4gEAAD/////fAQHdP////8vhAAA/////0GeACz/////f4RYAP////9BngA4/////31JU3j/////SAAACP////9BmgAs/////4wJAAH/////fAAHdP////8vgAAA/////38AWAD/////QJ7/7P////+MAwAB/////3wLB3T/////L4sAAP////9Anv/E/////zhgAAD/////eGMAIP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .strpbrk
+    size: 104
+    flags: 1
+    section: .text
+  relocations: []

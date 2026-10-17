@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 747b43cd4bd253de84f66880c3300a4ad34f77df
+  signature: gWIAAP//AACBKwAA/////4BpAAj/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmGetCurrentBuffer
+    size: 16
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -10216440

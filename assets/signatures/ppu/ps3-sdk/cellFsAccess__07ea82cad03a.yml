@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 468a97a7732d2ef7e9dac3f326a5f23194fad24e
+  signature: OWADMP////98CAKm//////gBABD/////RAAAAv/////oAQAQ/////3xjB7T/////fAgDpv////9OgAAg/////wAAAAD/////AAkAAf////8AAAAA/////w==
+  symbols:
+  - kind: Function
+    name: .cellFsAccess
+    size: 44
+    flags: 1
+    section: .text
+  relocations: []

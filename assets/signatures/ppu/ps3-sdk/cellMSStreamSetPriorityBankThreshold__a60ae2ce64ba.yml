@@ -1,0 +1,234 @@
+- symbol: 0
+  hash: c0246e8f14a3551ffc3edf9f4819b7f8f583cfad
+  signature: gSIAAP//AAB8CAKm//////gh/3H/////2+EAiP//////4AiQ//////vBAHj/////fH4beP/////74QCA//////gBAKD/////iAkAAP////8vgAAB/////0GeABj/////gIIAAP//AACAYgAA//8AAEgAAAH8AAAD6EEAKP////9IAAAA/////4PiAAD//wAAOIAAAP////9/4/t4/////0gAAAH8AAAD6EEAKP////8rngAf/////0HdABz/////wAIAAP//AAD/nwAA/////0HcABD/////wAIAAP//AAD/nwAA/////0CdAED/////PGAAev////9gYxIC/////0gAAAH8AAADYAAAAP////9/4/t4/////0gAAAH8AAAD6EEAKP////84YP///////+gBAKD/////68EAeP/////r4QCA/////3wIA6b/////y+EAiP////84IQCQ/////06AACD/////V8AQOv////+BIgAA//8AADhgAAD/////fAAHtP////9/6QUu/////0gAAAH8AAADYAAAAP////9/4/t4/////0gAAAH8AAAD6EEAKP////84YAAA/////0v//7j/////
+  symbols:
+  - kind: Function
+    name: .cellMSStreamSetPriorityBankThreshold
+    size: 228
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0032'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0036'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0038'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@0062'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@00BA'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 50
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 54
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 56
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 70
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 80
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 98
+    kind: l
+    symbol: 7
+    addend: -14104088
+  - offset: 110
+    kind: l
+    symbol: 8
+    addend: -14104088
+  - offset: 128
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 140
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 186
+    kind: l
+    symbol: 11
+    addend: -14104088
+  - offset: 200
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 212
+    kind: rel24
+    symbol: 10
+    addend: 0
+- symbol: 0
+  hash: b6f59ec401cd729b5b398f4c311d89b864e43d71
+  signature: gSIAAP//AAB8CAKm//////gh/3H/////2+EAiP//////4AiQ//////vBAHj/////fH4beP/////74QCA//////gBAKD/////iAkAAP////8vgAAB/////0GeABj/////gIIAAP//AACAYgAA//8AAEgAAAH8AAADYAAAAP////9IAAAA/////4PiAAD//wAAOIAAAP////9/4/t4/////0gAAAH8AAAD6EEAKP////8rngAf/////0HdABz/////wAIAAP//AAD/nwAA/////0HcABD/////wAIAAP//AAD/nwAA/////0CdAED/////PGAAev////9gYxIC/////0gAAAH8AAADYAAAAP////9/4/t4/////0gAAAH8AAAD6EEAKP////84YP///////+gBAKD/////68EAeP/////r4QCA/////3wIA6b/////y+EAiP////84IQCQ/////06AACD/////V8AQOv////+BIgAA//8AADhgAAD/////fAAHtP////9/6QUu/////0gAAAH8AAADYAAAAP////9/4/t4/////0gAAAH8AAAD6EEAKP////84YAAA/////0v//7j/////
+  symbols:
+  - kind: Function
+    name: .cellMSStreamSetPriorityBankThreshold
+    size: 228
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0032'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0036'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@0062'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@00BA'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 50
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 54
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 56
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 70
+    kind: l
+    symbol: 5
+    addend: -6468872
+  - offset: 80
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 98
+    kind: l
+    symbol: 7
+    addend: -6468872
+  - offset: 110
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 128
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 140
+    kind: rel24
+    symbol: 10
+    addend: 0
+  - offset: 186
+    kind: l
+    symbol: 11
+    addend: -6468872
+  - offset: 200
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 212
+    kind: rel24
+    symbol: 10
+    addend: 0

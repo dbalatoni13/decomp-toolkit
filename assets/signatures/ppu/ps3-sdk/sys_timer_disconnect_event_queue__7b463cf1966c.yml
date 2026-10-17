@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 70d5c369cefbb925b934d7ae7ff052d1b710b680
+  signature: +CH/wf////98CAKm//////vhADj/////+AEAUP////98Pwt4/////3xgG3j/////kB8AcP////+AHwBw/////3gAACD/////fAMDeP////85YABM/////0QAAAL/////fGAbeP////98AAe0/////3wDA3j/////6WEAAP/////oCwAQ/////3wIA6b/////6+v/+P////99YVt4/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .sys_timer_disconnect_event_queue
+    size: 84
+    flags: 2
+    section: .text
+  relocations: []

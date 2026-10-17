@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: ae31fd289ea2c93a810130382733b2840c87d957
+  signature: +CH/Yf////98CAKm//////tBAHD/////fJojeP/////4AQCw/////ziAAAX/////gWMACP////+BIwAE/////zgLABT/////+2EAeP/////7gQCA/////3+ASED/////+6EAiP/////7wQCQ//////vhAJj/////fH8beP////+DxQAM/////4NlAAD/////g4UABP////+DpQAI/////0GdAFj/////V0kgNv////84CwAU/////zkpHAD/////eWsAIP////+QHwAI/////2UpABD/////k8sAEP////+RKwAA/////5NrAAT/////k4sACP////+TqwAM/////+gBALD/////60EAcP/////rYQB4/////3wIA6b/////64EAgP/////roQCI/////+vBAJD/////6+EAmP////84IQCg/////06AACD/////gSMADP////+ACQAA//////hBACj/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////8vowAA/////0Ce/7j/////gX8ACP////9L//+E/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetVertexData4f
+    size: 212
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: ee7fc43d1b1aea346b7ae0e0a3b59160569317fa
+  signature: +CH/cf////98CAKm/////8FlAAz/////+AEAoP////+BQwAI/////4EjAAT/////OAoAFP/////ABQAA/////8GlAAT/////f4BIQP/////BhQAI//////vBAID/////fJ4jeP/////74QCI/////ziAAAX/////fH8beP/////QAQBw/////9GhAHT/////0YEAeP/////RYQB8/////0GdAFj/////V8kgNv////95SwAg/////zkpHAD/////OAoAFP////9lKQAQ/////5AfAAj/////kSsAAP////+AAQBw/////5ALAAT/////gSEAdP////+RKwAI/////4ABAHj/////kAsADP////+BIQB8/////5ErABD/////6AEAoP/////rwQCA/////+vhAIj/////fAgDpv////84IQCQ/////06AACD/////gSMADP////+ACQAA//////hBACj/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////8vowAA/////0Ce/8j/////gV8ACP////9L//+E/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetVertexData4f
+    size: 212
+    flags: 1
+    section: .text
+  relocations: []

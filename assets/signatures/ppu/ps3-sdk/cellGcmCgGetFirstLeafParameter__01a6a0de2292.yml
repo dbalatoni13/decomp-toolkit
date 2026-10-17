@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: 0eab63e4d663fbf5a7964d26b656678e879e3703
+  signature: LCMAAP////85IAAA/////0CCAAz/////fSNLeP////9OgAAg/////4ADAAz/////L4AAAP////9Bnv/w/////4ADABD/////fAAaFP////94CQAg/////30jS3j/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetFirstLeafParameter
+    size: 52
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: 6478a1e0a87a2c9f49f412510442780f50472b91
+  signature: L4MAAP////85IAAA/////0CeAAz/////eSMAIP////9OgAAg/////4ADAAz/////L4AAAP////9Bnv/w/////4ADABD/////fSMCFP////95IwAg/////06AACD/////
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetFirstLeafParameter
+    size: 48
+    flags: 1
+    section: .text
+  relocations: []

@@ -1,0 +1,56 @@
+- symbol: 0
+  hash: c7e79351ba1fd317b03cabe6468e1aa7949d3626
+  signature: gSIAAP//AAB8CAKm//////gh/5H/////+AEAgP////+BKQAA/////y+pAAD/////QZ4AHP////+ACQAA//////hBACj/////fAkDpv////+ASQAE/////06ABCH/////6EEAKP////9IAAAB/AAAAw==
+  symbols:
+  - kind: Function
+    name: ._ZSt10unexpectedv
+    size: 56
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZSt9terminatev
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 52
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: d1b6b77d3d3f766a15d9ddabaac4c03964c7c180
+  signature: gSIAAP//AAB8CAKm//////gh/5H/////+AEAgP////+BKQAA/////y+JAAD/////QZ4AIP////95KQAg/////4AJAAD/////+EEAKP////98CQOm/////4BJAAT/////ToAEIf/////oQQAo/////0gAAAH8AAAD
+  symbols:
+  - kind: Function
+    name: ._ZSt10unexpectedv
+    size: 60
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZSt9terminatev
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 56
+    kind: rel24
+    symbol: 2
+    addend: 0

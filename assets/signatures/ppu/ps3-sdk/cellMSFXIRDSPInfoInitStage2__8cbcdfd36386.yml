@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 9e20ad94737422f601d531e6b6dd71b47c3bf641
+  signature: +CH/kf////98CAKm//////gBAID/////OAT///////8rgAAH/////0GdAEz/////L4QAAP////+QgwAA/////0GdACT/////OGAAAP////9IAAAB/AAAA2AAAAD/////6AEAgP////84YAAA/////3wIA6b/////OCEAcP////9OgAAg/////4ADAMT/////OSMAyP////844AAA/////y+AAAD/////kAMABP////95KAAg/////0CeAFj/////6AEAgP////84YP///////zghAHD/////fAgDpv////9OgAAg/////zgHAAH/////OSj/vP////98Bwe0/////3kpACD/////f4Q4AP////84AAAA/////5AJAAD/////QZ7/lP////+BaAAA/////zko/0D/////OAgABP////8viwAA/////3kpACD/////eAgAIP////+RaQAA/////0Ge/7D/////OAj//P////85IBAA/////3gKACD/////OWAAAP////99KQOm/////zgAAAD/////gSoAAP////99KVoU/////zlrAAH/////eSkAIP////+YCQAA/////0IA/+z/////S///kP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSFXIRDSPInfoInitStage2
+    size: 232
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 40
+    kind: rel24
+    symbol: 1
+    addend: 0

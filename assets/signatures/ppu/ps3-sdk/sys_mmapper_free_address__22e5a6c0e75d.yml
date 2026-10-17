@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 1af9a5ade5a02c3f93042107defae8180a4996ed
+  signature: +CH/kf////98CAKm//////gBAID/////eGMAIP////85YAFL/////0QAAAL/////fGMHtP/////oAQCA/////3wIA6b/////OCEAcP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .sys_mmapper_free_address
+    size: 44
+    flags: 1
+    section: .text
+  relocations: []

@@ -1,0 +1,20 @@
+- symbol: 0
+  hash: 3c1473e1773d9b8941b938397e8fad5aacf214eb
+  signature: LCQAAP////8vpQAA/////0GCABD/////gAMAHP////98ABoU/////5AEAAD/////TZ4AIP////+AAwAY/////5AFAAD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetUCode
+    size: 40
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: 9528181a131de39428b1fae34e549dd642ffadc1
+  signature: LCQAAP////98qSt4/////0GCABD/////gAMAHP////98ABoU/////5AEAAD/////L4kAAP////9NngAg/////4ADABj/////kAUAAP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetUCode
+    size: 44
+    flags: 1
+    section: .text
+  relocations: []

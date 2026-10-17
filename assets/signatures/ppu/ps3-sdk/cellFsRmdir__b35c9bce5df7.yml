@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: 161e6917e88498a552cdf655a3e242981de6e215
+  signature: OWADLf////98CAKm//////gBABD/////RAAAAv/////oAQAQ/////3xjB7T/////fAgDpv////9OgAAg/////wAAAAD/////AAkAAf////8AAAAA/////w==
+  symbols:
+  - kind: Function
+    name: .cellFsRmdir
+    size: 44
+    flags: 1
+    section: .text
+  relocations: []

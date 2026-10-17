@@ -1,0 +1,66 @@
+- symbol: 0
+  hash: 27ab51d118820f06467714c0e9726b71a984292c
+  signature: +CH/cf////98CAKm//////uhAHj/////fL0reP/////4AQCg/////4AEABT/////gWMABP////98ACIU/////4CDAAj/////+8EAgP////98fht4/////zkkAHD/////++EAiP////94HwAg/////3+JWED/////QJwBSP////88AAAE/////6DfAAz/////eIkAIP////+g/wAO/////2AACOT/////oR8AEP////9jqgAB/////zlkAAj/////kAkAAP////+RSQAE/////zwAAAT/////eWsAIP////+BPwAE/////y+mAAD/////YSkAIP////9gAB/0/////ziLAAj/////kSsABP////+QCwAA/////5CeAAj/////QJ4AoP////+IHwAS/////z1AAgD/////K4AAAf////9AnQAI/////3gKweT/////iB8AFP////9hSoQA/////4l/ABX/////L4AAAP////+IHwAT/////30wECb/////VSn//v////99awDQ/////zkp////////VWsP/v////9VKQc8/////y+AAAD/////fSlTeP////98EBAm/////1QA//7/////fWsHtP////94ADZk/////3lrPiT/////fABLeP////89QAAE/////31rA3j/////eIkAIP////9hSh1g/////zgEAAj/////kWkABP////+RSQAA/////5AeAAj/////6AEAoP/////roQB4/////+vBAID/////fAgDpv/////r4QCI/////zghAJD/////ToAAIP////84oAtA/////1TJB/7/////VQAm9v////8viQAA/////1TrB/7/////eMb4Qv////85RQAE/////31rA3j/////LCYAAP////9koAAE/////3iJACD/////eOf4Qv////95CPhC/////3lFACD/////QZ4AFP////84hAAI/////5FpAAT/////kAkAAP////+QngAI/////0CC/7j/////S///FP////+BIwAM/////ziAABz/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////L6MAAP////9Anv9s/////4CeAAj/////S//+kP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetFragmentProgram
+    size: 436
+    flags: 1
+    section: .text
+  relocations: []
+- symbol: 0
+  hash: 745041762d1b0ec3ee57911706715e108ab8c242
+  signature: +CH/cf////98CAKm//////uBAHD/////+6EAeP////98nCN4/////3x9G3j/////OMAAAP/////4AQCg/////0gAAAH8AAADYAAAAP////9/o+t4/////3+E43j/////OKAAAP////84wAAB/////zjgAAD/////SAAAAfwAAANgAAAA/////+gBAKD/////64EAcP/////roQB4/////3wIA6b/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetFragmentProgram
+    size: 92
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmSetFragmentProgramOffset
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmSetFragmentProgramControl
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 60
+    kind: rel24
+    symbol: 2
+    addend: 0
+- symbol: 0
+  hash: 0d484e2bf7662c3ee3a591cc00c460a88264021c
+  signature: +CH/cf////98CAKm/////zjAAAD/////+4EAcP/////7oQB4/////3ycI3j/////fH0beP/////4AQCg/////0gAAAH8AAAD6AEAoP////9/o+t4/////+uhAHj/////f4TjeP/////rgQBw/////zigAAH/////fAgDpv////84wAAB/////zjgAAD/////OCEAkP////9IAAAA/AAAAw==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetFragmentProgram
+    size: 80
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmSetFragmentProgramOffset
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellGcmSetFragmentProgramControl
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 32
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 76
+    kind: rel24
+    symbol: 2
+    addend: 0

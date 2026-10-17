@@ -1,0 +1,129 @@
+- symbol: 0
+  hash: 77f11903b0a01359345bf79d8ec528c8db970d41
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP////84YAAB//////gBAKD/////+4EAcP////9IAAAB/AAAA2AAAAD/////gSIAAP//AAA4YAAB/////4OJAAD/////k6kAAP////9IAAAB/AAAA2AAAAD/////6AEAoP/////roQB4/////3uDACD/////fAgDpv/////rgQBw/////zghAJD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZSt14set_unexpectedPFvvE
+    size: 88
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 28
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 38
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 52
+    kind: rel24
+    symbol: 3
+    addend: 0
+- symbol: 0
+  hash: 996917e299789e44a825704517bc0307b84e9cc7
+  signature: +CH/gf////98CAKm//////vBAHD/////fH4beP/////74QB4/////zhgAAH/////+AEAkP////9IAAAB/AAAA2AAAAD/////gSIAAP//AAA4YAAB/////4PpAAD/////k8kAAP////9IAAAB/AAAA2AAAAD/////6AEAkP////9/4/t4/////+vBAHD/////6+EAeP////98CAOm/////zghAID/////ToAAIP////8vpP///////0GeAAz/////SAAAAfwAAANgAAAA/////3hjACD/////SAAAAfwAAANgAAAA/////w==
+  symbols:
+  - kind: Function
+    name: ._ZSt14set_unexpectedPFvvE
+    size: 116
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unwind_Resume
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cxa_call_unexpected
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 28
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 38
+    kind: l
+    symbol: 2
+    addend: -10216440
+  - offset: 52
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 96
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 108
+    kind: rel24
+    symbol: 5
+    addend: 0
+- symbol: 0
+  hash: cf1309fe8e9f82b44eb1b43efa12d805ee1e42f3
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP////84YAAB//////gBAKD/////+4EAcP////9IAAAB/AAAA2AAAAD/////OGAAAf////+BIgAA//8AAIOJAAD/////k6kAAP////9IAAAB/AAAA2AAAAD/////6AEAoP////9/g+N4/////+uhAHj/////64EAcP////98CAOm/////zghAJD/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: ._ZSt14set_unexpectedPFvvE
+    size: 88
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@002A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 28
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 42
+    kind: l
+    symbol: 2
+    addend: -14169624
+  - offset: 52
+    kind: rel24
+    symbol: 3
+    addend: 0

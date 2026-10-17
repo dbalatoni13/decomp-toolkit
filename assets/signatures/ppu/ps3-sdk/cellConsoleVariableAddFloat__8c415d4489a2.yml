@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: 197b7e7d9802751580af5bd3d26153cf6f093963
+  signature: OOAACP////85AAAA/////zkgAAD/////OUAAAP////9IAAAA/AAAAw==
+  symbols:
+  - kind: Function
+    name: .cellConsoleVariableAddFloat
+    size: 20
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._cellConsoleVariableAdd
+    size: 0
+    flags: 2
+    section: .text
+  relocations:
+  - offset: 16
+    kind: rel24
+    symbol: 1
+    addend: 0

@@ -1,0 +1,74 @@
+- symbol: 0
+  hash: bb458689089dd9de86e85795ffd36e4ba3e7e5a4
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP/////4AQCg/////4ACAAD//wAAkB0AAP////9IAAAB/AAAA2AAAAD/////f6PreP////9IAAAB/AAAA2AAAAD/////6AEAoP/////roQB4/////3wIA6b/////OCEAkP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt9bad_allocD0Ev
+    size: 68
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt9exceptionD2Ev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 22
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 28
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 40
+    kind: rel24
+    symbol: 3
+    addend: 0
+- symbol: 0
+  hash: bf98c844cf4765c73b43a03ff4accf209432a41d
+  signature: +CH/cf////98CAKm//////uhAHj/////fH0beP/////4AQCg/////4ACAAD//wAAkAMAAP////9IAAAB/AAAA2AAAAD/////f6PreP////9IAAAB/AAAA+hBACj/////6AEAoP/////roQB4/////zghAJD/////fAgDpv////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt9bad_allocD0Ev
+    size: 68
+    flags: 4
+    section: .text
+  - kind: Unknown
+    name: '@0016'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt9exceptionD2Ev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0028'
+    size: 0
+    flags: 2
+    section: .text
+  relocations:
+  - offset: 22
+    kind: l
+    symbol: 1
+    addend: -14058240
+  - offset: 28
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 40
+    kind: rel24
+    symbol: 3
+    addend: 0

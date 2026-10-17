@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: 35e8f678cebbb8f9d36335a411601ae086496b29
+  signature: LCQAAP////+BIgAA//8AAPgh/4H/////fAgCpv/////7wQBw/////3x+G3j/////+AEAkP////98gyN4//////vhAHj/////fJ8jeP/////46QAQ//////ipAAD/////+MkACP////9BggAU/////0gAAAH8AAADOB9wGP/////73wAA/////3gfACD/////f+37eP/////oAQCQ/////+vBAHD/////6+EAeP////98CAOm/////zghAID/////ToAAIP////8AAAAA/////wAJAAH/////gAIAAP//AAA=
+  symbols:
+  - kind: Function
+    name: .sys_initialize_tls
+    size: 112
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0006'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._initialize_tls_memory
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .bss
+  relocations:
+  - offset: 6
+    kind: l
+    symbol: 1
+    addend: -7170272
+  - offset: 56
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 110
+    kind: l
+    symbol: 3
+    addend: -7170272

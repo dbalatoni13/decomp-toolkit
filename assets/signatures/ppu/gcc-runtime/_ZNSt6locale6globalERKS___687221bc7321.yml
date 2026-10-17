@@ -1,0 +1,96 @@
+- symbol: 0
+  hash: cef00eeb8fabf705fc994faa17bc937aacb299f3
+  signature: +CH/cf////98CAKm//////uBAHD/////+8EAgP////98fBt4/////3yeI3j/////eGMAIP/////4AQCg//////vhAIj/////+6EAeP////9IAAAB/AAAA2AAAAD/////OGAAAP////9IAAAB/AAAA2AAAAD/////SAAAAfwAAANgAAAA/////4AeAAD/////f4AYAP////98fxt4/////0GeAQj/////OGAAAP////97/QAg/////0gAAAH8AAADYAAAAP////+BPwAE/////zgA//3/////OSn///////9/iQBA/////0CdAST/////gB8ABP////8vgAAA/////0CeAQj/////OGAAAP////9IAAAB/AAAA2AAAAD/////gT8AAP////9/o+t4/////4FpAAT/////gAsAAP/////4QQAo/////3wJA6b/////gEsABP////9OgAQh/////+hBACj/////g74AAP////97vgAg/////3/D83j/////SAAAAfwAAANgAAAA/////zhgAAD/////SAAAAfwAAANgAAAA/////4E+AAT/////L4n///////9BngAM/////zgJAAH/////kB4ABP////84YAAA/////zvgAAH/////SAAAAfwAAANgAAAA/////4AeABD/////VB4Gvv////8vngA//////0GeAKj/////OSAAAf////84HQAY/////30p+DD/////eAsAIP////99Iw5w/////zidABz/////f8AYOP////98Ywe0/////ywAAAD/////QYIAIP////+ACwAY/////yuAAA//////QJ0ACP////+AiwAE/////3iEACD/////SAAAAfwAAANgAAAA/////y+fAAb/////O/8AAf////9Anv+0/////zhgAAD/////SAAAAfwAAANgAAAA/////+gBAKD/////66EAeP////97gwAg/////+vBAID/////64EAcP////98CAOm/////+vhAIj/////OCEAkP////9OgAAg/////zhgAAD/////SAAAAfwAAANgAAAA/////0v//yD/////kT8ABP////+AHwAE/////y+AAAD/////QJ7/5P////9L//7c/////zgdABj/////OJ0AHP////94CwAg/////4ErABj/////K4kAD/////9BnQBE/////3iEACD/////OGAAP/////9IAAAB/AAAA2AAAAD/////OGAAAP////9IAAAB/AAAA2AAAAD/////6AEAoP/////roQB4/////3uDACD/////68EAgP/////rgQBw/////3wIA6b/////6+EAiP////84IQCQ/////06AACD/////gIsABP////84YAA//////3iEACD/////SAAAAfwAAANgAAAA/////0v//7z/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt6locale6globalERKS_
+    size: 540
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZNSt6localeC1Ev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Getgloballocale
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__Setgloballocale
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .setlocale
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 40
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 52
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 60
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 92
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 136
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 192
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 204
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 240
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 324
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 348
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 396
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 460
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 472
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 528
+    kind: rel24
+    symbol: 6
+    addend: 0

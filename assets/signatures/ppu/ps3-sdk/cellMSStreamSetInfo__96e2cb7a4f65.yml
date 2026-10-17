@@ -1,0 +1,953 @@
+- symbol: 0
+  hash: 340fcc937c72b60b1e9d5f68ffe31de64ed30f54
+  signature: +CH/Yf////98CAKm//////vhAJj/////g+IAAP//AAD7QQBw/////3x6G3j/////+4EAgP////9/4/t4/////3ycI3j/////+AEAsP////84gAAA//////thAHj/////+6EAiP/////7wQCQ/////4vcAAD/////SAAAAfwAAAPoQQAo/////4EiAAD//wAAiAkAAP////8vgAAB/////0GeABj/////gIIAAP//AACAYgAA//8AAEgAAAH8AAAD6EEAKP////9IAAAA/////4EiAAD//wAAV0sP/v////+ACQAA/////3+A0AD/////T93oQv////98EBAm/////1QA//7/////fABbeP////8vgAAA/////0CeAUD/////e1sAIP////+AYgAA//8AAFdgKDT/////V2tQKv////98AFoU/////4EjAAD/////eB0AIP////99KeoU/////3kpACD/////gAkDiP////8vgAAA/////0DeBFz/////gNwAGP////98ywe0/////zgL////////fAoHtP////8rigAH/////0HdBCD/////gBwAHP////8rgAH//////0HdBBT/////gPwAIP////8rhwAG/////0HdBAj/////gSIAAP//AACACQAA/////y+AAAD/////QZ4AOP////+BAgAA//8AAIAIAAD/////fAAHtP////9/igAA/////0HdA8D/////gUIAAP//AAB9awBQ/////zlrAAH/////kWgAAP////+BKgAA/////30mShT/////OSn///////+RKgAA/////3zpB7T/////OAn//P////8vCQAG/////yuAAAH/////fTAgJv////9VKd/+/////0/d6EL/////fBAQJv////9UAP/+/////3wAS3j/////L4AAAP////9BngA0/////4EiAAD//wAAgAkAAP////8vgAAA/////0HeAxD/////g+IAAP//AAA5YAAA/////4AfAAD/////L4AAAP////9BnQRM/////4AcABj/////f4BYAP////9AngOs/////4EiAAD//wAAf9/zeP////+ACQAA/////3+A8AD/////f9AQJv////9X3u/+/////y8eAAD/////QZoANP////+AggAA//8AAH/l+3j/////gGIAAP//AABIAAAB/AAAA+hBACj/////SAAAAP////+AggAA//8AAH9F03j/////gGIAAP//AABIAAAB/AAAA+hBACj/////SAAAAP////9/Q9N4/////0gAAAH8AAADe+UGIP////+AYgAA//8AAFfqEDr/////gMIAAP//AAA5AAAB/////4CCAAD//wAAOOoDgP////85SgLQ/////8ACAAD//wAAfQj4MP////+BIwAA/////31KB7T/////fOcHtP////99KeoU/////30IB7T/////eSkAIP////+byQAg/////4FmAAD/////fWvaFP////95awAg/////5vLAAD/////gSMAAP////99KeoU/////3kpACD/////mKkAIv////+AAwAA/////4EkAAD/////fADqFP////8viQAA/////3gGACD/////fUZSFP////+RBgNY/////3zmOhT/////0AoACP/////QBwAM/////0GeAez/////gWIAAP//AABXaRA6/////4FGA1j/////gAsAAP////99KQIU/////3kpACD/////kUkAAP////+BYwAA/////zgAAAD/////fWvqFP////95awAg/////5gLACT/////OAAAAP////+BIwAA/////4F8AAT/////fSnqFP////+BXAAM/////31rB7T/////eSkAIP////99Sge0/////5AJAoT/////gRwACP/////5aQKY/////5EJAoz/////gXwAEP/////5SQKg/////5FpApD/////iBwAG/////+YCQAh/////4FjAAD/////gBwAFP////99a+oU/////3wAB7T/////eWYAIP////+QBgKo/////4lmACH/////IWsACf////+ABgLQ/////4EmAtD/////VWpQKv////+BBgLQ/////1VrQC7/////fAAHtP////99a1IU/////30pB7T/////LwAABP////8viQAF/////31QICb/////VUrf/v////99CAe0/////3wQECb/////VAD//v////9VZxA6/////31KA3j/////fWs6FP////8viAAG/////30wECb/////VSn//v////99Skt4/////1VgIDb/////L4oAAP////98CwBQ/////3wJB7T/////QJ4A0P////+ABgLQ/////3wAB7T/////L4AAA/////9BngDA/////4AGAqj/////fAAHtP////9/iQAA/////0CcAAj/////kSYCqP////+BYwAA/////4E8ABz/////fWvqFP////+BQgAA//8AAH0pB7T/////wAIAAP//AAB5awAg/////4BiAAD//wAAkSsCzP////+AHAAg/////4EKAAD/////OUAAAP////98AAe0/////5ALAtD/////OAAAAf////+BPAAk/////30pB7T/////kSsC1P/////QCwNg/////5FLA2T/////kUsDXP////8dOwkw/////30pQhT/////eSkAIP////+RSQgc/////5ALA4j/////SAAAAfwAAAPoQQAo/////zhgAAD/////SAAAAfwAAANgAAAA/////zhgAAD/////6AEAsP/////rQQBw/////+thAHj/////fAgDpv/////rgQCA/////+uhAIj/////68EAkP/////r4QCY/////zghAKD/////ToAAIP////+ABgKo/////z0gAAH/////fAAHtP////9hKXcA/////3+ASAD/////QJ3/RP////9L//88/////4EiAAD//wAAV2sQOv////+ACQAA/////31rAhT/////eWsAIP////+T6wAA/////0v//hz/////gUIAAP//AACBAgAA//8AAIAcABj/////gGIAAP//AACBKgAA/////4FoAAD/////fSBKFP////99YFhQ/////zkp////////OWsAAf////+RKgAA/////5FoAAD/////SAAAAfwAAAPoQQAo/////zxgAHr/////YGMSA/////9IAAAB/AAAA2AAAAD/////OGD///////9L//9U/////3/j+3j/////SAAAAfwAAAPoQQAo/////zxgAHr/////YGMSDP////9IAAAB/AAAA2AAAAD/////OGD///////9L//8w/////3/j+3j/////SAAAAfwAAAPoQQAo/////zxgAHr/////YGMSAv////9IAAAB/AAAA2AAAAD/////OGD///////9L//8M/////3/j+3j/////SAAAAfwAAAPoQQAo/////zxgAHr/////YGMSC/////9IAAAB/AAAA2AAAAD/////OGD///////9L//7o/////y+LAAD/////QJ0AYP////85K////////4CiAAD//wAAOQAAAP////95KQAg/////zjgAAD/////OSkAAf////99KQOm/////4FjAAD/////VQkQOv////+BRQAA/////zgIAAH/////fWvqFP////85KQNg/////3lrACD/////fSkHtP////98CAe0/////31rShT/////gSsACP////99KVIU/////3kpACD/////mOkAAP////9CAP/I/////4AcABj/////gUIAAP//AACBAgAA//8AAIBiAAD//wAAgSoAAP////+BaAAA/////30gShT/////fWBYUP////85Kf///////zlrAAH/////kSoAAP////+RaAAA/////0v//wj/////OUAAAP////+AogAA//8AADlgAAD/////OIAAAf////9IAAAU/////3zKB7T/////gB8AAP////9/gFAA/////0Cd+5j/////gAUAAP////9VaRA6/////zjKAAH/////fABSFP////85KQNg/////3gIACD/////iAgAAP////99Jwe0/////y+AAAD/////OSsAAf////9Anv/I/////5iIAAD/////fSsHtP////+BIwAA/////30p6hT/////eSkAIP////99KToU/////5FJAAj/////gBwAGP////9/gFgA/////0Ce/6D/////S//7TP////8=
+  symbols:
+  - kind: Function
+    name: .cellMSStreamSetInfo
+    size: 1612
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0056'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005C'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0096'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00F2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0102'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0116'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0166'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0176'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0196'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01BE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01D6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__turnStreamOff
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@01FA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@020E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@027E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@03AE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@03B6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@054A'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 60
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 70
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 86
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 90
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 92
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 106
+    kind: l
+    symbol: 7
+    addend: -14104088
+  - offset: 150
+    kind: l
+    symbol: 8
+    addend: -14104088
+  - offset: 242
+    kind: l
+    symbol: 9
+    addend: -14104088
+  - offset: 258
+    kind: l
+    symbol: 10
+    addend: -14104088
+  - offset: 278
+    kind: l
+    symbol: 11
+    addend: -14104088
+  - offset: 358
+    kind: l
+    symbol: 12
+    addend: -14104088
+  - offset: 374
+    kind: l
+    symbol: 13
+    addend: -14104088
+  - offset: 406
+    kind: l
+    symbol: 14
+    addend: -14104088
+  - offset: 438
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 446
+    kind: l
+    symbol: 15
+    addend: -14104088
+  - offset: 448
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 462
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 470
+    kind: l
+    symbol: 16
+    addend: -14104088
+  - offset: 472
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 488
+    kind: rel24
+    symbol: 17
+    addend: 0
+  - offset: 498
+    kind: l
+    symbol: 8
+    addend: -14104088
+  - offset: 506
+    kind: l
+    symbol: 18
+    addend: -14104088
+  - offset: 514
+    kind: l
+    symbol: 9
+    addend: -14104088
+  - offset: 526
+    kind: l
+    symbol: 19
+    addend: -14104088
+  - offset: 638
+    kind: l
+    symbol: 20
+    addend: -14104088
+  - offset: 942
+    kind: l
+    symbol: 21
+    addend: -14104088
+  - offset: 950
+    kind: l
+    symbol: 22
+    addend: -14104088
+  - offset: 958
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 1032
+    kind: rel24
+    symbol: 23
+    addend: 0
+  - offset: 1044
+    kind: rel24
+    symbol: 24
+    addend: 0
+  - offset: 1126
+    kind: l
+    symbol: 20
+    addend: -14104088
+  - offset: 1154
+    kind: l
+    symbol: 10
+    addend: -14104088
+  - offset: 1158
+    kind: l
+    symbol: 11
+    addend: -14104088
+  - offset: 1166
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 1200
+    kind: rel24
+    symbol: 23
+    addend: 0
+  - offset: 1216
+    kind: rel24
+    symbol: 24
+    addend: 0
+  - offset: 1236
+    kind: rel24
+    symbol: 23
+    addend: 0
+  - offset: 1252
+    kind: rel24
+    symbol: 24
+    addend: 0
+  - offset: 1272
+    kind: rel24
+    symbol: 23
+    addend: 0
+  - offset: 1288
+    kind: rel24
+    symbol: 24
+    addend: 0
+  - offset: 1308
+    kind: rel24
+    symbol: 23
+    addend: 0
+  - offset: 1324
+    kind: rel24
+    symbol: 24
+    addend: 0
+  - offset: 1354
+    kind: l
+    symbol: 25
+    addend: -14104088
+  - offset: 1442
+    kind: l
+    symbol: 10
+    addend: -14104088
+  - offset: 1446
+    kind: l
+    symbol: 11
+    addend: -14104088
+  - offset: 1450
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 1494
+    kind: l
+    symbol: 25
+    addend: -14104088
+- symbol: 0
+  hash: 1b1b1a349e445447db8e3ea2b72526c92a29cf91
+  signature: +CH/Yf////98CAKm//////vhAJj/////g+IAAP//AAD7QQBw/////3x6G3j/////+4EAgP////9/4/t4/////3ycI3j/////+AEAsP////84gAAA//////thAHj/////+6EAiP/////7wQCQ/////4vcAAD/////SAAAAfwAAAPoQQAo/////4EiAAD//wAAiAkAAP////8vgAAB/////0GeABj/////gIIAAP//AACAYgAA//8AAEgAAAH8AAADYAAAAP////9IAAAA/////4EiAAD//wAAV0sP/v////+ACQAA/////3+A0AD/////T93oQv////98EBAm/////1QA//7/////fABbeP////8vgAAA/////0CeAUD/////e1sAIP////+AYgAA//8AAFdgKDT/////V2tQKv////98AFoU/////4EjAAD/////eB0AIP////99KeoU/////3kpACD/////gAkDiP////8vgAAA/////0DeBGD/////gNwAGP////98ywe0/////zgL////////fAoHtP////8rigAH/////0HdBCT/////gBwAHP////8rgAH//////0HdBBj/////gPwAIP////8rhwAG/////0HdBAz/////gSIAAP//AACACQAA/////y+AAAD/////QZ4AOP////+BAgAA//8AAIAIAAD/////fAAHtP////9/igAA/////0HdA8T/////gUIAAP//AAB9awBQ/////zlrAAH/////kWgAAP////+BKgAA/////30mShT/////OSn///////+RKgAA/////3zpB7T/////OAn//P////8vCQAG/////yuAAAH/////fTAgJv////9VKd/+/////0/d6EL/////fBAQJv////9UAP/+/////3wAS3j/////L4AAAP////9BngA0/////4EiAAD//wAAgAkAAP////8vgAAA/////0HeAxT/////g+IAAP//AAA5YAAA/////4AfAAD/////L4AAAP////9BnQRQ/////4AcABj/////f4BYAP////9AngOw/////4EiAAD//wAAf9/zeP////+ACQAA/////3+A8AD/////f9AQJv////9X3u/+/////y8eAAD/////QZoANP////+AggAA//8AAH/l+3j/////gGIAAP//AABIAAAB/AAAA2AAAAD/////SAAAAP////+AggAA//8AAH9F03j/////gGIAAP//AABIAAAB/AAAA2AAAAD/////SAAAAP////9/Q9N4/////0gAAAH8AAADe+UGIP////+AYgAA//8AAFfqEDr/////gMIAAP//AAA5AAAB/////4CCAAD//wAAOOoDgP////85SgLQ/////8ACAAD//wAAfQj4MP////+BIwAA/////31KB7T/////fOcHtP////99KeoU/////30IB7T/////eSkAIP////+byQAg/////4FmAAD/////fWvaFP////95awAg/////5vLAAD/////gSMAAP////99KeoU/////3kpACD/////mKkAIv////+AAwAA/////4EkAAD/////fADqFP////8viQAA/////3gGACD/////fUZSFP////+RBgNY/////3zmOhT/////0AoACP/////QBwAM/////0GeAfD/////gWIAAP//AABXaRA6/////4FGA1j/////gAsAAP////99KQIU/////3kpACD/////kUkAAP////+BYwAA/////zgAAAD/////fWvqFP////95awAg/////5gLACT/////OAAAAP////+BIwAA/////4F8AAT/////fSnqFP////+BXAAM/////31rB7T/////eSkAIP////99Sge0/////5AJAoT/////gRwACP/////5aQKY/////5EJAoz/////gXwAEP/////5SQKg/////5FpApD/////iBwAG/////+YCQAh/////4FjAAD/////gBwAFP////99a+oU/////3wAB7T/////eWYAIP////+QBgKo/////4lmACH/////IWsACf////+ABgLQ/////4EmAtD/////VWpQKv////+BBgLQ/////1VrQC7/////fAAHtP////99a1IU/////30pB7T/////LwAABP////8viQAF/////31QICb/////VUrf/v////99CAe0/////3wQECb/////VAD//v////9VZxA6/////31KA3j/////fWs6FP////8viAAG/////30wECb/////VSn//v////99Skt4/////1VgIDb/////L4oAAP////98CwBQ/////3wJB7T/////QJ4A1P////+ABgLQ/////3wAB7T/////L4AAA/////9BngDE/////4AGAqj/////fAAHtP////9/iQAA/////0CcAAj/////kSYCqP////+BYwAA/////4E8ABz/////fWvqFP////+BQgAA//8AAH0pB7T/////wAIAAP//AAB5awAg/////4BiAAD//wAAkSsCzP////+AHAAg/////4EKAAD/////OUAAAf////98AAe0/////5ALAtD/////OAAAAP////+BPAAk/////30pB7T/////kSsC1P/////QCwNg/////5ALA2T/////kAsDXP////8dOwkw/////30pQhT/////eSkAIP////+QCQgc/////5FJCBj/////kUsDiP////9IAAAB/AAAA+hBACj/////OGAAAP////9IAAAB/AAAA2AAAAD/////OGAAAP/////oAQCw/////+tBAHD/////62EAeP////98CAOm/////+uBAID/////66EAiP/////rwQCQ/////+vhAJj/////OCEAoP////9OgAAg/////4AGAqj/////PSAAAf////98AAe0/////2EpdwD/////f4BIAP////9Anf9A/////0v//zj/////gSIAAP//AABXaxA6/////4AJAAD/////fWsCFP////95awAg/////5PrAAD/////S//+GP////+BQgAA//8AAIECAAD//wAAgBwAGP////+AYgAA//8AAIEqAAD/////gWgAAP////99IEoU/////31gWFD/////OSn///////85awAB/////5EqAAD/////kWgAAP////9IAAAB/AAAA+hBACj/////PGAAev////9gYxID/////0gAAAH8AAADYAAAAP////84YP///////0v//1T/////f+P7eP////9IAAAB/AAAA+hBACj/////PGAAev////9gYxIM/////0gAAAH8AAADYAAAAP////84YP///////0v//zD/////f+P7eP////9IAAAB/AAAA+hBACj/////PGAAev////9gYxIC/////0gAAAH8AAADYAAAAP////84YP///////0v//wz/////f+P7eP////9IAAAB/AAAA+hBACj/////PGAAev////9gYxIL/////0gAAAH8AAADYAAAAP////84YP///////0v//uj/////L4sAAP////9AnQBg/////zkr////////gKIAAP//AAA5AAAA/////3kpACD/////OOAAAP////85KQAB/////30pA6b/////gWMAAP////9VCRA6/////4FFAAD/////OAgAAf////99a+oU/////zkpA2D/////eWsAIP////99KQe0/////3wIB7T/////fWtKFP////+BKwAI/////30pUhT/////eSkAIP////+Y6QAA/////0IA/8j/////gBwAGP////+BQgAA//8AAIECAAD//wAAgGIAAP//AACBKgAA/////4FoAAD/////fSBKFP////99YFhQ/////zkp////////OWsAAf////+RKgAA/////5FoAAD/////S///CP////85QAAA/////4CiAAD//wAAOWAAAP////84gAAB/////0gAABT/////fMoHtP////+AHwAA/////3+AUAD/////QJ37lP////+ABQAA/////1VpEDr/////OMoAAf////98AFIU/////zkpA2D/////eAgAIP////+ICAAA/////30nB7T/////L4AAAP////85KwAB/////0Ce/8j/////mIgAAP////99Kwe0/////4EjAAD/////fSnqFP////95KQAg/////30pOhT/////kUkACP////+AHAAY/////3+AWAD/////QJ7/oP////9L//tI/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSStreamSetInfo
+    size: 1616
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@0046'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0056'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@006A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0096'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00F2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0102'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0116'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0166'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0176'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0196'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01BE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01D6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__turnStreamOff
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@01FA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@020E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@027E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@03AE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@03B6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@054E'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 60
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 70
+    kind: l
+    symbol: 3
+    addend: -15311144
+  - offset: 86
+    kind: l
+    symbol: 4
+    addend: -15311144
+  - offset: 90
+    kind: l
+    symbol: 5
+    addend: -15311144
+  - offset: 92
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 106
+    kind: l
+    symbol: 7
+    addend: -15311144
+  - offset: 150
+    kind: l
+    symbol: 8
+    addend: -15311144
+  - offset: 242
+    kind: l
+    symbol: 9
+    addend: -15311144
+  - offset: 258
+    kind: l
+    symbol: 10
+    addend: -15311144
+  - offset: 278
+    kind: l
+    symbol: 11
+    addend: -15311144
+  - offset: 358
+    kind: l
+    symbol: 12
+    addend: -15311144
+  - offset: 374
+    kind: l
+    symbol: 13
+    addend: -15311144
+  - offset: 406
+    kind: l
+    symbol: 14
+    addend: -15311144
+  - offset: 438
+    kind: l
+    symbol: 4
+    addend: -15311144
+  - offset: 446
+    kind: l
+    symbol: 15
+    addend: -15311144
+  - offset: 448
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 462
+    kind: l
+    symbol: 4
+    addend: -15311144
+  - offset: 470
+    kind: l
+    symbol: 16
+    addend: -15311144
+  - offset: 472
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 488
+    kind: rel24
+    symbol: 17
+    addend: 0
+  - offset: 498
+    kind: l
+    symbol: 8
+    addend: -15311144
+  - offset: 506
+    kind: l
+    symbol: 18
+    addend: -15311144
+  - offset: 514
+    kind: l
+    symbol: 9
+    addend: -15311144
+  - offset: 526
+    kind: l
+    symbol: 19
+    addend: -15311144
+  - offset: 638
+    kind: l
+    symbol: 20
+    addend: -15311144
+  - offset: 942
+    kind: l
+    symbol: 21
+    addend: -15311144
+  - offset: 950
+    kind: l
+    symbol: 22
+    addend: -15311144
+  - offset: 958
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 1036
+    kind: rel24
+    symbol: 23
+    addend: 0
+  - offset: 1048
+    kind: rel24
+    symbol: 24
+    addend: 0
+  - offset: 1130
+    kind: l
+    symbol: 20
+    addend: -15311144
+  - offset: 1158
+    kind: l
+    symbol: 10
+    addend: -15311144
+  - offset: 1162
+    kind: l
+    symbol: 11
+    addend: -15311144
+  - offset: 1170
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 1204
+    kind: rel24
+    symbol: 23
+    addend: 0
+  - offset: 1220
+    kind: rel24
+    symbol: 24
+    addend: 0
+  - offset: 1240
+    kind: rel24
+    symbol: 23
+    addend: 0
+  - offset: 1256
+    kind: rel24
+    symbol: 24
+    addend: 0
+  - offset: 1276
+    kind: rel24
+    symbol: 23
+    addend: 0
+  - offset: 1292
+    kind: rel24
+    symbol: 24
+    addend: 0
+  - offset: 1312
+    kind: rel24
+    symbol: 23
+    addend: 0
+  - offset: 1328
+    kind: rel24
+    symbol: 24
+    addend: 0
+  - offset: 1358
+    kind: l
+    symbol: 25
+    addend: -15311144
+  - offset: 1446
+    kind: l
+    symbol: 10
+    addend: -15311144
+  - offset: 1450
+    kind: l
+    symbol: 11
+    addend: -15311144
+  - offset: 1454
+    kind: l
+    symbol: 1
+    addend: -15311144
+  - offset: 1498
+    kind: l
+    symbol: 25
+    addend: -15311144
+- symbol: 0
+  hash: ab1fbb8ab07052c4c84e6b80cf6911967c19137d
+  signature: +CH/cf////98CAKm//////vBAID/////g8IAAP//AAD7gQBw/////3ycI3j/////+6EAeP////84gAAA//////gBAKD/////fH0beP/////74QCI/////3/D83j/////i/wAAP////9IAAAB/AAAA+hBACj/////gSIAAP//AACICQAA/////y+AAAH/////QZ4AGP////+AggAA//8AAIBiAAD//wAASAAAAfwAAANgAAAA/////0gAAAD/////gSIAAP//AABXqw/+/////4AJAAD/////f4DoAP////9P3ehC/////3wQECb/////VAD//v////98AFt4/////y+AAAD/////QJ4BZP////+BIgAA//8AAIAJAAD/////L4AAAP////9BngBI/////4DiAAD//wAAf8PzeP////+BHAAY/////30LB7T/////gAcAAP////85K////////3wAB7T/////f4kAAP////9B3QOY/////4FCAAD//wAAfWsAUP////85awAB/////5FnAAD/////gSoAAP////99KEoU/////zkp////////kSoAAP////+BPAAg/////30pB7T/////OAn//P////8vCQAG/////yuAAAH/////fTAgJv////9VKd/+/////0/d6EL/////fBAQJv////9UAP/+/////3wAS3j/////L4AAAP////9BngCo/////4EiAAD//wAAgAkAAP////8vgAAA/////0HeApT/////gGIAAP//AAA5AAAA/////4ADAAD/////L4AAAP////9AnQKk/////zjgAAD/////gKIAAP//AAAcHQOg/////3gEACD/////SAAAFP////99Zwe0/////4ADAAD/////f4A4AP////9AnQKA/////4AFAAD/////VQkQOv////85ZwAB/////3wAOhT/////OSkDYP////94BgAg/////4gGAAD/////fSoHtP////8vgAAA/////zkoAAH/////QJ7/yP////+BggAA//8AADgAAAH/////fSgHtP////+YBgAA/////4EsAAD/////fSkiFP////95KQAg/////30pUhT/////kOkACP////+AHAAY/////3+AQAD/////QJ7/mP////+BIgAA//8AAIAJAAD/////f4D4AP////9/0BAm/////1fe7/7/////Lx4AAP////9BmgA0/////4CCAAD//wAAf+X7eP////+AYgAA//8AAEgAAAH8AAADYAAAAP////9IAAAA/////4CCAAD//wAAf6XreP////+AYgAA//8AAEgAAAH8AAADYAAAAP////9IAAAA/////3+j63j/////SAAAAfwAAAN7pQAg/////4GCAAD//wAAe+cGIP////+BAgAA//8AAFfqEDr/////gMIAAP//AAA5SgLQ/////8ACAAD//wAAHAUDoP////+BLAAA/////3gEACD/////fUoHtP////99KSIU/////3kpACD/////m8kAIP////+BaAAA/////zkAAAH/////fWsqFP////99CPgw/////3lrACD/////fQgHtP////+bywAA/////4EsAAD/////fSkiFP////95KQAg/////5jpACL/////gAwAAP////+BJgAA/////3wAIhT/////L4kAAP////94BwAg/////31HUhT/////kQcDWP/////QCgAI/////0GeAeD/////gWIAAP//AABUqRA6/////4FHA1j/////gAsAAP////99KQIU/////3kpACD/////kUkAAP////+BLAAA/////zgAAAD/////OQAAAP////+A4gAA//8AAH0pIhT/////wAIAAP//AACAYgAA//8AAHkpACD/////mAkAJP////+BbAAA/////4AcAAT/////fWsiFP////+BPAAM/////3wAB7T/////eWsAIP////99KQe0/////5ELAoT/////gVwACP/////4CwKY/////5FLAoz/////gBwAEP/////5KwKg/////5ALApD/////iTwAG/////+ZKwAh/////4FMAAD/////gTwAFP////99SiIU/////4DHAAD/////fSkHtP////95SgAg/////5EqAqj/////gBwAHP////8dJQkw/////3wAB7T/////fSkyFP////+QCgLM/////4F8ACD/////eSkAIP////99awe0/////5FqAtD/////gBwAJP////98AAe0/////5AKAtT/////OAAAAf/////QCgNg/////5EKA2T/////kQoDXP////+RCQgc/////5AJCBj/////SAAAAfwAAAPoQQAo/////zhgAAD/////SAAAAfwAAANgAAAA/////zhgAAD/////6AEAoP/////rgQBw/////+uhAHj/////fAgDpv/////rwQCA/////+vhAIj/////OCEAkP////9OgAAg/////4BiAAD//wAASAAAAfwAAAPoQQAo/////zxgAHr/////YGMSA/////9IAAAB/AAAA2AAAAD/////OGD///////9L///A/////4AcABj/////f4BAAP////9Bnv3Y/////y+IAAD/////QJ0AaP////85KP///////4CiAAD//wAAOQAAAP////+BggAA//8AAHkpACD/////HB0DoP////85KQAB/////3gDACD/////fSkDpv////+BbAAA/////1UJEDr/////gUUAAP////84CAAB/////31rGhT/////OSkDYP////95awAg/////30pB7T/////fAgHtP////99a0oU/////zgAAAD/////gSsACP////99KVIU/////3kpACD/////mAkAAP////9CAP/E/////4BiAAD//wAASAAAAfwAAAPoQQAo/////zxgAHr/////YGMSDP////9IAAAB/AAAA2AAAAD/////OGD///////9L//8k/////4EiAAD//wAAVKsQOv////+ACQAA/////31rAhT/////eWsAIP////+T6wAA/////0v//ij/////
+  symbols:
+  - kind: Function
+    name: .cellMSStreamSetInfo
+    size: 1164
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_lock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Unknown
+    name: '@003E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@004E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0052'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0062'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@008A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@009A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00BE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0112'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0122'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@013A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0186'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01B6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01DA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@01F2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__turnStreamOff
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0216'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0226'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0296'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@02BE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@02C6'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .sys_lwmutex_unlock
+    size: 0
+    flags: 1
+    section: .sceStub.text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 52
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 62
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 78
+    kind: l
+    symbol: 4
+    addend: -6468872
+  - offset: 82
+    kind: l
+    symbol: 5
+    addend: -6468872
+  - offset: 84
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 98
+    kind: l
+    symbol: 7
+    addend: -6468872
+  - offset: 138
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 154
+    kind: l
+    symbol: 9
+    addend: -6468872
+  - offset: 190
+    kind: l
+    symbol: 10
+    addend: -6468872
+  - offset: 274
+    kind: l
+    symbol: 11
+    addend: -6468872
+  - offset: 290
+    kind: l
+    symbol: 12
+    addend: -6468872
+  - offset: 314
+    kind: l
+    symbol: 13
+    addend: -6468872
+  - offset: 390
+    kind: l
+    symbol: 14
+    addend: -6468872
+  - offset: 438
+    kind: l
+    symbol: 15
+    addend: -6468872
+  - offset: 466
+    kind: l
+    symbol: 4
+    addend: -6468872
+  - offset: 474
+    kind: l
+    symbol: 16
+    addend: -6468872
+  - offset: 476
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 490
+    kind: l
+    symbol: 4
+    addend: -6468872
+  - offset: 498
+    kind: l
+    symbol: 17
+    addend: -6468872
+  - offset: 500
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 516
+    kind: rel24
+    symbol: 18
+    addend: 0
+  - offset: 526
+    kind: l
+    symbol: 14
+    addend: -6468872
+  - offset: 534
+    kind: l
+    symbol: 19
+    addend: -6468872
+  - offset: 542
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 550
+    kind: l
+    symbol: 20
+    addend: -6468872
+  - offset: 662
+    kind: l
+    symbol: 21
+    addend: -6468872
+  - offset: 702
+    kind: l
+    symbol: 22
+    addend: -6468872
+  - offset: 710
+    kind: l
+    symbol: 23
+    addend: -6468872
+  - offset: 714
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 888
+    kind: rel24
+    symbol: 24
+    addend: 0
+  - offset: 900
+    kind: rel24
+    symbol: 25
+    addend: 0
+  - offset: 946
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 948
+    kind: rel24
+    symbol: 24
+    addend: 0
+  - offset: 964
+    kind: rel24
+    symbol: 25
+    addend: 0
+  - offset: 1006
+    kind: l
+    symbol: 13
+    addend: -6468872
+  - offset: 1014
+    kind: l
+    symbol: 14
+    addend: -6468872
+  - offset: 1102
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 1104
+    kind: rel24
+    symbol: 24
+    addend: 0
+  - offset: 1120
+    kind: rel24
+    symbol: 25
+    addend: 0
+  - offset: 1138
+    kind: l
+    symbol: 21
+    addend: -6468872

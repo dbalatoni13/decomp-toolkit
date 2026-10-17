@@ -1,0 +1,250 @@
+- symbol: 0
+  hash: d5d6506699c45e3e5825534eaed93877acfaae43
+  signature: gSIAAP//AAB8CAKm//////gh/4H/////+8EAcP////98niN4//////vhAHj/////fH8beP/////4AQCQ/////4gJAAD/////L4AAAf////9BngAY/////4CCAAD//wAAgGIAAP//AABIAAAB/AAAA+hBACj/////SAAAAP////84YAAA/////0gAAAH8AAADYAAAAP////9X4AMY/////y+AAAD/////QZ4ATP////+BIgAA//8AAHvlA2D/////gAkAAP////9/gCgA/////0GcAID/////gWIAAP//AABXykAu/////xwFDED/////gSsAAP////98AEoU/////3wAUhT/////eAMAIP/////oAQCQ/////+vBAHD/////6+EAeP////98CAOm/////zghAID/////ToAAIP////+BIgAA//8AAFfrD/7/////gAkAAP////9/gPgA/////0/d6EL/////fBAQJv////9UAP/+/////3wAW3j/////L4AAAP////9AngA4/////4FiAAD//wAAV8pALv////8cHwkw/////4ErAAD/////fABKFP////98AFIU/////3gDACD/////S///pP////+AggAA//8AAIBiAAD//wAASAAAAfwAAAPoQQAo/////0gAAAD/////gIIAAP//AAB/5ft4/////4BiAAD//wAASAAAAfwAAAPoQQAo/////0gAAAD/////
+  symbols:
+  - kind: Function
+    name: .cellMSCoreGetDSPParamAddr
+    size: 276
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0032'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0034'
+    size: 0
+    flags: 2
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00A2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00CA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00EE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0106'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 46
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 50
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 52
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 68
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 90
+    kind: l
+    symbol: 6
+    addend: -14104088
+  - offset: 110
+    kind: l
+    symbol: 7
+    addend: -14104088
+  - offset: 162
+    kind: l
+    symbol: 8
+    addend: -14104088
+  - offset: 202
+    kind: l
+    symbol: 9
+    addend: -14104088
+  - offset: 234
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 238
+    kind: l
+    symbol: 10
+    addend: -14104088
+  - offset: 240
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 254
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 262
+    kind: l
+    symbol: 11
+    addend: -14104088
+  - offset: 264
+    kind: rel24
+    symbol: 4
+    addend: 0
+- symbol: 0
+  hash: 70274480b343daa91153ca676708c6399296a457
+  signature: gSIAAP//AAB8CAKm//////gh/4H/////+8EAcP////98niN4//////vhAHj/////fH8beP/////4AQCQ/////4gJAAD/////L4AAAf////9BngAY/////4CCAAD//wAAgGIAAP//AABIAAAB/AAAA2AAAAD/////SAAAAP////84YAAA/////0gAAAH8AAADYAAAAP////9X4AMY/////y+AAAD/////QZ4ATP////+BIgAA//8AAHvlA2D/////gAkAAP////9/gCgA/////0GcAID/////gWIAAP//AABXykAu/////xwFDED/////gSsAAP////98AEoU/////3wAUhT/////eAMAIP/////oAQCQ/////+vBAHD/////6+EAeP////98CAOm/////zghAID/////ToAAIP////+BIgAA//8AAFfrD/7/////gAkAAP////9/gPgA/////0/d6EL/////fBAQJv////9UAP/+/////3wAW3j/////L4AAAP////9AngA4/////4FiAAD//wAAV8pALv////8cHwkw/////4ErAAD/////fABKFP////98AFIU/////3gDACD/////S///pP////+AggAA//8AAIBiAAD//wAASAAAAfwAAANgAAAA/////0gAAAD/////gIIAAP//AAB/5ft4/////4BiAAD//wAASAAAAfwAAANgAAAA/////0gAAAD/////
+  symbols:
+  - kind: Function
+    name: .cellMSCoreGetDSPParamAddr
+    size: 276
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@002E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0032'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .printf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00A2'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00CA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@00EE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0106'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 46
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 50
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 52
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 68
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 90
+    kind: l
+    symbol: 6
+    addend: -6468872
+  - offset: 110
+    kind: l
+    symbol: 7
+    addend: -6468872
+  - offset: 162
+    kind: l
+    symbol: 8
+    addend: -6468872
+  - offset: 202
+    kind: l
+    symbol: 9
+    addend: -6468872
+  - offset: 234
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 238
+    kind: l
+    symbol: 10
+    addend: -6468872
+  - offset: 240
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 254
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 262
+    kind: l
+    symbol: 11
+    addend: -6468872
+  - offset: 264
+    kind: rel24
+    symbol: 4
+    addend: 0

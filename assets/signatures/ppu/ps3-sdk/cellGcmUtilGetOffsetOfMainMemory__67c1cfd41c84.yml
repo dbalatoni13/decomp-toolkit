@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 1c317c995b4a1c7a032953ec7e5cffbe45391a7b
+  signature: gWIAAP//AACBQgAA//8AAIALAAD/////gSoAAP////98YBhQ/////3xjShT/////eGMAIP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmUtilGetOffsetOfMainMemory
+    size: 32
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0006'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -10154688
+  - offset: 6
+    kind: l
+    symbol: 2
+    addend: -10154688

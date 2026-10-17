@@ -1,0 +1,28 @@
+- symbol: 0
+  hash: 7bc518c090567b8ed80301ff2adbe7618b589bd7
+  signature: +CH/Yf////98CAKm/////y+EAAD/////+4EAgP////8vBQAA/////30gACb/////VSn//v/////4AQCw/////3y8K3j/////PKCAAf/////7wQCQ//////uhAIj/////fJ4jeP/////74QCY/////2ClAA3/////fAAAJv////9UAN/+/////30pA3j/////L4kAAP////9BngAo/////+gBALD/////fKMreP/////rgQCA/////+uhAIj/////fAgDpv/////rwQCQ/////+vhAJj/////OCEAoP////9OgAAg/////0gAAAH8AAADYAAAAP////+BPgAI/////4F+ABD/////fH0beP////95KQfG/////4CeAAz/////eWsHxv////+AHgAU/////3yES3j/////fABbeP////84oQBw/////3yEAhT/////OWADTf////84hA///////3iEBOT/////RAAAAv////98fwe0/////zlgAz3/////L78AAP////9/5ft4/////3+j63j/////f8TzeP////84wAAA/////0Ce/3z/////gKEAcP////9EAAAC/////3x/B7T/////OWADTv////8vvwAA/////3+j63j/////QZ4ANP////+AgQBw/////0QAAAL/////f+X7eP/////oAQCw/////+uBAID/////fKMreP/////roQCI/////+vBAJD/////fAgDpv/////r4QCY/////zghAKD/////ToAAIP////+AHgAI/////3+D43j/////gT4ADP////94AAfG/////4CBAHD/////gL4AFP////99KQN4/////3yEShT/////eIQAIP////9IAAAB/AAAA2AAAAD/////f6PreP////85YANO/////4CBAHD/////RAAAAv////84oAAA/////0v//uz/////AAAAAP////8ACQAB/////4AEAAD/////
+  symbols:
+  - kind: Function
+    name: .cellFsLsnRead
+    size: 372
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._get_fsfd
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .memcpy
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 116
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 328
+    kind: rel24
+    symbol: 2
+    addend: 0

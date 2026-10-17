@@ -1,0 +1,46 @@
+- symbol: 0
+  hash: ae436cb3bc4b4d89f667d1bd83ecf8cd0c0c8947
+  signature: +CH/cf////98CAKm//////uhAHj/////g6IAAP//AAD4AQCg//////vhAIj/////gB0AAP////8vgAAA/////0GeACD/////f7/reP////84YAAK/////zlgAI3/////RAAAAv////+DvwAA/////y+dAAD/////QJ7/7P////+BIgAA//8AADgAAAH/////OGAAAP////+QCQAA/////0gAAAH8AAAD6AEAoP////+BIgAA//8AAOuhAHj/////fAgDpv/////r4QCI/////zghAJD/////gGkAAP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellMSSystemGetCallbacksNeeded
+    size: 116
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0042'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 66
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 80
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 90
+    kind: l
+    symbol: 4
+    addend: -14104088

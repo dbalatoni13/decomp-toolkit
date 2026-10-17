@@ -1,0 +1,229 @@
+- symbol: 0
+  hash: 6ff49eeb6f7c37c87eff30b861423ba649bd1c11
+  signature: +CH/Yf////98CAKm//////uBAID/////+AEAsP////+gAwAA/////3h8ACD/////+6EAiP////9UAAe+//////vhAJj/////L4AAAP/////7YQB4//////vBAJD/////fH8beP////98fRt4/////0CeADD/////O8D////////oAQCw/////3/DB7T/////62EAeP/////rgQCA/////3wIA6b/////66EAiP/////rwQCQ/////+vhAJj/////OCEAoP////9OgAAg/////6ADAAT/////fAAHNP////8vgAAA/////0Gc/8j/////f4PjeP////9IAAAB/AAAA2AAAAD/////fH4beP////84YAAC/////0gAAAH8AAADYAAAAP////+DfwBE/////39j23j/////SAAAAfwAAANgAAAA/////6AfAAD/////VAAGcv////8vgAAA/////0CeAIz/////oH8ABP////84AAAA/////3xjBzT/////kB8ACP////9IAAAB/AAAA2AAAAD/////L4MAAP////9BngAI/////zvA////////f4PjeP////9IAAAB/AAAA2AAAAD/////f2PbeP////9IAAAB/AAAA2AAAAD/////f2PbeP////9IAAAB/AAAA2AAAAD/////gAIAAP//AAB/nQAA/////0GeACj/////gAIAAP//AAB/nQAA/////0GeABz/////gAIAAP//AAB/nQAA/////0GeABD/////f2PbeP////9IAAAB/AAAA2AAAAD/////OGAAAv////9IAAAB/AAAA2AAAAD/////S///CP////+AfwAI/////0gAAAH8AAADYAAAAP////9L//9s/////w==
+  symbols:
+  - kind: Function
+    name: .fclose
+    size: 332
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .fflush
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Mtxlock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .close
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._filep_close_it
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Mtxunlock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Mtxdst
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00FE'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@010A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0116'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .free
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 124
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 140
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 156
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 196
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 220
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 232
+    kind: rel24
+    symbol: 6
+    addend: 0
+  - offset: 244
+    kind: rel24
+    symbol: 7
+    addend: 0
+  - offset: 254
+    kind: l
+    symbol: 8
+    addend: -28621288
+  - offset: 266
+    kind: l
+    symbol: 9
+    addend: -28621288
+  - offset: 278
+    kind: l
+    symbol: 10
+    addend: -28621288
+  - offset: 292
+    kind: rel24
+    symbol: 11
+    addend: 0
+  - offset: 304
+    kind: rel24
+    symbol: 12
+    addend: 0
+  - offset: 320
+    kind: rel24
+    symbol: 11
+    addend: 0
+- symbol: 0
+  hash: 7e133f9f5d5e5b5f9ffea9c09373f2c31994ccdc
+  signature: +CH/cf////98CAKm//////vhAIj/////fH8beP/////4AQCg/////6ADAAD/////+4EAcP////9UAAe+//////uhAHj/////+8EAgP////8vgAAA/////0CeACz/////O8D////////oAQCg/////3/D83j/////64EAcP/////roQB4/////3wIA6b/////68EAgP/////r4QCI/////zghAJD/////ToAAIP////+gAwAE/////3wABzT/////L4AAAP////9BnP/M/////0gAAAH8AAADYAAAAP////98fht4/////zhgAAL/////SAAAAfwAAANgAAAA/////6AfAAD/////VAAGcv////8vgAAA/////0CeAVD/////oH8ABP////87oAAA/////3xjBzT/////k78ACP////9IAAAB/AAAA2AAAAD/////L6MAAP////9BngAI/////zvA////////gH8APP////8vowAA/////0GeACj/////SAAAAfwAAANgAAAA/////y+jAAD/////QZ4ACP////87wP///////4B/ADz/////SAAAAfwAAANgAAAA/////5O/ADz/////oB8AAP////9UAAYw/////y+AAAD/////QZ4AsP////84AAEA/////4DiAAD//wAAOUAAAP////+BIgAA//8AAIECAAD//wAAfAkDpv////+DggAA//8AAEgAAAj/////QkAAcP////+ACQAA/////zkpAAT/////eUsAIP////9/gPgA/////3kpACD/////OUoAAf////9Anv/k/////6AfAAT/////VWkQOv////87oAAA/////3wABzT/////fSkHtP////9UAxA6/////3+oSS7/////fGsHtP////98HFgu/////y+AAAD/////QZ4AKP////98YzoU/////3hjACD/////SAAAAfwAAANgAAAA/////6AfAAT/////fAAHNP////9UABA6/////3wAB7T/////f7wBLv////9/4/t4/////0gAAAH8AAADYAAAAP////84YAAC/////0gAAAH8AAADYAAAAP////9L//6Y/////zlfAEP/////sB8AAP////85fwAo/////3lJACD/////kV8AHP////84AP///////5F/ACD/////kT8AMP////+wHwAE/////5E/AAj/////kT8AEP////+RPwAU/////5E/ACz/////kT8AGP////9L//+4/////4B/AAj/////SAAAAfwAAANgAAAA/////0v//qj/////
+  symbols:
+  - kind: Function
+    name: .fclose
+    size: 492
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .fflush
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .close
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .remove
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .free
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@00FA'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0102'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Mtxdst
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 104
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 120
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 160
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 192
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 216
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 250
+    kind: l
+    symbol: 6
+    addend: -10216440
+  - offset: 258
+    kind: l
+    symbol: 7
+    addend: -10216440
+  - offset: 262
+    kind: l
+    symbol: 7
+    addend: -10216440
+  - offset: 270
+    kind: l
+    symbol: 6
+    addend: -10216440
+  - offset: 360
+    kind: rel24
+    symbol: 8
+    addend: 0
+  - offset: 392
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 404
+    kind: rel24
+    symbol: 9
+    addend: 0
+  - offset: 480
+    kind: rel24
+    symbol: 5
+    addend: 0

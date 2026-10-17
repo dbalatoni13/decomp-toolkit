@@ -1,0 +1,50 @@
+- symbol: 0
+  hash: 35e73efae44b7eaa923a5075824a45b6746dca60
+  signature: +CH/gf////98CAKm//////vhAHj/////O+MABP////+BYgAA//8AAPgBAJD/////gAIAAP//AAD7wQBw/////5ADAAD/////kWMAAP////+AHwAY/////3h+ACD/////K4AAD/////9BnQA8/////zkgAAD/////OAAAD/////9/w/N4/////5AfABj/////mT8ABP////+RPwAU/////0gAAAH8AAADYAAAAP/////oAQCQ/////+vBAHD/////6+EAeP////98CAOm/////zghAID/////ToAAIP////+AfwAE/////0gAAAH8AAADYAAAAP////85IAAA/////zgAAA//////f8PzeP////+QHwAY/////5k/AAT/////kT8AFP////9IAAAB/AAAA2AAAAD/////6AEAkP/////rwQBw/////+vhAHj/////fAgDpv////84IQCA/////06AACD/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt8ios_base7failureD1Ev
+    size: 180
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0012'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@001A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._ZNSt9exceptionD2Ev
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._ZdlPv
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 18
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 26
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 80
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 116
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 148
+    kind: rel24
+    symbol: 3
+    addend: 0

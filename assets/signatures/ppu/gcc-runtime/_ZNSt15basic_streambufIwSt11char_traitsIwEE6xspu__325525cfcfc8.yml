@@ -1,0 +1,19 @@
+- symbol: 0
+  hash: cb7408b4f13698ad01b3127747b8d66f606330a4
+  signature: L4UAAP////98CAKm//////gh/2H/////+0EAcP/////7YQB4//////uBAID/////+6EAiP/////7wQCQ//////vhAJj/////+AEAsP////98vit4/////3x7G3j/////fJ0jeP////98fBt4/////ztAAAD/////QZ0ASP////9IAADA/////3ljACD/////QJ0ACP////9/3/N4/////3vlACD/////f9/wUP////9IAAAB/AAAA2AAAAD/////gXsAJP////9X6Qg8/////y+eAAD/////f1r6FP////+ACwAA/////3+9ShT/////fABKFP////+QCwAA/////0CdAID/////gTwAJP////97qgAg/////3uDACD/////gWkAAP////8viwAA/////0GeACj/////gTwANP////99RFN4/////4AJAAD/////fAsAUP////98AA5w/////ywAAAD/////fB8DeP////9/gPAA/////0GB/4j/////gXsAAP////87vQAC/////6CKAAD/////O97///////+BKwAQ/////4AJAAD/////+EEAKP////98CQOm/////4BJAAT/////ToAEIf/////oQQAo/////y+D////////QZ4AEP////8vngAA/////ztaAAH/////QZ3/iP/////oAQCw/////39DB7T/////62EAeP/////rQQBw/////3wIA6b/////64EAgP/////roQCI/////+vBAJD/////6+EAmP////84IQCg/////06AACD/////
+  symbols:
+  - kind: Function
+    name: ._ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi
+    size: 300
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .wmemcpy
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 88
+    kind: rel24
+    symbol: 1
+    addend: 0

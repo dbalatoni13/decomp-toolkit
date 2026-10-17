@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: cdea8acee61a2e5546c2be5ffcc6d91c5bfecd93
+  signature: gAMAAP////85IAAA/////y+AG1v/////LwAbXf////9BngAQ/////0GaAAz/////eSMAIP////9OgAAg/////4EjABT/////fSNKFP////95KQAg/////4EpABT/////eSMAIP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmCgGetVertexUserClipMask
+    size: 56
+    flags: 1
+    section: .text
+  relocations: []

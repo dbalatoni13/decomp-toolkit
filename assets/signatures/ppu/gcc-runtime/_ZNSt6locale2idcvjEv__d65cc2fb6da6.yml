@@ -1,0 +1,37 @@
+- symbol: 0
+  hash: e7aca47fb8be5d7cba76e836ccf821404b153fe2
+  signature: +CH/gf////98CAKm//////vhAHj/////fH8beP/////4AQCQ/////zhgAAD/////gB8AAP////8vgAAA/////0GeABz/////eAMAIP/////oAQCQ/////+vhAHj/////OCEAgP////98CAOm/////06AACD/////SAAAAfwAAANgAAAA/////4AfAAD/////L4AAAP////84YAAA/////0CeABj/////gWIAAP//AACBKwAA/////zkpAAH/////kSsAAP////+RPwAA/////0gAAAH8AAADYAAAAP////+AHwAA/////+vhAHj/////eAMAIP/////oAQCQ/////zghAID/////fAgDpv////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: ._ZNSt6locale2idcvjEv
+    size: 140
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Locksyslock
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0056'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Unlocksyslock
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 60
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 86
+    kind: l
+    symbol: 2
+    addend: -28621288
+  - offset: 104
+    kind: rel24
+    symbol: 3
+    addend: 0

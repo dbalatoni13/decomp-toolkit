@@ -1,0 +1,144 @@
+- symbol: 0
+  hash: af6ea815cda606ea0615aecc6210d44749aade54
+  signature: +CH/Yf////98CAKm//////uhAIj/////g6IAAP//AAD4AQCw//////tBAHD/////+2EAeP/////7gQCA/////4AdAAD/////+8EAkP////8vgAAA//////vhAJj/////QZ4AIP////9/v+t4/////zhgAAr/////OWAAjf////9EAAAC/////4O/AAD/////L50AAP////9Anv/s/////4ECAAD//wAAOAAAAf////+BYgAA//8AAJALAAD/////gSgAAP////8viQAA/////0CdAMj/////O6AAAP////+DggAA//8AADvAAAD/////g0IAAP//AAA7YAAA/////0gAACz/////fSr6FP////95KQAg/////5tpAAD/////OT0AAf////+BaAAA/////zgeBCD/////fT0HtP////94HgAg/////3+L6AD/////QJ0AhP////+BXAAA/////3u/ACD/////fSr6FP////95KQAg/////4gJAAD/////fAUHdP////8vpQAA/////0Ge/8j/////gBoAAP////9/o+t4/////3wA8hT/////eAsAIP/////pKwAo/////y+pAAD/////QZ7/oP/////pKwAo/////+iLADD/////eSkAIP/////oywKg/////4DrApD/////eIQAIP////94xgAg/////3znB7T/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////gVwAAP////+BAgAA//8AAEv//1z/////gWIAAP//AAA4AAAA/////+tBAHD/////62EAeP////84YAAA/////5ALAAD/////6AEAsP/////rgQCA/////+uhAIj/////fAgDpv/////rwQCQ/////+vhAJj/////OCEAoP////9IAAAA/AAAAw==
+  symbols:
+  - kind: Function
+    name: .cellMSSystemGenerateCallbacks
+    size: 356
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0052'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@005A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0072'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@007A'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -14104088
+  - offset: 82
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 90
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 114
+    kind: l
+    symbol: 4
+    addend: -14104088
+  - offset: 122
+    kind: l
+    symbol: 5
+    addend: -14104088
+  - offset: 294
+    kind: l
+    symbol: 2
+    addend: -14104088
+  - offset: 302
+    kind: l
+    symbol: 3
+    addend: -14104088
+  - offset: 352
+    kind: rel24
+    symbol: 6
+    addend: 0
+- symbol: 0
+  hash: 1f704ae297326f4a5239384b6319e62e5f1bd304
+  signature: +CH/Yf////98CAKm//////uhAIj/////g6IAAP//AAD4AQCw//////thAHj/////+4EAgP/////7wQCQ/////4AdAAD/////++EAmP////8vgAAA/////0GeACD/////f7/reP////84YAAK/////zlgAI3/////RAAAAv////+DvwAA/////y+dAAD/////QJ7/7P////+BAgAA//8AADgAAAH/////gWIAAP//AACQCwAA/////4EoAAD/////L4kAAP////9AnQDA/////zvgAAD/////g8IAAP//AACDYgAA//8AADuAAAD/////SAAAJP////99KuoU/////3kpACD/////m4kAAP////85PQAB/////4AIAAD/////O/8AAf////9/iQAA/////0CcAIj/////e/0AIP////+BXgAA/////30q6hT/////f6MHtP////95KQAg/////4gJAAD/////fAUHdP////8vpQAA/////0Ge/8z/////gTsAAP////8cHwOg/////30pAhT/////eSsAIP/////oCwAo/////y+gAAD/////QZ7/pP/////pKwAo/////+iLADD/////eSkAIP/////oywKg/////4DrApD/////eIQAIP////94xgAg/////3znB7T/////gAkAAP/////4QQAo/////3wJA6b/////gEkABP////9OgAQh/////+hBACj/////gV4AAP////+BAgAA//8AAEv//2D/////gWIAAP//AAA4AAAA/////+thAHj/////64EAgP////84YAAA/////5ALAAD/////6AEAsP/////roQCI/////+vBAJD/////fAgDpv/////r4QCY/////zghAKD/////SAAAAPwAAAM=
+  symbols:
+  - kind: Function
+    name: .cellMSSystemGenerateCallbacks
+    size: 340
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@000E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@004E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0056'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@006E'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0072'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 14
+    kind: l
+    symbol: 1
+    addend: -6468872
+  - offset: 78
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 86
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 110
+    kind: l
+    symbol: 4
+    addend: -6468872
+  - offset: 114
+    kind: l
+    symbol: 5
+    addend: -6468872
+  - offset: 282
+    kind: l
+    symbol: 2
+    addend: -6468872
+  - offset: 290
+    kind: l
+    symbol: 3
+    addend: -6468872
+  - offset: 336
+    kind: rel24
+    symbol: 6
+    addend: 0

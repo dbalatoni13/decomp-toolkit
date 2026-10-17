@@ -1,0 +1,64 @@
+- symbol: 0
+  hash: 4e241a9368be6f0981dabea6c1024a32a9c83f71
+  signature: gSIAAP//AAB8CAKm//////gh/5H/////+AEAgP////+ACQAA/////y+AAAD/////QJ4AGP/////oAQCA/////zghAHD/////gGIAAP//AAB8CAOm/////06AACD/////gSIAAP//AACAaQAA/////3xjB7T/////SAAAAfwAAANgAAAA/////+gBAID/////OCEAcP////98CAOm/////06AACD/////L6T///////9BngAM/////0gAAAH8AAADYAAAAP////94YwAg/////0gAAAH8AAADYAAAAP////8=
+  symbols:
+  - kind: Function
+    name: .__cxa_get_globals_fast
+    size: 112
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0002'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0026'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0032'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Function
+    name: ._Tlsget
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: ._Unwind_Resume
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__cxa_call_unexpected
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 2
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 38
+    kind: l
+    symbol: 2
+    addend: -10216440
+  - offset: 50
+    kind: l
+    symbol: 3
+    addend: -10216440
+  - offset: 60
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 92
+    kind: rel24
+    symbol: 5
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 6
+    addend: 0

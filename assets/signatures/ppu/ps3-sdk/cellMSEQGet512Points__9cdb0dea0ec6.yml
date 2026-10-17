@@ -1,0 +1,50 @@
+- symbol: 0
+  hash: a4f04ccdb762fc7e8991932d1f268727aec9d2b5
+  signature: LCMAAP////98CAKm//////gh/5H/////+AEAgP////9BwgBg/////y+kAAD/////QZ4AWP////+AAwAE/////y+AAAD/////Qd4ATP////+AAwAA/////y+AAAH/////QZ4AZP////8voAAA/////0GeADD/////L4AAAv////9AngAw/////0gAAAH8AAADOGAAAP////9IAAAB/AAAA2AAAAD/////6AEAgP////84YAAA/////3wIA6b/////OCEAcP////9OgAAg/////0gAAAH8AAADS///3P////88YAB6/////2BjEgL/////SAAAAfwAAANgAAAA/////+gBAID/////OGD///////98CAOm/////zghAHD/////ToAAIP////9IAAAB/AAAA0v//7D/////
+  symbols:
+  - kind: Function
+    name: .cellMSEQGet512Points
+    size: 156
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__eqGet512CubicEqValues
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__SetMSLastError
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__eqGet512FlatEQValues
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .__eqGet512CurveEQValues
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 68
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 76
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 104
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 120
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 148
+    kind: rel24
+    symbol: 4
+    addend: 0

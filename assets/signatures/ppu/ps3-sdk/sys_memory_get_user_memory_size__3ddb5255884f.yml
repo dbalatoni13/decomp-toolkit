@@ -1,0 +1,10 @@
+- symbol: 0
+  hash: df4eac0ee2eacc3e062ecc2929bb0a799a5ecfee
+  signature: +CH/kf////98CAKm//////gBAID/////eGMAIP////85YAFg/////0QAAAL/////fGMHtP/////oAQCA/////3wIA6b/////OCEAcP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .sys_memory_get_user_memory_size
+    size: 44
+    flags: 1
+    section: .text
+  relocations: []

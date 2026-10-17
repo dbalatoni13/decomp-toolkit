@@ -1,0 +1,70 @@
+- symbol: 0
+  hash: 67bdef687058eb8825f645c068a4e9aaee5cbb2a
+  signature: VIQAOv////+BIgAA//8AAIACAAD//wAAfIQaFP////+BYgAA//8AAJBpAAD/////OIT//P////+QCwAA/////5BpAAj/////kIkABP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellGcmSetCurrentBuffer
+    size: 44
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0006'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@0012'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 6
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 10
+    kind: l
+    symbol: 1
+    addend: -10216440
+  - offset: 18
+    kind: l
+    symbol: 2
+    addend: -10216440
+- symbol: 0
+  hash: b885525462e22f72896ed5b49c06c631fc21cefc
+  signature: VIQAOv////+BIgAA//8AAIFiAAD//wAAfIQaFP////84hP/8/////5BpAAD/////kSsAAP////+QiQAE/////5BpAAj/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetCurrentBuffer
+    size: 40
+    flags: 1
+    section: .text
+  - kind: Unknown
+    name: '@0006'
+    size: 0
+    flags: 2
+    section: .got
+  - kind: Unknown
+    name: '@000A'
+    size: 0
+    flags: 2
+    section: .got
+  relocations:
+  - offset: 6
+    kind: l
+    symbol: 1
+    addend: -28621288
+  - offset: 10
+    kind: l
+    symbol: 2
+    addend: -28621288
+- symbol: 0
+  hash: 29c9ba91926e351a0cdb0da12d1e97319b7111fd
+  signature: VIQAOv////+BIp6M/////4Finoj/////fIQaFP////84hP/8/////5BpAAD/////kSsAAP////+QiQAE/////5BpAAj/////ToAAIP////8=
+  symbols:
+  - kind: Function
+    name: .cellGcmSetCurrentBuffer
+    size: 40
+    flags: 1
+    section: .text
+  relocations: []

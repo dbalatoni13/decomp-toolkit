@@ -1,0 +1,54 @@
+- symbol: 0
+  hash: cd34456b33a2696b53084735e2df24e141beeebc
+  signature: +CH/Qf////98CAKm//////rhAHj/////+wEAgP/////7IQCI//////tBAJD/////+8EAsP/////7YQCY//////uBAKD/////+6EAqP/////74QC4//////gBAND/////fHcbeP////98miN4/////3y5K3j/////fNgzeP////9IAAAB/AAAAy+DAAD/////O8D///////973gAg/////0GeAFj/////L5oAAP////9B3gE0/////y+ZAAD/////Qd4BLP////8vmAAA/////0GeAST/////gSKIlP////84AAAQ/////zugAAD/////OSkABP////98CQOm/////3k+ACD/////OSkABP////+D/gAA/////y+fAAD/////QZ4AUP////87vQAB/////0IA/+j/////O8AAAP////9n3v///////2Pe//3/////6AEA0P////9/w/N4/////+rhAHj/////6wEAgP////98CAOm/////+shAIj/////60EAkP/////rYQCY/////+uBAKD/////66EAqP/////rwQCw/////+vhALj/////OCEAwP////9OgAAg/////zhgAAH/////OIAAKP////9IAAAB/AAAAy+DAAD/////fHsbeP////+QfgAA/////0Ge/6T/////e74AIP////+Agoj0/////zwAEAD/////f8PzeP////+QGwAc/////5P7ACT/////k7sAGP////+S+wAE/////5NbAAz/////kzsAEP////+TGwAU/////5P7AAD/////k/sACP////+T+wAg/////0gAAAH8AAADgHsAGP////9IAAAB/AAAA4CCiPj/////gHsAGP////9IAAAB/AAAA4B7ABj/////SAAAAfwAAAPoAQDQ/////3/D83j/////6uEAeP/////rAQCA/////3wIA6b/////6yEAiP/////rQQCQ/////+thAJj/////64EAoP/////roQCo/////+vBALD/////6+EAuP////84IQDA/////06AACD/////O8AAAP/////oAQDQ/////+rhAHj/////Z97////////rAQCA/////+shAIj/////fAgDpv////9j3v/+/////+tBAJD/////62EAmP////9/w/N4/////+uBAKD/////66EAqP/////rwQCw/////+vhALj/////OCEAwP////9OgAAg/////w==
+  symbols:
+  - kind: Function
+    name: .cellConsoleConnectionAdd
+    size: 464
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleInitialized
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleMemalign
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsolePrintf
+    size: 0
+    flags: 1
+    section: .text
+  - kind: Function
+    name: .cellConsoleFlush
+    size: 0
+    flags: 1
+    section: .text
+  relocations:
+  - offset: 64
+    kind: rel24
+    symbol: 1
+    addend: 0
+  - offset: 232
+    kind: rel24
+    symbol: 2
+    addend: 0
+  - offset: 308
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 316
+    kind: rel24
+    symbol: 4
+    addend: 0
+  - offset: 328
+    kind: rel24
+    symbol: 3
+    addend: 0
+  - offset: 336
+    kind: rel24
+    symbol: 4
+    addend: 0
